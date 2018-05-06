@@ -1,7 +1,72 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tNA-FC-Sht">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--Segmented Form View Controller-->
+        <scene sceneID="m3d-jJ-0kC">
+            <objects>
+                <viewController storyboardIdentifier="SegmentedFormViewControllerId" id="PYf-Gf-vRa" customClass="SegmentedFormViewController" customModule="TGK" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Gno-A2-qch">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Rct-vc-swI">
+                                <rect key="frame" x="0.0" y="63.666666666666686" width="375" height="626.33333333333326"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Information Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SoL-J1-X6f">
+                                <rect key="frame" x="16" y="20" width="343" height="22.666666666666671"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="lNN-Rt-OFW" firstAttribute="bottom" secondItem="Rct-vc-swI" secondAttribute="bottom" id="2Bw-S6-RKD"/>
+                            <constraint firstItem="Rct-vc-swI" firstAttribute="top" secondItem="SoL-J1-X6f" secondAttribute="bottom" constant="21" id="SBh-Sf-8Ef"/>
+                            <constraint firstItem="SoL-J1-X6f" firstAttribute="top" secondItem="lNN-Rt-OFW" secondAttribute="top" constant="20" id="Up0-AN-pu8"/>
+                            <constraint firstItem="Rct-vc-swI" firstAttribute="leading" secondItem="lNN-Rt-OFW" secondAttribute="leading" id="YyQ-7b-LhE"/>
+                            <constraint firstItem="lNN-Rt-OFW" firstAttribute="trailing" secondItem="SoL-J1-X6f" secondAttribute="trailing" constant="16" id="ZZh-8J-tiA"/>
+                            <constraint firstItem="lNN-Rt-OFW" firstAttribute="trailing" secondItem="Rct-vc-swI" secondAttribute="trailing" id="ego-Pa-hvw"/>
+                            <constraint firstItem="SoL-J1-X6f" firstAttribute="leading" secondItem="lNN-Rt-OFW" secondAttribute="leading" constant="16" id="l1G-lj-6Zm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="lNN-Rt-OFW"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="2fo-xv-qFc"/>
+                    <connections>
+                        <outlet property="informationlabel" destination="SoL-J1-X6f" id="PN0-hb-LWI"/>
+                        <outlet property="tableView" destination="Rct-vc-swI" id="5jc-Ro-xnJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TSh-Q7-VAq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-494" y="-49"/>
+        </scene>
+        <!--Segmented Form Navigation Controller-->
+        <scene sceneID="5a6-pm-woZ">
+            <objects>
+                <navigationController storyboardIdentifier="SegmentedFormNavigationControllerId" id="tNA-FC-Sht" customClass="SegmentedFormNavigationController" customModule="TGK" customModuleProvider="target" sceneMemberID="viewController">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="xw6-6C-Jh3">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="PYf-Gf-vRa" kind="relationship" relationship="rootViewController" id="Pyh-ZS-ETX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qPN-UA-d7C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1308" y="-49"/>
+        </scene>
+    </scenes>
 </document>

@@ -10,14 +10,18 @@ import Foundation
 
 struct FormQuestionModel {
     enum QuestionType:String {
+        //standard wufoo components
         case unknown = "unknown"
         case textField = "text"
         case number = "number"
         case radio = "radio"
         case select = "select"
-        case listSingleSelect = "listSingleSelect"
         case textView = "textarea"
+        case email = "email"
         case phoneNumber = "phone"
+        
+        //custom components
+        case listSingleSelect = "listSingleSelect"
     }
     
     let id:String

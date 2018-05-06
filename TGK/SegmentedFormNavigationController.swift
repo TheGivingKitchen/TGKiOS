@@ -27,7 +27,7 @@ class SegmentedFormNavigationController: UINavigationController {
     
     func fetchData() {
         //call this earlier in the navigation controller's parent view controller
-        ServiceManager.sharedInstace.getSegmentedForm { (segmentedFormModel, error) in
+        ServiceManager.sharedInstace.getTestSegmentedForm { (segmentedFormModel, error) in
             if let segmentedFormModel = segmentedFormModel {
                 self.segmentedFormModel = segmentedFormModel
             }
@@ -41,7 +41,7 @@ class SegmentedFormNavigationController: UINavigationController {
         self.popToRootViewController(animated: false)
         var allPageViewControllers = [SegmentedFormViewController]()
         for page in formModel.pages {
-            let segmentedFormVC = UIStoryboard(name: "SegmentedForm", bundle: nil).instantiateViewController(withIdentifier: "SegmentedFormViewControllerId") as! SegmentedFormViewController
+            let segmentedFormVC = UIStoryboard(name: "Forms", bundle: nil).instantiateViewController(withIdentifier: "SegmentedFormViewControllerId") as! SegmentedFormViewController
             segmentedFormVC.formPage = page
             segmentedFormVC.delegate = self
             allPageViewControllers.append(segmentedFormVC)
@@ -56,7 +56,7 @@ class SegmentedFormNavigationController: UINavigationController {
 }
 
 
-
+//MARK: SegmentedFormViewControllerDelegate
 extension SegmentedFormNavigationController:SegmentedFormViewControllerDelegate {
     func segmentedFormViewController(_ segmentedFormViewController: SegmentedFormViewController, didAdvanceWithAnswers answers: [FormQuestionAnswerModel]) {
         
@@ -84,5 +84,9 @@ extension SegmentedFormNavigationController:SegmentedFormViewControllerDelegate 
             self.dismiss(animated: true)
             print("submit here")
         }
+    }
+    
+    func segmentedFormViewControllerDidPressCancel(_ segmentedFormViewController: SegmentedFormViewController) {
+        self.dismiss(animated: true)
     }
 }

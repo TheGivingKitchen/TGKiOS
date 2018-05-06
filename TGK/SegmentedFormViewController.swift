@@ -10,6 +10,7 @@ import UIKit
 
 protocol SegmentedFormViewControllerDelegate {
     func segmentedFormViewController(_ segmentedFormViewController:SegmentedFormViewController, didAdvanceWithAnswers answers:[FormQuestionAnswerModel])
+    func segmentedFormViewControllerDidPressCancel(_ segmentedFormViewController:SegmentedFormViewController)
 }
 
 class SegmentedFormViewController: UIViewController {
@@ -17,18 +18,20 @@ class SegmentedFormViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var informationlabel: UILabel!
     
-    var formQuestionCells = [UITableViewCell]()
-    
     //dependencies
     var isLastPageInForm = false
     var isFirstPageInForm = false
     var delegate:SegmentedFormViewControllerDelegate?
-    var formPage:SegmentedFormModel.Page! {
+    var formPage:FormPagePageModel! {
         didSet {
             guard self.isViewLoaded else {return}
             self.configureView()
         }
     }
+    //end dependencies
+    
+    var formQuestionCells = [UITableViewCell]()
+    
     var questionModels:[FormQuestionModel] {
             return self.formPage.questions
     }
@@ -82,7 +85,7 @@ class SegmentedFormViewController: UIViewController {
     }
     
     @objc fileprivate func userDidTapCancel() {
-        self.dismiss(animated: true)
+        self.delegate?.segmentedFormViewControllerDidPressCancel(self)
     }
     
     @objc fileprivate func endEditingInTableView() {
@@ -134,6 +137,13 @@ extension SegmentedFormViewController: UITableViewDataSource, UITableViewDelegat
             textCell.delegate = self
             self.formQuestionCells.append(textCell)
             return textCell
+        case .email:
+            let emailCell = Bundle.main.loadNibNamed("FormTextFieldTableViewCell", owner: self, options: [:])?.first as! FormTextFieldTableViewCell
+            emailCell.formQuestion = questionModel
+            emailCell.inputType = .email
+            emailCell.delegate = self
+            self.formQuestionCells.append(emailCell)
+            return emailCell
         case .phoneNumber:
             let phoneNumberTextCell = Bundle.main.loadNibNamed("FormTextFieldTableViewCell", owner: self, options: [:])?.first as! FormTextFieldTableViewCell
             phoneNumberTextCell.formQuestion = questionModel

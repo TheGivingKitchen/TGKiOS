@@ -18,7 +18,6 @@ extension ServiceManager {
     
     func getForm(id:String, completion:@escaping ([FormQuestionModel]?, Error?)->Void) {
         self.sessionManager.request(Router.getForm(id).url, encoding: JSONEncoding.default, headers: self.wufooAuthenticationHeaders).responseJSON { (response) in
-            print(response)
             
             if let error = response.result.error {
                 completion(nil, error)
@@ -57,9 +56,9 @@ extension ServiceManager {
         }
     }
     
-    func test(completion: @escaping (SegmentedFormModel?, Error?)->Void) {
+    func getTestSegmentedForm(completion: @escaping (SegmentedFormModel?, Error?)->Void) {
         
-        if let path = Bundle.main.path(forResource: "assistanceForm", ofType: "json") {
+        if let path = Bundle.main.path(forResource: "assistanceInquiry", ofType: "json") {
             do {
                 let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .alwaysMapped)
                 let jsonObj = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as! [String:Any]

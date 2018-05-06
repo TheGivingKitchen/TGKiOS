@@ -14,14 +14,7 @@ class FormTextFieldTableViewCell: UITableViewCell, FormItemView {
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var textField: UITextField!
     
-    enum TextInputType {
-        case unspecifiedText
-        case email
-        case phoneNumber
-        case fullName
-        case jobTitle
-    }
-    
+    ///Begin FormItemView conformance
     var delegate: FormItemViewDelegate?
     var formQuestion: FormQuestionModel! {
         didSet {
@@ -46,6 +39,16 @@ class FormTextFieldTableViewCell: UITableViewCell, FormItemView {
             return self.textField.text
         }
     }
+    ///End FormItemView conformance
+    
+    enum TextInputType {
+        case unspecifiedText
+        case email
+        case phoneNumber
+        case fullName
+        case jobTitle
+    }
+    
     var inputType:TextInputType = .unspecifiedText {
         didSet {
             self.formatTextFieldBasedOnInputType()
