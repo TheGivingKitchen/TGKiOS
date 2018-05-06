@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="FormListSelectTableViewCell" customModule="WufooPOC" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="422" height="100"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="hKc-ft-Hch">
+                    <rect key="frame" x="0.0" y="36" width="422" height="64"/>
+                </stackView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stack View" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YoW-Vm-h2T">
+                    <rect key="frame" x="20" y="8" width="382" height="20"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="YoW-Vm-h2T" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="1JY-IG-7yp"/>
+                <constraint firstItem="hKc-ft-Hch" firstAttribute="top" secondItem="YoW-Vm-h2T" secondAttribute="bottom" constant="8" id="4yy-6E-C4T"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="YoW-Vm-h2T" secondAttribute="trailing" constant="20" id="CLK-gt-DJ0"/>
+                <constraint firstItem="YoW-Vm-h2T" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="8" id="CtB-u7-cvM"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="hKc-ft-Hch" secondAttribute="bottom" id="Hwp-ys-cs7"/>
+                <constraint firstItem="hKc-ft-Hch" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Mgy-I1-7wv"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="hKc-ft-Hch" secondAttribute="trailing" id="TqP-n3-J0e"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="questionLabel" destination="YoW-Vm-h2T" id="kak-fW-c8m"/>
+                <outlet property="stackView" destination="hKc-ft-Hch" id="lHB-sH-19d"/>
+            </connections>
+            <point key="canvasLocation" x="50" y="-162"/>
+        </view>
+    </objects>
+</document>

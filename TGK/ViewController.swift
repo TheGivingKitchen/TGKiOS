@@ -12,7 +12,10 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        ServiceManager.sharedInstace.getForm(id: "w1t7006405irhin") { (formQuestionModels, error) in
+        
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {
