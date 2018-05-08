@@ -60,6 +60,7 @@ class SegmentedFormNavigationController: UINavigationController {
 extension SegmentedFormNavigationController:SegmentedFormViewControllerDelegate {
     func segmentedFormViewController(_ segmentedFormViewController: SegmentedFormViewController, didAdvanceWithAnswers answers: [FormQuestionAnswerModel]) {
         
+        //If the user has made edits to the form, replace the answers
         let arrayOfExistingAnswerWufooIds:[String] = answers.map { (formQuestionAnswer) -> String in
             return formQuestionAnswer.wufooFieldID
         }
@@ -69,6 +70,7 @@ extension SegmentedFormNavigationController:SegmentedFormViewControllerDelegate 
         let newAnswers = existingQuestionsWithAnswersRemoved + answers
         self.formAnswers = newAnswers
         
+        //Push the next form on the stack from memory to preserve preexisting answers. Submit if you're on the last page
         guard let index = self.segmentedFormViewControllers.index(where:  {$0 == segmentedFormViewController}) else {return}
         
         let nextIndex = index + 1
@@ -81,8 +83,9 @@ extension SegmentedFormNavigationController:SegmentedFormViewControllerDelegate 
             self.pushViewController(nextPageVC, animated: true)
         }
         else {
-            self.dismiss(animated: true)
-            print("submit here")
+            ServiceManager.sharedInstace.submitAnswersToForm(self.segmentedFormModel.id, withAnswers: self.formAnswers) { (success, error, formFieldErrorModels) in
+                
+            }
         }
     }
     

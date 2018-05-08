@@ -12,17 +12,12 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        ServiceManager.sharedInstace.getForm(id: "w1t7006405irhin") { (formQuestionModels, error) in
+        ServiceManager.sharedInstace.getForm(id: "zl0n8dd0u0hk0z") { (formQuestionModels, error) in
         
         }
         
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
+    
     @IBAction func assistanceTapped(_ sender: Any) {
         let segmentedNav = UIStoryboard(name: "Forms", bundle: nil).instantiateViewController(withIdentifier: "SegmentedFormNavigationControllerId") as! SegmentedFormNavigationController
         self.present(segmentedNav, animated: true)

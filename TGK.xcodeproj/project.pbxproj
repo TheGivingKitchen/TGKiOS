@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		165677F7CA24DF537F71485F /* Pods_TGK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02F6B12ADD2CEF057F42D437 /* Pods_TGK.framework */; };
+		4E885BB820A1221700D05ED9 /* FormFieldErrorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E885BB720A1221700D05ED9 /* FormFieldErrorModel.swift */; };
 		4E8897AE209E134700A361D8 /* ServiceManager+Forms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8897AD209E134700A361D8 /* ServiceManager+Forms.swift */; };
 		4E890FFD209E32120034A83B /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E890FFC209E32120034A83B /* Router.swift */; };
 		4E89100B209F6F360034A83B /* FormPageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E89100A209F6F360034A83B /* FormPageModel.swift */; };
@@ -42,6 +43,7 @@
 /* Begin PBXFileReference section */
 		02F6B12ADD2CEF057F42D437 /* Pods_TGK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TGK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2ED9204B045A5AE610078D22 /* Pods-TGK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TGK.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TGK/Pods-TGK.debug.xcconfig"; sourceTree = "<group>"; };
+		4E885BB720A1221700D05ED9 /* FormFieldErrorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormFieldErrorModel.swift; sourceTree = "<group>"; };
 		4E8897AD209E134700A361D8 /* ServiceManager+Forms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ServiceManager+Forms.swift"; sourceTree = "<group>"; };
 		4E890FFC209E32120034A83B /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		4E89100A209F6F360034A83B /* FormPageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormPageModel.swift; sourceTree = "<group>"; };
@@ -98,6 +100,18 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		4E885BB920A1221B00D05ED9 /* Forms */ = {
+			isa = PBXGroup;
+			children = (
+				4ED38837209D030600A8BEE2 /* FormQuestionAnswerModel.swift */,
+				4ED3882D209D030500A8BEE2 /* FormQuestionModel.swift */,
+				4ED3882F209D030500A8BEE2 /* SegmentedFormModel.swift */,
+				4E89100A209F6F360034A83B /* FormPageModel.swift */,
+				4E885BB720A1221700D05ED9 /* FormFieldErrorModel.swift */,
+			);
+			name = Forms;
+			sourceTree = "<group>";
+		};
 		4E890FFE209E3C270034A83B /* Forms */ = {
 			isa = PBXGroup;
 			children = (
@@ -138,10 +152,7 @@
 		4E891002209E3C630034A83B /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				4ED38837209D030600A8BEE2 /* FormQuestionAnswerModel.swift */,
-				4ED3882D209D030500A8BEE2 /* FormQuestionModel.swift */,
-				4ED3882F209D030500A8BEE2 /* SegmentedFormModel.swift */,
-				4E89100A209F6F360034A83B /* FormPageModel.swift */,
+				4E885BB920A1221B00D05ED9 /* Forms */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -347,6 +358,7 @@
 				4ED3883E209D030600A8BEE2 /* FormTextFieldTableViewCell.swift in Sources */,
 				4ED38844209D030600A8BEE2 /* FormTextViewTableViewCell.swift in Sources */,
 				4ED38842209D030600A8BEE2 /* FormSegmentedControlTableViewCell.swift in Sources */,
+				4E885BB820A1221700D05ED9 /* FormFieldErrorModel.swift in Sources */,
 				4E89100B209F6F360034A83B /* FormPageModel.swift in Sources */,
 				4E890FFD209E32120034A83B /* Router.swift in Sources */,
 				4ED38851209D04AE00A8BEE2 /* UIColor+TGK.swift in Sources */,

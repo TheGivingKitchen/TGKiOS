@@ -34,17 +34,7 @@ class ServiceManager: NSObject {
         }
     }
     
-    func submitAnswers(_ answerDict:[String:String], completion:@escaping (Bool, Error?)->Void) {
-        self.sessionManager.request("https://jparksps.wufoo.com/api/v3/forms/z1dxnntq1ft2smg/entries.json", method: .post, parameters: answerDict, encoding: URLEncoding.default, headers: ["Authorization":"Basic \(ServiceManager.wufooAPIKey.base64String)"]).responseJSON { (response) in
-            print(response)
-            if let error = response.result.error {
-                completion(false, error)
-            }
-            else {
-                completion(true, nil)
-            }
-        }
-    }
+    
     
     func getSegmentedForm(completion: @escaping (SegmentedFormModel?, Error?)->Void) {
         

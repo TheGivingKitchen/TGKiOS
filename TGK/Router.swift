@@ -14,6 +14,7 @@ enum Router {
     
     case getAllForms
     case getForm(String)
+    case postFormEntry(String)
 }
 
 extension Router {
@@ -23,6 +24,8 @@ extension Router {
             return .get
         case .getForm:
             return .get
+        case .postFormEntry:
+            return .post
         }
     }
     
@@ -32,6 +35,8 @@ extension Router {
             return "\(Router.wufooBaseUrl)/forms.json"
         case .getForm(let formId):
             return "\(Router.wufooBaseUrl)/forms/\(formId)/fields.json"
+        case .postFormEntry(let formId):
+            return "\(Router.wufooBaseUrl)/forms/\(formId)/entries.json"
         }
     }
     
