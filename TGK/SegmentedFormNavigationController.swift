@@ -55,7 +55,6 @@ class SegmentedFormNavigationController: UINavigationController {
     }
 }
 
-
 //MARK: SegmentedFormViewControllerDelegate
 extension SegmentedFormNavigationController:SegmentedFormViewControllerDelegate {
     func segmentedFormViewController(_ segmentedFormViewController: SegmentedFormViewController, didAdvanceWithAnswers answers: [FormQuestionAnswerModel]) {
@@ -84,7 +83,17 @@ extension SegmentedFormNavigationController:SegmentedFormViewControllerDelegate 
         }
         else {
             ServiceManager.sharedInstace.submitAnswersToForm(self.segmentedFormModel.id, withAnswers: self.formAnswers) { (success, error, formFieldErrorModels) in
-                
+
+                if success == true {
+                    self.dismiss(animated: true)
+                }
+                else {
+                    if let fieldErrors = formFieldErrorModels {
+                        //cycle through segmentedFormVCs. implement something similar to
+                        //func highlightErrorFields(_ fields:FormFieldErrorModels) in SegmentedFormVC
+                    }
+                    //other error cases where there is failure but not with fields. maybe present an alert or banner
+                }
             }
         }
     }
