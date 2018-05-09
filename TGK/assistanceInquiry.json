@@ -29,7 +29,7 @@
 	                    "Label": "Other"
 	                }
 	            ],
-	            "Type": "radio",
+	            "Type": "listSingleSelect",
 	            "ID": "Field1",
 	            "HasOtherField": false
 	        	}

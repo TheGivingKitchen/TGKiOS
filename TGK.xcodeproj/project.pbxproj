@@ -13,6 +13,9 @@
 		4E890FFD209E32120034A83B /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E890FFC209E32120034A83B /* Router.swift */; };
 		4E89100B209F6F360034A83B /* FormPageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E89100A209F6F360034A83B /* FormPageModel.swift */; };
 		4E89100D209F779E0034A83B /* assistanceInquiry.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E89100C209F779E0034A83B /* assistanceInquiry.json */; };
+		4ECA9BFB20A2687B0084A317 /* BaseNibLoadedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECA9BFA20A2687B0084A317 /* BaseNibLoadedView.swift */; };
+		4ECA9BFD20A269A10084A317 /* FormListSelectTableViewCellRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECA9BFC20A269A10084A317 /* FormListSelectTableViewCellRow.swift */; };
+		4ECA9BFF20A269D00084A317 /* FormListSelectTableViewCellRow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4ECA9BFE20A269D00084A317 /* FormListSelectTableViewCellRow.xib */; };
 		4ED3881A209D01EF00A8BEE2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED38819209D01EF00A8BEE2 /* AppDelegate.swift */; };
 		4ED3881C209D01EF00A8BEE2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED3881B209D01EF00A8BEE2 /* ViewController.swift */; };
 		4ED3881F209D01EF00A8BEE2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4ED3881D209D01EF00A8BEE2 /* Main.storyboard */; };
@@ -48,6 +51,9 @@
 		4E890FFC209E32120034A83B /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		4E89100A209F6F360034A83B /* FormPageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormPageModel.swift; sourceTree = "<group>"; };
 		4E89100C209F779E0034A83B /* assistanceInquiry.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = assistanceInquiry.json; sourceTree = "<group>"; };
+		4ECA9BFA20A2687B0084A317 /* BaseNibLoadedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNibLoadedView.swift; sourceTree = "<group>"; };
+		4ECA9BFC20A269A10084A317 /* FormListSelectTableViewCellRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormListSelectTableViewCellRow.swift; sourceTree = "<group>"; };
+		4ECA9BFE20A269D00084A317 /* FormListSelectTableViewCellRow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FormListSelectTableViewCellRow.xib; sourceTree = "<group>"; };
 		4ED38816209D01EF00A8BEE2 /* TGK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TGK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4ED38819209D01EF00A8BEE2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4ED3881B209D01EF00A8BEE2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -137,6 +143,8 @@
 				4ED38839209D030600A8BEE2 /* FormItemView.swift */,
 				4ED38836209D030500A8BEE2 /* FormListSelectTableViewCell.swift */,
 				4ED3883A209D030600A8BEE2 /* FormListSelectTableViewCell.xib */,
+				4ECA9BFC20A269A10084A317 /* FormListSelectTableViewCellRow.swift */,
+				4ECA9BFE20A269D00084A317 /* FormListSelectTableViewCellRow.xib */,
 				4ED3882B209D030500A8BEE2 /* FormPickerTableViewCell.swift */,
 				4ED3883B209D030600A8BEE2 /* FormPickerTableViewCell.xib */,
 				4ED38830209D030500A8BEE2 /* FormSegmentedControlTableViewCell.swift */,
@@ -185,6 +193,14 @@
 			name = PartsBinNoTarget;
 			sourceTree = "<group>";
 		};
+		4ECA9BF920A268590084A317 /* CommonComponents */ = {
+			isa = PBXGroup;
+			children = (
+				4ECA9BFA20A2687B0084A317 /* BaseNibLoadedView.swift */,
+			);
+			name = CommonComponents;
+			sourceTree = "<group>";
+		};
 		4ED3880D209D01EF00A8BEE2 = {
 			isa = PBXGroup;
 			children = (
@@ -206,6 +222,7 @@
 		4ED38818209D01EF00A8BEE2 /* TGK */ = {
 			isa = PBXGroup;
 			children = (
+				4ECA9BF920A268590084A317 /* CommonComponents */,
 				4E891006209E3CAC0034A83B /* PartsBinNoTarget */,
 				4E891005209E3C990034A83B /* Utilities */,
 				4E891004209E3C890034A83B /* ServiceManager */,
@@ -297,6 +314,7 @@
 				4E89100D209F779E0034A83B /* assistanceInquiry.json in Resources */,
 				4ED38840209D030600A8BEE2 /* FormTextFieldTableViewCell.xib in Resources */,
 				4ED3884E209D030600A8BEE2 /* FormTextViewTableViewCell.xib in Resources */,
+				4ECA9BFF20A269D00084A317 /* FormListSelectTableViewCellRow.xib in Resources */,
 				4ED3884A209D030600A8BEE2 /* FormSegmentedControlTableViewCell.xib in Resources */,
 				4ED3884C209D030600A8BEE2 /* FormListSelectTableViewCell.xib in Resources */,
 			);
@@ -356,6 +374,7 @@
 				4ED38847209D030600A8BEE2 /* ServiceManager.swift in Sources */,
 				4ED38849209D030600A8BEE2 /* FormQuestionAnswerModel.swift in Sources */,
 				4ED3883E209D030600A8BEE2 /* FormTextFieldTableViewCell.swift in Sources */,
+				4ECA9BFD20A269A10084A317 /* FormListSelectTableViewCellRow.swift in Sources */,
 				4ED38844209D030600A8BEE2 /* FormTextViewTableViewCell.swift in Sources */,
 				4ED38842209D030600A8BEE2 /* FormSegmentedControlTableViewCell.swift in Sources */,
 				4E885BB820A1221700D05ED9 /* FormFieldErrorModel.swift in Sources */,
@@ -363,6 +382,7 @@
 				4E890FFD209E32120034A83B /* Router.swift in Sources */,
 				4ED38851209D04AE00A8BEE2 /* UIColor+TGK.swift in Sources */,
 				4ED3883F209D030600A8BEE2 /* FormQuestionModel.swift in Sources */,
+				4ECA9BFB20A2687B0084A317 /* BaseNibLoadedView.swift in Sources */,
 				4ED38843209D030600A8BEE2 /* SegmentedFormNavigationController.swift in Sources */,
 				4ED38848209D030600A8BEE2 /* FormListSelectTableViewCell.swift in Sources */,
 				4ED38852209D04AE00A8BEE2 /* String+TGK.swift in Sources */,

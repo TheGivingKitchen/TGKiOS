@@ -41,6 +41,8 @@ class SegmentedFormViewController: UIViewController {
         
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        self.tableView.rowHeight = UITableViewAutomaticDimension
+        self.tableView.estimatedRowHeight = 60
         self.configureView()
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(endEditingInTableView))

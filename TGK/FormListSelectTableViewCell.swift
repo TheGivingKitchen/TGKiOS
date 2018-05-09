@@ -13,6 +13,7 @@ class FormListSelectTableViewCell: UITableViewCell, FormItemView {
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var stackView: UIStackView!
     
+    //MARK: FormItemView
     var delegate: FormItemViewDelegate?
     var formQuestion: FormQuestionModel! {
         didSet {
@@ -29,6 +30,9 @@ class FormListSelectTableViewCell: UITableViewCell, FormItemView {
     var mainInputControl: UIView {
         return self.stackView
     }
+    //end FormItemView
+    
+    var rows = [FormListSelectTableViewCellRow]()
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -41,9 +45,10 @@ class FormListSelectTableViewCell: UITableViewCell, FormItemView {
         self.questionLabel.text = self.formQuestion.questionTitle
         
         for answerChoice in self.formQuestion.answerOptions {
-            let answerChoiceLabel = UILabel()
-            answerChoiceLabel.text = answerChoice
-            self.stackView.addArrangedSubview(answerChoiceLabel)
+            let answerChoiceRow = FormListSelectTableViewCellRow(frame: CGRect(x: 0, y: 0, width: self.stackView.frame.size.width, height: 44.0))
+            answerChoiceRow.choiceLabel.text = answerChoice
+            self.stackView.addArrangedSubview(answerChoiceRow)
+            self.rows.append(answerChoiceRow)
         }
     }
 }
