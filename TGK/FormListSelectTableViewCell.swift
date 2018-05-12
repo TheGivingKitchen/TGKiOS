@@ -56,7 +56,11 @@ class FormListSelectTableViewCell: UITableViewCell, FormItemView {
         case single
         case multiple
     }
-    var selectionType:SelectionType = .multiple
+    var selectionType:SelectionType = .multiple {
+        didSet {
+            self.configureView()
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -68,12 +72,34 @@ class FormListSelectTableViewCell: UITableViewCell, FormItemView {
         self.layer.borderWidth = 1
         self.questionLabel.text = self.formQuestion.questionTitle
         
-        for answerChoice in self.formQuestion.answerOptions {
-            let answerChoiceRow = FormListSelectTableViewCellRow(frame: CGRect(x: 0, y: 0, width: self.stackView.frame.size.width, height: 44.0))
-            answerChoiceRow.choiceLabel.text = answerChoice
-            self.stackView.addArrangedSubview(answerChoiceRow)
-            answerChoiceRow.delegate = self
-            self.rows.append(answerChoiceRow)
+        //clear out existing stuff
+        for row in self.rows {
+            self.stackView.removeArrangedSubview(row)
+            row.removeFromSuperview()
+        }
+        self.rows = []
+        
+        switch self.selectionType {
+            //if we're single selection, then it's a radio button and choices are populated from "answer choices"
+        case .single:
+            for answerChoice in self.formQuestion.answerOptions {
+                let answerChoiceRow = FormListSelectTableViewCellRow(frame: CGRect(x: 0, y: 0, width: self.stackView.frame.size.width, height: 44.0))
+                answerChoiceRow.choiceLabel.text = answerChoice
+                self.stackView.addArrangedSubview(answerChoiceRow)
+                answerChoiceRow.delegate = self
+                self.rows.append(answerChoiceRow)
+            }
+            break
+            //if we're multiple selection, then it's a checkbox and choices are populated form subfields
+        case .multiple:
+            for subfield in self.formQuestion.subfields {
+                let answerChoiceRow = FormListSelectTableViewCellRow(frame: CGRect(x: 0, y: 0, width: self.stackView.frame.size.width, height: 44.0))
+                answerChoiceRow.choiceLabel.text = subfield.label
+                self.stackView.addArrangedSubview(answerChoiceRow)
+                answerChoiceRow.delegate = self
+                self.rows.append(answerChoiceRow)
+            }
+            break
         }
     }
 }
