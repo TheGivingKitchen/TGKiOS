@@ -20,11 +20,12 @@ class FormPickerTableViewCell: UITableViewCell, FormItemView {
         }
     }
     
-    var formItemOutputValue: String? {
+    var formItemOutputValue: [FormQuestionAnswerModel] {
         guard self.formQuestion.answerOptions.count > 0 else {
-            return nil
+            return [FormQuestionAnswerModel(wufooFieldID: self.formQuestion.id, userAnswer: nil)]
         }
-        return self.formQuestion.answerOptions[self.picker.selectedRow(inComponent: 0)]
+        let answerModel = FormQuestionAnswerModel(wufooFieldID: self.formQuestion.id, userAnswer: self.formQuestion.answerOptions[self.picker.selectedRow(inComponent: 0)])
+        return [answerModel]
     }
     
     var mainInputControl: UIView {

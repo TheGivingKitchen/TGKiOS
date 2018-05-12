@@ -95,18 +95,14 @@ class SegmentedFormViewController: UIViewController {
     }
 
     @objc func advancePageOrSubmit(_ sender: Any) {
-        var index = 0
+        
         var questionAnswers = [FormQuestionAnswerModel]()
-        for cell in self.formQuestionCells {
-            guard let castedCell = cell as? FormItemView,
-            let formItemOutputValue = castedCell.formItemOutputValue else {
+        for index in 0..<self.formQuestionCells.count {
+            guard let castedCell = self.formQuestionCells[index] as? FormItemView else {
                 continue
             }
-            let questionItem = self.questionModels[index]
             
-            let questionAnswer = FormQuestionAnswerModel(wufooFieldID: questionItem.id, userAnswer: formItemOutputValue)
-            questionAnswers.append(questionAnswer)
-            index += 1
+            questionAnswers.append(contentsOf: castedCell.formItemOutputValue)
         }
         
         if let delegate = self.delegate {

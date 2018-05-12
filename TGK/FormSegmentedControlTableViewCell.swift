@@ -13,6 +13,7 @@ class FormSegmentedControlTableViewCell: UITableViewCell, FormItemView {
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     
+    //MARK: FormItemView conformance
     var delegate: FormItemViewDelegate?
     var formQuestion: FormQuestionModel! {
         didSet {
@@ -24,9 +25,12 @@ class FormSegmentedControlTableViewCell: UITableViewCell, FormItemView {
         return self.segmentedControl
     }
     
-    var formItemOutputValue: String? {
-        return self.segmentedControl.titleForSegment(at: self.segmentedControl.selectedSegmentIndex)
+    var formItemOutputValue: [FormQuestionAnswerModel] {
+        let answerText = self.segmentedControl.titleForSegment(at: self.segmentedControl.selectedSegmentIndex)
+        let answerModel = FormQuestionAnswerModel(wufooFieldID: self.formQuestion.id, userAnswer: answerText)
+        return [answerModel]
     }
+    ///End FormItemView conformance
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -24,20 +24,25 @@ class FormTextFieldTableViewCell: UITableViewCell, FormItemView {
     var mainInputControl: UIView {
         return self.textField
     }
-    var formItemOutputValue: String? {
+    var formItemOutputValue: [FormQuestionAnswerModel] {
+        
+        var answerText:String? = nil
         switch self.inputType {
         case .unspecifiedText:
-            return self.textField.text
+            answerText = self.textField.text
         case .email:
-            return self.textField.text
+            answerText = self.textField.text
         case .phoneNumber:
-            return self.textField.text?.components(separatedBy: CharacterSet.decimalDigits.inverted)
+            answerText = self.textField.text?.components(separatedBy: CharacterSet.decimalDigits.inverted)
                 .joined()
         case .fullName:
-            return self.textField.text
+            answerText = self.textField.text
         case .jobTitle:
-            return self.textField.text
+            answerText = self.textField.text
         }
+        
+        let answerModel = FormQuestionAnswerModel(wufooFieldID: self.formQuestion.id, userAnswer: answerText)
+        return [answerModel]
     }
     ///End FormItemView conformance
     

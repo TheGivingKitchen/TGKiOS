@@ -10,7 +10,7 @@ import UIKit
 
 struct FormQuestionAnswerModel {
     let wufooFieldID:String
-    let userAnswer:String
+    let userAnswer:String?
     
     static func convertToAnswerDictionary(_ models:[FormQuestionAnswerModel]) -> [String:String] {
         var dict = [String:String]()

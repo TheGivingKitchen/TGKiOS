@@ -21,14 +21,14 @@ class FormListSelectTableViewCell: UITableViewCell, FormItemView {
         }
     }
     
-    var formItemOutputValue: String?
+    var formItemOutputValue: [FormQuestionAnswerModel]
     {
         let numberOfSelectedRows = self.rows.filter { (row) -> Bool in
             return row.isSelected
             }.count
         
         if numberOfSelectedRows == 0 {
-            return nil
+            return [FormQuestionAnswerModel(wufooFieldID: self.formQuestion.id, userAnswer: nil)]
         }
         
         switch self.selectionType {
@@ -37,12 +37,13 @@ class FormListSelectTableViewCell: UITableViewCell, FormItemView {
             for index in 0..<self.rows.count {
                 let row = self.rows[index]
                 if row.isSelected {
-                    return self.formQuestion.answerOptions[index]
+                    let answerText = self.formQuestion.answerOptions[index]
+                    return [FormQuestionAnswerModel(wufooFieldID: self.formQuestion.id, userAnswer: answerText)]
                 }
             }
-            return nil
-        case .multiple://change once we know what multiple looks like
-            return nil
+            return [FormQuestionAnswerModel(wufooFieldID: self.formQuestion.id, userAnswer: nil)]
+        case .multiple://TODO change once we know what multiple looks like
+            return [FormQuestionAnswerModel(wufooFieldID: self.formQuestion.id, userAnswer: nil)]
         }
     }
     

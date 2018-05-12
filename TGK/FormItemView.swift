@@ -16,7 +16,7 @@ protocol FormItemViewDelegate {
 protocol FormItemView {
     //To be set after loaded from nib
     var formQuestion:FormQuestionModel! {get set}
-    var formItemOutputValue:String? {get}
+    var formItemOutputValue:[FormQuestionAnswerModel] {get}
     var mainInputControl:UIView {get}
     
     var delegate:FormItemViewDelegate? {get set}

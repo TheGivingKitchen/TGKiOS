@@ -20,9 +20,11 @@ class FormTextViewTableViewCell: UITableViewCell, FormItemView {
         }
     }
     
-    var formItemOutputValue: String?
+    var formItemOutputValue: [FormQuestionAnswerModel]
     {
-        return self.textView.text
+        let text = textView.text.trimmingCharacters(in: .whitespacesAndNewlines)
+        let answerModel = FormQuestionAnswerModel(wufooFieldID: self.formQuestion.id, userAnswer: text)
+        return [answerModel]
     }
     
     var mainInputControl: UIView {
