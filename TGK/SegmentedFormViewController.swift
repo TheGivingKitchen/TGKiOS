@@ -171,17 +171,25 @@ extension SegmentedFormViewController: UITableViewDataSource, UITableViewDelegat
             dropDownCell.delegate = self
             return dropDownCell
         case .listSingleSelect:
-            let singleSelectCell = Bundle.main.loadNibNamed("FormListSelectTableViewCell", owner: self, options: [:])?.first as! FormListSelectTableViewCell
-            self.formQuestionCells.append(singleSelectCell)
-            singleSelectCell.formQuestion = questionModel
-            singleSelectCell.delegate = self
-            return singleSelectCell
+            let listSelectCell = Bundle.main.loadNibNamed("FormListSelectTableViewCell", owner: self, options: [:])?.first as! FormListSelectTableViewCell
+            self.formQuestionCells.append(listSelectCell)
+            listSelectCell.formQuestion = questionModel
+            listSelectCell.selectionType = .single
+            listSelectCell.delegate = self
+            return listSelectCell
         case .textView:
             let textViewCell = Bundle.main.loadNibNamed("FormTextViewTableViewCell", owner: self, options: [:])?.first as! FormTextViewTableViewCell
             self.formQuestionCells.append(textViewCell)
             textViewCell.formQuestion = questionModel
             textViewCell.delegate = self
             return textViewCell
+        case .listMultipleSelect: //not in use yet
+            let listSelectCell = Bundle.main.loadNibNamed("FormListSelectTableViewCell", owner: self, options: [:])?.first as! FormListSelectTableViewCell
+            self.formQuestionCells.append(listSelectCell)
+            listSelectCell.formQuestion = questionModel
+            listSelectCell.selectionType = .multiple
+            listSelectCell.delegate = self
+            return listSelectCell
         case .unknown:
             let unknownCell = UITableViewCell(style: .default, reuseIdentifier: "questionCell")
             self.formQuestionCells.append(unknownCell)

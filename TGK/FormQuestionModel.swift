@@ -22,6 +22,7 @@ struct FormQuestionModel {
         
         //custom components
         case listSingleSelect = "listSingleSelect"
+        case listMultipleSelect = "listMultipleSelect" //not used yet
     }
     
     let id:String

@@ -23,8 +23,27 @@ class FormListSelectTableViewCell: UITableViewCell, FormItemView {
     
     var formItemOutputValue: String?
     {
-//        return self.textView.text
-        return ""
+        let numberOfSelectedRows = self.rows.filter { (row) -> Bool in
+            return row.isSelected
+            }.count
+        
+        if numberOfSelectedRows == 0 {
+            return nil
+        }
+        
+        switch self.selectionType {
+        case .single:
+            //In case something goes wrong, take the first selected index
+            for index in 0..<self.rows.count {
+                let row = self.rows[index]
+                if row.isSelected {
+                    return self.formQuestion.answerOptions[index]
+                }
+            }
+            return nil
+        case .multiple://change once we know what multiple looks like
+            return nil
+        }
     }
     
     var mainInputControl: UIView {
@@ -33,6 +52,11 @@ class FormListSelectTableViewCell: UITableViewCell, FormItemView {
     //end FormItemView
     
     var rows = [FormListSelectTableViewCellRow]()
+    enum SelectionType {
+        case single
+        case multiple
+    }
+    var selectionType:SelectionType = .multiple
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -48,7 +72,38 @@ class FormListSelectTableViewCell: UITableViewCell, FormItemView {
             let answerChoiceRow = FormListSelectTableViewCellRow(frame: CGRect(x: 0, y: 0, width: self.stackView.frame.size.width, height: 44.0))
             answerChoiceRow.choiceLabel.text = answerChoice
             self.stackView.addArrangedSubview(answerChoiceRow)
+            answerChoiceRow.delegate = self
             self.rows.append(answerChoiceRow)
+        }
+    }
+}
+
+extension FormListSelectTableViewCell: FormListSelectTableViewCellRowDelegate {
+    func formListSelectTableViewCellRowWasSelected(cell: FormListSelectTableViewCellRow) {
+        switch  self.selectionType {
+        case .multiple:
+            break
+        case .single:
+            //Deselect all other rows
+            let numberOfSelectedRows = self.rows.filter { (row) -> Bool in
+                return row.isSelected
+            }.count
+            
+            guard numberOfSelectedRows > 1 else {
+                return
+            }
+            
+            guard let rowIndex = self.rows.index(of: cell) else {
+                return
+            }
+            
+            for index in 0..<self.rows.count {
+                if rowIndex == index {
+                    continue
+                }
+                self.rows[index].isSelected = false
+            }
+            break
         }
     }
 }
