@@ -22,7 +22,7 @@ struct FormQuestionModel {
         
         //custom components
         case listSingleSelect = "listSingleSelect"
-        case listMultipleSelect = "listMultipleSelect" //not used yet
+        case listMultipleSelect = "listMultipleSelect"
     }
     
     let id:String
@@ -60,7 +60,7 @@ struct FormQuestionModel {
         self.answerOptions = parsedOptions
         
         var parsedSubfields = [FormQuestionSubfieldModel]()
-        if let subfieldArray = jsonDict["Subfields"] as? [[String:String]] {
+        if let subfieldArray = jsonDict["SubFields"] as? [[String:String]] {
             for subfieldDict in subfieldArray {
                 let subfieldModel = FormQuestionSubfieldModel(jsonDict: subfieldDict)
                 parsedSubfields.append(subfieldModel)
