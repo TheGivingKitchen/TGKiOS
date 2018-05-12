@@ -31,6 +31,7 @@ struct FormQuestionModel {
     let answerOptions:[String]
     let questionType:QuestionType
     let isRequired:Bool
+    let subfields:[FormQuestionSubfieldModel]
     
 
     init(jsonDict:[String:Any]) {
@@ -57,5 +58,14 @@ struct FormQuestionModel {
             }
         }
         self.answerOptions = parsedOptions
+        
+        var parsedSubfields = [FormQuestionSubfieldModel]()
+        if let subfieldArray = jsonDict["Subfields"] as? [[String:String]] {
+            for subfieldDict in subfieldArray {
+                let subfieldModel = FormQuestionSubfieldModel(jsonDict: subfieldDict)
+                parsedSubfields.append(subfieldModel)
+            }
+        }
+        self.subfields = parsedSubfields
     }
 }

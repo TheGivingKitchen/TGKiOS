@@ -16,6 +16,7 @@
 		4ECA9BFB20A2687B0084A317 /* BaseNibLoadedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECA9BFA20A2687B0084A317 /* BaseNibLoadedView.swift */; };
 		4ECA9BFD20A269A10084A317 /* FormListSelectTableViewCellRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECA9BFC20A269A10084A317 /* FormListSelectTableViewCellRow.swift */; };
 		4ECA9BFF20A269D00084A317 /* FormListSelectTableViewCellRow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4ECA9BFE20A269D00084A317 /* FormListSelectTableViewCellRow.xib */; };
+		4ECA9C0120A72D230084A317 /* FormQuestionSubfieldModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECA9C0020A72D230084A317 /* FormQuestionSubfieldModel.swift */; };
 		4ED3881A209D01EF00A8BEE2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED38819209D01EF00A8BEE2 /* AppDelegate.swift */; };
 		4ED3881C209D01EF00A8BEE2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED3881B209D01EF00A8BEE2 /* ViewController.swift */; };
 		4ED3881F209D01EF00A8BEE2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4ED3881D209D01EF00A8BEE2 /* Main.storyboard */; };
@@ -54,6 +55,7 @@
 		4ECA9BFA20A2687B0084A317 /* BaseNibLoadedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNibLoadedView.swift; sourceTree = "<group>"; };
 		4ECA9BFC20A269A10084A317 /* FormListSelectTableViewCellRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormListSelectTableViewCellRow.swift; sourceTree = "<group>"; };
 		4ECA9BFE20A269D00084A317 /* FormListSelectTableViewCellRow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FormListSelectTableViewCellRow.xib; sourceTree = "<group>"; };
+		4ECA9C0020A72D230084A317 /* FormQuestionSubfieldModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormQuestionSubfieldModel.swift; sourceTree = "<group>"; };
 		4ED38816209D01EF00A8BEE2 /* TGK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TGK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4ED38819209D01EF00A8BEE2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4ED3881B209D01EF00A8BEE2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 			children = (
 				4ED38837209D030600A8BEE2 /* FormQuestionAnswerModel.swift */,
 				4ED3882D209D030500A8BEE2 /* FormQuestionModel.swift */,
+				4ECA9C0020A72D230084A317 /* FormQuestionSubfieldModel.swift */,
 				4ED3882F209D030500A8BEE2 /* SegmentedFormModel.swift */,
 				4E89100A209F6F360034A83B /* FormPageModel.swift */,
 				4E885BB720A1221700D05ED9 /* FormFieldErrorModel.swift */,
@@ -381,6 +384,7 @@
 				4E89100B209F6F360034A83B /* FormPageModel.swift in Sources */,
 				4E890FFD209E32120034A83B /* Router.swift in Sources */,
 				4ED38851209D04AE00A8BEE2 /* UIColor+TGK.swift in Sources */,
+				4ECA9C0120A72D230084A317 /* FormQuestionSubfieldModel.swift in Sources */,
 				4ED3883F209D030600A8BEE2 /* FormQuestionModel.swift in Sources */,
 				4ECA9BFB20A2687B0084A317 /* BaseNibLoadedView.swift in Sources */,
 				4ED38843209D030600A8BEE2 /* SegmentedFormNavigationController.swift in Sources */,
