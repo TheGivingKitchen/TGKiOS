@@ -26,6 +26,14 @@
                                     <action selector="assistanceTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jgj-AK-xyD"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zxX-oY-Q6T">
+                                <rect key="frame" x="70" y="200" width="156" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Volunteer sign up form"/>
+                                <connections>
+                                    <action selector="volunteerSignUpTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vhc-wc-aGT"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>

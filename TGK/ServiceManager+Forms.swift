@@ -94,25 +94,28 @@ extension ServiceManager {
         }
     }
     
-    func getTestSegmentedForm(completion: @escaping (SegmentedFormModel?, Error?)->Void) {
-        
-        if let path = Bundle.main.path(forResource: "assistanceInquiry", ofType: "json") {
-            do {
-                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .alwaysMapped)
-                let jsonObj = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as! [String:Any]
-                let segmentedForm = SegmentedFormModel(jsonDict: jsonObj)
-                completion(segmentedForm, nil)
-                
+    func getTestSegmentedForm(id:String, completion: @escaping (SegmentedFormModel?, Error?)->Void) {
+        //assistance inquiry
+        if id == "zl0n8dd0u0hk0z" {
+            if let path = Bundle.main.path(forResource: "assistanceInquiry", ofType: "json") {
+                do {
+                    let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .alwaysMapped)
+                    let jsonObj = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as! [String:Any]
+                    let segmentedForm = SegmentedFormModel(jsonDict: jsonObj)
+                    completion(segmentedForm, nil)
+                    
+                }
+                catch let error {
+                    print("parse error: \(error.localizedDescription)")
+                    completion(nil, nil)
+                }
             }
-            catch let error {
-                print("parse error: \(error.localizedDescription)")
+            else {
+                print("Invalid filename/path.")
                 completion(nil, nil)
             }
         }
-        else {
-            print("Invalid filename/path.")
-            completion(nil, nil)
-        }
+        
     }
     
 }

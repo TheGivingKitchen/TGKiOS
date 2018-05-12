@@ -23,5 +23,7 @@ class ViewController: UIViewController {
         self.present(segmentedNav, animated: true)
     }
     
+    @IBAction func volunteerSignUpTapped(_ sender: Any) {
+    }
 }
 
