@@ -186,6 +186,12 @@ extension SegmentedFormViewController: UITableViewDataSource, UITableViewDelegat
             listSelectCell.selectionType = .multiple
             listSelectCell.delegate = self
             return listSelectCell
+        case .shortName:
+            let shortNameCell = Bundle.main.loadNibNamed("FormShortNameTableViewCell", owner: self, options: [:])?.first as! FormShortNameTableViewCell
+            self.formQuestionCells.append(shortNameCell)
+            shortNameCell.formQuestion = questionModel
+            shortNameCell.delegate = self
+            return shortNameCell
         case .unknown:
             let unknownCell = UITableViewCell(style: .default, reuseIdentifier: "questionCell")
             self.formQuestionCells.append(unknownCell)

@@ -19,6 +19,7 @@ struct FormQuestionModel {
         case textView = "textarea"
         case email = "email"
         case phoneNumber = "phone"
+        case shortName = "shortname"
         
         //custom components
         case listSingleSelect = "listSingleSelect"

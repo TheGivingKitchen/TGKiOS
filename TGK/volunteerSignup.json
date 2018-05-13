@@ -76,51 +76,66 @@
             "pageInformation" : "Jay's test form. Volunteer signup",
 			"questions" : [
 				{
-		            "Title": "Volunteer Skills:",
+		            "Title": "Mobile Phone Number:",
 		            "Instructions": "",
-		            "IsRequired": "0",
+		            "IsRequired": "1",
 		            "ClassNames": "",
-		            "DefaultVal": "0",
+		            "DefaultVal": "",
 		            "Page": "1",
-		            "SubFields": [
-		                {
-		                    "DefaultVal": "0",
-		                    "ID": "Field975",
-		                    "Label": "General Administrative"
-		                },
-		                {
-		                    "DefaultVal": "0",
-		                    "ID": "Field976",
-		                    "Label": "Working events"
-		                },
-		                {
-		                    "DefaultVal": "0",
-		                    "ID": "Field977",
-		                    "Label": "Marketing/PR"
-		                },
-		                {
-		                    "DefaultVal": "0",
-		                    "ID": "Field978",
-		                    "Label": "Event Planning"
-		                },
-		                {
-		                    "DefaultVal": "0",
-		                    "ID": "Field979",
-		                    "Label": "Other"
-		                }
-		            ],
-		            "Type": "listMultipleSelect",
-		            "ID": "Field975"
+		            "Type": "phone",
+		            "ID": "Field21"
 		        },
 		        {
-		            "Title": "If you marked 'Other,' please explain below:",
+		            "Title": "Alternate Phone Number:",
 		            "Instructions": "",
 		            "IsRequired": "0",
 		            "ClassNames": "",
 		            "DefaultVal": "",
 		            "Page": "1",
-		            "Type": "text",
-		            "ID": "Field1177"
+		            "Type": "phone",
+		            "ID": "Field19"
+		        },
+		        {
+		            "Title": "Mailing Address",
+		            "Instructions": "",
+		            "IsRequired": "0",
+		            "ClassNames": "",
+		            "DefaultVal": "",
+		            "Page": "1",
+		            "SubFields": [
+		                {
+		                    "DefaultVal": "",
+		                    "ID": "Field5",
+		                    "Label": "Street Address"
+		                },
+		                {
+		                    "DefaultVal": "",
+		                    "ID": "Field6",
+		                    "Label": "Address Line 2"
+		                },
+		                {
+		                    "DefaultVal": "",
+		                    "ID": "Field7",
+		                    "Label": "City"
+		                },
+		                {
+		                    "DefaultVal": "",
+		                    "ID": "Field8",
+		                    "Label": "State / Province / Region"
+		                },
+		                {
+		                    "DefaultVal": "",
+		                    "ID": "Field9",
+		                    "Label": "Postal / Zip Code"
+		                },
+		                {
+		                    "DefaultVal": "United States",
+		                    "ID": "Field10",
+		                    "Label": "Country"
+		                }
+		            ],
+		            "Type": "address",
+		            "ID": "Field5"
 		        }
 			]
 		}

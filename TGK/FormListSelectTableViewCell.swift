@@ -28,12 +28,12 @@ class FormListSelectTableViewCell: UITableViewCell, FormItemView {
             }.count
         
         if numberOfSelectedRows == 0 {
-            return [FormQuestionAnswerModel(wufooFieldID: self.formQuestion.id, userAnswer: nil)]
+            return []
         }
         
         switch self.selectionType {
         case .single:
-            //In case something goes wrong, take the first selected index
+            //Always return the first selected index in case multiple selection slipped through
             for index in 0..<self.rows.count {
                 let row = self.rows[index]
                 if row.isSelected {
@@ -41,9 +41,17 @@ class FormListSelectTableViewCell: UITableViewCell, FormItemView {
                     return [FormQuestionAnswerModel(wufooFieldID: self.formQuestion.id, userAnswer: answerText)]
                 }
             }
-            return [FormQuestionAnswerModel(wufooFieldID: self.formQuestion.id, userAnswer: nil)]
+            return []
         case .multiple://TODO change once we know what multiple looks like
-            return [FormQuestionAnswerModel(wufooFieldID: self.formQuestion.id, userAnswer: nil)]
+            var answerModels = [FormQuestionAnswerModel]()
+            for index in 0..<self.rows.count {
+                let row = self.rows[index]
+                if row.isSelected {
+                    let answerText = self.formQuestion.answerOptions[index]
+                    answerModels.append(FormQuestionAnswerModel(wufooFieldID: self.formQuestion.id, userAnswer: answerText))
+                }
+            }
+            return answerModels
         }
     }
     

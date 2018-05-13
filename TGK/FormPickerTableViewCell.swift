@@ -22,7 +22,7 @@ class FormPickerTableViewCell: UITableViewCell, FormItemView {
     
     var formItemOutputValue: [FormQuestionAnswerModel] {
         guard self.formQuestion.answerOptions.count > 0 else {
-            return [FormQuestionAnswerModel(wufooFieldID: self.formQuestion.id, userAnswer: nil)]
+            return []
         }
         let answerModel = FormQuestionAnswerModel(wufooFieldID: self.formQuestion.id, userAnswer: self.formQuestion.answerOptions[self.picker.selectedRow(inComponent: 0)])
         return [answerModel]

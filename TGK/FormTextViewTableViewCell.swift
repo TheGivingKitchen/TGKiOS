@@ -13,6 +13,7 @@ class FormTextViewTableViewCell: UITableViewCell, FormItemView {
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var textView: UITextView!
     
+    //MARK: FormItemView
     var delegate: FormItemViewDelegate?
     var formQuestion: FormQuestionModel! {
         didSet {
@@ -30,6 +31,7 @@ class FormTextViewTableViewCell: UITableViewCell, FormItemView {
     var mainInputControl: UIView {
         return self.textView
     }
+    //end FormItemView
     
     override func awakeFromNib() {
         super.awakeFromNib()
