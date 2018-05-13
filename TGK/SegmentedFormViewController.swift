@@ -192,6 +192,18 @@ extension SegmentedFormViewController: UITableViewDataSource, UITableViewDelegat
             shortNameCell.formQuestion = questionModel
             shortNameCell.delegate = self
             return shortNameCell
+        case .address:
+            let addressCell = Bundle.main.loadNibNamed("FormAddressTableViewCell", owner: self, options: [:])?.first as! FormAddressTableViewCell
+            self.formQuestionCells.append(addressCell)
+            addressCell.formQuestion = questionModel
+            addressCell.delegate = self
+            return addressCell
+        case .date:
+            let dateCell = Bundle.main.loadNibNamed("FormDateTableViewCell", owner: self, options: [:])?.first as! FormDateTableViewCell
+            self.formQuestionCells.append(dateCell)
+            dateCell.formQuestion = questionModel
+            dateCell.delegate = self
+            return dateCell
         case .unknown:
             let unknownCell = UITableViewCell(style: .default, reuseIdentifier: "questionCell")
             self.formQuestionCells.append(unknownCell)

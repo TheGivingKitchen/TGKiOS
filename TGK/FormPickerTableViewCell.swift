@@ -13,6 +13,7 @@ class FormPickerTableViewCell: UITableViewCell, FormItemView {
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var picker: UIPickerView!
     
+    //MARK: FormItemView
     var delegate: FormItemViewDelegate?
     var formQuestion: FormQuestionModel!{
         didSet {
@@ -31,6 +32,7 @@ class FormPickerTableViewCell: UITableViewCell, FormItemView {
     var mainInputControl: UIView {
         return self.picker
     }
+    //end FormItemView
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -67,7 +67,6 @@ class FormShortNameTableViewCell: UITableViewCell, FormItemView {
         self.firstNameTextField.placeholder = firstNameSubfield.label
         let lastNameSubfield = self.formQuestion.subfields[1]
         self.lastNameTextField.placeholder = lastNameSubfield.label
-        
     }
 
 }

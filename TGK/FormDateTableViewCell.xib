@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="FormDateTableViewCell" customModule="TGK" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="428" height="198"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qxp-oG-oSN">
+                    <rect key="frame" x="20" y="8" width="388" height="20"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Ve1-su-Ya9">
+                    <rect key="frame" x="0.0" y="36" width="428" height="162"/>
+                    <date key="date" timeIntervalSinceReferenceDate="547922607.03848505">
+                        <!--2018-05-13 16:43:27 +0000-->
+                    </date>
+                    <date key="minimumDate" timeIntervalSinceReferenceDate="-2556190800">
+                        <!--1920-01-01 11:00:00 +0000-->
+                    </date>
+                </datePicker>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Qxp-oG-oSN" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="DNR-Q2-ofa"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Qxp-oG-oSN" secondAttribute="trailing" constant="20" id="HhH-7g-mFo"/>
+                <constraint firstItem="Ve1-su-Ya9" firstAttribute="top" secondItem="Qxp-oG-oSN" secondAttribute="bottom" constant="8" id="TiO-lr-Ggr"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Ve1-su-Ya9" secondAttribute="bottom" id="gdh-ki-NR2"/>
+                <constraint firstItem="Qxp-oG-oSN" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="8" id="kcB-yO-T3u"/>
+                <constraint firstItem="Ve1-su-Ya9" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="mh0-5X-trE"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Ve1-su-Ya9" secondAttribute="trailing" id="zJc-dA-6yl"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="datePicker" destination="Ve1-su-Ya9" id="q8j-7X-YAz"/>
+                <outlet property="questionLabel" destination="Qxp-oG-oSN" id="PSP-Np-kDm"/>
+            </connections>
+            <point key="canvasLocation" x="51" y="-183"/>
+        </view>
+    </objects>
+</document>

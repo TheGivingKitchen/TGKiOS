@@ -20,6 +20,8 @@ struct FormQuestionModel {
         case email = "email"
         case phoneNumber = "phone"
         case shortName = "shortname"
+        case address = "address"
+        case date = "date"
         
         //custom components
         case listSingleSelect = "listSingleSelect"
