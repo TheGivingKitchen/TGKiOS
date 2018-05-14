@@ -236,10 +236,10 @@ extension SegmentedFormViewController:FormItemViewDelegate {
 
 //MARK: FormSegmentedControlTableViewCellDelegate
 extension SegmentedFormViewController: FormSegmentedControlTableViewCellDelegate {
-    func formSegmentedControlTableViewCellBeginToggleOther(_ formSegmentedControlTableViewCell: FormSegmentedControlTableViewCell) {
+    
+    func formSegmentedControlTableViewCellRequestTableViewUpdates(_ cell: FormSegmentedControlTableViewCell) {
+        //Notify our tableview that it needs to update
         self.tableView.beginUpdates()
-    }
-    func formSegmentedControlTableViewCellFinishToggleOther(_ formSegmentedControlTableViewCell: FormSegmentedControlTableViewCell) {
         self.tableView.endUpdates()
     }
 }

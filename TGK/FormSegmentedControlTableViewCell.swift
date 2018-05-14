@@ -9,8 +9,7 @@
 import UIKit
 
 protocol FormSegmentedControlTableViewCellDelegate {
-    func formSegmentedControlTableViewCellBeginToggleOther(_ formSegmentedControlTableViewCell:FormSegmentedControlTableViewCell)
-    func formSegmentedControlTableViewCellFinishToggleOther(_ formSegmentedControlTableViewCell:FormSegmentedControlTableViewCell)
+    func formSegmentedControlTableViewCellRequestTableViewUpdates(_ cell:FormSegmentedControlTableViewCell)
 }
 class FormSegmentedControlTableViewCell: UITableViewCell, FormItemView {
 
@@ -92,9 +91,7 @@ extension FormSegmentedControlTableViewCell {
         else {
             self.hasOtherFieldView.isHidden = true
         }
-        
-        self.segmentedControlCellDelegate?.formSegmentedControlTableViewCellBeginToggleOther(self)
-        self.segmentedControlCellDelegate?.formSegmentedControlTableViewCellFinishToggleOther(self)
+        self.segmentedControlCellDelegate?.formSegmentedControlTableViewCellRequestTableViewUpdates(self)
     }
 }
 
