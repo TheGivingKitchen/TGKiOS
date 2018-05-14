@@ -159,6 +159,7 @@ extension SegmentedFormViewController: UITableViewDataSource, UITableViewDelegat
             self.formQuestionCells.append(radioCell)
             radioCell.formQuestion = questionModel
             radioCell.delegate = self
+            radioCell.delegate = self
             return radioCell
         case .select:
             let dropDownCell = Bundle.main.loadNibNamed("FormPickerTableViewCell", owner: self, options: [:])?.first as! FormPickerTableViewCell
@@ -230,5 +231,15 @@ extension SegmentedFormViewController:FormItemViewDelegate {
             return
         }
         nextCellAsFormItem.mainInputControl.becomeFirstResponder()
+    }
+}
+
+//MARK: FormSegmentedControlTableViewCellDelegate
+extension SegmentedFormViewController: FormSegmentedControlTableViewCellDelegate {
+    func formSegmentedControlTableViewCellBeginToggleOther(_ formSegmentedControlTableViewCell: FormSegmentedControlTableViewCell) {
+        self.tableView.beginUpdates()
+    }
+    func formSegmentedControlTableViewCellFinishToggleOther(_ formSegmentedControlTableViewCell: FormSegmentedControlTableViewCell) {
+        self.tableView.endUpdates()
     }
 }
