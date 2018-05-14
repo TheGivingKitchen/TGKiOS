@@ -65,8 +65,8 @@
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="RcT-eZ-IfW" secondAttribute="bottom" constant="10.5" id="0v5-mr-x1Y"/>
                                     <constraint firstItem="RcT-eZ-IfW" firstAttribute="top" secondItem="t99-3E-xAb" secondAttribute="top" constant="10" id="I2T-1i-AMO"/>
-                                    <constraint firstAttribute="height" priority="750" constant="50.5" id="Q5B-UY-Vn4"/>
                                     <constraint firstItem="RcT-eZ-IfW" firstAttribute="leading" secondItem="t99-3E-xAb" secondAttribute="leading" constant="8" id="Q6C-IH-Dm6"/>
+                                    <constraint firstAttribute="height" priority="750" constant="50.5" id="Wnf-pN-Brs"/>
                                     <constraint firstAttribute="trailing" secondItem="RcT-eZ-IfW" secondAttribute="trailing" constant="8" id="wCD-Kx-vdd"/>
                                 </constraints>
                             </view>
@@ -81,7 +81,6 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="hasOtherFieldHeightConstraint" destination="Q5B-UY-Vn4" id="V3O-9M-TJj"/>
                 <outlet property="hasOtherFieldTextView" destination="RcT-eZ-IfW" id="qP1-uE-cAU"/>
                 <outlet property="hasOtherFieldView" destination="t99-3E-xAb" id="wkk-Cr-9BA"/>
                 <outlet property="questionLabel" destination="DHc-e9-wmS" id="wMg-WO-q6P"/>

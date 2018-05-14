@@ -15,9 +15,12 @@ class FormSegmentedControlTableViewCell: UITableViewCell, FormItemView {
 
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
-    @IBOutlet weak var hasOtherFieldView: UIView!
+    @IBOutlet weak var hasOtherFieldView: UIView! {
+        didSet {
+            hasOtherFieldView.isHidden = true
+        }
+    }
     @IBOutlet weak var hasOtherFieldTextView: UITextField!
-    @IBOutlet weak var hasOtherFieldHeightConstraint: NSLayoutConstraint!
     
     //MARK: FormItemView conformance
     var delegate: FormItemViewDelegate?
@@ -83,22 +86,10 @@ extension FormSegmentedControlTableViewCell {
     @objc func segmentedControlDidChangeSegment(sender: UISegmentedControl) {
         
         if self.hasOtherSelected && self.formQuestion.hasOtherField == true {
-            UIView.animate(withDuration: 0.3) {
-                //need to do both of these in order for it to work because text fields don't interact with stack views well. spent 3 hours doing clean things
-                //other option would be to dynamically generate the 'other' view
-                self.hasOtherFieldHeightConstraint.constant = 51
-                self.hasOtherFieldView.isHidden = false
-                self.layoutIfNeeded()
-            }
+            self.hasOtherFieldView.isHidden = false
         }
         else {
-            
-            UIView.animate(withDuration: 0.3) {
-                //see note above
-                self.hasOtherFieldHeightConstraint.constant = 0
-                self.hasOtherFieldView.isHidden = true
-                self.layoutIfNeeded()
-            }
+            self.hasOtherFieldView.isHidden = true
         }
         self.segmentedControlCellDelegate?.formSegmentedControlTableViewCellRequestTableViewUpdates(self)
     }
