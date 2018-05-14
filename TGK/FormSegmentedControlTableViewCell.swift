@@ -72,12 +72,7 @@ class FormSegmentedControlTableViewCell: UITableViewCell, FormItemView {
         if self.segmentedControl.numberOfSegments > 0 {
             self.segmentedControl.selectedSegmentIndex = 0
         }
-        
-            
-        
     }
-    
-    
 }
 
 //MARK: hasOtherField
