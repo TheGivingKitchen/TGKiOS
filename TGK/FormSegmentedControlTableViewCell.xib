@@ -46,6 +46,7 @@
                                     <constraint firstItem="DHc-e9-wmS" firstAttribute="leading" secondItem="LXA-eM-IUV" secondAttribute="leading" constant="16" id="V4D-en-de4"/>
                                     <constraint firstAttribute="trailing" secondItem="DHc-e9-wmS" secondAttribute="trailing" constant="16" id="ca3-6J-VRi"/>
                                     <constraint firstItem="tOz-o3-2e4" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="LXA-eM-IUV" secondAttribute="leading" constant="16" id="fgO-Lz-FQc"/>
+                                    <constraint firstAttribute="bottom" secondItem="tOz-o3-2e4" secondAttribute="bottom" constant="22.5" id="mwq-VF-8uI"/>
                                     <constraint firstItem="DHc-e9-wmS" firstAttribute="top" secondItem="LXA-eM-IUV" secondAttribute="top" constant="8" id="xeR-1p-r1r"/>
                                     <constraint firstAttribute="height" priority="750" constant="86.5" id="y02-ZU-A4E"/>
                                 </constraints>
