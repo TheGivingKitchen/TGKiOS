@@ -67,7 +67,7 @@
 		            ],
 		            "Type": "radio",
 		            "ID": "Field662",
-		            "HasOtherField": true
+		            "HasOtherField": false
 		        }
 			]
 		},

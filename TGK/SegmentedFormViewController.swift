@@ -159,7 +159,6 @@ extension SegmentedFormViewController: UITableViewDataSource, UITableViewDelegat
             self.formQuestionCells.append(radioCell)
             radioCell.formQuestion = questionModel
             radioCell.delegate = self
-            radioCell.segmentedControlCellDelegate = self
             return radioCell
         case .select:
             let dropDownCell = Bundle.main.loadNibNamed("FormPickerTableViewCell", owner: self, options: [:])?.first as! FormPickerTableViewCell
@@ -232,10 +231,6 @@ extension SegmentedFormViewController:FormItemViewDelegate {
         }
         nextCellAsFormItem.mainInputControl.becomeFirstResponder()
     }
-}
-
-//MARK: FormSegmentedControlTableViewCellDelegate
-extension SegmentedFormViewController: FormSegmentedControlTableViewCellDelegate {
     
     func formSegmentedControlTableViewCellRequestTableViewUpdates(_ cell: FormSegmentedControlTableViewCell) {
         //Notify our tableview that it needs to update

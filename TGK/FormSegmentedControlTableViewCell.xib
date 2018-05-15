@@ -43,11 +43,11 @@
                                     <constraint firstItem="tOz-o3-2e4" firstAttribute="top" secondItem="DHc-e9-wmS" secondAttribute="bottom" constant="7.5" id="7dZ-Ux-M45"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="tOz-o3-2e4" secondAttribute="trailing" constant="16" id="8eE-1Q-rTJ"/>
                                     <constraint firstItem="tOz-o3-2e4" firstAttribute="centerX" secondItem="DHc-e9-wmS" secondAttribute="centerX" id="CLz-3k-cQP"/>
+                                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="tOz-o3-2e4" secondAttribute="bottom" constant="22.5" id="F2S-rd-aA6"/>
                                     <constraint firstItem="DHc-e9-wmS" firstAttribute="leading" secondItem="LXA-eM-IUV" secondAttribute="leading" constant="16" id="V4D-en-de4"/>
                                     <constraint firstAttribute="trailing" secondItem="DHc-e9-wmS" secondAttribute="trailing" constant="16" id="ca3-6J-VRi"/>
                                     <constraint firstItem="tOz-o3-2e4" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="LXA-eM-IUV" secondAttribute="leading" constant="16" id="fgO-Lz-FQc"/>
                                     <constraint firstItem="DHc-e9-wmS" firstAttribute="top" secondItem="LXA-eM-IUV" secondAttribute="top" constant="8" id="xeR-1p-r1r"/>
-                                    <constraint firstAttribute="height" priority="750" constant="86.5" id="y02-ZU-A4E"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t99-3E-xAb">

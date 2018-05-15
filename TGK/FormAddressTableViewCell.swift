@@ -71,7 +71,7 @@ class FormAddressTableViewCell: UITableViewCell, FormItemView {
         }
         
         let countryFieldId = self.formQuestion.subfields[5].id
-        answerModels.append(FormQuestionAnswerModel(wufooFieldID: countryFieldId, userAnswer: "United Stat"))
+        answerModels.append(FormQuestionAnswerModel(wufooFieldID: countryFieldId, userAnswer: "United States"))
         
         return answerModels
     }

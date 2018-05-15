@@ -11,6 +11,7 @@ import UIKit
 
 protocol FormItemViewDelegate {
     func formItemViewDidPressReturn(_ formItemView: FormItemView)
+    func formSegmentedControlTableViewCellRequestTableViewUpdates(_ cell:FormSegmentedControlTableViewCell)
 }
 
 protocol FormItemView {

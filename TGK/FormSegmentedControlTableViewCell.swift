@@ -8,9 +8,6 @@
 
 import UIKit
 
-protocol FormSegmentedControlTableViewCellDelegate {
-    func formSegmentedControlTableViewCellRequestTableViewUpdates(_ cell:FormSegmentedControlTableViewCell)
-}
 class FormSegmentedControlTableViewCell: UITableViewCell, FormItemView {
 
     @IBOutlet weak var questionLabel: UILabel!
@@ -54,8 +51,6 @@ class FormSegmentedControlTableViewCell: UITableViewCell, FormItemView {
     }
     //End FormItemView conformance
     
-    var segmentedControlCellDelegate:FormSegmentedControlTableViewCellDelegate?
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -86,7 +81,7 @@ extension FormSegmentedControlTableViewCell {
         else {
             self.hasOtherFieldView.isHidden = true
         }
-        self.segmentedControlCellDelegate?.formSegmentedControlTableViewCellRequestTableViewUpdates(self)
+        self.delegate?.formSegmentedControlTableViewCellRequestTableViewUpdates(self)
     }
 }
 
