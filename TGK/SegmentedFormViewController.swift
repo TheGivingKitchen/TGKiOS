@@ -13,9 +13,8 @@ protocol SegmentedFormViewControllerDelegate {
     func segmentedFormViewControllerDidPressCancel(_ segmentedFormViewController:SegmentedFormViewController)
 }
 
-class SegmentedFormViewController: UIViewController {
+class SegmentedFormViewController: UITableViewController {
 
-    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var informationlabel: UILabel!
     
     //dependencies
@@ -112,16 +111,16 @@ class SegmentedFormViewController: UIViewController {
 }
 
 //MARK: Tableview Datasource
-extension SegmentedFormViewController: UITableViewDataSource, UITableViewDelegate {
-    func numberOfSections(in tableView: UITableView) -> Int {
+extension SegmentedFormViewController {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.questionModels.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if self.formQuestionCells.count > indexPath.row {
             return self.formQuestionCells[indexPath.row]
         }
