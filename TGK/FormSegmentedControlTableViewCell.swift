@@ -30,6 +30,15 @@ class FormSegmentedControlTableViewCell: UITableViewCell, FormItemView {
     var mainInputControl: UIView {
         return self.segmentedControl
     }
+
+    var formItemOutputValue: [FormQuestionAnswerModel] {
+        let answerText = self.hasOtherSelected ? self.hasOtherFieldTextView.text : self.segmentedControl.titleForSegment(at: self.segmentedControl.selectedSegmentIndex)
+        
+        let answerModel = FormQuestionAnswerModel(wufooFieldID: self.formQuestion.id, userAnswer: answerText)
+        
+        return [answerModel]
+    }
+    //End FormItemView conformance
     
     var hasOtherSelected:Bool {
         if self.formQuestion.hasOtherField == false {
@@ -40,16 +49,6 @@ class FormSegmentedControlTableViewCell: UITableViewCell, FormItemView {
         }
         return false
     }
-    
-    var formItemOutputValue: [FormQuestionAnswerModel] {
-        let answerText = self.segmentedControl.titleForSegment(at: self.segmentedControl.selectedSegmentIndex)
-        
-        
-        let answerModel = self.hasOtherSelected ? FormQuestionAnswerModel(wufooFieldID: self.formQuestion.id, userAnswer: self.hasOtherFieldTextView.text) : FormQuestionAnswerModel(wufooFieldID: self.formQuestion.id, userAnswer: answerText)
-        
-        return [answerModel]
-    }
-    //End FormItemView conformance
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -81,7 +80,7 @@ extension FormSegmentedControlTableViewCell {
         else {
             self.hasOtherFieldView.isHidden = true
         }
-        self.delegate?.formSegmentedControlTableViewCellRequestTableViewUpdates(self)
+        self.delegate?.formItemViewRequestTableViewUpdates(self)
     }
 }
 

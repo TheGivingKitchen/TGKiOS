@@ -13,11 +13,31 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="FormListSelectTableViewCell" customModule="TGK" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="422" height="100"/>
+            <rect key="frame" x="0.0" y="0.0" width="422" height="84"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="hKc-ft-Hch">
-                    <rect key="frame" x="0.0" y="36" width="422" height="64"/>
+                    <rect key="frame" x="0.0" y="36" width="422" height="48"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F1u-MC-1wh">
+                            <rect key="frame" x="0.0" y="0.0" width="422" height="48"/>
+                            <subviews>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please Specify" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5ec-s7-mGK">
+                                    <rect key="frame" x="8" y="9" width="406" height="30"/>
+                                    <nil key="textColor"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                            </subviews>
+                            <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="5ec-s7-mGK" firstAttribute="leading" secondItem="F1u-MC-1wh" secondAttribute="leading" constant="8" id="3Wv-4O-ehQ"/>
+                                <constraint firstAttribute="trailing" secondItem="5ec-s7-mGK" secondAttribute="trailing" constant="8" id="TJx-x2-mig"/>
+                                <constraint firstAttribute="height" priority="750" constant="44" id="XP7-eV-6MG"/>
+                                <constraint firstItem="5ec-s7-mGK" firstAttribute="centerY" secondItem="F1u-MC-1wh" secondAttribute="centerY" id="cFH-rD-1xz"/>
+                            </constraints>
+                        </view>
+                    </subviews>
                 </stackView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stack View" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YoW-Vm-h2T">
                     <rect key="frame" x="20" y="8" width="382" height="20"/>
@@ -39,10 +59,12 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
+                <outlet property="hasOtherFieldTextField" destination="5ec-s7-mGK" id="guV-aY-DUj"/>
+                <outlet property="hasOtherFieldView" destination="F1u-MC-1wh" id="4uK-fo-0cH"/>
                 <outlet property="questionLabel" destination="YoW-Vm-h2T" id="kak-fW-c8m"/>
                 <outlet property="stackView" destination="hKc-ft-Hch" id="lHB-sH-19d"/>
             </connections>
-            <point key="canvasLocation" x="50" y="-162"/>
+            <point key="canvasLocation" x="50" y="-170"/>
         </view>
     </objects>
 </document>

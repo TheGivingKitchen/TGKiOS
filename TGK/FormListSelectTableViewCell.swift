@@ -13,6 +13,15 @@ class FormListSelectTableViewCell: UITableViewCell, FormItemView {
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var stackView: UIStackView!
     
+    @IBOutlet weak var hasOtherFieldView: UIView!
+        {
+        didSet {
+            hasOtherFieldView.isHidden = true
+        }
+    }
+    @IBOutlet weak var hasOtherFieldTextField: UITextField!
+    
+    
     //MARK: FormItemView
     var delegate: FormItemViewDelegate?
     var formQuestion: FormQuestionModel! {
@@ -33,6 +42,11 @@ class FormListSelectTableViewCell: UITableViewCell, FormItemView {
         
         switch self.selectionType {
         case .single:
+            //this field allows "hasOtherField", so if thats selected, return that answer
+            if self.hasOtherSelected {
+                let answerModel = FormQuestionAnswerModel(wufooFieldID: self.formQuestion.id, userAnswer: self.hasOtherFieldTextField.text)
+                return [answerModel]
+            }
             //Always return the first selected index in case multiple selection slipped through
             for index in 0..<self.rows.count {
                 let row = self.rows[index]
@@ -71,6 +85,19 @@ class FormListSelectTableViewCell: UITableViewCell, FormItemView {
         }
     }
     
+    var hasOtherSelected:Bool {
+        if self.formQuestion.hasOtherField == false {
+            return false
+        }
+        
+        if self.rows.count > 0 {
+            let lastRow = self.rows[self.rows.count - 1]
+            return lastRow.isSelected
+        }
+        
+        return false
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -87,14 +114,18 @@ class FormListSelectTableViewCell: UITableViewCell, FormItemView {
             row.removeFromSuperview()
         }
         self.rows = []
-        
+        let rowHeight:CGFloat = 44.0
         switch self.selectionType {
             //if we're single selection, then it's a radio button and choices are populated from "answer choices"
         case .single:
             for answerChoice in self.formQuestion.answerOptions {
-                let answerChoiceRow = FormListSelectTableViewCellRow(frame: CGRect(x: 0, y: 0, width: self.stackView.frame.size.width, height: 44.0))
+                let answerChoiceRow = FormListSelectTableViewCellRow(frame: CGRect(x: 0, y: 0, width: self.stackView.frame.size.width, height: rowHeight))
+                let constraint = NSLayoutConstraint(item: answerChoiceRow, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: rowHeight)
+                constraint.priority = UILayoutPriority(rawValue: 750.0)
+                answerChoiceRow.addConstraint(constraint)
                 answerChoiceRow.choiceLabel.text = answerChoice
-                self.stackView.addArrangedSubview(answerChoiceRow)
+                //insert right before the last subview. The last subview is the "hasOtherField" textView
+                self.stackView.insertArrangedSubview(answerChoiceRow, at: self.stackView.arrangedSubviews.count - 1)
                 answerChoiceRow.delegate = self
                 self.rows.append(answerChoiceRow)
             }
@@ -102,9 +133,13 @@ class FormListSelectTableViewCell: UITableViewCell, FormItemView {
             //if we're multiple selection, then it's a checkbox and choices are populated form subfields
         case .multiple:
             for subfield in self.formQuestion.subfields {
-                let answerChoiceRow = FormListSelectTableViewCellRow(frame: CGRect(x: 0, y: 0, width: self.stackView.frame.size.width, height: 44.0))
+                let answerChoiceRow = FormListSelectTableViewCellRow(frame: CGRect(x: 0, y: 0, width: self.stackView.frame.size.width, height: rowHeight))
+                let constraint = NSLayoutConstraint(item: answerChoiceRow, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: rowHeight)
+                constraint.priority = UILayoutPriority(rawValue: 750.0)
+                answerChoiceRow.addConstraint(constraint)
                 answerChoiceRow.choiceLabel.text = subfield.label
-                self.stackView.addArrangedSubview(answerChoiceRow)
+                //insert right before the last subview. The last subview is the "hasOtherField" textView
+                self.stackView.insertArrangedSubview(answerChoiceRow, at: self.stackView.arrangedSubviews.count - 1)
                 answerChoiceRow.delegate = self
                 self.rows.append(answerChoiceRow)
             }
@@ -120,14 +155,6 @@ extension FormListSelectTableViewCell: FormListSelectTableViewCellRowDelegate {
             break
         case .single:
             //Deselect all other rows
-            let numberOfSelectedRows = self.rows.filter { (row) -> Bool in
-                return row.isSelected
-            }.count
-            
-            guard numberOfSelectedRows > 1 else {
-                return
-            }
-            
             guard let rowIndex = self.rows.index(of: cell) else {
                 return
             }
@@ -138,6 +165,20 @@ extension FormListSelectTableViewCell: FormListSelectTableViewCellRowDelegate {
                 }
                 self.rows[index].isSelected = false
             }
+            
+            //if we're on the last segment and hasOtherField flag is enabled, then show text input
+            if self.hasOtherSelected && self.formQuestion.hasOtherField == true && self.hasOtherFieldView.isHidden == true {
+                self.hasOtherFieldView.isHidden = false
+                self.hasOtherFieldTextField.becomeFirstResponder()
+            }
+            else {
+                if self.hasOtherFieldView.isHidden == false {
+                    self.hasOtherFieldView.isHidden = true
+                    self.hasOtherFieldTextField.resignFirstResponder()
+                }
+            }
+            
+            self.delegate?.formItemViewRequestTableViewUpdates(self)
             break
         }
     }

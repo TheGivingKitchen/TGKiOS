@@ -231,7 +231,7 @@ extension SegmentedFormViewController:FormItemViewDelegate {
         nextCellAsFormItem.mainInputControl.becomeFirstResponder()
     }
     
-    func formSegmentedControlTableViewCellRequestTableViewUpdates(_ cell: FormSegmentedControlTableViewCell) {
+    func formItemViewRequestTableViewUpdates(_ view: FormItemView) {
         //Notify our tableview that it needs to update
         self.tableView.beginUpdates()
         self.tableView.endUpdates()
