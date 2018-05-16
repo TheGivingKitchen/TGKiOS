@@ -39,7 +39,7 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qqu-Fc-h9O">
-                                    <rect key="frame" x="164.66666666666666" y="25.666666666666671" width="44.666666666666657" height="20.333333333333329"/>
+                                    <rect key="frame" x="16" y="26" width="343" height="20.333333333333329"/>
                                     <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
@@ -47,8 +47,9 @@
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstItem="Qqu-Fc-h9O" firstAttribute="centerX" secondItem="uIR-fv-GK0" secondAttribute="centerX" id="B65-VK-mCb"/>
                                 <constraint firstItem="Qqu-Fc-h9O" firstAttribute="centerY" secondItem="uIR-fv-GK0" secondAttribute="centerY" id="do3-XT-ibG"/>
+                                <constraint firstAttribute="trailing" secondItem="Qqu-Fc-h9O" secondAttribute="trailing" constant="16" id="ivk-mY-DiV"/>
+                                <constraint firstItem="Qqu-Fc-h9O" firstAttribute="leading" secondItem="uIR-fv-GK0" secondAttribute="leading" constant="16" id="ys1-pe-Opa"/>
                             </constraints>
                         </view>
                         <connections>

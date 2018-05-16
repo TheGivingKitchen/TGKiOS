@@ -22,16 +22,7 @@ class SegmentedFormNavigationController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.fetchData()
-    }
-    
-    func fetchData() {
-        //call this earlier in the navigation controller's parent view controller
-        ServiceManager.sharedInstace.getTestSegmentedForm(id: "z1a0tap91any17q") { (segmentedFormModel, error) in
-            if let segmentedFormModel = segmentedFormModel {
-                self.segmentedFormModel = segmentedFormModel
-            }
-        }
+        self.setupFormPages()
     }
     
     func setupFormPages() {

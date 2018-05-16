@@ -121,7 +121,7 @@ class FormListSelectTableViewCell: UITableViewCell, FormItemView {
             for answerChoice in self.formQuestion.answerOptions {
                 let answerChoiceRow = FormListSelectTableViewCellRow(frame: CGRect(x: 0, y: 0, width: self.stackView.frame.size.width, height: rowHeight))
                 let constraint = NSLayoutConstraint(item: answerChoiceRow, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: rowHeight)
-                constraint.priority = UILayoutPriority(rawValue: 750.0)
+//                constraint.priority = UILayoutPriority(rawValue: 750.0)
                 answerChoiceRow.addConstraint(constraint)
                 answerChoiceRow.choiceLabel.text = answerChoice
                 //insert right before the last subview. The last subview is the "hasOtherField" textView
@@ -135,7 +135,7 @@ class FormListSelectTableViewCell: UITableViewCell, FormItemView {
             for subfield in self.formQuestion.subfields {
                 let answerChoiceRow = FormListSelectTableViewCellRow(frame: CGRect(x: 0, y: 0, width: self.stackView.frame.size.width, height: rowHeight))
                 let constraint = NSLayoutConstraint(item: answerChoiceRow, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: rowHeight)
-                constraint.priority = UILayoutPriority(rawValue: 750.0)
+//                constraint.priority = UILayoutPriority(rawValue: 750.0)
                 answerChoiceRow.addConstraint(constraint)
                 answerChoiceRow.choiceLabel.text = subfield.label
                 //insert right before the last subview. The last subview is the "hasOtherField" textView
