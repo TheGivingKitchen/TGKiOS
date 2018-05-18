@@ -24,6 +24,7 @@
 		4ECA9C0D20A868500084A317 /* FormAddressTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4ECA9C0C20A868500084A317 /* FormAddressTableViewCell.xib */; };
 		4ECA9C0F20A8A2640084A317 /* FormDateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECA9C0E20A8A2640084A317 /* FormDateTableViewCell.swift */; };
 		4ECA9C1120A8A26E0084A317 /* FormDateTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4ECA9C1020A8A26E0084A317 /* FormDateTableViewCell.xib */; };
+		4ECA9C3320AE37040084A317 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4ECA9C3220AE37030084A317 /* GoogleService-Info.plist */; };
 		4ED3881A209D01EF00A8BEE2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED38819209D01EF00A8BEE2 /* AppDelegate.swift */; };
 		4ED3881C209D01EF00A8BEE2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED3881B209D01EF00A8BEE2 /* ViewController.swift */; };
 		4ED3881F209D01EF00A8BEE2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4ED3881D209D01EF00A8BEE2 /* Main.storyboard */; };
@@ -70,6 +71,7 @@
 		4ECA9C0C20A868500084A317 /* FormAddressTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FormAddressTableViewCell.xib; sourceTree = "<group>"; };
 		4ECA9C0E20A8A2640084A317 /* FormDateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormDateTableViewCell.swift; sourceTree = "<group>"; };
 		4ECA9C1020A8A26E0084A317 /* FormDateTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FormDateTableViewCell.xib; sourceTree = "<group>"; };
+		4ECA9C3220AE37030084A317 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4ED38816209D01EF00A8BEE2 /* TGK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TGK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4ED38819209D01EF00A8BEE2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4ED3881B209D01EF00A8BEE2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -274,6 +276,7 @@
 				4ED38820209D01F200A8BEE2 /* Assets.xcassets */,
 				4ED38822209D01F200A8BEE2 /* LaunchScreen.storyboard */,
 				4ED38825209D01F200A8BEE2 /* Info.plist */,
+				4ECA9C3220AE37030084A317 /* GoogleService-Info.plist */,
 			);
 			path = TGK;
 			sourceTree = "<group>";
@@ -361,6 +364,7 @@
 				4ECA9C0D20A868500084A317 /* FormAddressTableViewCell.xib in Resources */,
 				4ED3884C209D030600A8BEE2 /* FormListSelectTableViewCell.xib in Resources */,
 				4ECA9C1120A8A26E0084A317 /* FormDateTableViewCell.xib in Resources */,
+				4ECA9C3320AE37040084A317 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,10 +397,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-TGK/Pods-TGK-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -583,10 +591,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VZBY3CL334;
 				INFOPLIST_FILE = TGK/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.thegivingkitchen.TGK;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -602,10 +607,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VZBY3CL334;
 				INFOPLIST_FILE = TGK/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.thegivingkitchen.TGK;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

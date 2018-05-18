@@ -5,5 +5,8 @@ target 'TGK' do
 
   # Pods for TGK
   pod 'Alamofire', '~> 4.6'
+  pod 'Firebase/Core'
+  
+
 
 end

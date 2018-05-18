@@ -16,8 +16,8 @@ extension ServiceManager {
         return ["Authorization":"Basic \(wufooAPIKey.base64String)"]
     }
     
-    func getForm(id:String, completion:@escaping ([FormQuestionModel]?, Error?)->Void) {
-        self.sessionManager.request(Router.getForm(id).url, encoding: JSONEncoding.default, headers: self.wufooAuthenticationHeaders).responseJSON { (response) in
+    func getWufooForm(id:String, completion:@escaping ([FormQuestionModel]?, Error?)->Void) {
+        self.sessionManager.request(Router.getWufooForm(id).url, encoding: URLEncoding.default, headers: self.wufooAuthenticationHeaders).responseJSON { (response) in
             
             if let error = response.result.error {
                 completion(nil, error)
@@ -25,7 +25,7 @@ extension ServiceManager {
             
             guard let topLevelJsonDict = response.result.value as? [String:Any],
                 let jsonArray = topLevelJsonDict["Fields"] as? [[String:Any]] else {
-                    completion(nil, nil)
+                    completion(nil, NSError(domain: "", code: 999, userInfo: [NSLocalizedDescriptionKey:"Parsing error"]))
                     return
             }
             
@@ -39,6 +39,23 @@ extension ServiceManager {
                 parsedModels.append(FormQuestionModel(jsonDict: jsonDict))
             }
             completion(parsedModels, nil)
+        }
+    }
+    
+    func getFirebaseForm(id:String, completion: @escaping (SegmentedFormModel?, Error?) -> Void) {
+        self.sessionManager.request(Router.getFirebaseForm(id).url, encoding: URLEncoding.default, headers:nil).responseJSON { (response) in
+            if let error = response.result.error {
+                completion(nil, error)
+            }
+            
+            guard let topLevelJsonDict = response.result.value as? [String:Any] else {
+                    completion(nil, NSError(domain: "", code: 999, userInfo: [NSLocalizedDescriptionKey:"Parsing error"]))
+                    return
+            }
+            
+            let segmentedFormModel = SegmentedFormModel(jsonDict: topLevelJsonDict)
+            completion(segmentedFormModel, nil)
+            
         }
     }
     
