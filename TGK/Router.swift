@@ -11,10 +11,15 @@ import Alamofire
 
 enum Router {
     static let wufooBaseUrl = "https://thegivingkitchen.wufoo.com/api/v3"
-    static let firebaseBaseFormUrl = "https://firebasestorage.googleapis.com/v0/b/thegivingkitchen-cdd28.appspot.com/o"
+    static let firebaseBaseStorageUrl = "https://firebasestorage.googleapis.com/v0/b/thegivingkitchen-cdd28.appspot.com/o"
+    static let firebaseBaseApiUrl = "https://thegivingkitchen-cdd28.firebaseio.com"
     
-    case getAllForms
+    //Root
+    case getAppConfiguration
+    //Forms
+    case getAllWufooForms
     case getWufooForm(String)
+    
     case getFirebaseForm(String)
     case postFormEntry(String)
 }
@@ -22,7 +27,11 @@ enum Router {
 extension Router {
     var httpMethod:Alamofire.HTTPMethod {
         switch self {
-        case .getAllForms:
+        //Root
+        case .getAppConfiguration:
+            return .get
+        //Forms
+        case .getAllWufooForms:
             return .get
         case .getWufooForm:
             return .get
@@ -35,12 +44,16 @@ extension Router {
     
     var urlString:String {
         switch self {
-        case .getAllForms:
+        //Root
+        case .getAppConfiguration:
+            return "\(Router.firebaseBaseApiUrl)/root.json"
+        //Forms
+        case .getAllWufooForms:
             return "\(Router.wufooBaseUrl)/forms.json"
         case .getWufooForm(let formId):
             return "\(Router.wufooBaseUrl)/forms/\(formId)/fields.json"
         case .getFirebaseForm(let formId):
-            return "\(Router.firebaseBaseFormUrl)/forms%2F\(formId).json?alt=media"
+            return "\(Router.firebaseBaseStorageUrl)/forms%2F\(formId).json?alt=media"
         case .postFormEntry(let formId):
             return "\(Router.wufooBaseUrl)/forms/\(formId)/entries.json"
         }

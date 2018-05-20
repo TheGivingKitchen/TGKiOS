@@ -99,7 +99,7 @@ extension ServiceManager {
     
     //MARK: - testing area
     func getAllWufooForms() {
-        self.sessionManager.request(Router.getAllForms.url, encoding: JSONEncoding.default, headers: self.wufooAuthenticationHeaders).responseJSON { (response) in
+        self.sessionManager.request(Router.getAllWufooForms.url, encoding: JSONEncoding.default, headers: self.wufooAuthenticationHeaders).responseJSON { (response) in
             switch response.result {
             case .success(let value):
                 print(value)
