@@ -39,16 +39,15 @@ class FormsHomeViewController: UIViewController {
     }
     
     @IBAction func assistanceTapped(_ sender: Any) {
-        
         let segmentedNav = UIStoryboard(name: "Forms", bundle: nil).instantiateViewController(withIdentifier: "SegmentedFormNavigationControllerId") as! SegmentedFormNavigationController
-        segmentedNav.segmentedFormModel = assistanceFormModel
+        segmentedNav.segmentedFormModel = volunteerFormModel
         self.present(segmentedNav, animated: true)
     }
     
     @IBAction func volunteerSignUpTapped(_ sender: Any) {
         
         let segmentedNav = UIStoryboard(name: "Forms", bundle: nil).instantiateViewController(withIdentifier: "SegmentedFormNavigationControllerId") as! SegmentedFormNavigationController
-        segmentedNav.segmentedFormModel = volunteerFormModel
+        segmentedNav.segmentedFormModel = assistanceFormModel
         self.present(segmentedNav, animated: true)
     }
 }

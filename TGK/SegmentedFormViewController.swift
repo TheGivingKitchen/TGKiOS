@@ -66,6 +66,20 @@ class SegmentedFormViewController: UITableViewController {
         firstFormItem.mainInputControl.becomeFirstResponder()
     }
     
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        guard let headerView = tableView.tableHeaderView else {
+            return
+        }
+        let size = headerView.systemLayoutSizeFitting(UILayoutFittingCompressedSize)
+        if headerView.frame.size.height != size.height {
+            headerView.frame.size.height = size.height
+            tableView.tableHeaderView = headerView
+            tableView.layoutIfNeeded()
+        }
+    }
+    
     fileprivate func configureView() {
         self.navigationItem.title = self.formPage.pageTitle
         self.informationlabel.text = self.formPage.pageInformation

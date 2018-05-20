@@ -104,6 +104,7 @@ class FormListSelectTableViewCell: UITableViewCell, FormItemView {
         //style
         self.questionLabel.font = UIFont.tgkBody
         self.questionLabel.textColor = UIColor.tgkDarkGray
+        self.hasOtherFieldView.backgroundColor = UIColor.tgkLightGray
         self.hasOtherFieldTextField.font = UIFont.tgkBody
         self.hasOtherFieldTextField.textColor = UIColor.tgkDarkGray
     }
@@ -131,6 +132,10 @@ class FormListSelectTableViewCell: UITableViewCell, FormItemView {
                 self.stackView.insertArrangedSubview(answerChoiceRow, at: self.stackView.arrangedSubviews.count - 1)
                 answerChoiceRow.delegate = self
                 self.rows.append(answerChoiceRow)
+                
+                if self.rows.count > 0 {
+                    self.rows[0].isSelected = true
+                }
             }
             break
             //if we're multiple selection, then it's a checkbox and choices are populated form subfields

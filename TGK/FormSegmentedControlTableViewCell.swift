@@ -58,7 +58,9 @@ class FormSegmentedControlTableViewCell: UITableViewCell, FormItemView {
         self.questionLabel.textColor = UIColor.tgkDarkGray
         self.segmentedControl.setTitleTextAttributes([NSAttributedStringKey.font:UIFont.tgkBody, NSAttributedStringKey.foregroundColor:UIColor.tgkDarkGray], for: .normal)
         self.segmentedControl.tintColor = UIColor.tgkNavy
+        self.hasOtherFieldView.backgroundColor = UIColor.tgkLightGray
         self.hasOtherFieldTextView.font = UIFont.tgkBody
+        self.hasOtherFieldTextView.textColor = UIColor.tgkDarkGray
         
         self.segmentedControl.addTarget(self, action: #selector(segmentedControlDidChangeSegment(sender:)), for: .valueChanged)
     }
