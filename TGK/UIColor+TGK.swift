@@ -10,11 +10,23 @@ import Foundation
 import UIKit
 
 extension UIColor {
-    static var tgkRed:UIColor {
-        return UIColor(red: 234.0/255.0, green: 92.0/255.0, blue: 72.0/255.0, alpha: 1)
+    static var tgkPeach:UIColor {
+        return UIColor(red: 230.0/255.0, green: 97.0/255.0, blue: 74.0/255.0, alpha: 1)
     }
     
-    static var tgkBlue:UIColor {
-        return UIColor(red: 34.0/255.0, green: 61.0/255.0, blue: 123.0/255.0, alpha: 1)
+    static var tgkNavy:UIColor {
+        return UIColor(red: 41.0/255.0, green: 65.0/255.0, blue: 118.0/255.0, alpha: 1)
+    }
+    
+    static var tgkDarkGray:UIColor {
+        return UIColor(red: 68.0/255.0, green: 68.0/255.0, blue: 68.0/255.0, alpha: 1)
+    }
+    
+    static var tgkLightGray:UIColor {
+        return UIColor(red: 29.0/255.0, green: 29.0/255.0, blue: 30.0/255.0, alpha: 1)
+    }
+    
+    static var tgkOutline:UIColor {
+        return UIColor(red: 225.0/255.0, green: 225.0/255.0, blue: 225.0/255.0, alpha: 1)
     }
 }

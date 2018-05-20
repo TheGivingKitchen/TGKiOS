@@ -50,7 +50,7 @@ class FormListSelectTableViewCellRow:BaseNibLoadedView {
     
     private func updateViewForSelection() {
         if self.isSelected {
-            self.view.backgroundColor = UIColor.tgkBlue
+            self.view.backgroundColor = UIColor.tgkNavy
             self.choiceLabel.textColor = UIColor.white
         }
         else {
