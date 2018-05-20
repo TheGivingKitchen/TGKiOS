@@ -37,6 +37,10 @@ class FormDateTableViewCell: UITableViewCell, FormItemView {
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        //style
+        self.questionLabel.font = UIFont.tgkBody
+        self.questionLabel.textColor = UIColor.tgkDarkGray
+        
         self.dateFormater.dateFormat = "yyyyMMdd" 
     }
 

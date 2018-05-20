@@ -44,6 +44,10 @@ class FormListSelectTableViewCellRow:BaseNibLoadedView {
     }
     
     private func configureView() {
+        //style
+        self.choiceLabel.font = UIFont.tgkBody
+        self.choiceLabel.textColor = UIColor.tgkDarkGray
+        
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(viewTapped(recognizer:)))
         self.view.addGestureRecognizer(tapGestureRecognizer)
     }

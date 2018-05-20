@@ -54,6 +54,16 @@ class FormShortNameTableViewCell: UITableViewCell, FormItemView {
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        //style
+        self.questionLabel.font = UIFont.tgkBody
+        self.questionLabel.textColor = UIColor.tgkDarkGray
+        self.firstNameTextField.font = UIFont.tgkBody
+        self.firstNameTextField.textColor = UIColor.tgkDarkGray
+        self.lastNameTextField.font = UIFont.tgkBody
+        self.lastNameTextField.textColor = UIColor.tgkDarkGray
+        
+        self.firstNameTextField.delegate = self
+        self.lastNameTextField.delegate = self
     }
     
     private func configureView() {
@@ -68,5 +78,18 @@ class FormShortNameTableViewCell: UITableViewCell, FormItemView {
         let lastNameSubfield = self.formQuestion.subfields[1]
         self.lastNameTextField.placeholder = lastNameSubfield.label
     }
+}
 
+//MARK: text field delegate
+extension FormShortNameTableViewCell:UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == self.firstNameTextField {
+            self.lastNameTextField.becomeFirstResponder()
+        }
+        else if textField == self.lastNameTextField,
+            let delegate = self.delegate {
+            delegate.formItemViewDidPressReturn(self)
+        }
+        return false
+    }
 }

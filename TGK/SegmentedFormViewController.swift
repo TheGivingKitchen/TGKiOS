@@ -38,6 +38,9 @@ class SegmentedFormViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.informationlabel.font = UIFont.tgkH2
+        self.informationlabel.textColor = UIColor.tgkPeach
+        
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.tableView.rowHeight = UITableViewAutomaticDimension

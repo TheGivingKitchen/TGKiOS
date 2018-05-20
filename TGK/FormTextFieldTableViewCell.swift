@@ -62,6 +62,12 @@ class FormTextFieldTableViewCell: UITableViewCell, FormItemView {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        //style
+        self.questionLabel.font = UIFont.tgkBody
+        self.questionLabel.textColor = UIColor.tgkDarkGray
+        self.textField.font = UIFont.tgkBody
+        
         self.textField.delegate = self
     }
     
@@ -130,7 +136,7 @@ extension FormTextFieldTableViewCell: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if let delegate = self.delegate {
-            self.textField.resignFirstResponder()
+            textField.resignFirstResponder()
             delegate.formItemViewDidPressReturn(self)
         }
         return false

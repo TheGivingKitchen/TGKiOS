@@ -53,6 +53,13 @@ class FormSegmentedControlTableViewCell: UITableViewCell, FormItemView {
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        //style
+        self.questionLabel.font = UIFont.tgkBody
+        self.questionLabel.textColor = UIColor.tgkDarkGray
+        self.segmentedControl.setTitleTextAttributes([NSAttributedStringKey.font:UIFont.tgkBody, NSAttributedStringKey.foregroundColor:UIColor.tgkDarkGray], for: .normal)
+        self.segmentedControl.tintColor = UIColor.tgkNavy
+        self.hasOtherFieldTextView.font = UIFont.tgkBody
+        
         self.segmentedControl.addTarget(self, action: #selector(segmentedControlDidChangeSegment(sender:)), for: .valueChanged)
     }
     

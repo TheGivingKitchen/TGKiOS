@@ -36,6 +36,11 @@ class FormPickerTableViewCell: UITableViewCell, FormItemView {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        //style
+        self.questionLabel.font = UIFont.tgkBody
+        self.questionLabel.textColor = UIColor.tgkDarkGray
+        
         self.picker.dataSource = self
         self.picker.delegate = self
     }
@@ -56,8 +61,9 @@ extension FormPickerTableViewCell:UIPickerViewDataSource {
 }
 
 extension FormPickerTableViewCell:UIPickerViewDelegate {
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+    func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
         let option = self.formQuestion.answerOptions[row]
-        return option
+        let attributedOption = NSAttributedString(string: option, attributes: [NSAttributedStringKey.font:UIFont.tgkBody, NSAttributedStringKey.foregroundColor:UIColor.tgkDarkGray])
+        return attributedOption
     }
 }

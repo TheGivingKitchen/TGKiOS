@@ -35,8 +35,14 @@ class FormTextViewTableViewCell: UITableViewCell, FormItemView {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        //style
+        self.questionLabel.font = UIFont.tgkBody
+        self.questionLabel.textColor = UIColor.tgkDarkGray
+        self.textView.font = UIFont.tgkBody
+        self.textView.textColor = UIColor.tgkDarkGray
         self.textView.layer.borderWidth = 1
-        self.textView.layer.borderColor = UIColor.black.cgColor
+        self.textView.layer.borderColor = UIColor.tgkNavy.cgColor
     }
 
     private func configureView() {

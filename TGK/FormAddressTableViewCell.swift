@@ -17,6 +17,7 @@ class FormAddressTableViewCell: UITableViewCell, FormItemView {
     @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var stateLabel: UILabel!
     @IBOutlet weak var zipLabel: UILabel!
+    
     @IBOutlet weak var address1TextField: UITextField!
     @IBOutlet weak var address2TextField: UITextField!
     @IBOutlet weak var cityTextField: UITextField!
@@ -83,6 +84,30 @@ class FormAddressTableViewCell: UITableViewCell, FormItemView {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        //style
+        self.questionLabel.font = UIFont.tgkBody
+        self.questionLabel.textColor = UIColor.tgkDarkGray
+        self.address1Label.font = UIFont.tgkBody
+        self.address1Label.textColor = UIColor.tgkDarkGray
+        self.address1TextField.font = UIFont.tgkBody
+        self.address1TextField.textColor = UIColor.tgkDarkGray
+        self.address2Label.font = UIFont.tgkBody
+        self.address2Label.textColor = UIColor.tgkDarkGray
+        self.address2TextField.font = UIFont.tgkBody
+        self.address2TextField.textColor = UIColor.tgkDarkGray
+        self.cityLabel.font = UIFont.tgkBody
+        self.cityLabel.textColor = UIColor.tgkDarkGray
+        self.cityTextField.font = UIFont.tgkBody
+        self.cityTextField.textColor = UIColor.tgkDarkGray
+        self.stateLabel.font = UIFont.tgkBody
+        self.stateLabel.textColor = UIColor.tgkDarkGray
+        self.stateTextField.font = UIFont.tgkBody
+        self.stateTextField.textColor = UIColor.tgkDarkGray
+        self.zipLabel.font = UIFont.tgkBody
+        self.zipLabel.textColor = UIColor.tgkDarkGray
+        self.zipTextField.font = UIFont.tgkBody
+        self.zipTextField.textColor = UIColor.tgkDarkGray
     }
 
     private func configureView() {
