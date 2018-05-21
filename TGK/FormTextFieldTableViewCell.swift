@@ -67,6 +67,11 @@ class FormTextFieldTableViewCell: UITableViewCell, FormItemView {
         self.questionLabel.font = UIFont.tgkBody
         self.questionLabel.textColor = UIColor.tgkDarkGray
         self.textField.font = UIFont.tgkBody
+        self.textField.layer.borderColor = UIColor.tgkOutline.cgColor
+        self.textField.layer.borderWidth = 1
+        let spacerView = UIView(frame:CGRect(x:0, y:0, width:10, height:10))
+        self.textField.leftViewMode = UITextFieldViewMode.always
+        self.textField.leftView = spacerView
         
         self.textField.delegate = self
     }

@@ -42,7 +42,7 @@ class FormTextViewTableViewCell: UITableViewCell, FormItemView {
         self.textView.font = UIFont.tgkBody
         self.textView.textColor = UIColor.tgkDarkGray
         self.textView.layer.borderWidth = 1
-        self.textView.layer.borderColor = UIColor.tgkNavy.cgColor
+        self.textView.layer.borderColor = UIColor.tgkOutline.cgColor
     }
 
     private func configureView() {

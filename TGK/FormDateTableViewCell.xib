@@ -16,8 +16,8 @@
             <rect key="frame" x="0.0" y="0.0" width="428" height="198"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qxp-oG-oSN">
-                    <rect key="frame" x="20" y="8" width="388" height="20"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qxp-oG-oSN">
+                    <rect key="frame" x="16" y="8" width="396" height="20"/>
                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -31,21 +31,43 @@
                         <!--1920-01-01 11:00:00 +0000-->
                     </date>
                 </datePicker>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rAf-7G-9Kl">
+                    <rect key="frame" x="0.0" y="36" width="428" height="1"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="uUM-DA-abJ"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QLD-fY-6Ac">
+                    <rect key="frame" x="0.0" y="197" width="428" height="1"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="2zb-VA-B6T"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="Qxp-oG-oSN" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="DNR-Q2-ofa"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Qxp-oG-oSN" secondAttribute="trailing" constant="20" id="HhH-7g-mFo"/>
+                <constraint firstItem="Qxp-oG-oSN" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="DNR-Q2-ofa"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Qxp-oG-oSN" secondAttribute="trailing" constant="16" id="HhH-7g-mFo"/>
+                <constraint firstItem="rAf-7G-9Kl" firstAttribute="leading" secondItem="Ve1-su-Ya9" secondAttribute="leading" id="MVE-Xy-pLK"/>
+                <constraint firstItem="QLD-fY-6Ac" firstAttribute="trailing" secondItem="Ve1-su-Ya9" secondAttribute="trailing" id="Myx-mh-HKY"/>
+                <constraint firstItem="rAf-7G-9Kl" firstAttribute="top" secondItem="Ve1-su-Ya9" secondAttribute="top" id="NZB-6X-glW"/>
                 <constraint firstItem="Ve1-su-Ya9" firstAttribute="top" secondItem="Qxp-oG-oSN" secondAttribute="bottom" constant="8" id="TiO-lr-Ggr"/>
+                <constraint firstItem="QLD-fY-6Ac" firstAttribute="bottom" secondItem="Ve1-su-Ya9" secondAttribute="bottom" id="cRE-ZQ-hrM"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Ve1-su-Ya9" secondAttribute="bottom" id="gdh-ki-NR2"/>
                 <constraint firstItem="Qxp-oG-oSN" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="8" id="kcB-yO-T3u"/>
+                <constraint firstItem="rAf-7G-9Kl" firstAttribute="trailing" secondItem="Ve1-su-Ya9" secondAttribute="trailing" id="lh3-hA-DZh"/>
                 <constraint firstItem="Ve1-su-Ya9" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="mh0-5X-trE"/>
+                <constraint firstItem="QLD-fY-6Ac" firstAttribute="leading" secondItem="Ve1-su-Ya9" secondAttribute="leading" id="y1Y-3K-y1j"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Ve1-su-Ya9" secondAttribute="trailing" id="zJc-dA-6yl"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
                 <outlet property="datePicker" destination="Ve1-su-Ya9" id="q8j-7X-YAz"/>
+                <outlet property="pickerBottomOutlineView" destination="QLD-fY-6Ac" id="k8W-G4-fdu"/>
+                <outlet property="pickerTopOutlineView" destination="rAf-7G-9Kl" id="v23-Vj-bl6"/>
                 <outlet property="questionLabel" destination="Qxp-oG-oSN" id="PSP-Np-kDm"/>
             </connections>
             <point key="canvasLocation" x="51" y="-183"/>

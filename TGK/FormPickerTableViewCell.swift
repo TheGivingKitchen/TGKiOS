@@ -12,6 +12,8 @@ class FormPickerTableViewCell: UITableViewCell, FormItemView {
 
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var picker: UIPickerView!
+    @IBOutlet weak var pickerBottomOutlineView: UIView!
+    @IBOutlet weak var pickerTopOutlineView: UIView!
     
     //MARK: FormItemView
     var delegate: FormItemViewDelegate?
@@ -40,6 +42,8 @@ class FormPickerTableViewCell: UITableViewCell, FormItemView {
         //style
         self.questionLabel.font = UIFont.tgkBody
         self.questionLabel.textColor = UIColor.tgkDarkGray
+        self.pickerTopOutlineView.backgroundColor = UIColor.tgkOutline
+        self.pickerBottomOutlineView.backgroundColor = UIColor.tgkOutline
         
         self.picker.dataSource = self
         self.picker.delegate = self

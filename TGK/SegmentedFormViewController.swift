@@ -39,7 +39,7 @@ class SegmentedFormViewController: UITableViewController {
         super.viewDidLoad()
         
         self.informationlabel.font = UIFont.tgkH2
-        self.informationlabel.textColor = UIColor.tgkPeach
+        self.informationlabel.textColor = UIColor.tgkNavy
         
         self.tableView.delegate = self
         self.tableView.dataSource = self
@@ -81,7 +81,6 @@ class SegmentedFormViewController: UITableViewController {
     }
     
     fileprivate func configureView() {
-        self.navigationItem.title = self.formPage.pageTitle
         self.informationlabel.text = self.formPage.pageInformation
         self.tableView.reloadData()
     }
@@ -93,6 +92,7 @@ class SegmentedFormViewController: UITableViewController {
         }
         else {
             rightBarButtonItem = UIBarButtonItem(title: "Next", style: .plain, target: self, action: #selector(advancePageOrSubmit))
+            rightBarButtonItem.tintColor = UIColor.tgkPeach
         }
         self.navigationItem.rightBarButtonItem = rightBarButtonItem
         

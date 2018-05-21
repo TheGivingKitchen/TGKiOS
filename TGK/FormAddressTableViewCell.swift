@@ -90,24 +90,58 @@ class FormAddressTableViewCell: UITableViewCell, FormItemView {
         self.questionLabel.textColor = UIColor.tgkDarkGray
         self.address1Label.font = UIFont.tgkBody
         self.address1Label.textColor = UIColor.tgkDarkGray
+        
+        self.address1TextField.layer.borderWidth = 1
+        self.address1TextField.layer.borderColor = UIColor.tgkOutline.cgColor
         self.address1TextField.font = UIFont.tgkBody
         self.address1TextField.textColor = UIColor.tgkDarkGray
+        let address1SpacerView = UIView(frame:CGRect(x:0, y:0, width:10, height:10))
+        self.address1TextField.leftViewMode = UITextFieldViewMode.always
+        self.address1TextField.leftView = address1SpacerView
+        
         self.address2Label.font = UIFont.tgkBody
         self.address2Label.textColor = UIColor.tgkDarkGray
+        
+        self.address2TextField.layer.borderWidth = 1
+        self.address2TextField.layer.borderColor = UIColor.tgkOutline.cgColor
         self.address2TextField.font = UIFont.tgkBody
         self.address2TextField.textColor = UIColor.tgkDarkGray
+        let address2SpacerView = UIView(frame:CGRect(x:0, y:0, width:10, height:10))
+        self.address2TextField.leftViewMode = UITextFieldViewMode.always
+        self.address2TextField.leftView = address2SpacerView
+        
         self.cityLabel.font = UIFont.tgkBody
         self.cityLabel.textColor = UIColor.tgkDarkGray
+        
+        self.cityTextField.layer.borderWidth = 1
+        self.cityTextField.layer.borderColor = UIColor.tgkOutline.cgColor
         self.cityTextField.font = UIFont.tgkBody
         self.cityTextField.textColor = UIColor.tgkDarkGray
+        let citySpacerView = UIView(frame:CGRect(x:0, y:0, width:10, height:10))
+        self.cityTextField.leftViewMode = UITextFieldViewMode.always
+        self.cityTextField.leftView = citySpacerView
+        
         self.stateLabel.font = UIFont.tgkBody
         self.stateLabel.textColor = UIColor.tgkDarkGray
+        
+        self.stateTextField.layer.borderWidth = 1
+        self.stateTextField.layer.borderColor = UIColor.tgkOutline.cgColor
         self.stateTextField.font = UIFont.tgkBody
         self.stateTextField.textColor = UIColor.tgkDarkGray
+        let stateSpacerView = UIView(frame:CGRect(x:0, y:0, width:10, height:10))
+        self.stateTextField.leftViewMode = UITextFieldViewMode.always
+        self.stateTextField.leftView = stateSpacerView
+        
         self.zipLabel.font = UIFont.tgkBody
         self.zipLabel.textColor = UIColor.tgkDarkGray
+        
+        self.zipTextField.layer.borderWidth = 1
+        self.zipTextField.layer.borderColor = UIColor.tgkOutline.cgColor
         self.zipTextField.font = UIFont.tgkBody
         self.zipTextField.textColor = UIColor.tgkDarkGray
+        let zipSpacerView = UIView(frame:CGRect(x:0, y:0, width:10, height:10))
+        self.zipTextField.leftViewMode = UITextFieldViewMode.always
+        self.zipTextField.leftView = zipSpacerView
     }
 
     private func configureView() {

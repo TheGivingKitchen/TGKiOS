@@ -61,6 +61,16 @@ class FormShortNameTableViewCell: UITableViewCell, FormItemView {
         self.firstNameTextField.textColor = UIColor.tgkDarkGray
         self.lastNameTextField.font = UIFont.tgkBody
         self.lastNameTextField.textColor = UIColor.tgkDarkGray
+        self.firstNameTextField.layer.borderColor = UIColor.tgkOutline.cgColor
+        self.firstNameTextField.layer.borderWidth = 1
+        self.lastNameTextField.layer.borderColor = UIColor.tgkOutline.cgColor
+        self.lastNameTextField.layer.borderWidth = 1
+        let firstNameSpacerView = UIView(frame:CGRect(x:0, y:0, width:10, height:10))
+        self.firstNameTextField.leftViewMode = UITextFieldViewMode.always
+        self.firstNameTextField.leftView = firstNameSpacerView
+        let lastNameSpacerView = UIView(frame:CGRect(x:0, y:0, width:10, height:10))
+        self.lastNameTextField.leftViewMode = UITextFieldViewMode.always
+        self.lastNameTextField.leftView = lastNameSpacerView
         
         self.firstNameTextField.delegate = self
         self.lastNameTextField.delegate = self

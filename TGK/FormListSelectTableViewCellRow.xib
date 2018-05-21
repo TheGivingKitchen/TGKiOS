@@ -12,34 +12,47 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FormListSelectTableViewCellRow" customModule="TGK" customModuleProvider="target">
             <connections>
-                <outlet property="choiceLabel" destination="CLm-Od-mgn" id="JFc-2v-dN0"/>
+                <outlet property="choiceLabel" destination="xNo-3E-jhH" id="Gr3-2P-OfN"/>
+                <outlet property="innerSelectionView" destination="B2V-AE-5sx" id="RdH-Y5-pHz"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="422" height="50"/>
+            <rect key="frame" x="0.0" y="0.0" width="422" height="60"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choice Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CLm-Od-mgn">
-                    <rect key="frame" x="20" y="15" width="99.5" height="20.5"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B2V-AE-5sx">
+                    <rect key="frame" x="16" y="5" width="390" height="50"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choice Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xNo-3E-jhH">
+                            <rect key="frame" x="16" y="15" width="358" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.51764705879999995" green="0.87058823529999996" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="xNo-3E-jhH" secondAttribute="bottom" constant="1" id="9Ls-NV-wsJ"/>
+                        <constraint firstItem="xNo-3E-jhH" firstAttribute="leading" secondItem="B2V-AE-5sx" secondAttribute="leading" constant="16" id="CXP-gO-I8p"/>
+                        <constraint firstItem="xNo-3E-jhH" firstAttribute="centerY" secondItem="B2V-AE-5sx" secondAttribute="centerY" id="RMA-dD-BRe"/>
+                        <constraint firstAttribute="trailing" secondItem="xNo-3E-jhH" secondAttribute="trailing" constant="16" id="aEe-H5-D6y"/>
+                        <constraint firstItem="xNo-3E-jhH" firstAttribute="top" relation="greaterThanOrEqual" secondItem="B2V-AE-5sx" secondAttribute="top" constant="1" id="wJM-A9-F6u"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="CLm-Od-mgn" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="FGG-tt-xTu"/>
-                <constraint firstItem="CLm-Od-mgn" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="XIg-nC-jJq"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="CLm-Od-mgn" secondAttribute="bottom" constant="8" id="daL-6M-tDm"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="CLm-Od-mgn" secondAttribute="trailing" constant="20" id="eBJ-Yt-MSg"/>
-                <constraint firstItem="CLm-Od-mgn" firstAttribute="top" relation="greaterThanOrEqual" secondItem="vUN-kp-3ea" secondAttribute="top" constant="8" id="tf4-gY-5Cb"/>
+                <constraint firstItem="B2V-AE-5sx" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="XWy-FC-f3Y"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="B2V-AE-5sx" secondAttribute="trailing" constant="16" id="fNa-CE-Ve8"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="B2V-AE-5sx" secondAttribute="bottom" constant="5" id="kSL-wZ-PHY"/>
+                <constraint firstItem="B2V-AE-5sx" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="5" id="rWh-AV-3zm"/>
             </constraints>
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="48" y="-252"/>
+            <point key="canvasLocation" x="48" y="-246"/>
         </view>
     </objects>
 </document>

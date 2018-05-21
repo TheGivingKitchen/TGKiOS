@@ -23,7 +23,7 @@ extension UIColor {
     }
     
     static var tgkLightGray:UIColor {
-        return UIColor(red: 29.0/255.0, green: 29.0/255.0, blue: 30.0/255.0, alpha: 1)
+        return UIColor(red: 29.0/255.0, green: 29.0/255.0, blue: 30.0/255.0, alpha: 0.3)
     }
     
     static var tgkOutline:UIColor {

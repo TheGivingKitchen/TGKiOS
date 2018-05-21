@@ -88,4 +88,8 @@ extension UIFont {
     static var tgkBody:UIFont {
         return UIFont.robotoMono(size: 17)
     }
+    
+    static var tgkMetadata:UIFont {
+        return UIFont.robotoMono(size: 15)
+    }
 }

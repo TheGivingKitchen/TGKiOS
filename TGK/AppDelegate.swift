@@ -18,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         FirebaseApp.configure()
+        self.setupAppearances()
         
         return true
     }
@@ -45,5 +46,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 
+}
+
+extension AppDelegate {
+    func setupAppearances() {
+        UINavigationBar.appearance().tintColor = UIColor.tgkNavy
+    }
 }
 

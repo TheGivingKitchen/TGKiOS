@@ -106,12 +106,16 @@ class FormListSelectTableViewCell: UITableViewCell, FormItemView {
         self.questionLabel.textColor = UIColor.tgkDarkGray
         self.hasOtherFieldView.backgroundColor = UIColor.tgkLightGray
         self.hasOtherFieldTextField.font = UIFont.tgkBody
+        self.hasOtherFieldTextField.backgroundColor = UIColor.white
+        self.hasOtherFieldTextField.layer.borderWidth = 1
+        self.hasOtherFieldTextField.layer.borderColor = UIColor.tgkNavy.cgColor
         self.hasOtherFieldTextField.textColor = UIColor.tgkDarkGray
+        let spacerView = UIView(frame:CGRect(x:0, y:0, width:10, height:10))
+        self.hasOtherFieldTextField.leftViewMode = UITextFieldViewMode.always
+        self.hasOtherFieldTextField.leftView = spacerView
     }
     
     func configureView() {
-        self.layer.borderColor = UIColor.black.cgColor
-        self.layer.borderWidth = 1
         self.questionLabel.text = self.formQuestion.questionTitle
         
         //clear out existing stuff
@@ -120,7 +124,7 @@ class FormListSelectTableViewCell: UITableViewCell, FormItemView {
             row.removeFromSuperview()
         }
         self.rows = []
-        let rowHeight:CGFloat = 44.0
+        let rowHeight:CGFloat = 60.0
         switch self.selectionType {
             //if we're single selection, then it's a radio button and choices are populated from "answer choices"
         case .single:

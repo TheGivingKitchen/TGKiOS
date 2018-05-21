@@ -12,6 +12,8 @@ class FormDateTableViewCell: UITableViewCell, FormItemView {
 
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var datePicker: UIDatePicker!
+    @IBOutlet weak var pickerTopOutlineView: UIView!
+    @IBOutlet weak var pickerBottomOutlineView: UIView!
     
     private let dateFormater = DateFormatter()
     
@@ -40,6 +42,8 @@ class FormDateTableViewCell: UITableViewCell, FormItemView {
         //style
         self.questionLabel.font = UIFont.tgkBody
         self.questionLabel.textColor = UIColor.tgkDarkGray
+        self.pickerTopOutlineView.backgroundColor = UIColor.tgkOutline
+        self.pickerBottomOutlineView.backgroundColor = UIColor.tgkOutline
         
         self.dateFormater.dateFormat = "yyyyMMdd" 
     }

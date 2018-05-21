@@ -23,9 +23,15 @@ class SegmentedFormNavigationController: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupFormPages()
+        self.styleNavigationBar()
     }
     
-    func setupFormPages() {
+    private func styleNavigationBar() {
+        navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationBar.shadowImage = UIImage()
+    }
+    
+    private func setupFormPages() {
         guard let formModel = self.segmentedFormModel else {
             return
         }
