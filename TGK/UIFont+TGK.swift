@@ -63,33 +63,33 @@ extension UIFont {
     }
 }
 
-//MARK: header and body wrappers for styling
+//MARK: Dynamic typed header and body wrappers for styling
 extension UIFont {
     static var tgkH1:UIFont {
-        return UIFont.beckerEgyptian(size: 44)
+        return UIFontMetrics.default.scaledFont(for:UIFont.beckerEgyptian(size: 44))
     }
     
     static var tgkH2:UIFont {
-        return UIFont.kulturistaBold(size: 30)
+        return UIFontMetrics.default.scaledFont(for:UIFont.kulturistaBold(size: 30))
     }
     
     static var tgkH3:UIFont {
-        return UIFont.beckerEgyptian(size: 30)
+        return UIFontMetrics.default.scaledFont(for:UIFont.beckerEgyptian(size: 30))
     }
     
     static var tgkH4:UIFont {
-        return UIFont.kulturistaMedium(size: 17)
+        return UIFontMetrics.default.scaledFont(for:UIFont.kulturistaMedium(size: 17))
     }
     
     static var tgkH5:UIFont {
-        return UIFont.robotoMono(size: 17)
+        return UIFontMetrics.default.scaledFont(for:UIFont.robotoMono(size: 17))
     }
     
     static var tgkBody:UIFont {
-        return UIFont.robotoMono(size: 17)
+        return UIFontMetrics.default.scaledFont(for:UIFont.robotoMono(size: 17))
     }
     
     static var tgkMetadata:UIFont {
-        return UIFont.robotoMono(size: 15)
+        return UIFontMetrics.default.scaledFont(for:UIFont.robotoMono(size: 15))
     }
 }
