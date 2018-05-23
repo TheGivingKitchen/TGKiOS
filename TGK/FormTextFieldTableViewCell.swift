@@ -123,6 +123,7 @@ extension FormTextFieldTableViewCell: UITextFieldDelegate {
         case .email:
             return true
         case .phoneNumber:
+            //workaround for multiple entries caused by inserting predictive text
             if string == "" || string == " " {
                 return true
             }

@@ -138,6 +138,7 @@ class FormListSelectTableViewCell: UITableViewCell, FormItemView {
                 answerChoiceRow.delegate = self
                 self.rows.append(answerChoiceRow)
                 
+                //Auto-select the first row for single selection
                 if self.rows.count > 0 {
                     self.rows[0].isSelected = true
                 }

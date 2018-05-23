@@ -231,6 +231,7 @@ extension SegmentedFormViewController {
 
 //MARK: Tableview Delegate
 extension SegmentedFormViewController:FormItemViewDelegate {
+    //Advance to the next form's main input. If you can't, end editing
     func formItemViewDidPressReturn(_ formItemView: FormItemView) {
         guard let castedFormCell = formItemView as? UITableViewCell else {
             return
