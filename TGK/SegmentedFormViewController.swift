@@ -107,7 +107,7 @@ class SegmentedFormViewController: UITableViewController {
     }
     
     @objc fileprivate func endEditingInTableView() {
-        self.view.endEditing(true)
+        self.tableView.endEditing(true)
     }
 
     @objc func advancePageOrSubmit(_ sender: Any) {
@@ -238,8 +238,10 @@ extension SegmentedFormViewController:FormItemViewDelegate {
         guard let indexOfCell = self.formQuestionCells.index(of: castedFormCell) else {
             return
         }
+        //if we're on the last input cell on the page, dismiss the keyboard and we're done
         let nextIndex = indexOfCell + 1
         guard self.formQuestionCells.count > nextIndex else {
+            self.endEditingInTableView()
             return
         }
         guard let nextCellAsFormItem = self.formQuestionCells[nextIndex] as? FormItemView else {

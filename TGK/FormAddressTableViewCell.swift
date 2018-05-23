@@ -46,25 +46,25 @@ class FormAddressTableViewCell: UITableViewCell, FormItemView {
             let address1AnswerModel = FormQuestionAnswerModel(wufooFieldID: address1FieldId, userAnswer: address1)
             answerModels.append(address1AnswerModel)
         }
-        if let address2 = self.address1TextField.text?.trimmingCharacters(in: .whitespacesAndNewlines),
+        if let address2 = self.address2TextField.text?.trimmingCharacters(in: .whitespacesAndNewlines),
             address2.isEmpty == false {
             let address2FieldId = self.formQuestion.subfields[1].id
             let address2AnswerModel = FormQuestionAnswerModel(wufooFieldID: address2FieldId, userAnswer: address2)
             answerModels.append(address2AnswerModel)
         }
-        if let city = self.address1TextField.text?.trimmingCharacters(in: .whitespacesAndNewlines),
+        if let city = self.cityTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines),
             city.isEmpty == false {
             let cityFieldId = self.formQuestion.subfields[2].id
             let cityModel = FormQuestionAnswerModel(wufooFieldID: cityFieldId, userAnswer: city)
             answerModels.append(cityModel)
         }
-        if let state = self.address1TextField.text?.trimmingCharacters(in: .whitespacesAndNewlines),
+        if let state = self.stateTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines),
             state.isEmpty == false {
             let stateFieldId = self.formQuestion.subfields[3].id
             let stateModel = FormQuestionAnswerModel(wufooFieldID: stateFieldId, userAnswer: state)
             answerModels.append(stateModel)
         }
-        if let zip = self.address1TextField.text?.trimmingCharacters(in: .whitespacesAndNewlines),
+        if let zip = self.zipTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines),
             zip.isEmpty == false {
             let zipFieldId = self.formQuestion.subfields[4].id
             let zipModel = FormQuestionAnswerModel(wufooFieldID: zipFieldId, userAnswer: zip)
@@ -84,6 +84,11 @@ class FormAddressTableViewCell: UITableViewCell, FormItemView {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.address1TextField.delegate = self
+        self.address2TextField.delegate = self
+        self.cityTextField.delegate = self
+        self.stateTextField.delegate = self
+        self.zipTextField.delegate = self
         
         //style
         self.questionLabel.font = UIFont.tgkBody
@@ -166,5 +171,29 @@ class FormAddressTableViewCell: UITableViewCell, FormItemView {
         let zipSubfield = self.formQuestion.subfields[4]
         self.zipLabel.text = zipSubfield.label
     }
+}
 
+extension FormAddressTableViewCell: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        switch textField {
+        case self.address1TextField:
+            self.address2TextField.becomeFirstResponder()
+            break
+        case self.address2TextField:
+            self.cityTextField.becomeFirstResponder()
+            break
+        case self.cityTextField:
+            self.stateTextField.becomeFirstResponder()
+            break
+        case self.stateTextField:
+            self.zipTextField.becomeFirstResponder()
+            break
+        case self.zipTextField:
+            self.delegate?.formItemViewDidPressReturn(self)
+            break
+        default:
+            break
+        }
+        return false
+    }
 }

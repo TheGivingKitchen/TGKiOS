@@ -62,7 +62,8 @@ class FormListSelectTableViewCell: UITableViewCell, FormItemView {
                 let row = self.rows[index]
                 if row.isSelected {
                     let answerText = self.formQuestion.subfields[index].label
-                    answerModels.append(FormQuestionAnswerModel(wufooFieldID: self.formQuestion.id, userAnswer: answerText))
+                    let subfieldId = self.formQuestion.subfields[index].id
+                    answerModels.append(FormQuestionAnswerModel(wufooFieldID: subfieldId, userAnswer: answerText))
                 }
             }
             return answerModels
