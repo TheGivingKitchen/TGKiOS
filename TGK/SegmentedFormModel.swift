@@ -13,6 +13,10 @@ struct SegmentedFormModel {
     let id:String
     let pages:[FormPagePageModel]
     
+    var shareFormUrlString:String {
+        return "https://thegivingkitchen.wufoo.com/forms/\(self.id)"
+    }
+    
     init(jsonDict:[String:Any]) {
         self.id = jsonDict["ID"] as? String ?? ""
         
