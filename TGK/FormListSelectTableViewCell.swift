@@ -180,15 +180,15 @@ extension FormListSelectTableViewCell: FormListSelectTableViewCellRowDelegate {
             if self.hasOtherSelected && self.formQuestion.hasOtherField == true && self.hasOtherFieldView.isHidden == true {
                 self.hasOtherFieldView.isHidden = false
                 self.hasOtherFieldTextField.becomeFirstResponder()
+                self.delegate?.formItemViewRequestTableViewUpdates(self)
             }
             else {
                 if self.hasOtherFieldView.isHidden == false {
                     self.hasOtherFieldView.isHidden = true
                     self.hasOtherFieldTextField.resignFirstResponder()
+                    self.delegate?.formItemViewRequestTableViewUpdates(self)
                 }
             }
-            
-            self.delegate?.formItemViewRequestTableViewUpdates(self)
             break
         }
     }
