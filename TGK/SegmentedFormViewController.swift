@@ -171,11 +171,12 @@ extension SegmentedFormViewController {
             numberCell.textLabel?.text = "number cell"
             return numberCell
         case .radio:
-            let radioCell = Bundle.main.loadNibNamed("FormSegmentedControlTableViewCell", owner: self, options: [:])?.first as! FormSegmentedControlTableViewCell
-            self.formQuestionCells.append(radioCell)
-            radioCell.formQuestion = questionModel
-            radioCell.delegate = self
-            return radioCell
+            let listSelectCell = Bundle.main.loadNibNamed("FormListSelectTableViewCell", owner: self, options: [:])?.first as! FormListSelectTableViewCell
+            self.formQuestionCells.append(listSelectCell)
+            listSelectCell.formQuestion = questionModel
+            listSelectCell.selectionType = .single
+            listSelectCell.delegate = self
+            return listSelectCell
         case .select:
             let dropDownCell = Bundle.main.loadNibNamed("FormPickerTableViewCell", owner: self, options: [:])?.first as! FormPickerTableViewCell
             self.formQuestionCells.append(dropDownCell)

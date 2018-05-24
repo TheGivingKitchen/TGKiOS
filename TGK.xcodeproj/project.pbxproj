@@ -10,6 +10,7 @@
 		165677F7CA24DF537F71485F /* Pods_TGK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02F6B12ADD2CEF057F42D437 /* Pods_TGK.framework */; };
 		4E4D229E20B1B1F400BA7577 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4D229D20B1B1F400BA7577 /* MainTabBarController.swift */; };
 		4E4D22A120B1B2A700BA7577 /* FormsHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4D22A020B1B2A700BA7577 /* FormsHomeViewController.swift */; };
+		4E75176320B6291C00B2D7E0 /* SegmentedFormInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E75176220B6291C00B2D7E0 /* SegmentedFormInfoViewController.swift */; };
 		4E7C2E1720B1D89F00A20303 /* Becker-Egyptian.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4E7C2E1620B1D89F00A20303 /* Becker-Egyptian.otf */; };
 		4E7C2E1A20B1D8A600A20303 /* Kulturista-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4E7C2E1820B1D8A600A20303 /* Kulturista-Medium.otf */; };
 		4E7C2E1B20B1D8A600A20303 /* Kulturista-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4E7C2E1920B1D8A600A20303 /* Kulturista-Bold.otf */; };
@@ -51,14 +52,12 @@
 		4ED3883F209D030600A8BEE2 /* FormQuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED3882D209D030500A8BEE2 /* FormQuestionModel.swift */; };
 		4ED38840209D030600A8BEE2 /* FormTextFieldTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4ED3882E209D030500A8BEE2 /* FormTextFieldTableViewCell.xib */; };
 		4ED38841209D030600A8BEE2 /* SegmentedFormModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED3882F209D030500A8BEE2 /* SegmentedFormModel.swift */; };
-		4ED38842209D030600A8BEE2 /* FormSegmentedControlTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED38830209D030500A8BEE2 /* FormSegmentedControlTableViewCell.swift */; };
 		4ED38843209D030600A8BEE2 /* SegmentedFormNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED38831209D030500A8BEE2 /* SegmentedFormNavigationController.swift */; };
 		4ED38844209D030600A8BEE2 /* FormTextViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED38832209D030500A8BEE2 /* FormTextViewTableViewCell.swift */; };
 		4ED38845209D030600A8BEE2 /* SegmentedFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED38833209D030500A8BEE2 /* SegmentedFormViewController.swift */; };
 		4ED38847209D030600A8BEE2 /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED38835209D030500A8BEE2 /* ServiceManager.swift */; };
 		4ED38848209D030600A8BEE2 /* FormListSelectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED38836209D030500A8BEE2 /* FormListSelectTableViewCell.swift */; };
 		4ED38849209D030600A8BEE2 /* FormQuestionAnswerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED38837209D030600A8BEE2 /* FormQuestionAnswerModel.swift */; };
-		4ED3884A209D030600A8BEE2 /* FormSegmentedControlTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4ED38838209D030600A8BEE2 /* FormSegmentedControlTableViewCell.xib */; };
 		4ED3884B209D030600A8BEE2 /* FormItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED38839209D030600A8BEE2 /* FormItemView.swift */; };
 		4ED3884C209D030600A8BEE2 /* FormListSelectTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4ED3883A209D030600A8BEE2 /* FormListSelectTableViewCell.xib */; };
 		4ED3884D209D030600A8BEE2 /* FormPickerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4ED3883B209D030600A8BEE2 /* FormPickerTableViewCell.xib */; };
@@ -73,6 +72,7 @@
 		2ED9204B045A5AE610078D22 /* Pods-TGK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TGK.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TGK/Pods-TGK.debug.xcconfig"; sourceTree = "<group>"; };
 		4E4D229D20B1B1F400BA7577 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		4E4D22A020B1B2A700BA7577 /* FormsHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormsHomeViewController.swift; sourceTree = "<group>"; };
+		4E75176220B6291C00B2D7E0 /* SegmentedFormInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedFormInfoViewController.swift; sourceTree = "<group>"; };
 		4E7C2E1620B1D89F00A20303 /* Becker-Egyptian.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Becker-Egyptian.otf"; sourceTree = "<group>"; };
 		4E7C2E1820B1D8A600A20303 /* Kulturista-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kulturista-Medium.otf"; sourceTree = "<group>"; };
 		4E7C2E1920B1D8A600A20303 /* Kulturista-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kulturista-Bold.otf"; sourceTree = "<group>"; };
@@ -174,6 +174,26 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
+		4E75176020B615DA00B2D7E0 /* PartsBinNoTarget */ = {
+			isa = PBXGroup;
+			children = (
+				4ED38830209D030500A8BEE2 /* FormSegmentedControlTableViewCell.swift */,
+				4ED38838209D030600A8BEE2 /* FormSegmentedControlTableViewCell.xib */,
+				4ED38834209D030500A8BEE2 /* FormTableViewController.swift */,
+			);
+			name = PartsBinNoTarget;
+			sourceTree = "<group>";
+		};
+		4E75176120B628CA00B2D7E0 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				4E75176220B6291C00B2D7E0 /* SegmentedFormInfoViewController.swift */,
+				4ED38831209D030500A8BEE2 /* SegmentedFormNavigationController.swift */,
+				4ED38833209D030500A8BEE2 /* SegmentedFormViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
 		4E7C2E3020B1D8CE00A20303 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -211,19 +231,10 @@
 			isa = PBXGroup;
 			children = (
 				4ED3885A209D0E4500A8BEE2 /* Forms.storyboard */,
+				4E75176120B628CA00B2D7E0 /* ViewControllers */,
 				4E891000209E3C420034A83B /* FormComponents */,
-				4E890FFF209E3C390034A83B /* ViewControllers */,
 			);
 			name = Forms;
-			sourceTree = "<group>";
-		};
-		4E890FFF209E3C390034A83B /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				4ED38831209D030500A8BEE2 /* SegmentedFormNavigationController.swift */,
-				4ED38833209D030500A8BEE2 /* SegmentedFormViewController.swift */,
-			);
-			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 		4E891000209E3C420034A83B /* FormComponents */ = {
@@ -266,14 +277,6 @@
 			name = Utilities;
 			sourceTree = "<group>";
 		};
-		4E891006209E3CAC0034A83B /* PartsBinNoTarget */ = {
-			isa = PBXGroup;
-			children = (
-				4ED38834209D030500A8BEE2 /* FormTableViewController.swift */,
-			);
-			name = PartsBinNoTarget;
-			sourceTree = "<group>";
-		};
 		4ECA9BF920A268590084A317 /* CommonComponents */ = {
 			isa = PBXGroup;
 			children = (
@@ -287,8 +290,6 @@
 			children = (
 				4ED3882B209D030500A8BEE2 /* FormPickerTableViewCell.swift */,
 				4ED3883B209D030600A8BEE2 /* FormPickerTableViewCell.xib */,
-				4ED38830209D030500A8BEE2 /* FormSegmentedControlTableViewCell.swift */,
-				4ED38838209D030600A8BEE2 /* FormSegmentedControlTableViewCell.xib */,
 				4ED3882C209D030500A8BEE2 /* FormTextFieldTableViewCell.swift */,
 				4ED3882E209D030500A8BEE2 /* FormTextFieldTableViewCell.xib */,
 				4ED38832209D030500A8BEE2 /* FormTextViewTableViewCell.swift */,
@@ -336,7 +337,6 @@
 			isa = PBXGroup;
 			children = (
 				4ECA9BF920A268590084A317 /* CommonComponents */,
-				4E891006209E3CAC0034A83B /* PartsBinNoTarget */,
 				4E891005209E3C990034A83B /* Utilities */,
 				4E891004209E3C890034A83B /* ServiceManager */,
 				4E891002209E3C630034A83B /* Models */,
@@ -346,6 +346,7 @@
 				4E4D229F20B1B27500BA7577 /* MainTabBarRootViewControllers */,
 				4ED3881D209D01EF00A8BEE2 /* Main.storyboard */,
 				4E4D22A220B1D87400BA7577 /* Resources */,
+				4E75176020B615DA00B2D7E0 /* PartsBinNoTarget */,
 				4ED38820209D01F200A8BEE2 /* Assets.xcassets */,
 				4ED38825209D01F200A8BEE2 /* Info.plist */,
 				4ECA9C3220AE37030084A317 /* GoogleService-Info.plist */,
@@ -442,7 +443,6 @@
 				4E7C2E2720B1D8AF00A20303 /* RobotoMono-Regular.ttf in Resources */,
 				4E7C2E2820B1D8AF00A20303 /* RobotoMono-ThinItalic.ttf in Resources */,
 				4E7C2E2E20B1D8AF00A20303 /* RobotoMono-Bold.ttf in Resources */,
-				4ED3884A209D030600A8BEE2 /* FormSegmentedControlTableViewCell.xib in Resources */,
 				4ECA9C0D20A868500084A317 /* FormAddressTableViewCell.xib in Resources */,
 				4ED3884C209D030600A8BEE2 /* FormListSelectTableViewCell.xib in Resources */,
 				4ECA9C1120A8A26E0084A317 /* FormDateTableViewCell.xib in Resources */,
@@ -515,7 +515,6 @@
 				4ED3883E209D030600A8BEE2 /* FormTextFieldTableViewCell.swift in Sources */,
 				4ECA9BFD20A269A10084A317 /* FormListSelectTableViewCellRow.swift in Sources */,
 				4ED38844209D030600A8BEE2 /* FormTextViewTableViewCell.swift in Sources */,
-				4ED38842209D030600A8BEE2 /* FormSegmentedControlTableViewCell.swift in Sources */,
 				4E885BB820A1221700D05ED9 /* FormFieldErrorModel.swift in Sources */,
 				4E89100B209F6F360034A83B /* FormPageModel.swift in Sources */,
 				4E4D22A120B1B2A700BA7577 /* FormsHomeViewController.swift in Sources */,
@@ -528,6 +527,7 @@
 				4E7C2E3220B1D8F800A20303 /* UIFont+TGK.swift in Sources */,
 				4ECA9BFB20A2687B0084A317 /* BaseNibLoadedView.swift in Sources */,
 				4ED38843209D030600A8BEE2 /* SegmentedFormNavigationController.swift in Sources */,
+				4E75176320B6291C00B2D7E0 /* SegmentedFormInfoViewController.swift in Sources */,
 				4ED38848209D030600A8BEE2 /* FormListSelectTableViewCell.swift in Sources */,
 				4ED38852209D04AE00A8BEE2 /* String+TGK.swift in Sources */,
 				4ED3883D209D030600A8BEE2 /* FormPickerTableViewCell.swift in Sources */,

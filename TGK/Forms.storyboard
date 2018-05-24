@@ -6,8 +6,18 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Becker-Egyptian.otf">
+            <string>BeckerGothics-Egyptian</string>
+        </array>
+        <array key="Kulturista-Medium.otf">
+            <string>Kulturista</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Segmented Form Navigation Controller-->
         <scene sceneID="5a6-pm-woZ">
@@ -19,12 +29,128 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="FV2-cg-CPL" kind="relationship" relationship="rootViewController" id="Uhr-EE-NtC"/>
+                        <segue destination="8ok-Lc-6Xz" kind="relationship" relationship="rootViewController" id="1Cc-dO-9q0"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qPN-UA-d7C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1308" y="-49"/>
+            <point key="canvasLocation" x="-1484" y="-50"/>
+        </scene>
+        <!--Segmented Form Info View Controller-->
+        <scene sceneID="8xU-6K-R7k">
+            <objects>
+                <viewController storyboardIdentifier="SegmentedFormInfoViewControllerId" id="8ok-Lc-6Xz" customClass="SegmentedFormInfoViewController" customModule="TGK" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="m7N-ny-Hb4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gNL-XF-nbx">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="434.33333333333331"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Form Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZaP-Qs-egw">
+                                        <rect key="frame" x="20" y="44" width="335" height="53"/>
+                                        <fontDescription key="fontDescription" name="BeckerGothics-Egyptian" family="Becker Gothics" pointSize="44"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="form subtitle" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zzd-J4-xAp">
+                                        <rect key="frame" x="20" y="117" width="335" height="123.33333333333331"/>
+                                        <fontDescription key="fontDescription" name="Kulturista" family="Kulturista" pointSize="28"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O7k-Ag-xez">
+                                        <rect key="frame" x="20" y="260.33333333333331" width="335" height="1"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="v3d-n1-VdL"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Form metadata" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tCb-s5-KaU">
+                                        <rect key="frame" x="20" y="281" width="335" height="133.33333333333337"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="tCb-s5-KaU" firstAttribute="leading" secondItem="gNL-XF-nbx" secondAttribute="leading" constant="20" id="0Wd-SU-aYT"/>
+                                    <constraint firstAttribute="bottom" secondItem="tCb-s5-KaU" secondAttribute="bottom" constant="20" id="2xF-Xu-6tj"/>
+                                    <constraint firstAttribute="trailing" secondItem="ZaP-Qs-egw" secondAttribute="trailing" constant="20" id="485-0J-aLu"/>
+                                    <constraint firstAttribute="trailing" secondItem="O7k-Ag-xez" secondAttribute="trailing" constant="20" id="B3h-wc-Kca"/>
+                                    <constraint firstAttribute="trailing" secondItem="zzd-J4-xAp" secondAttribute="trailing" constant="20" id="CYg-sQ-AoO"/>
+                                    <constraint firstItem="zzd-J4-xAp" firstAttribute="leading" secondItem="gNL-XF-nbx" secondAttribute="leading" constant="20" id="GOj-UL-rAX"/>
+                                    <constraint firstItem="ZaP-Qs-egw" firstAttribute="top" secondItem="gNL-XF-nbx" secondAttribute="top" constant="44" id="HPr-v2-bTX"/>
+                                    <constraint firstItem="O7k-Ag-xez" firstAttribute="centerY" secondItem="gNL-XF-nbx" secondAttribute="centerY" multiplier="120:100" id="RYR-dw-PPU"/>
+                                    <constraint firstAttribute="trailing" secondItem="tCb-s5-KaU" secondAttribute="trailing" constant="20" id="ZVY-kM-oaK"/>
+                                    <constraint firstItem="O7k-Ag-xez" firstAttribute="leading" secondItem="gNL-XF-nbx" secondAttribute="leading" constant="20" id="hWW-xg-cW1"/>
+                                    <constraint firstItem="zzd-J4-xAp" firstAttribute="top" secondItem="ZaP-Qs-egw" secondAttribute="bottom" constant="20" id="kYs-GX-dqk"/>
+                                    <constraint firstItem="ZaP-Qs-egw" firstAttribute="leading" secondItem="gNL-XF-nbx" secondAttribute="leading" constant="20" id="nXW-R8-Dhm"/>
+                                    <constraint firstItem="tCb-s5-KaU" firstAttribute="top" secondItem="O7k-Ag-xez" secondAttribute="bottom" constant="20" id="uPF-jk-oS5"/>
+                                    <constraint firstItem="O7k-Ag-xez" firstAttribute="top" secondItem="zzd-J4-xAp" secondAttribute="bottom" constant="20" id="wFx-vF-typ"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4EE-tP-hcR">
+                                <rect key="frame" x="0.0" y="434" width="375" height="256"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Mid-C0-Mcw">
+                                        <rect key="frame" x="63.333333333333329" y="51.333333333333385" width="247.33333333333337" height="153.33333333333337"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ooB-VE-qqN">
+                                                <rect key="frame" x="0.0" y="0.0" width="247.33333333333334" height="76.666666666666671"/>
+                                                <state key="normal" title="Continue"/>
+                                                <connections>
+                                                    <action selector="continuePressed:" destination="8ok-Lc-6Xz" eventType="touchUpInside" id="om4-SR-xmB"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dGo-NE-xFv">
+                                                <rect key="frame" x="0.0" y="76.666666666666629" width="247.33333333333334" height="76.666666666666686"/>
+                                                <state key="normal" title="Share link to this form"/>
+                                                <connections>
+                                                    <action selector="sharePressed:" destination="8ok-Lc-6Xz" eventType="touchUpInside" id="zdU-Z1-pf7"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Mid-C0-Mcw" firstAttribute="width" secondItem="4EE-tP-hcR" secondAttribute="width" multiplier="66:100" id="BIl-Vp-4Tg"/>
+                                    <constraint firstItem="Mid-C0-Mcw" firstAttribute="centerY" secondItem="4EE-tP-hcR" secondAttribute="centerY" id="Z6y-kD-Zzo"/>
+                                    <constraint firstItem="Mid-C0-Mcw" firstAttribute="height" secondItem="4EE-tP-hcR" secondAttribute="height" multiplier="60:100" id="duV-rY-fAF"/>
+                                    <constraint firstItem="Mid-C0-Mcw" firstAttribute="centerX" secondItem="4EE-tP-hcR" secondAttribute="centerX" id="tnK-yR-OA9"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="hao-3I-wAl" firstAttribute="bottom" secondItem="4EE-tP-hcR" secondAttribute="bottom" id="0ed-VD-6Ol"/>
+                            <constraint firstItem="gNL-XF-nbx" firstAttribute="top" secondItem="hao-3I-wAl" secondAttribute="top" id="5Nj-6j-xvJ"/>
+                            <constraint firstItem="gNL-XF-nbx" firstAttribute="leading" secondItem="hao-3I-wAl" secondAttribute="leading" id="K2m-ml-lbY"/>
+                            <constraint firstItem="hao-3I-wAl" firstAttribute="trailing" secondItem="4EE-tP-hcR" secondAttribute="trailing" id="KOy-Pd-DKJ"/>
+                            <constraint firstItem="4EE-tP-hcR" firstAttribute="top" secondItem="gNL-XF-nbx" secondAttribute="bottom" constant="-0.33333333333331439" id="SHe-0N-Fye"/>
+                            <constraint firstItem="gNL-XF-nbx" firstAttribute="height" secondItem="m7N-ny-Hb4" secondAttribute="height" multiplier="60:100" id="YT2-29-aCL"/>
+                            <constraint firstItem="4EE-tP-hcR" firstAttribute="leading" secondItem="hao-3I-wAl" secondAttribute="leading" id="gRC-Bq-NQH"/>
+                            <constraint firstItem="hao-3I-wAl" firstAttribute="trailing" secondItem="gNL-XF-nbx" secondAttribute="trailing" id="xPn-8z-Ztd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hao-3I-wAl"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="sb8-z2-EEG">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="9kn-yn-xsU"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="continueButton" destination="ooB-VE-qqN" id="ehI-J9-ev1"/>
+                        <outlet property="formMetadata" destination="tCb-s5-KaU" id="clJ-1I-yme"/>
+                        <outlet property="formSubtitle" destination="zzd-J4-xAp" id="7SR-5Z-uYe"/>
+                        <outlet property="formTitle" destination="ZaP-Qs-egw" id="1lf-Gw-F9t"/>
+                        <outlet property="shareButton" destination="dGo-NE-xFv" id="2wh-1g-VqF"/>
+                        <segue destination="FV2-cg-CPL" kind="show" id="E0O-1z-XqB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fSB-dQ-pVn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-679.20000000000005" y="-50.246305418719217"/>
         </scene>
         <!--Segmented Form View Controller-->
         <scene sceneID="rEY-sT-7wh">
@@ -65,7 +191,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wv2-4a-vV7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-300" y="-50.246305418719217"/>
+            <point key="canvasLocation" x="87" y="-50"/>
         </scene>
     </scenes>
 </document>
