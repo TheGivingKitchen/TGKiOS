@@ -73,6 +73,10 @@ class FormListSelectTableViewCell: UITableViewCell, FormItemView {
     var mainInputControl: UIView {
         return self.stackView
     }
+    
+    func showError(_ error: FormFieldErrorModel) {
+        self.backgroundColor = UIColor.red
+    }
     //end FormItemView
     
     var rows = [FormListSelectTableViewCellRow]()

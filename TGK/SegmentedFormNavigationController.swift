@@ -86,8 +86,16 @@ extension SegmentedFormNavigationController:SegmentedFormViewControllerDelegate 
                 }
                 else {
                     if let fieldErrors = formFieldErrorModels {
-                        //cycle through segmentedFormVCs. implement something similar to
-                        //func highlightErrorFields(_ fields:FormFieldErrorModels) in SegmentedFormVC
+                        var firstSegmentedForWithErrors:SegmentedFormViewController?
+                        for segmentedFormVC in self.segmentedFormViewControllers {
+                            let hasErrors = segmentedFormVC.showFormFieldErrors(fieldErrors)
+                            if hasErrors && firstSegmentedForWithErrors == nil {
+                                firstSegmentedForWithErrors = segmentedFormVC
+                            }
+                        }
+                        if let firstSegmentedForWithErrors = firstSegmentedForWithErrors {
+                            self.popToViewController(firstSegmentedForWithErrors, animated: true)
+                        }
                     }
                     //other error cases where there is failure but not with fields. maybe present an alert or banner
                 }

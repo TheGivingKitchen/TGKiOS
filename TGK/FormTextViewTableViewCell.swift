@@ -31,6 +31,10 @@ class FormTextViewTableViewCell: UITableViewCell, FormItemView {
     var mainInputControl: UIView {
         return self.textView
     }
+    
+    func showError(_ error: FormFieldErrorModel) {
+        self.backgroundColor = UIColor.red
+    }
     //end FormItemView
     
     override func awakeFromNib() {

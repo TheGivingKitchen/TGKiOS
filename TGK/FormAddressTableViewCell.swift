@@ -80,6 +80,10 @@ class FormAddressTableViewCell: UITableViewCell, FormItemView {
     var mainInputControl: UIView {
         return self.address1Label
     }
+    
+    func showError(_ error: FormFieldErrorModel) {
+        self.backgroundColor = UIColor.red
+    }
     //end formItemView
     
     override func awakeFromNib() {

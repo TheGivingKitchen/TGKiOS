@@ -34,6 +34,10 @@ class FormPickerTableViewCell: UITableViewCell, FormItemView {
     var mainInputControl: UIView {
         return self.picker
     }
+    
+    func showError(_ error: FormFieldErrorModel) {
+        self.backgroundColor = UIColor.red
+    }
     //end FormItemView
     
     override func awakeFromNib() {

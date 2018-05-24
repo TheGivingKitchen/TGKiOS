@@ -44,6 +44,10 @@ class FormTextFieldTableViewCell: UITableViewCell, FormItemView {
         let answerModel = FormQuestionAnswerModel(wufooFieldID: self.formQuestion.id, userAnswer: answerText)
         return [answerModel]
     }
+    
+    func showError(_ error: FormFieldErrorModel) {
+        self.backgroundColor = UIColor.red
+    }
     ///End FormItemView conformance
     
     enum TextInputType {

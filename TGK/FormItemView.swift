@@ -22,4 +22,5 @@ protocol FormItemView {
     
     var delegate:FormItemViewDelegate? {get set}
     
+    func showError(_ error:FormFieldErrorModel)
 }

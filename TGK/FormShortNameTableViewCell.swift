@@ -47,6 +47,10 @@ class FormShortNameTableViewCell: UITableViewCell, FormItemView {
     var mainInputControl: UIView {
         return self.firstNameTextField
     }
+    
+    func showError(_ error: FormFieldErrorModel) {
+        self.backgroundColor = UIColor.red
+    }
     //end FormItemView
     
     

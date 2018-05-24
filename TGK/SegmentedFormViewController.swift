@@ -125,6 +125,24 @@ class SegmentedFormViewController: UITableViewController {
             delegate.segmentedFormViewController(self, didAdvanceWithAnswers: questionAnswers)
         }
     }
+    
+    //Returns true if 1 or more fields on the page had an error field that matched the @param errors
+    func showFormFieldErrors(_ errors:[FormFieldErrorModel]) -> Bool {
+        var foundMatchingErrorField = false
+        for formQuestionCell in self.formQuestionCells {
+            guard let castedCell = formQuestionCell as? FormItemView else {
+                continue
+            }
+            for fieldError in errors {
+                if castedCell.formQuestion.id == fieldError.wufooFieldId {
+                    castedCell.showError(fieldError)
+                    foundMatchingErrorField = true
+                }
+            }
+            
+        }
+        return foundMatchingErrorField
+    }
 }
 
 //MARK: Tableview Datasource
