@@ -2,7 +2,6 @@
 	"ID" : "zl0n8dd0u0hk0z",
 	"Pages" : [
 		{
-			"pageTitle" : "Request Assistance",
             "pageInformation" : "Jay's test form. Please tell us about the person in need",
 			"questions" : [
 				{
@@ -36,8 +35,7 @@
 			]
 		},
 		{
-			"pageTitle" : "Consent",
-            "pageInformation" : "Some additional information please",
+            "pageInformation" : "Acknowledgement",
 			"questions" : [
 				{
 		            "Title": "Have you informed this person that you're referring them to GK?",
@@ -61,7 +59,6 @@
 			]
 		},
 		{
-			"pageTitle" : "Contact Info",
             "pageInformation" : "Please tell us about the person in need",
 			"questions" : [
 				{
@@ -97,8 +94,7 @@
 			]
 		},
 		{
-			"pageTitle" : "Contact Info",
-            "pageInformation" : "Please tell us about the person in need",
+            "pageInformation" : "How can we get in touch?",
 			"questions" : [
 				{
 		            "Title": "Best method of contact for person in need:",
@@ -128,8 +124,7 @@
 			]
 		},
 		{
-			"pageTitle" : "Workplace Info",
-            "pageInformation" : "Please tell us about the workplace of the person in need. This is just used for area and type of business.",
+            "pageInformation" : "Where is the person in need located?",
 			"questions" : [
 				{
 		            "Title": "Restauarant where the person in need works:",
@@ -154,7 +149,6 @@
 			]
 		},
 		{
-			"pageTitle" : "Referral Info",
             "pageInformation" : "Please tell us about the person submitting this referral. If you are the person in need, please skip this section",
 			"questions" : [
 				{
@@ -190,7 +184,6 @@
 			]
 		},
 		{
-			"pageTitle" : "Type of Need",
             "pageInformation" : "Please tell use more about the current circumstances",
 			"questions" : [
 				{
@@ -224,7 +217,6 @@
 			]
 		},
 		{
-			"pageTitle" : "Type of need",
             "pageInformation" : "Please tell use more about the current circumstances",
 			"questions" : [
 				{
@@ -240,7 +232,6 @@
 			]
 		},
 		{
-			"pageTitle" : "Area Information",
             "pageInformation" : "Where is the person of need roughly located?",
 			"questions" : [
 				{
@@ -413,7 +404,6 @@
 			]
 		},
 		{
-			"pageTitle" : "Additional Info",
             "pageInformation" : "Where did you hear about us?",
 			"questions" : [
 				{

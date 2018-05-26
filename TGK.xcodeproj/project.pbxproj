@@ -168,6 +168,7 @@
 		4E4D22A220B1D87400BA7577 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				4E75176420B9C53900B2D7E0 /* FormJson */,
 				4E7C2E3020B1D8CE00A20303 /* Fonts */,
 				4ED38822209D01F200A8BEE2 /* LaunchScreen.storyboard */,
 			);
@@ -192,6 +193,15 @@
 				4ED38833209D030500A8BEE2 /* SegmentedFormViewController.swift */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		4E75176420B9C53900B2D7E0 /* FormJson */ = {
+			isa = PBXGroup;
+			children = (
+				4ECA9C0220A7446F0084A317 /* z1a0tap91any17q.json */,
+				4E89100C209F779E0034A83B /* zl0n8dd0u0hk0z.json */,
+			);
+			name = FormJson;
 			sourceTree = "<group>";
 		};
 		4E7C2E3020B1D8CE00A20303 /* Fonts */ = {
@@ -258,8 +268,6 @@
 		4E891004209E3C890034A83B /* ServiceManager */ = {
 			isa = PBXGroup;
 			children = (
-				4ECA9C0220A7446F0084A317 /* z1a0tap91any17q.json */,
-				4E89100C209F779E0034A83B /* zl0n8dd0u0hk0z.json */,
 				4ED38835209D030500A8BEE2 /* ServiceManager.swift */,
 				4E8897AD209E134700A361D8 /* ServiceManager+Forms.swift */,
 				4E890FFC209E32120034A83B /* Router.swift */,

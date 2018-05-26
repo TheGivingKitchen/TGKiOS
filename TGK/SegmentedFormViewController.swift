@@ -214,7 +214,7 @@ extension SegmentedFormViewController {
             textViewCell.formQuestion = questionModel
             textViewCell.delegate = self
             return textViewCell
-        case .listMultipleSelect: //not in use yet
+        case .listMultipleSelect:
             let listSelectCell = Bundle.main.loadNibNamed("FormListSelectTableViewCell", owner: self, options: [:])?.first as! FormListSelectTableViewCell
             self.formQuestionCells.append(listSelectCell)
             listSelectCell.formQuestion = questionModel
