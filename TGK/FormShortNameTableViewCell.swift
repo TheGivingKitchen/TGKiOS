@@ -48,8 +48,12 @@ class FormShortNameTableViewCell: UITableViewCell, FormItemView {
         return self.firstNameTextField
     }
     
-    func showError(_ error: FormFieldErrorModel) {
+    func showErrorState(_ error: FormFieldErrorModel) {
         self.backgroundColor = UIColor.red
+    }
+    
+    func hideErrorState() {
+        self.backgroundColor = UIColor.white
     }
     //end FormItemView
     

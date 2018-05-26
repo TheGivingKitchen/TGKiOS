@@ -35,8 +35,12 @@ class FormDateTableViewCell: UITableViewCell, FormItemView {
         return self.datePicker
     }
     
-    func showError(_ error: FormFieldErrorModel) {
+    func showErrorState(_ error: FormFieldErrorModel) {
         self.backgroundColor = UIColor.red
+    }
+    
+    func hideErrorState() {
+        self.backgroundColor = UIColor.white
     }
     //end FormItemView
     

@@ -32,8 +32,12 @@ class FormTextViewTableViewCell: UITableViewCell, FormItemView {
         return self.textView
     }
     
-    func showError(_ error: FormFieldErrorModel) {
+    func showErrorState(_ error: FormFieldErrorModel) {
         self.backgroundColor = UIColor.red
+    }
+    
+    func hideErrorState() {
+        self.backgroundColor = UIColor.white
     }
     //end FormItemView
     

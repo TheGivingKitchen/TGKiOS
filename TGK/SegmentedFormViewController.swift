@@ -135,7 +135,7 @@ class SegmentedFormViewController: UITableViewController {
             }
             for fieldError in errors {
                 if castedCell.formQuestion.id == fieldError.wufooFieldId {
-                    castedCell.showError(fieldError)
+                    castedCell.showErrorState(fieldError)
                     foundMatchingErrorField = true
                 }
             }

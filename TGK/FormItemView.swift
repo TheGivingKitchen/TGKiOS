@@ -22,5 +22,6 @@ protocol FormItemView {
     
     var delegate:FormItemViewDelegate? {get set}
     
-    func showError(_ error:FormFieldErrorModel)
+    func showErrorState(_ error:FormFieldErrorModel)
+    func hideErrorState()
 }

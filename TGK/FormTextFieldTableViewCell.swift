@@ -45,8 +45,12 @@ class FormTextFieldTableViewCell: UITableViewCell, FormItemView {
         return [answerModel]
     }
     
-    func showError(_ error: FormFieldErrorModel) {
+    func showErrorState(_ error: FormFieldErrorModel) {
         self.backgroundColor = UIColor.red
+    }
+    
+    func hideErrorState() {
+        self.backgroundColor = UIColor.white
     }
     ///End FormItemView conformance
     

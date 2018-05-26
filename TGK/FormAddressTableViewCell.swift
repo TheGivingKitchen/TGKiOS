@@ -81,8 +81,12 @@ class FormAddressTableViewCell: UITableViewCell, FormItemView {
         return self.address1Label
     }
     
-    func showError(_ error: FormFieldErrorModel) {
+    func showErrorState(_ error: FormFieldErrorModel) {
         self.backgroundColor = UIColor.red
+    }
+    
+    func hideErrorState() {
+        self.backgroundColor = UIColor.white
     }
     //end formItemView
     
