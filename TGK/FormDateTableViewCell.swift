@@ -20,7 +20,7 @@ class FormDateTableViewCell: UITableViewCell, FormItemView {
     //MARK: FormItemView
     @IBOutlet weak var errorMessageLabel: UILabel! {
         didSet {
-            self.errorMessageLabel.isHidden = true
+            self.hideErrorState()
         }
     }
     
@@ -57,6 +57,6 @@ class FormDateTableViewCell: UITableViewCell, FormItemView {
     }
 
     private func configureView() {
-        
+        self.questionLabel.text = formQuestion.questionTitle
     }
 }

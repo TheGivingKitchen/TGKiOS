@@ -27,7 +27,7 @@ class FormAddressTableViewCell: UITableViewCell, FormItemView {
     //MARK: FormItemView
     @IBOutlet weak var errorMessageLabel: UILabel! {
         didSet {
-            self.errorMessageLabel.isHidden = true
+            self.hideErrorState()
         }
     }
     
