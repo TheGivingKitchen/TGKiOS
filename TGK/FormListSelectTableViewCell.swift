@@ -23,6 +23,12 @@ class FormListSelectTableViewCell: UITableViewCell, FormItemView {
     
     
     //MARK: FormItemView
+    @IBOutlet weak var errorMessageLabel: UILabel! {
+        didSet {
+            self.errorMessageLabel.isHidden = true
+        }
+    }
+    
     var delegate: FormItemViewDelegate?
     var formQuestion: FormQuestionModel! {
         didSet {
@@ -73,14 +79,6 @@ class FormListSelectTableViewCell: UITableViewCell, FormItemView {
     var mainInputControl: UIView {
         return self.stackView
     }
-    
-    func showErrorState(_ error: FormFieldErrorModel) {
-        self.backgroundColor = UIColor.red
-    }
-    
-    func hideErrorState() {
-        self.backgroundColor = UIColor.white
-    }
     //end FormItemView
     
     var rows = [FormListSelectTableViewCellRow]()
@@ -122,6 +120,8 @@ class FormListSelectTableViewCell: UITableViewCell, FormItemView {
         let spacerView = UIView(frame:CGRect(x:0, y:0, width:10, height:10))
         self.hasOtherFieldTextField.leftViewMode = UITextFieldViewMode.always
         self.hasOtherFieldTextField.leftView = spacerView
+        self.errorMessageLabel.font = UIFont.tgkMetadata
+        self.errorMessageLabel.textColor = UIColor.tgkPeach
     }
     
     func configureView() {

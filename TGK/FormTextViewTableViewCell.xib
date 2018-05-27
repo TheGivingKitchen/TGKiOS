@@ -13,17 +13,17 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="FormTextViewTableViewCell" customModule="TGK" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="458" height="210"/>
+            <rect key="frame" x="0.0" y="0.0" width="458" height="230"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text View" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Y3-jQ-Jef">
-                    <rect key="frame" x="20" y="8" width="418" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Text View" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Y3-jQ-Jef">
+                    <rect key="frame" x="20" y="4" width="418" height="24.5"/>
                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4du-zH-kbE">
-                    <rect key="frame" x="20" y="37" width="418" height="165"/>
+                    <rect key="frame" x="20" y="36.5" width="418" height="165"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" priority="999" constant="165" id="9KH-0G-v3c"/>
@@ -31,24 +31,34 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="errorMessageLabel" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JqN-H5-7oa">
+                    <rect key="frame" x="20" y="206" width="418" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="2Y3-jQ-Jef" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="8" id="Ax3-fl-Jy9"/>
+                <constraint firstItem="JqN-H5-7oa" firstAttribute="top" secondItem="4du-zH-kbE" secondAttribute="bottom" constant="4" id="4jF-Q0-LUJ"/>
+                <constraint firstItem="JqN-H5-7oa" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="8HK-8b-yKb"/>
+                <constraint firstItem="2Y3-jQ-Jef" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="4" id="Ax3-fl-Jy9"/>
                 <constraint firstItem="2Y3-jQ-Jef" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="KzQ-ei-jXD"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="JqN-H5-7oa" secondAttribute="trailing" constant="20" id="NBx-Hb-Hfw"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="2Y3-jQ-Jef" secondAttribute="trailing" constant="20" id="U3z-Qb-Yug"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="4du-zH-kbE" secondAttribute="bottom" constant="8" id="k9K-YK-a7p"/>
                 <constraint firstItem="4du-zH-kbE" firstAttribute="top" secondItem="2Y3-jQ-Jef" secondAttribute="bottom" constant="8" id="nPG-qS-1UY"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="4du-zH-kbE" secondAttribute="trailing" constant="20" id="q5U-Fc-dVl"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="JqN-H5-7oa" secondAttribute="bottom" constant="4" id="vYp-vE-sgP"/>
                 <constraint firstItem="4du-zH-kbE" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="vvK-aT-T7N"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
+                <outlet property="errorMessageLabel" destination="JqN-H5-7oa" id="dik-rU-ML6"/>
                 <outlet property="questionLabel" destination="2Y3-jQ-Jef" id="UAE-SX-lCC"/>
                 <outlet property="textView" destination="4du-zH-kbE" id="N9a-Fw-35a"/>
             </connections>
-            <point key="canvasLocation" x="67" y="282"/>
+            <point key="canvasLocation" x="67" y="292"/>
         </view>
     </objects>
 </document>

@@ -16,6 +16,12 @@ class FormPickerTableViewCell: UITableViewCell, FormItemView {
     @IBOutlet weak var pickerTopOutlineView: UIView!
     
     //MARK: FormItemView
+    @IBOutlet weak var errorMessageLabel: UILabel! {
+        didSet {
+            self.errorMessageLabel.isHidden = true
+        }
+    }
+    
     var delegate: FormItemViewDelegate?
     var formQuestion: FormQuestionModel!{
         didSet {
@@ -34,14 +40,6 @@ class FormPickerTableViewCell: UITableViewCell, FormItemView {
     var mainInputControl: UIView {
         return self.picker
     }
-    
-    func showErrorState(_ error: FormFieldErrorModel) {
-        self.backgroundColor = UIColor.red
-    }
-    
-    func hideErrorState() {
-        self.backgroundColor = UIColor.white
-    }
     //end FormItemView
     
     override func awakeFromNib() {
@@ -52,6 +50,8 @@ class FormPickerTableViewCell: UITableViewCell, FormItemView {
         self.questionLabel.textColor = UIColor.tgkDarkGray
         self.pickerTopOutlineView.backgroundColor = UIColor.tgkOutline
         self.pickerBottomOutlineView.backgroundColor = UIColor.tgkOutline
+        self.errorMessageLabel.font = UIFont.tgkMetadata
+        self.errorMessageLabel.textColor = UIColor.tgkPeach
         
         self.picker.dataSource = self
         self.picker.delegate = self

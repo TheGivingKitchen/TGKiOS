@@ -15,6 +15,12 @@ class FormTextFieldTableViewCell: UITableViewCell, FormItemView {
     @IBOutlet weak var textField: UITextField!
     
     ///Begin FormItemView conformance
+    @IBOutlet weak var errorMessageLabel: UILabel! {
+        didSet {
+            self.hideErrorState()
+        }
+    }
+    
     var delegate: FormItemViewDelegate?
     var formQuestion: FormQuestionModel! {
         didSet {
@@ -44,14 +50,6 @@ class FormTextFieldTableViewCell: UITableViewCell, FormItemView {
         let answerModel = FormQuestionAnswerModel(wufooFieldID: self.formQuestion.id, userAnswer: answerText)
         return [answerModel]
     }
-    
-    func showErrorState(_ error: FormFieldErrorModel) {
-        self.backgroundColor = UIColor.red
-    }
-    
-    func hideErrorState() {
-        self.backgroundColor = UIColor.white
-    }
     ///End FormItemView conformance
     
     enum TextInputType {
@@ -80,6 +78,8 @@ class FormTextFieldTableViewCell: UITableViewCell, FormItemView {
         let spacerView = UIView(frame:CGRect(x:0, y:0, width:10, height:10))
         self.textField.leftViewMode = UITextFieldViewMode.always
         self.textField.leftView = spacerView
+        self.errorMessageLabel.font = UIFont.tgkMetadata
+        self.errorMessageLabel.textColor = UIColor.tgkPeach
         
         self.textField.delegate = self
     }

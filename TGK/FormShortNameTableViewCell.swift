@@ -15,6 +15,12 @@ class FormShortNameTableViewCell: UITableViewCell, FormItemView {
     @IBOutlet weak var lastNameTextField: UITextField!
     
     //MARK: FormItemView
+    @IBOutlet weak var errorMessageLabel: UILabel! {
+        didSet {
+            self.errorMessageLabel.isHidden = true
+        }
+    }
+    
     var delegate: FormItemViewDelegate?
     var formQuestion: FormQuestionModel! {
         didSet {
@@ -47,14 +53,6 @@ class FormShortNameTableViewCell: UITableViewCell, FormItemView {
     var mainInputControl: UIView {
         return self.firstNameTextField
     }
-    
-    func showErrorState(_ error: FormFieldErrorModel) {
-        self.backgroundColor = UIColor.red
-    }
-    
-    func hideErrorState() {
-        self.backgroundColor = UIColor.white
-    }
     //end FormItemView
     
     
@@ -79,6 +77,8 @@ class FormShortNameTableViewCell: UITableViewCell, FormItemView {
         let lastNameSpacerView = UIView(frame:CGRect(x:0, y:0, width:10, height:10))
         self.lastNameTextField.leftViewMode = UITextFieldViewMode.always
         self.lastNameTextField.leftView = lastNameSpacerView
+        self.errorMessageLabel.font = UIFont.tgkMetadata
+        self.errorMessageLabel.textColor = UIColor.tgkPeach
         
         self.firstNameTextField.delegate = self
         self.lastNameTextField.delegate = self

@@ -13,17 +13,17 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="FormShortNameTableViewCell" customModule="TGK" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="435" height="156"/>
+            <rect key="frame" x="0.0" y="0.0" width="435" height="177"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9YO-aC-E8H">
-                    <rect key="frame" x="16" y="10" width="403" height="20"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9YO-aC-E8H">
+                    <rect key="frame" x="16" y="4" width="403" height="28.5"/>
                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Lj-v1-0WY">
-                    <rect key="frame" x="16" y="38" width="403" height="50"/>
+                    <rect key="frame" x="16" y="40.5" width="403" height="50"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="Fse-Rp-GHJ"/>
                     </constraints>
@@ -32,7 +32,7 @@
                     <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" keyboardType="namePhonePad" textContentType="given-name"/>
                 </textField>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Last" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bLn-Gg-rWQ">
-                    <rect key="frame" x="16" y="96" width="403" height="50"/>
+                    <rect key="frame" x="16" y="98.5" width="403" height="50"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="ZKo-hn-www"/>
                     </constraints>
@@ -40,28 +40,38 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" keyboardType="namePhonePad" textContentType="family-name"/>
                 </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="errorMessageLabel" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U8D-BR-Pot">
+                    <rect key="frame" x="16" y="153" width="403" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="U8D-BR-Pot" firstAttribute="top" secondItem="bLn-Gg-rWQ" secondAttribute="bottom" constant="4" id="21f-yr-XWF"/>
                 <constraint firstItem="1Lj-v1-0WY" firstAttribute="trailing" secondItem="bLn-Gg-rWQ" secondAttribute="trailing" id="3Dc-wo-HEn"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="U8D-BR-Pot" secondAttribute="trailing" constant="16" id="3Oj-OO-wrR"/>
                 <constraint firstItem="bLn-Gg-rWQ" firstAttribute="top" secondItem="1Lj-v1-0WY" secondAttribute="bottom" constant="8" symbolic="YES" id="7s4-Oo-T3r"/>
                 <constraint firstItem="1Lj-v1-0WY" firstAttribute="leading" secondItem="bLn-Gg-rWQ" secondAttribute="leading" id="8Jo-gS-RMy"/>
+                <constraint firstItem="U8D-BR-Pot" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="FAQ-lv-WDr"/>
                 <constraint firstItem="9YO-aC-E8H" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Ir3-xi-Uli"/>
                 <constraint firstItem="9YO-aC-E8H" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="Oal-qI-037"/>
                 <constraint firstItem="9YO-aC-E8H" firstAttribute="leading" secondItem="1Lj-v1-0WY" secondAttribute="leading" id="UFb-7B-m1P"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="U8D-BR-Pot" secondAttribute="bottom" constant="4" id="eKT-hH-xz0"/>
                 <constraint firstItem="9YO-aC-E8H" firstAttribute="trailing" secondItem="1Lj-v1-0WY" secondAttribute="trailing" id="gYe-AR-Kjj"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="bLn-Gg-rWQ" secondAttribute="bottom" constant="10" id="hFF-lG-plE"/>
                 <constraint firstItem="1Lj-v1-0WY" firstAttribute="top" secondItem="9YO-aC-E8H" secondAttribute="bottom" constant="8" symbolic="YES" id="iQE-qE-u2B"/>
-                <constraint firstItem="9YO-aC-E8H" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="10" id="tVY-JH-QVi"/>
+                <constraint firstItem="9YO-aC-E8H" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="4" id="tVY-JH-QVi"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
+                <outlet property="errorMessageLabel" destination="U8D-BR-Pot" id="iBh-ky-xyG"/>
                 <outlet property="firstNameTextField" destination="1Lj-v1-0WY" id="9w4-LV-lqX"/>
                 <outlet property="lastNameTextField" destination="bLn-Gg-rWQ" id="8xH-iM-Uy7"/>
                 <outlet property="questionLabel" destination="9YO-aC-E8H" id="0dv-su-QeG"/>
             </connections>
-            <point key="canvasLocation" x="49.5" y="-204"/>
+            <point key="canvasLocation" x="57.5" y="-143.5"/>
         </view>
     </objects>
 </document>

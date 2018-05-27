@@ -25,6 +25,12 @@ class FormAddressTableViewCell: UITableViewCell, FormItemView {
     @IBOutlet weak var zipTextField: UITextField!
     
     //MARK: FormItemView
+    @IBOutlet weak var errorMessageLabel: UILabel! {
+        didSet {
+            self.errorMessageLabel.isHidden = true
+        }
+    }
+    
     var delegate: FormItemViewDelegate?
     var formQuestion: FormQuestionModel! {
         didSet {
@@ -79,14 +85,6 @@ class FormAddressTableViewCell: UITableViewCell, FormItemView {
     
     var mainInputControl: UIView {
         return self.address1Label
-    }
-    
-    func showErrorState(_ error: FormFieldErrorModel) {
-        self.backgroundColor = UIColor.red
-    }
-    
-    func hideErrorState() {
-        self.backgroundColor = UIColor.white
     }
     //end formItemView
     
@@ -155,6 +153,9 @@ class FormAddressTableViewCell: UITableViewCell, FormItemView {
         let zipSpacerView = UIView(frame:CGRect(x:0, y:0, width:10, height:10))
         self.zipTextField.leftViewMode = UITextFieldViewMode.always
         self.zipTextField.leftView = zipSpacerView
+        
+        self.errorMessageLabel.font = UIFont.tgkMetadata
+        self.errorMessageLabel.textColor = UIColor.tgkPeach
     }
 
     private func configureView() {

@@ -14,6 +14,12 @@ class FormTextViewTableViewCell: UITableViewCell, FormItemView {
     @IBOutlet weak var textView: UITextView!
     
     //MARK: FormItemView
+    @IBOutlet weak var errorMessageLabel: UILabel! {
+        didSet {
+            self.hideErrorState()
+        }
+    }
+    
     var delegate: FormItemViewDelegate?
     var formQuestion: FormQuestionModel! {
         didSet {
@@ -32,13 +38,7 @@ class FormTextViewTableViewCell: UITableViewCell, FormItemView {
         return self.textView
     }
     
-    func showErrorState(_ error: FormFieldErrorModel) {
-        self.backgroundColor = UIColor.red
-    }
-    
-    func hideErrorState() {
-        self.backgroundColor = UIColor.white
-    }
+    var errorLabelHeightAnchor:NSLayoutConstraint?
     //end FormItemView
     
     override func awakeFromNib() {
@@ -51,6 +51,8 @@ class FormTextViewTableViewCell: UITableViewCell, FormItemView {
         self.textView.textColor = UIColor.tgkDarkGray
         self.textView.layer.borderWidth = 1
         self.textView.layer.borderColor = UIColor.tgkOutline.cgColor
+        self.errorMessageLabel.font = UIFont.tgkMetadata
+        self.errorMessageLabel.textColor = UIColor.tgkPeach
     }
 
     private func configureView() {
