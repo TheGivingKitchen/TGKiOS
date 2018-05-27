@@ -38,7 +38,7 @@ class SegmentedFormViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.informationlabel.font = UIFont.tgkH2
+        self.informationlabel.font = UIFontMetrics.default.scaledFont(for:UIFont.kulturistaMedium(size: 23))
         self.informationlabel.textColor = UIColor.tgkNavy
         
         self.tableView.delegate = self

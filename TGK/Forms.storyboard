@@ -161,11 +161,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="uIR-fv-GK0">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="61"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="142"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qqu-Fc-h9O">
-                                    <rect key="frame" x="16" y="16" width="343" height="29"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Page Information" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qqu-Fc-h9O">
+                                    <rect key="frame" x="16" y="20" width="343" height="102"/>
                                     <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
@@ -173,9 +173,9 @@
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstAttribute="bottom" secondItem="Qqu-Fc-h9O" secondAttribute="bottom" constant="16" id="e4U-9A-7MF"/>
+                                <constraint firstAttribute="bottom" secondItem="Qqu-Fc-h9O" secondAttribute="bottom" constant="20" id="e4U-9A-7MF"/>
                                 <constraint firstAttribute="trailing" secondItem="Qqu-Fc-h9O" secondAttribute="trailing" constant="16" id="ivk-mY-DiV"/>
-                                <constraint firstItem="Qqu-Fc-h9O" firstAttribute="top" secondItem="uIR-fv-GK0" secondAttribute="top" constant="16" id="jOo-dP-GrT"/>
+                                <constraint firstItem="Qqu-Fc-h9O" firstAttribute="top" secondItem="uIR-fv-GK0" secondAttribute="top" constant="20" id="jOo-dP-GrT"/>
                                 <constraint firstItem="Qqu-Fc-h9O" firstAttribute="leading" secondItem="uIR-fv-GK0" secondAttribute="leading" constant="16" id="ys1-pe-Opa"/>
                             </constraints>
                         </view>
@@ -191,7 +191,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wv2-4a-vV7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="87" y="-50"/>
+            <point key="canvasLocation" x="85.599999999999994" y="-50.246305418719217"/>
         </scene>
     </scenes>
 </document>
