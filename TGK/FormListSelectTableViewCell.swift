@@ -16,7 +16,7 @@ class FormListSelectTableViewCell: UITableViewCell, FormItemView {
     @IBOutlet weak var hasOtherFieldView: UIView!
         {
         didSet {
-            self.hideErrorState()
+            hasOtherFieldView.isHidden = true
         }
     }
     @IBOutlet weak var hasOtherFieldTextField: UITextField!
@@ -25,7 +25,7 @@ class FormListSelectTableViewCell: UITableViewCell, FormItemView {
     //MARK: FormItemView
     @IBOutlet weak var errorMessageLabel: UILabel! {
         didSet {
-            self.errorMessageLabel.isHidden = true
+            self.hideErrorState()
         }
     }
     

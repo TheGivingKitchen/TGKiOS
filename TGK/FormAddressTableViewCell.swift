@@ -99,6 +99,7 @@ class FormAddressTableViewCell: UITableViewCell, FormItemView {
         //style
         self.questionLabel.font = UIFont.tgkBody
         self.questionLabel.textColor = UIColor.tgkDarkGray
+        
         self.address1Label.font = UIFont.tgkBody
         self.address1Label.textColor = UIColor.tgkDarkGray
         
