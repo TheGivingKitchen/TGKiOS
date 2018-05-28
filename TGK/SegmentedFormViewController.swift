@@ -57,14 +57,14 @@ class SegmentedFormViewController: UITableViewController {
         self.configureBarButtonItems()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        guard self.formQuestionCells.count > 0,
-         let firstFormItem = self.formQuestionCells[0] as? FormItemView else {
-            return
-        }
-        firstFormItem.mainInputControl.becomeFirstResponder()
-    }
+//    override func viewDidAppear(_ animated: Bool) {
+//        super.viewDidAppear(animated)
+//        guard self.formQuestionCells.count > 0,
+//         let firstFormItem = self.formQuestionCells[0] as? FormItemView else {
+//            return
+//        }
+//        firstFormItem.mainInputControl.becomeFirstResponder()
+//    }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()

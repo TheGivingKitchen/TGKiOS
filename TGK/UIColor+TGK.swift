@@ -29,4 +29,12 @@ extension UIColor {
     static var tgkOutline:UIColor {
         return UIColor(red: 225.0/255.0, green: 225.0/255.0, blue: 225.0/255.0, alpha: 1)
     }
+    
+    static var tgkBackgroundGray:UIColor {
+        return UIColor(red: 245.0/255.0, green: 245.0/255.0, blue: 243.0/255.0, alpha: 1)
+    }
+    
+    static var tgkBackgroundTan:UIColor {
+        return UIColor(red: 236.0/255.0, green: 237.0/255.0, blue: 228.0/255.0, alpha: 1)
+    }
 }

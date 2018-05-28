@@ -65,24 +65,20 @@ extension UIFont {
 
 //MARK: Dynamic typed header and body wrappers for styling
 extension UIFont {
-    static var tgkH1:UIFont {
+    static var tgkTitle:UIFont {
         return UIFontMetrics.default.scaledFont(for:UIFont.beckerEgyptian(size: 44))
     }
     
-    static var tgkH2:UIFont {
-        return UIFontMetrics.default.scaledFont(for:UIFont.kulturistaBold(size: 30))
+    static var tgkSubtitle:UIFont {
+        return UIFontMetrics.default.scaledFont(for:UIFont.kulturistaBold(size: 24))
     }
     
-    static var tgkH3:UIFont {
+    static var tgkContentBlockTitle:UIFont {
         return UIFontMetrics.default.scaledFont(for:UIFont.beckerEgyptian(size: 30))
     }
     
-    static var tgkH4:UIFont {
+    static var tgkNavigation:UIFont {
         return UIFontMetrics.default.scaledFont(for:UIFont.kulturistaMedium(size: 17))
-    }
-    
-    static var tgkH5:UIFont {
-        return UIFontMetrics.default.scaledFont(for:UIFont.robotoMono(size: 17))
     }
     
     static var tgkBody:UIFont {

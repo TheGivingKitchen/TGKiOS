@@ -51,6 +51,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 extension AppDelegate {
     func setupAppearances() {
         UINavigationBar.appearance().tintColor = UIColor.tgkNavy
+        UINavigationBar.appearance().titleTextAttributes = [.font:UIFont.tgkNavigation]
+        UIBarButtonItem.appearance().setTitleTextAttributes([.font:UIFont.tgkMetadata], for: .normal)
     }
 }
 
