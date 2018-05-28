@@ -1,5 +1,5 @@
 //
-//  SegmentedFormViewController.swift
+//  FormPageViewController.swift
 //  WufooPOC
 //
 //  Created by Jay Park on 4/18/18.
@@ -8,19 +8,19 @@
 
 import UIKit
 
-protocol SegmentedFormViewControllerDelegate {
-    func segmentedFormViewController(_ segmentedFormViewController:SegmentedFormViewController, didAdvanceWithAnswers answers:[FormQuestionAnswerModel])
-    func segmentedFormViewControllerDidPressCancel(_ segmentedFormViewController:SegmentedFormViewController)
+protocol FormPageViewControllerDelegate {
+    func formPageViewController(_ formPageViewController:FormPageViewController, didAdvanceWithAnswers answers:[FormQuestionAnswerModel])
+    func formPageViewControllerDidPressCancel(_ formPageViewController:FormPageViewController)
 }
 
-class SegmentedFormViewController: UITableViewController {
+class FormPageViewController: UITableViewController {
 
     @IBOutlet weak var informationlabel: UILabel!
     
     //dependencies
     var isLastPageInForm = false
     var isFirstPageInForm = false
-    var delegate:SegmentedFormViewControllerDelegate?
+    var delegate:FormPageViewControllerDelegate?
     var formPage:FormPagePageModel! {
         didSet {
             guard self.isViewLoaded else {return}
@@ -103,7 +103,7 @@ class SegmentedFormViewController: UITableViewController {
     }
     
     @objc fileprivate func userDidTapCancel() {
-        self.delegate?.segmentedFormViewControllerDidPressCancel(self)
+        self.delegate?.formPageViewControllerDidPressCancel(self)
     }
     
     @objc fileprivate func endEditingInTableView() {
@@ -122,7 +122,7 @@ class SegmentedFormViewController: UITableViewController {
         }
         
         if let delegate = self.delegate {
-            delegate.segmentedFormViewController(self, didAdvanceWithAnswers: questionAnswers)
+            delegate.formPageViewController(self, didAdvanceWithAnswers: questionAnswers)
         }
     }
     
@@ -146,7 +146,7 @@ class SegmentedFormViewController: UITableViewController {
 }
 
 //MARK: Tableview Datasource
-extension SegmentedFormViewController {
+extension FormPageViewController {
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -249,7 +249,7 @@ extension SegmentedFormViewController {
 }
 
 //MARK: Tableview Delegate
-extension SegmentedFormViewController:FormItemViewDelegate {
+extension FormPageViewController:FormItemViewDelegate {
     //Advance to the next form's main input. If you can't, end editing
     func formItemViewDidPressReturn(_ formItemView: FormItemView) {
         guard let castedFormCell = formItemView as? UITableViewCell else {

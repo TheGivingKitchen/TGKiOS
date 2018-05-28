@@ -16,7 +16,7 @@ class SegmentedFormNavigationController: UINavigationController {
             self.setupFormPages()
         }
     }
-    var segmentedFormViewControllers = [SegmentedFormViewController]()
+    var formPageViewControllers = [FormPageViewController]()
     
     var formAnswers = [FormQuestionAnswerModel]()
 
@@ -37,35 +37,35 @@ class SegmentedFormNavigationController: UINavigationController {
             return
         }
         self.popToRootViewController(animated: false)
-        var allPageViewControllers = [SegmentedFormViewController]()
+        var allPageViewControllers = [FormPageViewController]()
         for page in formModel.pages {
-            let segmentedFormVC = UIStoryboard(name: "Forms", bundle: nil).instantiateViewController(withIdentifier: "SegmentedFormViewControllerId") as! SegmentedFormViewController
-            segmentedFormVC.formPage = page
-            segmentedFormVC.delegate = self
-            allPageViewControllers.append(segmentedFormVC)
+            let formPageVC = UIStoryboard(name: "Forms", bundle: nil).instantiateViewController(withIdentifier: "FormPageViewControllerId") as! FormPageViewController
+            formPageVC.formPage = page
+            formPageVC.delegate = self
+            allPageViewControllers.append(formPageVC)
         }
-        self.segmentedFormViewControllers = allPageViewControllers
+        self.formPageViewControllers = allPageViewControllers
         
-        if let firstPage = self.segmentedFormViewControllers.first {
+        if let firstPage = self.formPageViewControllers.first {
             firstPage.isFirstPageInForm = true
             self.viewControllers = [firstPage]
         }
     }
     
-    fileprivate func nextFormPageAfter(_ formPageViewController:SegmentedFormViewController) -> SegmentedFormViewController? {
-        guard let index = self.segmentedFormViewControllers.index(where:  {$0 == formPageViewController}) else {return nil}
+    fileprivate func nextFormPageAfter(_ formPageViewController:FormPageViewController) -> FormPageViewController? {
+        guard let index = self.formPageViewControllers.index(where:  {$0 == formPageViewController}) else {return nil}
         
         let nextIndex = index + 1
-        if nextIndex >= self.segmentedFormViewControllers.count {return nil}
+        if nextIndex >= self.formPageViewControllers.count {return nil}
         
-        return self.segmentedFormViewControllers[nextIndex]
+        return self.formPageViewControllers[nextIndex]
     }
     
-    fileprivate func checkIfFormPageIsLastPage(_ formPageVC:SegmentedFormViewController) -> Bool {
-        guard self.segmentedFormViewControllers.count > 0 else {
+    fileprivate func checkIfFormPageIsLastPage(_ formPageVC:FormPageViewController) -> Bool {
+        guard self.formPageViewControllers.count > 0 else {
             return false
         }
-        if formPageVC == self.segmentedFormViewControllers[self.segmentedFormViewControllers.count - 1] {
+        if formPageVC == self.formPageViewControllers[self.formPageViewControllers.count - 1] {
             return true
         }
         return false
@@ -93,14 +93,14 @@ class SegmentedFormNavigationController: UINavigationController {
             }
             else {
                 if let fieldErrors = formFieldErrorModels {
-                    var firstSegmentedForWithErrors:SegmentedFormViewController?
-                    for segmentedFormVC in self.segmentedFormViewControllers {
-                        let hasErrors = segmentedFormVC.showFormFieldErrors(fieldErrors)
-                        if hasErrors && firstSegmentedForWithErrors == nil {
-                            firstSegmentedForWithErrors = segmentedFormVC
+                    var firstformPageWithErrors:FormPageViewController?
+                    for formPageVC in self.formPageViewControllers {
+                        let hasErrors = formPageVC.showFormFieldErrors(fieldErrors)
+                        if hasErrors && firstformPageWithErrors == nil {
+                            firstformPageWithErrors = formPageVC
                         }
                     }
-                    if let firstSegmentedForWithErrors = firstSegmentedForWithErrors {
+                    if let firstSegmentedForWithErrors = firstformPageWithErrors {
                         self.popToViewController(firstSegmentedForWithErrors, animated: true)
                     }
                 }
@@ -110,24 +110,24 @@ class SegmentedFormNavigationController: UINavigationController {
     }
 }
 
-//MARK: SegmentedFormViewControllerDelegate
-extension SegmentedFormNavigationController:SegmentedFormViewControllerDelegate {
-    func segmentedFormViewController(_ segmentedFormViewController: SegmentedFormViewController, didAdvanceWithAnswers answers: [FormQuestionAnswerModel]) {
+//MARK: FormPageViewControllerDelegate
+extension SegmentedFormNavigationController:FormPageViewControllerDelegate {
+    func formPageViewController(_ formPageViewController: FormPageViewController, didAdvanceWithAnswers answers: [FormQuestionAnswerModel]) {
         
         self.storeNewAnswers(answers)
         
         //Push the next form on the stack from memory to preserve preexisting answers. Submit if you're on the last page
-        if let nextFormPageVC = self.nextFormPageAfter(segmentedFormViewController) {
+        if let nextFormPageVC = self.nextFormPageAfter(formPageViewController) {
             nextFormPageVC.isLastPageInForm = self.checkIfFormPageIsLastPage(nextFormPageVC)
             self.pushViewController(nextFormPageVC, animated: true)
         }
         //Submit if we're on the last page
-        else if segmentedFormViewController.isLastPageInForm {
+        else if formPageViewController.isLastPageInForm {
             self.submitFormAnswers()
         }
     }
     
-    func segmentedFormViewControllerDidPressCancel(_ segmentedFormViewController: SegmentedFormViewController) {
+    func formPageViewControllerDidPressCancel(_ formPageViewController: FormPageViewController) {
         self.dismiss(animated: true)
     }
 }

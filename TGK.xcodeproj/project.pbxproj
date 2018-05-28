@@ -54,7 +54,7 @@
 		4ED38841209D030600A8BEE2 /* SegmentedFormModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED3882F209D030500A8BEE2 /* SegmentedFormModel.swift */; };
 		4ED38843209D030600A8BEE2 /* SegmentedFormNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED38831209D030500A8BEE2 /* SegmentedFormNavigationController.swift */; };
 		4ED38844209D030600A8BEE2 /* FormTextViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED38832209D030500A8BEE2 /* FormTextViewTableViewCell.swift */; };
-		4ED38845209D030600A8BEE2 /* SegmentedFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED38833209D030500A8BEE2 /* SegmentedFormViewController.swift */; };
+		4ED38845209D030600A8BEE2 /* FormPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED38833209D030500A8BEE2 /* FormPageViewController.swift */; };
 		4ED38847209D030600A8BEE2 /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED38835209D030500A8BEE2 /* ServiceManager.swift */; };
 		4ED38848209D030600A8BEE2 /* FormListSelectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED38836209D030500A8BEE2 /* FormListSelectTableViewCell.swift */; };
 		4ED38849209D030600A8BEE2 /* FormQuestionAnswerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED38837209D030600A8BEE2 /* FormQuestionAnswerModel.swift */; };
@@ -119,7 +119,7 @@
 		4ED38830209D030500A8BEE2 /* FormSegmentedControlTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormSegmentedControlTableViewCell.swift; sourceTree = "<group>"; };
 		4ED38831209D030500A8BEE2 /* SegmentedFormNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentedFormNavigationController.swift; sourceTree = "<group>"; };
 		4ED38832209D030500A8BEE2 /* FormTextViewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormTextViewTableViewCell.swift; sourceTree = "<group>"; };
-		4ED38833209D030500A8BEE2 /* SegmentedFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentedFormViewController.swift; sourceTree = "<group>"; };
+		4ED38833209D030500A8BEE2 /* FormPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormPageViewController.swift; sourceTree = "<group>"; };
 		4ED38834209D030500A8BEE2 /* FormTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormTableViewController.swift; sourceTree = "<group>"; };
 		4ED38835209D030500A8BEE2 /* ServiceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
 		4ED38836209D030500A8BEE2 /* FormListSelectTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormListSelectTableViewCell.swift; sourceTree = "<group>"; };
@@ -190,7 +190,7 @@
 			children = (
 				4E75176220B6291C00B2D7E0 /* SegmentedFormInfoViewController.swift */,
 				4ED38831209D030500A8BEE2 /* SegmentedFormNavigationController.swift */,
-				4ED38833209D030500A8BEE2 /* SegmentedFormViewController.swift */,
+				4ED38833209D030500A8BEE2 /* FormPageViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -539,7 +539,7 @@
 				4ED38848209D030600A8BEE2 /* FormListSelectTableViewCell.swift in Sources */,
 				4ED38852209D04AE00A8BEE2 /* String+TGK.swift in Sources */,
 				4ED3883D209D030600A8BEE2 /* FormPickerTableViewCell.swift in Sources */,
-				4ED38845209D030600A8BEE2 /* SegmentedFormViewController.swift in Sources */,
+				4ED38845209D030600A8BEE2 /* FormPageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -53,6 +53,7 @@ extension AppDelegate {
         UINavigationBar.appearance().tintColor = UIColor.tgkNavy
         UINavigationBar.appearance().titleTextAttributes = [.font:UIFont.tgkNavigation]
         UIBarButtonItem.appearance().setTitleTextAttributes([.font:UIFont.tgkMetadata], for: .normal)
+        UIBarButtonItem.appearance().setTitleTextAttributes([.font:UIFont.tgkMetadata], for: .highlighted)
     }
 }
 
