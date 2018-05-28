@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FormsHomeViewController: UIViewController {
+class FormsHomeViewController: UIViewController, SegmentedFormInfoViewControllerDelegate {
 
     @IBOutlet weak var assistanceButton: UIButton!
     @IBOutlet weak var volunteerButton: UIButton!
@@ -22,14 +22,14 @@ class FormsHomeViewController: UIViewController {
         self.assistanceButton.isHidden = true
         self.volunteerButton.isHidden = true
         
-        ServiceManager.sharedInstace.getFirebaseForm(id: "z1a0tap91any17q") { (formModel, error) in
+        ServiceManager.sharedInstace.getFirebaseForm(id: "zl0n8dd0u0hk0z") { (formModel, error) in
             if let formModel = formModel {
                 self.assistanceFormModel = formModel
                 self.assistanceButton.isHidden = false
             }
         }
         
-        ServiceManager.sharedInstace.getFirebaseForm(id: "zl0n8dd0u0hk0z") { (formModel, error) in
+        ServiceManager.sharedInstace.getFirebaseForm(id: "z1a0tap91any17q") { (formModel, error) in
             if let formModel = formModel {
                 self.volunteerFormModel = formModel
                 self.volunteerButton.isHidden = false
@@ -39,15 +39,28 @@ class FormsHomeViewController: UIViewController {
     }
     
     @IBAction func assistanceTapped(_ sender: Any) {
-        let segmentedNav = UIStoryboard(name: "Forms", bundle: nil).instantiateViewController(withIdentifier: "SegmentedFormNavigationControllerId") as! SegmentedFormNavigationController
-        segmentedNav.segmentedFormModel = volunteerFormModel
-        self.present(segmentedNav, animated: true)
+        let formInfoVC = UIStoryboard(name: "Forms", bundle: nil).instantiateViewController(withIdentifier: "SegmentedFormInfoViewControllerId") as! SegmentedFormInfoViewController
+        formInfoVC.segmentedFormModel = self.assistanceFormModel
+        formInfoVC.delegate = self
+        self.navigationController?.pushViewController(formInfoVC, animated: true)
+        
+        
     }
     
     @IBAction func volunteerSignUpTapped(_ sender: Any) {
-        
+        let formInfoVC = UIStoryboard(name: "Forms", bundle: nil).instantiateViewController(withIdentifier: "SegmentedFormInfoViewControllerId") as! SegmentedFormInfoViewController
+        formInfoVC.segmentedFormModel = self.volunteerFormModel
+        formInfoVC.delegate = self
+        self.navigationController?.pushViewController(formInfoVC, animated: true)
+    }
+    
+    func segmentedFormInfoViewControllerDidPressContinue(segmentedFormInfoViewController: SegmentedFormInfoViewController) {
         let segmentedNav = UIStoryboard(name: "Forms", bundle: nil).instantiateViewController(withIdentifier: "SegmentedFormNavigationControllerId") as! SegmentedFormNavigationController
-        segmentedNav.segmentedFormModel = assistanceFormModel
+        segmentedNav.segmentedFormModel = segmentedFormInfoViewController.segmentedFormModel
         self.present(segmentedNav, animated: true)
+    }
+    
+    func segmentedFormInfoViewControllerDidPressCancel(segmentedFormInfoViewController: SegmentedFormInfoViewController) {
+        self.navigationController?.popViewController(animated: true)
     }
 }

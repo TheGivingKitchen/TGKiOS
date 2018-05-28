@@ -13,11 +13,13 @@ class MainTabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let formsHomeVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "FormsHomeViewControllerId") as! FormsHomeViewController
-        formsHomeVC.tabBarItem = UITabBarItem(title: "Forms", image: nil, selectedImage: nil)
-        _ = formsHomeVC.view
         
-        self.viewControllers = [formsHomeVC]
+        let formsHomeVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "FormsHomeViewControllerId") as! FormsHomeViewController
+        _ = formsHomeVC.view
+        let formsHomeNavVC = UINavigationController(rootViewController: formsHomeVC)
+        formsHomeNavVC.tabBarItem = UITabBarItem(title: "Forms", image: nil, selectedImage: nil)
+        
+        self.viewControllers = [formsHomeNavVC]
     }
 
 }

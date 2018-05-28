@@ -50,8 +50,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 extension AppDelegate {
     func setupAppearances() {
+        UITabBar.appearance().isTranslucent = false
+        
+        UINavigationBar.appearance().isTranslucent = false
         UINavigationBar.appearance().tintColor = UIColor.tgkNavy
         UINavigationBar.appearance().titleTextAttributes = [.font:UIFont.tgkNavigation]
+        
         UIBarButtonItem.appearance().setTitleTextAttributes([.font:UIFont.tgkMetadata], for: .normal)
         UIBarButtonItem.appearance().setTitleTextAttributes([.font:UIFont.tgkMetadata], for: .highlighted)
     }

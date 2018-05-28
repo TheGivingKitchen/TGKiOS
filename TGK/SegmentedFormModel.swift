@@ -11,6 +11,9 @@ import Foundation
 struct SegmentedFormModel {
     
     let id:String
+    let title:String
+    let subtitle:String
+    let metadata:String
     let pages:[FormPagePageModel]
     
     var shareFormUrlString:String {
@@ -19,6 +22,9 @@ struct SegmentedFormModel {
     
     init(jsonDict:[String:Any]) {
         self.id = jsonDict["ID"] as? String ?? ""
+        self.title = jsonDict["FormTitle"] as? String ?? ""
+        self.subtitle = jsonDict["FormSubtitle"] as? String ?? ""
+        self.metadata = jsonDict["FormMetadata"] as? String ?? ""
         
         //pagesArray is a 2D array. each element in the top level contains a
         guard let pagesArray = jsonDict["Pages"] as? [[String:Any]] else {
