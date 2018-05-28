@@ -11,6 +11,7 @@
 		4E4D229E20B1B1F400BA7577 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4D229D20B1B1F400BA7577 /* MainTabBarController.swift */; };
 		4E4D22A120B1B2A700BA7577 /* FormsHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4D22A020B1B2A700BA7577 /* FormsHomeViewController.swift */; };
 		4E75176320B6291C00B2D7E0 /* SegmentedFormInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E75176220B6291C00B2D7E0 /* SegmentedFormInfoViewController.swift */; };
+		4E75176A20BC87B000B2D7E0 /* ExternalShareManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E75176920BC87B000B2D7E0 /* ExternalShareManager.swift */; };
 		4E7C2E1720B1D89F00A20303 /* Becker-Egyptian.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4E7C2E1620B1D89F00A20303 /* Becker-Egyptian.otf */; };
 		4E7C2E1A20B1D8A600A20303 /* Kulturista-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4E7C2E1820B1D8A600A20303 /* Kulturista-Medium.otf */; };
 		4E7C2E1B20B1D8A600A20303 /* Kulturista-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4E7C2E1920B1D8A600A20303 /* Kulturista-Bold.otf */; };
@@ -73,6 +74,7 @@
 		4E4D229D20B1B1F400BA7577 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		4E4D22A020B1B2A700BA7577 /* FormsHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormsHomeViewController.swift; sourceTree = "<group>"; };
 		4E75176220B6291C00B2D7E0 /* SegmentedFormInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedFormInfoViewController.swift; sourceTree = "<group>"; };
+		4E75176920BC87B000B2D7E0 /* ExternalShareManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalShareManager.swift; sourceTree = "<group>"; };
 		4E7C2E1620B1D89F00A20303 /* Becker-Egyptian.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Becker-Egyptian.otf"; sourceTree = "<group>"; };
 		4E7C2E1820B1D8A600A20303 /* Kulturista-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kulturista-Medium.otf"; sourceTree = "<group>"; };
 		4E7C2E1920B1D8A600A20303 /* Kulturista-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kulturista-Bold.otf"; sourceTree = "<group>"; };
@@ -204,6 +206,14 @@
 			name = FormJson;
 			sourceTree = "<group>";
 		};
+		4E75176820BC879E00B2D7E0 /* ExternalShareManager */ = {
+			isa = PBXGroup;
+			children = (
+				4E75176920BC87B000B2D7E0 /* ExternalShareManager.swift */,
+			);
+			name = ExternalShareManager;
+			sourceTree = "<group>";
+		};
 		4E7C2E3020B1D8CE00A20303 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -288,6 +298,7 @@
 		4ECA9BF920A268590084A317 /* CommonComponents */ = {
 			isa = PBXGroup;
 			children = (
+				4E75176820BC879E00B2D7E0 /* ExternalShareManager */,
 				4ECA9BFA20A2687B0084A317 /* BaseNibLoadedView.swift */,
 			);
 			name = CommonComponents;
@@ -533,6 +544,7 @@
 				4ED3883F209D030600A8BEE2 /* FormQuestionModel.swift in Sources */,
 				4E4D229E20B1B1F400BA7577 /* MainTabBarController.swift in Sources */,
 				4E7C2E3220B1D8F800A20303 /* UIFont+TGK.swift in Sources */,
+				4E75176A20BC87B000B2D7E0 /* ExternalShareManager.swift in Sources */,
 				4ECA9BFB20A2687B0084A317 /* BaseNibLoadedView.swift in Sources */,
 				4ED38843209D030600A8BEE2 /* SegmentedFormNavigationController.swift in Sources */,
 				4E75176320B6291C00B2D7E0 /* SegmentedFormInfoViewController.swift in Sources */,

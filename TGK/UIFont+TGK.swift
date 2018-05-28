@@ -66,7 +66,7 @@ extension UIFont {
 //MARK: Dynamic typed header and body wrappers for styling
 extension UIFont {
     static var tgkTitle:UIFont {
-        return UIFontMetrics.default.scaledFont(for:UIFont.beckerEgyptian(size: 36))
+        return UIFontMetrics.default.scaledFont(for:UIFont.beckerEgyptian(size: 44))
     }
     
     static var tgkSubtitle:UIFont {
@@ -82,7 +82,7 @@ extension UIFont {
     }
     
     static var tgkBody:UIFont {
-        return UIFontMetrics.default.scaledFont(for:UIFont.robotoMono(size: 15))
+        return UIFontMetrics.default.scaledFont(for:UIFont.robotoMono(size: 17))
     }
     
     static var tgkMetadata:UIFont {
