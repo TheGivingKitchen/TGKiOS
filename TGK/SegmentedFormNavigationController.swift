@@ -89,22 +89,25 @@ class SegmentedFormNavigationController: UINavigationController {
         ServiceManager.sharedInstace.submitAnswersToForm(self.segmentedFormModel.id, withAnswers: self.formAnswers) { (success, error, formFieldErrorModels) in
             
             if success == true {
+                //TODO: show success. waiting for design
                 self.dismiss(animated: true)
             }
-            else {
-                if let fieldErrors = formFieldErrorModels {
-                    var firstformPageWithErrors:FormPageViewController?
-                    for formPageVC in self.formPageViewControllers {
-                        let hasErrors = formPageVC.showFormFieldErrors(fieldErrors)
-                        if hasErrors && firstformPageWithErrors == nil {
-                            firstformPageWithErrors = formPageVC
-                        }
-                    }
-                    if let firstSegmentedForWithErrors = firstformPageWithErrors {
-                        self.popToViewController(firstSegmentedForWithErrors, animated: true)
+            else if let fieldErrors = formFieldErrorModels {
+                var firstformPageWithErrors:FormPageViewController?
+                for formPageVC in self.formPageViewControllers {
+                    let hasErrors = formPageVC.showFormFieldErrors(fieldErrors)
+                    if hasErrors && firstformPageWithErrors == nil {
+                        firstformPageWithErrors = formPageVC
                     }
                 }
-                //other error cases where there is failure but not with fields. maybe present an alert or banner
+                if let firstSegmentedForWithErrors = firstformPageWithErrors {
+                    self.popToViewController(firstSegmentedForWithErrors, animated: true)
+                }
+            }
+            else if let error = error {
+                //Catch any unexptected errors
+                let alertController = UIAlertController(title: "Oh no!", message: error.localizedDescription, preferredStyle: .alert)
+                self.present(alertController, animated: true)
             }
         }
     }
