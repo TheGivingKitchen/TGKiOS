@@ -86,6 +86,9 @@ class SegmentedFormNavigationController: UINavigationController {
     }
     
     fileprivate func submitFormAnswers() {
+        //Add default answers to the list before submitting
+        self.storeNewAnswers(segmentedFormModel.defaultAnswers)
+        
         ServiceManager.sharedInstace.submitAnswersToForm(self.segmentedFormModel.id, withAnswers: self.formAnswers) { (success, error, formFieldErrorModels) in
             
             if success == true {

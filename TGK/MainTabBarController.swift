@@ -17,9 +17,13 @@ class MainTabBarController: UITabBarController {
         let formsHomeVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "FormsHomeViewControllerId") as! FormsHomeViewController
         _ = formsHomeVC.view
         let formsHomeNavVC = UINavigationController(rootViewController: formsHomeVC)
-        formsHomeNavVC.tabBarItem = UITabBarItem(title: "Forms", image: nil, selectedImage: nil)
+        formsHomeNavVC.tabBarItem = UITabBarItem(title: "Support", image: UIImage(named: "tabBarRaisedHand"), selectedImage: nil)
         
-        self.viewControllers = [formsHomeNavVC]
+        let vc = UIViewController()
+        vc.tabBarItem = UITabBarItem(title: "Assistance", image: UIImage(named: "tabBarHeart"), tag: 0)
+        
+        
+        self.viewControllers = [formsHomeNavVC, vc]
     }
 
 }

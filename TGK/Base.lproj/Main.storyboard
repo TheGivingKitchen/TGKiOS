@@ -24,6 +24,39 @@
             </objects>
             <point key="canvasLocation" x="-1458" y="-278"/>
         </scene>
+        <!--Assistance Home View Controller-->
+        <scene sceneID="z5k-eB-2g1">
+            <objects>
+                <viewController id="a7e-3s-qQ7" customClass="AssistanceHomeViewController" customModule="TGK" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KTl-17-5vf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MnN-SW-AA4">
+                                <rect key="frame" x="111" y="153" width="152" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="I need help"/>
+                                <connections>
+                                    <action selector="requestSelfAssistancePressed:" destination="a7e-3s-qQ7" eventType="touchUpInside" id="SS6-J6-E30"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uk3-bl-CyS">
+                                <rect key="frame" x="76" y="240" width="222" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="I know someone that needs help"/>
+                                <connections>
+                                    <action selector="requestReferralAssistancePressed:" destination="a7e-3s-qQ7" eventType="touchUpInside" id="ZVU-lU-NIW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="cop-Q0-oCn"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="83n-1Q-pmr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-631.20000000000005" y="255.92203898050977"/>
+        </scene>
         <!--Forms Home View Controller-->
         <scene sceneID="Bo2-0V-Hhr">
             <objects>
@@ -48,12 +81,30 @@
                                     <action selector="volunteerSignUpTapped:" destination="xq2-nz-JWz" eventType="touchUpInside" id="L8u-TS-0fm"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FBW-Oh-jdA">
+                                <rect key="frame" x="109" y="292" width="156" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Assistance Inquiry Self"/>
+                                <connections>
+                                    <action selector="assistanceSelfTapped:" destination="xq2-nz-JWz" eventType="touchUpInside" id="ijx-Rd-Rux"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pmE-8f-4iV">
+                                <rect key="frame" x="96" y="340" width="183" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Assistance Inquiry Referral"/>
+                                <connections>
+                                    <action selector="assistanceReferrlaTapped:" destination="xq2-nz-JWz" eventType="touchUpInside" id="zQ4-KQ-kjC"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="tKR-Fd-5S9"/>
                     </view>
                     <connections>
                         <outlet property="assistanceButton" destination="j9o-04-2na" id="Tcf-q1-oY8"/>
+                        <outlet property="assistanceReferralButton" destination="pmE-8f-4iV" id="Zei-ud-7Zo"/>
+                        <outlet property="assistanceSelfButton" destination="FBW-Oh-jdA" id="8Q3-ye-6K1"/>
                         <outlet property="volunteerButton" destination="Gal-V9-L7a" id="V5T-uo-FGl"/>
                     </connections>
                 </viewController>

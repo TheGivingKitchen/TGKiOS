@@ -12,8 +12,12 @@ class FormsHomeViewController: UIViewController, SegmentedFormInfoViewController
 
     @IBOutlet weak var assistanceButton: UIButton!
     @IBOutlet weak var volunteerButton: UIButton!
+    @IBOutlet weak var assistanceSelfButton: UIButton!
+    @IBOutlet weak var assistanceReferralButton: UIButton!
     
     var assistanceFormModel:SegmentedFormModel!
+    var assistanceSelfFormModel:SegmentedFormModel!
+    var assistanceReferralFormModel:SegmentedFormModel!
     var volunteerFormModel:SegmentedFormModel!
     
     override func viewDidLoad() {
@@ -36,6 +40,20 @@ class FormsHomeViewController: UIViewController, SegmentedFormInfoViewController
             }
         }
         
+        ServiceManager.sharedInstace.getFirebaseForm(id: "assistanceInquirySelf") { (formModel, error) in
+            if let formModel = formModel {
+                self.assistanceSelfFormModel = formModel
+                self.assistanceSelfButton.isHidden = false
+            }
+        }
+        
+        ServiceManager.sharedInstace.getFirebaseForm(id: "assistanceInquiryReferral") { (formModel, error) in
+            if let formModel = formModel {
+                self.assistanceReferralFormModel = formModel
+                self.assistanceReferralButton.isHidden = false
+            }
+        }
+        
     }
     
     @IBAction func assistanceTapped(_ sender: Any) {
@@ -43,8 +61,20 @@ class FormsHomeViewController: UIViewController, SegmentedFormInfoViewController
         formInfoVC.segmentedFormModel = self.assistanceFormModel
         formInfoVC.delegate = self
         self.navigationController?.pushViewController(formInfoVC, animated: true)
-        
-        
+    }
+    
+    @IBAction func assistanceSelfTapped(_ sender: Any) {
+        let formInfoVC = UIStoryboard(name: "Forms", bundle: nil).instantiateViewController(withIdentifier: "SegmentedFormInfoViewControllerId") as! SegmentedFormInfoViewController
+        formInfoVC.segmentedFormModel = self.assistanceSelfFormModel
+        formInfoVC.delegate = self
+        self.navigationController?.pushViewController(formInfoVC, animated: true)
+    }
+    
+    @IBAction func assistanceReferrlaTapped(_ sender: Any) {
+        let formInfoVC = UIStoryboard(name: "Forms", bundle: nil).instantiateViewController(withIdentifier: "SegmentedFormInfoViewControllerId") as! SegmentedFormInfoViewController
+        formInfoVC.segmentedFormModel = self.assistanceReferralFormModel
+        formInfoVC.delegate = self
+        self.navigationController?.pushViewController(formInfoVC, animated: true)
     }
     
     @IBAction func volunteerSignUpTapped(_ sender: Any) {
