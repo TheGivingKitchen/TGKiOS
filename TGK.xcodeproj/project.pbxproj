@@ -16,6 +16,7 @@
 		4E75177020C8954C00B2D7E0 /* AssistanceHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E75176F20C8954C00B2D7E0 /* AssistanceHomeViewController.swift */; };
 		4E75177220C89C0400B2D7E0 /* assistanceInquirySelf.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E75177120C89C0400B2D7E0 /* assistanceInquirySelf.json */; };
 		4E75177420C89FFC00B2D7E0 /* assistanceInquiryReferral.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E75177320C89FFC00B2D7E0 /* assistanceInquiryReferral.json */; };
+		4E75177620C8A95700B2D7E0 /* EventsHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E75177520C8A95700B2D7E0 /* EventsHomeViewController.swift */; };
 		4E7C2E1720B1D89F00A20303 /* Becker-Egyptian.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4E7C2E1620B1D89F00A20303 /* Becker-Egyptian.otf */; };
 		4E7C2E1A20B1D8A600A20303 /* Kulturista-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4E7C2E1820B1D8A600A20303 /* Kulturista-Medium.otf */; };
 		4E7C2E1B20B1D8A600A20303 /* Kulturista-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4E7C2E1920B1D8A600A20303 /* Kulturista-Bold.otf */; };
@@ -30,6 +31,9 @@
 		4E7C2E2E20B1D8AF00A20303 /* RobotoMono-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E7C2E2420B1D8AF00A20303 /* RobotoMono-Bold.ttf */; };
 		4E7C2E2F20B1D8AF00A20303 /* RobotoMono-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E7C2E2520B1D8AF00A20303 /* RobotoMono-Medium.ttf */; };
 		4E7C2E3220B1D8F800A20303 /* UIFont+TGK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7C2E3120B1D8F800A20303 /* UIFont+TGK.swift */; };
+		4E83549A20C8B976009DF8CE /* RSSCalendarEventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E83549920C8B976009DF8CE /* RSSCalendarEventModel.swift */; };
+		4E83549C20CA0564009DF8CE /* CalendarEventOverviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E83549B20CA0564009DF8CE /* CalendarEventOverviewTableViewCell.swift */; };
+		4E83549F20CA0E50009DF8CE /* ServiceManager+Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E83549E20CA0E50009DF8CE /* ServiceManager+Events.swift */; };
 		4E885BB820A1221700D05ED9 /* FormFieldErrorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E885BB720A1221700D05ED9 /* FormFieldErrorModel.swift */; };
 		4E8897AE209E134700A361D8 /* ServiceManager+Forms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8897AD209E134700A361D8 /* ServiceManager+Forms.swift */; };
 		4E890FFD209E32120034A83B /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E890FFC209E32120034A83B /* Router.swift */; };
@@ -83,6 +87,7 @@
 		4E75176F20C8954C00B2D7E0 /* AssistanceHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssistanceHomeViewController.swift; sourceTree = "<group>"; };
 		4E75177120C89C0400B2D7E0 /* assistanceInquirySelf.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = assistanceInquirySelf.json; sourceTree = "<group>"; };
 		4E75177320C89FFC00B2D7E0 /* assistanceInquiryReferral.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = assistanceInquiryReferral.json; sourceTree = "<group>"; };
+		4E75177520C8A95700B2D7E0 /* EventsHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsHomeViewController.swift; sourceTree = "<group>"; };
 		4E7C2E1620B1D89F00A20303 /* Becker-Egyptian.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Becker-Egyptian.otf"; sourceTree = "<group>"; };
 		4E7C2E1820B1D8A600A20303 /* Kulturista-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kulturista-Medium.otf"; sourceTree = "<group>"; };
 		4E7C2E1920B1D8A600A20303 /* Kulturista-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kulturista-Bold.otf"; sourceTree = "<group>"; };
@@ -97,6 +102,9 @@
 		4E7C2E2420B1D8AF00A20303 /* RobotoMono-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoMono-Bold.ttf"; sourceTree = "<group>"; };
 		4E7C2E2520B1D8AF00A20303 /* RobotoMono-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoMono-Medium.ttf"; sourceTree = "<group>"; };
 		4E7C2E3120B1D8F800A20303 /* UIFont+TGK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+TGK.swift"; sourceTree = "<group>"; };
+		4E83549920C8B976009DF8CE /* RSSCalendarEventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSCalendarEventModel.swift; sourceTree = "<group>"; };
+		4E83549B20CA0564009DF8CE /* CalendarEventOverviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarEventOverviewTableViewCell.swift; sourceTree = "<group>"; };
+		4E83549E20CA0E50009DF8CE /* ServiceManager+Events.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ServiceManager+Events.swift"; sourceTree = "<group>"; };
 		4E885BB720A1221700D05ED9 /* FormFieldErrorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormFieldErrorModel.swift; sourceTree = "<group>"; };
 		4E8897AD209E134700A361D8 /* ServiceManager+Forms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ServiceManager+Forms.swift"; sourceTree = "<group>"; };
 		4E890FFC209E32120034A83B /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
@@ -173,6 +181,7 @@
 				4E4D22A020B1B2A700BA7577 /* FormsHomeViewController.swift */,
 				4E75176D20C8953B00B2D7E0 /* DonateHomeViewController.swift */,
 				4E75176F20C8954C00B2D7E0 /* AssistanceHomeViewController.swift */,
+				4E75177520C8A95700B2D7E0 /* EventsHomeViewController.swift */,
 			);
 			name = MainTabBarRootViewControllers;
 			sourceTree = "<group>";
@@ -246,6 +255,22 @@
 			name = Fonts;
 			sourceTree = "<group>";
 		};
+		4E83549820C8B966009DF8CE /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				4E83549920C8B976009DF8CE /* RSSCalendarEventModel.swift */,
+			);
+			name = Events;
+			sourceTree = "<group>";
+		};
+		4E83549D20CA0568009DF8CE /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				4E83549B20CA0564009DF8CE /* CalendarEventOverviewTableViewCell.swift */,
+			);
+			name = Events;
+			sourceTree = "<group>";
+		};
 		4E885BB920A1221B00D05ED9 /* Forms */ = {
 			isa = PBXGroup;
 			children = (
@@ -282,6 +307,7 @@
 		4E891002209E3C630034A83B /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				4E83549820C8B966009DF8CE /* Events */,
 				4E885BB920A1221B00D05ED9 /* Forms */,
 			);
 			name = Models;
@@ -293,6 +319,7 @@
 				4ED38835209D030500A8BEE2 /* ServiceManager.swift */,
 				4E8897AD209E134700A361D8 /* ServiceManager+Forms.swift */,
 				4E890FFC209E32120034A83B /* Router.swift */,
+				4E83549E20CA0E50009DF8CE /* ServiceManager+Events.swift */,
 			);
 			name = ServiceManager;
 			sourceTree = "<group>";
@@ -367,6 +394,7 @@
 		4ED38818209D01EF00A8BEE2 /* TGK */ = {
 			isa = PBXGroup;
 			children = (
+				4E83549D20CA0568009DF8CE /* Events */,
 				4ECA9BF920A268590084A317 /* CommonComponents */,
 				4E891005209E3C990034A83B /* Utilities */,
 				4E891004209E3C890034A83B /* ServiceManager */,
@@ -427,6 +455,7 @@
 				TargetAttributes = {
 					4ED38815209D01EF00A8BEE2 = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0930;
 					};
 				};
 			};
@@ -437,6 +466,7 @@
 			knownRegions = (
 				en,
 				Base,
+				English,
 			);
 			mainGroup = 4ED3880D209D01EF00A8BEE2;
 			productRefGroup = 4ED38817209D01EF00A8BEE2 /* Products */;
@@ -515,13 +545,17 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-TGK/Pods-TGK-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyXMLParser/SwiftyXMLParser.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyXMLParser.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -549,18 +583,22 @@
 				4ECA9BFD20A269A10084A317 /* FormListSelectTableViewCellRow.swift in Sources */,
 				4ED38844209D030600A8BEE2 /* FormTextViewTableViewCell.swift in Sources */,
 				4E885BB820A1221700D05ED9 /* FormFieldErrorModel.swift in Sources */,
+				4E83549C20CA0564009DF8CE /* CalendarEventOverviewTableViewCell.swift in Sources */,
 				4E89100B209F6F360034A83B /* FormPageModel.swift in Sources */,
 				4E4D22A120B1B2A700BA7577 /* FormsHomeViewController.swift in Sources */,
 				4E890FFD209E32120034A83B /* Router.swift in Sources */,
 				4ECA9C0720A85B4E0084A317 /* FormShortNameTableViewCell.swift in Sources */,
 				4ED38851209D04AE00A8BEE2 /* UIColor+TGK.swift in Sources */,
+				4E83549A20C8B976009DF8CE /* RSSCalendarEventModel.swift in Sources */,
 				4ECA9C0120A72D230084A317 /* FormQuestionSubfieldModel.swift in Sources */,
 				4ED3883F209D030600A8BEE2 /* FormQuestionModel.swift in Sources */,
 				4E4D229E20B1B1F400BA7577 /* MainTabBarController.swift in Sources */,
 				4E7C2E3220B1D8F800A20303 /* UIFont+TGK.swift in Sources */,
 				4E75176E20C8953B00B2D7E0 /* DonateHomeViewController.swift in Sources */,
 				4E75176A20BC87B000B2D7E0 /* ExternalShareManager.swift in Sources */,
+				4E83549F20CA0E50009DF8CE /* ServiceManager+Events.swift in Sources */,
 				4ECA9BFB20A2687B0084A317 /* BaseNibLoadedView.swift in Sources */,
+				4E75177620C8A95700B2D7E0 /* EventsHomeViewController.swift in Sources */,
 				4ED38843209D030600A8BEE2 /* SegmentedFormNavigationController.swift in Sources */,
 				4E75176320B6291C00B2D7E0 /* SegmentedFormInfoViewController.swift in Sources */,
 				4ED38848209D030600A8BEE2 /* FormListSelectTableViewCell.swift in Sources */,
@@ -712,6 +750,7 @@
 			baseConfigurationReference = 2ED9204B045A5AE610078D22 /* Pods-TGK.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VZBY3CL334;
 				INFOPLIST_FILE = TGK/Info.plist;
@@ -721,6 +760,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = org.thegivingkitchen.TGK;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -731,6 +773,7 @@
 			baseConfigurationReference = F812197480570AB0D7060FB8 /* Pods-TGK.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VZBY3CL334;
 				INFOPLIST_FILE = TGK/Info.plist;
@@ -740,6 +783,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = org.thegivingkitchen.TGK;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

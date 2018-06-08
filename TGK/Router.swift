@@ -12,6 +12,7 @@ import Alamofire
 enum Router {
     static let wufooBaseUrl = "https://thegivingkitchen.wufoo.com/api/v3"
     static let firebaseBaseStorageUrl = "https://firebasestorage.googleapis.com/v0/b/thegivingkitchen-cdd28.appspot.com/o"
+    static let givingKitchenBaseUrl = "https://thegivingkitchen.org"
     static let firebaseBaseApiUrl = "https://thegivingkitchen-cdd28.firebaseio.com"
     
     //Root
@@ -22,6 +23,9 @@ enum Router {
     
     case getFirebaseForm(String)
     case postFormEntry(String)
+    
+    //Events
+    case getEventFeed
 }
 
 extension Router {
@@ -39,6 +43,9 @@ extension Router {
             return .get
         case .postFormEntry:
             return .post
+        //Events
+        case .getEventFeed:
+            return .get
         }
     }
     
@@ -56,6 +63,10 @@ extension Router {
             return "\(Router.firebaseBaseStorageUrl)/forms%2F\(formId).json?alt=media"
         case .postFormEntry(let formId):
             return "\(Router.wufooBaseUrl)/forms/\(formId)/entries.json"
+            
+        //Events
+        case .getEventFeed:
+            return "\(Router.givingKitchenBaseUrl)/events-calendar"
         }
     }
     

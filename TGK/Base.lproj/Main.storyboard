@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -22,12 +23,12 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j2H-F4-XZh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1458" y="-278"/>
+            <point key="canvasLocation" x="-1958" y="652"/>
         </scene>
         <!--Assistance Home View Controller-->
         <scene sceneID="z5k-eB-2g1">
             <objects>
-                <viewController id="a7e-3s-qQ7" customClass="AssistanceHomeViewController" customModule="TGK" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AssistanceHomeViewControllerId" id="a7e-3s-qQ7" customClass="AssistanceHomeViewController" customModule="TGK" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KTl-17-5vf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -56,6 +57,76 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="83n-1Q-pmr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-631.20000000000005" y="255.92203898050977"/>
+        </scene>
+        <!--Donate Home View Controller-->
+        <scene sceneID="mVI-Tt-syG">
+            <objects>
+                <viewController storyboardIdentifier="DonateHomeViewControllerId" id="y0F-uA-TV7" customClass="DonateHomeViewController" customModule="TGK" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="L26-5J-HFY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="UMe-qB-WDW"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ol3-Ci-4Li" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-638" y="979"/>
+        </scene>
+        <!--Events Home View Controller-->
+        <scene sceneID="IBH-qX-buM">
+            <objects>
+                <tableViewController storyboardIdentifier="EventsHomeViewControllerId" id="nad-u9-DBR" customClass="EventsHomeViewController" customModule="TGK" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="psL-CK-n5d">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="eventCellReuseId" rowHeight="303" id="Oge-ZN-aoK" customClass="CalendarEventOverviewTableViewCell" customModule="TGK" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="303"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Oge-ZN-aoK" id="ftr-6X-GQI">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="302.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MTs-9N-MlP">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="MTs-9N-MlP" secondAttribute="height" multiplier="3:2" id="zRF-l5-dWH"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="description label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Huf-KP-LWQ">
+                                            <rect key="frame" x="16" y="258" width="343" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Huf-KP-LWQ" firstAttribute="leading" secondItem="ftr-6X-GQI" secondAttribute="leading" constant="16" id="0oH-tZ-JAb"/>
+                                        <constraint firstAttribute="trailing" secondItem="Huf-KP-LWQ" secondAttribute="trailing" constant="16" id="6uq-19-rrf"/>
+                                        <constraint firstItem="MTs-9N-MlP" firstAttribute="leading" secondItem="ftr-6X-GQI" secondAttribute="leading" id="ECC-WI-PQZ"/>
+                                        <constraint firstItem="Huf-KP-LWQ" firstAttribute="top" secondItem="MTs-9N-MlP" secondAttribute="bottom" constant="8" id="QTO-eC-aJ4"/>
+                                        <constraint firstAttribute="bottom" secondItem="Huf-KP-LWQ" secondAttribute="bottom" constant="23.5" id="S0z-R5-Wlv"/>
+                                        <constraint firstAttribute="trailing" secondItem="MTs-9N-MlP" secondAttribute="trailing" id="Sik-ue-ZM5"/>
+                                        <constraint firstItem="MTs-9N-MlP" firstAttribute="top" secondItem="ftr-6X-GQI" secondAttribute="top" id="Wqx-YY-y0C"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="descriptionLabel" destination="Huf-KP-LWQ" id="hHB-ln-6Pa"/>
+                                    <outlet property="heroImageVIew" destination="MTs-9N-MlP" id="VVj-7r-gaN"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="nad-u9-DBR" id="dJl-An-7MO"/>
+                            <outlet property="delegate" destination="nad-u9-DBR" id="DST-Gc-e0Q"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b5d-yi-Irx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-639.20000000000005" y="1719.4902548725638"/>
         </scene>
         <!--Forms Home View Controller-->
         <scene sceneID="Bo2-0V-Hhr">

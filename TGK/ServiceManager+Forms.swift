@@ -21,6 +21,7 @@ extension ServiceManager {
             
             if let error = response.result.error {
                 completion(nil, error)
+                return
             }
             
             guard let topLevelJsonDict = response.result.value as? [String:Any],
@@ -46,6 +47,7 @@ extension ServiceManager {
         self.sessionManager.request(Router.getFirebaseForm(id).url, encoding: URLEncoding.default, headers:nil).responseJSON { (response) in
             if let error = response.result.error {
                 completion(nil, error)
+                return
             }
             
             guard let topLevelJsonDict = response.result.value as? [String:Any] else {
