@@ -7,12 +7,12 @@
 //
 
 import UIKit
+import FirebaseRemoteConfig
 
 class MainTabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
         let formsHomeVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "FormsHomeViewControllerId") as! FormsHomeViewController
         _ = formsHomeVC.view
@@ -35,6 +35,32 @@ class MainTabBarController: UITabBarController {
         donateHomeNavVC.tabBarItem = UITabBarItem(title: "Support", image: UIImage(named: "tabBarHeart"), selectedImage: nil)
         
         self.viewControllers = [formsHomeNavVC, assistanceHomeNavVC, eventsHomeNavVC, donateHomeNavVC]
+        
+        //Remote config
+//        self.fetchRemoteConfigAndActivate()
+        NotificationCenter.default.addObserver(self, selector: #selector(applicationDidBecomeActiveHander(_:)), name: NSNotification.Name.UIApplicationDidBecomeActive, object: nil)
     }
-
+    
+    @objc private func applicationDidBecomeActiveHander(_ notification:NSNotification) {
+        self.fetchRemoteConfigAndActivate()
+    }
 }
+
+//MARK: Remote Config needs to be in application's entry view controller
+extension MainTabBarController {
+    func fetchRemoteConfigAndActivate() {
+        RemoteConfig.remoteConfig().fetch(withExpirationDuration: RemoteConfigDefaults.expirationDuration) { (status, error) in
+            switch status {
+            case .success:
+                print("Remote config fetch success. Activating values")
+                RemoteConfig.remoteConfig().activateFetched()
+                break
+            case .failure:
+                break
+            default:
+                break
+            }
+        }
+    }
+}
+

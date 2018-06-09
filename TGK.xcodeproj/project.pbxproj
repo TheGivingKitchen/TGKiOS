@@ -34,6 +34,7 @@
 		4E83549A20C8B976009DF8CE /* RSSCalendarEventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E83549920C8B976009DF8CE /* RSSCalendarEventModel.swift */; };
 		4E83549C20CA0564009DF8CE /* CalendarEventOverviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E83549B20CA0564009DF8CE /* CalendarEventOverviewTableViewCell.swift */; };
 		4E83549F20CA0E50009DF8CE /* ServiceManager+Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E83549E20CA0E50009DF8CE /* ServiceManager+Events.swift */; };
+		4E8354A220CBFD33009DF8CE /* RemoteConfigDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8354A120CBFD33009DF8CE /* RemoteConfigDefaults.swift */; };
 		4E885BB820A1221700D05ED9 /* FormFieldErrorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E885BB720A1221700D05ED9 /* FormFieldErrorModel.swift */; };
 		4E8897AE209E134700A361D8 /* ServiceManager+Forms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8897AD209E134700A361D8 /* ServiceManager+Forms.swift */; };
 		4E890FFD209E32120034A83B /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E890FFC209E32120034A83B /* Router.swift */; };
@@ -105,6 +106,7 @@
 		4E83549920C8B976009DF8CE /* RSSCalendarEventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSCalendarEventModel.swift; sourceTree = "<group>"; };
 		4E83549B20CA0564009DF8CE /* CalendarEventOverviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarEventOverviewTableViewCell.swift; sourceTree = "<group>"; };
 		4E83549E20CA0E50009DF8CE /* ServiceManager+Events.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ServiceManager+Events.swift"; sourceTree = "<group>"; };
+		4E8354A120CBFD33009DF8CE /* RemoteConfigDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteConfigDefaults.swift; sourceTree = "<group>"; };
 		4E885BB720A1221700D05ED9 /* FormFieldErrorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormFieldErrorModel.swift; sourceTree = "<group>"; };
 		4E8897AD209E134700A361D8 /* ServiceManager+Forms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ServiceManager+Forms.swift"; sourceTree = "<group>"; };
 		4E890FFC209E32120034A83B /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
@@ -271,6 +273,14 @@
 			name = Events;
 			sourceTree = "<group>";
 		};
+		4E8354A020CBFD24009DF8CE /* RemoteConfig */ = {
+			isa = PBXGroup;
+			children = (
+				4E8354A120CBFD33009DF8CE /* RemoteConfigDefaults.swift */,
+			);
+			name = RemoteConfig;
+			sourceTree = "<group>";
+		};
 		4E885BB920A1221B00D05ED9 /* Forms */ = {
 			isa = PBXGroup;
 			children = (
@@ -394,6 +404,7 @@
 		4ED38818209D01EF00A8BEE2 /* TGK */ = {
 			isa = PBXGroup;
 			children = (
+				4E8354A020CBFD24009DF8CE /* RemoteConfig */,
 				4E83549D20CA0568009DF8CE /* Events */,
 				4ECA9BF920A268590084A317 /* CommonComponents */,
 				4E891005209E3C990034A83B /* Utilities */,
@@ -547,6 +558,7 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyXMLParser/SwiftyXMLParser.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -555,6 +567,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyXMLParser.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -605,6 +618,7 @@
 				4ED38852209D04AE00A8BEE2 /* String+TGK.swift in Sources */,
 				4ED3883D209D030600A8BEE2 /* FormPickerTableViewCell.swift in Sources */,
 				4ED38845209D030600A8BEE2 /* FormPageViewController.swift in Sources */,
+				4E8354A220CBFD33009DF8CE /* RemoteConfigDefaults.swift in Sources */,
 				4E75177020C8954C00B2D7E0 /* AssistanceHomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

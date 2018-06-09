@@ -8,17 +8,21 @@
 
 import UIKit
 import Firebase
+import FirebaseRemoteConfig
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var remoteConfigExpirationDuration:Double = 300 //5 minute throttle on remote config fetches
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         FirebaseApp.configure()
         self.setupAppearances()
+        
+        self.setupRemoteConfig()
         
         return true
     }
@@ -48,6 +52,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+//MARK: Appearance Proxy
 extension AppDelegate {
     func setupAppearances() {
         UITabBar.appearance().isTranslucent = false
@@ -58,6 +63,35 @@ extension AppDelegate {
         
         UIBarButtonItem.appearance().setTitleTextAttributes([.font:UIFont.tgkBody], for: .normal)
         UIBarButtonItem.appearance().setTitleTextAttributes([.font:UIFont.tgkBody], for: .highlighted)
+    }
+}
+
+//MARK: Remote Config
+extension AppDelegate {
+    func setupRemoteConfig() {
+        let remoteConfig = RemoteConfig.remoteConfig()
+        
+        #if DEBUG
+        remoteConfig.configSettings = RemoteConfigSettings(developerModeEnabled: true)
+        self.remoteConfigExpirationDuration = 0
+        #endif
+        
+        let defaultConfigValues = [RemoteConfigDefaults.isLive.rawValue:true as NSObject]
+        remoteConfig.setDefaults(defaultConfigValues)
+    }
+    
+    func fetchRemoteConfigAndActivate() {
+        RemoteConfig.remoteConfig().fetch(withExpirationDuration: self.remoteConfigExpirationDuration) { (status, error) in
+            switch status {
+            case .success:
+                RemoteConfig.remoteConfig().activateFetched()
+                break
+            case .failure:
+                break
+            default:
+                break
+            }
+        }
     }
 }
 
