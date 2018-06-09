@@ -170,15 +170,18 @@ class FormListSelectTableViewCell: UITableViewCell, FormItemView {
 
 extension FormListSelectTableViewCell: FormListSelectTableViewCellRowDelegate {
     func formListSelectTableViewCellRowWasSelected(cell: FormListSelectTableViewCellRow) {
+        
         switch  self.selectionType {
         case .multiple:
+            cell.isSelected = !cell.isSelected
             break
         case .single:
-            //Deselect all other rows
+            cell.isSelected = true
+            
             guard let rowIndex = self.rows.index(of: cell) else {
                 return
             }
-            
+            //Deselect all other rows
             for index in 0..<self.rows.count {
                 if rowIndex == index {
                     continue

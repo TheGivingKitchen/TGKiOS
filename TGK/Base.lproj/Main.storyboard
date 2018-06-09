@@ -89,7 +89,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="302.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MTs-9N-MlP">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MTs-9N-MlP">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="MTs-9N-MlP" secondAttribute="height" multiplier="3:2" id="zRF-l5-dWH"/>

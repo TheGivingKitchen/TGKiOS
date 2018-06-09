@@ -39,7 +39,6 @@ class FormListSelectTableViewCellRow:BaseNibLoadedView {
     
     
     @objc func viewTapped(recognizer:UITapGestureRecognizer) {
-        self.isSelected = !self.isSelected
         
         self.delegate?.formListSelectTableViewCellRowWasSelected(cell: self)
     }

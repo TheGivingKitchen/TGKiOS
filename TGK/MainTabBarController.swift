@@ -37,7 +37,6 @@ class MainTabBarController: UITabBarController {
         self.viewControllers = [formsHomeNavVC, assistanceHomeNavVC, eventsHomeNavVC, donateHomeNavVC]
         
         //Remote config
-//        self.fetchRemoteConfigAndActivate()
         NotificationCenter.default.addObserver(self, selector: #selector(applicationDidBecomeActiveHander(_:)), name: NSNotification.Name.UIApplicationDidBecomeActive, object: nil)
     }
     
