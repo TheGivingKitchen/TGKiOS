@@ -177,7 +177,7 @@
 		                    "Label": "Other"
 		                }
 		            ],
-		            "Type": "listMultipleSelect",
+		            "Type": "checkbox",
 		            "ID": "Field975"
 		        },
 		        {
@@ -224,7 +224,7 @@
 		                    "Label": "Varies week by week"
 		                }
 		            ],
-		            "Type": "listMultipleSelect",
+		            "Type": "checkbox",
 		            "ID": "Field1077"
 		        }
 			]
@@ -261,7 +261,7 @@
 		                    "Label": "All of the above!"
 		                }
 		            ],
-		            "Type": "listMultipleSelect",
+		            "Type": "checkbox",
 		            "ID": "Field1181"
 		        }
 			]
@@ -400,7 +400,7 @@
 		                    "Label": "Other"
 		                }
 		            ],
-		            "Type": "listSingleSelect",
+		            "Type": "radio",
 		            "ID": "Field658",
 		            "HasOtherField": true
 		        }

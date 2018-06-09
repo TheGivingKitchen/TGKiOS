@@ -117,7 +117,7 @@ extension FormTableViewController {
             dropDownCell.formQuestion = questionModel
             dropDownCell.delegate = self
             return dropDownCell
-        case .listSingleSelect:
+        case .radio:
             let singleSelectCell = Bundle.main.loadNibNamed("FormListSelectTableViewCell", owner: self, options: [:])?.first as! FormListSelectTableViewCell
             self.formQuestionCells.append(singleSelectCell)
             singleSelectCell.formQuestion = questionModel

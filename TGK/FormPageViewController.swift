@@ -201,20 +201,13 @@ extension FormPageViewController {
             dropDownCell.formQuestion = questionModel
             dropDownCell.delegate = self
             return dropDownCell
-        case .listSingleSelect:
-            let listSelectCell = Bundle.main.loadNibNamed("FormListSelectTableViewCell", owner: self, options: [:])?.first as! FormListSelectTableViewCell
-            self.formQuestionCells.append(listSelectCell)
-            listSelectCell.formQuestion = questionModel
-            listSelectCell.selectionType = .single
-            listSelectCell.delegate = self
-            return listSelectCell
         case .textView:
             let textViewCell = Bundle.main.loadNibNamed("FormTextViewTableViewCell", owner: self, options: [:])?.first as! FormTextViewTableViewCell
             self.formQuestionCells.append(textViewCell)
             textViewCell.formQuestion = questionModel
             textViewCell.delegate = self
             return textViewCell
-        case .listMultipleSelect:
+        case .checkbox:
             let listSelectCell = Bundle.main.loadNibNamed("FormListSelectTableViewCell", owner: self, options: [:])?.first as! FormListSelectTableViewCell
             self.formQuestionCells.append(listSelectCell)
             listSelectCell.formQuestion = questionModel

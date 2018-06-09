@@ -1,0 +1,197 @@
+{
+    "ID" : "z105mm821r3jmhj",
+    "FormTitle":"Multiply Joy",
+    "FormSubtitle":"Making it easier to help",
+    "FormMetadata":"Thank you for your interest! Multiply Joy allows you and your teammates to easily support the Metro Atlanta, Athens, Columbus and Rome restaurant industry through small, recurring donations.",
+	"Pages" : [
+		{
+            "pageInformation" : "Please tell us about your yourself",
+			"questions" : [
+				{
+		            "Title": "Restaurant/Company",
+		            "Instructions": "",
+		            "IsRequired": "1",
+		            "ClassNames": "",
+		            "DefaultVal": "",
+		            "Page": "1",
+		            "Type": "text",
+		            "ID": "Field1"
+		        },
+		        {
+		            "Title": "Your Name",
+		            "Instructions": "",
+		            "IsRequired": "1",
+		            "ClassNames": "",
+		            "DefaultVal": "",
+		            "Page": "1",
+		            "Type": "text",
+		            "ID": "Field2"
+		        },
+		        {
+		            "Title": "Your position in the company",
+		            "Instructions": "",
+		            "IsRequired": "1",
+		            "ClassNames": "",
+		            "DefaultVal": "",
+		            "Page": "1",
+		            "Type": "text",
+		            "ID": "Field3"
+		        }
+			]
+		},
+		{
+            "pageInformation" : "How can we get in touch?",
+			"questions" : [		
+				{
+		            "Title": "Work Phone Number",
+		            "Instructions": "",
+		            "IsRequired": "1",
+		            "ClassNames": "",
+		            "DefaultVal": "",
+		            "Page": "1",
+		            "Type": "phone",
+		            "ID": "Field5"
+		        },
+		        {
+		            "Title": "Cell Phone Number (Optional)",
+		            "Instructions": "",
+		            "IsRequired": "0",
+		            "ClassNames": "",
+		            "DefaultVal": "",
+		            "Page": "1",
+		            "Type": "phone",
+		            "ID": "Field6"
+		        },
+		        {
+		            "Title": "Email (preferably work email)",
+		            "Instructions": "",
+		            "IsRequired": "1",
+		            "ClassNames": "",
+		            "DefaultVal": "",
+		            "Page": "1",
+		            "Type": "email",
+		            "ID": "Field7"
+		        }
+			]
+		},
+		{
+            "pageInformation" : "What type of enrollment are you interested in?",
+			"questions" : [		
+				{
+		            "Title": "Please indicate how your company may like to enroll in the program.",
+		            "Instructions": "",
+		            "IsRequired": "0",
+		            "ClassNames": "",
+		            "DefaultVal": "",
+		            "Page": "1",
+		            "Choices": [
+		                {
+		                    "Label": "Employee giving via ongoing payroll deduction."
+		                },
+		                {
+		                    "Label": "Employee giving via one-time payroll deduction."
+		                },
+		                {
+		                    "Label": "Employee giving via company-branded online donations."
+		                },
+		                {
+		                    "Label": "I'm not sure. Please tell me about all!"
+		                }
+		            ],
+		            "Type": "radio",
+		            "ID": "Field309",
+		            "HasOtherField": false
+		        }
+			]
+		},
+		{
+            "pageInformation" : "Employee matching?",
+			"questions" : [	
+				{
+		            "Title": "Would your company consider matching your employee's donations?",
+		            "Instructions": "",
+		            "IsRequired": "1",
+		            "ClassNames": "",
+		            "DefaultVal": "",
+		            "Page": "1",
+		            "Choices": [
+		                {
+		                    "Label": "Absolutely!"
+		                },
+		                {
+		                    "Label": "I'm not sure. Please tell me more."
+		                },
+		                {
+		                    "Label": "Not at this time."
+		                }
+		            ],
+		            "Type": "radio",
+		            "ID": "Field308",
+		            "HasOtherField": false
+		        }
+			]
+		},
+		{
+            "pageInformation" : "Parternships",
+			"questions" : [	
+				{
+		            "Title": "If interested, please check other partnership opportunities below to learn more!",
+		            "Instructions": "",
+		            "IsRequired": "0",
+		            "ClassNames": "",
+		            "DefaultVal": "0",
+		            "Page": "1",
+		            "SubFields": [
+		                {
+		                    "DefaultVal": "0",
+		                    "ID": "Field208",
+		                    "Label": "Dining with Gratitude (GK Restaurant Week)."
+		                },
+		                {
+		                    "DefaultVal": "0",
+		                    "ID": "Field209",
+		                    "Label": "Host a tasting table at an event that benefits GK."
+		                },
+		                {
+		                    "DefaultVal": "0",
+		                    "ID": "Field210",
+		                    "Label": "GK cause marketing programs (i.e. participate in SweetWater's Second Helping or sell Revelator Coffee's GK brand)."
+		                },
+		                {
+		                    "DefaultVal": "0",
+		                    "ID": "Field211",
+		                    "Label": "Direct donations to GK."
+		                },
+		                {
+		                    "DefaultVal": "0",
+		                    "ID": "Field212",
+		                    "Label": "Co-branded holiday cards to your loyal followers and friends."
+		                },
+		                {
+		                    "DefaultVal": "0",
+		                    "ID": "Field213",
+		                    "Label": "In-kind donations to GK."
+		                },
+		                {
+		                    "DefaultVal": "0",
+		                    "ID": "Field214",
+		                    "Label": "Make GK the beneficiary of your opening or anniversary party."
+		                },
+		                {
+		                    "DefaultVal": "0",
+		                    "ID": "Field215",
+		                    "Label": "Add GK grant information to your employee handbook."
+		                },
+		                {
+		                    "DefaultVal": "0",
+		                    "ID": "Field216",
+		                    "Label": "Not at this time, thank you."
+		                }
+		            ],
+		            "Type": "checkbox",
+		            "ID": "Field208"
+		        }
+			]
+		}
+	]
+}

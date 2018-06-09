@@ -168,6 +168,14 @@
                                     <action selector="assistanceReferrlaTapped:" destination="xq2-nz-JWz" eventType="touchUpInside" id="zQ4-KQ-kjC"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hcA-Wz-uBe">
+                                <rect key="frame" x="121" y="378" width="133" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Multiply Joy Inquiry"/>
+                                <connections>
+                                    <action selector="multiplyJoyTapped:" destination="xq2-nz-JWz" eventType="touchUpInside" id="d4T-Yo-l11"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="tKR-Fd-5S9"/>
@@ -176,6 +184,7 @@
                         <outlet property="assistanceButton" destination="j9o-04-2na" id="Tcf-q1-oY8"/>
                         <outlet property="assistanceReferralButton" destination="pmE-8f-4iV" id="Zei-ud-7Zo"/>
                         <outlet property="assistanceSelfButton" destination="FBW-Oh-jdA" id="8Q3-ye-6K1"/>
+                        <outlet property="multiplyJoyButton" destination="hcA-Wz-uBe" id="INW-MJ-HJt"/>
                         <outlet property="volunteerButton" destination="Gal-V9-L7a" id="V5T-uo-FGl"/>
                     </connections>
                 </viewController>

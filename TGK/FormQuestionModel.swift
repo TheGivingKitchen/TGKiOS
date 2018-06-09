@@ -22,10 +22,7 @@ struct FormQuestionModel {
         case shortName = "shortname"
         case address = "address"
         case date = "date"
-        
-        //custom components
-        case listSingleSelect = "listSingleSelect"
-        case listMultipleSelect = "listMultipleSelect"
+        case checkbox = "checkbox"
     }
     
     let id:String

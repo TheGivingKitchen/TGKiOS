@@ -14,11 +14,13 @@ class FormsHomeViewController: UIViewController, SegmentedFormInfoViewController
     @IBOutlet weak var volunteerButton: UIButton!
     @IBOutlet weak var assistanceSelfButton: UIButton!
     @IBOutlet weak var assistanceReferralButton: UIButton!
+    @IBOutlet weak var multiplyJoyButton: UIButton!
     
     var assistanceFormModel:SegmentedFormModel!
     var assistanceSelfFormModel:SegmentedFormModel!
     var assistanceReferralFormModel:SegmentedFormModel!
     var volunteerFormModel:SegmentedFormModel!
+    var multiplyJoyModel:SegmentedFormModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,6 +56,13 @@ class FormsHomeViewController: UIViewController, SegmentedFormInfoViewController
             }
         }
         
+        ServiceManager.sharedInstace.getFirebaseForm(id: "multiplyJoyInquiry") { (formModel, error) in
+            if let formModel = formModel {
+                self.multiplyJoyModel = formModel
+                self.multiplyJoyButton.isHidden = false
+            }
+        }
+        
     }
     
     @IBAction func assistanceTapped(_ sender: Any) {
@@ -80,6 +89,13 @@ class FormsHomeViewController: UIViewController, SegmentedFormInfoViewController
     @IBAction func volunteerSignUpTapped(_ sender: Any) {
         let formInfoVC = UIStoryboard(name: "Forms", bundle: nil).instantiateViewController(withIdentifier: "SegmentedFormInfoViewControllerId") as! SegmentedFormInfoViewController
         formInfoVC.segmentedFormModel = self.volunteerFormModel
+        formInfoVC.delegate = self
+        self.navigationController?.pushViewController(formInfoVC, animated: true)
+    }
+    
+    @IBAction func multiplyJoyTapped(_ sender: Any) {
+        let formInfoVC = UIStoryboard(name: "Forms", bundle: nil).instantiateViewController(withIdentifier: "SegmentedFormInfoViewControllerId") as! SegmentedFormInfoViewController
+        formInfoVC.segmentedFormModel = self.multiplyJoyModel
         formInfoVC.delegate = self
         self.navigationController?.pushViewController(formInfoVC, animated: true)
     }
