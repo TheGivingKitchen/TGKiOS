@@ -36,6 +36,7 @@
 		4E83549F20CA0E50009DF8CE /* ServiceManager+Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E83549E20CA0E50009DF8CE /* ServiceManager+Events.swift */; };
 		4E8354A220CBFD33009DF8CE /* RemoteConfigDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8354A120CBFD33009DF8CE /* RemoteConfigDefaults.swift */; };
 		4E8354A420CC597A009DF8CE /* multiplyJoyInquiry.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E8354A320CC597A009DF8CE /* multiplyJoyInquiry.json */; };
+		4E8354A720CC6CF1009DF8CE /* TGKSafariViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8354A620CC6CF1009DF8CE /* TGKSafariViewController.swift */; };
 		4E885BB820A1221700D05ED9 /* FormFieldErrorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E885BB720A1221700D05ED9 /* FormFieldErrorModel.swift */; };
 		4E8897AE209E134700A361D8 /* ServiceManager+Forms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8897AD209E134700A361D8 /* ServiceManager+Forms.swift */; };
 		4E890FFD209E32120034A83B /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E890FFC209E32120034A83B /* Router.swift */; };
@@ -109,6 +110,7 @@
 		4E83549E20CA0E50009DF8CE /* ServiceManager+Events.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ServiceManager+Events.swift"; sourceTree = "<group>"; };
 		4E8354A120CBFD33009DF8CE /* RemoteConfigDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteConfigDefaults.swift; sourceTree = "<group>"; };
 		4E8354A320CC597A009DF8CE /* multiplyJoyInquiry.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = multiplyJoyInquiry.json; sourceTree = "<group>"; };
+		4E8354A620CC6CF1009DF8CE /* TGKSafariViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TGKSafariViewController.swift; sourceTree = "<group>"; };
 		4E885BB720A1221700D05ED9 /* FormFieldErrorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormFieldErrorModel.swift; sourceTree = "<group>"; };
 		4E8897AD209E134700A361D8 /* ServiceManager+Forms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ServiceManager+Forms.swift"; sourceTree = "<group>"; };
 		4E890FFC209E32120034A83B /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
@@ -284,6 +286,14 @@
 			name = RemoteConfig;
 			sourceTree = "<group>";
 		};
+		4E8354A520CC6CD8009DF8CE /* TGKSafariViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4E8354A620CC6CF1009DF8CE /* TGKSafariViewController.swift */,
+			);
+			name = TGKSafariViewController;
+			sourceTree = "<group>";
+		};
 		4E885BB920A1221B00D05ED9 /* Forms */ = {
 			isa = PBXGroup;
 			children = (
@@ -407,6 +417,7 @@
 		4ED38818209D01EF00A8BEE2 /* TGK */ = {
 			isa = PBXGroup;
 			children = (
+				4E8354A520CC6CD8009DF8CE /* TGKSafariViewController */,
 				4E8354A020CBFD24009DF8CE /* RemoteConfig */,
 				4E83549D20CA0568009DF8CE /* Events */,
 				4ECA9BF920A268590084A317 /* CommonComponents */,
@@ -614,6 +625,7 @@
 				4E75176E20C8953B00B2D7E0 /* DonateHomeViewController.swift in Sources */,
 				4E75176A20BC87B000B2D7E0 /* ExternalShareManager.swift in Sources */,
 				4E83549F20CA0E50009DF8CE /* ServiceManager+Events.swift in Sources */,
+				4E8354A720CC6CF1009DF8CE /* TGKSafariViewController.swift in Sources */,
 				4ECA9BFB20A2687B0084A317 /* BaseNibLoadedView.swift in Sources */,
 				4E75177620C8A95700B2D7E0 /* EventsHomeViewController.swift in Sources */,
 				4ED38843209D030600A8BEE2 /* SegmentedFormNavigationController.swift in Sources */,

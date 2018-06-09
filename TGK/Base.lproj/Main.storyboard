@@ -65,6 +65,16 @@
                     <view key="view" contentMode="scaleToFill" id="L26-5J-HFY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JCO-ct-e6D">
+                                <rect key="frame" x="118" y="102" width="138" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Main Donation Form"/>
+                                <connections>
+                                    <action selector="mainDonationFormPressed:" destination="y0F-uA-TV7" eventType="touchUpInside" id="oSh-1T-URd"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="UMe-qB-WDW"/>
                     </view>
