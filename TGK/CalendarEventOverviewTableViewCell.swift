@@ -13,6 +13,7 @@ class CalendarEventOverviewTableViewCell: UITableViewCell {
 
     @IBOutlet weak var heroImageVIew: UIImageView!
     @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
     
     var calendarEventModel:RSSCalendarEventModel! {
         didSet {
@@ -26,6 +27,16 @@ class CalendarEventOverviewTableViewCell: UITableViewCell {
         
         self.descriptionLabel.font = UIFont.tgkBody
         self.descriptionLabel.textColor = UIColor.tgkDarkGray
+        self.titleLabel.font = UIFont.tgkSubtitle
+        self.titleLabel.textColor = UIColor.white
+        
+        //gradient
+        let gradient = CAGradientLayer()
+        gradient.frame = self.heroImageVIew.bounds
+        gradient.colors = [UIColor.clear.cgColor, UIColor.tgkDarkGray.cgColor]
+        gradient.startPoint = CGPoint(x: 0.0, y: 0.5)
+        gradient.endPoint = CGPoint(x: 0.0, y: 1.0)
+        self.heroImageVIew.layer.insertSublayer(gradient, at: 0)
     }
     
     private func configureView() {
@@ -34,6 +45,7 @@ class CalendarEventOverviewTableViewCell: UITableViewCell {
             self.heroImageVIew.af_setImage(withURL: imageUrl)
         }
         
+        self.titleLabel.text = calendarEventModel.title
         self.descriptionLabel.text = calendarEventModel.description
     }
     

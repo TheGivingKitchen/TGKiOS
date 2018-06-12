@@ -111,20 +111,30 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="agW-Bw-Rl5">
+                                            <rect key="frame" x="16" y="221.5" width="343" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="Huf-KP-LWQ" firstAttribute="leading" secondItem="ftr-6X-GQI" secondAttribute="leading" constant="16" id="0oH-tZ-JAb"/>
+                                        <constraint firstAttribute="trailing" secondItem="agW-Bw-Rl5" secondAttribute="trailing" constant="16" id="3SF-ql-zWL"/>
                                         <constraint firstAttribute="trailing" secondItem="Huf-KP-LWQ" secondAttribute="trailing" constant="16" id="6uq-19-rrf"/>
                                         <constraint firstItem="MTs-9N-MlP" firstAttribute="leading" secondItem="ftr-6X-GQI" secondAttribute="leading" id="ECC-WI-PQZ"/>
                                         <constraint firstItem="Huf-KP-LWQ" firstAttribute="top" secondItem="MTs-9N-MlP" secondAttribute="bottom" constant="8" id="QTO-eC-aJ4"/>
                                         <constraint firstAttribute="bottom" secondItem="Huf-KP-LWQ" secondAttribute="bottom" constant="23.5" id="S0z-R5-Wlv"/>
                                         <constraint firstAttribute="trailing" secondItem="MTs-9N-MlP" secondAttribute="trailing" id="Sik-ue-ZM5"/>
                                         <constraint firstItem="MTs-9N-MlP" firstAttribute="top" secondItem="ftr-6X-GQI" secondAttribute="top" id="Wqx-YY-y0C"/>
+                                        <constraint firstItem="agW-Bw-Rl5" firstAttribute="bottom" secondItem="MTs-9N-MlP" secondAttribute="bottom" constant="-8" id="XOV-YU-UNc"/>
+                                        <constraint firstItem="agW-Bw-Rl5" firstAttribute="leading" secondItem="ftr-6X-GQI" secondAttribute="leading" constant="16" id="eR1-Bf-x9y"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="descriptionLabel" destination="Huf-KP-LWQ" id="hHB-ln-6Pa"/>
                                     <outlet property="heroImageVIew" destination="MTs-9N-MlP" id="VVj-7r-gaN"/>
+                                    <outlet property="titleLabel" destination="agW-Bw-Rl5" id="pvt-JP-0R0"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
