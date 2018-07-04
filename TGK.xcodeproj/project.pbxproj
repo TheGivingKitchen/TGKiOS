@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		165677F7CA24DF537F71485F /* Pods_TGK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02F6B12ADD2CEF057F42D437 /* Pods_TGK.framework */; };
+		4E228D9320ED5639002912AB /* AssistanceOverviewCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E228D9220ED5639002912AB /* AssistanceOverviewCollectionViewCell.swift */; };
+		4E228D9520ED5675002912AB /* AssistanceOverviewCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E228D9420ED5675002912AB /* AssistanceOverviewCollectionViewCell.xib */; };
+		4E228D9720ED5715002912AB /* AssistanceFormsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E228D9620ED5715002912AB /* AssistanceFormsCollectionViewCell.swift */; };
+		4E228D9920ED571F002912AB /* AssistanceFormsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E228D9820ED571F002912AB /* AssistanceFormsCollectionViewCell.xib */; };
 		4E4D229E20B1B1F400BA7577 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4D229D20B1B1F400BA7577 /* MainTabBarController.swift */; };
 		4E4D22A120B1B2A700BA7577 /* FormsHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4D22A020B1B2A700BA7577 /* FormsHomeViewController.swift */; };
 		4E75176320B6291C00B2D7E0 /* SegmentedFormInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E75176220B6291C00B2D7E0 /* SegmentedFormInfoViewController.swift */; };
@@ -82,6 +86,10 @@
 /* Begin PBXFileReference section */
 		02F6B12ADD2CEF057F42D437 /* Pods_TGK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TGK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2ED9204B045A5AE610078D22 /* Pods-TGK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TGK.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TGK/Pods-TGK.debug.xcconfig"; sourceTree = "<group>"; };
+		4E228D9220ED5639002912AB /* AssistanceOverviewCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssistanceOverviewCollectionViewCell.swift; sourceTree = "<group>"; };
+		4E228D9420ED5675002912AB /* AssistanceOverviewCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AssistanceOverviewCollectionViewCell.xib; sourceTree = "<group>"; };
+		4E228D9620ED5715002912AB /* AssistanceFormsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssistanceFormsCollectionViewCell.swift; sourceTree = "<group>"; };
+		4E228D9820ED571F002912AB /* AssistanceFormsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AssistanceFormsCollectionViewCell.xib; sourceTree = "<group>"; };
 		4E4D229D20B1B1F400BA7577 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		4E4D22A020B1B2A700BA7577 /* FormsHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormsHomeViewController.swift; sourceTree = "<group>"; };
 		4E75176220B6291C00B2D7E0 /* SegmentedFormInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedFormInfoViewController.swift; sourceTree = "<group>"; };
@@ -180,9 +188,21 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		4E228D9120ED55D1002912AB /* AssistanceHomeCollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				4E228D9220ED5639002912AB /* AssistanceOverviewCollectionViewCell.swift */,
+				4E228D9420ED5675002912AB /* AssistanceOverviewCollectionViewCell.xib */,
+				4E228D9620ED5715002912AB /* AssistanceFormsCollectionViewCell.swift */,
+				4E228D9820ED571F002912AB /* AssistanceFormsCollectionViewCell.xib */,
+			);
+			name = AssistanceHomeCollectionViewCells;
+			sourceTree = "<group>";
+		};
 		4E4D229F20B1B27500BA7577 /* MainTabBarRootViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				4E228D9120ED55D1002912AB /* AssistanceHomeCollectionViewCells */,
 				4E4D229D20B1B1F400BA7577 /* MainTabBarController.swift */,
 				4E4D22A020B1B2A700BA7577 /* FormsHomeViewController.swift */,
 				4E75176D20C8953B00B2D7E0 /* DonateHomeViewController.swift */,
@@ -513,6 +533,7 @@
 				4E7C2E2F20B1D8AF00A20303 /* RobotoMono-Medium.ttf in Resources */,
 				4ED3885B209D0E4500A8BEE2 /* Forms.storyboard in Resources */,
 				4ECA9C0320A744700084A317 /* volunteerSignup.json in Resources */,
+				4E228D9520ED5675002912AB /* AssistanceOverviewCollectionViewCell.xib in Resources */,
 				4ED38821209D01F200A8BEE2 /* Assets.xcassets in Resources */,
 				4ED3881F209D01EF00A8BEE2 /* Main.storyboard in Resources */,
 				4E8354A420CC597A009DF8CE /* multiplyJoyInquiry.json in Resources */,
@@ -533,6 +554,7 @@
 				4ECA9C0D20A868500084A317 /* FormAddressTableViewCell.xib in Resources */,
 				4E75177420C89FFC00B2D7E0 /* assistanceInquiryReferral.json in Resources */,
 				4ED3884C209D030600A8BEE2 /* FormListSelectTableViewCell.xib in Resources */,
+				4E228D9920ED571F002912AB /* AssistanceFormsCollectionViewCell.xib in Resources */,
 				4ECA9C1120A8A26E0084A317 /* FormDateTableViewCell.xib in Resources */,
 				4E7C2E1720B1D89F00A20303 /* Becker-Egyptian.otf in Resources */,
 				4E7C2E2920B1D8AF00A20303 /* RobotoMono-Light.ttf in Resources */,
@@ -612,6 +634,7 @@
 				4ED38844209D030600A8BEE2 /* FormTextViewTableViewCell.swift in Sources */,
 				4E885BB820A1221700D05ED9 /* FormFieldErrorModel.swift in Sources */,
 				4E83549C20CA0564009DF8CE /* CalendarEventOverviewTableViewCell.swift in Sources */,
+				4E228D9720ED5715002912AB /* AssistanceFormsCollectionViewCell.swift in Sources */,
 				4E89100B209F6F360034A83B /* FormPageModel.swift in Sources */,
 				4E4D22A120B1B2A700BA7577 /* FormsHomeViewController.swift in Sources */,
 				4E890FFD209E32120034A83B /* Router.swift in Sources */,
@@ -628,6 +651,7 @@
 				4E8354A720CC6CF1009DF8CE /* TGKSafariViewController.swift in Sources */,
 				4ECA9BFB20A2687B0084A317 /* BaseNibLoadedView.swift in Sources */,
 				4E75177620C8A95700B2D7E0 /* EventsHomeViewController.swift in Sources */,
+				4E228D9320ED5639002912AB /* AssistanceOverviewCollectionViewCell.swift in Sources */,
 				4ED38843209D030600A8BEE2 /* SegmentedFormNavigationController.swift in Sources */,
 				4E75176320B6291C00B2D7E0 /* SegmentedFormInfoViewController.swift in Sources */,
 				4ED38848209D030600A8BEE2 /* FormListSelectTableViewCell.swift in Sources */,
