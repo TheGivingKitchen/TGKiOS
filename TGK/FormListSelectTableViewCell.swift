@@ -110,18 +110,18 @@ class FormListSelectTableViewCell: UITableViewCell, FormItemView {
         
         //style
         self.questionLabel.font = UIFont.tgkBody
-        self.questionLabel.textColor = UIColor.tgkDarkGray
+        self.questionLabel.textColor = UIColor.tgkDarkDarkGray
         self.hasOtherFieldView.backgroundColor = UIColor.tgkLightGray
         self.hasOtherFieldTextField.font = UIFont.tgkBody
         self.hasOtherFieldTextField.backgroundColor = UIColor.white
         self.hasOtherFieldTextField.layer.borderWidth = 1
-        self.hasOtherFieldTextField.layer.borderColor = UIColor.tgkNavy.cgColor
-        self.hasOtherFieldTextField.textColor = UIColor.tgkDarkGray
+        self.hasOtherFieldTextField.layer.borderColor = UIColor.tgkBlue.cgColor
+        self.hasOtherFieldTextField.textColor = UIColor.tgkDarkDarkGray
         let spacerView = UIView(frame:CGRect(x:0, y:0, width:10, height:10))
         self.hasOtherFieldTextField.leftViewMode = UITextFieldViewMode.always
         self.hasOtherFieldTextField.leftView = spacerView
         self.errorMessageLabel.font = UIFont.tgkMetadata
-        self.errorMessageLabel.textColor = UIColor.tgkPeach
+        self.errorMessageLabel.textColor = UIColor.tgkOrange
     }
     
     func configureView() {

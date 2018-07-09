@@ -39,7 +39,7 @@ class FormPageViewController: UITableViewController {
         super.viewDidLoad()
         
         self.informationlabel.font = UIFontMetrics.default.scaledFont(for:UIFont.kulturistaMedium(size: 23))
-        self.informationlabel.textColor = UIColor.tgkNavy
+        self.informationlabel.textColor = UIColor.tgkBlue
         
         self.tableView.delegate = self
         self.tableView.dataSource = self
@@ -92,7 +92,7 @@ class FormPageViewController: UITableViewController {
         }
         else {
             rightBarButtonItem = UIBarButtonItem(title: "Next", style: .plain, target: self, action: #selector(advancePageOrSubmit))
-            rightBarButtonItem.tintColor = UIColor.tgkPeach
+            rightBarButtonItem.tintColor = UIColor.tgkOrange
         }
         self.navigationItem.rightBarButtonItem = rightBarButtonItem
         

@@ -46,13 +46,13 @@ class FormTextViewTableViewCell: UITableViewCell, FormItemView {
         
         //style
         self.questionLabel.font = UIFont.tgkBody
-        self.questionLabel.textColor = UIColor.tgkDarkGray
+        self.questionLabel.textColor = UIColor.tgkDarkDarkGray
         self.textView.font = UIFont.tgkBody
-        self.textView.textColor = UIColor.tgkDarkGray
+        self.textView.textColor = UIColor.tgkDarkDarkGray
         self.textView.layer.borderWidth = 1
         self.textView.layer.borderColor = UIColor.tgkOutline.cgColor
         self.errorMessageLabel.font = UIFont.tgkMetadata
-        self.errorMessageLabel.textColor = UIColor.tgkPeach
+        self.errorMessageLabel.textColor = UIColor.tgkOrange
     }
 
     private func configureView() {

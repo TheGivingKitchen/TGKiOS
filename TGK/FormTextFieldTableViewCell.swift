@@ -71,7 +71,7 @@ class FormTextFieldTableViewCell: UITableViewCell, FormItemView {
         
         //style
         self.questionLabel.font = UIFont.tgkBody
-        self.questionLabel.textColor = UIColor.tgkDarkGray
+        self.questionLabel.textColor = UIColor.tgkDarkDarkGray
         self.textField.font = UIFont.tgkBody
         self.textField.layer.borderColor = UIColor.tgkOutline.cgColor
         self.textField.layer.borderWidth = 1
@@ -79,7 +79,7 @@ class FormTextFieldTableViewCell: UITableViewCell, FormItemView {
         self.textField.leftViewMode = UITextFieldViewMode.always
         self.textField.leftView = spacerView
         self.errorMessageLabel.font = UIFont.tgkMetadata
-        self.errorMessageLabel.textColor = UIColor.tgkPeach
+        self.errorMessageLabel.textColor = UIColor.tgkOrange
         
         self.textField.delegate = self
     }

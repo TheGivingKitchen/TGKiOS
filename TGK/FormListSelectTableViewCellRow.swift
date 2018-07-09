@@ -46,9 +46,9 @@ class FormListSelectTableViewCellRow:BaseNibLoadedView {
     private func configureView() {
         //style
         self.choiceLabel.font = UIFont.tgkBody
-        self.choiceLabel.textColor = UIColor.tgkNavy
+        self.choiceLabel.textColor = UIColor.tgkBlue
         self.innerSelectionView.layer.borderWidth = 1
-        self.innerSelectionView.layer.borderColor = UIColor.tgkNavy.cgColor
+        self.innerSelectionView.layer.borderColor = UIColor.tgkBlue.cgColor
         self.innerSelectionView.backgroundColor = UIColor.white
         
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(viewTapped(recognizer:)))
@@ -57,12 +57,12 @@ class FormListSelectTableViewCellRow:BaseNibLoadedView {
     
     private func updateViewForSelection() {
         if self.isSelected {
-            self.innerSelectionView.backgroundColor = UIColor.tgkNavy
+            self.innerSelectionView.backgroundColor = UIColor.tgkBlue
             self.choiceLabel.textColor = UIColor.white
         }
         else {
             self.innerSelectionView.backgroundColor = UIColor.white
-            self.choiceLabel.textColor = UIColor.tgkNavy
+            self.choiceLabel.textColor = UIColor.tgkBlue
         }
     }
     

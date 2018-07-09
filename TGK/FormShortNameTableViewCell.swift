@@ -62,11 +62,11 @@ class FormShortNameTableViewCell: UITableViewCell, FormItemView {
         
         //style
         self.questionLabel.font = UIFont.tgkBody
-        self.questionLabel.textColor = UIColor.tgkDarkGray
+        self.questionLabel.textColor = UIColor.tgkDarkDarkGray
         self.firstNameTextField.font = UIFont.tgkBody
-        self.firstNameTextField.textColor = UIColor.tgkDarkGray
+        self.firstNameTextField.textColor = UIColor.tgkDarkDarkGray
         self.lastNameTextField.font = UIFont.tgkBody
-        self.lastNameTextField.textColor = UIColor.tgkDarkGray
+        self.lastNameTextField.textColor = UIColor.tgkDarkDarkGray
         self.firstNameTextField.layer.borderColor = UIColor.tgkOutline.cgColor
         self.firstNameTextField.layer.borderWidth = 1
         self.lastNameTextField.layer.borderColor = UIColor.tgkOutline.cgColor
@@ -78,7 +78,7 @@ class FormShortNameTableViewCell: UITableViewCell, FormItemView {
         self.lastNameTextField.leftViewMode = UITextFieldViewMode.always
         self.lastNameTextField.leftView = lastNameSpacerView
         self.errorMessageLabel.font = UIFont.tgkMetadata
-        self.errorMessageLabel.textColor = UIColor.tgkPeach
+        self.errorMessageLabel.textColor = UIColor.tgkOrange
         
         self.firstNameTextField.delegate = self
         self.lastNameTextField.delegate = self

@@ -26,14 +26,14 @@ class CalendarEventOverviewTableViewCell: UITableViewCell {
         super.awakeFromNib()
         
         self.descriptionLabel.font = UIFont.tgkBody
-        self.descriptionLabel.textColor = UIColor.tgkDarkGray
+        self.descriptionLabel.textColor = UIColor.tgkDarkDarkGray
         self.titleLabel.font = UIFont.tgkSubtitle
         self.titleLabel.textColor = UIColor.white
         
         //gradient
         let gradient = CAGradientLayer()
         gradient.frame = self.heroImageVIew.bounds
-        gradient.colors = [UIColor.clear.cgColor, UIColor.tgkDarkGray.cgColor]
+        gradient.colors = [UIColor.clear.cgColor, UIColor.tgkDarkDarkGray.cgColor]
         gradient.startPoint = CGPoint(x: 0.0, y: 0.5)
         gradient.endPoint = CGPoint(x: 0.0, y: 1.0)
         self.heroImageVIew.layer.insertSublayer(gradient, at: 0)

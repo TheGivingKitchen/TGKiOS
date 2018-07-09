@@ -47,11 +47,11 @@ class FormPickerTableViewCell: UITableViewCell, FormItemView {
         
         //style
         self.questionLabel.font = UIFont.tgkBody
-        self.questionLabel.textColor = UIColor.tgkDarkGray
+        self.questionLabel.textColor = UIColor.tgkDarkDarkGray
         self.pickerTopOutlineView.backgroundColor = UIColor.tgkOutline
         self.pickerBottomOutlineView.backgroundColor = UIColor.tgkOutline
         self.errorMessageLabel.font = UIFont.tgkMetadata
-        self.errorMessageLabel.textColor = UIColor.tgkPeach
+        self.errorMessageLabel.textColor = UIColor.tgkOrange
         
         self.picker.dataSource = self
         self.picker.delegate = self
@@ -75,7 +75,7 @@ extension FormPickerTableViewCell:UIPickerViewDataSource {
 extension FormPickerTableViewCell:UIPickerViewDelegate {
     func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
         let option = self.formQuestion.answerOptions[row]
-        let attributedOption = NSAttributedString(string: option, attributes: [NSAttributedStringKey.font:UIFont.tgkBody, NSAttributedStringKey.foregroundColor:UIColor.tgkDarkGray])
+        let attributedOption = NSAttributedString(string: option, attributes: [NSAttributedStringKey.font:UIFont.tgkBody, NSAttributedStringKey.foregroundColor:UIColor.tgkDarkDarkGray])
         return attributedOption
     }
 }

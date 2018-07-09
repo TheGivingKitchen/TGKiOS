@@ -40,26 +40,26 @@ class SegmentedFormInfoViewController: UIViewController {
     }
     
     private func configureView() {
-        self.formInfoBackgroundView.backgroundColor = UIColor.tgkBackgroundTan
+        self.formInfoBackgroundView.backgroundColor = UIColor.tgkBeige
         self.formInfoDividerView.backgroundColor = UIColor.tgkBackgroundGray
         
-        self.formTitle.font = UIFont.tgkTitle
+        self.formTitle.font = UIFont.tgkContentTitle
         self.formTitle.text = self.segmentedFormModel.title
-        self.formTitle.textColor = UIColor.tgkPeach
+        self.formTitle.textColor = UIColor.tgkOrange
         
         self.formSubtitle.text = self.segmentedFormModel.subtitle
         self.formSubtitle.font = UIFont.tgkSubtitle
-        self.formSubtitle.textColor = UIColor.tgkNavy
+        self.formSubtitle.textColor = UIColor.tgkBlue
         
         self.formMetadata.text = self.segmentedFormModel.metadata
         self.formMetadata.font = UIFont.tgkMetadata
-        self.formMetadata.textColor = UIColor.tgkDarkGray
+        self.formMetadata.textColor = UIColor.tgkDarkDarkGray
         
-        self.continueButton.backgroundColor = UIColor.tgkPeach
+        self.continueButton.backgroundColor = UIColor.tgkOrange
         self.continueButton.tintColor = UIColor.white
         self.continueButton.setAttributedTitle(NSAttributedString(string: "Continue", attributes: [.font:UIFont.tgkBody]), for: .normal)
 
-        self.shareButton.tintColor = UIColor.tgkPeach
+        self.shareButton.tintColor = UIColor.tgkOrange
         self.shareButton.setAttributedTitle(NSAttributedString(string: "Share link to this form", attributes: [.font:UIFont.tgkBody]), for: .normal)
     }
     

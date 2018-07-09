@@ -14,7 +14,7 @@ class TGKSafariViewController: SFSafariViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.preferredBarTintColor = UIColor.tgkNavy
-        self.preferredControlTintColor = UIColor.tgkPeach
+        self.preferredBarTintColor = UIColor.tgkBlue
+        self.preferredControlTintColor = UIColor.tgkOrange
     }
 }

@@ -47,11 +47,11 @@ class FormDateTableViewCell: UITableViewCell, FormItemView {
         
         //style
         self.questionLabel.font = UIFont.tgkBody
-        self.questionLabel.textColor = UIColor.tgkDarkGray
+        self.questionLabel.textColor = UIColor.tgkDarkDarkGray
         self.pickerTopOutlineView.backgroundColor = UIColor.tgkOutline
         self.pickerBottomOutlineView.backgroundColor = UIColor.tgkOutline
         self.errorMessageLabel.font = UIFont.tgkMetadata
-        self.errorMessageLabel.textColor = UIColor.tgkPeach
+        self.errorMessageLabel.textColor = UIColor.tgkOrange
         
         self.dateFormater.dateFormat = "yyyyMMdd" 
     }

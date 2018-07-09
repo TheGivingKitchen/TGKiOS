@@ -58,7 +58,7 @@ extension AppDelegate {
         UITabBar.appearance().isTranslucent = false
         
         UINavigationBar.appearance().isTranslucent = false
-        UINavigationBar.appearance().tintColor = UIColor.tgkNavy
+        UINavigationBar.appearance().tintColor = UIColor.tgkBlue
         UINavigationBar.appearance().titleTextAttributes = [.font:UIFont.tgkNavigation]
         
         UIBarButtonItem.appearance().setTitleTextAttributes([.font:UIFont.tgkBody], for: .normal)

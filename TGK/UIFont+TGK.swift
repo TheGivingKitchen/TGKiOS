@@ -66,26 +66,36 @@ extension UIFont {
 //MARK: Dynamic typed header and body wrappers for styling
 extension UIFont {
     static var tgkTitle:UIFont {
-        return UIFontMetrics.default.scaledFont(for:UIFont.beckerEgyptian(size: 44))
+        return UIFontMetrics.default.scaledFont(for:UIFont.beckerEgyptian(size: 55))
     }
     
     static var tgkSubtitle:UIFont {
-        return UIFontMetrics.default.scaledFont(for:UIFont.kulturistaBold(size: 24))
+        return UIFontMetrics.default.scaledFont(for:UIFont.kulturistaMedium(size: 24))
     }
     
-    static var tgkContentBlockTitle:UIFont {
-        return UIFontMetrics.default.scaledFont(for:UIFont.beckerEgyptian(size: 30))
+    static var tgkContentTitle:UIFont {
+        return UIFontMetrics.default.scaledFont(for:UIFont.beckerEgyptian(size: 40))
     }
+    
+    static var tgkContentSmallTitle:UIFont {
+        return UIFontMetrics.default.scaledFont(for:UIFont.beckerEgyptian(size: 26))
+    }
+    
+    static var tgkContentTitleAlt:UIFont {
+        return UIFontMetrics.default.scaledFont(for:UIFont.kulturistaMedium(size: 24))
+    }
+    
+    
     
     static var tgkNavigation:UIFont {
         return UIFontMetrics.default.scaledFont(for:UIFont.kulturistaMedium(size: 17))
     }
     
     static var tgkBody:UIFont {
-        return UIFontMetrics.default.scaledFont(for:UIFont.robotoMono(size: 17))
+        return UIFontMetrics.default.scaledFont(for:UIFont.robotoMono(size: 15))
     }
     
     static var tgkMetadata:UIFont {
-        return UIFontMetrics.default.scaledFont(for:UIFont.robotoMono(size: 15))
+        return UIFontMetrics.default.scaledFont(for:UIFont.robotoMono(size: 13))
     }
 }
