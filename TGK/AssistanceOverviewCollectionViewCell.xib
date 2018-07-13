@@ -16,21 +16,63 @@
             <rect key="frame" x="0.0" y="0.0" width="355" height="585"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iUz-7r-LqZ">
-                    <rect key="frame" x="142" y="544" width="71" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Td0-mS-Ejx">
+                    <rect key="frame" x="20" y="30" width="315" height="535"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="assistanceCrisisExclamation" translatesAutoresizingMaskIntoConstraints="NO" id="Buy-fE-WFE">
+                            <rect key="frame" x="0.0" y="0.0" width="315" height="179.5"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="Through our Crisis Grants, we cover the cost of living expenses for restaurant workers impacted by:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="qMJ-30-mDW">
+                            <rect key="frame" x="0.0" y="187.5" width="315" height="61"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="assistanceCrisisTypes" translatesAutoresizingMaskIntoConstraints="NO" id="ly7-UM-bmO">
+                            <rect key="frame" x="0.0" y="256.5" width="315" height="107.5"/>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DmB-vl-VAv">
+                            <rect key="frame" x="0.0" y="372" width="315" height="50"/>
+                            <color key="backgroundColor" red="0.51764705879999995" green="0.87058823529999996" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="EyU-1j-0db"/>
+                            </constraints>
+                            <state key="normal" title="Start an Assistance Inquiry">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="750" verticalCompressionResistancePriority="1000" text="You can start an assistance inquiry for yourself or someone else." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.90000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="Nbv-4A-iMc">
+                            <rect key="frame" x="0.0" y="430" width="315" height="51"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="assistanceSwipeUpMoreChevron" translatesAutoresizingMaskIntoConstraints="NO" id="E2U-CF-711">
+                            <rect key="frame" x="0.0" y="489" width="315" height="46"/>
+                        </imageView>
+                    </subviews>
+                </stackView>
             </subviews>
-            <color key="backgroundColor" red="0.87058823529999996" green="0.87058823529999996" blue="0.87058823529999996" alpha="1" colorSpace="deviceRGB"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="iUz-7r-LqZ" secondAttribute="bottom" constant="20" id="2SN-lE-jdF"/>
-                <constraint firstItem="iUz-7r-LqZ" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="VEX-bA-3ae"/>
+                <constraint firstItem="Td0-mS-Ejx" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="10" id="1f8-pr-zxX"/>
+                <constraint firstItem="Td0-mS-Ejx" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="7aQ-Vd-30O"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Td0-mS-Ejx" secondAttribute="bottom" constant="20" id="XwB-v2-gFB"/>
+                <constraint firstItem="Td0-mS-Ejx" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" constant="-20" id="aAT-ur-bVk"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="programDescriptionLabel" destination="qMJ-30-mDW" id="hV8-dJ-qLg"/>
+                <outlet property="startInquiryButton" destination="DmB-vl-VAv" id="ogY-nl-wOw"/>
+                <outlet property="startInquiryDescriptionLabel" destination="Nbv-4A-iMc" id="wUb-sc-qAe"/>
+            </connections>
             <point key="canvasLocation" x="23.5" y="12.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="assistanceCrisisExclamation" width="145" height="144"/>
+        <image name="assistanceCrisisTypes" width="297" height="86"/>
+        <image name="assistanceSwipeUpMoreChevron" width="85" height="27"/>
+    </resources>
 </document>
