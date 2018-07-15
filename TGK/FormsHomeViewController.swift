@@ -64,6 +64,14 @@ class FormsHomeViewController: UIViewController, SegmentedFormInfoViewController
         }
         
     }
+    @IBAction func infoPressed(_ sender: Any) {
+        let formInfoVC = UIStoryboard(name: "Forms", bundle: nil).instantiateViewController(withIdentifier: "SegmentedFormInfoViewControllerId") as! SegmentedFormInfoViewController
+        _ = formInfoVC.view
+        self.navigationController?.pushViewController(formInfoVC, animated: true)
+        
+        formInfoVC.formMetadata.text = "Our Crisis Grants program currently serve restaurant workers living in Metro Atlanta, Athens, Columbus and Rome. Grants are awarded based on the restaurant worker's financial need as well as a set of criteria according to the type of crisis. Most often, our financial assistance covers the cost of rent and utilities, paid directly to the service provider(s). Applications are reviewed by Giving Kitchen staff and a review committee consisting of GK board members. The average time to fully process an application from beginning to end is three weeks.\n\nPlease note: we do not pay medical expenses."
+        
+    }
     
     @IBAction func assistanceTapped(_ sender: Any) {
         let formInfoVC = UIStoryboard(name: "Forms", bundle: nil).instantiateViewController(withIdentifier: "SegmentedFormInfoViewControllerId") as! SegmentedFormInfoViewController

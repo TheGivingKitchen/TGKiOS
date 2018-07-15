@@ -200,6 +200,14 @@
                                     <action selector="multiplyJoyTapped:" destination="xq2-nz-JWz" eventType="touchUpInside" id="d4T-Yo-l11"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hgu-pa-Svw">
+                                <rect key="frame" x="142" y="443" width="90" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Info segment"/>
+                                <connections>
+                                    <action selector="infoPressed:" destination="xq2-nz-JWz" eventType="touchUpInside" id="W3w-Vk-Pgm"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="tKR-Fd-5S9"/>

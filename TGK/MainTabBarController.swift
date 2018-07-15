@@ -22,19 +22,19 @@ class MainTabBarController: UITabBarController {
         let assistanceHomeVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AssistanceHomeViewControllerId") as! AssistanceHomeViewController
         _ = assistanceHomeVC.view
         let assistanceHomeNavVC = UINavigationController(rootViewController: assistanceHomeVC)
-        assistanceHomeNavVC.tabBarItem = UITabBarItem(title: "Assistance", image: UIImage(named: "tabBarRaisedHand"), selectedImage: nil)
+        assistanceHomeNavVC.tabBarItem = UITabBarItem(title: "Assistance", image: UIImage(named: "tabBarAssistance"), selectedImage: nil)
         
         let eventsHomeVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "EventsHomeViewControllerId") as! EventsHomeViewController
         _ = eventsHomeVC.view
         let eventsHomeNavVC = UINavigationController(rootViewController: eventsHomeVC)
-        eventsHomeNavVC.tabBarItem = UITabBarItem(title: "Events", image: UIImage(named: "tabBarCalendar"), selectedImage: nil)
+        eventsHomeNavVC.tabBarItem = UITabBarItem(title: "Events", image: UIImage(named: "tabBarEvents"), selectedImage: nil)
         
         let donateHomeVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DonateHomeViewControllerId") as! DonateHomeViewController
         _ = donateHomeVC.view
         let donateHomeNavVC = UINavigationController(rootViewController: donateHomeVC)
-        donateHomeNavVC.tabBarItem = UITabBarItem(title: "Support", image: UIImage(named: "tabBarHeart"), selectedImage: nil)
+        donateHomeNavVC.tabBarItem = UITabBarItem(title: "Give", image: UIImage(named: "tabBarDonate"), selectedImage: nil)
         
-        self.viewControllers = [formsHomeNavVC, assistanceHomeNavVC, eventsHomeNavVC, donateHomeNavVC]
+        self.viewControllers = [eventsHomeNavVC, assistanceHomeNavVC, donateHomeNavVC, formsHomeNavVC]
         
         //Remote config
         NotificationCenter.default.addObserver(self, selector: #selector(applicationDidBecomeActiveHander(_:)), name: NSNotification.Name.UIApplicationDidBecomeActive, object: nil)
