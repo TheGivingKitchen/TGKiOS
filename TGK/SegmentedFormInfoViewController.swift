@@ -87,11 +87,9 @@ class SegmentedFormInfoViewController: UIViewController {
         self.formMetadata.textColor = UIColor.tgkDarkDarkGray
         
         self.continueButton.backgroundColor = UIColor.tgkOrange
-        self.continueButton.titleLabel?.font = UIFont.tgkNavigation
         self.continueButton.tintColor = UIColor.white
         self.continueButton.setAttributedTitle(NSAttributedString(string: "Start", attributes: [.font:UIFont.tgkNavigation]), for: .normal)
         
-        self.continueButton.backgroundColor = UIColor.tgkOrange
         self.shareFormLabel.font = UIFont.tgkBody
         self.shareFormLabel.textColor = UIColor.tgkLightGray
     }
