@@ -8,6 +8,11 @@
 
 import UIKit
 
+protocol AssistanceFormsCollectionViewCellDelegate:class {
+    func assistanceFormsCellDidSelectAssistanceInquiryForm(cell: AssistanceFormsCollectionViewCell)
+    func assistanceFormsCellDidSelectVolunteerForm(cell: AssistanceFormsCollectionViewCell)
+}
+
 class AssistanceFormsCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var assistanceInquiryHeaderLabel: UILabel!
@@ -18,6 +23,7 @@ class AssistanceFormsCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var volunteerSubtitleLabel: UILabel!
     @IBOutlet weak var volunteerButton: UIButton!
     
+    weak var delegate:AssistanceFormsCollectionViewCellDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -44,4 +50,13 @@ class AssistanceFormsCollectionViewCell: UICollectionViewCell {
         self.volunteerButton.backgroundColor = UIColor.tgkOrange
         self.volunteerButton.titleLabel?.font = UIFont.tgkNavigation
     }
+    
+    @IBAction func startAssistanceInquiryPressed(_ sender: Any) {
+        self.delegate?.assistanceFormsCellDidSelectAssistanceInquiryForm(cell: self)
+    }
+    
+    @IBAction func startVolunteerForm(_ sender: Any) {
+        self.delegate?.assistanceFormsCellDidSelectVolunteerForm(cell: self)
+    }
+    
 }

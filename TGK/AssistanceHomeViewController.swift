@@ -34,7 +34,6 @@ class AssistanceHomeViewController: UIViewController {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBar.isHidden = true
     }
-    
 }
 
 //MARK: UICollectionViewDataSource, UICollectionViewDelegate
@@ -47,6 +46,7 @@ extension AssistanceHomeViewController: UICollectionViewDataSource, UICollection
             return cell
         case AssistanceHomeRowIndex.forms.rawValue:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: self.formsCellReuseId, for: indexPath) as! AssistanceFormsCollectionViewCell
+            cell.delegate = self
             return cell
         default:
             return UICollectionViewCell()
@@ -71,5 +71,17 @@ extension AssistanceHomeViewController: UICollectionViewDataSource, UICollection
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 0
+    }
+}
+
+//MARK:AssistanceFormsCollectionViewCellDelegate
+extension AssistanceHomeViewController: AssistanceFormsCollectionViewCellDelegate {
+    func assistanceFormsCellDidSelectVolunteerForm(cell: AssistanceFormsCollectionViewCell) {
+        
+    }
+    
+    func assistanceFormsCellDidSelectAssistanceInquiryForm(cell: AssistanceFormsCollectionViewCell) {
+        let chooseRecipientVC = UIStoryboard(name: "Forms", bundle: nil).instantiateViewController(withIdentifier: "AssistanceChooseRecipientViewControllerId") as! AssistanceChooseRecipientViewController
+        self.navigationController?.pushViewController(chooseRecipientVC, animated: true)
     }
 }

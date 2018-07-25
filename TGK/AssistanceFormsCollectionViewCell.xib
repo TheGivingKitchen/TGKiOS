@@ -27,7 +27,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="314" height="146.5"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RXV-uX-eIa">
-                                    <rect key="frame" x="0.0" y="0.0" width="314" height="73"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="314" height="73.5"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Assitance Inquiry" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="vdM-yJ-i5r">
                                             <rect key="frame" x="0.0" y="0.0" width="314" height="29"/>
@@ -35,7 +35,7 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Serving those who serve us... every. day." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="yc2-Jj-ODJ">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Serving those who serve us... every. day." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="yc2-Jj-ODJ">
                                             <rect key="frame" x="0.0" y="37" width="314" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -53,7 +53,7 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="afl-vX-cIt">
-                                    <rect key="frame" x="0.0" y="73" width="314" height="73.5"/>
+                                    <rect key="frame" x="0.0" y="73.5" width="314" height="73"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dRd-uC-4ke">
                                             <rect key="frame" x="0.0" y="0.0" width="314" height="50"/>
@@ -61,9 +61,13 @@
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="50" id="kbe-9F-lNG"/>
                                             </constraints>
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <state key="normal" title="Start an Assistance Inquiry">
                                                 <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </state>
+                                            <connections>
+                                                <action selector="startAssistanceInquiryPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="As2-qp-Bs5"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -83,7 +87,7 @@
                             <rect key="frame" x="0.0" y="146.5" width="314" height="146"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sV8-Cc-ORb">
-                                    <rect key="frame" x="0.0" y="0.0" width="314" height="73"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="314" height="74"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Volunteer Form" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999998807907104" translatesAutoresizingMaskIntoConstraints="NO" id="kq3-Km-Ltd">
                                             <rect key="frame" x="0.0" y="0.0" width="314" height="29"/>
@@ -109,7 +113,7 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rsx-eL-9nJ">
-                                    <rect key="frame" x="0.0" y="73" width="314" height="73"/>
+                                    <rect key="frame" x="0.0" y="74" width="314" height="72"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gzk-YO-8fd">
                                             <rect key="frame" x="0.0" y="0.0" width="314" height="50"/>
@@ -117,9 +121,13 @@
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="50" id="wlE-nf-Oez"/>
                                             </constraints>
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <state key="normal" title="Start a Volunteer Form">
                                                 <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </state>
+                                            <connections>
+                                                <action selector="startVolunteerForm:" destination="iN0-l3-epB" eventType="touchUpInside" id="UaK-5K-17c"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -135,9 +143,10 @@
                                 <constraint firstItem="sV8-Cc-ORb" firstAttribute="height" secondItem="7fS-jY-gUG" secondAttribute="height" multiplier="50:100" id="iuc-y2-co5"/>
                             </constraints>
                         </stackView>
-                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YGL-kd-6HE">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OxS-2T-PoT">
                             <rect key="frame" x="0.0" y="292.5" width="314" height="146.5"/>
-                        </stackView>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
                     </subviews>
                 </stackView>
             </subviews>

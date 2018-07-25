@@ -21,6 +21,8 @@ class EventsHomeViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        self.title = "Events"
         self.fetchData()
         
     }
@@ -45,7 +47,7 @@ extension EventsHomeViewController {
         let eventCellReuseId = "eventCellReuseId"
         let eventCell = tableView.dequeueReusableCell(withIdentifier: eventCellReuseId) as! CalendarEventOverviewTableViewCell
         eventCell.calendarEventModel = self.calendarEventModels[indexPath.row]
-        
+        eventCell.selectionStyle = .none
         return eventCell
     }
 

@@ -36,7 +36,7 @@ class ExternalShareManager: NSObject {
         activityController.completionWithItemsHandler = {
             (activityType, completed, returnedItems, activityError) in
             if completed {
-                //log analytics
+                //TODO log analytics
             }
         }
         
