@@ -10,8 +10,12 @@ import UIKit
 
 class AssistanceOverviewCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var programDescriptionLabel: UILabel!
-    @IBOutlet weak var startInquiryButton: UIButton!
-    @IBOutlet weak var startInquiryDescriptionLabel: UILabel!
+    @IBOutlet weak var startInquiryLabel: UILabel!
+    
+    @IBOutlet weak var startSelfInquiryButton: UIButton!
+    @IBOutlet weak var startReferralInquiryButton: UIButton!
+    @IBOutlet weak var shareFormButton: UIButton!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,13 +26,17 @@ class AssistanceOverviewCollectionViewCell: UICollectionViewCell {
         self.programDescriptionLabel.font = UIFont.tgkSubtitle
         self.programDescriptionLabel.textColor = UIColor.tgkBlue
         
-        self.startInquiryButton.backgroundColor = UIColor.tgkOrange
-        self.startInquiryButton.titleLabel?.font = UIFont.tgkNavigation
+        self.startSelfInquiryButton.backgroundColor = UIColor.tgkOrange
+        self.startSelfInquiryButton.titleLabel?.font = UIFont.tgkNavigation
         
-        self.startInquiryDescriptionLabel.font = UIFont.tgkMetadata
-        self.startInquiryDescriptionLabel.textColor = UIColor.tgkLightGray
-    }
-    @IBAction func asdf(_ sender: Any) {
-        print("hit")
+        self.startReferralInquiryButton.backgroundColor = UIColor.tgkOrange
+        self.startReferralInquiryButton.titleLabel?.font = UIFont.tgkNavigation
+        
+        self.startInquiryLabel.font = UIFont.tgkBody
+        self.startInquiryLabel.textColor = UIColor.tgkGray
+        
+        self.shareFormButton.titleLabel?.font = UIFont.tgkBody
+        self.shareFormButton.setTitleColor(UIColor.tgkLightGray, for: .normal)
+        self.shareFormButton.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 25)
     }
 }

@@ -51,7 +51,7 @@ class AssistanceFormsCollectionViewCell: UICollectionViewCell {
         self.volunteerStartFormButton.titleLabel?.font = UIFont.tgkNavigation
         
         self.volunteerShareButton.titleLabel?.font = UIFont.tgkBody
-        self.volunteerShareButton.titleLabel?.textColor = UIColor.tgkBackgroundGray
+        self.volunteerShareButton.setTitleColor(UIColor.tgkLightGray, for: .normal)
         self.volunteerShareButton.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 25)
         
         self.multiplyJoyHeaderLabel.font = UIFont.tgkSubtitle
@@ -64,6 +64,7 @@ class AssistanceFormsCollectionViewCell: UICollectionViewCell {
         self.multiplyJoyStartFormButton.titleLabel?.font = UIFont.tgkNavigation
         
         self.multiplyJoyShareButton.titleLabel?.font = UIFont.tgkBody
+        self.multiplyJoyShareButton.setTitleColor(UIColor.tgkLightGray, for: .normal)
         self.multiplyJoyShareButton.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 25)
         
         self.volunteerBottomDividerView.backgroundColor = UIColor.tgkBackgroundGray
