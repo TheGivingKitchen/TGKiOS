@@ -9,19 +9,25 @@
 import UIKit
 
 protocol AssistanceFormsCollectionViewCellDelegate:class {
-    func assistanceFormsCellDidSelectAssistanceInquiryForm(cell: AssistanceFormsCollectionViewCell)
+    func assistanceFormsCellDidSelectMultiplyJoyForm(cell: AssistanceFormsCollectionViewCell)
     func assistanceFormsCellDidSelectVolunteerForm(cell: AssistanceFormsCollectionViewCell)
 }
 
 class AssistanceFormsCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet weak var assistanceInquiryHeaderLabel: UILabel!
-    @IBOutlet weak var assistanceInqurySubtitleLabel: UILabel!
-    @IBOutlet weak var assistanceInquiryButton: UIButton!
-    
+    @IBOutlet weak var pageHeaderLabel: UILabel!
     @IBOutlet weak var volunteerHeaderLabel: UILabel!
     @IBOutlet weak var volunteerSubtitleLabel: UILabel!
-    @IBOutlet weak var volunteerButton: UIButton!
+    @IBOutlet weak var volunteerStartFormButton: UIButton!
+    @IBOutlet weak var volunteerShareButton: UIButton!
+    @IBOutlet weak var volunteerBottomDividerView: UIView!
+    
+    @IBOutlet weak var multiplyJoyHeaderLabel: UILabel!
+    @IBOutlet weak var multiplyJoySubtitleLabel: UILabel!
+    @IBOutlet weak var multiplyJoyStartFormButton: UIButton!
+    @IBOutlet weak var multiplyJoyShareButton: UIButton!
+    @IBOutlet weak var multiplyJoyBottomDivider: UIView!
+    
     
     weak var delegate:AssistanceFormsCollectionViewCellDelegate?
     
@@ -32,14 +38,8 @@ class AssistanceFormsCollectionViewCell: UICollectionViewCell {
     }
     
     private func styleView() {
-        self.assistanceInquiryHeaderLabel.font = UIFont.tgkSubtitle
-        self.assistanceInquiryHeaderLabel.textColor = UIColor.tgkOrange
-        
-        self.assistanceInqurySubtitleLabel.font = UIFont.tgkBody
-        self.assistanceInqurySubtitleLabel.textColor = UIColor.tgkGray
-        
-        self.assistanceInquiryButton.backgroundColor = UIColor.tgkOrange
-        self.assistanceInquiryButton.titleLabel?.font = UIFont.tgkNavigation
+        self.pageHeaderLabel.font = UIFont.tgkContentTitle
+        self.pageHeaderLabel.textColor = UIColor.tgkOrange
         
         self.volunteerHeaderLabel.font = UIFont.tgkSubtitle
         self.volunteerHeaderLabel.textColor = UIColor.tgkOrange
@@ -47,16 +47,37 @@ class AssistanceFormsCollectionViewCell: UICollectionViewCell {
         self.volunteerSubtitleLabel.font = UIFont.tgkBody
         self.volunteerSubtitleLabel.textColor = UIColor.tgkGray
         
-        self.volunteerButton.backgroundColor = UIColor.tgkOrange
-        self.volunteerButton.titleLabel?.font = UIFont.tgkNavigation
+        self.volunteerStartFormButton.backgroundColor = UIColor.tgkOrange
+        self.volunteerStartFormButton.titleLabel?.font = UIFont.tgkNavigation
+        
+        self.volunteerShareButton.titleLabel?.font = UIFont.tgkBody
+        self.volunteerShareButton.titleLabel?.textColor = UIColor.tgkBackgroundGray
+        self.volunteerShareButton.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 25)
+        
+        self.multiplyJoyHeaderLabel.font = UIFont.tgkSubtitle
+        self.multiplyJoyHeaderLabel.textColor = UIColor.tgkOrange
+        
+        self.multiplyJoySubtitleLabel.font = UIFont.tgkBody
+        self.multiplyJoySubtitleLabel.textColor = UIColor.tgkGray
+        
+        self.multiplyJoyStartFormButton.backgroundColor = UIColor.tgkOrange
+        self.multiplyJoyStartFormButton.titleLabel?.font = UIFont.tgkNavigation
+        
+        self.multiplyJoyShareButton.titleLabel?.font = UIFont.tgkBody
+        self.multiplyJoyShareButton.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 25)
+        
+        self.volunteerBottomDividerView.backgroundColor = UIColor.tgkBackgroundGray
+        self.multiplyJoyBottomDivider.backgroundColor = UIColor.tgkBackgroundGray
     }
     
-    @IBAction func startAssistanceInquiryPressed(_ sender: Any) {
-        self.delegate?.assistanceFormsCellDidSelectAssistanceInquiryForm(cell: self)
+    @IBAction func startMultiplyJoyPressed(_ sender: Any) {
+//        self.delegate?.assistanceFormsCellDidSelectMultiplyJoyForm(cell: self)
+        print("multiply")
     }
     
     @IBAction func startVolunteerForm(_ sender: Any) {
-        self.delegate?.assistanceFormsCellDidSelectVolunteerForm(cell: self)
+        print("volunteer")
+//        self.delegate?.assistanceFormsCellDidSelectVolunteerForm(cell: self)
     }
     
 }

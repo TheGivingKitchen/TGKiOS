@@ -28,4 +28,7 @@ class AssistanceOverviewCollectionViewCell: UICollectionViewCell {
         self.startInquiryDescriptionLabel.font = UIFont.tgkMetadata
         self.startInquiryDescriptionLabel.textColor = UIColor.tgkLightGray
     }
+    @IBAction func asdf(_ sender: Any) {
+        print("hit")
+    }
 }

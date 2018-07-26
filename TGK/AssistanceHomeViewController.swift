@@ -76,12 +76,11 @@ extension AssistanceHomeViewController: UICollectionViewDataSource, UICollection
 
 //MARK:AssistanceFormsCollectionViewCellDelegate
 extension AssistanceHomeViewController: AssistanceFormsCollectionViewCellDelegate {
-    func assistanceFormsCellDidSelectVolunteerForm(cell: AssistanceFormsCollectionViewCell) {
+    func assistanceFormsCellDidSelectMultiplyJoyForm(cell: AssistanceFormsCollectionViewCell) {
         
     }
     
-    func assistanceFormsCellDidSelectAssistanceInquiryForm(cell: AssistanceFormsCollectionViewCell) {
-        let chooseRecipientVC = UIStoryboard(name: "Forms", bundle: nil).instantiateViewController(withIdentifier: "AssistanceChooseRecipientViewControllerId") as! AssistanceChooseRecipientViewController
-        self.navigationController?.pushViewController(chooseRecipientVC, animated: true)
+    func assistanceFormsCellDidSelectVolunteerForm(cell: AssistanceFormsCollectionViewCell) {
+
     }
 }
