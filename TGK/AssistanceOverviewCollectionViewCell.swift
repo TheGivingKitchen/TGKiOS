@@ -14,7 +14,7 @@ class AssistanceOverviewCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var startSelfInquiryButton: UIButton!
     @IBOutlet weak var startReferralInquiryButton: UIButton!
-    @IBOutlet weak var shareFormButton: UIButton!
+    @IBOutlet weak var startFormInfoLabel: UILabel!
     
     
     override func awakeFromNib() {
@@ -35,8 +35,23 @@ class AssistanceOverviewCollectionViewCell: UICollectionViewCell {
         self.startInquiryLabel.font = UIFont.tgkBody
         self.startInquiryLabel.textColor = UIColor.tgkGray
         
-        self.shareFormButton.titleLabel?.font = UIFont.tgkBody
-        self.shareFormButton.setTitleColor(UIColor.tgkLightGray, for: .normal)
-        self.shareFormButton.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 25)
+        self.startFormInfoLabel.font = UIFont.tgkMetadata
+        self.startFormInfoLabel.textColor = UIColor.tgkLightGray
+        
+        if let programDescriptionString = self.programDescriptionLabel.text {
+            let crisisGrantRange = (programDescriptionString as NSString).range(of: "CRISIS GRANTS")
+            let illnessRange = (programDescriptionString as NSString).range(of: "illness")
+            let injuryRange = (programDescriptionString as NSString).range(of: "injury")
+            let deathString = (programDescriptionString as NSString).range(of: "death")
+            let disasterString = (programDescriptionString as NSString).range(of: "disaster")
+            
+            let programAttributedString = NSMutableAttributedString(string: programDescriptionString, attributes: [NSAttributedStringKey.foregroundColor:UIColor.tgkBlue])
+            programAttributedString.addAttribute(.foregroundColor, value: UIColor.tgkOrange, range: crisisGrantRange)
+            programAttributedString.addAttribute(.foregroundColor, value: UIColor.tgkOrange, range: illnessRange)
+            programAttributedString.addAttribute(.foregroundColor, value: UIColor.tgkOrange, range: injuryRange)
+            programAttributedString.addAttribute(.foregroundColor, value: UIColor.tgkOrange, range: deathString)
+            programAttributedString.addAttribute(.foregroundColor, value: UIColor.tgkOrange, range: disasterString)
+            self.programDescriptionLabel.attributedText = programAttributedString
+        }
     }
 }
