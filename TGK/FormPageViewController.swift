@@ -19,7 +19,6 @@ class FormPageViewController: UITableViewController {
     
     //dependencies
     var isLastPageInForm = false
-    var isFirstPageInForm = false
     var delegate:FormPageViewControllerDelegate?
     var formPage:FormPagePageModel! {
         didSet {
@@ -95,11 +94,6 @@ class FormPageViewController: UITableViewController {
             rightBarButtonItem.tintColor = UIColor.tgkOrange
         }
         self.navigationItem.rightBarButtonItem = rightBarButtonItem
-        
-        if self.isFirstPageInForm {
-            let cancelButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(userDidTapCancel))
-            self.navigationItem.leftBarButtonItem = cancelButton
-        }
     }
     
     @objc fileprivate func userDidTapCancel() {

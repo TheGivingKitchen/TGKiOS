@@ -46,10 +46,12 @@ class SegmentedFormNavigationController: UINavigationController {
         }
         self.formPageViewControllers = allPageViewControllers
         
-        if let firstPage = self.formPageViewControllers.first {
-            firstPage.isFirstPageInForm = true
-            self.viewControllers = [firstPage]
-        }
+        //set a form info view controller as the landing page
+        let formInfoVC = UIStoryboard(name: "Forms", bundle: nil).instantiateViewController(withIdentifier: "SegmentedFormInfoViewControllerId") as! SegmentedFormInfoViewController
+        formInfoVC.segmentedFormModel = self.segmentedFormModel
+        formInfoVC.delegate = self    
+        self.viewControllers = [formInfoVC]
+        
     }
     
     fileprivate func nextFormPageAfter(_ formPageViewController:FormPageViewController) -> FormPageViewController? {
@@ -135,5 +137,17 @@ extension SegmentedFormNavigationController:FormPageViewControllerDelegate {
     
     func formPageViewControllerDidPressCancel(_ formPageViewController: FormPageViewController) {
         self.dismiss(animated: true)
+    }
+}
+
+extension SegmentedFormNavigationController:SegmentedFormInfoViewControllerDelegate {
+    func segmentedFormInfoViewControllerDidPressCancel(segmentedFormInfoViewController: SegmentedFormInfoViewController) {
+        self.dismiss(animated: true)
+    }
+    
+    func segmentedFormInfoViewControllerDidPressContinue(segmentedFormInfoViewController: SegmentedFormInfoViewController) {
+        if let firstPageVC = self.formPageViewControllers.first {
+            self.pushViewController(firstPageVC, animated: true)
+        }
     }
 }

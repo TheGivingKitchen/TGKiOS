@@ -74,10 +74,9 @@ class FormsHomeViewController: UIViewController, SegmentedFormInfoViewController
     }
     
     @IBAction func assistanceTapped(_ sender: Any) {
-        let formInfoVC = UIStoryboard(name: "Forms", bundle: nil).instantiateViewController(withIdentifier: "SegmentedFormInfoViewControllerId") as! SegmentedFormInfoViewController
-        formInfoVC.segmentedFormModel = self.assistanceFormModel
-        formInfoVC.delegate = self
-        self.navigationController?.pushViewController(formInfoVC, animated: true)
+        let segmentedNav = UIStoryboard(name: "Forms", bundle: nil).instantiateViewController(withIdentifier: "SegmentedFormNavigationControllerId") as! SegmentedFormNavigationController
+        segmentedNav.segmentedFormModel = self.assistanceFormModel
+        self.present(segmentedNav, animated: true)
     }
     
     @IBAction func assistanceSelfTapped(_ sender: Any) {

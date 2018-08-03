@@ -35,7 +35,7 @@ class ServiceManager: NSObject {
     }
     
     
-    
+    //TODO change to local segmented form and take a string param in
     func getSegmentedForm(completion: @escaping (SegmentedFormModel?, Error?)->Void) {
         
         if let path = Bundle.main.path(forResource: "segmentedForm", ofType: "json") {
