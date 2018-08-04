@@ -77,10 +77,10 @@ extension AssistanceHomeViewController: UICollectionViewDataSource, UICollection
 //MARK:AssistanceFormsCollectionViewCellDelegate
 extension AssistanceHomeViewController: AssistanceFormsCollectionViewCellDelegate {
     func assistanceFormsCellDidSelectMultiplyJoyForm(cell: AssistanceFormsCollectionViewCell) {
-        
+        print("multiply")
     }
     
     func assistanceFormsCellDidSelectVolunteerForm(cell: AssistanceFormsCollectionViewCell) {
-
+        print("volunteer")
     }
 }

@@ -82,6 +82,8 @@
 		4ED3884E209D030600A8BEE2 /* FormTextViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4ED3883C209D030600A8BEE2 /* FormTextViewTableViewCell.xib */; };
 		4ED38851209D04AE00A8BEE2 /* UIColor+TGK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED3884F209D04AD00A8BEE2 /* UIColor+TGK.swift */; };
 		4ED38852209D04AE00A8BEE2 /* String+TGK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED38850209D04AD00A8BEE2 /* String+TGK.swift */; };
+		C0965F482114C583005EAB0C /* Utilities.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0965F472114C583005EAB0C /* Utilities.storyboard */; };
+		C0965F4B2114C8BF005EAB0C /* DonationSuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0965F4A2114C8BF005EAB0C /* DonationSuccessViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -166,6 +168,8 @@
 		4ED3883C209D030600A8BEE2 /* FormTextViewTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FormTextViewTableViewCell.xib; sourceTree = "<group>"; };
 		4ED3884F209D04AD00A8BEE2 /* UIColor+TGK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+TGK.swift"; sourceTree = "<group>"; };
 		4ED38850209D04AD00A8BEE2 /* String+TGK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+TGK.swift"; sourceTree = "<group>"; };
+		C0965F472114C583005EAB0C /* Utilities.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Utilities.storyboard; sourceTree = "<group>"; };
+		C0965F4A2114C8BF005EAB0C /* DonationSuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationSuccessViewController.swift; sourceTree = "<group>"; };
 		F812197480570AB0D7060FB8 /* Pods-TGK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TGK.release.xcconfig"; path = "Pods/Target Support Files/Pods-TGK/Pods-TGK.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -373,6 +377,7 @@
 		4E891005209E3C990034A83B /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				C0965F492114C8A7005EAB0C /* View Controllers */,
 				4ED38850209D04AD00A8BEE2 /* String+TGK.swift */,
 				4ED3884F209D04AD00A8BEE2 /* UIColor+TGK.swift */,
 				4E7C2E3120B1D8F800A20303 /* UIFont+TGK.swift */,
@@ -443,6 +448,7 @@
 			children = (
 				4ED38819209D01EF00A8BEE2 /* AppDelegate.swift */,
 				4ED3881B209D01EF00A8BEE2 /* ViewController.swift */,
+				C0A259812114E55D0007AB20 /* Donate */,
 				4E8354A020CBFD24009DF8CE /* RemoteConfig */,
 				4E83549D20CA0568009DF8CE /* Events */,
 				4ECA9BF920A268590084A317 /* CommonComponents */,
@@ -459,6 +465,22 @@
 				4ECA9C3220AE37030084A317 /* GoogleService-Info.plist */,
 			);
 			path = TGK;
+			sourceTree = "<group>";
+		};
+		C0965F492114C8A7005EAB0C /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C0965F472114C583005EAB0C /* Utilities.storyboard */,
+				C0965F4A2114C8BF005EAB0C /* DonationSuccessViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		C0A259812114E55D0007AB20 /* Donate */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Donate;
 			sourceTree = "<group>";
 		};
 		F48BFBB9B07C293B47B9B18C /* Frameworks */ = {
@@ -544,6 +566,7 @@
 				4ED38840209D030600A8BEE2 /* FormTextFieldTableViewCell.xib in Resources */,
 				4E7C2E2B20B1D8AF00A20303 /* RobotoMono-MediumItalic.ttf in Resources */,
 				4E7C2E1A20B1D8A600A20303 /* Kulturista-Medium.otf in Resources */,
+				C0965F482114C583005EAB0C /* Utilities.storyboard in Resources */,
 				4ECA9C0920A85B580084A317 /* FormShortNameTableViewCell.xib in Resources */,
 				4ED3884E209D030600A8BEE2 /* FormTextViewTableViewCell.xib in Resources */,
 				4E7C2E2D20B1D8AF00A20303 /* RobotoMono-Italic.ttf in Resources */,
@@ -627,6 +650,7 @@
 				4ED3881A209D01EF00A8BEE2 /* AppDelegate.swift in Sources */,
 				4E8897AE209E134700A361D8 /* ServiceManager+Forms.swift in Sources */,
 				4ED3884B209D030600A8BEE2 /* FormItemView.swift in Sources */,
+				C0965F4B2114C8BF005EAB0C /* DonationSuccessViewController.swift in Sources */,
 				4ED38841209D030600A8BEE2 /* SegmentedFormModel.swift in Sources */,
 				4ECA9C0F20A8A2640084A317 /* FormDateTableViewCell.swift in Sources */,
 				4ED38847209D030600A8BEE2 /* ServiceManager.swift in Sources */,

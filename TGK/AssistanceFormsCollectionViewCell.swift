@@ -16,18 +16,18 @@ protocol AssistanceFormsCollectionViewCellDelegate:class {
 class AssistanceFormsCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var pageHeaderLabel: UILabel!
+    @IBOutlet weak var headerBottomDividerView: UIView!
+    @IBOutlet weak var volunteerView: UIView!
     @IBOutlet weak var volunteerHeaderLabel: UILabel!
     @IBOutlet weak var volunteerSubtitleLabel: UILabel!
-    @IBOutlet weak var volunteerStartFormButton: UIButton!
     @IBOutlet weak var volunteerShareButton: UIButton!
     @IBOutlet weak var volunteerBottomDividerView: UIView!
     
+    @IBOutlet weak var multiplyJoyView: UIView!
     @IBOutlet weak var multiplyJoyHeaderLabel: UILabel!
     @IBOutlet weak var multiplyJoySubtitleLabel: UILabel!
-    @IBOutlet weak var multiplyJoyStartFormButton: UIButton!
     @IBOutlet weak var multiplyJoyShareButton: UIButton!
     @IBOutlet weak var multiplyJoyBottomDivider: UIView!
-    
     
     weak var delegate:AssistanceFormsCollectionViewCellDelegate?
     
@@ -35,6 +35,11 @@ class AssistanceFormsCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         
         self.styleView()
+        
+        let volunteerTapGR = UITapGestureRecognizer(target: self, action: #selector(startVolunteerForm))
+        self.volunteerView.addGestureRecognizer(volunteerTapGR)
+        let multiplyTapGR = UITapGestureRecognizer(target: self, action: #selector(startMultiplyJoyPressed))
+        self.multiplyJoyView.addGestureRecognizer(multiplyTapGR)
     }
     
     private func styleView() {
@@ -46,39 +51,30 @@ class AssistanceFormsCollectionViewCell: UICollectionViewCell {
         
         self.volunteerSubtitleLabel.font = UIFont.tgkBody
         self.volunteerSubtitleLabel.textColor = UIColor.tgkGray
-        
-        self.volunteerStartFormButton.backgroundColor = UIColor.tgkOrange
-        self.volunteerStartFormButton.titleLabel?.font = UIFont.tgkNavigation
-        
+
         self.volunteerShareButton.titleLabel?.font = UIFont.tgkBody
         self.volunteerShareButton.setTitleColor(UIColor.tgkLightGray, for: .normal)
-        self.volunteerShareButton.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 25)
         
         self.multiplyJoyHeaderLabel.font = UIFont.tgkSubtitle
         self.multiplyJoyHeaderLabel.textColor = UIColor.tgkOrange
         
         self.multiplyJoySubtitleLabel.font = UIFont.tgkBody
         self.multiplyJoySubtitleLabel.textColor = UIColor.tgkGray
-        
-        self.multiplyJoyStartFormButton.backgroundColor = UIColor.tgkOrange
-        self.multiplyJoyStartFormButton.titleLabel?.font = UIFont.tgkNavigation
-        
+
         self.multiplyJoyShareButton.titleLabel?.font = UIFont.tgkBody
         self.multiplyJoyShareButton.setTitleColor(UIColor.tgkLightGray, for: .normal)
-        self.multiplyJoyShareButton.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 25)
         
+        self.headerBottomDividerView.backgroundColor = UIColor.tgkBackgroundGray
         self.volunteerBottomDividerView.backgroundColor = UIColor.tgkBackgroundGray
         self.multiplyJoyBottomDivider.backgroundColor = UIColor.tgkBackgroundGray
     }
     
-    @IBAction func startMultiplyJoyPressed(_ sender: Any) {
-//        self.delegate?.assistanceFormsCellDidSelectMultiplyJoyForm(cell: self)
-        print("multiply")
+    @objc func startMultiplyJoyPressed() {
+        self.delegate?.assistanceFormsCellDidSelectMultiplyJoyForm(cell: self)
     }
     
-    @IBAction func startVolunteerForm(_ sender: Any) {
-        print("volunteer")
-//        self.delegate?.assistanceFormsCellDidSelectVolunteerForm(cell: self)
+    @objc func startVolunteerForm() {
+        self.delegate?.assistanceFormsCellDidSelectVolunteerForm(cell: self)
     }
     
 }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FormsHomeViewController: UIViewController, SegmentedFormInfoViewControllerDelegate {
+class FormsHomeViewController: UIViewController, SegmentedFormInfoViewControllerDelegate, DonationSuccessViewControllerDelegate {
 
     @IBOutlet weak var assistanceButton: UIButton!
     @IBOutlet weak var volunteerButton: UIButton!
@@ -115,5 +115,13 @@ class FormsHomeViewController: UIViewController, SegmentedFormInfoViewController
     
     func segmentedFormInfoViewControllerDidPressCancel(segmentedFormInfoViewController: SegmentedFormInfoViewController) {
         self.navigationController?.popViewController(animated: true)
+    }
+    @IBAction func funcDonationSuccessPressed(_ sender: Any) {
+        let donationsuccessVC = DonationSuccessViewController.donationSuccessViewController(withDelegate: self)
+        self.present(donationsuccessVC, animated:true)
+    }
+    
+    func donationSuccessViewControllerDonePressed(viewController: DonationSuccessViewController) {
+        viewController.dismiss(animated: true)
     }
 }
