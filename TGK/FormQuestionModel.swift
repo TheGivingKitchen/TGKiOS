@@ -33,7 +33,6 @@ struct FormQuestionModel {
     let isRequired:Bool
     let hasOtherField:Bool
     let subfields:[FormQuestionSubfieldModel]
-    
 
     init(jsonDict:[String:Any]) {
         self.id = jsonDict["ID"] as? String ?? ""
@@ -47,7 +46,13 @@ struct FormQuestionModel {
             self.questionType = .unknown
         }
         
-        self.isRequired = jsonDict["IsRequired"] as? Bool ?? false
+        if let isRequiredString = jsonDict["IsRequired"] as? String {
+            self.isRequired = isRequiredString == "1" ? true : false
+        }
+        else {
+            self.isRequired = false
+        }
+        
         self.hasOtherField = jsonDict["HasOtherField"] as? Bool ?? false
         
         var parsedOptions = [String]()

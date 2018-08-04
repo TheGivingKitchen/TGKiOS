@@ -125,7 +125,7 @@ class FormListSelectTableViewCell: UITableViewCell, FormItemView {
     }
     
     func configureView() {
-        self.questionLabel.text = self.formQuestion.questionTitle
+        self.questionLabel.text = self.formQuestion.isRequired ? self.formQuestion.questionTitle + "*" : self.formQuestion.questionTitle
         
         //clear out existing stuff
         for row in self.rows {

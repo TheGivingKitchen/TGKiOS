@@ -160,7 +160,7 @@ class FormAddressTableViewCell: UITableViewCell, FormItemView {
     }
 
     private func configureView() {
-        self.questionLabel.text = self.formQuestion.questionTitle
+        self.questionLabel.text = self.formQuestion.isRequired ? self.formQuestion.questionTitle + "*" : self.formQuestion.questionTitle
         
         guard self.formQuestion.subfields.count == 6 else {
             return
