@@ -55,6 +55,7 @@ extension AppDelegate {
     func setupAppearances() {
         UITabBar.appearance().isTranslucent = false
         UITabBar.appearance().backgroundColor = UIColor.tgkBlue
+        UITabBar.appearance().tintColor = UIColor.tgkOrange
         
         UINavigationBar.appearance().isTranslucent = false
         UINavigationBar.appearance().tintColor = UIColor.tgkBlue

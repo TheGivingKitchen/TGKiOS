@@ -11,6 +11,9 @@ import UIKit
 protocol AssistanceFormsCollectionViewCellDelegate:class {
     func assistanceFormsCellDidSelectMultiplyJoyForm(cell: AssistanceFormsCollectionViewCell)
     func assistanceFormsCellDidSelectVolunteerForm(cell: AssistanceFormsCollectionViewCell)
+    
+    func assistanceFormsCellDidSelectMultiplyJoyShare(cell: AssistanceFormsCollectionViewCell)
+    func assistanceFormsCellDidSelectVolunteerShare(cell: AssistanceFormsCollectionViewCell)
 }
 
 class AssistanceFormsCollectionViewCell: UICollectionViewCell {
@@ -30,11 +33,14 @@ class AssistanceFormsCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var multiplyJoyBottomDivider: UIView!
     
     weak var delegate:AssistanceFormsCollectionViewCellDelegate?
+    var volunteerFormModel:SegmentedFormModel?
+    var multiplyJoyModel:SegmentedFormModel?
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
         self.styleView()
+        self.fetchForms()
         
         let volunteerTapGR = UITapGestureRecognizer(target: self, action: #selector(startVolunteerForm))
         self.volunteerView.addGestureRecognizer(volunteerTapGR)
@@ -43,7 +49,7 @@ class AssistanceFormsCollectionViewCell: UICollectionViewCell {
     }
     
     private func styleView() {
-        self.pageHeaderLabel.font = UIFont.tgkContentTitle
+        self.pageHeaderLabel.font = UIFont.tgkSubtitle
         self.pageHeaderLabel.textColor = UIColor.tgkOrange
         
         self.volunteerHeaderLabel.font = UIFont.tgkSubtitle
@@ -69,12 +75,34 @@ class AssistanceFormsCollectionViewCell: UICollectionViewCell {
         self.multiplyJoyBottomDivider.backgroundColor = UIColor.tgkBackgroundGray
     }
     
+    func fetchForms() {
+        ServiceManager.sharedInstace.getFirebaseForm(id: "multiplyJoyInquiry") { (formModel, error) in
+            if let formModel = formModel {
+                self.multiplyJoyModel = formModel
+            }
+        }
+        
+        ServiceManager.sharedInstace.getFirebaseForm(id: "volunteerSignup") { (formModel, error) in
+            if let formModel = formModel {
+                self.volunteerFormModel = formModel
+            }
+        }
+    }
+    
     @objc func startMultiplyJoyPressed() {
         self.delegate?.assistanceFormsCellDidSelectMultiplyJoyForm(cell: self)
     }
     
     @objc func startVolunteerForm() {
         self.delegate?.assistanceFormsCellDidSelectVolunteerForm(cell: self)
+    }
+    
+    @IBAction func volunteerSharePressed(_ sender: Any) {
+        self.delegate?.assistanceFormsCellDidSelectVolunteerShare(cell: self)
+    }
+    
+    @IBAction func multiplyJoyPressed(_ sender: Any) {
+        self.delegate?.assistanceFormsCellDidSelectMultiplyJoyShare(cell: self)
     }
     
 }

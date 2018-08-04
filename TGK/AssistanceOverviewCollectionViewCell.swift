@@ -8,6 +8,11 @@
 
 import UIKit
 
+protocol AssistanceOverviewCollectionViewCellDelegate:class {
+    func assistanceOverviewCollectionViewCellAssistanceForSelfPressed(cell:AssistanceOverviewCollectionViewCell)
+    func assistanceOverviewCollectionViewCellAssistanceReferralPressed(cell:AssistanceOverviewCollectionViewCell)
+}
+
 class AssistanceOverviewCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var programDescriptionLabel: UILabel!
     @IBOutlet weak var startInquiryLabel: UILabel!
@@ -16,10 +21,30 @@ class AssistanceOverviewCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var startReferralInquiryButton: UIButton!
     @IBOutlet weak var startFormInfoLabel: UILabel!
     
+    weak var delegate:AssistanceOverviewCollectionViewCellDelegate?
+    var assistanceSelfFormModel:SegmentedFormModel?
+    var assistanceReferralFormModel:SegmentedFormModel?
     
     override func awakeFromNib() {
         super.awakeFromNib()
         self.styleView()
+        self.fetchForms()
+    }
+    
+    func fetchForms() {
+        ServiceManager.sharedInstace.getFirebaseForm(id: "assistanceInquirySelf") { (formModel, error) in
+            if let formModel = formModel {
+                self.assistanceSelfFormModel = formModel
+                self.startSelfInquiryButton.isEnabled = true
+            }
+        }
+        
+        ServiceManager.sharedInstace.getFirebaseForm(id: "assistanceInquiryReferral") { (formModel, error) in
+            if let formModel = formModel {
+                self.assistanceReferralFormModel = formModel
+                self.startReferralInquiryButton.isEnabled = true
+            }
+        }
     }
     
     private func styleView() {
@@ -53,5 +78,13 @@ class AssistanceOverviewCollectionViewCell: UICollectionViewCell {
             programAttributedString.addAttribute(.foregroundColor, value: UIColor.tgkOrange, range: disasterString)
             self.programDescriptionLabel.attributedText = programAttributedString
         }
+    }
+    
+    @IBAction func startSelfInquiryButtonPressed(_ sender: Any) {
+        self.delegate?.assistanceOverviewCollectionViewCellAssistanceForSelfPressed(cell: self)
+    }
+    
+    @IBAction func startReferralButtonPressed(_ sender: Any) {
+        self.delegate?.assistanceOverviewCollectionViewCellAssistanceReferralPressed(cell: self)
     }
 }

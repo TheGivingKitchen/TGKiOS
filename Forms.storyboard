@@ -181,7 +181,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hao-3I-wAl"/>
                     </view>
-                    <navigationItem key="navigationItem" id="sb8-z2-EEG"/>
+                    <navigationItem key="navigationItem" id="sb8-z2-EEG">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="cyQ-7x-Eo2">
+                            <connections>
+                                <action selector="cancelPressed:" destination="8ok-Lc-6Xz" id="B75-vN-Y5C"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="continueButton" destination="ooB-VE-qqN" id="ehI-J9-ev1"/>
                         <outlet property="dividerView" destination="fTl-2Y-ajK" id="QAI-kI-4t9"/>
@@ -207,12 +213,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" id="uIR-fv-GK0">
+                        <view key="tableHeaderView" contentMode="scaleToFill" misplaced="YES" id="uIR-fv-GK0">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="142"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Page Information" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qqu-Fc-h9O">
-                                    <rect key="frame" x="16" y="20" width="343" height="102"/>
+                                    <rect key="frame" x="16" y="20" width="343" height="14"/>
                                     <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
