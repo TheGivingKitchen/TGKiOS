@@ -9,6 +9,6 @@ target 'TGK' do
   pod 'Firebase/Core'
   pod 'Firebase/RemoteConfig'
   pod 'SwiftyXMLParser', :git => 'https://github.com/yahoojapan/SwiftyXMLParser.git'
-
+  pod 'Stripe'
 
 end

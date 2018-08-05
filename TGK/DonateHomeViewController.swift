@@ -163,7 +163,21 @@ class DonateHomeViewController: UIViewController {
     @IBAction func useCreditCardButtonPressed(_ sender: Any) {
         //live address https://connect.clickandpledge.com/w/Form/d11bff52-0cd0-44d8-9403-465614e4f342
         
-        let safariVC = TGKSafariViewController(url: URL(string: "https://thegivingkitchen.wufoo.com/forms/credit-card-donation-user-testing/")!)
-        self.present(safariVC, animated: true)
+        guard let externalDonationFormUrl = URL(string: "https://thegivingkitchen.wufoo.com/forms/credit-card-donation-user-testing/") else {
+            return
+        }
+        
+        UIApplication.shared.open(externalDonationFormUrl, options: [:]) { (success) in
+            DispatchQueue.main.async {
+                let donationSuccessVC = DonationSuccessViewController.donationSuccessViewController(withDelegate: self)
+                self.present(donationSuccessVC, animated: true)
+            }
+        }
+    }
+}
+
+extension DonateHomeViewController:DonationSuccessViewControllerDelegate {
+    func donationSuccessViewControllerDonePressed(viewController: DonationSuccessViewController) {
+        viewController.dismiss(animated: true)
     }
 }
