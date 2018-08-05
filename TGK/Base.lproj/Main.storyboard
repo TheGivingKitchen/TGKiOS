@@ -89,20 +89,24 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y0i-5I-ODf">
-                                                        <rect key="frame" x="132" y="8" width="111" height="72"/>
+                                                        <rect key="frame" x="132.5" y="8" width="110" height="72"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fSl-s3-fPH">
                                                                 <rect key="frame" x="0.0" y="2" width="34" height="66"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="55"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="50" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bt7-T3-O3R">
-                                                                <rect key="frame" x="35" y="0.0" width="76" height="72"/>
+                                                                <rect key="frame" x="34" y="0.0" width="76" height="72"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="60"/>
                                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
+                                                                <connections>
+                                                                    <action selector="amountTextFieldDidEndEditing:" destination="y0F-uA-TV7" eventType="editingDidEnd" id="MOy-la-Gfx"/>
+                                                                </connections>
                                                             </textField>
                                                         </subviews>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -111,7 +115,7 @@
                                                             <constraint firstItem="bt7-T3-O3R" firstAttribute="top" secondItem="y0i-5I-ODf" secondAttribute="top" id="FJ6-w5-PQt"/>
                                                             <constraint firstItem="fSl-s3-fPH" firstAttribute="baseline" secondItem="bt7-T3-O3R" secondAttribute="baseline" id="MWi-ZT-2fe"/>
                                                             <constraint firstAttribute="bottom" secondItem="bt7-T3-O3R" secondAttribute="bottom" id="TJK-bA-Ift"/>
-                                                            <constraint firstItem="bt7-T3-O3R" firstAttribute="leading" secondItem="fSl-s3-fPH" secondAttribute="trailing" constant="1" id="rje-Ul-5F7"/>
+                                                            <constraint firstItem="bt7-T3-O3R" firstAttribute="leading" secondItem="fSl-s3-fPH" secondAttribute="trailing" id="rje-Ul-5F7"/>
                                                             <constraint firstAttribute="height" constant="72" id="so9-8Z-5tb"/>
                                                             <constraint firstAttribute="trailing" secondItem="bt7-T3-O3R" secondAttribute="trailing" id="tnd-X2-yqe"/>
                                                         </constraints>
@@ -122,6 +126,9 @@
                                                             <constraint firstAttribute="width" constant="71" id="otw-e5-qxz"/>
                                                         </constraints>
                                                         <state key="normal" image="rightChevron"/>
+                                                        <connections>
+                                                            <action selector="incrementAmountPressed:" destination="y0F-uA-TV7" eventType="touchUpInside" id="z1g-9g-70n"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NoU-Sh-UC9">
                                                         <rect key="frame" x="0.0" y="0.0" width="71" height="122"/>
@@ -129,6 +136,9 @@
                                                             <constraint firstAttribute="width" constant="71" id="fnT-88-YUo"/>
                                                         </constraints>
                                                         <state key="normal" image="leftChevron"/>
+                                                        <connections>
+                                                            <action selector="decrementAmountPressed:" destination="y0F-uA-TV7" eventType="touchUpInside" id="FzM-NV-pcY"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -184,7 +194,7 @@
                                                         </constraints>
                                                         <state key="normal" title="or Donate with Credit Card"/>
                                                         <connections>
-                                                            <action selector="mainDonationFormPressed:" destination="y0F-uA-TV7" eventType="touchUpInside" id="oSh-1T-URd"/>
+                                                            <action selector="useCreditCardButtonPressed:" destination="y0F-uA-TV7" eventType="touchUpInside" id="QmZ-xI-3Mu"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -269,10 +279,13 @@
                         <outlet property="amountView" destination="wY0-Fm-pUJ" id="Qs3-lZ-O7f"/>
                         <outlet property="customAmountLabel" destination="ijL-QK-KSh" id="1CT-xu-A2j"/>
                         <outlet property="customAmountView" destination="OOG-4A-32D" id="xtw-YY-a5e"/>
+                        <outlet property="decrementAmountButton" destination="NoU-Sh-UC9" id="T6Z-Eo-jcA"/>
                         <outlet property="dividerView" destination="B5W-os-NSz" id="WNb-ez-zkW"/>
+                        <outlet property="incrementAmountButton" destination="lVM-By-9l6" id="bJ9-CL-5mJ"/>
                         <outlet property="infoBodyLabel" destination="g6z-go-xsI" id="IPW-ab-Jiq"/>
                         <outlet property="infoSubtitleLabel" destination="kJB-O6-lEm" id="l94-7m-Rv2"/>
                         <outlet property="infoTitleLabel" destination="dYW-ud-97o" id="xyy-s6-xsX"/>
+                        <outlet property="mainScrollView" destination="lPZ-5u-gVs" id="lrk-C3-5RQ"/>
                         <outlet property="usdLabel" destination="fSl-s3-fPH" id="6Iy-Hg-87Q"/>
                         <outlet property="useCreditCardButton" destination="JCO-ct-e6D" id="k1j-T1-olP"/>
                     </connections>
