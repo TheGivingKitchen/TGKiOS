@@ -47,7 +47,7 @@ class DonationSuccessViewController: UIViewController {
 
 extension DonationSuccessViewController {
     static func donationSuccessViewController(withDelegate delegate:DonationSuccessViewControllerDelegate) -> DonationSuccessViewController {
-        let donationSuccessVC = UIStoryboard(name: "Utilities", bundle: nil).instantiateViewController(withIdentifier: "DonationSuccessViewControllerId") as! DonationSuccessViewController
+        let donationSuccessVC = UIStoryboard(name: "Donate", bundle: nil).instantiateViewController(withIdentifier: "DonationSuccessViewControllerId") as! DonationSuccessViewController
         donationSuccessVC.delegate = delegate
         return donationSuccessVC
     }

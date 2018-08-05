@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		165677F7CA24DF537F71485F /* Pods_TGK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02F6B12ADD2CEF057F42D437 /* Pods_TGK.framework */; };
+		4E09B7E42117697500584924 /* Donate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E09B7E32117697500584924 /* Donate.storyboard */; };
 		4E1EED452108157A0084CFF3 /* AssistanceChooseRecipientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1EED442108157A0084CFF3 /* AssistanceChooseRecipientViewController.swift */; };
 		4E1EED4E210A57B40084CFF3 /* Forms.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E1EED4D210A57B40084CFF3 /* Forms.storyboard */; };
 		4E228D9320ED5639002912AB /* AssistanceOverviewCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E228D9220ED5639002912AB /* AssistanceOverviewCollectionViewCell.swift */; };
@@ -89,6 +90,7 @@
 /* Begin PBXFileReference section */
 		02F6B12ADD2CEF057F42D437 /* Pods_TGK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TGK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2ED9204B045A5AE610078D22 /* Pods-TGK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TGK.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TGK/Pods-TGK.debug.xcconfig"; sourceTree = "<group>"; };
+		4E09B7E32117697500584924 /* Donate.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Donate.storyboard; sourceTree = "<group>"; };
 		4E1EED442108157A0084CFF3 /* AssistanceChooseRecipientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssistanceChooseRecipientViewController.swift; sourceTree = "<group>"; };
 		4E1EED4D210A57B40084CFF3 /* Forms.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Forms.storyboard; path = ../Forms.storyboard; sourceTree = "<group>"; };
 		4E228D9220ED5639002912AB /* AssistanceOverviewCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssistanceOverviewCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -479,6 +481,7 @@
 		C0A259812114E55D0007AB20 /* Donate */ = {
 			isa = PBXGroup;
 			children = (
+				4E09B7E32117697500584924 /* Donate.storyboard */,
 			);
 			name = Donate;
 			sourceTree = "<group>";
@@ -560,6 +563,7 @@
 				4E228D9520ED5675002912AB /* AssistanceOverviewCollectionViewCell.xib in Resources */,
 				4ED38821209D01F200A8BEE2 /* Assets.xcassets in Resources */,
 				4ED3881F209D01EF00A8BEE2 /* Main.storyboard in Resources */,
+				4E09B7E42117697500584924 /* Donate.storyboard in Resources */,
 				4E8354A420CC597A009DF8CE /* multiplyJoyInquiry.json in Resources */,
 				4ED3884D209D030600A8BEE2 /* FormPickerTableViewCell.xib in Resources */,
 				4E89100D209F779E0034A83B /* assistanceInquiry.json in Resources */,
@@ -839,7 +843,10 @@
 				DEVELOPMENT_TEAM = VZBY3CL334;
 				INFOPLIST_FILE = TGK/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = org.thegivingkitchen.TGK;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_INSTALL_OBJC_HEADER = YES;
@@ -860,7 +867,10 @@
 				DEVELOPMENT_TEAM = VZBY3CL334;
 				INFOPLIST_FILE = TGK/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = org.thegivingkitchen.TGK;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_INSTALL_OBJC_HEADER = YES;

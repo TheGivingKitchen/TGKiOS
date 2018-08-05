@@ -8,6 +8,7 @@
 
 import UIKit
 import SafariServices
+import PassKit
 
 class DonateHomeViewController: UIViewController {
 
@@ -31,6 +32,8 @@ class DonateHomeViewController: UIViewController {
                                                    (150, "Covers a gas bill"),
                                                    (500, "Covers housing"),
                                                    (1800, "A total grant!!")]
+    
+    let supportedPaymentNetworks:[PKPaymentNetwork] = [.visa, .masterCard, .amex]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -173,6 +176,54 @@ class DonateHomeViewController: UIViewController {
                 self.present(donationSuccessVC, animated: true)
             }
         }
+    }
+    
+    @IBAction func applePayButtonPressed(_ sender: Any) {
+        let currentAmount = NSDecimalNumber(string: self.amountTextField.text)
+        
+        guard currentAmount.floatValue > 0.0 else {
+            return
+        }
+        
+        let fakePaymentAlert = UIAlertController(title: "Complete Donation", message: "DONATION - $\(currentAmount)", preferredStyle: .actionSheet)
+        let confirmAction = UIAlertAction(title: "Pay", style: .default) { (action) in
+            let donationSuccessVC = DonationSuccessViewController.donationSuccessViewController(withDelegate: self)
+            self.present(donationSuccessVC, animated: true)
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
+        }
+        fakePaymentAlert.addAction(confirmAction)
+        fakePaymentAlert.addAction(cancelAction)
+        self.present(fakePaymentAlert, animated: true)
+//        let request = PKPaymentRequest()
+//        request.merchantIdentifier = "TODOfillInLater"
+//        request.supportedNetworks = self.supportedPaymentNetworks
+//        request.merchantCapabilities = .capability3DS
+//        request.countryCode = "US"
+//        request.currencyCode = "USD"
+//
+//        request.requiredBillingContactFields = [.emailAddress, .postalAddress, .name]
+//
+//        request.paymentSummaryItems = [
+//            PKPaymentSummaryItem(label: "DONATION", amount: currentAmount),
+//            PKPaymentSummaryItem(label: "TOTAL", amount: currentAmount)]
+//
+//        if let applePayController = PKPaymentAuthorizationViewController(paymentRequest: request) {
+//            applePayController.delegate = self
+//            self.present(applePayController, animated: true)
+//        }
+    }
+}
+
+extension DonateHomeViewController:PKPaymentAuthorizationViewControllerDelegate {
+    func paymentAuthorizationViewControllerDidFinish(_ controller: PKPaymentAuthorizationViewController) {
+        controller.dismiss(animated: true)
+    }
+    
+    func paymentAuthorizationViewController(_ controller: PKPaymentAuthorizationViewController, didAuthorizePayment payment: PKPayment, handler completion: @escaping (PKPaymentAuthorizationResult) -> Void) {
+        print("payment authorized")
+        //stripe and firebase payment logic here
+        completion(PKPaymentAuthorizationResult(status: .success, errors: nil))
     }
 }
 

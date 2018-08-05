@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Donation Success View Controller-->
+        <scene sceneID="jGu-Dw-1wN">
+            <objects>
+                <viewController storyboardIdentifier="DonationSuccessViewControllerId" id="Xhe-RB-24m" customClass="DonationSuccessViewController" customModule="TGK" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yjb-sx-ssn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="WECLOME TO THE FIGHT!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ufI-8D-DV1">
+                                <rect key="frame" x="35" y="179" width="305" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="qVx-gm-iNH">
+                                <rect key="frame" x="25" y="224" width="325" height="101.5"/>
+                                <string key="text">In supporting GK's mission, you share in our commitment to provide emergency assistance to restaurant workers, often locked in the fight of their lives, who serve their community every day.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yjp-wj-JmL">
+                                <rect key="frame" x="25" y="333.5" width="325" height="162"/>
+                                <state key="normal" title="SPREAD THE WORD" image="iconShare">
+                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Your donation is 100 percent tax deductible and truly makes a difference." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B9N-so-NEB">
+                                <rect key="frame" x="25" y="563.5" width="325" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9vC-dZ-NKa">
+                                <rect key="frame" x="20" y="503.5" width="335" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="0.030457442939999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="XvS-Rf-zag"/>
+                                </constraints>
+                                <state key="normal" title="Done">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="doneButtonPressed:" destination="Xhe-RB-24m" eventType="touchUpInside" id="HcK-9v-7ic"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" image="assistanceGPlusLogo" translatesAutoresizingMaskIntoConstraints="NO" id="QYR-gM-SRi">
+                                <rect key="frame" x="149" y="77.5" width="77" height="51"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="qVx-gm-iNH" firstAttribute="top" relation="greaterThanOrEqual" secondItem="ufI-8D-DV1" secondAttribute="bottom" constant="16" id="0CF-7s-QUK"/>
+                            <constraint firstItem="6BT-6e-GBs" firstAttribute="trailing" secondItem="B9N-so-NEB" secondAttribute="trailing" constant="25" id="9ZS-6Y-Icy"/>
+                            <constraint firstItem="qVx-gm-iNH" firstAttribute="leading" secondItem="6BT-6e-GBs" secondAttribute="leading" constant="25" id="BbW-fS-Jyq"/>
+                            <constraint firstItem="B9N-so-NEB" firstAttribute="top" secondItem="9vC-dZ-NKa" secondAttribute="bottom" constant="10" id="DOm-FR-ZRF"/>
+                            <constraint firstItem="6BT-6e-GBs" firstAttribute="trailing" secondItem="9vC-dZ-NKa" secondAttribute="trailing" constant="20" id="FV6-5W-Bvx"/>
+                            <constraint firstItem="B9N-so-NEB" firstAttribute="leading" secondItem="6BT-6e-GBs" secondAttribute="leading" constant="25" id="GaH-2G-GcG"/>
+                            <constraint firstItem="QYR-gM-SRi" firstAttribute="centerX" secondItem="6BT-6e-GBs" secondAttribute="centerX" id="ICe-di-2Si"/>
+                            <constraint firstItem="9vC-dZ-NKa" firstAttribute="top" secondItem="yjp-wj-JmL" secondAttribute="bottom" constant="8" id="Lwn-w6-EKq"/>
+                            <constraint firstItem="ufI-8D-DV1" firstAttribute="top" relation="greaterThanOrEqual" secondItem="QYR-gM-SRi" secondAttribute="bottom" constant="16" id="MKi-aY-yTD"/>
+                            <constraint firstItem="yjp-wj-JmL" firstAttribute="leading" secondItem="6BT-6e-GBs" secondAttribute="leading" constant="25" id="PSu-mC-qTP"/>
+                            <constraint firstItem="9vC-dZ-NKa" firstAttribute="leading" secondItem="6BT-6e-GBs" secondAttribute="leading" constant="20" id="Qf7-yI-fwR"/>
+                            <constraint firstItem="6BT-6e-GBs" firstAttribute="trailing" secondItem="ufI-8D-DV1" secondAttribute="trailing" constant="35" id="Uvt-5t-Le0"/>
+                            <constraint firstItem="ufI-8D-DV1" firstAttribute="leading" secondItem="6BT-6e-GBs" secondAttribute="leading" constant="35" id="WFE-lu-SEk"/>
+                            <constraint firstItem="6BT-6e-GBs" firstAttribute="trailing" secondItem="yjp-wj-JmL" secondAttribute="trailing" constant="25" id="aFf-cF-bgo"/>
+                            <constraint firstItem="6BT-6e-GBs" firstAttribute="trailing" secondItem="qVx-gm-iNH" secondAttribute="trailing" constant="25" id="e2b-x3-QuH"/>
+                            <constraint firstItem="QYR-gM-SRi" firstAttribute="top" relation="greaterThanOrEqual" secondItem="6BT-6e-GBs" secondAttribute="top" constant="16" id="eyG-nM-2Da"/>
+                            <constraint firstItem="QYR-gM-SRi" firstAttribute="centerY" secondItem="6BT-6e-GBs" secondAttribute="centerY" multiplier="30:100" id="f77-xc-lWl"/>
+                            <constraint firstItem="qVx-gm-iNH" firstAttribute="centerY" secondItem="6BT-6e-GBs" secondAttribute="centerY" multiplier="80:100" priority="999" id="gZh-bg-ZXt"/>
+                            <constraint firstItem="ufI-8D-DV1" firstAttribute="centerY" secondItem="6BT-6e-GBs" secondAttribute="centerY" multiplier="55:100" id="kob-c7-nP9"/>
+                            <constraint firstItem="B9N-so-NEB" firstAttribute="centerY" secondItem="6BT-6e-GBs" secondAttribute="centerY" multiplier="170:100" id="q8W-Y1-iD3"/>
+                            <constraint firstItem="yjp-wj-JmL" firstAttribute="top" secondItem="qVx-gm-iNH" secondAttribute="bottom" constant="8" id="tQk-4H-r90"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6BT-6e-GBs"/>
+                    </view>
+                    <connections>
+                        <outlet property="doneButton" destination="9vC-dZ-NKa" id="5Bo-1E-YRw"/>
+                        <outlet property="messageLabel" destination="qVx-gm-iNH" id="mDH-3D-zb3"/>
+                        <outlet property="shareButton" destination="yjp-wj-JmL" id="TbC-Hz-haz"/>
+                        <outlet property="taxInfoLabel" destination="B9N-so-NEB" id="JUk-Al-NcM"/>
+                        <outlet property="welcomeLabel" destination="ufI-8D-DV1" id="ZQz-D3-Eht"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HMu-l0-4Jl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-839" y="183"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="assistanceGPlusLogo" width="77" height="51"/>
+        <image name="iconShare" width="19" height="27"/>
+    </resources>
+</document>

@@ -72,6 +72,7 @@ class SegmentedFormInfoViewController: UIViewController {
     }
     
     private func styleView() {
+        self.view.backgroundColor = UIColor.tgkBeige
         self.formInfoScrollView.backgroundColor = UIColor.tgkBeige
         self.formCallToActionBackgroundView.backgroundColor = UIColor.tgkBeige
         self.dividerView.backgroundColor = UIColor.tgkLightGray
