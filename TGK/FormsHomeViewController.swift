@@ -7,121 +7,41 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseDatabase
+import Alamofire
+import FirebaseAuth
+import Stripe
 
-class FormsHomeViewController: UIViewController, SegmentedFormInfoViewControllerDelegate, DonationSuccessViewControllerDelegate {
+class FormsHomeViewController: UIViewController {
 
-    @IBOutlet weak var assistanceButton: UIButton!
-    @IBOutlet weak var volunteerButton: UIButton!
-    @IBOutlet weak var assistanceSelfButton: UIButton!
-    @IBOutlet weak var assistanceReferralButton: UIButton!
-    @IBOutlet weak var multiplyJoyButton: UIButton!
-    
-    var assistanceFormModel:SegmentedFormModel!
-    var assistanceSelfFormModel:SegmentedFormModel!
-    var assistanceReferralFormModel:SegmentedFormModel!
-    var volunteerFormModel:SegmentedFormModel!
-    var multiplyJoyModel:SegmentedFormModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    @IBAction func postCharge(_ sender: Any) {
+        let cardParams = STPCardParams()
+        cardParams.number = "4242424242424242"
+        cardParams.expMonth = 10
+        cardParams.expYear = 2022
+        cardParams.cvc = "111"
         
-        self.assistanceButton.isHidden = true
-        self.volunteerButton.isHidden = true
-        
-        ServiceManager.sharedInstace.getFirebaseForm(id: "assistanceInquiry") { (formModel, error) in
-            if let formModel = formModel {
-                self.assistanceFormModel = formModel
-                self.assistanceButton.isHidden = false
+        STPAPIClient.shared().createToken(withCard: cardParams) { (token, error) in
+            if let token = token {
+                Alamofire.request("https://thegivingkitchen-cdd28.firebaseio.com/stripe_customers.json", method: .post, parameters:["amount":2500,"source":token.card?.stripeID], encoding: JSONEncoding.default).responseJSON { (response) in
+                    switch response.result {
+                    case .success(let value):
+                        print("success")
+                    case .failure:
+                        print("fail")
+                    }
+                }
+            }
+            else {
+                print(error!)
             }
         }
         
-        ServiceManager.sharedInstace.getFirebaseForm(id: "volunteerSignup") { (formModel, error) in
-            if let formModel = formModel {
-                self.volunteerFormModel = formModel
-                self.volunteerButton.isHidden = false
-            }
-        }
-        
-        ServiceManager.sharedInstace.getFirebaseForm(id: "assistanceInquirySelf") { (formModel, error) in
-            if let formModel = formModel {
-                self.assistanceSelfFormModel = formModel
-                self.assistanceSelfButton.isHidden = false
-            }
-        }
-        
-        ServiceManager.sharedInstace.getFirebaseForm(id: "assistanceInquiryReferral") { (formModel, error) in
-            if let formModel = formModel {
-                self.assistanceReferralFormModel = formModel
-                self.assistanceReferralButton.isHidden = false
-            }
-        }
-        
-        ServiceManager.sharedInstace.getFirebaseForm(id: "multiplyJoyInquiry") { (formModel, error) in
-            if let formModel = formModel {
-                self.multiplyJoyModel = formModel
-                self.multiplyJoyButton.isHidden = false
-            }
-        }
-        
-    }
-    @IBAction func infoPressed(_ sender: Any) {
-        let formInfoVC = UIStoryboard(name: "Forms", bundle: nil).instantiateViewController(withIdentifier: "SegmentedFormInfoViewControllerId") as! SegmentedFormInfoViewController
-        _ = formInfoVC.view
-        self.navigationController?.pushViewController(formInfoVC, animated: true)
-        
-        formInfoVC.formMetadata.text = "Our Crisis Grants program currently serve restaurant workers living in Metro Atlanta, Athens, Columbus and Rome. Grants are awarded based on the restaurant worker's financial need as well as a set of criteria according to the type of crisis. Most often, our financial assistance covers the cost of rent and utilities, paid directly to the service provider(s). Applications are reviewed by Giving Kitchen staff and a review committee consisting of GK board members. The average time to fully process an application from beginning to end is three weeks.\n\nPlease note: we do not pay medical expenses."
-        
-    }
-    
-    @IBAction func assistanceTapped(_ sender: Any) {
-        let segmentedNav = UIStoryboard(name: "Forms", bundle: nil).instantiateViewController(withIdentifier: "SegmentedFormNavigationControllerId") as! SegmentedFormNavigationController
-        segmentedNav.segmentedFormModel = self.assistanceFormModel
-        self.present(segmentedNav, animated: true)
-    }
-    
-    @IBAction func assistanceSelfTapped(_ sender: Any) {
-        let formInfoVC = UIStoryboard(name: "Forms", bundle: nil).instantiateViewController(withIdentifier: "SegmentedFormInfoViewControllerId") as! SegmentedFormInfoViewController
-        formInfoVC.segmentedFormModel = self.assistanceSelfFormModel
-        formInfoVC.delegate = self
-        self.navigationController?.pushViewController(formInfoVC, animated: true)
-    }
-    
-    @IBAction func assistanceReferrlaTapped(_ sender: Any) {
-        let formInfoVC = UIStoryboard(name: "Forms", bundle: nil).instantiateViewController(withIdentifier: "SegmentedFormInfoViewControllerId") as! SegmentedFormInfoViewController
-        formInfoVC.segmentedFormModel = self.assistanceReferralFormModel
-        formInfoVC.delegate = self
-        self.navigationController?.pushViewController(formInfoVC, animated: true)
-    }
-    
-    @IBAction func volunteerSignUpTapped(_ sender: Any) {
-        let formInfoVC = UIStoryboard(name: "Forms", bundle: nil).instantiateViewController(withIdentifier: "SegmentedFormInfoViewControllerId") as! SegmentedFormInfoViewController
-        formInfoVC.segmentedFormModel = self.volunteerFormModel
-        formInfoVC.delegate = self
-        self.navigationController?.pushViewController(formInfoVC, animated: true)
-    }
-    
-    @IBAction func multiplyJoyTapped(_ sender: Any) {
-        let formInfoVC = UIStoryboard(name: "Forms", bundle: nil).instantiateViewController(withIdentifier: "SegmentedFormInfoViewControllerId") as! SegmentedFormInfoViewController
-        formInfoVC.segmentedFormModel = self.multiplyJoyModel
-        formInfoVC.delegate = self
-        self.navigationController?.pushViewController(formInfoVC, animated: true)
-    }
-    
-    func segmentedFormInfoViewControllerDidPressContinue(segmentedFormInfoViewController: SegmentedFormInfoViewController) {
-        let segmentedNav = UIStoryboard(name: "Forms", bundle: nil).instantiateViewController(withIdentifier: "SegmentedFormNavigationControllerId") as! SegmentedFormNavigationController
-        segmentedNav.segmentedFormModel = segmentedFormInfoViewController.segmentedFormModel
-        self.present(segmentedNav, animated: true)
-    }
-    
-    func segmentedFormInfoViewControllerDidPressCancel(segmentedFormInfoViewController: SegmentedFormInfoViewController) {
-        self.navigationController?.popViewController(animated: true)
-    }
-    @IBAction func funcDonationSuccessPressed(_ sender: Any) {
-        let donationsuccessVC = DonationSuccessViewController.donationSuccessViewController(withDelegate: self)
-        self.present(donationsuccessVC, animated:true)
-    }
-    
-    func donationSuccessViewControllerDonePressed(viewController: DonationSuccessViewController) {
-        viewController.dismiss(animated: true)
     }
 }

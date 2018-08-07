@@ -185,8 +185,8 @@ class DonateHomeViewController: UIViewController {
             return
         }
         
-        let fakePaymentAlert = UIAlertController(title: "Complete Donation", message: "DONATION - $\(currentAmount)", preferredStyle: .actionSheet)
-        let confirmAction = UIAlertAction(title: "Pay", style: .default) { (action) in
+        let fakePaymentAlert = UIAlertController(title: "Complete Donation", message: "TOTAL - $\(currentAmount)", preferredStyle: .actionSheet)
+        let confirmAction = UIAlertAction(title: "Pay $\(currentAmount)", style: .default) { (action) in
             let donationSuccessVC = DonationSuccessViewController.donationSuccessViewController(withDelegate: self)
             self.present(donationSuccessVC, animated: true)
         }

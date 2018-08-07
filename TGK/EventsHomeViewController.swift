@@ -13,7 +13,9 @@ import SwiftyXMLParser
 class EventsHomeViewController: UITableViewController {
     
     var calendarEventModels = [RSSCalendarEventModel]()
-
+    @IBOutlet weak var tableViewHeaderEventsLabel: UILabel!
+    @IBOutlet weak var tableViewHeaderEventsDescriptionLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.fetchData()
@@ -22,9 +24,14 @@ class EventsHomeViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        self.navigationController?.navigationBar.isHidden = true
+        
+        self.tableView.estimatedRowHeight = UITableViewAutomaticDimension
+        self.tableView.estimatedSectionHeaderHeight = UITableViewAutomaticDimension
+        
         self.title = "Events"
         self.fetchData()
-        
+        self.styleView()
     }
     
     func fetchData() {
@@ -37,6 +44,14 @@ class EventsHomeViewController: UITableViewController {
                 print(error)
             }
         }
+    }
+    
+    func styleView() {
+        self.tableViewHeaderEventsLabel.font = UIFont.tgkSubtitle
+        self.tableViewHeaderEventsLabel.textColor = UIColor.tgkOrange
+        
+        self.tableViewHeaderEventsDescriptionLabel.font = UIFont.tgkBody
+        self.tableViewHeaderEventsDescriptionLabel.textColor = UIColor.tgkBlue
     }
 }
 
@@ -62,8 +77,12 @@ extension EventsHomeViewController {
     //TODO testing this. ask Izu how this interaction should work, of if we should do it at all
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = self.tableView.cellForRow(at: indexPath) as! CalendarEventOverviewTableViewCell
-        cell.descriptionLabel.numberOfLines = 0
-        self.tableView.beginUpdates()
-        self.tableView.endUpdates()
+        guard let urlString = cell.calendarEventModel.urlString,
+            let eventUrl = URL(string: urlString) else {
+            return
+        }
+        let tgkSafariVC = TGKSafariViewController(url: eventUrl)
+        self.present(tgkSafariVC, animated: true)
+        
     }
 }

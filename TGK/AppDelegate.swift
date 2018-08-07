@@ -9,6 +9,8 @@
 import UIKit
 import Firebase
 import FirebaseRemoteConfig
+import FirebaseAuth
+import Stripe
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -23,6 +25,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.setupAppearances()
         
         self.setupRemoteConfig()
+        Auth.auth().signInAnonymously { (result, error) in
+            
+        }
+        
+        STPPaymentConfiguration.shared().publishableKey = "pk_test_N0P215RKBn56kFCcBlgzxCxX"
         
         return true
     }
