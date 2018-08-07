@@ -22,10 +22,13 @@ class DonateHomeViewController: UIViewController {
     @IBOutlet weak var customAmountView: UIView!
     @IBOutlet weak var customAmountLabel: UILabel!
     @IBOutlet weak var dividerView: UIView!
+    @IBOutlet weak var pinInfoLabel: UILabel!
+    @IBOutlet weak var secondDividerView: UIView!
     @IBOutlet weak var infoTitleLabel: UILabel!
     @IBOutlet weak var infoSubtitleLabel: UILabel!
     @IBOutlet weak var infoBodyLabel: UILabel!
     @IBOutlet weak var mainScrollView: UIScrollView!
+    
     
     var amountAndDescriptions:[(amount:Int, description:String)] = [(50, "Covers a water bill"),
                                                    (100, "Covers a power bill"),
@@ -60,7 +63,11 @@ class DonateHomeViewController: UIViewController {
         self.useCreditCardButton.titleLabel?.font = UIFont.tgkNavigation
         self.useCreditCardButton.tintColor = UIColor.tgkOrange
         
-        self.dividerView.backgroundColor = UIColor.tgkLightGray
+        self.dividerView.backgroundColor = UIColor.tgkBackgroundGray
+        self.secondDividerView.backgroundColor = UIColor.tgkBackgroundGray
+        
+        self.pinInfoLabel.font = UIFont.tgkBody
+        self.pinInfoLabel.textColor = UIColor.tgkDarkGray
         
         self.infoTitleLabel.font = UIFont.tgkSubtitle
         self.infoTitleLabel.textColor = UIColor.tgkOrange
@@ -69,11 +76,12 @@ class DonateHomeViewController: UIViewController {
         self.infoSubtitleLabel.textColor = UIColor.tgkBlue
         
         self.infoBodyLabel.font = UIFont.tgkBody
-        self.infoBodyLabel.textColor = UIColor.tgkGray
+        self.infoBodyLabel.textColor = UIColor.tgkDarkGray
         
+        self.pinInfoLabel.text = "You'll receive a GK button when you donate to cover part of a specific portion of a grant, and if you donate to cover a full grant, you'll receive a GK pin."
         self.infoTitleLabel.text = "the giving kitchen\ngives guidance."
-        self.infoSubtitleLabel.text = "The Giving Kitchen cares for the most hard-working and vulnerable members of our community: restaurant workers."
-        self.infoBodyLabel.text = "Welcome to the fight! In supporting GK’s mission, you share in our commitment to provide emergency assistance to restaurant workers, often locked in the fight of their lives, who serve their community every day. Your donation is 100 percent tax deductible and truly makes a difference."
+        self.infoSubtitleLabel.text = "The Giving Kitchen is building a restaurant community where crisis is met with compassion and care, and anyone can be a hero."
+        self.infoBodyLabel.text = "Stopping the cycle of poverty before it starts and offering a connection to social services needed to thrive after a crisis, we care for the most hard-working and vulnerable members of our community: restaurant workers.\n\n\nWelcome to the fight! In supporting GK’s mission, you share in our commitment to provide emergency assistance to restaurant workers, often locked in the fight of their lives, who serve their community every day. Your donation is 100 percent tax deductible and truly makes a difference."
         
         self.configureStateForIncrementAndDecrementButtons()
     }
@@ -195,6 +203,8 @@ class DonateHomeViewController: UIViewController {
         fakePaymentAlert.addAction(confirmAction)
         fakePaymentAlert.addAction(cancelAction)
         self.present(fakePaymentAlert, animated: true)
+        
+        //start real apple pay
 //        let request = PKPaymentRequest()
 //        request.merchantIdentifier = "TODOfillInLater"
 //        request.supportedNetworks = self.supportedPaymentNetworks
@@ -222,6 +232,7 @@ extension DonateHomeViewController:PKPaymentAuthorizationViewControllerDelegate 
     
     func paymentAuthorizationViewController(_ controller: PKPaymentAuthorizationViewController, didAuthorizePayment payment: PKPayment, handler completion: @escaping (PKPaymentAuthorizationResult) -> Void) {
         print("payment authorized")
+        
         //stripe and firebase payment logic here
         completion(PKPaymentAuthorizationResult(status: .success, errors: nil))
     }

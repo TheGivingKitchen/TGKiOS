@@ -31,7 +31,7 @@ class CalendarEventOverviewTableViewCell: UITableViewCell {
         
         self.titleLabel.font = UIFont.tgkSubtitle
         self.titleLabel.textColor = UIColor.tgkOrange
-        self.bottomDividerView.backgroundColor = UIColor.tgkLightGray
+        self.bottomDividerView.backgroundColor = UIColor.tgkBackgroundGray
         
         //gradient
 //        let gradient = CAGradientLayer()
