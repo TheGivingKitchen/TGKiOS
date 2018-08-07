@@ -35,7 +35,11 @@ class MainTabBarController: UITabBarController {
         let donateHomeNavVC = UINavigationController(rootViewController: donateHomeVC)
         donateHomeNavVC.tabBarItem = UITabBarItem(title: "Give", image: UIImage(named: "tabBarDonate"), selectedImage: nil)
         
+        #if DEBUG
         self.viewControllers = [eventsHomeNavVC, assistanceHomeNavVC, donateHomeNavVC, formsHomeNavVC]
+        #else
+        self.viewControllers = [eventsHomeNavVC, assistanceHomeNavVC, donateHomeNavVC]
+        #endif
         
         //Remote config
         NotificationCenter.default.addObserver(self, selector: #selector(applicationDidBecomeActiveHander(_:)), name: NSNotification.Name.UIApplicationDidBecomeActive, object: nil)

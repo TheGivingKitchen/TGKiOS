@@ -19,6 +19,7 @@ class EventsHomeViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.fetchData()
+        self.styleView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -29,9 +30,7 @@ class EventsHomeViewController: UITableViewController {
         self.tableView.estimatedRowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedSectionHeaderHeight = UITableViewAutomaticDimension
         
-        self.title = "Events"
         self.fetchData()
-        self.styleView()
     }
     
     func fetchData() {

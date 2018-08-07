@@ -8,16 +8,23 @@
 
 import UIKit
 
+protocol SegmentedFormNavigationControllerDelegate:class {
+    func segmentedFormNavigationControllerDidFinish(viewController:SegmentedFormNavigationController)
+}
+
 class SegmentedFormNavigationController: UINavigationController {
     
+    //dependencies
+    weak var formDelegate:SegmentedFormNavigationControllerDelegate?
     var segmentedFormModel:SegmentedFormModel! {
         didSet {
             guard segmentedFormModel != nil else {return}
             self.setupFormPages()
         }
     }
-    var formPageViewControllers = [FormPageViewController]()
+    //end dependencies
     
+    var formPageViewControllers = [FormPageViewController]()
     var formAnswers = [FormQuestionAnswerModel]()
 
     override func viewDidLoad() {
@@ -94,8 +101,8 @@ class SegmentedFormNavigationController: UINavigationController {
         ServiceManager.sharedInstace.submitAnswersToForm(self.segmentedFormModel.id, withAnswers: self.formAnswers) { (success, error, formFieldErrorModels) in
             
             if success == true {
-                //TODO: show success. waiting for design
-                self.dismiss(animated: true)
+                
+                self.formDelegate?.segmentedFormNavigationControllerDidFinish(viewController: self)
             }
             else if let fieldErrors = formFieldErrorModels {
                 var firstformPageWithErrors:FormPageViewController?
@@ -134,15 +141,11 @@ extension SegmentedFormNavigationController:FormPageViewControllerDelegate {
             self.submitFormAnswers()
         }
     }
-    
-    func formPageViewControllerDidPressCancel(_ formPageViewController: FormPageViewController) {
-        self.dismiss(animated: true)
-    }
 }
 
 extension SegmentedFormNavigationController:SegmentedFormInfoViewControllerDelegate {
     func segmentedFormInfoViewControllerDidPressCancel(segmentedFormInfoViewController: SegmentedFormInfoViewController) {
-        self.dismiss(animated: true)
+        segmentedFormInfoViewController.dismiss(animated: true)
     }
     
     func segmentedFormInfoViewControllerDidPressContinue(segmentedFormInfoViewController: SegmentedFormInfoViewController) {

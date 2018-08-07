@@ -18,21 +18,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="WECLOME TO THE FIGHT!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ufI-8D-DV1">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="welcome to the fight!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ufI-8D-DV1">
                                 <rect key="frame" x="35" y="179" width="305" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="qVx-gm-iNH">
-                                <rect key="frame" x="25" y="224" width="325" height="101.5"/>
-                                <string key="text">In supporting GK's mission, you share in our commitment to provide emergency assistance to restaurant workers, often locked in the fight of their lives, who serve their community every day.</string>
+                                <rect key="frame" x="25" y="215.5" width="325" height="122"/>
+                                <string key="text">Thank you for your donation. In supporting GK's mission, you share in our commitment to provide emergency assistance to restaurant workers, often locked in the fight of their lives, who serve their community every day.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yjp-wj-JmL">
-                                <rect key="frame" x="25" y="333.5" width="325" height="162"/>
+                                <rect key="frame" x="25" y="345.5" width="325" height="150"/>
                                 <state key="normal" title="SPREAD THE WORD" image="iconShare">
                                     <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>

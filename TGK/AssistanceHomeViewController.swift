@@ -100,6 +100,7 @@ extension AssistanceHomeViewController: AssistanceOverviewCollectionViewCellDele
         
         let segmentedNav = UIStoryboard(name: "Forms", bundle: nil).instantiateViewController(withIdentifier: "SegmentedFormNavigationControllerId") as! SegmentedFormNavigationController
         segmentedNav.segmentedFormModel = inquiryForm
+        segmentedNav.formDelegate = self
         self.present(segmentedNav, animated: true)
     }
     
@@ -110,9 +111,12 @@ extension AssistanceHomeViewController: AssistanceOverviewCollectionViewCellDele
         
         let segmentedNav = UIStoryboard(name: "Forms", bundle: nil).instantiateViewController(withIdentifier: "SegmentedFormNavigationControllerId") as! SegmentedFormNavigationController
         segmentedNav.segmentedFormModel = inquiryForm
+        segmentedNav.formDelegate = self
         self.present(segmentedNav, animated: true)
     }
 }
+
+//MARK: AssistanceFormsCollectionViewCellDelegate
 extension AssistanceHomeViewController: AssistanceFormsCollectionViewCellDelegate {
     func assistanceFormsCellDidSelectMultiplyJoyForm(cell: AssistanceFormsCollectionViewCell) {
         guard let inquiryForm = cell.multiplyJoyModel else {
@@ -141,4 +145,23 @@ extension AssistanceHomeViewController: AssistanceFormsCollectionViewCellDelegat
     func assistanceFormsCellDidSelectVolunteerShare(cell: AssistanceFormsCollectionViewCell) {
         ExternalShareManager.sharedInstance.presentShareControllerFromViewController(fromController: self, title: "Sign up to be a Giving Kitchen Volunteer!", urlString: "https://thegivingkitchen.wufoo.com/forms/gk-volunteer-survey/", image: UIImage(named: "tgkShareIcon"))
     }
+}
+
+//MARK: Segmented Form Delegate
+extension AssistanceHomeViewController:SegmentedFormNavigationControllerDelegate {
+    func segmentedFormNavigationControllerDidFinish(viewController: SegmentedFormNavigationController) {
+        viewController.dismiss(animated: true) {
+            let successVC = AssistanceSuccessViewController.assistanceSuccessViewController(withDelegate: self)
+            self.present(successVC, animated:true)
+        }
+    }
+}
+
+//MARK: AssistanceSuccessViewControllerDelegate
+extension AssistanceHomeViewController:AssistanceSuccessViewControllerDelegate {
+    func assistanceSuccessViewControllerDelegateDonePressed(viewController: AssistanceSuccessViewController) {
+        viewController.dismiss(animated: true)
+    }
+    
+    
 }

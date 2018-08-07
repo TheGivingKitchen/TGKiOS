@@ -10,7 +10,6 @@ import UIKit
 
 protocol FormPageViewControllerDelegate {
     func formPageViewController(_ formPageViewController:FormPageViewController, didAdvanceWithAnswers answers:[FormQuestionAnswerModel])
-    func formPageViewControllerDidPressCancel(_ formPageViewController:FormPageViewController)
 }
 
 class FormPageViewController: UITableViewController {
@@ -53,7 +52,15 @@ class FormPageViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        self.styleNavigationBar()
         self.configureBarButtonItems()
+    }
+    
+    private func styleNavigationBar() {
+        if let navigationController = self.navigationController {
+            navigationController.navigationBar.setBackgroundImage(UIImage(), for: .default)
+            navigationController.navigationBar.shadowImage = UIImage()
+        }
     }
     
 //    override func viewDidAppear(_ animated: Bool) {
@@ -94,10 +101,6 @@ class FormPageViewController: UITableViewController {
             rightBarButtonItem.tintColor = UIColor.tgkOrange
         }
         self.navigationItem.rightBarButtonItem = rightBarButtonItem
-    }
-    
-    @objc fileprivate func userDidTapCancel() {
-        self.delegate?.formPageViewControllerDidPressCancel(self)
     }
     
     @objc fileprivate func endEditingInTableView() {
