@@ -20,28 +20,12 @@ class FormsHomeViewController: UIViewController {
         super.viewDidLoad()
     }
     
-    @IBAction func postCharge(_ sender: Any) {
-        let cardParams = STPCardParams()
-        cardParams.number = "4242424242424242"
-        cardParams.expMonth = 10
-        cardParams.expYear = 2022
-        cardParams.cvc = "111"
-        
-        STPAPIClient.shared().createToken(withCard: cardParams) { (token, error) in
-            if let token = token {
-                Alamofire.request("https://thegivingkitchen-cdd28.firebaseio.com/stripe_customers.json", method: .post, parameters:["amount":2500,"source":token.card?.stripeID], encoding: JSONEncoding.default).responseJSON { (response) in
-                    switch response.result {
-                    case .success(let value):
-                        print("success")
-                    case .failure:
-                        print("fail")
-                    }
-                }
-            }
-            else {
-                print(error!)
+    @IBAction func buttontapped(_ sender: Any) {
+        UIApplication.shared.open(URL(string: "fb://group?id=1426736404312089")!, options: [:]) { (success) in
+            if success == false {
+                let tgkSafariVC = TGKSafariViewController(url: URL(string: "https://www.facebook.com/groups/1426736404312089")!)
+                self.present(tgkSafariVC, animated: true)
             }
         }
-        
     }
 }

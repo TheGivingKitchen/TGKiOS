@@ -455,7 +455,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <action selector="postCharge:" destination="xq2-nz-JWz" eventType="touchUpInside" id="am5-QO-EOK"/>
+                                    <action selector="buttontapped:" destination="xq2-nz-JWz" eventType="touchUpInside" id="heT-tk-1FM"/>
                                 </connections>
                             </button>
                         </subviews>
