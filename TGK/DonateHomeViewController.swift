@@ -15,12 +15,12 @@ class DonateHomeViewController: UIViewController {
     @IBOutlet weak var usdLabel: UILabel!
     @IBOutlet weak var amountTextField: UITextField!
     @IBOutlet weak var useCreditCardButton: UIButton!
+    @IBOutlet weak var donateTypeDividerView: UIView!
+    @IBOutlet weak var recurringDonationButton: UIButton!
     @IBOutlet weak var amountView: UIView!
     @IBOutlet weak var decrementAmountButton: UIButton!
     @IBOutlet weak var incrementAmountButton: UIButton!
     @IBOutlet weak var amountDescriptionLabel: UILabel!
-    @IBOutlet weak var customAmountView: UIView!
-    @IBOutlet weak var customAmountLabel: UILabel!
     @IBOutlet weak var dividerView: UIView!
     @IBOutlet weak var pinInfoLabel: UILabel!
     @IBOutlet weak var secondDividerView: UIView!
@@ -52,19 +52,21 @@ class DonateHomeViewController: UIViewController {
     
     func styleView() {
         self.amountView.backgroundColor = UIColor.tgkBlue
-        self.customAmountView.backgroundColor = UIColor.tgkDarkBlue
         
         self.amountDescriptionLabel.font = UIFont.tgkBody
-        self.customAmountLabel.font = UIFont.tgkBody
-        self.customAmountLabel.textColor = UIColor.tgkLightGray
         
         self.amountTextField.font = UIFont.kulturistaBold(size: 60)
         self.amountTextField.text = "50"
+        
         self.useCreditCardButton.titleLabel?.font = UIFont.tgkNavigation
         self.useCreditCardButton.tintColor = UIColor.tgkOrange
         
+        self.recurringDonationButton.titleLabel?.font = UIFont.tgkNavigation
+        self.recurringDonationButton.tintColor = UIColor.tgkOrange
+        
         self.dividerView.backgroundColor = UIColor.tgkBackgroundGray
         self.secondDividerView.backgroundColor = UIColor.tgkBackgroundGray
+        self.donateTypeDividerView.backgroundColor = UIColor.tgkBackgroundGray
         
         self.pinInfoLabel.font = UIFont.tgkBody
         self.pinInfoLabel.textColor = UIColor.tgkDarkGray
@@ -184,57 +186,6 @@ class DonateHomeViewController: UIViewController {
                 self.present(donationSuccessVC, animated: true)
             }
         }
-    }
-    
-    @IBAction func applePayButtonPressed(_ sender: Any) {
-        let currentAmount = NSDecimalNumber(string: self.amountTextField.text)
-        
-        guard currentAmount.floatValue > 0.0 else {
-            return
-        }
-        
-        let fakePaymentAlert = UIAlertController(title: "Complete Donation", message: "TOTAL - $\(currentAmount)", preferredStyle: .actionSheet)
-        let confirmAction = UIAlertAction(title: "Pay $\(currentAmount)", style: .default) { (action) in
-            let donationSuccessVC = DonationSuccessViewController.donationSuccessViewController(withDelegate: self)
-            self.present(donationSuccessVC, animated: true)
-        }
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
-        }
-        fakePaymentAlert.addAction(confirmAction)
-        fakePaymentAlert.addAction(cancelAction)
-        self.present(fakePaymentAlert, animated: true)
-        
-        //start real apple pay
-//        let request = PKPaymentRequest()
-//        request.merchantIdentifier = "TODOfillInLater"
-//        request.supportedNetworks = self.supportedPaymentNetworks
-//        request.merchantCapabilities = .capability3DS
-//        request.countryCode = "US"
-//        request.currencyCode = "USD"
-//
-//        request.requiredBillingContactFields = [.emailAddress, .postalAddress, .name]
-//
-//        request.paymentSummaryItems = [
-//            PKPaymentSummaryItem(label: "DONATION", amount: currentAmount),
-//            PKPaymentSummaryItem(label: "TOTAL", amount: currentAmount)]
-//
-//        if let applePayController = PKPaymentAuthorizationViewController(paymentRequest: request) {
-//            applePayController.delegate = self
-//            self.present(applePayController, animated: true)
-//        }
-    }
-}
-
-extension DonateHomeViewController:PKPaymentAuthorizationViewControllerDelegate {
-    func paymentAuthorizationViewControllerDidFinish(_ controller: PKPaymentAuthorizationViewController) {
-        controller.dismiss(animated: true)
-    }
-    
-    func paymentAuthorizationViewController(_ controller: PKPaymentAuthorizationViewController, didAuthorizePayment payment: PKPayment, handler completion: @escaping (PKPaymentAuthorizationResult) -> Void) {
-        print("payment authorized")
-        
-        //stripe and firebase payment logic here
-        completion(PKPaymentAuthorizationResult(status: .success, errors: nil))
     }
 }
 

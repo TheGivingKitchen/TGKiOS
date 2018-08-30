@@ -26,6 +26,9 @@ enum Router {
     
     //Events
     case getEventFeed
+    
+    //Safety Net
+    case getSafetyNet
 }
 
 extension Router {
@@ -45,6 +48,9 @@ extension Router {
             return .post
         //Events
         case .getEventFeed:
+            return .get
+        //Safety Net
+        case .getSafetyNet:
             return .get
         }
     }
@@ -67,6 +73,11 @@ extension Router {
         //Events
         case .getEventFeed:
             return "\(Router.givingKitchenBaseUrl)/events-calendar"
+            
+        //Safety Net
+        case .getSafetyNet:
+            return "\(Router.firebaseBaseStorageUrl)/safetyNet%2FsafetyNet.json?alt=media"
+
         }
     }
     

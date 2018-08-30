@@ -34,6 +34,12 @@ extension String {
         return numericString
     }
     
+    func formatStringToNumericString() -> String {
+        let numericString = self.components(separatedBy: CharacterSet.decimalDigits.inverted)
+            .joined()
+        return numericString
+    }
+    
     func height(withConstrainedWidth width: CGFloat, font: UIFont) -> CGFloat {
         let constraintRect = CGSize(width: width, height: .greatestFiniteMagnitude)
         let boundingBox = self.boundingRect(with: constraintRect, options: .usesLineFragmentOrigin, attributes: [.font : font], context: nil)
@@ -46,5 +52,12 @@ extension String {
         let boundingBox = self.boundingRect(with: constraintRect, options: .usesLineFragmentOrigin, attributes: [.font : font], context: nil)
         
         return ceil(boundingBox.width)
+    }
+}
+
+extension Optional where Wrapped == String {
+    public var isNilOrEmpty: Bool {
+        if let text = self, !text.isEmpty { return false }
+        return true
     }
 }

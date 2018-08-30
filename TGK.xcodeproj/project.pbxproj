@@ -11,10 +11,6 @@
 		4E09B7E42117697500584924 /* Donate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E09B7E32117697500584924 /* Donate.storyboard */; };
 		4E1EED452108157A0084CFF3 /* AssistanceChooseRecipientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1EED442108157A0084CFF3 /* AssistanceChooseRecipientViewController.swift */; };
 		4E1EED4E210A57B40084CFF3 /* Forms.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E1EED4D210A57B40084CFF3 /* Forms.storyboard */; };
-		4E228D9320ED5639002912AB /* AssistanceOverviewCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E228D9220ED5639002912AB /* AssistanceOverviewCollectionViewCell.swift */; };
-		4E228D9520ED5675002912AB /* AssistanceOverviewCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E228D9420ED5675002912AB /* AssistanceOverviewCollectionViewCell.xib */; };
-		4E228D9720ED5715002912AB /* AssistanceFormsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E228D9620ED5715002912AB /* AssistanceFormsCollectionViewCell.swift */; };
-		4E228D9920ED571F002912AB /* AssistanceFormsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E228D9820ED571F002912AB /* AssistanceFormsCollectionViewCell.xib */; };
 		4E4D229E20B1B1F400BA7577 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4D229D20B1B1F400BA7577 /* MainTabBarController.swift */; };
 		4E4D22A120B1B2A700BA7577 /* FormsHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4D22A020B1B2A700BA7577 /* FormsHomeViewController.swift */; };
 		4E75176320B6291C00B2D7E0 /* SegmentedFormInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E75176220B6291C00B2D7E0 /* SegmentedFormInfoViewController.swift */; };
@@ -87,6 +83,13 @@
 		4ED38852209D04AE00A8BEE2 /* String+TGK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED38850209D04AD00A8BEE2 /* String+TGK.swift */; };
 		C0965F482114C583005EAB0C /* Utilities.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0965F472114C583005EAB0C /* Utilities.storyboard */; };
 		C0965F4B2114C8BF005EAB0C /* DonationSuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0965F4A2114C8BF005EAB0C /* DonationSuccessViewController.swift */; };
+		C0A259832130AA870007AB20 /* SafetyNetResourceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A259822130AA870007AB20 /* SafetyNetResourceModel.swift */; };
+		C0B9C4952135D3D3009BEE60 /* safetyNet.json in Resources */ = {isa = PBXBuildFile; fileRef = C0B9C4942135D3D3009BEE60 /* safetyNet.json */; };
+		C0B9C4972135D55E009BEE60 /* ServiceManager+SafetyNet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B9C4962135D55E009BEE60 /* ServiceManager+SafetyNet.swift */; };
+		C0B9C4992135D79F009BEE60 /* SafetyNetHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B9C4982135D79F009BEE60 /* SafetyNetHomeViewController.swift */; };
+		C0B9C49E21371E45009BEE60 /* SafetyNetInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0B9C49D21371E45009BEE60 /* SafetyNetInfoTableViewCell.xib */; };
+		C0B9C4A021371E54009BEE60 /* SafetyNetInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B9C49F21371E54009BEE60 /* SafetyNetInfoTableViewCell.swift */; };
+		C0B9C4A3213870BC009BEE60 /* AppDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B9C4A2213870BC009BEE60 /* AppDataStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -176,6 +179,13 @@
 		4ED38850209D04AD00A8BEE2 /* String+TGK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+TGK.swift"; sourceTree = "<group>"; };
 		C0965F472114C583005EAB0C /* Utilities.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Utilities.storyboard; sourceTree = "<group>"; };
 		C0965F4A2114C8BF005EAB0C /* DonationSuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationSuccessViewController.swift; sourceTree = "<group>"; };
+		C0A259822130AA870007AB20 /* SafetyNetResourceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafetyNetResourceModel.swift; sourceTree = "<group>"; };
+		C0B9C4942135D3D3009BEE60 /* safetyNet.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = safetyNet.json; sourceTree = "<group>"; };
+		C0B9C4962135D55E009BEE60 /* ServiceManager+SafetyNet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ServiceManager+SafetyNet.swift"; sourceTree = "<group>"; };
+		C0B9C4982135D79F009BEE60 /* SafetyNetHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafetyNetHomeViewController.swift; sourceTree = "<group>"; };
+		C0B9C49D21371E45009BEE60 /* SafetyNetInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SafetyNetInfoTableViewCell.xib; sourceTree = "<group>"; };
+		C0B9C49F21371E54009BEE60 /* SafetyNetInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafetyNetInfoTableViewCell.swift; sourceTree = "<group>"; };
+		C0B9C4A2213870BC009BEE60 /* AppDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDataStore.swift; sourceTree = "<group>"; };
 		F812197480570AB0D7060FB8 /* Pods-TGK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TGK.release.xcconfig"; path = "Pods/Target Support Files/Pods-TGK/Pods-TGK.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -209,26 +219,16 @@
 			name = Assistance;
 			sourceTree = "<group>";
 		};
-		4E228D9120ED55D1002912AB /* AssistanceHomeCollectionViewCells */ = {
-			isa = PBXGroup;
-			children = (
-				4E228D9220ED5639002912AB /* AssistanceOverviewCollectionViewCell.swift */,
-				4E228D9420ED5675002912AB /* AssistanceOverviewCollectionViewCell.xib */,
-				4E228D9620ED5715002912AB /* AssistanceFormsCollectionViewCell.swift */,
-				4E228D9820ED571F002912AB /* AssistanceFormsCollectionViewCell.xib */,
-			);
-			name = AssistanceHomeCollectionViewCells;
-			sourceTree = "<group>";
-		};
 		4E4D229F20B1B27500BA7577 /* MainTabBarRootViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				4E228D9120ED55D1002912AB /* AssistanceHomeCollectionViewCells */,
+				C0B9C49A21371DD7009BEE60 /* Cells */,
 				4E4D229D20B1B1F400BA7577 /* MainTabBarController.swift */,
 				4E4D22A020B1B2A700BA7577 /* FormsHomeViewController.swift */,
 				4E75176D20C8953B00B2D7E0 /* DonateHomeViewController.swift */,
 				4E75176F20C8954C00B2D7E0 /* AssistanceHomeViewController.swift */,
 				4E75177520C8A95700B2D7E0 /* EventsHomeViewController.swift */,
+				C0B9C4982135D79F009BEE60 /* SafetyNetHomeViewController.swift */,
 			);
 			name = MainTabBarRootViewControllers;
 			sourceTree = "<group>";
@@ -236,6 +236,7 @@
 		4E4D22A220B1D87400BA7577 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C0B9C4932135D3C7009BEE60 /* SafetyNet */,
 				4E75176420B9C53900B2D7E0 /* FormJson */,
 				4E7C2E3020B1D8CE00A20303 /* Fonts */,
 				4ED38822209D01F200A8BEE2 /* LaunchScreen.storyboard */,
@@ -246,6 +247,10 @@
 		4E75176020B615DA00B2D7E0 /* PartsBinNoTarget */ = {
 			isa = PBXGroup;
 			children = (
+				4E228D9220ED5639002912AB /* AssistanceOverviewCollectionViewCell.swift */,
+				4E228D9420ED5675002912AB /* AssistanceOverviewCollectionViewCell.xib */,
+				4E228D9620ED5715002912AB /* AssistanceFormsCollectionViewCell.swift */,
+				4E228D9820ED571F002912AB /* AssistanceFormsCollectionViewCell.xib */,
 				4ED38830209D030500A8BEE2 /* FormSegmentedControlTableViewCell.swift */,
 				4ED38838209D030600A8BEE2 /* FormSegmentedControlTableViewCell.xib */,
 				4ED38834209D030500A8BEE2 /* FormTableViewController.swift */,
@@ -374,6 +379,7 @@
 			children = (
 				4E83549820C8B966009DF8CE /* Events */,
 				4E885BB920A1221B00D05ED9 /* Forms */,
+				C0A259822130AA870007AB20 /* SafetyNetResourceModel.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -381,10 +387,12 @@
 		4E891004209E3C890034A83B /* ServiceManager */ = {
 			isa = PBXGroup;
 			children = (
+				C0B9C4A12138709B009BEE60 /* AppDataStore */,
 				4ED38835209D030500A8BEE2 /* ServiceManager.swift */,
 				4E8897AD209E134700A361D8 /* ServiceManager+Forms.swift */,
 				4E890FFC209E32120034A83B /* Router.swift */,
 				4E83549E20CA0E50009DF8CE /* ServiceManager+Events.swift */,
+				C0B9C4962135D55E009BEE60 /* ServiceManager+SafetyNet.swift */,
 			);
 			name = ServiceManager;
 			sourceTree = "<group>";
@@ -500,6 +508,31 @@
 			name = Donate;
 			sourceTree = "<group>";
 		};
+		C0B9C4932135D3C7009BEE60 /* SafetyNet */ = {
+			isa = PBXGroup;
+			children = (
+				C0B9C4942135D3D3009BEE60 /* safetyNet.json */,
+			);
+			name = SafetyNet;
+			sourceTree = "<group>";
+		};
+		C0B9C49A21371DD7009BEE60 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				C0B9C49D21371E45009BEE60 /* SafetyNetInfoTableViewCell.xib */,
+				C0B9C49F21371E54009BEE60 /* SafetyNetInfoTableViewCell.swift */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		C0B9C4A12138709B009BEE60 /* AppDataStore */ = {
+			isa = PBXGroup;
+			children = (
+				C0B9C4A2213870BC009BEE60 /* AppDataStore.swift */,
+			);
+			name = AppDataStore;
+			sourceTree = "<group>";
+		};
 		F48BFBB9B07C293B47B9B18C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -572,9 +605,9 @@
 			files = (
 				4ED38824209D01F200A8BEE2 /* LaunchScreen.storyboard in Resources */,
 				4E7C2E2620B1D8AF00A20303 /* RobotoMono-Thin.ttf in Resources */,
+				C0B9C4952135D3D3009BEE60 /* safetyNet.json in Resources */,
 				4E7C2E2F20B1D8AF00A20303 /* RobotoMono-Medium.ttf in Resources */,
 				4ECA9C0320A744700084A317 /* volunteerSignup.json in Resources */,
-				4E228D9520ED5675002912AB /* AssistanceOverviewCollectionViewCell.xib in Resources */,
 				4ED38821209D01F200A8BEE2 /* Assets.xcassets in Resources */,
 				4ED3881F209D01EF00A8BEE2 /* Main.storyboard in Resources */,
 				4E09B7E42117697500584924 /* Donate.storyboard in Resources */,
@@ -597,13 +630,13 @@
 				4ECA9C0D20A868500084A317 /* FormAddressTableViewCell.xib in Resources */,
 				4E75177420C89FFC00B2D7E0 /* assistanceInquiryReferral.json in Resources */,
 				4ED3884C209D030600A8BEE2 /* FormListSelectTableViewCell.xib in Resources */,
-				4E228D9920ED571F002912AB /* AssistanceFormsCollectionViewCell.xib in Resources */,
 				4ECA9C1120A8A26E0084A317 /* FormDateTableViewCell.xib in Resources */,
 				4E7C2E1720B1D89F00A20303 /* Becker-Egyptian.otf in Resources */,
 				4E1EED4E210A57B40084CFF3 /* Forms.storyboard in Resources */,
 				4E7C2E2920B1D8AF00A20303 /* RobotoMono-Light.ttf in Resources */,
 				4ECA9C3320AE37040084A317 /* GoogleService-Info.plist in Resources */,
 				4E7C2E2A20B1D8AF00A20303 /* RobotoMono-LightItalic.ttf in Resources */,
+				C0B9C49E21371E45009BEE60 /* SafetyNetInfoTableViewCell.xib in Resources */,
 				4ECF47FF211921FA00B273E4 /* Assistance.storyboard in Resources */,
 				4E75177220C89C0400B2D7E0 /* assistanceInquirySelf.json in Resources */,
 			);
@@ -642,7 +675,6 @@
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
-				"${BUILT_PRODUCTS_DIR}/Stripe/Stripe.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyXMLParser/SwiftyXMLParser.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
@@ -654,7 +686,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Stripe.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyXMLParser.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
@@ -682,12 +713,13 @@
 				4ED38847209D030600A8BEE2 /* ServiceManager.swift in Sources */,
 				4ED38849209D030600A8BEE2 /* FormQuestionAnswerModel.swift in Sources */,
 				4ECA9C0B20A868440084A317 /* FormAddressTableViewCell.swift in Sources */,
+				C0A259832130AA870007AB20 /* SafetyNetResourceModel.swift in Sources */,
 				4ED3883E209D030600A8BEE2 /* FormTextFieldTableViewCell.swift in Sources */,
 				4ECA9BFD20A269A10084A317 /* FormListSelectTableViewCellRow.swift in Sources */,
 				4ED38844209D030600A8BEE2 /* FormTextViewTableViewCell.swift in Sources */,
+				C0B9C4A3213870BC009BEE60 /* AppDataStore.swift in Sources */,
 				4E885BB820A1221700D05ED9 /* FormFieldErrorModel.swift in Sources */,
 				4E83549C20CA0564009DF8CE /* CalendarEventOverviewTableViewCell.swift in Sources */,
-				4E228D9720ED5715002912AB /* AssistanceFormsCollectionViewCell.swift in Sources */,
 				4E89100B209F6F360034A83B /* FormPageModel.swift in Sources */,
 				4E4D22A120B1B2A700BA7577 /* FormsHomeViewController.swift in Sources */,
 				4E890FFD209E32120034A83B /* Router.swift in Sources */,
@@ -697,21 +729,23 @@
 				4ECA9C0120A72D230084A317 /* FormQuestionSubfieldModel.swift in Sources */,
 				4ED3883F209D030600A8BEE2 /* FormQuestionModel.swift in Sources */,
 				4E4D229E20B1B1F400BA7577 /* MainTabBarController.swift in Sources */,
+				C0B9C4972135D55E009BEE60 /* ServiceManager+SafetyNet.swift in Sources */,
 				4E7C2E3220B1D8F800A20303 /* UIFont+TGK.swift in Sources */,
 				4E75176E20C8953B00B2D7E0 /* DonateHomeViewController.swift in Sources */,
 				4E1EED452108157A0084CFF3 /* AssistanceChooseRecipientViewController.swift in Sources */,
 				4E75176A20BC87B000B2D7E0 /* ExternalShareManager.swift in Sources */,
 				4E83549F20CA0E50009DF8CE /* ServiceManager+Events.swift in Sources */,
 				4E8354A720CC6CF1009DF8CE /* TGKSafariViewController.swift in Sources */,
+				C0B9C4992135D79F009BEE60 /* SafetyNetHomeViewController.swift in Sources */,
 				4ECA9BFB20A2687B0084A317 /* BaseNibLoadedView.swift in Sources */,
 				4E75177620C8A95700B2D7E0 /* EventsHomeViewController.swift in Sources */,
-				4E228D9320ED5639002912AB /* AssistanceOverviewCollectionViewCell.swift in Sources */,
 				4ED38843209D030600A8BEE2 /* SegmentedFormNavigationController.swift in Sources */,
 				4E75176320B6291C00B2D7E0 /* SegmentedFormInfoViewController.swift in Sources */,
 				4ED38848209D030600A8BEE2 /* FormListSelectTableViewCell.swift in Sources */,
 				4ED38852209D04AE00A8BEE2 /* String+TGK.swift in Sources */,
 				4ED3883D209D030600A8BEE2 /* FormPickerTableViewCell.swift in Sources */,
 				4ED38845209D030600A8BEE2 /* FormPageViewController.swift in Sources */,
+				C0B9C4A021371E54009BEE60 /* SafetyNetInfoTableViewCell.swift in Sources */,
 				4E8354A220CBFD33009DF8CE /* RemoteConfigDefaults.swift in Sources */,
 				4E75177020C8954C00B2D7E0 /* AssistanceHomeViewController.swift in Sources */,
 			);

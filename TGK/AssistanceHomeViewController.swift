@@ -10,91 +10,95 @@ import UIKit
 
 class AssistanceHomeViewController: UIViewController {
     
-    enum AssistanceHomeRowIndex:Int {
-        case overview = 0
-        case forms = 1
-    }
-
-    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var programDescriptionLabel: UILabel!
+    @IBOutlet weak var requestAssistanceLabel: UILabel!
     
-    let overviewCellReuseId = "homeCellReusdeId"
-    let formsCellReuseId = "formsCellReuseId"
+    @IBOutlet weak var startSelfInquiryButton: UIButton! {
+        didSet {
+            self.startSelfInquiryButton.isEnabled = false
+        }
+    }
+    @IBOutlet weak var startReferralInquiryButton: UIButton! {
+        didSet {
+            self.startReferralInquiryButton.isEnabled = false
+        }
+    }
+    @IBOutlet weak var startFormInfoLabel: UILabel!
+    @IBOutlet weak var learnMoreButton: UIButton!
+
+    var selfAssistanceFormModel:SegmentedFormModel?
+    var referralAssistanceFormModel:SegmentedFormModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self.collectionView.register(UINib(nibName: "AssistanceOverviewCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: self.overviewCellReuseId)
-        self.collectionView.register(UINib(nibName: "AssistanceFormsCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: self.formsCellReuseId)
+        self.fetchFormsIfNeeded()
+        self.styleView()
+    }
+    
+    private func styleView() {
+        self.programDescriptionLabel.font = UIFont.tgkSubtitle
+        self.programDescriptionLabel.textColor = UIColor.tgkBlue
         
-        self.collectionView.dataSource = self
-        self.collectionView.delegate = self
+        self.learnMoreButton.titleLabel?.font = UIFont.tgkNavigation
+        self.learnMoreButton.tintColor = UIColor.tgkOrange
+        
+        self.startSelfInquiryButton.backgroundColor = UIColor.tgkOrange
+        self.startSelfInquiryButton.titleLabel?.font = UIFont.tgkNavigation
+        
+        self.startReferralInquiryButton.backgroundColor = UIColor.tgkOrange
+        self.startReferralInquiryButton.titleLabel?.font = UIFont.tgkNavigation
+        
+        self.requestAssistanceLabel.font = UIFont.tgkBody
+        self.requestAssistanceLabel.textColor = UIColor.tgkDarkGray
+        
+        self.startFormInfoLabel.font = UIFont.tgkMetadata
+        self.startFormInfoLabel.textColor = UIColor.tgkLightGray
+        
+        if let programDescriptionString = self.programDescriptionLabel.text {
+            let crisisGrantRange = (programDescriptionString as NSString).range(of: "CRISIS GRANTS")
+            let illnessRange = (programDescriptionString as NSString).range(of: "illness")
+            let injuryRange = (programDescriptionString as NSString).range(of: "injury")
+            let deathString = (programDescriptionString as NSString).range(of: "death")
+            let disasterString = (programDescriptionString as NSString).range(of: "disaster")
+            
+            let programAttributedString = NSMutableAttributedString(string: programDescriptionString, attributes: [NSAttributedStringKey.foregroundColor:UIColor.tgkBlue])
+            programAttributedString.addAttribute(.foregroundColor, value: UIColor.tgkOrange, range: crisisGrantRange)
+            programAttributedString.addAttribute(.foregroundColor, value: UIColor.tgkOrange, range: illnessRange)
+            programAttributedString.addAttribute(.foregroundColor, value: UIColor.tgkOrange, range: injuryRange)
+            programAttributedString.addAttribute(.foregroundColor, value: UIColor.tgkOrange, range: deathString)
+            programAttributedString.addAttribute(.foregroundColor, value: UIColor.tgkOrange, range: disasterString)
+            self.programDescriptionLabel.attributedText = programAttributedString
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBar.isHidden = true
-        self.fetchCellFormsIfNeeded()
+        self.fetchFormsIfNeeded()
     }
     
-    func fetchCellFormsIfNeeded() {
-        if let overviewCell = self.collectionView.cellForItem(at: IndexPath(row: AssistanceHomeRowIndex.overview.rawValue, section: 0)) as? AssistanceOverviewCollectionViewCell {
-            if overviewCell.assistanceSelfFormModel == nil || overviewCell.assistanceReferralFormModel == nil {
-                overviewCell.fetchForms()
+    func fetchFormsIfNeeded() {
+        if self.selfAssistanceFormModel == nil {
+            ServiceManager.sharedInstace.getFirebaseForm(id: "assistanceInquirySelf") { (formModel, error) in
+                if let formModel = formModel {
+                    self.selfAssistanceFormModel = formModel
+                    self.startSelfInquiryButton.isEnabled = true
+                }
             }
         }
         
-        if let formsCell = self.collectionView.cellForItem(at: IndexPath(row: AssistanceHomeRowIndex.forms.rawValue, section: 0)) as? AssistanceFormsCollectionViewCell {
-            print("here")
-            if formsCell.volunteerFormModel == nil || formsCell.multiplyJoyModel == nil {
-                formsCell.fetchForms()
+        if self.referralAssistanceFormModel == nil {
+            ServiceManager.sharedInstace.getFirebaseForm(id: "assistanceInquiryReferral") { (formModel, error) in
+                if let formModel = formModel {
+                    self.referralAssistanceFormModel = formModel
+                    self.startReferralInquiryButton.isEnabled = true
+                }
             }
         }
     }
-}
-
-//MARK: UICollectionViewDataSource, UICollectionViewDelegate
-extension AssistanceHomeViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        switch indexPath.row {
-        case AssistanceHomeRowIndex.overview.rawValue:
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: self.overviewCellReuseId, for: indexPath) as! AssistanceOverviewCollectionViewCell
-            cell.delegate = self
-            return cell
-        case AssistanceHomeRowIndex.forms.rawValue:
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: self.formsCellReuseId, for: indexPath) as! AssistanceFormsCollectionViewCell
-            cell.delegate = self
-            return cell
-        default:
-            return UICollectionViewCell()
-        }
-    }
-    
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 2
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return self.collectionView.bounds.size
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
-    }
-}
-
-//MARK:AssistanceFormsCollectionViewCellDelegate
-extension AssistanceHomeViewController: AssistanceOverviewCollectionViewCellDelegate {
-    func assistanceOverviewCollectionViewCellAssistanceForSelfPressed(cell: AssistanceOverviewCollectionViewCell) {
-        guard let inquiryForm = cell.assistanceSelfFormModel else {
+    @IBAction func startSelfAssistancePressed(_ sender: Any) {
+        guard let inquiryForm = self.selfAssistanceFormModel else {
             return
         }
         
@@ -104,8 +108,8 @@ extension AssistanceHomeViewController: AssistanceOverviewCollectionViewCellDele
         self.present(segmentedNav, animated: true)
     }
     
-    func assistanceOverviewCollectionViewCellAssistanceReferralPressed(cell: AssistanceOverviewCollectionViewCell) {
-        guard let inquiryForm = cell.assistanceReferralFormModel else {
+    @IBAction func startReferralAssistancePressed(_ sender: Any) {
+        guard let inquiryForm = self.referralAssistanceFormModel else {
             return
         }
         
@@ -114,38 +118,9 @@ extension AssistanceHomeViewController: AssistanceOverviewCollectionViewCellDele
         segmentedNav.formDelegate = self
         self.present(segmentedNav, animated: true)
     }
+    
 }
 
-//MARK: AssistanceFormsCollectionViewCellDelegate
-extension AssistanceHomeViewController: AssistanceFormsCollectionViewCellDelegate {
-    func assistanceFormsCellDidSelectMultiplyJoyForm(cell: AssistanceFormsCollectionViewCell) {
-        guard let inquiryForm = cell.multiplyJoyModel else {
-            return
-        }
-        
-        let segmentedNav = UIStoryboard(name: "Forms", bundle: nil).instantiateViewController(withIdentifier: "SegmentedFormNavigationControllerId") as! SegmentedFormNavigationController
-        segmentedNav.segmentedFormModel = inquiryForm
-        self.present(segmentedNav, animated: true)
-    }
-    
-    func assistanceFormsCellDidSelectVolunteerForm(cell: AssistanceFormsCollectionViewCell) {
-        guard let inquiryForm = cell.volunteerFormModel else {
-            return
-        }
-        
-        let segmentedNav = UIStoryboard(name: "Forms", bundle: nil).instantiateViewController(withIdentifier: "SegmentedFormNavigationControllerId") as! SegmentedFormNavigationController
-        segmentedNav.segmentedFormModel = inquiryForm
-        self.present(segmentedNav, animated: true)
-    }
-    
-    func assistanceFormsCellDidSelectMultiplyJoyShare(cell: AssistanceFormsCollectionViewCell) {
-        ExternalShareManager.sharedInstance.presentShareControllerFromViewController(fromController: self, title: "Help restaurant workers in need", urlString: "https://thegivingkitchen.wufoo.com/forms/multiply-joy-inquiry/", image: UIImage(named: "tgkShareIcon"))
-    }
-    
-    func assistanceFormsCellDidSelectVolunteerShare(cell: AssistanceFormsCollectionViewCell) {
-        ExternalShareManager.sharedInstance.presentShareControllerFromViewController(fromController: self, title: "Sign up to be a Giving Kitchen Volunteer!", urlString: "https://thegivingkitchen.wufoo.com/forms/gk-volunteer-survey/", image: UIImage(named: "tgkShareIcon"))
-    }
-}
 
 //MARK: Segmented Form Delegate
 extension AssistanceHomeViewController:SegmentedFormNavigationControllerDelegate {
@@ -162,6 +137,9 @@ extension AssistanceHomeViewController:AssistanceSuccessViewControllerDelegate {
     func assistanceSuccessViewControllerDelegateDonePressed(viewController: AssistanceSuccessViewController) {
         viewController.dismiss(animated: true)
     }
-    
-    
 }
+
+///TODO leaving this here for now
+//ExternalShareManager.sharedInstance.presentShareControllerFromViewController(fromController: self, title: "Help restaurant workers in need", urlString: "https://thegivingkitchen.wufoo.com/forms/multiply-joy-inquiry/", image: UIImage(named: "tgkShareIcon"))
+//
+//ExternalShareManager.sharedInstance.presentShareControllerFromViewController(fromController: self, title: "Sign up to be a Giving Kitchen Volunteer!", urlString: "https://thegivingkitchen.wufoo.com/forms/gk-volunteer-survey/", image: UIImage(named: "tgkShareIcon"))

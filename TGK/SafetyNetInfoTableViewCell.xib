@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SafetyNetInfoTableViewCell" customModule="TGK" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="360" height="432"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="zNZ-eh-kuu">
+                    <rect key="frame" x="16" y="8" width="328" height="248.5"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The giving kitchen facebook group" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2yt-cB-Qg0">
+                            <rect key="frame" x="0.0" y="0.0" width="328" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B9M-uN-zog">
+                            <rect key="frame" x="0.0" y="28.5" width="328" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WcH-qu-9aL">
+                            <rect key="frame" x="0.0" y="57" width="328" height="30"/>
+                            <state key="normal" title="www.website.com"/>
+                            <connections>
+                                <action selector="websiteButtonPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="fRM-dd-wGZ"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DgR-nY-rb6">
+                            <rect key="frame" x="0.0" y="95" width="328" height="30"/>
+                            <state key="normal" title="123 main street, atlanta, ga 30030"/>
+                            <connections>
+                                <action selector="addressButtonPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="i1e-KY-EGq"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ly-kp-n9f">
+                            <rect key="frame" x="0.0" y="133" width="328" height="30"/>
+                            <state key="normal" title="555-555-5555"/>
+                            <connections>
+                                <action selector="phoneButtonPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="H3E-9q-VbR"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contact Name: jay park" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cdl-ef-QRd">
+                            <rect key="frame" x="0.0" y="171" width="328" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="140-cU-73I">
+                            <rect key="frame" x="0.0" y="199.5" width="328" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Counties served" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9dZ-F3-qUQ">
+                            <rect key="frame" x="0.0" y="228" width="328" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="zNZ-eh-kuu" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="PKy-HW-uUc"/>
+                <constraint firstItem="zNZ-eh-kuu" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="8" id="Tcx-as-Nx7"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="zNZ-eh-kuu" secondAttribute="bottom" constant="16" id="c4d-Mc-dki"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="zNZ-eh-kuu" secondAttribute="trailing" constant="16" id="dTu-8C-t3g"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="addressButton" destination="DgR-nY-rb6" id="9bW-Dr-3z3"/>
+                <outlet property="categoryLabel" destination="B9M-uN-zog" id="guI-qC-Ikw"/>
+                <outlet property="contactNameLabel" destination="cdl-ef-QRd" id="9G6-kq-oeL"/>
+                <outlet property="countiesLabel" destination="9dZ-F3-qUQ" id="fNQ-of-r1X"/>
+                <outlet property="descriptionLabel" destination="140-cU-73I" id="KU2-vi-eQO"/>
+                <outlet property="nameLabel" destination="2yt-cB-Qg0" id="UrR-34-Oh4"/>
+                <outlet property="phoneButton" destination="9ly-kp-n9f" id="kxR-l4-eH1"/>
+                <outlet property="websiteButton" destination="WcH-qu-9aL" id="dgo-fp-6YX"/>
+            </connections>
+            <point key="canvasLocation" x="26" y="-64"/>
+        </view>
+    </objects>
+</document>

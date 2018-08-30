@@ -35,10 +35,15 @@ class MainTabBarController: UITabBarController {
         let donateHomeNavVC = UINavigationController(rootViewController: donateHomeVC)
         donateHomeNavVC.tabBarItem = UITabBarItem(title: "Give", image: UIImage(named: "tabBarDonate"), selectedImage: nil)
         
+        let safetyNetHomeVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SafetyNetHomeViewControllerId") as! SafetyNetHomeViewController
+        _ = safetyNetHomeVC.view
+        let safetyNetNavVC = UINavigationController(rootViewController: safetyNetHomeVC)
+        safetyNetNavVC.tabBarItem = UITabBarItem(title: "SafetyNet", image: UIImage(named: "tabBarEvents"), selectedImage: nil)
+        
         #if DEBUG
-        self.viewControllers = [eventsHomeNavVC, assistanceHomeNavVC, donateHomeNavVC, formsHomeNavVC]
+        self.viewControllers = [eventsHomeNavVC, assistanceHomeNavVC, donateHomeNavVC, safetyNetNavVC, formsHomeNavVC]
         #else
-        self.viewControllers = [eventsHomeNavVC, assistanceHomeNavVC, donateHomeNavVC]
+        self.viewControllers = [eventsHomeNavVC, assistanceHomeNavVC, donateHomeNavVC, safetyNetNavVC]
         #endif
         
         //Remote config

@@ -11,7 +11,6 @@ import Firebase
 import FirebaseDatabase
 import Alamofire
 import FirebaseAuth
-import Stripe
 
 class FormsHomeViewController: UIViewController {
 
