@@ -80,7 +80,7 @@ extension SafetyNetHomeViewController {
             //TODO
             break
             
-        case SafetyNetHomeVCRow.tooltip.rawValue:
+        case SafetyNetHomeVCRow.resource.rawValue:
             let cell = tableView.dequeueReusableCell(withIdentifier: self.safetyNetCellReuseId) as! SafetyNetInfoTableViewCell
             
             let safetyNetModel = self.safetyNetModels[indexPath.row]
