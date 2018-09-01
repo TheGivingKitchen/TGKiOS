@@ -22,7 +22,13 @@ class SafetyNetHomeViewController: UIViewController {
         case searching
     }
     
-    fileprivate var viewState:ViewState = .normal
+    fileprivate var viewState:ViewState = .normal {
+        didSet {
+            if oldValue != viewState {
+                self.scrollToTop()
+            }
+        }
+    }
     fileprivate var safetyNetModels:[SafetyNetResourceModel] = []
     
     ///filtered models while searching
@@ -160,7 +166,6 @@ extension SafetyNetHomeViewController: UISearchResultsUpdating {
             lowercaseTrimmedSearchText.isEmpty == false else {
                 self.viewState = .normal
                 self.tableView.reloadData()
-                self.scrollToTop()
                 return
         }
         
@@ -218,6 +223,10 @@ extension SafetyNetHomeViewController: UISearchResultsUpdating {
     
     func scrollToTop() {
         DispatchQueue.main.async {
+            let resourceCount = self.viewState == .normal ? self.safetyNetModels.count : self.filteredSafetyNetModels.count
+            if resourceCount == 0 {
+                return
+            }
             let indexPath = IndexPath(row: 0, section: SafetyNetHomeVCRow.resource.rawValue)
             self.tableView.scrollToRow(at: indexPath, at: .top, animated: true)
         }
