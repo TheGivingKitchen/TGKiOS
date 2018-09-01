@@ -45,6 +45,8 @@
 		4E890FFD209E32120034A83B /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E890FFC209E32120034A83B /* Router.swift */; };
 		4E89100B209F6F360034A83B /* FormPageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E89100A209F6F360034A83B /* FormPageModel.swift */; };
 		4E89100D209F779E0034A83B /* assistanceInquiry.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E89100C209F779E0034A83B /* assistanceInquiry.json */; };
+		4EAF08EB2139FBB20083E023 /* SafetyNetHomeTooltipCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EAF08EA2139FBB20083E023 /* SafetyNetHomeTooltipCell.xib */; };
+		4EAF08ED2139FBC90083E023 /* SafetyNetHomeTooltipCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAF08EC2139FBC90083E023 /* SafetyNetHomeTooltipCell.swift */; };
 		4ECA9BFB20A2687B0084A317 /* BaseNibLoadedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECA9BFA20A2687B0084A317 /* BaseNibLoadedView.swift */; };
 		4ECA9BFD20A269A10084A317 /* FormListSelectTableViewCellRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECA9BFC20A269A10084A317 /* FormListSelectTableViewCellRow.swift */; };
 		4ECA9BFF20A269D00084A317 /* FormListSelectTableViewCellRow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4ECA9BFE20A269D00084A317 /* FormListSelectTableViewCellRow.xib */; };
@@ -81,6 +83,7 @@
 		4ED3884E209D030600A8BEE2 /* FormTextViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4ED3883C209D030600A8BEE2 /* FormTextViewTableViewCell.xib */; };
 		4ED38851209D04AE00A8BEE2 /* UIColor+TGK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED3884F209D04AD00A8BEE2 /* UIColor+TGK.swift */; };
 		4ED38852209D04AE00A8BEE2 /* String+TGK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED38850209D04AD00A8BEE2 /* String+TGK.swift */; };
+		4EF43480213AD008009C2679 /* UIButton+TGK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF4347F213AD008009C2679 /* UIButton+TGK.swift */; };
 		C0965F482114C583005EAB0C /* Utilities.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0965F472114C583005EAB0C /* Utilities.storyboard */; };
 		C0965F4B2114C8BF005EAB0C /* DonationSuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0965F4A2114C8BF005EAB0C /* DonationSuccessViewController.swift */; };
 		C0A259832130AA870007AB20 /* SafetyNetResourceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A259822130AA870007AB20 /* SafetyNetResourceModel.swift */; };
@@ -136,6 +139,8 @@
 		4E890FFC209E32120034A83B /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		4E89100A209F6F360034A83B /* FormPageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormPageModel.swift; sourceTree = "<group>"; };
 		4E89100C209F779E0034A83B /* assistanceInquiry.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = assistanceInquiry.json; sourceTree = "<group>"; };
+		4EAF08EA2139FBB20083E023 /* SafetyNetHomeTooltipCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SafetyNetHomeTooltipCell.xib; sourceTree = "<group>"; };
+		4EAF08EC2139FBC90083E023 /* SafetyNetHomeTooltipCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafetyNetHomeTooltipCell.swift; sourceTree = "<group>"; };
 		4ECA9BFA20A2687B0084A317 /* BaseNibLoadedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNibLoadedView.swift; sourceTree = "<group>"; };
 		4ECA9BFC20A269A10084A317 /* FormListSelectTableViewCellRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormListSelectTableViewCellRow.swift; sourceTree = "<group>"; };
 		4ECA9BFE20A269D00084A317 /* FormListSelectTableViewCellRow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FormListSelectTableViewCellRow.xib; sourceTree = "<group>"; };
@@ -177,6 +182,7 @@
 		4ED3883C209D030600A8BEE2 /* FormTextViewTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FormTextViewTableViewCell.xib; sourceTree = "<group>"; };
 		4ED3884F209D04AD00A8BEE2 /* UIColor+TGK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+TGK.swift"; sourceTree = "<group>"; };
 		4ED38850209D04AD00A8BEE2 /* String+TGK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+TGK.swift"; sourceTree = "<group>"; };
+		4EF4347F213AD008009C2679 /* UIButton+TGK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+TGK.swift"; sourceTree = "<group>"; };
 		C0965F472114C583005EAB0C /* Utilities.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Utilities.storyboard; sourceTree = "<group>"; };
 		C0965F4A2114C8BF005EAB0C /* DonationSuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationSuccessViewController.swift; sourceTree = "<group>"; };
 		C0A259822130AA870007AB20 /* SafetyNetResourceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafetyNetResourceModel.swift; sourceTree = "<group>"; };
@@ -404,6 +410,7 @@
 				4ED38850209D04AD00A8BEE2 /* String+TGK.swift */,
 				4ED3884F209D04AD00A8BEE2 /* UIColor+TGK.swift */,
 				4E7C2E3120B1D8F800A20303 /* UIFont+TGK.swift */,
+				4EF4347F213AD008009C2679 /* UIButton+TGK.swift */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -521,6 +528,8 @@
 			children = (
 				C0B9C49D21371E45009BEE60 /* SafetyNetInfoTableViewCell.xib */,
 				C0B9C49F21371E54009BEE60 /* SafetyNetInfoTableViewCell.swift */,
+				4EAF08EA2139FBB20083E023 /* SafetyNetHomeTooltipCell.xib */,
+				4EAF08EC2139FBC90083E023 /* SafetyNetHomeTooltipCell.swift */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -621,6 +630,7 @@
 				4ECA9C0920A85B580084A317 /* FormShortNameTableViewCell.xib in Resources */,
 				4ED3884E209D030600A8BEE2 /* FormTextViewTableViewCell.xib in Resources */,
 				4E7C2E2D20B1D8AF00A20303 /* RobotoMono-Italic.ttf in Resources */,
+				4EAF08EB2139FBB20083E023 /* SafetyNetHomeTooltipCell.xib in Resources */,
 				4E7C2E2C20B1D8AF00A20303 /* RobotoMono-BoldItalic.ttf in Resources */,
 				4ECA9BFF20A269D00084A317 /* FormListSelectTableViewCellRow.xib in Resources */,
 				4E7C2E1B20B1D8A600A20303 /* Kulturista-Bold.otf in Resources */,
@@ -740,7 +750,9 @@
 				4ECA9BFB20A2687B0084A317 /* BaseNibLoadedView.swift in Sources */,
 				4E75177620C8A95700B2D7E0 /* EventsHomeViewController.swift in Sources */,
 				4ED38843209D030600A8BEE2 /* SegmentedFormNavigationController.swift in Sources */,
+				4EAF08ED2139FBC90083E023 /* SafetyNetHomeTooltipCell.swift in Sources */,
 				4E75176320B6291C00B2D7E0 /* SegmentedFormInfoViewController.swift in Sources */,
+				4EF43480213AD008009C2679 /* UIButton+TGK.swift in Sources */,
 				4ED38848209D030600A8BEE2 /* FormListSelectTableViewCell.swift in Sources */,
 				4ED38852209D04AE00A8BEE2 /* String+TGK.swift in Sources */,
 				4ED3883D209D030600A8BEE2 /* FormPickerTableViewCell.swift in Sources */,

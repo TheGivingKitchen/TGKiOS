@@ -24,12 +24,15 @@ class SafetyNetInfoTableViewCell: UITableViewCell {
     @IBOutlet weak var contactNameLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var countiesLabel: UILabel!
+    @IBOutlet weak var bottomDividerView: UIView!
     
     weak var delegate:SafetyNetInfoTableViewCellDelegate?
     var safetyNetModel:SafetyNetResourceModel?
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.selectionStyle = .none
+        
         self.styleView()
     }
     
@@ -57,6 +60,8 @@ class SafetyNetInfoTableViewCell: UITableViewCell {
         
         self.countiesLabel.font = UIFont.tgkBody
         self.countiesLabel.textColor = UIColor.tgkDarkDarkGray
+        
+        self.bottomDividerView.backgroundColor = UIColor.tgkBackgroundGray
     }
     
     func configure(withSafetyNetModel model:SafetyNetResourceModel) {

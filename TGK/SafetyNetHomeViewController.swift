@@ -18,10 +18,13 @@ class SafetyNetHomeViewController: UITableViewController {
     var safetyNetModels:[SafetyNetResourceModel] = []
     
     private let safetyNetCellReuseId = "safetyNetCellReuseId"
+    private let safetyNetTooltipReuseId = "safetyNetTooltipReuseId"
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.register(UINib(nibName: "SafetyNetInfoTableViewCell", bundle: nil), forCellReuseIdentifier: self.safetyNetCellReuseId)
+        self.tableView.register(UINib(nibName: "SafetyNetHomeTooltipCell", bundle: nil), forCellReuseIdentifier: self.safetyNetTooltipReuseId)
+        
         self.tableView.tableFooterView = UIView()
         self.tableView.rowHeight = UITableViewAutomaticDimension
         
@@ -30,27 +33,26 @@ class SafetyNetHomeViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-//        self.navigationController?.navigationBar.isHidden = true
+
         self.fetchData()
     }
     
     func fetchData() {
-//        ServiceManager.sharedInstace.getSafetyNetResources { (safetyNetModels, error) in
-//        }
-        
-        ServiceManager.sharedInstace.getLocalSafetyNetResources { (safetyNetModels, error) in
-            if let error = error {
-                print(error)
-                return
+        ServiceManager.sharedInstace.getSafetyNetResources { (safetyNetModels, error) in
+            ServiceManager.sharedInstace.getLocalSafetyNetResources { (safetyNetModels, error) in
+                if let error = error {
+                    print(error)
+                    return
+                }
+                
+                guard let safetyNetModels = safetyNetModels,
+                    self.safetyNetModels != safetyNetModels else {
+                        return
+                }
+                
+                self.safetyNetModels = safetyNetModels
+                self.tableView.reloadData()
             }
-            
-            guard let safetyNetModels = safetyNetModels,
-                self.safetyNetModels != safetyNetModels else {
-                return
-            }
-            
-            self.safetyNetModels = safetyNetModels
-            self.tableView.reloadData()
         }
     }
 }
@@ -77,8 +79,9 @@ extension SafetyNetHomeViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.section {
         case SafetyNetHomeVCRow.tooltip.rawValue:
-            //TODO
-            break
+            let cell = tableView.dequeueReusableCell(withIdentifier: self.safetyNetTooltipReuseId) as! SafetyNetHomeTooltipCell
+            cell.delegate = self
+            return cell
             
         case SafetyNetHomeVCRow.resource.rawValue:
             let cell = tableView.dequeueReusableCell(withIdentifier: self.safetyNetCellReuseId) as! SafetyNetInfoTableViewCell
@@ -105,5 +108,12 @@ extension SafetyNetHomeViewController:SafetyNetInfoTableViewCellDelegate {
     func safetyNetInfoTableViewCellRequestCallPhone(url: URL, cell: SafetyNetInfoTableViewCell) {
         UIApplication.shared.open(url, options: [:]) { (success) in
         }
+    }
+}
+
+extension SafetyNetHomeViewController :SafetyNetHomeTooltipCellDelegate {
+    func safetyNetHomeTooltipCellDidPressClose(cell: SafetyNetHomeTooltipCell) {
+        AppDataStore.hasClosedSafetyNetTooltip = true
+        self.tableView.reloadSections(NSIndexSet(index: SafetyNetHomeVCRow.tooltip.rawValue) as IndexSet, with: UITableViewRowAnimation.bottom)
     }
 }

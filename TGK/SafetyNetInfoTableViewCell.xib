@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -16,7 +16,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="zNZ-eh-kuu">
-                    <rect key="frame" x="16" y="8" width="328" height="248.5"/>
+                    <rect key="frame" x="16" y="16" width="328" height="248.5"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The giving kitchen facebook group" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2yt-cB-Qg0">
                             <rect key="frame" x="0.0" y="0.0" width="328" height="20.5"/>
@@ -71,18 +71,29 @@
                         </label>
                     </subviews>
                 </stackView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3iM-lk-JYw">
+                    <rect key="frame" x="16" y="431" width="344" height="1"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="CEH-tD-E7d"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="3iM-lk-JYw" secondAttribute="bottom" id="1p9-Pk-Pe0"/>
+                <constraint firstItem="3iM-lk-JYw" firstAttribute="leading" secondItem="zNZ-eh-kuu" secondAttribute="leading" id="IYp-ou-uLd"/>
                 <constraint firstItem="zNZ-eh-kuu" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="PKy-HW-uUc"/>
-                <constraint firstItem="zNZ-eh-kuu" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="8" id="Tcx-as-Nx7"/>
+                <constraint firstItem="zNZ-eh-kuu" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="16" id="Tcx-as-Nx7"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="zNZ-eh-kuu" secondAttribute="bottom" constant="16" id="c4d-Mc-dki"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="3iM-lk-JYw" secondAttribute="trailing" id="cQC-og-HRf"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="zNZ-eh-kuu" secondAttribute="trailing" constant="16" id="dTu-8C-t3g"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
                 <outlet property="addressButton" destination="DgR-nY-rb6" id="9bW-Dr-3z3"/>
+                <outlet property="bottomDividerView" destination="3iM-lk-JYw" id="lkf-fP-flT"/>
                 <outlet property="categoryLabel" destination="B9M-uN-zog" id="guI-qC-Ikw"/>
                 <outlet property="contactNameLabel" destination="cdl-ef-QRd" id="9G6-kq-oeL"/>
                 <outlet property="countiesLabel" destination="9dZ-F3-qUQ" id="fNQ-of-r1X"/>
