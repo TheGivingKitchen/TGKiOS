@@ -48,6 +48,7 @@ class SafetyNetInfoTableViewCell: UITableViewCell {
         
         self.addressButton.titleLabel?.font = UIFont.tgkBody
         self.addressButton.tintColor = UIColor.tgkBlue
+        self.addressButton.titleLabel?.numberOfLines = 0
         
         self.phoneButton.titleLabel?.font = UIFont.tgkBody
         self.phoneButton.tintColor = UIColor.tgkBlue
@@ -95,14 +96,14 @@ class SafetyNetInfoTableViewCell: UITableViewCell {
             self.phoneButton.isHidden = true
         }
         else {
-            self.phoneButton.setTitle(model.phoneNumber, for: .normal)
+            self.phoneButton.setTitle(model.phoneNumber?.formatStringToPhoneNumber(), for: .normal)
         }
         
         if model.contactName.isNilOrEmpty {
             self.contactNameLabel.isHidden = true
         }
         else {
-            self.contactNameLabel.text = model.contactName
+            self.contactNameLabel.text = "Ask for: \(model.contactName ?? "Anyone")"
         }
         
         if model.resourceDescription.isNilOrEmpty {

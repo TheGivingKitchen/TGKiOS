@@ -23,7 +23,7 @@ struct SafetyNetResourceModel:Equatable {
         self.address = jsonDict["address"] as? String
         self.websiteUrlString = jsonDict["website"] as? String
         self.phoneNumber = jsonDict["phone"] as? String
-        self.phoneNumber = self.phoneNumber?.formatStringToPhoneNumber()
+        self.phoneNumber = self.phoneNumber?.formatStringToNumericString()
         self.contactName = jsonDict["contactName"] as? String
         self.category = jsonDict["category"] as? String
         self.resourceDescription = jsonDict["description"] as? String
