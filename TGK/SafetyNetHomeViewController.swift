@@ -34,7 +34,6 @@ class SafetyNetHomeViewController: UIViewController {
     ///filtered models while searching
     fileprivate var filteredSafetyNetModels:[SafetyNetResourceModel] = []
     fileprivate let searchController = UISearchController(searchResultsController: nil)
-    fileprivate var previousSearchText:String? = ""
     
     private let safetyNetCellReuseId = "safetyNetCellReuseId"
     private let safetyNetTooltipReuseId = "safetyNetTooltipReuseId"
@@ -213,12 +212,6 @@ extension SafetyNetHomeViewController: UISearchResultsUpdating {
         
         self.viewState = .searching
         self.tableView.reloadData()
-        
-        ///scroll to the top if its a new search term
-        if (self.filteredSafetyNetModels.count > 0 && searchText != self.previousSearchText) {
-            self.scrollToTop()
-        }
-        self.previousSearchText = searchText
     }
     
     func scrollToTop() {
