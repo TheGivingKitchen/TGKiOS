@@ -15,10 +15,10 @@ class MainTabBarController: UITabBarController {
         super.viewDidLoad()
         self.tabBar.unselectedItemTintColor = UIColor.tgkBlue
         
-        let formsHomeVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "FormsHomeViewControllerId") as! FormsHomeViewController
-        _ = formsHomeVC.view
-        let formsHomeNavVC = UINavigationController(rootViewController: formsHomeVC)
-        formsHomeNavVC.tabBarItem = UITabBarItem(title: "Testing", image: UIImage(named: ""), selectedImage: nil)
+        let testHomeVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TestHomeViewControllerId") as! TestHomeViewController
+        _ = testHomeVC.view
+        let testHomeNavVC = UINavigationController(rootViewController: testHomeVC)
+        testHomeNavVC.tabBarItem = UITabBarItem(title: "Testing", image: UIImage(named: ""), selectedImage: nil)
         
         let assistanceHomeVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AssistanceHomeViewControllerId") as! AssistanceHomeViewController
         _ = assistanceHomeVC.view
@@ -41,7 +41,7 @@ class MainTabBarController: UITabBarController {
         safetyNetNavVC.tabBarItem = UITabBarItem(title: "SafetyNet", image: UIImage(named: "tabBarEvents"), selectedImage: nil)
         
         #if DEBUG
-        self.viewControllers = [eventsHomeNavVC, assistanceHomeNavVC, donateHomeNavVC, safetyNetNavVC, formsHomeNavVC]
+        self.viewControllers = [eventsHomeNavVC, assistanceHomeNavVC, donateHomeNavVC, safetyNetNavVC, testHomeNavVC]
         #else
         self.viewControllers = [eventsHomeNavVC, assistanceHomeNavVC, donateHomeNavVC, safetyNetNavVC]
         #endif

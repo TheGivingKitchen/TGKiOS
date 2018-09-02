@@ -12,7 +12,7 @@ import FirebaseDatabase
 import Alamofire
 import FirebaseAuth
 
-class FormsHomeViewController: UIViewController {
+class TestHomeViewController: UIViewController {
 
     
     override func viewDidLoad() {

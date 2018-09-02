@@ -521,10 +521,10 @@ Through our Crisis Grants, we cover the cost of living expenses for restaurant w
             </objects>
             <point key="canvasLocation" x="-3058.4000000000001" y="917.99100449775119"/>
         </scene>
-        <!--Forms Home View Controller-->
+        <!--Test Home View Controller-->
         <scene sceneID="Bo2-0V-Hhr">
             <objects>
-                <viewController storyboardIdentifier="FormsHomeViewControllerId" id="xq2-nz-JWz" customClass="FormsHomeViewController" customModule="TGK" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TestHomeViewControllerId" id="xq2-nz-JWz" customClass="TestHomeViewController" customModule="TGK" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oUr-OM-M0G">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
