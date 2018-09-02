@@ -530,11 +530,27 @@ Through our Crisis Grants, we cover the cost of living expenses for restaurant w
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CiC-LI-aBZ">
-                                <rect key="frame" x="16" y="37" width="46" height="30"/>
+                                <rect key="frame" x="23" y="37" width="33" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="main"/>
                                 <connections>
                                     <action selector="buttontapped:" destination="xq2-nz-JWz" eventType="touchUpInside" id="heT-tk-1FM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zIa-0q-Uff">
+                                <rect key="frame" x="34" y="111" width="37" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="north"/>
+                                <connections>
+                                    <action selector="northGA:" destination="xq2-nz-JWz" eventType="touchUpInside" id="WYM-tc-8XK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8WV-Gq-1WE">
+                                <rect key="frame" x="33" y="171" width="39" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="south"/>
+                                <connections>
+                                    <action selector="southGA:" destination="xq2-nz-JWz" eventType="touchUpInside" id="pCD-nE-zAq"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -544,7 +560,7 @@ Through our Crisis Grants, we cover the cost of living expenses for restaurant w
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pv4-A4-DEc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2236" y="917"/>
+            <point key="canvasLocation" x="-2236" y="916.1919040479761"/>
         </scene>
     </scenes>
     <resources>

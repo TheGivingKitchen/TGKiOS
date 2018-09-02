@@ -27,4 +27,22 @@ class TestHomeViewController: UIViewController {
             }
         }
     }
+    
+    @IBAction func northGA(_ sender: Any) {
+        UIApplication.shared.open(URL(string: "fb://group?id=1836033839791219")!, options: [:]) { (success) in
+            if success == false {
+                let tgkSafariVC = TGKSafariViewController(url: URL(string: "https://www.facebook.com/groups/1836033839791219")!)
+                self.present(tgkSafariVC, animated: true)
+            }
+        }
+    }
+    
+    @IBAction func southGA(_ sender: Any) {
+        UIApplication.shared.open(URL(string: "fb://group?id=1763853010365060")!, options: [:]) { (success) in
+            if success == false {
+                let tgkSafariVC = TGKSafariViewController(url: URL(string: "https://www.facebook.com/groups/1763853010365060")!)
+                self.present(tgkSafariVC, animated: true)
+            }
+        }
+    }
 }

@@ -14,7 +14,8 @@ class SafetyNetHomeViewController: UIViewController {
     
     private enum SafetyNetHomeVCRow:Int {
         case tooltip = 0
-        case resource = 1
+        case facebook = 1
+        case resource = 2
     }
     
     enum ViewState {
@@ -37,11 +38,13 @@ class SafetyNetHomeViewController: UIViewController {
     
     private let safetyNetCellReuseId = "safetyNetCellReuseId"
     private let safetyNetTooltipReuseId = "safetyNetTooltipReuseId"
+    private let safetyNetFacebookCellReuseId = "safetyNetFacebookCellReuseId"
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.register(UINib(nibName: "SafetyNetInfoTableViewCell", bundle: nil), forCellReuseIdentifier: self.safetyNetCellReuseId)
+        self.tableView.register(UINib(nibName: "FacebookGroupAccessTableViewCell", bundle: nil), forCellReuseIdentifier: self.safetyNetFacebookCellReuseId)
         self.tableView.register(UINib(nibName: "SafetyNetHomeTooltipCell", bundle: nil), forCellReuseIdentifier: self.safetyNetTooltipReuseId)
         
         self.tableView.tableFooterView = UIView()
@@ -81,7 +84,7 @@ class SafetyNetHomeViewController: UIViewController {
 
 extension SafetyNetHomeViewController: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return 3
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -91,6 +94,8 @@ extension SafetyNetHomeViewController: UITableViewDelegate, UITableViewDataSourc
                 return 0
             }
             return 1
+        case SafetyNetHomeVCRow.facebook.rawValue:
+            return self.viewState == .searching ? 0 : 1
         case SafetyNetHomeVCRow.resource.rawValue:
             return self.viewState == .normal ? self.safetyNetModels.count : self.filteredSafetyNetModels.count
         default:
@@ -102,6 +107,11 @@ extension SafetyNetHomeViewController: UITableViewDelegate, UITableViewDataSourc
         switch indexPath.section {
         case SafetyNetHomeVCRow.tooltip.rawValue:
             let cell = tableView.dequeueReusableCell(withIdentifier: self.safetyNetTooltipReuseId) as! SafetyNetHomeTooltipCell
+            cell.delegate = self
+            return cell
+            
+        case SafetyNetHomeVCRow.facebook.rawValue:
+            let cell = tableView.dequeueReusableCell(withIdentifier: self.safetyNetFacebookCellReuseId) as! FacebookGroupAccessTableViewCell
             cell.delegate = self
             return cell
             
@@ -140,7 +150,16 @@ extension SafetyNetHomeViewController :SafetyNetHomeTooltipCellDelegate {
     }
 }
 
-//MARK: - Searching
+
+//MARK: - FacebookCell Delegate
+extension SafetyNetHomeViewController:FacebookGroupAccessTableViewCellDelegate {
+    func facebookGroupAccessTableViewCellRequestOpen(url: URL) {
+        let tgkSafariVC = TGKSafariViewController(url: url)
+        self.present(tgkSafariVC, animated: true)
+    }
+}
+
+//MARK: - UISearchResultsUpdating Delegate
 extension SafetyNetHomeViewController: UISearchResultsUpdating {
     func setupSearchController() {
         self.searchController.searchResultsUpdater = self

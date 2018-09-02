@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="FacebookGroupAccessTableViewCell" customModule="TGK" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="329" height="399"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="05b-qk-JMJ">
+                    <rect key="frame" x="0.0" y="391" width="329" height="8"/>
+                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="8" id="mND-9Y-dF8"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Join our Restaurant Workers group on Facebook" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CuK-uH-zRh">
+                    <rect key="frame" x="16" y="16" width="297" height="41"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="fR9-lZ-HdV">
+                    <rect key="frame" x="16" y="73" width="297" height="100.5"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="iv3-nn-gpr">
+                            <rect key="frame" x="0.0" y="0.0" width="98" height="100.5"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wTF-zb-EJo">
+                                    <rect key="frame" x="0.0" y="0.0" width="98" height="72"/>
+                                    <state key="normal" image="facebookGroupMetro"/>
+                                    <connections>
+                                        <action selector="metroGroupPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="Fhj-jR-6Sk"/>
+                                    </connections>
+                                </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Metro ATL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Fi5-6B-VYN">
+                                    <rect key="frame" x="0.0" y="80" width="98" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Fva-24-Mlw">
+                            <rect key="frame" x="106" y="0.0" width="89" height="100.5"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gjx-LV-Za5">
+                                    <rect key="frame" x="0.0" y="0.0" width="89" height="72"/>
+                                    <state key="normal" image="facebookGroupNorth"/>
+                                    <connections>
+                                        <action selector="northGroupPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="Trj-es-tzV"/>
+                                    </connections>
+                                </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="North GA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="hMv-84-muu">
+                                    <rect key="frame" x="0.0" y="80" width="89" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Otd-mz-xIn">
+                            <rect key="frame" x="203" y="0.0" width="94" height="100.5"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hfp-ip-hyQ">
+                                    <rect key="frame" x="0.0" y="0.0" width="94" height="72"/>
+                                    <state key="normal" image="facebookGroupSouth"/>
+                                    <connections>
+                                        <action selector="southGroupPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="gQX-bZ-wj9"/>
+                                    </connections>
+                                </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="South GA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="wfk-Rw-3YK">
+                                    <rect key="frame" x="0.0" y="80" width="94" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="05b-qk-JMJ" secondAttribute="bottom" id="9HA-6L-BQy"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="05b-qk-JMJ" secondAttribute="trailing" id="AJB-oL-8kx"/>
+                <constraint firstItem="05b-qk-JMJ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Knh-DL-rOU"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="CuK-uH-zRh" secondAttribute="trailing" constant="16" id="OKt-T7-rtH"/>
+                <constraint firstItem="CuK-uH-zRh" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="16" id="ZcJ-ku-2dJ"/>
+                <constraint firstItem="05b-qk-JMJ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="fR9-lZ-HdV" secondAttribute="bottom" constant="16" id="foe-mE-1vL"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="fR9-lZ-HdV" secondAttribute="trailing" constant="16" id="kH2-0O-Znh"/>
+                <constraint firstItem="fR9-lZ-HdV" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="o0M-J8-hfJ"/>
+                <constraint firstItem="fR9-lZ-HdV" firstAttribute="top" secondItem="CuK-uH-zRh" secondAttribute="bottom" constant="16" id="u1f-Kw-WoF"/>
+                <constraint firstItem="CuK-uH-zRh" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="wvX-Ph-AHm"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="bottomDividerView" destination="05b-qk-JMJ" id="5Gk-i3-CPX"/>
+                <outlet property="joinUsLabel" destination="CuK-uH-zRh" id="7P2-MF-Qgi"/>
+                <outlet property="metroAtlLabel" destination="Fi5-6B-VYN" id="Viq-91-WNa"/>
+                <outlet property="northGaLabel" destination="hMv-84-muu" id="CcH-lz-Ig9"/>
+                <outlet property="southGaLabel" destination="wfk-Rw-3YK" id="dn3-zs-sld"/>
+            </connections>
+            <point key="canvasLocation" x="1.5" y="-82.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="facebookGroupMetro" width="72" height="72"/>
+        <image name="facebookGroupNorth" width="72" height="72"/>
+        <image name="facebookGroupSouth" width="72" height="72"/>
+    </resources>
+</document>
