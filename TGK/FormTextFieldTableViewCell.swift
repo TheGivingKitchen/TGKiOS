@@ -36,7 +36,7 @@ class FormTextFieldTableViewCell: UITableViewCell, FormItemView {
         switch self.inputType {
         case .unspecifiedText, .email, .fullName, .jobTitle:
             answerText = self.textField.text
-        case .phoneNumber, .number:
+        case .phoneNumber, .number, .currency:
             answerText = self.textField.text?.formatStringToNumericString()
         }
         
@@ -52,6 +52,7 @@ class FormTextFieldTableViewCell: UITableViewCell, FormItemView {
         case fullName
         case jobTitle
         case number
+        case currency
     }
     
     var inputType:TextInputType = .unspecifiedText {
@@ -113,7 +114,7 @@ extension FormTextFieldTableViewCell: UITextFieldDelegate {
             self.textField.textContentType = UITextContentType.jobTitle
             self.textField.keyboardType = .default
             self.textField.autocapitalizationType = .words
-        case .number:
+        case .number, .currency:
             self.textField.textContentType = UITextContentType("")
             self.textField.keyboardType = .phonePad
             self.textField.autocapitalizationType = .none
@@ -151,6 +152,14 @@ extension FormTextFieldTableViewCell: UITextFieldDelegate {
             }
             let fullString = textField.text! + string
             textField.text = fullString.formatStringToNumericString()
+            return false
+        case .currency:
+            //workaround for multiple entries caused by inserting predictive text
+            if string == "" || string == " " {
+                return true
+            }
+            let fullString = textField.text! + string
+            textField.text = fullString.formatStringToUSD()
             return false
         }
     }

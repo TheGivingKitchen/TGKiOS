@@ -165,9 +165,14 @@
 		            "Page": "1",
 		            "Type": "time",
 		            "ID": "Field1280"
-		        },
-		        {
-		            "Title": "Expected attendance\n",
+		        }
+			]
+		},
+		{
+            "pageInformation" : "Please tell us about your event",
+			"questions" : [
+				{
+		            "Title": "Expected attendance",
 		            "Instructions": "",
 		            "IsRequired": "1",
 		            "ClassNames": "",

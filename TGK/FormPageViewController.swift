@@ -187,6 +187,13 @@ extension FormPageViewController {
             numberTextCell.delegate = self
             self.formQuestionCells.append(numberTextCell)
             return numberTextCell
+        case .currency:
+            let currencyTextCell = Bundle.main.loadNibNamed("FormTextFieldTableViewCell", owner: self, options: [:])?.first as! FormTextFieldTableViewCell
+            currencyTextCell.formQuestion = questionModel
+            currencyTextCell.inputType = .currency
+            currencyTextCell.delegate = self
+            self.formQuestionCells.append(currencyTextCell)
+            return currencyTextCell
         case .radio:
             let listSelectCell = Bundle.main.loadNibNamed("FormListSelectTableViewCell", owner: self, options: [:])?.first as! FormListSelectTableViewCell
             self.formQuestionCells.append(listSelectCell)
@@ -243,7 +250,6 @@ extension FormPageViewController {
             timeCell.formQuestion = questionModel
             timeCell.delegate = self
             return timeCell
-            
         case .unknown:
             let unknownCell = UITableViewCell(style: .default, reuseIdentifier: "questionCell")
             self.formQuestionCells.append(unknownCell)

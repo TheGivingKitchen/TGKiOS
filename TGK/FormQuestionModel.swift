@@ -25,6 +25,7 @@ struct FormQuestionModel {
         case checkbox = "checkbox"
         case url = "url"
         case time = "time"
+        case currency = "money"
     }
     
     let id:String
