@@ -30,10 +30,16 @@ struct SafetyNetResourceModel:Equatable {
         
         if let countiesString = jsonDict["countiesServed"] as? String {
             let splitStringArray = countiesString.components(separatedBy: ",")
-            let sanitizedArray = splitStringArray.map { (countyString) -> String in
+            let sanitizedArray = splitStringArray.filter { (county) -> Bool in
+                if county.trimmingCharacters(in: .whitespaces).isEmpty {
+                    return false
+                }
+                return true
+            }
+            let trimmedArray = sanitizedArray.map { (countyString) -> String in
                 return countyString.trimmingCharacters(in: .whitespaces)
             }
-            self.counties = sanitizedArray
+            self.counties = trimmedArray
         }
     }
     

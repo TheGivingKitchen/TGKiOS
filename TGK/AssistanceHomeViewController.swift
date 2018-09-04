@@ -78,21 +78,17 @@ class AssistanceHomeViewController: UIViewController {
     }
     
     func fetchFormsIfNeeded() {
-        if self.selfAssistanceFormModel == nil {
-            ServiceManager.sharedInstace.getFirebaseForm(id: "assistanceInquirySelf") { (formModel, error) in
-                if let formModel = formModel {
-                    self.selfAssistanceFormModel = formModel
-                    self.startSelfInquiryButton.isEnabled = true
-                }
+        ServiceManager.sharedInstace.getFirebaseForm(id: "assistanceInquirySelf") { (formModel, error) in
+            if let formModel = formModel {
+                self.selfAssistanceFormModel = formModel
+                self.startSelfInquiryButton.isEnabled = true
             }
         }
         
-        if self.referralAssistanceFormModel == nil {
-            ServiceManager.sharedInstace.getFirebaseForm(id: "assistanceInquiryReferral") { (formModel, error) in
-                if let formModel = formModel {
-                    self.referralAssistanceFormModel = formModel
-                    self.startReferralInquiryButton.isEnabled = true
-                }
+        ServiceManager.sharedInstace.getFirebaseForm(id: "assistanceInquiryReferral") { (formModel, error) in
+            if let formModel = formModel {
+                self.referralAssistanceFormModel = formModel
+                self.startReferralInquiryButton.isEnabled = true
             }
         }
     }

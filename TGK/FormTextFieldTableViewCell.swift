@@ -34,17 +34,10 @@ class FormTextFieldTableViewCell: UITableViewCell, FormItemView {
         
         var answerText:String? = nil
         switch self.inputType {
-        case .unspecifiedText:
+        case .unspecifiedText, .email, .fullName, .jobTitle:
             answerText = self.textField.text
-        case .email:
-            answerText = self.textField.text
-        case .phoneNumber:
-            answerText = self.textField.text?.components(separatedBy: CharacterSet.decimalDigits.inverted)
-                .joined()
-        case .fullName:
-            answerText = self.textField.text
-        case .jobTitle:
-            answerText = self.textField.text
+        case .phoneNumber, .number:
+            answerText = self.textField.text?.formatStringToNumericString()
         }
         
         let answerModel = FormQuestionAnswerModel(wufooFieldID: self.formQuestion.id, userAnswer: answerText)
@@ -58,6 +51,7 @@ class FormTextFieldTableViewCell: UITableViewCell, FormItemView {
         case phoneNumber
         case fullName
         case jobTitle
+        case number
     }
     
     var inputType:TextInputType = .unspecifiedText {
@@ -68,8 +62,11 @@ class FormTextFieldTableViewCell: UITableViewCell, FormItemView {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        //style
+        self.styleView()
+        self.textField.delegate = self
+    }
+    
+    private func styleView() {
         self.questionLabel.font = UIFont.tgkBody
         self.questionLabel.textColor = UIColor.tgkDarkDarkGray
         self.textField.font = UIFont.tgkBody
@@ -80,8 +77,6 @@ class FormTextFieldTableViewCell: UITableViewCell, FormItemView {
         self.textField.leftView = spacerView
         self.errorMessageLabel.font = UIFont.tgkMetadata
         self.errorMessageLabel.textColor = UIColor.tgkOrange
-        
-        self.textField.delegate = self
     }
     
     private func configureView() {
@@ -118,6 +113,10 @@ extension FormTextFieldTableViewCell: UITextFieldDelegate {
             self.textField.textContentType = UITextContentType.jobTitle
             self.textField.keyboardType = .default
             self.textField.autocapitalizationType = .words
+        case .number:
+            self.textField.textContentType = UITextContentType("")
+            self.textField.keyboardType = .phonePad
+            self.textField.autocapitalizationType = .none
             break
         }
     }
@@ -145,6 +144,14 @@ extension FormTextFieldTableViewCell: UITextFieldDelegate {
             return true
         case .jobTitle:
             return true
+        case .number:
+            //workaround for multiple entries caused by inserting predictive text
+            if string == "" || string == " " {
+                return true
+            }
+            let fullString = textField.text! + string
+            textField.text = fullString.formatStringToNumericString()
+            return false
         }
     }
     

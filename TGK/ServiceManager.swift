@@ -34,30 +34,6 @@ class ServiceManager: NSObject {
         }
     }
     
-    
-    //TODO change to local segmented form and take a string param in
-    func getSegmentedForm(completion: @escaping (SegmentedFormModel?, Error?)->Void) {
-        
-        if let path = Bundle.main.path(forResource: "segmentedForm", ofType: "json") {
-            do {
-                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .alwaysMapped)
-                let jsonObj = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as! [String:Any]
-                let segmentedForm = SegmentedFormModel(jsonDict: jsonObj)
-                completion(segmentedForm, nil)
-                
-            }
-            catch let error {
-                print("parse error: \(error.localizedDescription)")
-                completion(nil, nil)
-            }
-        }
-        else {
-            print("Invalid filename/path.")
-            completion(nil, nil)
-        }
-
-        
-    }
 }
 
 

@@ -1,15 +1,15 @@
 //
-//  FormDateTableViewCell.swift
+//  FormTimeTableViewCell.swift
 //  TGK
 //
-//  Created by Jay Park on 5/13/18.
+//  Created by Jay Park on 9/4/18.
 //  Copyright © 2018 TheGivingKitchen. All rights reserved.
 //
 
 import UIKit
 
-class FormDateTableViewCell: UITableViewCell, FormItemView {
-
+class FormTimeTableViewCell: UITableViewCell, FormItemView {
+    
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var pickerTopOutlineView: UIView!
@@ -44,10 +44,9 @@ class FormDateTableViewCell: UITableViewCell, FormItemView {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.dateFormater.dateFormat = "hh:mm a"
         
         self.styleView()
-        
-        self.dateFormater.dateFormat = "yyyyMMdd" 
     }
     
     func styleView() {
@@ -58,7 +57,7 @@ class FormDateTableViewCell: UITableViewCell, FormItemView {
         self.errorMessageLabel.font = UIFont.tgkMetadata
         self.errorMessageLabel.textColor = UIColor.tgkOrange
     }
-
+    
     private func configureView() {
         self.questionLabel.text = self.formQuestion.isRequired ? self.formQuestion.questionTitle + "*" : self.formQuestion.questionTitle
     }

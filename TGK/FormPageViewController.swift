@@ -181,10 +181,12 @@ extension FormPageViewController {
             self.formQuestionCells.append(phoneNumberTextCell)
             return phoneNumberTextCell
         case .number:
-            let numberCell = UITableViewCell(style: .default, reuseIdentifier: "questionCell")
-            self.formQuestionCells.append(numberCell)
-            numberCell.textLabel?.text = "number cell"
-            return numberCell
+            let numberTextCell = Bundle.main.loadNibNamed("FormTextFieldTableViewCell", owner: self, options: [:])?.first as! FormTextFieldTableViewCell
+            numberTextCell.formQuestion = questionModel
+            numberTextCell.inputType = .number
+            numberTextCell.delegate = self
+            self.formQuestionCells.append(numberTextCell)
+            return numberTextCell
         case .radio:
             let listSelectCell = Bundle.main.loadNibNamed("FormListSelectTableViewCell", owner: self, options: [:])?.first as! FormListSelectTableViewCell
             self.formQuestionCells.append(listSelectCell)
@@ -229,6 +231,19 @@ extension FormPageViewController {
             dateCell.formQuestion = questionModel
             dateCell.delegate = self
             return dateCell
+        case .url:
+            let urlCell = Bundle.main.loadNibNamed("FormTextFieldTableViewCell", owner: self, options: [:])?.first as! FormTextFieldTableViewCell
+            urlCell.formQuestion = questionModel
+            urlCell.delegate = self
+            self.formQuestionCells.append(urlCell)
+            return urlCell
+        case .time:
+            let timeCell = Bundle.main.loadNibNamed("FormTimeTableViewCell", owner: self, options: [:])?.first as! FormTimeTableViewCell
+            self.formQuestionCells.append(timeCell)
+            timeCell.formQuestion = questionModel
+            timeCell.delegate = self
+            return timeCell
+            
         case .unknown:
             let unknownCell = UITableViewCell(style: .default, reuseIdentifier: "questionCell")
             self.formQuestionCells.append(unknownCell)

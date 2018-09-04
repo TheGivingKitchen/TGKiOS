@@ -164,7 +164,7 @@ extension SafetyNetHomeViewController: UISearchResultsUpdating {
     func setupSearchController() {
         self.searchController.searchResultsUpdater = self
         self.searchController.obscuresBackgroundDuringPresentation = false
-        self.searchController.searchBar.placeholder = "Search"
+        self.searchController.searchBar.placeholder = "Search community resources"
         self.searchController.searchBar.barTintColor = UIColor.tgkBlue
         self.searchController.searchBar.tintColor = UIColor.tgkOrange
         UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).font = UIFont.tgkBody

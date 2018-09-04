@@ -134,14 +134,14 @@ Through our Crisis Grants, we cover the cost of living expenses for restaurant w
             <objects>
                 <viewController storyboardIdentifier="DonateHomeViewControllerId" id="y0F-uA-TV7" customClass="DonateHomeViewController" customModule="TGK" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="L26-5J-HFY">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1500"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lPZ-5u-gVs">
-                                <rect key="frame" x="0.0" y="20" width="375" height="980"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="1480"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uJi-g7-Xap">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="980"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1480"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="donateGHeartLogo" translatesAutoresizingMaskIntoConstraints="NO" id="npw-v7-TQ7">
                                                 <rect key="frame" x="148.5" y="60" width="77" height="51"/>
@@ -230,40 +230,6 @@ Through our Crisis Grants, we cover the cost of living expenses for restaurant w
                                                     <constraint firstAttribute="height" constant="7" id="efm-5q-AON"/>
                                                 </constraints>
                                             </view>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="infoTitleLabel" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dYW-ud-97o">
-                                                <rect key="frame" x="20" y="664" width="335" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="infoSubtitleLabel" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kJB-O6-lEm">
-                                                <rect key="frame" x="20" y="705" width="335" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="infoBodyLabel" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g6z-go-xsI">
-                                                <rect key="frame" x="20" y="755" width="335" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="donatePins" translatesAutoresizingMaskIntoConstraints="NO" id="jJD-1x-mZe">
-                                                <rect key="frame" x="8" y="427.5" width="359" height="129"/>
-                                            </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="pinInfoLabel" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jlJ-Qn-tec">
-                                                <rect key="frame" x="20" y="572.5" width="335" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8HQ-p1-plP">
-                                                <rect key="frame" x="0.0" y="628" width="375" height="1"/>
-                                                <color key="backgroundColor" red="0.0" green="1" blue="0.030457442939999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="1" id="dAz-GG-Zhp"/>
-                                                </constraints>
-                                            </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dXY-68-AYz">
                                                 <rect key="frame" x="20" y="291" width="335" height="50"/>
                                                 <constraints>
@@ -288,50 +254,129 @@ Through our Crisis Grants, we cover the cost of living expenses for restaurant w
                                                     <constraint firstAttribute="height" constant="1" id="mvB-xe-liq"/>
                                                 </constraints>
                                             </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Volunteer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JYW-Dp-OQV">
+                                                <rect key="frame" x="20" y="423" width="74" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aJl-qf-Fu4">
+                                                <rect key="frame" x="20" y="460" width="335" height="101.5"/>
+                                                <string key="text">From educating the public about our program services to providing special event support, GK would not exist without the dedication of our champion volunteers. Join the team!</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JT5-HK-hh6">
+                                                <rect key="frame" x="20" y="577" width="335" height="50"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="kiP-7P-LP6"/>
+                                                </constraints>
+                                                <state key="normal" title="Volunteer!">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="volunteerPressed:" destination="y0F-uA-TV7" eventType="touchUpInside" id="Ujp-n3-vHZ"/>
+                                                </connections>
+                                            </button>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="donateVolunteerHero" translatesAutoresizingMaskIntoConstraints="NO" id="oYO-eK-DXJ">
+                                                <rect key="frame" x="20" y="643" width="335" height="188"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="oYO-eK-DXJ" secondAttribute="height" multiplier="335:188" id="0Kp-iQ-blu"/>
+                                                </constraints>
+                                            </imageView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4v4-BU-z5B">
+                                                <rect key="frame" x="0.0" y="847" width="375" height="7"/>
+                                                <color key="backgroundColor" red="0.0" green="1" blue="0.030457442939999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="7" id="cCK-nw-TXa"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Partner" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rhv-6V-ccZ">
+                                                <rect key="frame" x="20" y="870" width="57" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H1d-Ir-WPW">
+                                                <rect key="frame" x="20" y="907" width="335" height="81.5"/>
+                                                <string key="text">Would you like to become part of Giving Kitchen's social service or community resource referral program? We'd love to hear from you!</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xLn-8G-gFU">
+                                                <rect key="frame" x="20" y="1004" width="335" height="50"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="5gU-W9-WmB"/>
+                                                </constraints>
+                                                <state key="normal" title="Become a SafetyNet Partner">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="safetyNetPartnerPressed:" destination="y0F-uA-TV7" eventType="touchUpInside" id="cor-d9-YXD"/>
+                                                </connections>
+                                            </button>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="donatePartnerHero" translatesAutoresizingMaskIntoConstraints="NO" id="j6a-0J-DS6">
+                                                <rect key="frame" x="20" y="1070" width="335" height="188"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="j6a-0J-DS6" secondAttribute="height" multiplier="335:188" id="wCR-um-wPa"/>
+                                                </constraints>
+                                            </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
+                                            <constraint firstItem="oYO-eK-DXJ" firstAttribute="leading" secondItem="JT5-HK-hh6" secondAttribute="leading" id="0W9-R0-wUU"/>
                                             <constraint firstItem="jdF-eG-ymE" firstAttribute="leading" secondItem="dXY-68-AYz" secondAttribute="leading" id="1Np-FL-hIG"/>
                                             <constraint firstItem="npw-v7-TQ7" firstAttribute="top" secondItem="uJi-g7-Xap" secondAttribute="top" constant="60" id="2eR-9D-5O0"/>
-                                            <constraint firstItem="jlJ-Qn-tec" firstAttribute="top" secondItem="jJD-1x-mZe" secondAttribute="bottom" constant="16" id="3PA-KZ-YM9"/>
-                                            <constraint firstAttribute="trailing" secondItem="jlJ-Qn-tec" secondAttribute="trailing" constant="20" id="4lr-Zb-1z8"/>
-                                            <constraint firstAttribute="trailing" secondItem="8HQ-p1-plP" secondAttribute="trailing" id="6gQ-B3-3a6"/>
+                                            <constraint firstAttribute="trailing" secondItem="aJl-qf-Fu4" secondAttribute="trailing" constant="20" id="5ek-uw-EWl"/>
+                                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="j6a-0J-DS6" secondAttribute="bottom" constant="16" id="6UC-wv-vRT"/>
                                             <constraint firstItem="9Et-kF-fp3" firstAttribute="top" secondItem="dXY-68-AYz" secondAttribute="bottom" constant="1" id="9qf-9m-7bU"/>
                                             <constraint firstItem="9Et-kF-fp3" firstAttribute="trailing" secondItem="dXY-68-AYz" secondAttribute="trailing" id="BRp-th-rkm"/>
-                                            <constraint firstItem="jlJ-Qn-tec" firstAttribute="leading" secondItem="uJi-g7-Xap" secondAttribute="leading" constant="20" id="Cbp-aF-rAL"/>
+                                            <constraint firstAttribute="trailing" secondItem="4v4-BU-z5B" secondAttribute="trailing" id="Ccl-Av-MCD"/>
+                                            <constraint firstItem="aJl-qf-Fu4" firstAttribute="top" secondItem="JYW-Dp-OQV" secondAttribute="bottom" constant="16" id="Cg1-lI-PBf"/>
                                             <constraint firstItem="B5W-os-NSz" firstAttribute="top" secondItem="9Et-kF-fp3" secondAttribute="bottom" constant="8" id="Cni-gc-BQJ"/>
                                             <constraint firstAttribute="trailing" secondItem="jdF-eG-ymE" secondAttribute="trailing" id="Dou-Va-jfn"/>
-                                            <constraint firstItem="kJB-O6-lEm" firstAttribute="top" secondItem="dYW-ud-97o" secondAttribute="bottom" constant="20" id="EvF-B6-tzV"/>
+                                            <constraint firstItem="H1d-Ir-WPW" firstAttribute="top" secondItem="Rhv-6V-ccZ" secondAttribute="bottom" constant="16" id="FGc-U3-mxi"/>
                                             <constraint firstAttribute="trailing" secondItem="wY0-Fm-pUJ" secondAttribute="trailing" id="G8Q-06-pfL"/>
                                             <constraint firstItem="wY0-Fm-pUJ" firstAttribute="leading" secondItem="uJi-g7-Xap" secondAttribute="leading" id="Gt8-2b-67D"/>
-                                            <constraint firstItem="g6z-go-xsI" firstAttribute="top" secondItem="kJB-O6-lEm" secondAttribute="bottom" constant="30" id="MhB-tT-z4O"/>
-                                            <constraint firstItem="jJD-1x-mZe" firstAttribute="leading" secondItem="uJi-g7-Xap" secondAttribute="leading" constant="8" id="Mqv-GH-kic"/>
-                                            <constraint firstItem="jJD-1x-mZe" firstAttribute="top" secondItem="B5W-os-NSz" secondAttribute="bottom" constant="20.5" id="QOu-Eo-DUQ"/>
+                                            <constraint firstItem="JT5-HK-hh6" firstAttribute="leading" secondItem="aJl-qf-Fu4" secondAttribute="leading" id="Gwu-eC-VNC"/>
+                                            <constraint firstItem="j6a-0J-DS6" firstAttribute="leading" secondItem="xLn-8G-gFU" secondAttribute="leading" id="JI0-jf-uIy"/>
+                                            <constraint firstItem="xLn-8G-gFU" firstAttribute="top" secondItem="H1d-Ir-WPW" secondAttribute="bottom" constant="16" id="KmK-mi-RPG"/>
+                                            <constraint firstItem="oYO-eK-DXJ" firstAttribute="top" secondItem="JT5-HK-hh6" secondAttribute="bottom" constant="16" id="NKS-Xc-bj5"/>
+                                            <constraint firstItem="oYO-eK-DXJ" firstAttribute="trailing" secondItem="JT5-HK-hh6" secondAttribute="trailing" id="QKy-Af-8N9"/>
                                             <constraint firstItem="B5W-os-NSz" firstAttribute="leading" secondItem="uJi-g7-Xap" secondAttribute="leading" id="QQc-Qh-as5"/>
                                             <constraint firstAttribute="trailing" secondItem="dXY-68-AYz" secondAttribute="trailing" constant="20" id="Qej-9C-Alc"/>
+                                            <constraint firstItem="Rhv-6V-ccZ" firstAttribute="leading" secondItem="uJi-g7-Xap" secondAttribute="leading" constant="20" id="Uhg-8l-DJv"/>
+                                            <constraint firstItem="4v4-BU-z5B" firstAttribute="top" secondItem="oYO-eK-DXJ" secondAttribute="bottom" constant="16" id="WOL-CX-4Xh"/>
+                                            <constraint firstItem="JT5-HK-hh6" firstAttribute="trailing" secondItem="aJl-qf-Fu4" secondAttribute="trailing" id="WiV-BX-1LS"/>
                                             <constraint firstItem="npw-v7-TQ7" firstAttribute="centerX" secondItem="uJi-g7-Xap" secondAttribute="centerX" id="WvE-go-SJY"/>
-                                            <constraint firstItem="kJB-O6-lEm" firstAttribute="leading" secondItem="dYW-ud-97o" secondAttribute="leading" id="XlE-BD-9ie"/>
                                             <constraint firstAttribute="trailing" secondItem="B5W-os-NSz" secondAttribute="trailing" id="a2s-RS-mkd"/>
+                                            <constraint firstItem="4v4-BU-z5B" firstAttribute="leading" secondItem="uJi-g7-Xap" secondAttribute="leading" id="axy-5z-avY"/>
                                             <constraint firstItem="dXY-68-AYz" firstAttribute="top" secondItem="wY0-Fm-pUJ" secondAttribute="bottom" constant="8" id="cEM-rl-YF6"/>
-                                            <constraint firstAttribute="trailing" secondItem="dYW-ud-97o" secondAttribute="trailing" constant="20" id="eGH-0n-L2z"/>
-                                            <constraint firstItem="8HQ-p1-plP" firstAttribute="leading" secondItem="uJi-g7-Xap" secondAttribute="leading" id="fBR-ed-IXy"/>
-                                            <constraint firstItem="dYW-ud-97o" firstAttribute="leading" secondItem="uJi-g7-Xap" secondAttribute="leading" constant="20" id="fw7-av-tNy"/>
+                                            <constraint firstItem="xLn-8G-gFU" firstAttribute="leading" secondItem="H1d-Ir-WPW" secondAttribute="leading" id="dTH-tJ-LFn"/>
+                                            <constraint firstItem="j6a-0J-DS6" firstAttribute="trailing" secondItem="xLn-8G-gFU" secondAttribute="trailing" id="fhR-CS-ZGb"/>
                                             <constraint firstItem="jdF-eG-ymE" firstAttribute="top" secondItem="dXY-68-AYz" secondAttribute="bottom" id="hYC-1E-ZEQ"/>
-                                            <constraint firstItem="dYW-ud-97o" firstAttribute="top" secondItem="8HQ-p1-plP" secondAttribute="bottom" constant="35" id="i7R-tM-WD0"/>
-                                            <constraint firstAttribute="trailing" secondItem="jJD-1x-mZe" secondAttribute="trailing" constant="8" id="jRp-SZ-Fes"/>
-                                            <constraint firstItem="kJB-O6-lEm" firstAttribute="trailing" secondItem="dYW-ud-97o" secondAttribute="trailing" id="jhm-9x-ZhQ"/>
-                                            <constraint firstItem="g6z-go-xsI" firstAttribute="leading" secondItem="kJB-O6-lEm" secondAttribute="leading" id="kAc-cQ-wvP"/>
+                                            <constraint firstItem="xLn-8G-gFU" firstAttribute="trailing" secondItem="H1d-Ir-WPW" secondAttribute="trailing" id="hc9-Ng-rfh"/>
+                                            <constraint firstItem="JYW-Dp-OQV" firstAttribute="top" secondItem="B5W-os-NSz" secondAttribute="bottom" constant="16" id="kBv-Td-PMv"/>
                                             <constraint firstItem="dXY-68-AYz" firstAttribute="leading" secondItem="uJi-g7-Xap" secondAttribute="leading" constant="20" id="mxw-3J-Lmc"/>
-                                            <constraint firstItem="g6z-go-xsI" firstAttribute="trailing" secondItem="kJB-O6-lEm" secondAttribute="trailing" id="pp8-ZJ-vMh"/>
-                                            <constraint firstItem="8HQ-p1-plP" firstAttribute="top" secondItem="jlJ-Qn-tec" secondAttribute="bottom" constant="35" id="pqq-W2-77I"/>
                                             <constraint firstItem="wY0-Fm-pUJ" firstAttribute="top" secondItem="npw-v7-TQ7" secondAttribute="bottom" constant="50" id="rTB-M3-4kc"/>
+                                            <constraint firstItem="JYW-Dp-OQV" firstAttribute="leading" secondItem="uJi-g7-Xap" secondAttribute="leading" constant="20" id="re6-i7-sgE"/>
                                             <constraint firstItem="9Et-kF-fp3" firstAttribute="leading" secondItem="dXY-68-AYz" secondAttribute="leading" id="roF-Od-kbD"/>
-                                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="g6z-go-xsI" secondAttribute="bottom" constant="20" id="sV9-Xi-eOU"/>
+                                            <constraint firstItem="aJl-qf-Fu4" firstAttribute="leading" secondItem="uJi-g7-Xap" secondAttribute="leading" constant="20" id="tJD-aK-HPi"/>
+                                            <constraint firstItem="j6a-0J-DS6" firstAttribute="top" secondItem="xLn-8G-gFU" secondAttribute="bottom" constant="16" id="uFM-3k-kIJ"/>
+                                            <constraint firstItem="j6a-0J-DS6" firstAttribute="width" secondItem="j6a-0J-DS6" secondAttribute="height" multiplier="335:188" id="vtz-h8-bYv"/>
+                                            <constraint firstItem="JT5-HK-hh6" firstAttribute="top" secondItem="aJl-qf-Fu4" secondAttribute="bottom" constant="16" id="wZ7-1N-sZO"/>
+                                            <constraint firstItem="Rhv-6V-ccZ" firstAttribute="top" secondItem="4v4-BU-z5B" secondAttribute="bottom" constant="16" id="xc6-M2-jp4"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="uJi-g7-Xap" firstAttribute="height" secondItem="lPZ-5u-gVs" secondAttribute="height" priority="250" id="5gy-BU-fE5"/>
+                                    <constraint firstItem="H1d-Ir-WPW" firstAttribute="leading" secondItem="lPZ-5u-gVs" secondAttribute="leading" constant="20" id="7ea-dI-g7f"/>
+                                    <constraint firstAttribute="trailing" secondItem="H1d-Ir-WPW" secondAttribute="trailing" constant="20" id="BDg-FY-6zI"/>
                                     <constraint firstItem="uJi-g7-Xap" firstAttribute="top" secondItem="lPZ-5u-gVs" secondAttribute="top" id="cTW-Wr-p1Y"/>
                                     <constraint firstItem="uJi-g7-Xap" firstAttribute="width" secondItem="lPZ-5u-gVs" secondAttribute="width" id="mTz-eB-OlA"/>
                                     <constraint firstAttribute="bottom" secondItem="uJi-g7-Xap" secondAttribute="bottom" id="p4o-hW-tKo"/>
@@ -349,24 +394,28 @@ Through our Crisis Grants, we cover the cost of living expenses for restaurant w
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="UMe-qB-WDW"/>
                     </view>
-                    <size key="freeformSize" width="375" height="1000"/>
+                    <size key="freeformSize" width="375" height="1500"/>
                     <connections>
                         <outlet property="amountDescriptionLabel" destination="gFu-dB-q1Z" id="ooF-cw-se9"/>
                         <outlet property="amountTextField" destination="bt7-T3-O3R" id="4hJ-Vx-okG"/>
                         <outlet property="amountView" destination="wY0-Fm-pUJ" id="Qs3-lZ-O7f"/>
                         <outlet property="decrementAmountButton" destination="NoU-Sh-UC9" id="T6Z-Eo-jcA"/>
-                        <outlet property="dividerView" destination="B5W-os-NSz" id="WNb-ez-zkW"/>
                         <outlet property="donateTypeDividerView" destination="jdF-eG-ymE" id="Sfl-wh-46W"/>
+                        <outlet property="firstDividerView" destination="B5W-os-NSz" id="skb-2p-cGP"/>
                         <outlet property="incrementAmountButton" destination="lVM-By-9l6" id="bJ9-CL-5mJ"/>
-                        <outlet property="infoBodyLabel" destination="g6z-go-xsI" id="IPW-ab-Jiq"/>
-                        <outlet property="infoSubtitleLabel" destination="kJB-O6-lEm" id="l94-7m-Rv2"/>
-                        <outlet property="infoTitleLabel" destination="dYW-ud-97o" id="xyy-s6-xsX"/>
                         <outlet property="mainScrollView" destination="lPZ-5u-gVs" id="lrk-C3-5RQ"/>
-                        <outlet property="pinInfoLabel" destination="jlJ-Qn-tec" id="Efj-tZ-e9T"/>
+                        <outlet property="partnerButton" destination="xLn-8G-gFU" id="vbx-KD-oDh"/>
+                        <outlet property="partnerDescriptionLabel" destination="H1d-Ir-WPW" id="Yvc-sg-SNg"/>
+                        <outlet property="partnerHeaderLabel" destination="Rhv-6V-ccZ" id="48G-rq-dOQ"/>
+                        <outlet property="partnerImageView" destination="j6a-0J-DS6" id="vgu-hQ-wi3"/>
                         <outlet property="recurringDonationButton" destination="9Et-kF-fp3" id="MZH-rX-Of8"/>
-                        <outlet property="secondDividerView" destination="8HQ-p1-plP" id="WFX-XS-4hD"/>
+                        <outlet property="secondDividerView" destination="4v4-BU-z5B" id="F7R-4L-gWG"/>
                         <outlet property="usdLabel" destination="fSl-s3-fPH" id="6Iy-Hg-87Q"/>
                         <outlet property="useCreditCardButton" destination="dXY-68-AYz" id="92I-Ss-pwW"/>
+                        <outlet property="volunteerButton" destination="JT5-HK-hh6" id="bqU-0p-bSI"/>
+                        <outlet property="volunteerDescriptionLabel" destination="aJl-qf-Fu4" id="d8z-Tg-eSW"/>
+                        <outlet property="volunteerHeaderLabel" destination="JYW-Dp-OQV" id="KLf-sr-DZ8"/>
+                        <outlet property="volunteerImageView" destination="oYO-eK-DXJ" id="Ldh-EW-MtZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ol3-Ci-4Li" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -566,7 +615,8 @@ Through our Crisis Grants, we cover the cost of living expenses for restaurant w
     <resources>
         <image name="assistanceGPlusLogo" width="77" height="51"/>
         <image name="donateGHeartLogo" width="77" height="51"/>
-        <image name="donatePins" width="355" height="129"/>
+        <image name="donatePartnerHero" width="388" height="229"/>
+        <image name="donateVolunteerHero" width="343" height="194"/>
         <image name="eventsGLightbulb" width="77" height="51"/>
         <image name="eventsReadMore" width="98" height="14"/>
         <image name="leftChevron" width="12" height="21"/>

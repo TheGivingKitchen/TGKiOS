@@ -21,33 +21,40 @@ class DonateHomeViewController: UIViewController {
     @IBOutlet weak var decrementAmountButton: UIButton!
     @IBOutlet weak var incrementAmountButton: UIButton!
     @IBOutlet weak var amountDescriptionLabel: UILabel!
-    @IBOutlet weak var dividerView: UIView!
-    @IBOutlet weak var pinInfoLabel: UILabel!
+    @IBOutlet weak var firstDividerView: UIView!
+    @IBOutlet weak var volunteerHeaderLabel: UILabel!
+    @IBOutlet weak var volunteerDescriptionLabel: UILabel!
+    @IBOutlet weak var volunteerButton: UIButton!
+    @IBOutlet weak var volunteerImageView: UIImageView!
     @IBOutlet weak var secondDividerView: UIView!
-    @IBOutlet weak var infoTitleLabel: UILabel!
-    @IBOutlet weak var infoSubtitleLabel: UILabel!
-    @IBOutlet weak var infoBodyLabel: UILabel!
+    @IBOutlet weak var partnerHeaderLabel: UILabel!
+    @IBOutlet weak var partnerDescriptionLabel: UILabel!
+    @IBOutlet weak var partnerButton: UIButton!
+    @IBOutlet weak var partnerImageView: UIImageView!
     @IBOutlet weak var mainScrollView: UIScrollView!
     
-    
-    var amountAndDescriptions:[(amount:Int, description:String)] = [(50, "Covers a water bill"),
+    var amountAndDescriptions:[(amount:Int, description:String)] = [(25, "Covers a late fee"),
+                                                   (50, "Covers a water bill"),
                                                    (100, "Covers a power bill"),
                                                    (150, "Covers a gas bill"),
                                                    (500, "Covers housing"),
                                                    (1800, "A total grant!!")]
+    var volunteerFormModel:SegmentedFormModel?
+    var safetyNetParterFormModel:SegmentedFormModel?
     
-    let supportedPaymentNetworks:[PKPaymentNetwork] = [.visa, .masterCard, .amex]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.styleView()
         let endEditTapGestureRec = UITapGestureRecognizer(target: self, action: #selector(self.endEditing))
         self.mainScrollView.addGestureRecognizer(endEditTapGestureRec)
+        self.fetchData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBar.isHidden = true
+        self.fetchData()
     }
     
     func styleView() {
@@ -61,31 +68,50 @@ class DonateHomeViewController: UIViewController {
         self.useCreditCardButton.titleLabel?.font = UIFont.tgkNavigation
         self.useCreditCardButton.tintColor = UIColor.tgkOrange
         
+        self.donateTypeDividerView.backgroundColor = UIColor.tgkBackgroundGray
+        
         self.recurringDonationButton.titleLabel?.font = UIFont.tgkNavigation
         self.recurringDonationButton.tintColor = UIColor.tgkOrange
         
-        self.dividerView.backgroundColor = UIColor.tgkBackgroundGray
+        self.firstDividerView.backgroundColor = UIColor.tgkBackgroundGray
+        
+        self.volunteerHeaderLabel.font = UIFont.tgkBody
+        self.volunteerHeaderLabel.textColor = UIColor.tgkGray
+        
+        self.volunteerDescriptionLabel.font = UIFont.tgkBody
+        self.volunteerDescriptionLabel.textColor = UIColor.tgkDarkDarkGray
+        
+        self.volunteerButton.backgroundColor = UIColor.tgkOrange
+        self.volunteerButton.titleLabel?.font = UIFont.tgkNavigation
+        
         self.secondDividerView.backgroundColor = UIColor.tgkBackgroundGray
-        self.donateTypeDividerView.backgroundColor = UIColor.tgkBackgroundGray
         
-        self.pinInfoLabel.font = UIFont.tgkBody
-        self.pinInfoLabel.textColor = UIColor.tgkDarkGray
+        self.partnerHeaderLabel.font = UIFont.tgkBody
+        self.partnerHeaderLabel.textColor = UIColor.tgkGray
         
-        self.infoTitleLabel.font = UIFont.tgkSubtitle
-        self.infoTitleLabel.textColor = UIColor.tgkOrange
+        self.partnerDescriptionLabel.font = UIFont.tgkBody
+        self.partnerDescriptionLabel.textColor = UIColor.tgkDarkDarkGray
         
-        self.infoSubtitleLabel.font = UIFont.tgkNavigation
-        self.infoSubtitleLabel.textColor = UIColor.tgkBlue
-        
-        self.infoBodyLabel.font = UIFont.tgkBody
-        self.infoBodyLabel.textColor = UIColor.tgkDarkGray
-        
-        self.pinInfoLabel.text = "You'll receive a GK button when you donate to cover part of a specific portion of a grant, and if you donate to cover a full grant, you'll receive a GK pin."
-        self.infoTitleLabel.text = "the giving kitchen\ngives guidance."
-        self.infoSubtitleLabel.text = "The Giving Kitchen is building a restaurant community where crisis is met with compassion and care, and anyone can be a hero."
-        self.infoBodyLabel.text = "Stopping the cycle of poverty before it starts and offering a connection to social services needed to thrive after a crisis, we care for the most hard-working and vulnerable members of our community: restaurant workers.\n\n\nWelcome to the fight! In supporting GK’s mission, you share in our commitment to provide emergency assistance to restaurant workers, often locked in the fight of their lives, who serve their community every day. Your donation is 100 percent tax deductible and truly makes a difference."
+        self.partnerButton.backgroundColor = UIColor.tgkOrange
+        self.partnerButton.titleLabel?.font = UIFont.tgkNavigation
         
         self.configureStateForIncrementAndDecrementButtons()
+    }
+    
+    func fetchData() {
+        ServiceManager.sharedInstace.getFirebaseForm(id: "volunteerSignup") { (volunteerFormModel, error) in
+            if let unwrappedModel = volunteerFormModel {
+                self.volunteerFormModel = unwrappedModel
+                self.volunteerButton.isEnabled = true
+            }
+        }
+        
+        ServiceManager.sharedInstace.getFirebaseForm(id: "safetyNetPartner") { (safetyNetFormModel, error) in
+            if let unwrappedModel = safetyNetFormModel {
+                self.safetyNetParterFormModel = unwrappedModel
+                self.partnerButton.isEnabled = true
+            }
+        }
     }
     
     @objc func endEditing() {
@@ -187,10 +213,40 @@ class DonateHomeViewController: UIViewController {
             }
         }
     }
+    
+    @IBAction func volunteerPressed(_ sender: Any) {
+        guard let formModel = self.volunteerFormModel else {
+            return
+        }
+        
+        let segmentedNav = UIStoryboard(name: "Forms", bundle: nil).instantiateViewController(withIdentifier: "SegmentedFormNavigationControllerId") as! SegmentedFormNavigationController
+        segmentedNav.segmentedFormModel = formModel
+        segmentedNav.formDelegate = self
+        self.present(segmentedNav, animated: true)
+    }
+    
+    @IBAction func safetyNetPartnerPressed(_ sender: Any) {
+        guard let formModel = self.safetyNetParterFormModel else {
+            return
+        }
+        
+        let segmentedNav = UIStoryboard(name: "Forms", bundle: nil).instantiateViewController(withIdentifier: "SegmentedFormNavigationControllerId") as! SegmentedFormNavigationController
+        segmentedNav.segmentedFormModel = formModel
+        segmentedNav.formDelegate = self
+        self.present(segmentedNav, animated: true)
+    }
 }
 
 extension DonateHomeViewController:DonationSuccessViewControllerDelegate {
     func donationSuccessViewControllerDonePressed(viewController: DonationSuccessViewController) {
         viewController.dismiss(animated: true)
+    }
+}
+
+//MARK: Segmented Form Delegate
+extension DonateHomeViewController:SegmentedFormNavigationControllerDelegate {
+    func segmentedFormNavigationControllerDidFinish(viewController: SegmentedFormNavigationController) {
+        viewController.dismiss(animated: true) {
+        }
     }
 }

@@ -86,6 +86,9 @@
 		4EF43480213AD008009C2679 /* UIButton+TGK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF4347F213AD008009C2679 /* UIButton+TGK.swift */; };
 		4EF43482213C2381009C2679 /* FacebookGroupAccessTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EF43481213C2381009C2679 /* FacebookGroupAccessTableViewCell.xib */; };
 		4EF43484213C239A009C2679 /* FacebookGroupAccessTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF43483213C239A009C2679 /* FacebookGroupAccessTableViewCell.swift */; };
+		4EF43486213D95B9009C2679 /* safetyNetPartner.json in Resources */ = {isa = PBXBuildFile; fileRef = 4EF43485213D95B9009C2679 /* safetyNetPartner.json */; };
+		4EF43488213F2E63009C2679 /* FormTimeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EF43487213F2E63009C2679 /* FormTimeTableViewCell.xib */; };
+		4EF4348A213F2F0E009C2679 /* FormTimeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF43489213F2F0E009C2679 /* FormTimeTableViewCell.swift */; };
 		C0965F482114C583005EAB0C /* Utilities.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0965F472114C583005EAB0C /* Utilities.storyboard */; };
 		C0965F4B2114C8BF005EAB0C /* DonationSuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0965F4A2114C8BF005EAB0C /* DonationSuccessViewController.swift */; };
 		C0A259832130AA870007AB20 /* SafetyNetResourceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A259822130AA870007AB20 /* SafetyNetResourceModel.swift */; };
@@ -187,6 +190,9 @@
 		4EF4347F213AD008009C2679 /* UIButton+TGK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+TGK.swift"; sourceTree = "<group>"; };
 		4EF43481213C2381009C2679 /* FacebookGroupAccessTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FacebookGroupAccessTableViewCell.xib; sourceTree = "<group>"; };
 		4EF43483213C239A009C2679 /* FacebookGroupAccessTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookGroupAccessTableViewCell.swift; sourceTree = "<group>"; };
+		4EF43485213D95B9009C2679 /* safetyNetPartner.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = safetyNetPartner.json; sourceTree = "<group>"; };
+		4EF43487213F2E63009C2679 /* FormTimeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FormTimeTableViewCell.xib; sourceTree = "<group>"; };
+		4EF43489213F2F0E009C2679 /* FormTimeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormTimeTableViewCell.swift; sourceTree = "<group>"; };
 		C0965F472114C583005EAB0C /* Utilities.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Utilities.storyboard; sourceTree = "<group>"; };
 		C0965F4A2114C8BF005EAB0C /* DonationSuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationSuccessViewController.swift; sourceTree = "<group>"; };
 		C0A259822130AA870007AB20 /* SafetyNetResourceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafetyNetResourceModel.swift; sourceTree = "<group>"; };
@@ -282,6 +288,7 @@
 		4E75176420B9C53900B2D7E0 /* FormJson */ = {
 			isa = PBXGroup;
 			children = (
+				4EF43485213D95B9009C2679 /* safetyNetPartner.json */,
 				4E8354A320CC597A009DF8CE /* multiplyJoyInquiry.json */,
 				4E75177320C89FFC00B2D7E0 /* assistanceInquiryReferral.json */,
 				4E75177120C89C0400B2D7E0 /* assistanceInquirySelf.json */,
@@ -444,6 +451,8 @@
 				4ECA9C0C20A868500084A317 /* FormAddressTableViewCell.xib */,
 				4ECA9C0E20A8A2640084A317 /* FormDateTableViewCell.swift */,
 				4ECA9C1020A8A26E0084A317 /* FormDateTableViewCell.xib */,
+				4EF43489213F2F0E009C2679 /* FormTimeTableViewCell.swift */,
+				4EF43487213F2E63009C2679 /* FormTimeTableViewCell.xib */,
 			);
 			name = "Standard Wufoo";
 			sourceTree = "<group>";
@@ -642,6 +651,7 @@
 				4ECA9BFF20A269D00084A317 /* FormListSelectTableViewCellRow.xib in Resources */,
 				4E7C2E1B20B1D8A600A20303 /* Kulturista-Bold.otf in Resources */,
 				4E7C2E2720B1D8AF00A20303 /* RobotoMono-Regular.ttf in Resources */,
+				4EF43488213F2E63009C2679 /* FormTimeTableViewCell.xib in Resources */,
 				4E7C2E2820B1D8AF00A20303 /* RobotoMono-ThinItalic.ttf in Resources */,
 				4E7C2E2E20B1D8AF00A20303 /* RobotoMono-Bold.ttf in Resources */,
 				4ECA9C0D20A868500084A317 /* FormAddressTableViewCell.xib in Resources */,
@@ -652,6 +662,7 @@
 				4E1EED4E210A57B40084CFF3 /* Forms.storyboard in Resources */,
 				4E7C2E2920B1D8AF00A20303 /* RobotoMono-Light.ttf in Resources */,
 				4ECA9C3320AE37040084A317 /* GoogleService-Info.plist in Resources */,
+				4EF43486213D95B9009C2679 /* safetyNetPartner.json in Resources */,
 				4E7C2E2A20B1D8AF00A20303 /* RobotoMono-LightItalic.ttf in Resources */,
 				C0B9C49E21371E45009BEE60 /* SafetyNetInfoTableViewCell.xib in Resources */,
 				4ECF47FF211921FA00B273E4 /* Assistance.storyboard in Resources */,
@@ -741,6 +752,7 @@
 				4E4D22A120B1B2A700BA7577 /* FormsHomeViewController.swift in Sources */,
 				4E890FFD209E32120034A83B /* Router.swift in Sources */,
 				4ECA9C0720A85B4E0084A317 /* FormShortNameTableViewCell.swift in Sources */,
+				4EF4348A213F2F0E009C2679 /* FormTimeTableViewCell.swift in Sources */,
 				4ED38851209D04AE00A8BEE2 /* UIColor+TGK.swift in Sources */,
 				4E83549A20C8B976009DF8CE /* RSSCalendarEventModel.swift in Sources */,
 				4ECA9C0120A72D230084A317 /* FormQuestionSubfieldModel.swift in Sources */,

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="FormTimeTableViewCell" customModule="TGK" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="428" height="242"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Question Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EaN-wE-4lf">
+                    <rect key="frame" x="16" y="4" width="396" height="20"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iEx-yL-ent">
+                    <rect key="frame" x="0.0" y="28" width="428" height="1"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="yYp-fg-mHU"/>
+                    </constraints>
+                </view>
+                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZYV-Cu-OJJ">
+                    <rect key="frame" x="0.0" y="28" width="428" height="162"/>
+                    <date key="date" timeIntervalSinceReferenceDate="547920000.03848505">
+                        <!--2018-05-13 16:00:00 +0000-->
+                    </date>
+                    <date key="minimumDate" timeIntervalSinceReferenceDate="-2556190800">
+                        <!--1920-01-01 11:00:00 +0000-->
+                    </date>
+                </datePicker>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FmP-Fe-gS5">
+                    <rect key="frame" x="0.0" y="189" width="428" height="1"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="9zG-Tn-9D4"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="errorMessageLabel" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w4d-RJ-YLf">
+                    <rect key="frame" x="16" y="194" width="396" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="iEx-yL-ent" firstAttribute="trailing" secondItem="ZYV-Cu-OJJ" secondAttribute="trailing" id="3bf-Cj-mHH"/>
+                <constraint firstItem="w4d-RJ-YLf" firstAttribute="top" secondItem="ZYV-Cu-OJJ" secondAttribute="bottom" constant="4" id="5Tm-WP-4jc"/>
+                <constraint firstItem="iEx-yL-ent" firstAttribute="top" secondItem="ZYV-Cu-OJJ" secondAttribute="top" id="AR3-YL-Nv6"/>
+                <constraint firstItem="ZYV-Cu-OJJ" firstAttribute="top" secondItem="EaN-wE-4lf" secondAttribute="bottom" constant="4" id="DIJ-nP-lOt"/>
+                <constraint firstItem="FmP-Fe-gS5" firstAttribute="trailing" secondItem="ZYV-Cu-OJJ" secondAttribute="trailing" id="H38-Ee-x42"/>
+                <constraint firstItem="EaN-wE-4lf" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="H6e-t5-VSf"/>
+                <constraint firstItem="FmP-Fe-gS5" firstAttribute="bottom" secondItem="ZYV-Cu-OJJ" secondAttribute="bottom" id="Il9-RD-JTk"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="w4d-RJ-YLf" secondAttribute="trailing" constant="16" id="Kf7-Ys-3Ve"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="w4d-RJ-YLf" secondAttribute="bottom" constant="4" id="Pe6-Hc-eve"/>
+                <constraint firstItem="EaN-wE-4lf" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="4" id="Qel-rN-cGR"/>
+                <constraint firstItem="ZYV-Cu-OJJ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Uh3-Dr-uNa"/>
+                <constraint firstItem="w4d-RJ-YLf" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="bH7-WW-XAG"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="EaN-wE-4lf" secondAttribute="trailing" constant="16" id="duz-0n-hbH"/>
+                <constraint firstItem="FmP-Fe-gS5" firstAttribute="leading" secondItem="ZYV-Cu-OJJ" secondAttribute="leading" id="o26-Q2-Dtb"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="ZYV-Cu-OJJ" secondAttribute="trailing" id="xMQ-Ot-tMe"/>
+                <constraint firstItem="iEx-yL-ent" firstAttribute="leading" secondItem="ZYV-Cu-OJJ" secondAttribute="leading" id="xWU-Mj-4AY"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="datePicker" destination="ZYV-Cu-OJJ" id="gDa-hW-xdP"/>
+                <outlet property="errorMessageLabel" destination="w4d-RJ-YLf" id="5va-Jy-u7l"/>
+                <outlet property="pickerBottomOutlineView" destination="FmP-Fe-gS5" id="dma-EW-UsA"/>
+                <outlet property="pickerTopOutlineView" destination="iEx-yL-ent" id="Km9-xk-thw"/>
+                <outlet property="questionLabel" destination="EaN-wE-4lf" id="kYs-hY-md5"/>
+            </connections>
+            <point key="canvasLocation" x="39" y="-161"/>
+        </view>
+    </objects>
+</document>
