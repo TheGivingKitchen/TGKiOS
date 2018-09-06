@@ -44,7 +44,7 @@ class FormTimeTableViewCell: UITableViewCell, FormItemView {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.dateFormater.dateFormat = "hh:mm a"
+        self.dateFormater.dateFormat = "HH:mm:ss"
         
         self.styleView()
     }

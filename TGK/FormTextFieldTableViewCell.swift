@@ -34,9 +34,9 @@ class FormTextFieldTableViewCell: UITableViewCell, FormItemView {
         
         var answerText:String? = nil
         switch self.inputType {
-        case .unspecifiedText, .email, .fullName, .jobTitle:
+        case .unspecifiedText, .email, .fullName, .jobTitle, .currency:
             answerText = self.textField.text
-        case .phoneNumber, .number, .currency:
+        case .phoneNumber, .number:
             answerText = self.textField.text?.formatStringToNumericString()
         }
         
@@ -154,14 +154,38 @@ extension FormTextFieldTableViewCell: UITextFieldDelegate {
             textField.text = fullString.formatStringToNumericString()
             return false
         case .currency:
-            //workaround for multiple entries caused by inserting predictive text
-            if string == "" || string == " " {
-                return true
+            var fullString = textField.text! + string
+            if string == "" {
+                fullString = String(fullString.dropLast())
             }
-            let fullString = textField.text! + string
-            textField.text = fullString.formatStringToUSD()
+            
+            let numericString = fullString.formatStringToNumericString()
+            textField.text = self.formatStringToTwoDecimals(numberString: numericString)
             return false
         }
+    }
+    
+    private func formatStringToTwoDecimals(numberString:String) -> String {
+        guard let integerRepresentation = Int(numberString) else {
+                return "0.00"
+        }
+        
+        let sanitizedNumberString = String(integerRepresentation)
+        
+        if sanitizedNumberString.count == 0 {
+            return "0.00"
+        }
+        if sanitizedNumberString.count == 1 {
+            return "0.0"+sanitizedNumberString
+        }
+        if sanitizedNumberString.count == 2 {
+            return "0."+sanitizedNumberString
+        }
+        
+        var mutatingString = sanitizedNumberString
+        let decimalIndex = mutatingString.index(mutatingString.endIndex, offsetBy: -2)
+        mutatingString.insert(".", at: decimalIndex)
+        return mutatingString
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
