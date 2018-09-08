@@ -519,7 +519,7 @@
 			]
 		},
 		{
-            "pageInformation" : "Please tell us about your yourself",
+            "pageInformation" : "Do you know someone in need?",
 			"questions" : [
 				{
 		            "Title": "Are you or someone you know in the industry currently facing an unanticipated personal or medical hardship?",
@@ -546,7 +546,7 @@
 			]
 		},
 		{
-            "pageInformation" : "Please tell us about your yourself",
+            "pageInformation" : "Is there anything else you would like for us to know?",
 			"questions" : [
 						{
 		            "Title": "Additional comments/requests",

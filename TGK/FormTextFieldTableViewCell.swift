@@ -34,7 +34,7 @@ class FormTextFieldTableViewCell: UITableViewCell, FormItemView {
         
         var answerText:String? = nil
         switch self.inputType {
-        case .unspecifiedText, .email, .fullName, .jobTitle, .currency:
+        case .unspecifiedText, .email, .fullName, .jobTitle, .currency, .url:
             answerText = self.textField.text
         case .phoneNumber, .number:
             answerText = self.textField.text?.formatStringToNumericString()
@@ -53,6 +53,7 @@ class FormTextFieldTableViewCell: UITableViewCell, FormItemView {
         case jobTitle
         case number
         case currency
+        case url
     }
     
     var inputType:TextInputType = .unspecifiedText {
@@ -84,9 +85,16 @@ class FormTextFieldTableViewCell: UITableViewCell, FormItemView {
         self.questionLabel.text = self.formQuestion.isRequired ? self.formQuestion.questionTitle + "*" : self.formQuestion.questionTitle
         self.formatTextFieldBasedOnInputType()
     }
+    
+    override func prepareForReuse() {
+        self.textField.textContentType = UITextContentType("")
+        self.textField.keyboardType = .default
+        self.textField.autocapitalizationType = .sentences
+        self.textField.placeholder = ""
+    }
 }
 
-//validation and formatting
+///validation and formatting. Make sure to revert back to defaults in prepareForReuse()
 extension FormTextFieldTableViewCell: UITextFieldDelegate {
     func formatTextFieldBasedOnInputType() {
         switch self.inputType {
@@ -99,25 +107,42 @@ extension FormTextFieldTableViewCell: UITextFieldDelegate {
             self.textField.textContentType = UITextContentType.emailAddress
             self.textField.keyboardType = .emailAddress
             self.textField.autocapitalizationType = .none
+            self.textField.placeholder = "johnnyappleseed@gmail.com"
             break
         case .phoneNumber:
             self.textField.textContentType = UITextContentType.telephoneNumber
             self.textField.keyboardType = .phonePad
             self.textField.autocapitalizationType = .none
+            self.textField.placeholder = "4045555555".formatStringToPhoneNumber()
             break
         case .fullName:
             self.textField.textContentType = UITextContentType.name
             self.textField.keyboardType = .asciiCapable
             self.textField.autocapitalizationType = .words
+            self.textField.placeholder = "Johnny Appleseed"
             break
         case .jobTitle:
             self.textField.textContentType = UITextContentType.jobTitle
             self.textField.keyboardType = .default
             self.textField.autocapitalizationType = .words
-        case .number, .currency:
+            self.textField.placeholder = "Line cook"
+        case .number:
             self.textField.textContentType = UITextContentType("")
             self.textField.keyboardType = .phonePad
             self.textField.autocapitalizationType = .none
+            self.textField.placeholder = "123"
+            break
+        case .currency:
+            self.textField.textContentType = UITextContentType("")
+            self.textField.keyboardType = .phonePad
+            self.textField.autocapitalizationType = .none
+            self.textField.placeholder = "$0.00"
+            break
+        case .url:
+            self.textField.textContentType = UITextContentType.URL
+            self.textField.keyboardType = .URL
+            self.textField.autocapitalizationType = .none
+            self.textField.placeholder = "httpl://example.com"
             break
         }
     }
@@ -126,9 +151,7 @@ extension FormTextFieldTableViewCell: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
         switch self.inputType {
-        case .unspecifiedText:
-            return true
-        case .email:
+        case .unspecifiedText, .email, .url, .fullName, .jobTitle:
             return true
         case .phoneNumber:
             //workaround for multiple entries caused by inserting predictive text
@@ -141,10 +164,6 @@ extension FormTextFieldTableViewCell: UITextFieldDelegate {
             }
             textField.text = fullString.formatStringToPhoneNumber()
             return false
-        case .fullName:
-            return true
-        case .jobTitle:
-            return true
         case .number:
             //workaround for multiple entries caused by inserting predictive text
             if string == "" || string == " " {

@@ -241,6 +241,7 @@ extension FormPageViewController {
         case .url:
             let urlCell = Bundle.main.loadNibNamed("FormTextFieldTableViewCell", owner: self, options: [:])?.first as! FormTextFieldTableViewCell
             urlCell.formQuestion = questionModel
+            urlCell.inputType = .url
             urlCell.delegate = self
             self.formQuestionCells.append(urlCell)
             return urlCell
