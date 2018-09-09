@@ -36,6 +36,9 @@
                                 <state key="normal" title="SPREAD THE WORD" image="iconShare">
                                     <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="sharePressed:" destination="Xhe-RB-24m" eventType="touchUpInside" id="MF4-sT-hev"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Your donation is 100 percent tax deductible and truly makes a difference." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B9N-so-NEB">
                                 <rect key="frame" x="25" y="563.5" width="325" height="41"/>
