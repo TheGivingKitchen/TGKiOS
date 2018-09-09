@@ -49,10 +49,19 @@ class TestHomeViewController: UIViewController, CLLocationManagerDelegate {
     }
     @IBAction func locateUser(_ sender: Any) {
         
-        
-        
-        
-        locationManager.requestWhenInUseAuthorization()
+        switch CLLocationManager.authorizationStatus() {
+            case .notDetermined:
+                locationManager.requestWhenInUseAuthorization()
+                break
+            
+            case .restricted, .denied:
+                // alertview and send them to settings
+                break
+            
+            case .authorizedWhenInUse, .authorizedAlways:
+                getLocation()
+                break
+        }
         
     }
     
@@ -78,17 +87,35 @@ class TestHomeViewController: UIViewController, CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         switch CLLocationManager.authorizationStatus() {
-        case .notDetermined:
-            // Request when-in-use authorization initially
-            break
+            case .notDetermined:
+                // Request when-in-use authorization initially
+                break
             
-        case .restricted, .denied:
-            // Disable location features
-            break
+            case .restricted, .denied:
+                // Disable location features
+                break
             
-        case .authorizedWhenInUse, .authorizedAlways:
-            getLocation()
-            break
+            case .authorizedWhenInUse, .authorizedAlways:
+                getLocation()
+                break
         }
+    }
+    
+    func showLocationServicesDeniedAlert() {
+        let alertController = UIAlertController(title: "Enable Location Services",
+                                                message: "Location services have been turned off. Please enable them in Settings > TGK > Location to continue.",
+                                                preferredStyle: .alert)
+        
+        let settingsAction = UIAlertAction(title: "Open Settings", style: .default) { (alertAction) in
+            if let appSettings = URL(string: UIApplicationOpenSettingsURLString) {
+                UIApplication.shared.open(appSettings, options: [:], completionHandler: { (success) in
+                })
+            }
+        }
+        alertController.addAction(settingsAction)
+        
+        let cancelAction = UIAlertAction(title: "Nevermind", style: .cancel, handler: nil)
+        alertController.addAction(cancelAction)
+        self.present(alertController, animated: true)
     }
 }
