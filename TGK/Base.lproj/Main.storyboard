@@ -602,6 +602,14 @@ Through our Crisis Grants, we cover the cost of living expenses for restaurant w
                                     <action selector="southGA:" destination="xq2-nz-JWz" eventType="touchUpInside" id="pCD-nE-zAq"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BaY-hu-Mea">
+                                <rect key="frame" x="10" y="230" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="locateUser:" destination="xq2-nz-JWz" eventType="touchUpInside" id="AVx-4V-luz"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="tKR-Fd-5S9"/>

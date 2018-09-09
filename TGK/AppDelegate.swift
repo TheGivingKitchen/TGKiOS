@@ -10,6 +10,7 @@ import UIKit
 import Firebase
 import FirebaseRemoteConfig
 import FirebaseAuth
+import GooglePlaces
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -24,6 +25,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.setupAppearances()
         
         self.setupRemoteConfig()
+        
+        GMSPlacesClient.provideAPIKey("AIzaSyAkCalEWsXCpdUgILAFTKJyyltU-bBgopw")
+        
         Auth.auth().signInAnonymously { (result, error) in
             
         }

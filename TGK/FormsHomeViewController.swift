@@ -11,12 +11,14 @@ import Firebase
 import FirebaseDatabase
 import Alamofire
 import FirebaseAuth
+import GooglePlaces
 
-class TestHomeViewController: UIViewController {
+class TestHomeViewController: UIViewController, CLLocationManagerDelegate {
 
-    
+    let locationManager = CLLocationManager()
     override func viewDidLoad() {
         super.viewDidLoad()
+        locationManager.delegate = self
     }
     
     @IBAction func buttontapped(_ sender: Any) {
@@ -43,6 +45,50 @@ class TestHomeViewController: UIViewController {
                 let tgkSafariVC = TGKSafariViewController(url: URL(string: "https://www.facebook.com/groups/1763853010365060")!)
                 self.present(tgkSafariVC, animated: true)
             }
+        }
+    }
+    @IBAction func locateUser(_ sender: Any) {
+        
+        
+        
+        
+        locationManager.requestWhenInUseAuthorization()
+        
+    }
+    
+    func getLocation() {
+        let placesClient = GMSPlacesClient.shared()
+        placesClient.currentPlace { (placeLikelihoodList, error) in
+            if let error = error {
+                print(error)
+                return
+            }
+            
+            if let placeLikelihoodList = placeLikelihoodList,
+                let place = placeLikelihoodList.likelihoods.first?.place,
+                let addressComponenets = place.addressComponents {
+                for component in addressComponenets {
+                    if component.type == "administrative_area_level_2" {
+                        print("County \(component.name)")
+                    }
+                }
+            }
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        switch CLLocationManager.authorizationStatus() {
+        case .notDetermined:
+            // Request when-in-use authorization initially
+            break
+            
+        case .restricted, .denied:
+            // Disable location features
+            break
+            
+        case .authorizedWhenInUse, .authorizedAlways:
+            getLocation()
+            break
         }
     }
 }
