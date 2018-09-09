@@ -200,9 +200,9 @@ class DonateHomeViewController: UIViewController {
     }
     
     @IBAction func useCreditCardButtonPressed(_ sender: Any) {
-        //live address https://connect.clickandpledge.com/w/Form/d11bff52-0cd0-44d8-9403-465614e4f342
-        
-        guard let externalDonationFormUrl = URL(string: "https://thegivingkitchen.wufoo.com/forms/credit-card-donation-user-testing/") else {
+        ///live address
+        /// test wufoo form https://thegivingkitchen.wufoo.com/forms/credit-card-donation-user-testing/
+        guard let externalDonationFormUrl = URL(string: "https://connect.clickandpledge.com/w/Form/d11bff52-0cd0-44d8-9403-465614e4f342") else {
             return
         }
         
