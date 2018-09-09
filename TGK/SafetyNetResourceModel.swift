@@ -11,7 +11,7 @@ import Foundation
 struct SafetyNetResourceModel:Equatable {
     var name:String
     var address:String?
-    var websiteUrlString:String?
+    var websiteUrl:URL?
     var phoneNumber:String?
     var contactName:String?
     var category:String?
@@ -21,12 +21,15 @@ struct SafetyNetResourceModel:Equatable {
     init(jsonDict: [String:Any]) {
         self.name = jsonDict["name"] as? String ?? ""
         self.address = jsonDict["address"] as? String
-        self.websiteUrlString = jsonDict["website"] as? String
         self.phoneNumber = jsonDict["phone"] as? String
         self.phoneNumber = self.phoneNumber?.formatStringToNumericString()
         self.contactName = jsonDict["contactName"] as? String
         self.category = jsonDict["category"] as? String
         self.resourceDescription = jsonDict["description"] as? String
+        
+        if let websiteString = jsonDict["website"] as? String {
+            self.websiteUrl = URL(string: websiteString.trimmingCharacters(in: .whitespacesAndNewlines))
+        }
         
         if let countiesString = jsonDict["countiesServed"] as? String {
             let splitStringArray = countiesString.components(separatedBy: ",")

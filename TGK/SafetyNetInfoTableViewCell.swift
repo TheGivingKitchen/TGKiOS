@@ -77,8 +77,7 @@ class SafetyNetInfoTableViewCell: UITableViewCell {
             self.categoryLabel.text = model.category
         }
         
-        if let urlString = model.websiteUrlString,
-            let _ = URL(string: urlString) {
+        if model.websiteUrl == nil {
             self.websiteButton.isHidden = true
         }
         else {
@@ -129,8 +128,7 @@ class SafetyNetInfoTableViewCell: UITableViewCell {
     
     @IBAction func websiteButtonPressed(_ sender: Any) {
         if let model = self.safetyNetModel,
-            let urlString = model.websiteUrlString,
-            let url = URL(string: urlString) {
+            let url = model.websiteUrl {
             self.delegate?.safetyNetInfoTableViewCellRequestOpenWeb(url: url, cell: self)
         }
     }
