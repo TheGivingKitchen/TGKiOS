@@ -6,6 +6,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -88,7 +89,7 @@ Through our Crisis Grants, we cover the cost of living expenses for restaurant w
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="200" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z1b-Yc-9Dd">
-                                <rect key="frame" x="148" y="273" width="78" height="30"/>
+                                <rect key="frame" x="148.5" y="273" width="78" height="30"/>
                                 <state key="normal" title="Learn more"/>
                             </button>
                         </subviews>
@@ -430,21 +431,21 @@ Through our Crisis Grants, we cover the cost of living expenses for restaurant w
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" id="FlC-X4-9bu">
+                        <view key="tableHeaderView" contentMode="scaleToFill" misplaced="YES" id="FlC-X4-9bu">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="280"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="249" verticalCompressionResistancePriority="1000" image="eventsGLightbulb" translatesAutoresizingMaskIntoConstraints="NO" id="hTr-o1-M61">
-                                    <rect key="frame" x="149" y="40" width="77" height="62"/>
+                                    <rect key="frame" x="149" y="40" width="77" height="161"/>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Events" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="At2-xF-Nho">
-                                    <rect key="frame" x="162" y="142" width="51.5" height="21"/>
+                                    <rect key="frame" x="162" y="241" width="51.5" height="21"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Fs-KL-cpQ">
-                                    <rect key="frame" x="8" y="179" width="359" height="61"/>
+                                    <rect key="frame" x="8" y="278" width="359" height="61"/>
                                     <string key="text">The Giving Kitchen's signature and third-party events are rooted in great food, drink, service—and care for those who serve us every day. </string>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
@@ -578,6 +579,92 @@ Through our Crisis Grants, we cover the cost of living expenses for restaurant w
             </objects>
             <point key="canvasLocation" x="-3058.4000000000001" y="917.99100449775119"/>
         </scene>
+        <!--Location Warming View Controller-->
+        <scene sceneID="lZZ-QK-Vaz">
+            <objects>
+                <viewController storyboardIdentifier="LocationWarmingViewControllerId" modalPresentationStyle="formSheet" id="ZsX-2w-u9N" customClass="LocationWarmingViewController" customModule="TGK" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6J5-NY-ige">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cMw-Hd-f38">
+                                <rect key="frame" x="37.5" y="137" width="300" height="344.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aai-N4-s4x">
+                                        <rect key="frame" x="20" y="286.5" width="260" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="pws-Nl-6VV"/>
+                                        </constraints>
+                                        <state key="normal" title="Maybe later"/>
+                                        <connections>
+                                            <action selector="declinePressed:" destination="ZsX-2w-u9N" eventType="touchUpInside" id="T7J-dq-Lek"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find help near you" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kTY-7A-0f4">
+                                        <rect key="frame" x="20" y="40" width="260" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b2t-Lg-nZS">
+                                        <rect key="frame" x="20" y="228.5" width="260" height="50"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="0Un-Yv-r5l"/>
+                                        </constraints>
+                                        <state key="normal" title="Okay, let's do it!">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="acceptPressed:" destination="ZsX-2w-u9N" eventType="touchUpInside" id="iCC-yQ-z32"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="aai-N4-s4x" secondAttribute="bottom" constant="8" id="8JY-HT-Wea"/>
+                                    <constraint firstItem="b2t-Lg-nZS" firstAttribute="trailing" secondItem="aai-N4-s4x" secondAttribute="trailing" id="9kd-T5-rti"/>
+                                    <constraint firstItem="aai-N4-s4x" firstAttribute="top" secondItem="b2t-Lg-nZS" secondAttribute="bottom" constant="8" id="HRi-DS-wyB"/>
+                                    <constraint firstItem="kTY-7A-0f4" firstAttribute="leading" secondItem="cMw-Hd-f38" secondAttribute="leading" constant="20" id="Kac-Ph-epU"/>
+                                    <constraint firstAttribute="trailing" secondItem="kTY-7A-0f4" secondAttribute="trailing" constant="20" id="L9L-iw-sZ7"/>
+                                    <constraint firstItem="kTY-7A-0f4" firstAttribute="top" secondItem="cMw-Hd-f38" secondAttribute="top" constant="40" id="LO3-7e-W2K"/>
+                                    <constraint firstItem="b2t-Lg-nZS" firstAttribute="leading" secondItem="aai-N4-s4x" secondAttribute="leading" id="Nbt-YN-9TG"/>
+                                    <constraint firstAttribute="trailing" secondItem="aai-N4-s4x" secondAttribute="trailing" constant="20" id="SfQ-0T-reG"/>
+                                    <constraint firstItem="aai-N4-s4x" firstAttribute="leading" secondItem="cMw-Hd-f38" secondAttribute="leading" constant="20" id="naW-20-ljq"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="VRd-Z4-qgA">
+                                <rect key="frame" x="57.5" y="213.5" width="260" height="122"/>
+                                <string key="text">If you would like us to find SafetyNet resources near your location, the Giving Ktichen app needs permission to look up your location. Would you like to turn on location services for this app?</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="cMw-Hd-f38" firstAttribute="width" secondItem="6J5-NY-ige" secondAttribute="width" multiplier="80:100" id="0ZT-Gb-gd4"/>
+                            <constraint firstItem="VRd-Z4-qgA" firstAttribute="trailing" secondItem="kTY-7A-0f4" secondAttribute="trailing" id="50t-aP-9Xf"/>
+                            <constraint firstItem="VRd-Z4-qgA" firstAttribute="top" secondItem="kTY-7A-0f4" secondAttribute="bottom" constant="16" id="7hQ-k6-K37"/>
+                            <constraint firstItem="cMw-Hd-f38" firstAttribute="centerY" secondItem="8MC-e5-iAs" secondAttribute="centerY" multiplier="90:100" id="GNT-64-fcb"/>
+                            <constraint firstItem="cMw-Hd-f38" firstAttribute="centerX" secondItem="8MC-e5-iAs" secondAttribute="centerX" id="Oez-In-5iU"/>
+                            <constraint firstItem="VRd-Z4-qgA" firstAttribute="leading" secondItem="kTY-7A-0f4" secondAttribute="leading" id="QHV-8e-kRt"/>
+                            <constraint firstItem="b2t-Lg-nZS" firstAttribute="top" secondItem="VRd-Z4-qgA" secondAttribute="bottom" constant="30" id="bdh-vk-Q8X"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8MC-e5-iAs"/>
+                    </view>
+                    <connections>
+                        <outlet property="acceptButton" destination="b2t-Lg-nZS" id="4Ew-qo-BBe"/>
+                        <outlet property="declineButton" destination="aai-N4-s4x" id="n0f-Qp-3ph"/>
+                        <outlet property="descriptionLabel" destination="VRd-Z4-qgA" id="1W3-Ay-kOY"/>
+                        <outlet property="innerContentView" destination="cMw-Hd-f38" id="YTc-cS-KNy"/>
+                        <outlet property="titleLabel" destination="kTY-7A-0f4" id="O2q-fj-5MH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sZw-lX-iZh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3058.4000000000001" y="1669.1154422788607"/>
+        </scene>
         <!--Test Home View Controller-->
         <scene sceneID="Bo2-0V-Hhr">
             <objects>
@@ -610,12 +697,12 @@ Through our Crisis Grants, we cover the cost of living expenses for restaurant w
                                     <action selector="southGA:" destination="xq2-nz-JWz" eventType="touchUpInside" id="pCD-nE-zAq"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BaY-hu-Mea">
-                                <rect key="frame" x="10" y="230" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="At6-BQ-Evh">
+                                <rect key="frame" x="73" y="235" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <action selector="locateUser:" destination="xq2-nz-JWz" eventType="touchUpInside" id="AVx-4V-luz"/>
+                                    <action selector="presModal:" destination="xq2-nz-JWz" eventType="touchUpInside" id="V4L-lT-MVK"/>
                                 </connections>
                             </button>
                         </subviews>

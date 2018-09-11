@@ -114,10 +114,11 @@ class SafetyNetHomeViewController: UIViewController {
     }
     
     @IBAction func changeToLocationSearchPressed(_ sender: Any) {
-        self.locationManager.delegate = self
         switch CLLocationManager.authorizationStatus() {
         case .notDetermined:
-            locationManager.requestWhenInUseAuthorization()
+            let locationWarmingVC = LocationWarmingViewController.instantiateWith(delegate: self)
+            
+            self.tabBarController?.present(locationWarmingVC, animated: true)
             break
             
         case .restricted, .denied:
@@ -460,4 +461,20 @@ extension SafetyNetHomeViewController:CLLocationManagerDelegate {
         alertController.addAction(cancelAction)
         self.present(alertController, animated: true)
     }
+}
+
+//MARK: LocationWarmingViewControllerDelegate
+extension SafetyNetHomeViewController:LocationWarmingViewControllerDelegate {
+    func locationWarmingViewControllerDidAccept(viewController: LocationWarmingViewController) {
+        viewController.dismiss(animated: true)
+        
+        self.locationManager.delegate = self
+        locationManager.requestWhenInUseAuthorization()
+    }
+    
+    func locationWarmingViewControllerDidDecline(viewController: LocationWarmingViewController) {
+        viewController.dismiss(animated: true)
+    }
+    
+    
 }

@@ -47,75 +47,8 @@ class TestHomeViewController: UIViewController, CLLocationManagerDelegate {
             }
         }
     }
-    @IBAction func locateUser(_ sender: Any) {
-        
-        switch CLLocationManager.authorizationStatus() {
-            case .notDetermined:
-                locationManager.requestWhenInUseAuthorization()
-                break
-            
-            case .restricted, .denied:
-                // alertview and send them to settings
-                break
-            
-            case .authorizedWhenInUse, .authorizedAlways:
-                getLocation()
-                break
-        }
+    @IBAction func presModal(_ sender: Any) {
         
     }
-    
-    func getLocation() {
-        let placesClient = GMSPlacesClient.shared()
-        placesClient.currentPlace { (placeLikelihoodList, error) in
-            if let error = error {
-                print(error)
-                return
-            }
-            
-            if let placeLikelihoodList = placeLikelihoodList,
-                let place = placeLikelihoodList.likelihoods.first?.place,
-                let addressComponenets = place.addressComponents {
-                for component in addressComponenets {
-                    if component.type == "administrative_area_level_2" {
-                        print("County \(component.name)")
-                    }
-                }
-            }
-        }
-    }
-    
-    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        switch CLLocationManager.authorizationStatus() {
-            case .notDetermined:
-                // Request when-in-use authorization initially
-                break
-            
-            case .restricted, .denied:
-                // Disable location features
-                break
-            
-            case .authorizedWhenInUse, .authorizedAlways:
-                getLocation()
-                break
-        }
-    }
-    
-    func showLocationServicesDeniedAlert() {
-        let alertController = UIAlertController(title: "Enable Location Services",
-                                                message: "Location services have been turned off. Please enable them in Settings > TGK > Location to continue.",
-                                                preferredStyle: .alert)
-        
-        let settingsAction = UIAlertAction(title: "Open Settings", style: .default) { (alertAction) in
-            if let appSettings = URL(string: UIApplicationOpenSettingsURLString) {
-                UIApplication.shared.open(appSettings, options: [:], completionHandler: { (success) in
-                })
-            }
-        }
-        alertController.addAction(settingsAction)
-        
-        let cancelAction = UIAlertAction(title: "Nevermind", style: .cancel, handler: nil)
-        alertController.addAction(cancelAction)
-        self.present(alertController, animated: true)
-    }
+
 }

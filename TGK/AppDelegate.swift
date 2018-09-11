@@ -74,7 +74,7 @@ extension AppDelegate {
     }
 }
 
-//MARK: Remote Config
+//MARK: Remote Config. currently inactive
 extension AppDelegate {
     func setupRemoteConfig() {
         let remoteConfig = RemoteConfig.remoteConfig()
