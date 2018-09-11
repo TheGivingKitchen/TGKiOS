@@ -11,7 +11,7 @@ import UIKit
 protocol SafetyNetInfoTableViewCellDelegate:class {
     func safetyNetInfoTableViewCellRequestOpenWeb(url:URL, cell:SafetyNetInfoTableViewCell)
     func safetyNetInfoTableViewCellRequestCallPhone(url:URL, cell:SafetyNetInfoTableViewCell)
-    //TODO address callback
+    func safetyNetInfoTableViewCellRequestOpenMap(address:String, cell:SafetyNetInfoTableViewCell)
 }
 
 class SafetyNetInfoTableViewCell: UITableViewCell {
@@ -134,7 +134,9 @@ class SafetyNetInfoTableViewCell: UITableViewCell {
     }
     
     @IBAction func addressButtonPressed(_ sender: Any) {
-        //TODO open in maps and google maps
+        if let address = self.safetyNetModel?.address {
+            self.delegate?.safetyNetInfoTableViewCellRequestOpenMap(address: address, cell: self)
+        }
     }
     
     @IBAction func phoneButtonPressed(_ sender: Any) {

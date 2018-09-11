@@ -225,6 +225,38 @@ extension SafetyNetHomeViewController:SafetyNetInfoTableViewCellDelegate {
         UIApplication.shared.open(url, options: [:]) { (success) in
         }
     }
+    
+    func safetyNetInfoTableViewCellRequestOpenMap(address: String, cell: SafetyNetInfoTableViewCell) {
+        let formattedAddressString = address.replacingOccurrences(of: " ", with: "+")
+        
+        if let googleDeepLinkUrl = URL(string:"comgooglemapsurl://?daddr=\(formattedAddressString)"),
+            UIApplication.shared.canOpenURL(googleDeepLinkUrl) {
+            
+            let alertController = UIAlertController(title: "Open in", message: nil, preferredStyle: .actionSheet)
+            let googleMapAction = UIAlertAction(title: "Google Maps", style: .default) { (action) in
+                UIApplication.shared.open(googleDeepLinkUrl, options: [:])
+            }
+            alertController.addAction(googleMapAction)
+            
+            let appleMapAction = UIAlertAction(title: "Apple Maps", style: .default) { (action) in
+                if let appleMapsUrl = URL(string: "http://maps.apple.com/?address=\(formattedAddressString)") {
+                    UIApplication.shared.open(appleMapsUrl, options: [:])
+                }
+            }
+            alertController.addAction(appleMapAction)
+            
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
+                self.dismiss(animated: true)
+            }
+            alertController.addAction(cancelAction)
+            
+            alertController.view.tintColor = UIColor.tgkBlue
+            self.present(alertController, animated: true)
+        }
+        else if let appleMapsUrl = URL(string: "http://maps.apple.com/?address=\(formattedAddressString)") {
+            UIApplication.shared.open(appleMapsUrl, options: [:])
+        }
+    }
 }
 
 extension SafetyNetHomeViewController :SafetyNetHomeTooltipCellDelegate {

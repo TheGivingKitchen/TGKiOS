@@ -20,12 +20,18 @@ struct SafetyNetResourceModel:Equatable {
     
     init(jsonDict: [String:Any]) {
         self.name = jsonDict["name"] as? String ?? ""
-        self.address = jsonDict["address"] as? String
         self.phoneNumber = jsonDict["phone"] as? String
         self.phoneNumber = self.phoneNumber?.formatStringToNumericString()
         self.contactName = jsonDict["contactName"] as? String
         self.category = jsonDict["category"] as? String
         self.resourceDescription = jsonDict["description"] as? String
+        
+        if let addressString = jsonDict["address"] as? String {
+            let trimmedAddressString = addressString.trimmingCharacters(in: .whitespacesAndNewlines)
+            if trimmedAddressString.isEmpty == false {
+                self.address = trimmedAddressString
+            }
+        }
         
         if let websiteString = jsonDict["website"] as? String {
             self.websiteUrl = URL(string: websiteString.trimmingCharacters(in: .whitespacesAndNewlines))
