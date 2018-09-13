@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 struct SafetyNetResourceModel:Equatable {
     var name:String
@@ -34,7 +35,12 @@ struct SafetyNetResourceModel:Equatable {
         }
         
         if let websiteString = jsonDict["website"] as? String {
-            self.websiteUrl = URL(string: websiteString.trimmingCharacters(in: .whitespacesAndNewlines))
+            if let webUrl = URL(string: websiteString.trimmingCharacters(in: .whitespacesAndNewlines)) {
+                let urlIsValid = UIApplication.shared.canOpenURL(webUrl)
+                if urlIsValid {
+                    self.websiteUrl = webUrl
+                }
+            }
         }
         
         if let countiesString = jsonDict["countiesServed"] as? String {

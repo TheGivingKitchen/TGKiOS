@@ -13,36 +13,39 @@ class SafetyNetHomeViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    private enum SafetyNetHomeVCRow:Int {
+    private enum SafetyNetTableSection:Int {
         case tooltip = 0
         case facebook = 1
         case resource = 2
     }
     
-    enum ViewState {
-        case normal
-        case textSearching
-        case locationBased
-        case searchingWithinLocation
+    fileprivate var isSearchingOrFiltering:Bool {
+        if self.isTextSearching == true || self.isLocationBasedSearching == true {
+            return true
+        }
+        return false
     }
     
-    fileprivate var viewState:ViewState = .normal {
+    fileprivate var isTextSearching:Bool {
+        if self.searchController.searchBar.text.isNilOrEmpty {
+            return false
+        }
+        return true
+    }
+    
+    fileprivate var isLocationBasedSearching:Bool = false {
         didSet {
-            self.tableView.reloadData()
-            if oldValue != viewState {
-                self.scrollToTop()
-            }
             self.configureViewControlsBasedOnState()
         }
     }
+    
+    fileprivate var currentUserCounty:String?
     
     let locationManager = CLLocationManager()
     
     ///datasource corresponding to viewState
     fileprivate var safetyNetModels:[SafetyNetResourceModel] = []
-    fileprivate var textSearchingSafetyNetModels:[SafetyNetResourceModel] = []
-    fileprivate var locationBasedSafetyNetModels:[SafetyNetResourceModel] = []
-    fileprivate var searchingLocationSafetyNetModels:[SafetyNetResourceModel] = []
+    fileprivate var filteredSafetyNetModels:[SafetyNetResourceModel] = []
     
     fileprivate let searchController = UISearchController(searchResultsController: nil)
     fileprivate var userLocationCounty:String?
@@ -76,12 +79,7 @@ class SafetyNetHomeViewController: UIViewController {
     
     func configureViewControlsBasedOnState() {
 
-        switch self.viewState {
-        case .normal, .textSearching:
-            let locationFilterBarButton = UIBarButtonItem(image: UIImage(named: "iconLocationMarker"), style: .plain, target: self, action: #selector(changeToLocationSearchPressed(_:)))
-            self.navigationItem.rightBarButtonItem = locationFilterBarButton
-            self.navigationItem.title = ""
-        case .locationBased, .searchingWithinLocation:
+        if self.isLocationBasedSearching {
             let normalFilterBarButton = UIBarButtonItem(image: UIImage(named: "iconBulletList"), style: .plain, target: self, action: #selector(changeToNormalSearchPressed(_:)))
             self.navigationItem.rightBarButtonItem = normalFilterBarButton
             
@@ -91,6 +89,11 @@ class SafetyNetHomeViewController: UIViewController {
             else {
                 self.navigationItem.title = "Resources in your county"
             }
+        }
+        else {
+            let locationFilterBarButton = UIBarButtonItem(image: UIImage(named: "iconLocationMarker"), style: .plain, target: self, action: #selector(changeToLocationSearchPressed(_:)))
+            self.navigationItem.rightBarButtonItem = locationFilterBarButton
+            self.navigationItem.title = ""
         }
     }
     
@@ -133,7 +136,9 @@ class SafetyNetHomeViewController: UIViewController {
     
     @IBAction func changeToNormalSearchPressed(_ sender: Any) {
         self.searchController.searchBar.text = ""
-        self.viewState = .normal
+        self.currentUserCounty = nil
+        self.isLocationBasedSearching = false
+        self.tableView.reloadData()
     }
 }
 
@@ -144,34 +149,21 @@ extension SafetyNetHomeViewController: UITableViewDelegate, UITableViewDataSourc
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
-        case SafetyNetHomeVCRow.tooltip.rawValue:
-            if AppDataStore.hasClosedSafetyNetTooltip {
+        case SafetyNetTableSection.tooltip.rawValue:
+            if AppDataStore.hasClosedSafetyNetTooltip || self.isSearchingOrFiltering {
                 return 0
             }
-            switch self.viewState {
-            case .normal:
-                return 1
-            case .textSearching, .locationBased, .searchingWithinLocation:
+            return 1
+        case SafetyNetTableSection.facebook.rawValue:
+            if self.isSearchingOrFiltering {
                 return 0
             }
-        case SafetyNetHomeVCRow.facebook.rawValue:
-            switch self.viewState {
-            case .normal:
-                return 1
-            case .textSearching, .locationBased, .searchingWithinLocation:
-                return 0
+            return 1
+        case SafetyNetTableSection.resource.rawValue:
+            if self.isSearchingOrFiltering {
+                return self.filteredSafetyNetModels.count
             }
-        case SafetyNetHomeVCRow.resource.rawValue:
-            switch self.viewState {
-            case .normal:
-                return self.safetyNetModels.count
-            case .textSearching:
-                return self.textSearchingSafetyNetModels.count
-            case .locationBased:
-                return self.locationBasedSafetyNetModels.count
-            case .searchingWithinLocation:
-                return self.searchingLocationSafetyNetModels.count
-            }
+            return self.safetyNetModels.count
         default:
             return 0
         }
@@ -179,32 +171,24 @@ extension SafetyNetHomeViewController: UITableViewDelegate, UITableViewDataSourc
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.section {
-        case SafetyNetHomeVCRow.tooltip.rawValue:
+        case SafetyNetTableSection.tooltip.rawValue:
             let cell = tableView.dequeueReusableCell(withIdentifier: self.safetyNetTooltipReuseId) as! SafetyNetHomeTooltipCell
             cell.delegate = self
             return cell
             
-        case SafetyNetHomeVCRow.facebook.rawValue:
+        case SafetyNetTableSection.facebook.rawValue:
             let cell = tableView.dequeueReusableCell(withIdentifier: self.safetyNetFacebookCellReuseId) as! FacebookGroupAccessTableViewCell
             cell.delegate = self
             return cell
             
-        case SafetyNetHomeVCRow.resource.rawValue:
+        case SafetyNetTableSection.resource.rawValue:
             let cell = tableView.dequeueReusableCell(withIdentifier: self.safetyNetCellReuseId) as! SafetyNetInfoTableViewCell
             
-            switch self.viewState {
-            case .normal:
+            if self.isSearchingOrFiltering {
+                cell.configure(withSafetyNetModel: self.filteredSafetyNetModels[indexPath.row])
+            }
+            else {
                 cell.configure(withSafetyNetModel: self.safetyNetModels[indexPath.row])
-                break
-            case .textSearching:
-                cell.configure(withSafetyNetModel: self.textSearchingSafetyNetModels[indexPath.row])
-                break
-            case .locationBased:
-                cell.configure(withSafetyNetModel: self.locationBasedSafetyNetModels[indexPath.row])
-                break
-            case .searchingWithinLocation:
-                cell.configure(withSafetyNetModel: self.searchingLocationSafetyNetModels[indexPath.row])
-                break
             }
             
             cell.delegate = self
@@ -263,7 +247,7 @@ extension SafetyNetHomeViewController:SafetyNetInfoTableViewCellDelegate {
 extension SafetyNetHomeViewController :SafetyNetHomeTooltipCellDelegate {
     func safetyNetHomeTooltipCellDidPressClose(cell: SafetyNetHomeTooltipCell) {
         AppDataStore.hasClosedSafetyNetTooltip = true
-        self.tableView.reloadSections(NSIndexSet(index: SafetyNetHomeVCRow.tooltip.rawValue) as IndexSet, with: UITableViewRowAnimation.bottom)
+        self.tableView.reloadSections(NSIndexSet(index: SafetyNetTableSection.tooltip.rawValue) as IndexSet, with: UITableViewRowAnimation.bottom)
     }
 }
 
@@ -277,18 +261,36 @@ extension SafetyNetHomeViewController:FacebookGroupAccessTableViewCellDelegate {
 }
 
 //MARK: - UISearchResultsUpdating Delegate
-extension SafetyNetHomeViewController: UISearchResultsUpdating {
+extension SafetyNetHomeViewController: UISearchResultsUpdating, UISearchBarDelegate {
+    
     func setupSearchController() {
+        self.searchController.searchBar.delegate = self
         self.searchController.searchResultsUpdater = self
         self.searchController.obscuresBackgroundDuringPresentation = false
         self.searchController.searchBar.placeholder = "Search community resources"
         self.searchController.searchBar.barTintColor = UIColor.tgkBlue
         self.searchController.searchBar.tintColor = UIColor.tgkOrange
         UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).font = UIFont.tgkBody
-//        self.tableView.tableHeaderView = self.searchController.searchBar
         self.navigationItem.searchController = self.searchController
         self.navigationItem.hidesSearchBarWhenScrolling = false
         self.definesPresentationContext = true
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        guard let searchText = searchBar.text else {return}
+        if !searchText.isEmpty {
+            ///Set search bar text to empty so that reloading happens properly
+            searchBar.text = ""
+            self.scrollToTop()
+            self.tableView.reloadData()
+        }
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchText.isEmpty {
+            self.scrollToTop()
+            self.tableView.reloadData()
+        }
     }
     
     func updateSearchResults(for searchController: UISearchController) {
@@ -296,94 +298,87 @@ extension SafetyNetHomeViewController: UISearchResultsUpdating {
     }
     
     func filterContentForSearchText(_ searchText:String?) {
-        ///If the user cancels searching or enters white space characters or is in an empty state, we're not searching. Depending on if we're filtering by location, revert to normal or locationBased state
+        ///Location based filter first
+        var filteredModels = self.safetyNetModels
+        if let userCounty = self.currentUserCounty,
+            self.isLocationBasedSearching == true {
+            filteredModels = filteredModels.filter({ (safetyNetModel) -> Bool in
+                if let counties = safetyNetModel.counties {
+                    for county in counties {
+                        if county.lowercased() == "all" {
+                            return true
+                        }
+                        if county.lowercased().range(of: userCounty) != nil {
+                            return true
+                        }
+                    }
+                }
+                return false
+            })
+        }
+        self.filteredSafetyNetModels = filteredModels
+        
+        ///Text Based searching next
         guard let lowercaseTrimmedSearchText = searchText?.trimmingCharacters(in: .whitespacesAndNewlines).lowercased(),
             lowercaseTrimmedSearchText.isEmpty == false else {
-                switch self.viewState {
-                case .normal:
-                    break
-                case .textSearching:
-                    self.viewState = .normal
-                    break
-                case .locationBased:
-                    break
-                case .searchingWithinLocation:
-                    self.viewState = .locationBased
-                    break
-                }
-                
                 return
         }
         
-        ///If there is valid search criteria, filter the results and set us in searching state
-        let searchFilterBlock:(SafetyNetResourceModel) -> Bool = { (safetyNetModel) -> Bool in
-            if safetyNetModel.name.lowercased().contains(lowercaseTrimmedSearchText) {
-                return true
-            }
-            
-            if let phoneNumber = safetyNetModel.phoneNumber,
-                phoneNumber.contains(lowercaseTrimmedSearchText),
-                lowercaseTrimmedSearchText.count > 2 {
-                //make keyword searching restrictive to at least 3 characters to reduce noise
-                return true
-            }
-            
-            if let contactName = safetyNetModel.contactName?.lowercased(),
-                contactName.contains(lowercaseTrimmedSearchText),
-                lowercaseTrimmedSearchText.count > 2 {
-                //make keyword searching restrictive to at least 3 characters to reduce noise
-                return true
-            }
-            
-            if let category = safetyNetModel.category?.lowercased(),
-                category.contains(lowercaseTrimmedSearchText),
-                lowercaseTrimmedSearchText.count > 2 {
-                //make keyword searching restrictive to at least 3 characters to reduce noise
-                return true
-            }
-            
-            if let counties = safetyNetModel.counties {
-                for county in counties {
+        if self.isTextSearching {
+            filteredModels = filteredModels.filter({ (safetyNetModel) -> Bool in
+                if safetyNetModel.name.lowercased().contains(lowercaseTrimmedSearchText) {
+                    return true
+                }
+                
+                if let phoneNumber = safetyNetModel.phoneNumber,
+                    phoneNumber.contains(lowercaseTrimmedSearchText),
+                    lowercaseTrimmedSearchText.count > 2 {
                     //make keyword searching restrictive to at least 3 characters to reduce noise
-                    if lowercaseTrimmedSearchText.count < 3 {
-                        break
-                    }
-                    if county.lowercased().range(of: lowercaseTrimmedSearchText) != nil {
-                        return true
+                    return true
+                }
+                
+                if let contactName = safetyNetModel.contactName?.lowercased(),
+                    contactName.contains(lowercaseTrimmedSearchText),
+                    lowercaseTrimmedSearchText.count > 2 {
+                    //make keyword searching restrictive to at least 3 characters to reduce noise
+                    return true
+                }
+                
+                if let category = safetyNetModel.category?.lowercased(),
+                    category.contains(lowercaseTrimmedSearchText),
+                    lowercaseTrimmedSearchText.count > 2 {
+                    //make keyword searching restrictive to at least 3 characters to reduce noise
+                    return true
+                }
+                
+                if let counties = safetyNetModel.counties {
+                    for county in counties {
+                        //make keyword searching restrictive to at least 3 characters to reduce noise
+                        if lowercaseTrimmedSearchText.count < 3 {
+                            break
+                        }
+                        if county.lowercased().range(of: lowercaseTrimmedSearchText) != nil {
+                            return true
+                        }
                     }
                 }
-            }
-            
-            return false
+                
+                return false
+            })
         }
         
-        self.textSearchingSafetyNetModels = self.safetyNetModels.filter(searchFilterBlock)
-        self.searchingLocationSafetyNetModels = self.locationBasedSafetyNetModels.filter(searchFilterBlock)
+        self.filteredSafetyNetModels = filteredModels
         
-        switch self.viewState {
-        case .normal:
-            self.viewState = .textSearching
-            break
-        case .textSearching:
-            self.viewState = .textSearching
-            break
-        case .locationBased:
-            self.viewState = .searchingWithinLocation
-            break
-        case .searchingWithinLocation:
-            self.viewState = .searchingWithinLocation
-            break
-        }
+        self.scrollToTop()
+        self.tableView.reloadData()
     }
     
     func scrollToTop() {
         DispatchQueue.main.async {
-            let resourceCount = self.viewState == .normal ? self.safetyNetModels.count : self.textSearchingSafetyNetModels.count
-            if resourceCount == 0 {
-                return
+            if self.tableView.numberOfRows(inSection: SafetyNetTableSection.resource.rawValue) > 0 {
+                let indexPath = IndexPath(row: 0, section: SafetyNetTableSection.resource.rawValue)
+                self.tableView.scrollToRow(at: indexPath, at: .top, animated: true)
             }
-            let indexPath = IndexPath(row: 0, section: SafetyNetHomeVCRow.resource.rawValue)
-            self.tableView.scrollToRow(at: indexPath, at: .top, animated: true)
         }
     }
 }
@@ -422,22 +417,13 @@ extension SafetyNetHomeViewController:CLLocationManagerDelegate {
                         self.userLocationCounty = component.name
                         let sanitizedCountyString = component.name.lowercased().replacingOccurrences(of: "county", with: "").trimmingCharacters(in: .whitespaces)
                         
-                        self.locationBasedSafetyNetModels = self.safetyNetModels.filter({(safetyNetModel) -> Bool in
-                            if let counties = safetyNetModel.counties {
-                                for county in counties {
-                                    if county.lowercased() == "all" {
-                                        return true
-                                    }
-                                    if county.lowercased().range(of: sanitizedCountyString) != nil {
-                                        return true
-                                    }
-                                }
-                            }
-                            return false
-                        })
+                        self.currentUserCounty = sanitizedCountyString
                         
                         self.searchController.searchBar.text = ""
-                        self.viewState = .locationBased
+                        self.isLocationBasedSearching = true
+                        self.updateSearchResults(for: self.searchController)
+                        self.scrollToTop()
+                        self.tableView.reloadData()
                     }
                 }
             }
