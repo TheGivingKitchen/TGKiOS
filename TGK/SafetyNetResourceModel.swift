@@ -19,13 +19,23 @@ struct SafetyNetResourceModel:Equatable {
     var resourceDescription:String?
     var counties:[String]?
     
+    var filterCounties:Set<String> = []
+    var filterCategories:Set<String> = []
+    
     init(jsonDict: [String:Any]) {
         self.name = jsonDict["name"] as? String ?? ""
         self.phoneNumber = jsonDict["phone"] as? String
         self.phoneNumber = self.phoneNumber?.formatStringToNumericString()
         self.contactName = jsonDict["contactName"] as? String
-        self.category = jsonDict["category"] as? String
         self.resourceDescription = jsonDict["description"] as? String
+        
+        if let category = jsonDict["category"] as? String {
+            let trimmedCategory = category.trimmingCharacters(in: .whitespacesAndNewlines)
+            self.category = trimmedCategory
+            
+            ///All available categories are insterted into the filter
+            self.filterCategories.insert(trimmedCategory)
+        }
         
         if let addressString = jsonDict["address"] as? String {
             let trimmedAddressString = addressString.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -55,6 +65,10 @@ struct SafetyNetResourceModel:Equatable {
                 return countyString.trimmingCharacters(in: .whitespaces)
             }
             self.counties = trimmedArray
+            
+            ///All available counties are insterted into the filter
+            self.filterCounties = self.filterCounties.union(trimmedArray)
+            self.filterCounties.remove("all")
         }
     }
     
