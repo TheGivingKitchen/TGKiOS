@@ -2,18 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>LSApplicationQueriesSchemes</key>
-	<array>
-		<string>comgooglemapsurl</string>
-		<string>comgooglemaps-x-callback</string>
-		<string>comgooglemaps</string>
-	</array>
-	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>Determine your location to find help services around you</string>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Determine your location to find help services around you</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>CFBundleDisplayName</key>
+	<string>GivingKitchen</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -28,6 +20,12 @@
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
 	<string>5</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>comgooglemapsurl</string>
+		<string>comgooglemaps-x-callback</string>
+		<string>comgooglemaps</string>
+	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSAppTransportSecurity</key>
@@ -35,6 +33,10 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Determine your location to find help services around you</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Determine your location to find help services around you</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>RobotoMono-Regular.ttf</string>

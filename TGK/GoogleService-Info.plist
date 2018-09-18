@@ -7,9 +7,9 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>538860340695-e88h8b1pb87nhnvg99jsmcuhima7752k.apps.googleusercontent.com</string>
+	<string>538860340695-cg5tkc6llht6qsjempdbjv3ehf708d4l.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.538860340695-e88h8b1pb87nhnvg99jsmcuhima7752k</string>
+	<string>com.googleusercontent.apps.538860340695-cg5tkc6llht6qsjempdbjv3ehf708d4l</string>
 	<key>API_KEY</key>
 	<string>AIzaSyAkCalEWsXCpdUgILAFTKJyyltU-bBgopw</string>
 	<key>GCM_SENDER_ID</key>
@@ -17,7 +17,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>org.thegivingkitchen.TGK</string>
+	<string>org.thegivingkitchen.tgkios</string>
 	<key>PROJECT_ID</key>
 	<string>thegivingkitchen-cdd28</string>
 	<key>STORAGE_BUCKET</key>
@@ -33,7 +33,7 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:538860340695:ios:0ffcde90df1a39cd</string>
+	<string>1:538860340695:ios:72f53e519147497a</string>
 	<key>DATABASE_URL</key>
 	<string>https://thegivingkitchen-cdd28.firebaseio.com</string>
 </dict>
