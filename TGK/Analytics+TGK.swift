@@ -24,10 +24,13 @@ extension Analytics {
         case formCompleted = "form_completed"
         
         ///SafetyNet
+        case safetyNetChangeToLocationSearch = "safetynet_change_to_location_search"
+        case safetyNetChangeToGlobalSearch = "safetynet_change_to_global_search"
         case safetyNetVisitWebsite = "safetynet_visit_website"
         case safetyNetVisitAddress = "safetynet_visit_address"
         case safetyNetCallPhone = "safetynet_call_phone"
         case safetyNetSearch = "safetynet_search"
+        case safetyNetFacebookGroupVisit = "safetynet_visit_facebook_group"
     }
     
     enum CustomParameter:String {
@@ -41,8 +44,9 @@ extension Analytics {
         
         ///SafetNet
         case safetyNetName = "safetynet_name"
-        case safetyNetSearchTerm = "safetynet_search_term"
-        case safetyNetSearchLocationBased = "safetynet_search_is_location_based"
+        case safetyNetSearchTerm = "search_term"
+        case safetyNetSearchLocationBased = "is_location_based"
+        case safetyNetFacebookGroupName = "facebook_group_name"
     }
     
     static func logEvent(customName: Analytics.CustomName, parameters:[CustomParameter:Any]? = nil) {

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 protocol FacebookGroupAccessTableViewCellDelegate:class {
     func facebookGroupAccessTableViewCellRequestOpen(url: URL)
@@ -66,6 +67,8 @@ class FacebookGroupAccessTableViewCell: UITableViewCell {
                 self.delegate?.facebookGroupAccessTableViewCellRequestOpen(url: webUrl)
             }
         }
+        
+        Analytics.logEvent(customName: .safetyNetFacebookGroupVisit, parameters: [.safetyNetFacebookGroupName:"metro_atlanta"])
     }
     
     @IBAction func northGroupPressed(_ sender: Any) {
@@ -79,6 +82,8 @@ class FacebookGroupAccessTableViewCell: UITableViewCell {
                 self.delegate?.facebookGroupAccessTableViewCellRequestOpen(url: webUrl)
             }
         }
+        
+        Analytics.logEvent(customName: .safetyNetFacebookGroupVisit, parameters: [.safetyNetFacebookGroupName:"north_ga"])
     }
     
     @IBAction func southGroupPressed(_ sender: Any) {
@@ -92,5 +97,7 @@ class FacebookGroupAccessTableViewCell: UITableViewCell {
                 self.delegate?.facebookGroupAccessTableViewCellRequestOpen(url: webUrl)
             }
         }
+        
+        Analytics.logEvent(customName: .safetyNetFacebookGroupVisit, parameters: [.safetyNetFacebookGroupName:"south_ga"])
     }
 }

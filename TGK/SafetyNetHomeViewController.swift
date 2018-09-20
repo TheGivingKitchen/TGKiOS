@@ -140,6 +140,8 @@ class SafetyNetHomeViewController: UIViewController {
         self.currentUserCounty = nil
         self.isLocationBasedSearching = false
         self.tableView.reloadData()
+        
+        Analytics.logEvent(customName: .safetyNetChangeToGlobalSearch)
     }
 }
 
@@ -404,6 +406,8 @@ extension SafetyNetHomeViewController:CLLocationManagerDelegate {
     }
     
     func getUserLocationAndFilter() {
+        Analytics.logEvent(customName: .safetyNetChangeToLocationSearch)
+        
         self.userLocationCounty = nil
         
         let placesClient = GMSPlacesClient.shared()
