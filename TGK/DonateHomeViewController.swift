@@ -217,6 +217,21 @@ class DonateHomeViewController: UIViewController {
         Analytics.logEvent(customName: .donateOneTimeDonationStarted)
     }
     
+    @IBAction func recurringDonationPressed(_ sender: Any) {
+        guard let externalDonationFormUrl = URL(string: "https://connect.clickandpledge.com/w/Form/40b3de1f-fa46-4735-874f-c152e272620e") else {
+            return
+        }
+        
+        UIApplication.shared.open(externalDonationFormUrl, options: [:]) { (success) in
+            DispatchQueue.main.async {
+                let donationSuccessVC = DonationSuccessViewController.donationSuccessViewController(withDelegate: self)
+                self.present(donationSuccessVC, animated: true)
+            }
+        }
+        
+        Analytics.logEvent(customName: .donateRecurringDonationStarted)
+    }
+    
     @IBAction func volunteerPressed(_ sender: Any) {
         guard let formModel = self.volunteerFormModel else {
             return

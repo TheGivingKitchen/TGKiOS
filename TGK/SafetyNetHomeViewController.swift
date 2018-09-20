@@ -8,6 +8,7 @@
 
 import UIKit
 import GooglePlaces
+import Firebase
 
 class SafetyNetHomeViewController: UIViewController {
     
@@ -371,6 +372,9 @@ extension SafetyNetHomeViewController: UISearchResultsUpdating, UISearchBarDeleg
         
         self.scrollToTop()
         self.tableView.reloadData()
+        
+        Analytics.logEvent(customName: .safetyNetSearch, parameters: [.safetyNetSearchLocationBased:self.isLocationBasedSearching,
+                                                                      .safetyNetSearchTerm:lowercaseTrimmedSearchText])
     }
     
     func scrollToTop() {

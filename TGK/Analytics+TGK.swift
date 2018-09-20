@@ -22,6 +22,12 @@ extension Analytics {
         case formViewDetails = "form_view_details"
         case formStarted = "form_started"
         case formCompleted = "form_completed"
+        
+        ///SafetyNet
+        case safetyNetVisitWebsite = "safetynet_visit_website"
+        case safetyNetVisitAddress = "safetynet_visit_address"
+        case safetyNetCallPhone = "safetynet_call_phone"
+        case safetyNetSearch = "safetynet_search"
     }
     
     enum CustomParameter:String {
@@ -32,6 +38,11 @@ extension Analytics {
         ///Forms
         case formName = "form_name" ///name of wufoo form
         case formId = "form_id" ///id of wufoo form
+        
+        ///SafetNet
+        case safetyNetName = "safetynet_name"
+        case safetyNetSearchTerm = "safetynet_search_term"
+        case safetyNetSearchLocationBased = "safetynet_search_is_location_based"
     }
     
     static func logEvent(customName: Analytics.CustomName, parameters:[CustomParameter:Any]? = nil) {

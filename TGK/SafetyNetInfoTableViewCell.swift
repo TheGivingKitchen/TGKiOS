@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 protocol SafetyNetInfoTableViewCellDelegate:class {
     func safetyNetInfoTableViewCellRequestOpenWeb(url:URL, cell:SafetyNetInfoTableViewCell)
@@ -130,19 +131,27 @@ class SafetyNetInfoTableViewCell: UITableViewCell {
         if let model = self.safetyNetModel,
             let url = model.websiteUrl {
             self.delegate?.safetyNetInfoTableViewCellRequestOpenWeb(url: url, cell: self)
+            
+            Analytics.logEvent(customName: .safetyNetVisitWebsite, parameters: [.safetyNetName:model.name])
         }
     }
     
     @IBAction func addressButtonPressed(_ sender: Any) {
-        if let address = self.safetyNetModel?.address {
+        if let model = self.safetyNetModel,
+            let address = self.safetyNetModel?.address {
             self.delegate?.safetyNetInfoTableViewCellRequestOpenMap(address: address, cell: self)
+            
+            Analytics.logEvent(customName: .safetyNetVisitAddress, parameters: [.safetyNetName:model.name])
         }
     }
     
     @IBAction func phoneButtonPressed(_ sender: Any) {
-        if let phoneNumber = self.safetyNetModel?.phoneNumber,
+        if let model = self.safetyNetModel,
+            let phoneNumber = self.safetyNetModel?.phoneNumber,
             let phoneUrl = URL(string: "tel://\(phoneNumber)") {
             self.delegate?.safetyNetInfoTableViewCellRequestCallPhone(url: phoneUrl, cell: self)
+            
+            Analytics.logEvent(customName: .safetyNetCallPhone, parameters: [.safetyNetName:model.name])
         }
     }
     
