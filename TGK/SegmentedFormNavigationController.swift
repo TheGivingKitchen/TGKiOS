@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 protocol SegmentedFormNavigationControllerDelegate:class {
     func segmentedFormNavigationControllerDidFinish(viewController:SegmentedFormNavigationController)
@@ -101,7 +102,6 @@ class SegmentedFormNavigationController: UINavigationController {
         ServiceManager.sharedInstace.submitAnswersToForm(self.segmentedFormModel.id, withAnswers: self.formAnswers) { (success, error, formFieldErrorModels) in
             
             if success == true {
-                
                 self.formDelegate?.segmentedFormNavigationControllerDidFinish(viewController: self)
             }
             else if let fieldErrors = formFieldErrorModels {
@@ -152,5 +152,7 @@ extension SegmentedFormNavigationController:SegmentedFormInfoViewControllerDeleg
         if let firstPageVC = self.formPageViewControllers.first {
             self.pushViewController(firstPageVC, animated: true)
         }
+        Analytics.logEvent(customName: .formStarted, parameters: [.formName: self.segmentedFormModel.title,
+                                                                                   .formId: self.segmentedFormModel.id])
     }
 }

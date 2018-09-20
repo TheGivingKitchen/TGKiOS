@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 protocol SegmentedFormInfoViewControllerDelegate:class {
     func segmentedFormInfoViewControllerDidPressContinue(segmentedFormInfoViewController:SegmentedFormInfoViewController)

@@ -9,6 +9,7 @@
 import UIKit
 import Alamofire
 import SwiftyXMLParser
+import Firebase
 
 class EventsHomeViewController: UITableViewController {
     
@@ -73,7 +74,6 @@ extension EventsHomeViewController {
         return self.calendarEventModels.count
     }
     
-    //TODO testing this. ask Izu how this interaction should work, of if we should do it at all
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = self.tableView.cellForRow(at: indexPath) as! CalendarEventOverviewTableViewCell
         guard let urlString = cell.calendarEventModel.urlString,
@@ -83,5 +83,7 @@ extension EventsHomeViewController {
         let tgkSafariVC = TGKSafariViewController(url: eventUrl)
         self.present(tgkSafariVC, animated: true)
         
+        Analytics.logEvent(customName: .eventViewDetails, parameters: [.eventViewDetailsEventUrl:eventUrl.absoluteString,
+                                                                         .eventViewDetailsEventName:cell.calendarEventModel.title])
     }
 }

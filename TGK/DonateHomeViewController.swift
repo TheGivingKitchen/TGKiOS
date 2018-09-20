@@ -9,6 +9,7 @@
 import UIKit
 import SafariServices
 import PassKit
+import Firebase
 
 class DonateHomeViewController: UIViewController {
 
@@ -212,6 +213,8 @@ class DonateHomeViewController: UIViewController {
                 self.present(donationSuccessVC, animated: true)
             }
         }
+        
+        Analytics.logEvent(customName: .donateOneTimeDonationStarted)
     }
     
     @IBAction func volunteerPressed(_ sender: Any) {

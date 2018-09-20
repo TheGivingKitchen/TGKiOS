@@ -61,7 +61,6 @@
 		4ECF47FF211921FA00B273E4 /* Assistance.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4ECF47FE211921FA00B273E4 /* Assistance.storyboard */; };
 		4ECF4801211922F600B273E4 /* AssistanceSuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECF4800211922F600B273E4 /* AssistanceSuccessViewController.swift */; };
 		4ED3881A209D01EF00A8BEE2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED38819209D01EF00A8BEE2 /* AppDelegate.swift */; };
-		4ED3881C209D01EF00A8BEE2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED3881B209D01EF00A8BEE2 /* ViewController.swift */; };
 		4ED3881F209D01EF00A8BEE2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4ED3881D209D01EF00A8BEE2 /* Main.storyboard */; };
 		4ED38821209D01F200A8BEE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4ED38820209D01F200A8BEE2 /* Assets.xcassets */; };
 		4ED38824209D01F200A8BEE2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4ED38822209D01F200A8BEE2 /* LaunchScreen.storyboard */; };
@@ -84,6 +83,7 @@
 		4ED38852209D04AE00A8BEE2 /* String+TGK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED38850209D04AD00A8BEE2 /* String+TGK.swift */; };
 		4EE12A8721487096003DFBB5 /* LocationWarmingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE12A8621487096003DFBB5 /* LocationWarmingViewController.swift */; };
 		4EE12A9021507A72003DFBB5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4EE12A8F21507A72003DFBB5 /* GoogleService-Info.plist */; };
+		4EE12A9321507FB1003DFBB5 /* Analytics+TGK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE12A9221507FB1003DFBB5 /* Analytics+TGK.swift */; };
 		4EF43480213AD008009C2679 /* UIButton+TGK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF4347F213AD008009C2679 /* UIButton+TGK.swift */; };
 		4EF43482213C2381009C2679 /* FacebookGroupAccessTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EF43481213C2381009C2679 /* FacebookGroupAccessTableViewCell.xib */; };
 		4EF43484213C239A009C2679 /* FacebookGroupAccessTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF43483213C239A009C2679 /* FacebookGroupAccessTableViewCell.swift */; };
@@ -162,7 +162,6 @@
 		4ECF4800211922F600B273E4 /* AssistanceSuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssistanceSuccessViewController.swift; sourceTree = "<group>"; };
 		4ED38816209D01EF00A8BEE2 /* TGK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TGK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4ED38819209D01EF00A8BEE2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4ED3881B209D01EF00A8BEE2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4ED3881E209D01EF00A8BEE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4ED38820209D01F200A8BEE2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4ED38823209D01F200A8BEE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -189,6 +188,7 @@
 		4ED38850209D04AD00A8BEE2 /* String+TGK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+TGK.swift"; sourceTree = "<group>"; };
 		4EE12A8621487096003DFBB5 /* LocationWarmingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationWarmingViewController.swift; sourceTree = "<group>"; };
 		4EE12A8F21507A72003DFBB5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4EE12A9221507FB1003DFBB5 /* Analytics+TGK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Analytics+TGK.swift"; sourceTree = "<group>"; };
 		4EF4347F213AD008009C2679 /* UIButton+TGK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+TGK.swift"; sourceTree = "<group>"; };
 		4EF43481213C2381009C2679 /* FacebookGroupAccessTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FacebookGroupAccessTableViewCell.xib; sourceTree = "<group>"; };
 		4EF43483213C239A009C2679 /* FacebookGroupAccessTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookGroupAccessTableViewCell.swift; sourceTree = "<group>"; };
@@ -492,8 +492,7 @@
 		4ED38818209D01EF00A8BEE2 /* TGK */ = {
 			isa = PBXGroup;
 			children = (
-				4ED38819209D01EF00A8BEE2 /* AppDelegate.swift */,
-				4ED3881B209D01EF00A8BEE2 /* ViewController.swift */,
+				4EE12A9121507F99003DFBB5 /* Analytics */,
 				4E09B7E6211921E000584924 /* Assistance */,
 				C0A259812114E55D0007AB20 /* Donate */,
 				4E8354A020CBFD24009DF8CE /* RemoteConfig */,
@@ -508,6 +507,7 @@
 				4E4D22A220B1D87400BA7577 /* Resources */,
 				4E75176020B615DA00B2D7E0 /* PartsBinNoTarget */,
 				4ED38820209D01F200A8BEE2 /* Assets.xcassets */,
+				4ED38819209D01EF00A8BEE2 /* AppDelegate.swift */,
 				4ED38825209D01F200A8BEE2 /* Info.plist */,
 				4EE12A8F21507A72003DFBB5 /* GoogleService-Info.plist */,
 			);
@@ -520,6 +520,14 @@
 				4EE12A8621487096003DFBB5 /* LocationWarmingViewController.swift */,
 			);
 			name = LocationModal;
+			sourceTree = "<group>";
+		};
+		4EE12A9121507F99003DFBB5 /* Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				4EE12A9221507FB1003DFBB5 /* Analytics+TGK.swift */,
+			);
+			name = Analytics;
 			sourceTree = "<group>";
 		};
 		C0965F492114C8A7005EAB0C /* View Controllers */ = {
@@ -764,7 +772,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4ED3881C209D01EF00A8BEE2 /* ViewController.swift in Sources */,
 				4ECF4801211922F600B273E4 /* AssistanceSuccessViewController.swift in Sources */,
 				4ED3881A209D01EF00A8BEE2 /* AppDelegate.swift in Sources */,
 				4E8897AE209E134700A361D8 /* ServiceManager+Forms.swift in Sources */,
@@ -792,6 +799,7 @@
 				4E83549A20C8B976009DF8CE /* RSSCalendarEventModel.swift in Sources */,
 				4ECA9C0120A72D230084A317 /* FormQuestionSubfieldModel.swift in Sources */,
 				4ED3883F209D030600A8BEE2 /* FormQuestionModel.swift in Sources */,
+				4EE12A9321507FB1003DFBB5 /* Analytics+TGK.swift in Sources */,
 				4E4D229E20B1B1F400BA7577 /* MainTabBarController.swift in Sources */,
 				C0B9C4972135D55E009BEE60 /* ServiceManager+SafetyNet.swift in Sources */,
 				4E7C2E3220B1D8F800A20303 /* UIFont+TGK.swift in Sources */,
