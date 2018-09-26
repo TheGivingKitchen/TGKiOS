@@ -15,7 +15,7 @@ protocol SegmentedFormNavigationControllerDelegate:class {
 
 class SegmentedFormNavigationController: UINavigationController {
     
-    //dependencies
+    ///dependencies
     weak var formDelegate:SegmentedFormNavigationControllerDelegate?
     var segmentedFormModel:SegmentedFormModel! {
         didSet {
@@ -23,7 +23,7 @@ class SegmentedFormNavigationController: UINavigationController {
             self.setupFormPages()
         }
     }
-    //end dependencies
+    ///end dependencies
     
     var formPageViewControllers = [FormPageViewController]()
     var formAnswers = [FormQuestionAnswerModel]()
@@ -54,7 +54,7 @@ class SegmentedFormNavigationController: UINavigationController {
         }
         self.formPageViewControllers = allPageViewControllers
         
-        //set a form info view controller as the landing page
+        ///set a form info view controller as the landing page
         let formInfoVC = UIStoryboard(name: "Forms", bundle: nil).instantiateViewController(withIdentifier: "SegmentedFormInfoViewControllerId") as! SegmentedFormInfoViewController
         formInfoVC.segmentedFormModel = self.segmentedFormModel
         formInfoVC.delegate = self    
@@ -83,11 +83,11 @@ class SegmentedFormNavigationController: UINavigationController {
     
     //MARK: User Answer Management Logic
     fileprivate func storeNewAnswers(_ answers:[FormQuestionAnswerModel]) {
-        //If the user has made edits to the form, replace the old answers with new ones
+        ///If the user has made edits to the form, replace the old answers with new ones
         let arrayOfNewAnswerWufooIds:[String] = answers.map { (formQuestionAnswer) -> String in
             return formQuestionAnswer.wufooFieldID
         }
-        //Filter out answers that are about to be replaced
+        ///Filter out answers that are about to be replaced
         let existingQuestionsWithAnswersRemoved = self.formAnswers.filter { (formQuestionAnswer) -> Bool in
             return !arrayOfNewAnswerWufooIds.contains(formQuestionAnswer.wufooFieldID)
         }
@@ -96,7 +96,7 @@ class SegmentedFormNavigationController: UINavigationController {
     }
     
     fileprivate func submitFormAnswers() {
-        //Add default answers to the list before submitting
+        ///Add default answers to the list before submitting
         self.storeNewAnswers(segmentedFormModel.defaultAnswers)
         
         ServiceManager.sharedInstace.submitAnswersToForm(self.segmentedFormModel.id, withAnswers: self.formAnswers) { (success, error, formFieldErrorModels) in
@@ -107,6 +107,8 @@ class SegmentedFormNavigationController: UINavigationController {
             else if let fieldErrors = formFieldErrorModels {
                 var firstformPageWithErrors:FormPageViewController?
                 for formPageVC in self.formPageViewControllers {
+                    formPageVC.hideAllFormFieldErrors()
+                    
                     let hasErrors = formPageVC.showFormFieldErrors(fieldErrors)
                     if hasErrors && firstformPageWithErrors == nil {
                         firstformPageWithErrors = formPageVC
@@ -131,7 +133,7 @@ extension SegmentedFormNavigationController:FormPageViewControllerDelegate {
         
         self.storeNewAnswers(answers)
         
-        //Push the next form on the stack from memory to preserve preexisting answers. Submit if you're on the last page
+        ///Push the next form on the stack from memory to preserve preexisting answers. Submit if you're on the last page
         if let nextFormPageVC = self.nextFormPageAfter(formPageViewController) {
             nextFormPageVC.isLastPageInForm = self.checkIfFormPageIsLastPage(nextFormPageVC)
             self.pushViewController(nextFormPageVC, animated: true)

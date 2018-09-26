@@ -140,6 +140,15 @@ class FormPageViewController: UITableViewController {
         }
         return foundMatchingErrorField
     }
+    
+    func hideAllFormFieldErrors() {
+        for formQuestionCell in self.formQuestionCells {
+            guard let castedCell = formQuestionCell as? FormItemView else {
+                continue
+            }
+            castedCell.hideErrorState()
+        }
+    }
 }
 
 //MARK: Tableview Datasource

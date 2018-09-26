@@ -31,11 +31,15 @@ protocol FormItemView {
 }
 
 extension FormItemView {
+    private var errorMessageHeightAnchorId:String {
+        return "formItemViewErrorMessageHeightAnchor"
+    }
+    
     func showErrorState(_ error:FormFieldErrorModel) {
         //Remove the height anchor pinning the height to 0
         var foundHeightAnchor:NSLayoutConstraint?
         for constraint in self.errorMessageLabel.constraints {
-            if constraint.identifier == "errorMessageHeightAnchor" {
+            if constraint.identifier == self.errorMessageHeightAnchorId {
                 foundHeightAnchor = constraint
                 break
             }
@@ -50,9 +54,16 @@ extension FormItemView {
     }
     
     func hideErrorState() {
+        //make sure we don't add duplicate anchors
+        for constraint in self.errorMessageLabel.constraints {
+            if constraint.identifier == self.errorMessageHeightAnchorId {
+                return
+            }
+        }
+        
         //Pin the height to 0 to collapse the label
         let heightAchor = self.errorMessageLabel.heightAnchor.constraint(equalToConstant: 0)
-        heightAchor.identifier = "errorMessageHeightAnchor"
+        heightAchor.identifier = self.errorMessageHeightAnchorId
         heightAchor.isActive = true
         
         self.errorMessageLabel.isHidden = true
