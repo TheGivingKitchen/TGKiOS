@@ -13,6 +13,7 @@
 		4E1EED4E210A57B40084CFF3 /* Forms.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E1EED4D210A57B40084CFF3 /* Forms.storyboard */; };
 		4E4D229E20B1B1F400BA7577 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4D229D20B1B1F400BA7577 /* MainTabBarController.swift */; };
 		4E4D22A120B1B2A700BA7577 /* FormsHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4D22A020B1B2A700BA7577 /* FormsHomeViewController.swift */; };
+		4E71AFCE215C3EEF0033494D /* FeedbackHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E71AFCD215C3EEF0033494D /* FeedbackHomeViewController.swift */; };
 		4E75176320B6291C00B2D7E0 /* SegmentedFormInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E75176220B6291C00B2D7E0 /* SegmentedFormInfoViewController.swift */; };
 		4E75176A20BC87B000B2D7E0 /* ExternalShareManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E75176920BC87B000B2D7E0 /* ExternalShareManager.swift */; };
 		4E75176E20C8953B00B2D7E0 /* DonateHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E75176D20C8953B00B2D7E0 /* DonateHomeViewController.swift */; };
@@ -113,6 +114,7 @@
 		4E228D9820ED571F002912AB /* AssistanceFormsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AssistanceFormsCollectionViewCell.xib; sourceTree = "<group>"; };
 		4E4D229D20B1B1F400BA7577 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		4E4D22A020B1B2A700BA7577 /* FormsHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormsHomeViewController.swift; sourceTree = "<group>"; };
+		4E71AFCD215C3EEF0033494D /* FeedbackHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackHomeViewController.swift; sourceTree = "<group>"; };
 		4E75176220B6291C00B2D7E0 /* SegmentedFormInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedFormInfoViewController.swift; sourceTree = "<group>"; };
 		4E75176920BC87B000B2D7E0 /* ExternalShareManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalShareManager.swift; sourceTree = "<group>"; };
 		4E75176D20C8953B00B2D7E0 /* DonateHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonateHomeViewController.swift; sourceTree = "<group>"; };
@@ -248,6 +250,7 @@
 				4E75176F20C8954C00B2D7E0 /* AssistanceHomeViewController.swift */,
 				4E75177520C8A95700B2D7E0 /* EventsHomeViewController.swift */,
 				C0B9C4982135D79F009BEE60 /* SafetyNetHomeViewController.swift */,
+				4E71AFCD215C3EEF0033494D /* FeedbackHomeViewController.swift */,
 			);
 			name = MainTabBarRootViewControllers;
 			sourceTree = "<group>";
@@ -784,6 +787,7 @@
 				4ECA9C0B20A868440084A317 /* FormAddressTableViewCell.swift in Sources */,
 				C0A259832130AA870007AB20 /* SafetyNetResourceModel.swift in Sources */,
 				4ED3883E209D030600A8BEE2 /* FormTextFieldTableViewCell.swift in Sources */,
+				4E71AFCE215C3EEF0033494D /* FeedbackHomeViewController.swift in Sources */,
 				4ECA9BFD20A269A10084A317 /* FormListSelectTableViewCellRow.swift in Sources */,
 				4ED38844209D030600A8BEE2 /* FormTextViewTableViewCell.swift in Sources */,
 				C0B9C4A3213870BC009BEE60 /* AppDataStore.swift in Sources */,
