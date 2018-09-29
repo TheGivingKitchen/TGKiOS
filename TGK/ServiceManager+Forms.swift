@@ -92,7 +92,7 @@ extension ServiceManager {
             
             var parsedErrors = [FormFieldErrorModel]()
             for fieldError in fieldErrors {
-                let errorModel = FormFieldErrorModel(wufooFieldId: fieldError["ID"] ?? "", errorText: fieldError["ErrorText"] ?? "")
+                let errorModel = FormFieldErrorModel(jsonDict: fieldError)
                 parsedErrors.append(errorModel)
             }
             completion(false, NSError(domain: "", code: 999, userInfo: [NSLocalizedDescriptionKey:"Form field submission error"]), parsedErrors)
