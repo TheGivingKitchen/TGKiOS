@@ -23,7 +23,7 @@
         {
             "name": "Aid Atlanta",
             "address": "1605 Peachtree Street Atlanta 30309",
-            "website": "www.aidatlanta.org",
+            "website": "https://www.aidatlanta.org",
             "phone": "404-870-7700",
             "contactName": "",
             "category": "HIV/AIDS",
@@ -33,7 +33,7 @@
         {
             "name": "American Cancer Society",
             "address": "",
-            "website": "www.cancer.org",
+            "website": "https://www.cancer.org",
             "phone": "1-800-227-2345",
             "contactName": "",
             "category": "Cancer",
@@ -43,7 +43,7 @@
         {
             "name": "Ben Massell Dental Clinic",
             "address": "700 14th Street NW Atlanta 30308",
-            "website": "www.benmasselldentalclinic.org",
+            "website": "https://www.benmasselldentalclinic.org",
             "phone": "404-881-1858",
             "contactName": "Keith Kirshner",
             "category": "Dental",
@@ -53,7 +53,7 @@
         {
             "name": "Ser Familia, Inc.",
             "address": " 209 Northridge Drive Acworth 30101",
-            "website": "www.gladv.org",
+            "website": "https://www.gladv.org",
             "phone": "678-363-3079",
             "contactName": "",
             "category": "Domestic Violence, Counseling, Therapy",
@@ -63,7 +63,7 @@
         {
             "name": "Good Rx",
             "address": "",
-            "website": "www.goodrx.com",
+            "website": "https://www.goodrx.com",
             "phone": "1-888-799-2553",
             "contactName": "",
             "category": "Medical/Prescriptions",
@@ -73,7 +73,7 @@
         {
             "name": "Meals on Wheels",
             "address": "1705 Commerce Drive NW Atlanta 30318",
-            "website": "www.mealsonwheelsatlanta.org",
+            "website": "https://www.mealsonwheelsatlanta.org",
             "phone": "404-351-3889",
             "contactName": "Tenille Johnson",
             "category": "Food Assistance",
@@ -83,7 +83,7 @@
         {
             "name": "NeedyMeds",
             "address": "",
-            "website": "www.needymeds.org",
+            "website": "https://www.needymeds.org",
             "phone": "1-800-503-6897",
             "contactName": "",
             "category": "Medical/Prescriptions",
@@ -93,7 +93,7 @@
         {
             "name": "Open Hand",
             "address": "181 Armour Drive NE Atlanta 30324",
-            "website": "www.projectopenhand.org",
+            "website": "https://www.projectopenhand.org",
             "phone": "404-480-7704",
             "contactName": "",
             "category": "Food Assistance",
@@ -103,7 +103,7 @@
         {
             "name": "Patients Advocate Foundation",
             "address": "",
-            "website": "www.patientadvocate.org",
+            "website": "https://www.patientadvocate.org",
             "phone": "1-800-532-5274",
             "contactName": "",
             "category": "Healthcare (Insurance)",
@@ -113,7 +113,7 @@
         {
             "name": "Safety Net Foundation",
             "address": "",
-            "website": "www.amgensafetynetfoundation.com",
+            "website": "https://www.amgensafetynetfoundation.com",
             "phone": "1-888-762-6436",
             "contactName": "",
             "category": "Pharmacy",
@@ -143,7 +143,7 @@
         {
             "name": "Northside Hospital: Domestic Violence",
             "address": "1000 Johnson Ferry Road NE Atlanta 303432",
-            "website": "www.northside.com",
+            "website": "https://www.northside.com",
             "phone": "404-845-5555",
             "contactName": "",
             "category": "Domestic Violence",
@@ -153,7 +153,7 @@
         {
             "name": "Northside Hospital: HIPAA Privacy Practices",
             "address": "1000 Johnson Ferry Road NE Atlanta 303432",
-            "website": "www.northside.com",
+            "website": "https://www.northside.com",
             "phone": "404-851-8000",
             "contactName": "",
             "category": "Healthcare",
@@ -163,7 +163,7 @@
         {
             "name": "Northside Hospital: Partnership for Safety",
             "address": "1000 Johnson Ferry Road NE Atlanta 303432",
-            "website": "www.northside.com",
+            "website": "https://www.northside.com",
             "phone": "404-845-5555",
             "contactName": "",
             "category": "Health and Wellness",
@@ -173,7 +173,7 @@
         {
             "name": "West End Medical Free Dental Care",
             "address": "868 York Avenue SW Atlanta 30310",
-            "website": "www.fhcga.org",
+            "website": "https://www.fhcga.org",
             "phone": "404-752-1400",
             "contactName": "",
             "category": "Dental",
@@ -183,7 +183,7 @@
         {
             "name": "Alcoholics Anonymous",
             "address": "",
-            "website": "www.atlantaaa.org",
+            "website": "https://www.atlantaaa.org",
             "phone": "404-525-3178",
             "contactName": "",
             "category": "Mental Health",
@@ -193,7 +193,7 @@
         {
             "name": "Behavioral Link",
             "address": "233 Peachtree Street NE Suite 500 Atlanta 30303",
-            "website": "www.behaviorhealthlink.com",
+            "website": "https://www.behaviorhealthlink.com",
             "phone": "404-420-3202",
             "contactName": "",
             "category": "Mental Health",
@@ -203,7 +203,7 @@
         {
             "name": "Big Table",
             "address": "1023 West Riverside Suite 201\nSpokane, WA 99201",
-            "website": "www.big-table.com",
+            "website": "https://www.big-table.com",
             "phone": "509-828-8474",
             "contactName": "Chris Deitz, Hala Mana'o",
             "category": "Mental Health",
@@ -213,7 +213,7 @@
         {
             "name": "CEPTA",
             "address": "6020 Dawson Boulevard Norcross 30093",
-            "website": "http://www.cetpa.org/",
+            "website": "https://www.cetpa.org/",
             "phone": "770-662-0249",
             "contactName": "Gloria Juliao",
             "category": "Mental Health",
@@ -223,7 +223,7 @@
         {
             "name": "Heirloom Foundation",
             "address": "",
-            "website": "www.theheirloomdfoundation.org",
+            "website": "https://www.theheirloomdfoundation.org",
             "phone": "347-927-0827",
             "contactName": "Sarah Ory",
             "category": "Mental Health",
@@ -233,7 +233,7 @@
         {
             "name": "The Link Counseling Center",
             "address": "1820 The Exchange Suite 650 Atlanta 30339",
-            "website": "www.thelink.org",
+            "website": "https://www.thelink.org",
             "phone": "404-256-9797",
             "contactName": "Elaine Gibson",
             "category": "Mental Health",
@@ -243,7 +243,7 @@
         {
             "name": "Metropolitan Counseling Services",
             "address": "2801 Buford Hwy NE Suite 470 Atlanta 30329",
-            "website": "www.mcsatlanta.org",
+            "website": "https://www.mcsatlanta.org",
             "phone": "404-321-1794",
             "contactName": "Rachelle Kennedy",
             "category": "Mental Health",
@@ -253,7 +253,7 @@
         {
             "name": "Substance Abuse and Mental Health Services Administration",
             "address": "5600 Fishers Lane Rockville, MD 20857",
-            "website": "www.samhsa.gov",
+            "website": "https://www.samhsa.gov",
             "phone": "1-800-662-4357",
             "contactName": "",
             "category": "Mental Health",
@@ -263,7 +263,7 @@
         {
             "name": "Smart Recovery",
             "address": "7304 Mentor Avenue Suite F Mentor, OH 44060",
-            "website": "www.smartrecovery.org",
+            "website": "https://www.smartrecovery.org",
             "phone": "440-951-5357",
             "contactName": "",
             "category": "Mental Health",
@@ -273,7 +273,7 @@
         {
             "name": "DFS Memorials",
             "address": "",
-            "website": "www.dfsmemorials.com",
+            "website": "https://www.dfsmemorials.com",
             "phone": "404-445-0239",
             "contactName": "",
             "category": "Funeral Services",
@@ -283,7 +283,7 @@
         {
             "name": "Everest Funeral Planning and Concierge",
             "address": "",
-            "website": "www.everestfuneral.com",
+            "website": "https://www.everestfuneral.com",
             "phone": "1-800-913-8318",
             "contactName": "",
             "category": "Funeral Services",
@@ -303,7 +303,7 @@
         {
             "name": "Clearpoint Credit Counseling Solutions",
             "address": "55 Ivan Allen Blvd NW Atlanta 30308",
-            "website": "www.moneymanagement.org",
+            "website": "https://www.moneymanagement.org",
             "phone": "404-527-7630",
             "contactName": "",
             "category": "Financial Services",
@@ -313,7 +313,7 @@
         {
             "name": "FDIC Money Smart",
             "address": "",
-            "website": "www.fdic.gov/moneysmart",
+            "website": "https://www.fdic.gov/moneysmart",
             "phone": "1-877-275-3342",
             "contactName": "",
             "category": "Financial Services",
@@ -323,7 +323,7 @@
         {
             "name": "Financial Literacy and Education Commission",
             "address": "1500 Pennsylvania Avenue NW Washington, DC 20220",
-            "website": "www.mymoney.gov",
+            "website": "https://www.mymoney.gov",
             "phone": "1-800-333-4630",
             "contactName": "",
             "category": "Financial Services",
@@ -333,7 +333,7 @@
         {
             "name": "Pro Management Group",
             "address": "44 Broad Street NW Suite 510 Atlanta 30303",
-            "website": "www.michonwilson.wixsite.com/promgt/services",
+            "website": "https://www.michonwilson.wixsite.com/promgt/services",
             "phone": "678-705-7217",
             "contactName": "Gail Collins",
             "category": "Financial Services",
@@ -343,7 +343,7 @@
         {
             "name": "Partnership for Community Action",
             "address": "1261 Commercial Drive Conyers 30094",
-            "website": "www.pcaction.org",
+            "website": "https://www.pcaction.org",
             "phone": "404-929-2467",
             "contactName": "",
             "category": "Housing Assistance",
@@ -353,7 +353,7 @@
         {
             "name": "Clayton County Community Services Authority",
             "address": "1000 Main Street Forest Park 30297",
-            "website": "http://www.claytoncountycsa.org/",
+            "website": "https://www.claytoncountycsa.org/",
             "phone": "404-363-0575",
             "contactName": "",
             "category": "Housing Assistance",
@@ -363,7 +363,7 @@
         {
             "name": "Furniture Bank of Metro Atlanta",
             "address": "908 Murphy Avenue SW Atlanta 30310",
-            "website": "www.furniturebankatlanta.org",
+            "website": "https://www.furniturebankatlanta.org",
             "phone": "404-355-8530",
             "contactName": "Katie Leware",
             "category": "Housing Assistance",
@@ -373,7 +373,7 @@
         {
             "name": "Atlanta Community Tool Bank",
             "address": "410 Engelwood Avenue SE Atlanta 30315",
-            "website": "www.atlantacommunitytoolbank.org",
+            "website": "https://www.atlantacommunitytoolbank.org",
             "phone": "404-880-0054",
             "contactName": "Patty Russart",
             "category": "Tool Lending Program",
@@ -383,7 +383,7 @@
         {
             "name": "Fulton Atlanta Community Action Authority",
             "address": "1690 Chantilly Drive NE Atlanta 30324",
-            "website": "www.facaa.org",
+            "website": "https://www.facaa.org",
             "phone": "404-320-0166",
             "contactName": "",
             "category": "Housing Assistance",
@@ -393,7 +393,7 @@
         {
             "name": "Midtown Assistance Center",
             "address": "30 Porter Place NE Atlanta 30308",
-            "website": "www.midtownassistancectr.org",
+            "website": "https://www.midtownassistancectr.org",
             "phone": "404-681-5777",
             "contactName": "Keira Dandridge",
             "category": "Housing Assistance",
@@ -413,7 +413,7 @@
         {
             "name": "Star-C",
             "address": "1201 Peachtree Street Suite 1110 Atlanta 30361",
-            "website": "www.star-c.org",
+            "website": "https://www.star-c.org",
             "phone": "404-698-3535",
             "contactName": "Allie Reeser",
             "category": "Housing Assistance",
@@ -473,7 +473,7 @@
         {
             "name": "Midtown Assistance Center",
             "address": "30 Porter Place NE Atlanta 30308",
-            "website": "www.midtownassistancectr.org",
+            "website": "https://www.midtownassistancectr.org",
             "phone": "404-681-0470",
             "contactName": "Rebecca Richard",
             "category": "Housing Assistance",
@@ -493,7 +493,7 @@
         {
             "name": "CORE - Children of Restaurant Employees",
             "address": "1196 Buckhead Crossing, Woodstock, GA 30189",
-            "website": "www.COREgives.org",
+            "website": "https://www.COREgives.org",
             "phone": "404-655-4690",
             "contactName": "Emily Kilduff",
             "category": "Family Assistance",
@@ -513,7 +513,7 @@
         {
             "name": "Kanner & Pintaluga Accident Attorneys",
             "address": "201 Peachtree St. NE Suite 200, Atlanta, GA 30303",
-            "website": "www.kpattorney.com",
+            "website": "https://www.kpattorney.com",
             "phone": "404-952-2995",
             "contactName": "Kevin S. Sobel",
             "category": "Legal Services",
@@ -533,7 +533,7 @@
         {
             "name": "The Center for Family Resources",
             "address": "995 Roswell Street NE, Suite 100, Marietta, GA 30060",
-            "website": "www.TheCFR.org",
+            "website": "https://www.TheCFR.org",
             "phone": "770-428-2601",
             "contactName": "Carolyn Bridges",
             "category": "Financial Services, Medical, Food Pantry",
@@ -543,7 +543,7 @@
         {
             "name": "Mary Hall Freedom House",
             "address": "200 Hannover Park Rd. Atlanta, GA 30350",
-            "website": "www.mhfh.org",
+            "website": "https://www.mhfh.org",
             "phone": "770-642-5500",
             "contactName": "Lucy Hall-Gainer",
             "category": "Women's Services",
@@ -583,7 +583,7 @@
         {
             "name": "Cobb & Douglas County Community Services Board",
             "address": "3830 South Cobb Drive, Suite 300\nSmyrna, GA 30080",
-            "website": "http://www.cobbcsb.com/",
+            "website": "https://www.cobbcsb.com/",
             "phone": "770-422-0202",
             "contactName": "Bryan Stephens",
             "category": "Mental Health",
@@ -713,7 +713,7 @@
         {
             "name": "Ridgeview Institute Access Center",
             "address": "3995 South Cobb Drive, Atlanta, GA",
-            "website": "www.ridgeviewinstitute.com",
+            "website": "https://www.ridgeviewinstitute.com",
             "phone": "770-434-4567",
             "contactName": "",
             "category": "Crisis Assistance",
@@ -723,7 +723,7 @@
         {
             "name": "Peachford Hospital",
             "address": "2151 Peachford Road Atlanta, GA 30338",
-            "website": "www.peachford.com",
+            "website": "https://www.peachford.com",
             "phone": "770-454-2302",
             "contactName": "",
             "category": "Crisis Assistance",
@@ -733,7 +733,7 @@
         {
             "name": "Anchor Hospital",
             "address": "5454 Yorktowne Dr, Atlanta, GA 30349",
-            "website": "www.anchorhospital.com",
+            "website": "https://www.anchorhospital.com",
             "phone": "770-991-6044",
             "contactName": "",
             "category": "Crisis Assistance",
@@ -753,7 +753,7 @@
         {
             "name": "Partners for Home",
             "address": "55 Trinity Avenue SW Atlanta, GA 30303",
-            "website": "www.partnersforhome.org",
+            "website": "https://www.partnersforhome.org",
             "phone": "404-838-6497",
             "contactName": "Ashlee Starr",
             "category": "Housing Assistance",
@@ -763,7 +763,7 @@
         {
             "name": "Georgia Law Center for the Homeless",
             "address": "One Park Tower, 34 Peachtree St NW #750, Atlanta, GA 30303",
-            "website": "\nhttp://www.galawcenter.org/\n",
+            "website": "\nhttps://www.galawcenter.org/\n",
             "phone": "(404) 681-0680",
             "contactName": "",
             "category": "Homeless Assistance",
@@ -913,7 +913,7 @@
         {
             "name": "Red Robin Foundation",
             "address": "",
-            "website": "www.redrobinfoundation.org",
+            "website": "https://www.redrobinfoundation.org",
             "phone": "303-846-5492",
             "contactName": "Mara Wheeler",
             "category": "Employee Assistance",
@@ -923,7 +923,7 @@
         {
             "name": "Ruby Has Heart Fund",
             "address": "",
-            "website": "www.rubytuesday.com",
+            "website": "https://www.rubytuesday.com",
             "phone": "865-379-5741",
             "contactName": "Rhonda Sallas",
             "category": "Employee Assistance",
@@ -943,7 +943,7 @@
         {
             "name": "Staples Share Fund",
             "address": "",
-            "website": "www.staplessharefund.org/",
+            "website": "https://www.staplessharefund.org/",
             "phone": "",
             "contactName": "",
             "category": "Employee Assistance",
@@ -953,7 +953,7 @@
         {
             "name": "Whitefoord, Inc.",
             "address": "30 Warren St. Atlanta, GA 30317",
-            "website": "www.Whitefoord.org",
+            "website": "https://www.Whitefoord.org",
             "phone": "404-373-2282",
             "contactName": "Christy Onyeabor",
             "category": "Family Assistance",
@@ -973,7 +973,7 @@
         {
             "name": "Urban Health and Wellness",
             "address": "645 Grant St SE Atlana, GA 30312",
-            "website": "www.uhw.clinic",
+            "website": "https://www.uhw.clinic",
             "phone": "404-618-6983",
             "contactName": "",
             "category": "Healthcare",
@@ -983,7 +983,7 @@
         {
             "name": "OutPatient Imaging",
             "address": "2284 Peachtree Rd. Atlanta, GA 30309",
-            "website": "www.opi.bz",
+            "website": "https://www.opi.bz",
             "phone": "404-225-5674",
             "contactName": "",
             "category": "Healthcare",
@@ -993,7 +993,7 @@
         {
             "name": "OutPatient Imaging",
             "address": "10 Eastbrook Bend Peachtree City, GA 30269",
-            "website": "www.opi.bz",
+            "website": "https://www.opi.bz",
             "phone": "770-305-4674",
             "contactName": "",
             "category": "Healthcare",
@@ -1003,7 +1003,7 @@
         {
             "name": "OutPatient Imaging",
             "address": "60 Oak Hill Blvd., Suite 101 Newnan, GA 30265",
-            "website": "www.opi.bz",
+            "website": "https://www.opi.bz",
             "phone": "770-502-9883",
             "contactName": "",
             "category": "Healthcare",
@@ -1023,7 +1023,7 @@
         {
             "name": "Making A Way",
             "address": "Making A Way Housing, Inc.\n377 Westchester Blvd\nAtlanta, Georgia 30314",
-            "website": "http://www.makingawayhousing.org",
+            "website": "https://www.makingawayhousing.org",
             "phone": "404 799-9652",
             "contactName": "",
             "category": "Homeless Prevention",
@@ -1043,7 +1043,7 @@
         {
             "name": "Coast2CoastRx",
             "address": "",
-            "website": "www.coast2coastrx.com",
+            "website": "https://www.coast2coastrx.com",
             "phone": "",
             "contactName": "",
             "category": "Healthcare",
@@ -1053,7 +1053,7 @@
         {
             "name": "The Silverton Foundation ",
             "address": "1201 Peachtree St. NE, Ste. 2050 Atlanta, GA 30361",
-            "website": "www.thesilvertonfoundation.org",
+            "website": "https://www.thesilvertonfoundation.org",
             "phone": "404-815-0291",
             "contactName": "",
             "category": "Children & Family",
@@ -1103,7 +1103,7 @@
         {
             "name": "BB&T",
             "address": "271 17th St. NW, Suite 800, Atlanta, GA 30363",
-            "website": "www.bbt.com",
+            "website": "https://www.bbt.com",
             "phone": "404-720-9237 (Cassidy) 803-608-1411(Brodkin)",
             "contactName": "Elisabeth Cassidy and Ashley Brodkin",
             "category": "Financial Assistance",
@@ -1123,7 +1123,7 @@
         {
             "name": "Center for Family Resources",
             "address": "995 Roswell Street NE Suite 100 Marietta, Marietta, GA 30060",
-            "website": "www.thecfr.org",
+            "website": "https://www.thecfr.org",
             "phone": "770-428-2601",
             "contactName": "",
             "category": "Housing Assistance",
@@ -1133,7 +1133,7 @@
         {
             "name": "Center for Family Resources",
             "address": "995 Roswell Street NE Suite 100 Marietta, Marietta, GA 30060",
-            "website": "www.thecfr.org",
+            "website": "https://www.thecfr.org",
             "phone": "770-428-2601",
             "contactName": "",
             "category": "Food Assistance",
@@ -1143,7 +1143,7 @@
         {
             "name": "Center for Family Resources",
             "address": "995 Roswell Street NE Suite 100 Marietta, Marietta, GA 30060",
-            "website": "www.thecfr.org",
+            "website": "https://www.thecfr.org",
             "phone": "770-428-2601",
             "contactName": "",
             "category": "Transportation Assistance",
@@ -1153,7 +1153,7 @@
         {
             "name": "Center for Family Resources",
             "address": "995 Roswell Street NE Suite 100 Marietta, Marietta, GA 30060",
-            "website": "www.thecfr.org",
+            "website": "https://www.thecfr.org",
             "phone": "770-428-2601",
             "contactName": "",
             "category": "Educational Assistance",
@@ -1163,7 +1163,7 @@
         {
             "name": "Housing Initiative of North Fulton (Home Stretch)",
             "address": "89 Grove Way Roswell, GA 30075",
-            "website": "www.homestretch.org",
+            "website": "https://www.homestretch.org",
             "phone": "770-642-9185",
             "contactName": "",
             "category": "Housing Assistance",
@@ -1233,7 +1233,7 @@
         {
             "name": "Living Room",
             "address": "50 Hurt Plaza SE Suite #1200, Atlanta, GA 30303",
-            "website": "www.livingroomatl.org",
+            "website": "https://www.livingroomatl.org",
             "phone": "404-382-8991",
             "contactName": "",
             "category": "Housing Assistance",
@@ -1243,7 +1243,7 @@
         {
             "name": "Initiative for Affordable Housing DeKalb",
             "address": "3032 N Decatur Rd. Scottdale, GA 30079",
-            "website": "www.affordablehousingatl.org",
+            "website": "https://www.affordablehousingatl.org",
             "phone": "404-299-9979",
             "contactName": "",
             "category": "Housing Assistance",
@@ -1253,7 +1253,7 @@
         {
             "name": "Fannie Mae",
             "address": "",
-            "website": "www.fanniemae.com",
+            "website": "https://www.fanniemae.com",
             "phone": "1-800-232-6643",
             "contactName": "",
             "category": "Housing Assistance",
@@ -1263,7 +1263,7 @@
         {
             "name": "Non-Profit Industries (Social Serve)",
             "address": "",
-            "website": "www.socialserve.com",
+            "website": "https://www.socialserve.com",
             "phone": "704-334-8722",
             "contactName": "",
             "category": "Housing Assistance",
@@ -1373,7 +1373,7 @@
         {
             "name": "Georgia Legal Services Program",
             "address": "104 Marietta St. NW #250, Atlanta, GA 30303",
-            "website": "http://www.glsp.org/",
+            "website": "https://www.glsp.org/",
             "phone": "404-206-5175",
             "contactName": "",
             "category": "Legal Services",
@@ -1383,7 +1383,7 @@
         {
             "name": "Community Friendship",
             "address": "85 Renaissance Pkwy NE, Atlanta, GA 30308",
-            "website": "http://www.communityfriendship.org/",
+            "website": "https://www.communityfriendship.org/",
             "phone": "404-875-0381",
             "contactName": "",
             "category": "Mental Health",
@@ -1423,7 +1423,7 @@
         {
             "name": "Mental Health America of Georgia",
             "address": "2250 N Druid Hills Rd. NE, Suite 275, Atlanta, GA 30329",
-            "website": "http://www.mhageorgia.org/",
+            "website": "https://www.mhageorgia.org/",
             "phone": "770-741-1481",
             "contactName": "",
             "category": "Mental Health",
@@ -1433,7 +1433,7 @@
         {
             "name": "Cobb & Douglas County Community Services Board",
             "address": "3830 South Cobb Drive, Suite 300, Smyrna, GA 30080",
-            "website": "http://www.cobbcsb.com/",
+            "website": "https://www.cobbcsb.com/",
             "phone": "770-422-0202",
             "contactName": "",
             "category": "Substance Abuse",
@@ -1443,7 +1443,7 @@
         {
             "name": "Cobb & Douglas County Community Services Board",
             "address": "3830 South Cobb Drive, Suite 300, Smyrna, GA 30080",
-            "website": "http://www.cobbcsb.com/",
+            "website": "https://www.cobbcsb.com/",
             "phone": "770-422-0202",
             "contactName": "",
             "category": "Developmental Disabilities",
@@ -1473,7 +1473,7 @@
         {
             "name": "Clayton County Aging Program",
             "address": "877 Battle Creek Road Jonesboro, GA 30236",
-            "website": "http://www.claytonseniors.com/senior-center-locations/clayton-county-aging-program/",
+            "website": "https://www.claytonseniors.com/senior-center-locations/clayton-county-aging-program/",
             "phone": "770-603-4050",
             "contactName": "",
             "category": "Elderly Assistance (Meals)",
@@ -1483,7 +1483,7 @@
         {
             "name": "Clayton County Aging Program",
             "address": "877 Battle Creek Road Jonesboro, GA 30236",
-            "website": "http://www.claytonseniors.com/senior-center-locations/clayton-county-aging-program/",
+            "website": "https://www.claytonseniors.com/senior-center-locations/clayton-county-aging-program/",
             "phone": "770-603-4050",
             "contactName": "",
             "category": "Elderly Assistance (Transportation)",
