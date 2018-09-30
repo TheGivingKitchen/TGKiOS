@@ -53,6 +53,17 @@ class MainTabBarController: UITabBarController {
         NotificationCenter.default.addObserver(self, selector: #selector(applicationDidBecomeActiveHander(_:)), name: NSNotification.Name.UIApplicationDidBecomeActive, object: nil)
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if AppDataStore.hasFinishedOnboarding == false {
+            let onboardingVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "OnboardingViewControllerId") as! OnboardingViewController
+            let onboardingNavVC = UINavigationController(rootViewController: onboardingVC)
+            onboardingVC.delegate = self
+            self.present(onboardingNavVC, animated: true)
+        }
+    }
+    
     @objc private func applicationDidBecomeActiveHander(_ notification:NSNotification) {
         self.fetchRemoteConfigAndActivate()
     }
@@ -73,6 +84,12 @@ extension MainTabBarController {
                 break
             }
         }
+    }
+}
+
+extension MainTabBarController:OnboardingViewControllerDelegate {
+    func onboardingViewControllerDidFinish(viewController: OnboardingViewController) {
+        viewController.dismiss(animated: true)
     }
 }
 

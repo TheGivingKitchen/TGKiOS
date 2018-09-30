@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		165677F7CA24DF537F71485F /* Pods_TGK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02F6B12ADD2CEF057F42D437 /* Pods_TGK.framework */; };
 		4E09B7E42117697500584924 /* Donate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E09B7E32117697500584924 /* Donate.storyboard */; };
+		4E0E0C852161705C0082240E /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0E0C842161705C0082240E /* OnboardingViewController.swift */; };
+		4E0E0C88216171F80082240E /* OnboardingContentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0E0C87216171F80082240E /* OnboardingContentModel.swift */; };
+		4E0E0C8A2161745F0082240E /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0E0C892161745F0082240E /* OnboardingCollectionViewCell.swift */; };
 		4E1EED452108157A0084CFF3 /* AssistanceChooseRecipientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1EED442108157A0084CFF3 /* AssistanceChooseRecipientViewController.swift */; };
 		4E1EED4E210A57B40084CFF3 /* Forms.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E1EED4D210A57B40084CFF3 /* Forms.storyboard */; };
 		4E4D229E20B1B1F400BA7577 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4D229D20B1B1F400BA7577 /* MainTabBarController.swift */; };
@@ -105,6 +108,9 @@
 		02F6B12ADD2CEF057F42D437 /* Pods_TGK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TGK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2ED9204B045A5AE610078D22 /* Pods-TGK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TGK.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TGK/Pods-TGK.debug.xcconfig"; sourceTree = "<group>"; };
 		4E09B7E32117697500584924 /* Donate.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Donate.storyboard; sourceTree = "<group>"; };
+		4E0E0C842161705C0082240E /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		4E0E0C87216171F80082240E /* OnboardingContentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContentModel.swift; sourceTree = "<group>"; };
+		4E0E0C892161745F0082240E /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
 		4E1EED442108157A0084CFF3 /* AssistanceChooseRecipientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssistanceChooseRecipientViewController.swift; sourceTree = "<group>"; };
 		4E1EED4D210A57B40084CFF3 /* Forms.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Forms.storyboard; path = ../Forms.storyboard; sourceTree = "<group>"; };
 		4E228D9220ED5639002912AB /* AssistanceOverviewCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssistanceOverviewCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -237,9 +243,20 @@
 			name = Assistance;
 			sourceTree = "<group>";
 		};
+		4E0E0C86216171D60082240E /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				4E0E0C842161705C0082240E /* OnboardingViewController.swift */,
+				4E0E0C87216171F80082240E /* OnboardingContentModel.swift */,
+				4E0E0C892161745F0082240E /* OnboardingCollectionViewCell.swift */,
+			);
+			name = Onboarding;
+			sourceTree = "<group>";
+		};
 		4E4D229F20B1B27500BA7577 /* MainTabBarRootViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				4E0E0C86216171D60082240E /* Onboarding */,
 				4EE12A8521487078003DFBB5 /* LocationModal */,
 				C0B9C49A21371DD7009BEE60 /* Cells */,
 				4E4D229D20B1B1F400BA7577 /* MainTabBarController.swift */,
@@ -801,7 +818,9 @@
 				4ED3883F209D030600A8BEE2 /* FormQuestionModel.swift in Sources */,
 				4EE12A9321507FB1003DFBB5 /* Analytics+TGK.swift in Sources */,
 				4E4D229E20B1B1F400BA7577 /* MainTabBarController.swift in Sources */,
+				4E0E0C88216171F80082240E /* OnboardingContentModel.swift in Sources */,
 				C0B9C4972135D55E009BEE60 /* ServiceManager+SafetyNet.swift in Sources */,
+				4E0E0C8A2161745F0082240E /* OnboardingCollectionViewCell.swift in Sources */,
 				4E7C2E3220B1D8F800A20303 /* UIFont+TGK.swift in Sources */,
 				4E75176E20C8953B00B2D7E0 /* DonateHomeViewController.swift in Sources */,
 				4E1EED452108157A0084CFF3 /* AssistanceChooseRecipientViewController.swift in Sources */,
@@ -816,6 +835,7 @@
 				4E75176320B6291C00B2D7E0 /* SegmentedFormInfoViewController.swift in Sources */,
 				4EF43480213AD008009C2679 /* UIButton+TGK.swift in Sources */,
 				4ED38848209D030600A8BEE2 /* FormListSelectTableViewCell.swift in Sources */,
+				4E0E0C852161705C0082240E /* OnboardingViewController.swift in Sources */,
 				4EF43484213C239A009C2679 /* FacebookGroupAccessTableViewCell.swift in Sources */,
 				4ED38852209D04AE00A8BEE2 /* String+TGK.swift in Sources */,
 				4ED3883D209D030600A8BEE2 /* FormPickerTableViewCell.swift in Sources */,
@@ -969,7 +989,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = VZBY3CL334;
 				INFOPLIST_FILE = TGK/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -980,7 +1000,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = org.thegivingkitchen.tgkios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = TGKJayDevProfile;
 				SWIFT_INSTALL_OBJC_HEADER = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -995,8 +1015,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = VZBY3CL334;
 				INFOPLIST_FILE = TGK/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -1007,7 +1027,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = org.thegivingkitchen.tgkios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = TGKAppStoreDistro;
 				SWIFT_INSTALL_OBJC_HEADER = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 4.0;

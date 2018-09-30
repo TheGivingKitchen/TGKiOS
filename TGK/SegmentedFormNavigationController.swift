@@ -35,8 +35,8 @@ class SegmentedFormNavigationController: UINavigationController {
     }
     
     private func styleNavigationBar() {
-        navigationBar.setBackgroundImage(UIImage(), for: .default)
-        navigationBar.shadowImage = UIImage()
+        self.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationBar.shadowImage = UIImage()
     }
     
     //MARK: Paging logic
