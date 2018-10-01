@@ -33,7 +33,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="DAO-1K-X25">
-                                <rect key="frame" x="0.0" y="101.5" width="375" height="424.5"/>
+                                <rect key="frame" x="0.0" y="224.5" width="375" height="301.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="kxv-8P-Ivu">
                                     <size key="itemSize" width="375" height="509"/>
@@ -43,7 +43,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="onboardingCollectionViewCellId" id="ZmT-hE-I1h" customClass="OnboardingCollectionViewCell" customModule="TGK" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="-42.5" width="375" height="509"/>
+                                        <rect key="frame" x="0.0" y="-104" width="375" height="509"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="509"/>
@@ -66,7 +66,7 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="iNQ-Hf-NF8">
+                            <pageControl opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="iNQ-Hf-NF8">
                                 <rect key="frame" x="168" y="546" width="39" height="37"/>
                             </pageControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="H5E-N7-CpG">
@@ -75,8 +75,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="description label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qRU-Lo-hDu">
-                                <rect key="frame" x="24" y="61" width="327" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" verticalCompressionResistancePriority="250" text="description label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="qRU-Lo-hDu">
+                                <rect key="frame" x="24" y="61" width="327" height="143.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -89,6 +89,7 @@
                             <constraint firstItem="qRU-Lo-hDu" firstAttribute="top" secondItem="H5E-N7-CpG" secondAttribute="bottom" constant="20" id="CRG-Xb-df3"/>
                             <constraint firstItem="iNQ-Hf-NF8" firstAttribute="centerX" secondItem="PQa-35-8Mo" secondAttribute="centerX" id="Jvq-cl-vjw"/>
                             <constraint firstItem="iNQ-Hf-NF8" firstAttribute="top" secondItem="DAO-1K-X25" secondAttribute="bottom" constant="20" id="K3h-ue-0Rq"/>
+                            <constraint firstItem="DAO-1K-X25" firstAttribute="height" secondItem="uLg-NM-wOs" secondAttribute="height" multiplier="50:100" id="NbB-J4-Sxi"/>
                             <constraint firstItem="PQa-35-8Mo" firstAttribute="trailing" secondItem="qRU-Lo-hDu" secondAttribute="trailing" constant="24" id="Yl8-3p-dt8"/>
                             <constraint firstItem="qRU-Lo-hDu" firstAttribute="leading" secondItem="PQa-35-8Mo" secondAttribute="leading" constant="24" id="eBK-Pd-I9x"/>
                             <constraint firstItem="H5E-N7-CpG" firstAttribute="top" secondItem="PQa-35-8Mo" secondAttribute="top" constant="20" id="fOw-8A-VU5"/>

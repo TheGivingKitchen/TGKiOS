@@ -109,6 +109,9 @@ class OnboardingViewController: UIViewController {
             backBarButtonItem.setTitleTextAttributes([.font:UIFont.tgkBody], for: .disabled)
             self.navigationItem.leftBarButtonItem = backBarButtonItem
         }
+        
+        self.navigationItem.rightBarButtonItem?.isEnabled = !self.collectionView.isDragging
+        self.navigationItem.leftBarButtonItem?.isEnabled = !self.collectionView.isDragging
     }
     
     @objc func advanceOnboardingPage() {
@@ -178,8 +181,6 @@ extension OnboardingViewController:UICollectionViewDelegate, UICollectionViewDat
         self.descriptionLabel.text = onboardingModel.description
         
         self.updateNavigationBarButtonItems()
-        self.navigationItem.rightBarButtonItem?.isEnabled = false
-        self.navigationItem.leftBarButtonItem?.isEnabled = false
         
         //If we're not on the last page, and we're on the latter half of scrolling between pages
         guard currentPage < self.onboardingModels.count - 1,
@@ -188,16 +189,16 @@ extension OnboardingViewController:UICollectionViewDelegate, UICollectionViewDat
         }
         
         let nextOnboardingModel = self.onboardingModels[currentPage + 1]
+        self.pageControl.currentPage = currentPage + 1
         self.titleLabel.text = nextOnboardingModel.title
         self.descriptionLabel.text = nextOnboardingModel.description
-        
     }
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         self.updateNavigationBarButtonItems()
         
-        self.navigationItem.leftBarButtonItem?.isEnabled = true
-        self.navigationItem.rightBarButtonItem?.isEnabled = true
+//        self.navigationItem.leftBarButtonItem?.isEnabled = true
+//        self.navigationItem.rightBarButtonItem?.isEnabled = true
     }
     
 }
