@@ -14,6 +14,8 @@ protocol OnboardingViewControllerDelegate:class {
 }
 class OnboardingViewController: UIViewController {
     
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var pageControl: UIPageControl!
     
@@ -23,6 +25,10 @@ class OnboardingViewController: UIViewController {
                 return
             }
             self.collectionView.reloadData()
+            let currentPage = Int(self.collectionView.contentOffset.x / self.collectionView.frame.width)
+            let onboardingModel = self.onboardingModels[currentPage]
+            self.titleLabel.text = onboardingModel.title
+            self.descriptionLabel.text = onboardingModel.description
         }
     }
     
@@ -50,6 +56,12 @@ class OnboardingViewController: UIViewController {
     }
     
     private func styleView() {
+        self.titleLabel.font = UIFont.tgkTitle
+        self.titleLabel.textColor = UIColor.tgkOrange
+        
+        self.descriptionLabel.font = UIFont.tgkBody
+        self.descriptionLabel.textColor = UIColor.tgkGray
+        
         self.pageControl.pageIndicatorTintColor = UIColor.tgkBackgroundGray
         self.pageControl.currentPageIndicatorTintColor = UIColor.tgkGray
     }
@@ -69,13 +81,22 @@ class OnboardingViewController: UIViewController {
     }
     
     func updateNavigationBarButtonItems() {
+        guard self.onboardingModels.count > 0,
+            self.pageControl.currentPage < self.onboardingModels.count else {
+                return
+        }
+        
         if self.pageControl.currentPage < self.onboardingModels.count - 1 {
             let nextBarButtonItem = UIBarButtonItem(title: "Next", style: .plain, target: self, action: #selector(self.advanceOnboardingPage))
+            nextBarButtonItem.setTitleTextAttributes([.font:UIFont.tgkBody], for: .normal)
+            nextBarButtonItem.setTitleTextAttributes([.font:UIFont.tgkBody], for: .disabled)
             self.navigationItem.rightBarButtonItem = nextBarButtonItem
         }
         else {
             //last page
             let doneBarButtonItem = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(self.finishOnboarding))
+            doneBarButtonItem.setTitleTextAttributes([.font:UIFont.tgkBody], for: .normal)
+            doneBarButtonItem.setTitleTextAttributes([.font:UIFont.tgkBody], for: .disabled)
             self.navigationItem.rightBarButtonItem = doneBarButtonItem
         }
         
@@ -84,20 +105,18 @@ class OnboardingViewController: UIViewController {
         }
         else {
             let backBarButtonItem = UIBarButtonItem(title: "Previous", style: .plain, target: self, action: #selector(self.decrementOnboardingPage))
+            backBarButtonItem.setTitleTextAttributes([.font:UIFont.tgkBody], for: .normal)
+            backBarButtonItem.setTitleTextAttributes([.font:UIFont.tgkBody], for: .disabled)
             self.navigationItem.leftBarButtonItem = backBarButtonItem
         }
     }
     
     @objc func advanceOnboardingPage() {
         self.collectionView.scrollToItem(at: IndexPath(row: self.pageControl.currentPage + 1, section: 0), at: .centeredHorizontally, animated: true)
-        self.pageControl.currentPage = self.pageControl.currentPage + 1
-        self.updateNavigationBarButtonItems()
     }
     
     @objc func decrementOnboardingPage() {
         self.collectionView.scrollToItem(at: IndexPath(row: self.pageControl.currentPage - 1, section: 0), at: .centeredHorizontally, animated: true)
-        self.pageControl.currentPage = self.pageControl.currentPage - 1
-        self.updateNavigationBarButtonItems()
     }
     
     @objc func finishOnboarding() {
@@ -135,10 +154,50 @@ extension OnboardingViewController:UICollectionViewDelegate, UICollectionViewDat
         return CGSize(width: self.collectionView.frame.size.width, height: self.collectionView.frame.size.height)
     }
     
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        let currentPage = Int(scrollView.contentOffset.x) / Int(scrollView.frame.width)
-        pageControl.currentPage = currentPage
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let currentPage = Int(scrollView.contentOffset.x / scrollView.frame.width)
+        
+        guard currentPage < self.onboardingModels.count else {
+            return
+        }
+        
+        self.pageControl.currentPage = currentPage
+        let onboardingModel = self.onboardingModels[currentPage]
+        
+        let lowerBoundContentOffset = CGFloat(self.pageControl.currentPage) * self.collectionView.frame.size.width
+        
+        let relativeContentOffset = self.collectionView.contentOffset.x - lowerBoundContentOffset
+        let midpointContentOffset = self.collectionView.frame.size.width / 2.0
+        
+        let distanceFromMidpoint = relativeContentOffset - midpointContentOffset
+        let percentDistanceFromMidpoint = abs(distanceFromMidpoint)/midpointContentOffset
+        self.titleLabel.alpha = percentDistanceFromMidpoint
+        self.descriptionLabel.alpha = percentDistanceFromMidpoint
+        
+        self.titleLabel.text = onboardingModel.title
+        self.descriptionLabel.text = onboardingModel.description
+        
         self.updateNavigationBarButtonItems()
+        self.navigationItem.rightBarButtonItem?.isEnabled = false
+        self.navigationItem.leftBarButtonItem?.isEnabled = false
+        
+        //If we're not on the last page, and we're on the latter half of scrolling between pages
+        guard currentPage < self.onboardingModels.count - 1,
+            distanceFromMidpoint > 0 else {
+            return
+        }
+        
+        let nextOnboardingModel = self.onboardingModels[currentPage + 1]
+        self.titleLabel.text = nextOnboardingModel.title
+        self.descriptionLabel.text = nextOnboardingModel.description
+        
+    }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        self.updateNavigationBarButtonItems()
+        
+        self.navigationItem.leftBarButtonItem?.isEnabled = true
+        self.navigationItem.rightBarButtonItem?.isEnabled = true
     }
     
 }

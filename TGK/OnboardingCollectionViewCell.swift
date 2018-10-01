@@ -10,8 +10,7 @@ import UIKit
 
 class OnboardingCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var descriptionLabel: UILabel!
+    
     @IBOutlet weak var imageView: UIImageView!
     
     var onboardingModel:OnboardingContentModel!
@@ -21,17 +20,12 @@ class OnboardingCollectionViewCell: UICollectionViewCell {
     }
     
     private func styleView() {
-        self.titleLabel.font = UIFont.tgkTitle
-        self.titleLabel.textColor = UIColor.tgkOrange
         
-        self.descriptionLabel.font = UIFont.tgkBody
-        self.descriptionLabel.textColor = UIColor.tgkGray
     }
     
     func configureWith(onboardingContentModel:OnboardingContentModel) {
         self.onboardingModel = onboardingContentModel
-        self.titleLabel.text = onboardingModel.title
-        self.descriptionLabel.text = onboardingModel.description
+        
         self.imageView.image = onboardingModel.heroImage
     }
 }
