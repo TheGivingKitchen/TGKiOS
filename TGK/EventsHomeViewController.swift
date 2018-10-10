@@ -37,8 +37,10 @@ class EventsHomeViewController: UITableViewController {
     func fetchData() {
         ServiceManager.sharedInstace.getEventFeed { (calendarEventModels, error) in
             if let calendarEventModels = calendarEventModels {
-                self.calendarEventModels = calendarEventModels
-                self.tableView.reloadData()
+                if self.calendarEventModels != calendarEventModels {
+                    self.calendarEventModels = calendarEventModels
+                    self.tableView.reloadData()
+                }
             }
             else if let error = error {
                 print(error)

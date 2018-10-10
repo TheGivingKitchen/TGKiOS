@@ -1,0 +1,565 @@
+{
+    "ID" : "z1ivfmn31i16xzn",
+    "FormTitle":"SafetyNet Partner",
+    "FormSubtitle":"Join our forces!",
+    "FormMetadata":"The mission of the Giving Kitchen is to provide emergency assistance to restaurant workers through financial support and a network of community resources.\n\nWhile much of our energy, time and resources are focused on GK signature events like Team Hidi, The Pinky and Multiply Joy, we recognize that the core strength of our organization lies in support from our industry, supplier partners and community advocates. We also know there are many causes worthy of your support. By focusing our resources in a few areas, we feel our impact to the restaurant community is much greater.\n\nWe hate to put you “through the hoops” when you are eager to partner with us, but this system helps us immensely with our decision-making and record-keeping processes. We appreciate your commitment and time in supporting our efforts to make effective decisions toward the betterment of our industry.",
+    "FormShareString":"Join our forces. Partner with The Giving Kitchen!",
+	"Pages" : [
+		{
+            "pageInformation" : "Please tell us about your yourself",
+			"questions" : [
+				{
+		            "Title": "Your name",
+		            "Instructions": "",
+		            "IsRequired": "1",
+		            "ClassNames": "",
+		            "DefaultVal": "",
+		            "Page": "1",
+		            "SubFields": [
+		                {
+		                    "DefaultVal": "",
+		                    "ID": "Field1",
+		                    "Label": "First"
+		                },
+		                {
+		                    "DefaultVal": "",
+		                    "ID": "Field2",
+		                    "Label": "Last"
+		                }
+		            ],
+		            "Type": "shortname",
+		            "ID": "Field1"
+		        },
+		        {
+		            "Title": "Title/Position/Role",
+		            "Instructions": "",
+		            "IsRequired": "0",
+		            "ClassNames": "",
+		            "DefaultVal": "",
+		            "Page": "1",
+		            "Type": "text",
+		            "ID": "Field20"
+		        },
+		        {
+		            "Title": "Phone Number",
+		            "Instructions": "",
+		            "IsRequired": "1",
+		            "ClassNames": "",
+		            "DefaultVal": "",
+		            "Page": "1",
+		            "Type": "phone",
+		            "ID": "Field12"
+		        },
+		        {
+		            "Title": "Email",
+		            "Instructions": "",
+		            "IsRequired": "1",
+		            "ClassNames": "",
+		            "DefaultVal": "",
+		            "Page": "1",
+		            "Type": "email",
+		            "ID": "Field11"
+		        }
+			]
+		},
+		{
+            "pageInformation" : "Please tell us about your business",
+			"questions" : [
+				{
+		            "Title": "Company/Organization/Restaurant Name",
+		            "Instructions": "",
+		            "IsRequired": "1",
+		            "ClassNames": "",
+		            "DefaultVal": "",
+		            "Page": "1",
+		            "Type": "text",
+		            "ID": "Field550"
+		        },
+		        {
+		            "Title": "Address",
+		            "Instructions": "",
+		            "IsRequired": "1",
+		            "ClassNames": "",
+		            "DefaultVal": "",
+		            "Page": "1",
+		            "SubFields": [
+		                {
+		                    "DefaultVal": "",
+		                    "ID": "Field5",
+		                    "Label": "Street Address"
+		                },
+		                {
+		                    "DefaultVal": "",
+		                    "ID": "Field6",
+		                    "Label": "Address Line 2"
+		                },
+		                {
+		                    "DefaultVal": "",
+		                    "ID": "Field7",
+		                    "Label": "City"
+		                },
+		                {
+		                    "DefaultVal": "",
+		                    "ID": "Field8",
+		                    "Label": "State / Province / Region"
+		                },
+		                {
+		                    "DefaultVal": "",
+		                    "ID": "Field9",
+		                    "Label": "Postal / Zip Code"
+		                },
+		                {
+		                    "DefaultVal": "",
+		                    "ID": "Field10",
+		                    "Label": "Country"
+		                }
+		            ],
+		            "Type": "address",
+		            "ID": "Field5"
+		        }
+			]
+		},
+		{
+            "pageInformation" : "Please tell us about your event",
+			"questions" : [
+				{
+		            "Title": "Event Name",
+		            "Instructions": "",
+		            "IsRequired": "1",
+		            "ClassNames": "",
+		            "DefaultVal": "",
+		            "Page": "1",
+		            "Type": "text",
+		            "ID": "Field552"
+		        },
+		        {
+		            "Title": "Location of your event",
+		            "Instructions": "",
+		            "IsRequired": "0",
+		            "ClassNames": "",
+		            "DefaultVal": "",
+		            "Page": "1",
+		            "Type": "text",
+		            "ID": "Field1281"
+		        }
+			]
+		},
+		{
+            "pageInformation" : "Please tell us about your event",
+			"questions" : [
+				{
+		            "Title": "Date of Event",
+		            "Instructions": "",
+		            "IsRequired": "1",
+		            "ClassNames": "",
+		            "DefaultVal": "",
+		            "Page": "1",
+		            "Type": "date",
+		            "ID": "Field13"
+		        },
+		        {
+		            "Title": "Time of your event",
+		            "Instructions": "",
+		            "IsRequired": "0",
+		            "ClassNames": "",
+		            "DefaultVal": "",
+		            "Page": "1",
+		            "Type": "time",
+		            "ID": "Field1280"
+		        }
+			]
+		},
+		{
+            "pageInformation" : "Please tell us about your event",
+			"questions" : [
+				{
+		            "Title": "Expected attendance",
+		            "Instructions": "",
+		            "IsRequired": "1",
+		            "ClassNames": "",
+		            "DefaultVal": "",
+		            "Page": "1",
+		            "Type": "number",
+		            "ID": "Field21"
+		        },
+		        {
+		            "Title": "Ticket Price/Cost to Attend?",
+		            "Instructions": "",
+		            "IsRequired": "0",
+		            "ClassNames": "",
+		            "DefaultVal": "",
+		            "Page": "1",
+		            "Type": "money",
+		            "ID": "Field128"
+		        }
+			]
+		},
+		{
+            "pageInformation" : "Please tell us about your event",
+			"questions" : [
+				{
+		            "Title": "How will your event be marketed?  Check all that apply:",
+		            "Instructions": "",
+		            "IsRequired": "1",
+		            "ClassNames": "",
+		            "DefaultVal": "0",
+		            "Page": "1",
+		            "SubFields": [
+		                {
+		                    "DefaultVal": "0",
+		                    "ID": "Field657",
+		                    "Label": "Company/Organization Social Media"
+		                },
+		                {
+		                    "DefaultVal": "0",
+		                    "ID": "Field658",
+		                    "Label": "Personal Social Media"
+		                },
+		                {
+		                    "DefaultVal": "0",
+		                    "ID": "Field659",
+		                    "Label": "Newsletter/Eblast"
+		                },
+		                {
+		                    "DefaultVal": "0",
+		                    "ID": "Field660",
+		                    "Label": "Newspaper/Magazines"
+		                },
+		                {
+		                    "DefaultVal": "0",
+		                    "ID": "Field661",
+		                    "Label": "Radio/TV"
+		                },
+		                {
+		                    "DefaultVal": "0",
+		                    "ID": "Field662",
+		                    "Label": "Private Event (invite only)"
+		                },
+		                {
+		                    "DefaultVal": "0",
+		                    "ID": "Field663",
+		                    "Label": "Flyers/Posters"
+		                },
+		                {
+		                    "DefaultVal": "0",
+		                    "ID": "Field664",
+		                    "Label": "PR Announcements"
+		                },
+		                {
+		                    "DefaultVal": "0",
+		                    "ID": "Field665",
+		                    "Label": "Advertisements"
+		                },
+		                {
+		                    "DefaultVal": "0",
+		                    "ID": "Field666",
+		                    "Label": "Direct Mail"
+		                }
+		            ],
+		            "Type": "checkbox",
+		            "ID": "Field657"
+		        }
+			]
+		},
+		{
+            "pageInformation" : "Please tell us about your event",
+			"questions" : [
+				{
+		            "Title": "Additional marketing details ",
+		            "Instructions": "",
+		            "IsRequired": "0",
+		            "ClassNames": "",
+		            "DefaultVal": "",
+		            "Page": "1",
+		            "Type": "textarea",
+		            "ID": "Field24"
+		        },
+		        {
+		            "Title": "Your ticketing link:",
+		            "Instructions": "",
+		            "IsRequired": "0",
+		            "ClassNames": "",
+		            "DefaultVal": "",
+		            "Page": "1",
+		            "Type": "text",
+		            "ID": "Field1278"
+		        }
+			]
+		},
+		{
+            "pageInformation" : "What are your social media outlets?",
+			"questions" : [
+				{
+		            "Title": "Your Facebook page:",
+		            "Instructions": "",
+		            "IsRequired": "0",
+		            "ClassNames": "",
+		            "DefaultVal": "",
+		            "Page": "1",
+		            "Type": "url",
+		            "ID": "Field131"
+		        },
+		        {
+		            "Title": "Your Instagram Name",
+		            "Instructions": "",
+		            "IsRequired": "0",
+		            "ClassNames": "",
+		            "DefaultVal": "",
+		            "Page": "1",
+		            "Type": "url",
+		            "ID": "Field132"
+		        },
+		        {
+		            "Title": "Your Twitter Handle",
+		            "Instructions": "",
+		            "IsRequired": "0",
+		            "ClassNames": "",
+		            "DefaultVal": "",
+		            "Page": "1",
+		            "Type": "url",
+		            "ID": "Field130"
+		        },
+		        {
+		            "Title": "Estimated number of followers on social outlets:",
+		            "Instructions": "",
+		            "IsRequired": "0",
+		            "ClassNames": "",
+		            "DefaultVal": "",
+		            "Page": "1",
+		            "Type": "text",
+		            "ID": "Field441"
+		        }
+			]
+		},
+		{
+            "pageInformation" : "How can we work together?",
+			"questions" : [
+				{
+		            "Title": "Is your partnership opportunity (check all that apply):",
+		            "Instructions": "",
+		            "IsRequired": "1",
+		            "ClassNames": "",
+		            "DefaultVal": "0",
+		            "Page": "1",
+		            "SubFields": [
+		                {
+		                    "DefaultVal": "0",
+		                    "ID": "Field859",
+		                    "Label": "One-time only"
+		                },
+		                {
+		                    "DefaultVal": "0",
+		                    "ID": "Field860",
+		                    "Label": "Seasonal"
+		                },
+		                {
+		                    "DefaultVal": "0",
+		                    "ID": "Field861",
+		                    "Label": "For a set period of time"
+		                },
+		                {
+		                    "DefaultVal": "0",
+		                    "ID": "Field862",
+		                    "Label": "Annual"
+		                },
+		                {
+		                    "DefaultVal": "0",
+		                    "ID": "Field863",
+		                    "Label": "Bi-Annual"
+		                },
+		                {
+		                    "DefaultVal": "0",
+		                    "ID": "Field864",
+		                    "Label": "Quarterly"
+		                },
+		                {
+		                    "DefaultVal": "0",
+		                    "ID": "Field865",
+		                    "Label": "On-Going/Recurring"
+		                },
+		                {
+		                    "DefaultVal": "0",
+		                    "ID": "Field866",
+		                    "Label": "Other"
+		                }
+		            ],
+		            "Type": "checkbox",
+		            "ID": "Field859"
+		        }
+			]
+		},
+		{
+            "pageInformation" : "Important donation notice",
+			"questions" : [
+				{
+		            "Title": "Estimated Total Donation to GK",
+		            "Instructions": "",
+		            "IsRequired": "1",
+		            "ClassNames": "",
+		            "DefaultVal": "",
+		            "Page": "1",
+		            "Type": "money",
+		            "ID": "Field133"
+		        },
+		        {
+		            "Title": "By law, we’re required to request that you publicly publish how your donation is being derived. Because of the local and national press we receive, we’re very careful to stay in compliance with this regulation.\n\nSome example of “publishing” your donation are:\n•\t$15 from each ticket \n•\t20% of event revenue\n•\t$1,500 donation\n…these numbers are, of course, examples and not specific requests.\n\nPlease provide your how your donation may be determined (if applicable):",
+		            "Instructions": "",
+		            "IsRequired": "1",
+		            "ClassNames": "",
+		            "DefaultVal": "",
+		            "Page": "1",
+		            "Type": "textarea",
+		            "ID": "Field1273"
+		        },
+		        {
+		            "Title": "You are making an unrestricted donation to the Giving Kitchen.",
+		            "Instructions": "",
+		            "IsRequired": "1",
+		            "ClassNames": "",
+		            "DefaultVal": "0",
+		            "Page": "1",
+		            "SubFields": [
+		                {
+		                    "DefaultVal": "0",
+		                    "ID": "Field758",
+		                    "Label": "agree"
+		                }
+		            ],
+		            "Type": "checkbox",
+		            "ID": "Field758"
+		        }
+			]
+		},
+		{
+            "pageInformation" : "Matching donations",
+			"questions" : [
+				{
+		            "Title": "Would you be willing to match the donations raised from your event?",
+		            "Instructions": "",
+		            "IsRequired": "1",
+		            "ClassNames": "",
+		            "DefaultVal": "0",
+		            "Page": "1",
+		            "SubFields": [
+		                {
+		                    "DefaultVal": "0",
+		                    "ID": "Field341",
+		                    "Label": "yes"
+		                },
+		                {
+		                    "DefaultVal": "0",
+		                    "ID": "Field342",
+		                    "Label": "no"
+		                },
+		                {
+		                    "DefaultVal": "0",
+		                    "ID": "Field343",
+		                    "Label": "possibly...let's discuss"
+		                }
+		            ],
+		            "Type": "checkbox",
+		            "ID": "Field341"
+		        },
+		        {
+		            "Title": "Up to what amount?",
+		            "Instructions": "",
+		            "IsRequired": "0",
+		            "ClassNames": "",
+		            "DefaultVal": "",
+		            "Page": "1",
+		            "Type": "money",
+		            "ID": "Field340"
+		        }
+			]
+		},
+		{
+            "pageInformation" : "Accounting information",
+			"questions" : [
+				{
+		            "Title": "Accounting Point of Contact",
+		            "Instructions": "",
+		            "IsRequired": "1",
+		            "ClassNames": "",
+		            "DefaultVal": "",
+		            "Page": "1",
+		            "SubFields": [
+		                {
+		                    "DefaultVal": "",
+		                    "ID": "Field134",
+		                    "Label": "First"
+		                },
+		                {
+		                    "DefaultVal": "",
+		                    "ID": "Field135",
+		                    "Label": "Last"
+		                }
+		            ],
+		            "Type": "shortname",
+		            "ID": "Field134"
+		        },
+		        {
+		            "Title": "Phone Number",
+		            "Instructions": "",
+		            "IsRequired": "1",
+		            "ClassNames": "",
+		            "DefaultVal": "",
+		            "Page": "1",
+		            "Type": "phone",
+		            "ID": "Field137"
+		        },
+		        {
+		            "Title": "Email",
+		            "Instructions": "",
+		            "IsRequired": "1",
+		            "ClassNames": "",
+		            "DefaultVal": "",
+		            "Page": "1",
+		            "Type": "email",
+		            "ID": "Field136"
+		        }
+			]
+		},
+		{
+            "pageInformation" : "Do you know someone in need?",
+			"questions" : [
+				{
+		            "Title": "Are you or someone you know in the industry currently facing an unanticipated personal or medical hardship?",
+		            "Instructions": "",
+		            "IsRequired": "0",
+		            "ClassNames": "",
+		            "DefaultVal": "0",
+		            "Page": "1",
+		            "SubFields": [
+		                {
+		                    "DefaultVal": "0",
+		                    "ID": "Field447",
+		                    "Label": "yes"
+		                },
+		                {
+		                    "DefaultVal": "0",
+		                    "ID": "Field448",
+		                    "Label": "no"
+		                }
+		            ],
+		            "Type": "checkbox",
+		            "ID": "Field447"
+		        }
+			]
+		},
+		{
+            "pageInformation" : "Is there anything else you would like for us to know?",
+			"questions" : [
+						{
+		            "Title": "Additional comments/requests",
+		            "Instructions": "",
+		            "IsRequired": "0",
+		            "ClassNames": "",
+		            "DefaultVal": "",
+		            "Page": "1",
+		            "Type": "textarea",
+		            "ID": "Field338"
+		        }
+			]
+		}
+	]
+}

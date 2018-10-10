@@ -117,6 +117,6 @@ class SegmentedFormInfoViewController: UIViewController {
     }
     
     @IBAction func sharePressed(_ sender: Any) {
-        ExternalShareManager.sharedInstance.presentShareControllerFromViewController(fromController: self, title: "Sign up to be a Giving Kitchen Volunteer", urlString: segmentedFormModel.shareFormUrlString, image: UIImage(named: "tgkShareIcon"))
+        ExternalShareManager.sharedInstance.presentShareControllerFromViewController(fromController: self, title: self.segmentedFormModel.shareString, urlString: segmentedFormModel.shareFormUrlString, image: UIImage(named: "tgkShareIcon"))
     }
 }

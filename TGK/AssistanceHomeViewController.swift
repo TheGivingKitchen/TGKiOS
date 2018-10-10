@@ -135,8 +135,3 @@ extension AssistanceHomeViewController:AssistanceSuccessViewControllerDelegate {
         viewController.dismiss(animated: true)
     }
 }
-
-///TODO leaving this here for now
-//ExternalShareManager.sharedInstance.presentShareControllerFromViewController(fromController: self, title: "Help restaurant workers in need", urlString: "https://thegivingkitchen.wufoo.com/forms/multiply-joy-inquiry/", image: UIImage(named: "tgkShareIcon"))
-//
-//ExternalShareManager.sharedInstance.presentShareControllerFromViewController(fromController: self, title: "Sign up to be a Giving Kitchen Volunteer!", urlString: "https://thegivingkitchen.wufoo.com/forms/gk-volunteer-survey/", image: UIImage(named: "tgkShareIcon"))

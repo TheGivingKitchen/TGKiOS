@@ -9,7 +9,7 @@
 import Foundation
 import SwiftyXMLParser
 
-struct RSSCalendarEventModel {
+struct RSSCalendarEventModel: Equatable {
     let title:String
     let description:String
     let urlString:String?

@@ -3,6 +3,7 @@
     "FormTitle":"Assistance Inquiry",
     "FormSubtitle":"Do you or someone you know need help?",
     "FormMetadata":"Please use the following form to request assistance for you or someone else in need. Someone will contact you shortly after submission.",
+    "FormShareString":"Request assistance for restaurant a worker in need",
 	"Pages" : [
 		{
             "pageInformation" : "[Test] Please tell us about the person in need",

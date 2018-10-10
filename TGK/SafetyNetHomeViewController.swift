@@ -13,6 +13,12 @@ import Firebase
 class SafetyNetHomeViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var searchExpandableHeaderHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var searchExpandableHeaderBottomDivider: UIView!
+    @IBOutlet weak var searchExpandableHeaderCloseButton: UIButton!
+    @IBOutlet weak var searchCountyLabel: UILabel!
+    
+    fileprivate let searchExpandableHeaderExpandedHeight:CGFloat = 50.0
     
     private enum SafetyNetTableSection:Int {
         case tooltip = 0
@@ -59,6 +65,10 @@ class SafetyNetHomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.styleView()
+        
+        self.collapseSearchHeader()
+        
         self.tableView.register(UINib(nibName: "SafetyNetInfoTableViewCell", bundle: nil), forCellReuseIdentifier: self.safetyNetCellReuseId)
         self.tableView.register(UINib(nibName: "FacebookGroupAccessTableViewCell", bundle: nil), forCellReuseIdentifier: self.safetyNetFacebookCellReuseId)
         self.tableView.register(UINib(nibName: "SafetyNetHomeTooltipCell", bundle: nil), forCellReuseIdentifier: self.safetyNetTooltipReuseId)
@@ -73,6 +83,15 @@ class SafetyNetHomeViewController: UIViewController {
         self.fetchData()
     }
     
+    private func styleView() {
+        self.searchCountyLabel.font = UIFont.tgkBody
+        self.searchCountyLabel.textColor = UIColor.tgkDarkGray
+        
+        self.searchExpandableHeaderBottomDivider.backgroundColor = UIColor.tgkBackgroundGray
+        
+        self.searchExpandableHeaderCloseButton.setTemplateImage(named: "iconCloseX", for: .normal, tint: UIColor.tgkDarkGray)
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.fetchData()
@@ -81,20 +100,22 @@ class SafetyNetHomeViewController: UIViewController {
     func configureViewControlsBasedOnState() {
 
         if self.isLocationBasedSearching {
-            let normalFilterBarButton = UIBarButtonItem(image: UIImage(named: "iconBulletList"), style: .plain, target: self, action: #selector(changeToNormalSearchPressed(_:)))
-            self.navigationItem.rightBarButtonItem = normalFilterBarButton
+            self.expandSearchHeader()
+            
+            self.navigationItem.rightBarButtonItem = nil
             
             if let userCounty = self.userLocationCounty {
-                self.navigationItem.title = "Resources in \(userCounty)"
+                self.searchCountyLabel.text = "Resources in \(userCounty)"
             }
             else {
-                self.navigationItem.title = "Resources in your county"
+                self.searchCountyLabel.text = "Resources in your county"
             }
         }
         else {
+            self.collapseSearchHeader()
+            
             let locationFilterBarButton = UIBarButtonItem(image: UIImage(named: "iconLocationMarker"), style: .plain, target: self, action: #selector(changeToLocationSearchPressed(_:)))
             self.navigationItem.rightBarButtonItem = locationFilterBarButton
-            self.navigationItem.title = ""
         }
     }
     
@@ -117,6 +138,24 @@ class SafetyNetHomeViewController: UIViewController {
         }
     }
     
+    func collapseSearchHeader() {
+        UIView.animate(withDuration: 0.25) {
+            self.searchExpandableHeaderHeightConstraint.constant = 0
+            self.view.layoutIfNeeded()
+        }
+    }
+    
+    func expandSearchHeader() {
+        UIView.animate(withDuration: 0.25) {
+            self.searchExpandableHeaderHeightConstraint.constant = self.searchExpandableHeaderExpandedHeight
+            self.view.layoutIfNeeded()
+        }
+    }
+    
+    @IBAction func searchExpandableHeaderClosePressed(_ sender: Any) {
+        self.changeToNormalSearch()
+    }
+    
     @IBAction func changeToLocationSearchPressed(_ sender: Any) {
         switch CLLocationManager.authorizationStatus() {
         case .notDetermined:
@@ -135,7 +174,7 @@ class SafetyNetHomeViewController: UIViewController {
         }
     }
     
-    @IBAction func changeToNormalSearchPressed(_ sender: Any) {
+    func changeToNormalSearch() {
         self.searchController.searchBar.text = ""
         self.currentUserCounty = nil
         self.isLocationBasedSearching = false

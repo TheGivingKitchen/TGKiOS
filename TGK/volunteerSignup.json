@@ -3,6 +3,7 @@
     "FormTitle":"Volunteer Signup",
     "FormSubtitle":"Join The Almighty Giving Team!",
     "FormMetadata":"Thanks for your interest in volunteering! Please fill this out and we'll contact you soon about upcoming opportunities!",
+    "FormShareString":"Sign up to be a Giving Kitchen Volunteer!",
 	"Pages" : [
 		{
             "pageInformation" : "[Test] Tell us about yourself",
