@@ -105,10 +105,10 @@ class SafetyNetHomeViewController: UIViewController {
             self.navigationItem.rightBarButtonItem = nil
             
             if let userCounty = self.userLocationCounty {
-                self.searchCountyLabel.text = "Resources in \(userCounty)"
+                self.searchCountyLabel.text = "Searching within \(userCounty)"
             }
             else {
-                self.searchCountyLabel.text = "Resources in your county"
+                self.searchCountyLabel.text = "Searching within your county"
             }
         }
         else {
