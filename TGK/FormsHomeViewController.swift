@@ -13,42 +13,59 @@ import Alamofire
 import FirebaseAuth
 import GooglePlaces
 
-class TestHomeViewController: UIViewController, CLLocationManagerDelegate {
-
-    let locationManager = CLLocationManager()
+class TestHomeViewController: UIViewController, CLLocationManagerDelegate, UISearchBarDelegate {
+    
+    @IBOutlet weak var headerHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var cancelButton: UIButton!
+    @IBOutlet weak var cancelButtonLeadingConstraint: NSLayoutConstraint!
+    @IBOutlet weak var cancelButtonTrailingConstraint: NSLayoutConstraint!
+    @IBOutlet weak var cancelButtonBottomConstraint: NSLayoutConstraint!
+    @IBOutlet weak var cancelWidthConstraint: NSLayoutConstraint!
+    @IBOutlet weak var searchBar: UISearchBar!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        locationManager.delegate = self
+        
+        self.cancelWidthConstraint.constant = 0
+        self.cancelButtonLeadingConstraint.constant = 0
+        self.cancelButtonTrailingConstraint.constant = 0
+        self.headerHeightConstraint.constant = 152
+        self.cancelButton.isHidden = true
+        
+        self.searchBar.delegate = self
     }
     
-    @IBAction func buttontapped(_ sender: Any) {
-        UIApplication.shared.open(URL(string: "fb://group?id=1426736404312089")!, options: [:]) { (success) in
-            if success == false {
-                let tgkSafariVC = TGKSafariViewController(url: URL(string: "https://www.facebook.com/groups/1426736404312089")!)
-                self.present(tgkSafariVC, animated: true)
-            }
-        }
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        self.collapseSearch()
     }
     
-    @IBAction func northGA(_ sender: Any) {
-        UIApplication.shared.open(URL(string: "fb://group?id=1836033839791219")!, options: [:]) { (success) in
-            if success == false {
-                let tgkSafariVC = TGKSafariViewController(url: URL(string: "https://www.facebook.com/groups/1836033839791219")!)
-                self.present(tgkSafariVC, animated: true)
-            }
+    @IBAction func expandSearch() {
+        self.searchBar.resignFirstResponder()
+        
+        UIView.animate(withDuration: 0.25) {
+            self.cancelWidthConstraint.constant = 0
+            self.cancelButtonLeadingConstraint.constant = 0
+            self.cancelButtonTrailingConstraint.constant = 0
+            self.headerHeightConstraint.constant = 152
+            self.cancelButton.isHidden = true
+            
+            self.view.layoutIfNeeded()
         }
-    }
-    
-    @IBAction func southGA(_ sender: Any) {
-        UIApplication.shared.open(URL(string: "fb://group?id=1763853010365060")!, options: [:]) { (success) in
-            if success == false {
-                let tgkSafariVC = TGKSafariViewController(url: URL(string: "https://www.facebook.com/groups/1763853010365060")!)
-                self.present(tgkSafariVC, animated: true)
-            }
-        }
-    }
-    @IBAction func presModal(_ sender: Any) {
         
     }
+    
+    @IBAction func collapseSearch() {
+        
+        UIView.animate(withDuration: 0.25) {
 
+            self.cancelWidthConstraint.constant = 48
+            self.cancelButtonLeadingConstraint.constant = 8
+            self.cancelButtonTrailingConstraint.constant = 8
+            self.cancelButton.isHidden = false
+            self.headerHeightConstraint.constant = 56
+            
+            self.view.layoutIfNeeded()
+        }
+    }
+    
 }
