@@ -738,7 +738,7 @@ Through our Crisis Grants, we cover the cost of living expenses for restaurant w
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Searching in county" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r4S-Bn-ULR">
-                                        <rect key="frame" x="16" y="14.5" width="317" height="21"/>
+                                        <rect key="frame" x="16" y="14.5" width="309" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -751,7 +751,7 @@ Through our Crisis Grants, we cover the cost of living expenses for restaurant w
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="255" verticalHuggingPriority="253" horizontalCompressionResistancePriority="753" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sm0-0E-T3A">
-                                        <rect key="frame" x="349" y="14" width="18" height="22"/>
+                                        <rect key="frame" x="341" y="14" width="18" height="22"/>
                                         <state key="normal" image="iconCloseX"/>
                                         <connections>
                                             <action selector="searchExpandableHeaderClosePressed:" destination="hIF-Al-NwK" eventType="touchUpInside" id="aGL-nH-hpa"/>
@@ -762,7 +762,7 @@ Through our Crisis Grants, we cover the cost of living expenses for restaurant w
                                 <constraints>
                                     <constraint firstItem="r4S-Bn-ULR" firstAttribute="centerY" secondItem="DYa-Qe-O17" secondAttribute="centerY" id="5mH-QN-wFy"/>
                                     <constraint firstItem="sm0-0E-T3A" firstAttribute="leading" secondItem="r4S-Bn-ULR" secondAttribute="trailing" constant="16" id="6Jq-fI-SXD"/>
-                                    <constraint firstAttribute="trailing" secondItem="sm0-0E-T3A" secondAttribute="trailing" constant="8" id="Ggv-qk-5vc"/>
+                                    <constraint firstAttribute="trailing" secondItem="sm0-0E-T3A" secondAttribute="trailing" constant="16" id="Ggv-qk-5vc"/>
                                     <constraint firstAttribute="trailing" secondItem="gc0-VL-ddU" secondAttribute="trailing" id="GzX-5m-sDw"/>
                                     <constraint firstItem="r4S-Bn-ULR" firstAttribute="leading" secondItem="DYa-Qe-O17" secondAttribute="leading" constant="16" id="HfB-MW-iXe"/>
                                     <constraint firstItem="sm0-0E-T3A" firstAttribute="centerY" secondItem="DYa-Qe-O17" secondAttribute="centerY" id="Q7e-OE-yRu"/>
@@ -784,13 +784,6 @@ Through our Crisis Grants, we cover the cost of living expenses for restaurant w
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="BcX-hg-coc"/>
                     </view>
-                    <navigationItem key="navigationItem" id="nif-ro-lm0">
-                        <barButtonItem key="rightBarButtonItem" image="iconLocationMarker" id="f7G-cj-Ypi">
-                            <connections>
-                                <action selector="changeToLocationSearchPressed:" destination="hIF-Al-NwK" id="dp2-iZ-sqH"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <connections>
                         <outlet property="searchCountyLabel" destination="r4S-Bn-ULR" id="3A5-Um-755"/>
@@ -948,7 +941,6 @@ Through our Crisis Grants, we cover the cost of living expenses for restaurant w
         <image name="eventsGLightbulb" width="77" height="51"/>
         <image name="eventsReadMore" width="98" height="14"/>
         <image name="iconCloseX" width="18" height="18"/>
-        <image name="iconLocationMarker" width="33" height="33"/>
         <image name="leftChevron" width="12" height="21"/>
         <image name="rightChevron" width="12" height="21"/>
     </resources>
