@@ -79,6 +79,7 @@ class SafetyNetHomeViewController: UIViewController {
         self.tableView.delegate = self
         
         self.setupSearchController()
+        self.configureViewControlsBasedOnState()
         
         self.fetchData()
     }
