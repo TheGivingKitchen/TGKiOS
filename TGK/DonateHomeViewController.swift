@@ -13,14 +13,16 @@ import Firebase
 
 class DonateHomeViewController: UIViewController {
 
-    @IBOutlet weak var usdLabel: UILabel!
-    @IBOutlet weak var amountTextField: UITextField!
     @IBOutlet weak var useCreditCardButton: UIButton!
     @IBOutlet weak var donateTypeDividerView: UIView!
     @IBOutlet weak var recurringDonationButton: UIButton!
     @IBOutlet weak var amountView: UIView!
-    @IBOutlet weak var decrementAmountButton: UIButton!
-    @IBOutlet weak var incrementAmountButton: UIButton!
+    @IBOutlet weak var amountAssociatedIconBackgroundView:UIView!
+    @IBOutlet weak var amountAssociatedIcon: UIImageView!
+    @IBOutlet weak var amountAssociatedIconLeadingConstraint: NSLayoutConstraint!
+    @IBOutlet weak var amountDescriptionView: UIView!
+    @IBOutlet weak var amountDescriptionViewTrailingConstraint: NSLayoutConstraint!
+    @IBOutlet weak var amountDollarLabel: UILabel!
     @IBOutlet weak var amountDescriptionLabel: UILabel!
     @IBOutlet weak var firstDividerView: UIView!
     @IBOutlet weak var volunteerHeaderLabel: UILabel!
@@ -34,37 +36,47 @@ class DonateHomeViewController: UIViewController {
     @IBOutlet weak var partnerImageView: UIImageView!
     @IBOutlet weak var mainScrollView: UIScrollView!
     
-    var amountAndDescriptions:[(amount:Int, description:String)] = [(25, "Covers a late fee"),
-                                                   (50, "Covers a water bill"),
-                                                   (100, "Covers a power bill"),
-                                                   (150, "Covers a gas bill"),
-                                                   (500, "Covers housing"),
-                                                   (1800, "A total grant!!")]
+    var amountAndDescriptions:[(amount:String, description:String)] = [("$25", "Covers a late fee"),
+                                                   ("$50", "Covers a water bill"),
+                                                   ("$100", "Covers a power bill"),
+                                                   ("$150", "Covers a gas bill"),
+                                                   ("$500", "Covers housing"),
+                                                   ("$1800", "A total grant!!"),
+                                                   ("$5", "Every bit helps!")]
+    var currentAmountAndDescriptionIndex:Int = 1
     var volunteerFormModel:SegmentedFormModel?
     var safetyNetParterFormModel:SegmentedFormModel?
-    
+    var timer = Timer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.styleView()
         let endEditTapGestureRec = UITapGestureRecognizer(target: self, action: #selector(self.endEditing))
         self.mainScrollView.addGestureRecognizer(endEditTapGestureRec)
+        
         self.fetchData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.startTimer()
         self.navigationController?.navigationBar.isHidden = true
         self.fetchData()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.timer.invalidate()
+    }
+    
     func styleView() {
+        self.amountDescriptionView.backgroundColor = UIColor.tgkBlue
+        self.amountAssociatedIconBackgroundView.backgroundColor = UIColor.tgkDarkBlue
         self.amountView.backgroundColor = UIColor.tgkBlue
         
         self.amountDescriptionLabel.font = UIFont.tgkBody
         
-        self.amountTextField.font = UIFont.kulturistaBold(size: 60)
-        self.amountTextField.text = "50"
+        self.amountDollarLabel.font = UIFont.kulturistaMedium(size: 60)
         
         self.useCreditCardButton.titleLabel?.font = UIFont.tgkNavigation
         self.useCreditCardButton.tintColor = UIColor.tgkOrange
@@ -95,8 +107,12 @@ class DonateHomeViewController: UIViewController {
         
         self.partnerButton.backgroundColor = UIColor.tgkOrange
         self.partnerButton.titleLabel?.font = UIFont.tgkNavigation
-        
-        self.configureStateForIncrementAndDecrementButtons()
+    }
+    
+    func startTimer() {
+        self.timer = Timer(timeInterval: 3.0, target: self, selector: #selector(timerUpdateDonationDescription), userInfo: nil, repeats: true)
+        self.timer.tolerance = 0.2
+        RunLoop.current.add(self.timer, forMode: .commonModes)
     }
     
     func fetchData() {
@@ -119,85 +135,44 @@ class DonateHomeViewController: UIViewController {
         self.view.endEditing(true)
     }
     
-    @IBAction func incrementAmountPressed(_ sender: Any) {
-        for (amount, description) in self.amountAndDescriptions {
-            if let amountString = self.amountTextField.text,
-                let currentAmount = Int(amountString),
-                amount > currentAmount {
-                self.amountTextField.text = String(amount)
-                self.amountDescriptionLabel.text = description
-                self.configureStateForIncrementAndDecrementButtons()
-                break
-            }
+    @objc func timerUpdateDonationDescription() {
+        self.currentAmountAndDescriptionIndex += 1
+        if self.currentAmountAndDescriptionIndex >= self.amountAndDescriptions.count {
+            self.currentAmountAndDescriptionIndex = 0
         }
-    }
-    
-    @IBAction func decrementAmountPressed(_ sender: Any) {
-        for (amount, description) in self.amountAndDescriptions.reversed() {
-            if let amountString = self.amountTextField.text,
-                let currentAmount = Int(amountString),
-                amount < currentAmount {
-                self.amountTextField.text = String(amount)
-                self.amountDescriptionLabel.text = description
-                self.configureStateForIncrementAndDecrementButtons()
-                break
+        let amountAndDescription = self.amountAndDescriptions[self.currentAmountAndDescriptionIndex]
+        
+        UIView.animate(withDuration: 0.5, delay: 0, options: [.curveEaseOut], animations: {[weak self] in
+            guard let strongSelf = self else {
+                return
             }
-        }
-    }
-    
-    @IBAction func amountTextFieldDidEndEditing(_ sender: Any) {
-        //if the user manages to copy paste something bad into the text field, reset
-        guard let amountString = self.amountTextField.text,
-            let currentAmount = Int(amountString) else {
-                if let firstAmountAndDescription = self.amountAndDescriptions.first {
-                    self.amountTextField.text = String(firstAmountAndDescription.amount)
-                    self.amountDescriptionLabel.text = firstAmountAndDescription.description
+            strongSelf.amountAssociatedIconLeadingConstraint.constant = strongSelf.amountAssociatedIcon.bounds.width * -1
+            strongSelf.amountDescriptionViewTrailingConstraint.constant = strongSelf.amountDescriptionView.bounds.width * -2
+            strongSelf.view.layoutIfNeeded()
+            
+        }) {(finished) in
+            UIView.animate(withDuration: 0.5, delay: 0, options: [.curveEaseOut], animations: {[weak self] in
+                guard let strongSelf = self else {
+                    return
                 }
-                self.configureStateForIncrementAndDecrementButtons()
-                return
-        }
-        
-        //if you hit a preconfigured amount, update the description label
-        var didFindMatchingAmount = false
-        for (amount, description) in self.amountAndDescriptions {
-            if currentAmount == amount {
-                self.amountDescriptionLabel.text = description
-                didFindMatchingAmount = true
-                break
+                strongSelf.amountDollarLabel.text = amountAndDescription.amount
+                strongSelf.amountDescriptionLabel.text = amountAndDescription.description
+                strongSelf.amountAssociatedIconLeadingConstraint.constant = 0
+                strongSelf.amountDescriptionViewTrailingConstraint.constant = 0
+                strongSelf.view.layoutIfNeeded()
+                
+            }) {[weak self] (finished) in
+                //return home if we get interrupted for some reason
+                guard let strongSelf = self else {
+                    return
+                }
+                if !finished {
+                    strongSelf.amountAssociatedIconLeadingConstraint.constant = 0
+                    strongSelf.amountDescriptionViewTrailingConstraint.constant = 0
+                    strongSelf.view.layoutIfNeeded()
+                }
             }
         }
-        if !didFindMatchingAmount {
-            self.amountDescriptionLabel.text = "Custom amount"
-        }
-        
-        self.configureStateForIncrementAndDecrementButtons()
-    }
-    
-    func configureStateForIncrementAndDecrementButtons() {
-        guard let amountString = self.amountTextField.text,
-            let currentAmount = Int(amountString) else {
-                return
-        }
-        
-        if let lowestAmountAndDescription = self.amountAndDescriptions.first {
-            if currentAmount <= lowestAmountAndDescription.amount {
-                self.incrementAmountButton.isEnabled = true
-                self.decrementAmountButton.isEnabled = false
-                return
-            }
-        }
-        
-        if let highestAmountAndDescription = self.amountAndDescriptions.last {
-            if currentAmount >= highestAmountAndDescription.amount {
-                self.incrementAmountButton.isEnabled = false
-                self.decrementAmountButton.isEnabled = true
-                return
-            }
-        }
-        
-        //if the current amount is inbetween the highest and lowest preset donation amounts
-        self.incrementAmountButton.isEnabled = true
-        self.decrementAmountButton.isEnabled = true
     }
     
     @IBAction func useCreditCardButtonPressed(_ sender: Any) {
