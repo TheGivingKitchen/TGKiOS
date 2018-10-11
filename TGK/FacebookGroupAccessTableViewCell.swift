@@ -92,11 +92,15 @@ class FacebookGroupAccessTableViewCell: UITableViewCell {
                 return
         }
         
-        UIApplication.shared.open(deepLinkUrl, options: [:]) { (success) in
-            if success == false {
-                self.delegate?.facebookGroupAccessTableViewCellRequestOpen(url: webUrl)
+        if UIApplication.shared.canOpenURL(deepLinkUrl) {
+            UIApplication.shared.open(deepLinkUrl, options: [:]) { (success) in
             }
         }
+        else {
+            self.delegate?.facebookGroupAccessTableViewCellRequestOpen(url: webUrl)
+        }
+        
+        
         
         Analytics.logEvent(customName: .safetyNetFacebookGroupVisit, parameters: [.safetyNetFacebookGroupName:"south_ga"])
     }
