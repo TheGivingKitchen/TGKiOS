@@ -258,6 +258,7 @@
 		4E4D229F20B1B27500BA7577 /* MainTabBarRootViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				4E94F16721701709006997AF /* Events */,
 				4E0E0C86216171D60082240E /* Onboarding */,
 				4EE12A8521487078003DFBB5 /* LocationModal */,
 				C0B9C49A21371DD7009BEE60 /* Cells */,
@@ -447,6 +448,13 @@
 				4EF4347F213AD008009C2679 /* UIButton+TGK.swift */,
 			);
 			name = Utilities;
+			sourceTree = "<group>";
+		};
+		4E94F16721701709006997AF /* Events */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Events;
 			sourceTree = "<group>";
 		};
 		4ECA9BF920A268590084A317 /* CommonComponents */ = {

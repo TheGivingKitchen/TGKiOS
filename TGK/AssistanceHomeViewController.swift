@@ -94,6 +94,14 @@ class AssistanceHomeViewController: UIViewController {
         }
     }
     
+    @IBAction func learnMorePressed(_ sender: Any) {
+        if let url = URL(string: "https://thegivingkitchen.org/grant-program") {
+            let learnMoreVC = TGKSafariViewController(url: url)
+            self.present(learnMoreVC, animated:true)
+        }
+        
+    }
+    
     @IBAction func startSelfAssistancePressed(_ sender: Any) {
         guard let inquiryForm = self.selfAssistanceFormModel else {
             return

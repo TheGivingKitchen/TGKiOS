@@ -178,6 +178,9 @@ Through our Crisis Grants, we cover the cost of living expenses for restaurant w
                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="200" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z1b-Yc-9Dd">
                                 <rect key="frame" x="148.5" y="272.5" width="78" height="30"/>
                                 <state key="normal" title="Learn more"/>
+                                <connections>
+                                    <action selector="learnMorePressed:" destination="a7e-3s-qQ7" eventType="touchUpInside" id="ifG-es-ebi"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
