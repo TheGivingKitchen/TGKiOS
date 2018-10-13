@@ -12,6 +12,7 @@ class AppDataStore {
     private enum AppDataStoreKey:String {
         case closedSafetyNetTooltip = "closedSafetyNetTooltipKey"
         case hasFinishedOnboarding = "hasFinishedOnboarding"
+        case hasClosedEventHomeVolunteerButton = "hasClosedEventHomeVolunteerButton"
     }
     
     static var hasFinishedOnboarding:Bool {
@@ -29,6 +30,15 @@ class AppDataStore {
         }
         set {
             UserDefaults.standard.set(newValue, forKey: AppDataStoreKey.closedSafetyNetTooltip.rawValue)
+        }
+    }
+    
+    static var hasClosedEventHomeVolunteerButton:Bool {
+        get {
+            return UserDefaults.standard.bool(forKey: AppDataStoreKey.hasClosedEventHomeVolunteerButton.rawValue)
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: AppDataStoreKey.hasClosedEventHomeVolunteerButton.rawValue)
         }
     }
 }

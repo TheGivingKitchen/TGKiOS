@@ -11,11 +11,19 @@ import Alamofire
 import SwiftyXMLParser
 import Firebase
 
-class EventsHomeViewController: UITableViewController {
+class EventsHomeViewController: UIViewController {
     
-    var calendarEventModels = [RSSCalendarEventModel]()
+    
+    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var tableViewHeaderEventsLabel: UILabel!
     @IBOutlet weak var tableViewHeaderEventsDescriptionLabel: UILabel!
+    
+    @IBOutlet weak var volunteerView: UIView!
+    @IBOutlet weak var volunteerViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var volunteerTextButton: UIButton!
+    
+    var calendarEventModels = [RSSCalendarEventModel]()
+    var volunteerFormModel:SegmentedFormModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +35,11 @@ class EventsHomeViewController: UITableViewController {
         super.viewWillAppear(animated)
         
         self.navigationController?.navigationBar.isHidden = true
+        
+        self.configureVolunteerView(animated: false)
+        
+        self.tableView.dataSource = self
+        self.tableView.delegate = self
         
         self.tableView.estimatedRowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedSectionHeaderHeight = UITableViewAutomaticDimension
@@ -46,6 +59,15 @@ class EventsHomeViewController: UITableViewController {
                 print(error)
             }
         }
+        
+        ServiceManager.sharedInstace.getFirebaseForm(id: "volunteerSignup") { (volunteerFormModel, error) in
+            if let unwrappedModel = volunteerFormModel {
+                self.volunteerFormModel = unwrappedModel
+                DispatchQueue.main.async {
+                    self.configureVolunteerView(animated: true)
+                }
+            }
+        }
     }
     
     func styleView() {
@@ -54,13 +76,50 @@ class EventsHomeViewController: UITableViewController {
         
         self.tableViewHeaderEventsDescriptionLabel.font = UIFont.tgkBody
         self.tableViewHeaderEventsDescriptionLabel.textColor = UIColor.tgkBlue
+        
+        self.volunteerView.backgroundColor = UIColor.tgkBlue
+        self.volunteerTextButton.titleLabel?.font = UIFont.tgkBody
+        self.volunteerTextButton.titleLabel?.minimumScaleFactor = 0.7
+    }
+    
+    @IBAction func volunteerCloseButton(_ sender: Any) {
+        AppDataStore.hasClosedEventHomeVolunteerButton = true
+        self.configureVolunteerView(animated: true)
+    }
+    
+    @IBAction func volunteerConfirmButton(_ sender: Any) {
+        guard let formModel = self.volunteerFormModel else {
+            return
+        }
+        
+        let segmentedNav = UIStoryboard(name: "Forms", bundle: nil).instantiateViewController(withIdentifier: "SegmentedFormNavigationControllerId") as! SegmentedFormNavigationController
+        segmentedNav.segmentedFormModel = formModel
+        segmentedNav.formDelegate = self
+        self.present(segmentedNav, animated: true)
+    }
+    
+    private func configureVolunteerView(animated:Bool) {
+        
+        var targetHeight:CGFloat = AppDataStore.hasClosedEventHomeVolunteerButton ? 0 : 44.0
+        targetHeight = self.volunteerFormModel == nil ? 0 : targetHeight
+        
+        if animated {
+            UIView.animate(withDuration: 0.3) {
+                self.volunteerViewHeightConstraint.constant = targetHeight
+                self.view.layoutIfNeeded()
+            }
+        }
+        else {
+            self.volunteerViewHeightConstraint.constant = targetHeight
+            self.view.layoutIfNeeded()
+        }
     }
 }
 
 //MARK: UITableView delegate and datasource
-extension EventsHomeViewController {
+extension EventsHomeViewController:UITableViewDataSource, UITableViewDelegate {
 
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let eventCellReuseId = "eventCellReuseId"
         let eventCell = tableView.dequeueReusableCell(withIdentifier: eventCellReuseId) as! CalendarEventOverviewTableViewCell
         eventCell.calendarEventModel = self.calendarEventModels[indexPath.row]
@@ -68,15 +127,15 @@ extension EventsHomeViewController {
         return eventCell
     }
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.calendarEventModels.count
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = self.tableView.cellForRow(at: indexPath) as! CalendarEventOverviewTableViewCell
         guard let urlString = cell.calendarEventModel.urlString,
             let eventUrl = URL(string: urlString) else {
@@ -86,6 +145,15 @@ extension EventsHomeViewController {
         self.present(tgkSafariVC, animated: true)
         
         Analytics.logEvent(customName: .eventViewDetails, parameters: [.eventViewDetailsEventUrl:eventUrl.absoluteString,
-                                                                         .eventViewDetailsEventName:cell.calendarEventModel.title])
+                                                                       .eventViewDetailsEventName:cell.calendarEventModel.title])
+    }
+}
+
+//MARK: SegmentedFormNavigationControllerDelegate
+extension EventsHomeViewController:SegmentedFormNavigationControllerDelegate {
+    func segmentedFormNavigationControllerDidFinish(viewController: SegmentedFormNavigationController) {
+        viewController.dismiss(animated: true)
+        AppDataStore.hasClosedEventHomeVolunteerButton = true
+        self.configureVolunteerView(animated: true)
     }
 }
