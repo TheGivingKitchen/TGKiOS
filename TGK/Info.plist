@@ -22,6 +22,7 @@
 	<string>11</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
+		<string>fb</string>
 		<string>comgooglemapsurl</string>
 		<string>comgooglemaps-x-callback</string>
 		<string>comgooglemaps</string>

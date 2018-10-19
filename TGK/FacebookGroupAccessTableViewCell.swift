@@ -23,14 +23,18 @@ class FacebookGroupAccessTableViewCell: UITableViewCell {
     
     weak var delegate:FacebookGroupAccessTableViewCellDelegate?
     
-    private let metroGroupDeepLinkString = "fb://group?id=1426736404312089"
-    private let metroGroupUrlString = "https://www.facebook.com/groups/1426736404312089"
+    private let deepLinkBaseString = "fb://group?id="
+    private let groupUrlBaseString = "https://www.facebook.com/groups/"
     
-    private let northGroupDeepLinkString = "fb://group?id=1836033839791219"
-    private let northGroupUrlString = "https://www.facebook.com/groups/1836033839791219"
-    
-    private let southGroupDeepLinkString = "fb://group?id=1763853010365060"
-    private let southGroupUrlString = "https://www.facebook.com/groups/1763853010365060"
+    private let metroGroupId = "1426736404312089"
+    private let northGroupId = "1836033839791219"
+    private let southGroupId = "1763853010365060"
+    private let gainesvilleGroupId = "897787080404359"
+    private let maconGroupId = "218626942273765"
+    private let coastalGroupId = "197473227547650"
+    private let athensGroupId = "187999045361005"
+    private let columbusGroupId = "186740988816183"
+    private let romeGroupId = "182229385767905"
     
     
     override func awakeFromNib() {
@@ -54,41 +58,11 @@ class FacebookGroupAccessTableViewCell: UITableViewCell {
         
         self.bottomDividerView.backgroundColor = UIColor.tgkBackgroundGray
     }
-
-    //MARK: Facebook group button actions
-    @IBAction func metroGroupPressed(_ sender: Any) {
-        guard let deepLinkUrl = URL(string: self.metroGroupDeepLinkString),
-            let webUrl = URL(string: self.metroGroupUrlString) else {
-                return
-        }
-        
-        UIApplication.shared.open(deepLinkUrl, options: [:]) { (success) in
-            if success == false {
-                self.delegate?.facebookGroupAccessTableViewCellRequestOpen(url: webUrl)
-            }
-        }
-        
-        Analytics.logEvent(customName: .safetyNetFacebookGroupVisit, parameters: [.safetyNetFacebookGroupName:"metro_atlanta"])
-    }
     
-    @IBAction func northGroupPressed(_ sender: Any) {
-        guard let deepLinkUrl = URL(string: self.northGroupDeepLinkString),
-            let webUrl = URL(string: self.northGroupUrlString) else {
-                return
-        }
+    fileprivate func open(groupId:String, analyticsName:String) {
         
-        UIApplication.shared.open(deepLinkUrl, options: [:]) { (success) in
-            if success == false {
-                self.delegate?.facebookGroupAccessTableViewCellRequestOpen(url: webUrl)
-            }
-        }
-        
-        Analytics.logEvent(customName: .safetyNetFacebookGroupVisit, parameters: [.safetyNetFacebookGroupName:"north_ga"])
-    }
-    
-    @IBAction func southGroupPressed(_ sender: Any) {
-        guard let deepLinkUrl = URL(string: self.southGroupDeepLinkString),
-            let webUrl = URL(string: self.southGroupUrlString) else {
+        guard let deepLinkUrl = URL(string: self.deepLinkBaseString + groupId),
+            let webUrl = URL(string: self.groupUrlBaseString + groupId) else {
                 return
         }
         
@@ -100,8 +74,37 @@ class FacebookGroupAccessTableViewCell: UITableViewCell {
             self.delegate?.facebookGroupAccessTableViewCellRequestOpen(url: webUrl)
         }
         
-        
-        
-        Analytics.logEvent(customName: .safetyNetFacebookGroupVisit, parameters: [.safetyNetFacebookGroupName:"south_ga"])
+        Analytics.logEvent(customName: .safetyNetFacebookGroupVisit, parameters: [.safetyNetFacebookGroupName:analyticsName])
+    }
+
+    //MARK: Facebook group button actions
+    @IBAction func metroGroupPressed(_ sender: Any) {
+        self.open(groupId: self.metroGroupId, analyticsName: "metro_atlanta")
+    }
+    
+    @IBAction func northGroupPressed(_ sender: Any) {
+        self.open(groupId: self.northGroupId, analyticsName: "north_ga")
+    }
+    
+    @IBAction func southGroupPressed(_ sender: Any) {
+        self.open(groupId: self.southGroupId, analyticsName: "south_ga")
+    }
+    @IBAction func gainesvilleGroupPressed(_ sender: Any) {
+        self.open(groupId: self.gainesvilleGroupId, analyticsName: "gainesville_ga")
+    }
+    @IBAction func maconGroupPressed(_ sender: Any) {
+        self.open(groupId: self.maconGroupId, analyticsName: "macon_ga")
+    }
+    @IBAction func coastalGroupPressed(_ sender: Any) {
+        self.open(groupId: self.coastalGroupId, analyticsName: "coastal_ga")
+    }
+    @IBAction func athensGroupPressed(_ sender: Any) {
+        self.open(groupId: self.athensGroupId, analyticsName: "athens_ga")
+    }
+    @IBAction func columbusGroupPressed(_ sender: Any) {
+        self.open(groupId: self.columbusGroupId, analyticsName: "columbus_ga")
+    }
+    @IBAction func romeGroupPressed(_ sender: Any) {
+        self.open(groupId: self.romeGroupId, analyticsName: "rome_ga")
     }
 }
