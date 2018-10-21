@@ -21,6 +21,7 @@ class FacebookGroupAccessTableViewCell: UITableViewCell {
     @IBOutlet weak var northGaLabel: UILabel!
     @IBOutlet weak var southGaLabel: UILabel!
     @IBOutlet weak var bottomDividerView: UIView!
+    @IBOutlet weak var viewAllDividerView: UIView!
     @IBOutlet weak var viewAllGroupsButton: UIButton!
     @IBOutlet weak var stackViewRowTwo: UIStackView! {
         didSet {
@@ -69,8 +70,9 @@ class FacebookGroupAccessTableViewCell: UITableViewCell {
         self.southGaLabel.textColor = UIColor.tgkBlue
         
         self.bottomDividerView.backgroundColor = UIColor.tgkBackgroundGray
+        self.viewAllDividerView.backgroundColor = UIColor.tgkBackgroundGray
         
-        self.viewAllGroupsButton.tintColor = UIColor.tgkOrange
+        self.viewAllGroupsButton.setTitleColor(UIColor.tgkOrange, for: .normal)
         self.viewAllGroupsButton.titleLabel?.font = UIFont.tgkNavigation
     }
     

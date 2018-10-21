@@ -298,8 +298,10 @@ extension SafetyNetHomeViewController :SafetyNetHomeTooltipCellDelegate {
 //MARK: - FacebookCell Delegate
 extension SafetyNetHomeViewController:FacebookGroupAccessTableViewCellDelegate {
     func facebookGroupAccessTableViewCellRequestTableViewUpdate() {
-        self.tableView.beginUpdates()
-        self.tableView.endUpdates()
+        DispatchQueue.main.async {
+            self.tableView.beginUpdates()
+            self.tableView.endUpdates()
+        }
     }
     
     func facebookGroupAccessTableViewCellRequestOpen(url: URL) {

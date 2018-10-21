@@ -257,6 +257,7 @@
                 <outlet property="southGaLabel" destination="wfk-Rw-3YK" id="dn3-zs-sld"/>
                 <outlet property="stackViewRowThree" destination="GHz-uK-UwH" id="adE-Nd-M79"/>
                 <outlet property="stackViewRowTwo" destination="Lj4-ix-DBx" id="ocG-t9-kPP"/>
+                <outlet property="viewAllDividerView" destination="xze-SR-kTx" id="EC5-ke-udj"/>
                 <outlet property="viewAllGroupsButton" destination="Qhd-2U-uJp" id="npe-Gt-A2Q"/>
             </connections>
             <point key="canvasLocation" x="0.80000000000000004" y="-82.758620689655174"/>
