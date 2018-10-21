@@ -297,6 +297,11 @@ extension SafetyNetHomeViewController :SafetyNetHomeTooltipCellDelegate {
 
 //MARK: - FacebookCell Delegate
 extension SafetyNetHomeViewController:FacebookGroupAccessTableViewCellDelegate {
+    func facebookGroupAccessTableViewCellRequestTableViewUpdate() {
+        self.tableView.beginUpdates()
+        self.tableView.endUpdates()
+    }
+    
     func facebookGroupAccessTableViewCellRequestOpen(url: URL) {
         let tgkSafariVC = TGKSafariViewController(url: url)
         self.present(tgkSafariVC, animated: true)
