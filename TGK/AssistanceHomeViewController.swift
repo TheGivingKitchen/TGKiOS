@@ -40,7 +40,7 @@ class AssistanceHomeViewController: UIViewController {
         self.programDescriptionLabel.font = UIFont.tgkSubtitle
         self.programDescriptionLabel.textColor = UIColor.tgkBlue
         
-        self.learnMoreButton.titleLabel?.font = UIFont.tgkNavigation
+        self.learnMoreButton.titleLabel?.font = UIFont.tgkBody
         self.learnMoreButton.tintColor = UIColor.tgkOrange
         
         self.startSelfInquiryButton.backgroundColor = UIColor.tgkOrange
@@ -99,7 +99,6 @@ class AssistanceHomeViewController: UIViewController {
             let learnMoreVC = TGKSafariViewController(url: url)
             self.present(learnMoreVC, animated:true)
         }
-        
     }
     
     @IBAction func startSelfAssistancePressed(_ sender: Any) {

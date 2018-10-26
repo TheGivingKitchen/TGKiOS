@@ -238,7 +238,7 @@ Through our Crisis Grants, we cover the cost of living expenses for restaurant w
                                                 <rect key="frame" x="161" y="40" width="53" height="43"/>
                                             </imageView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wY0-Fm-pUJ">
-                                                <rect key="frame" x="0.0" y="133" width="375" height="150"/>
+                                                <rect key="frame" x="0.0" y="254" width="375" height="150"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="60C-oM-vTJ">
                                                         <rect key="frame" x="0.0" y="0.0" width="94" height="150"/>
@@ -296,14 +296,14 @@ Through our Crisis Grants, we cover the cost of living expenses for restaurant w
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B5W-os-NSz">
-                                                <rect key="frame" x="0.0" y="400" width="375" height="7"/>
+                                                <rect key="frame" x="0.0" y="521" width="375" height="7"/>
                                                 <color key="backgroundColor" red="0.0" green="1" blue="0.030457442939999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="7" id="efm-5q-AON"/>
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dXY-68-AYz">
-                                                <rect key="frame" x="20" y="291" width="335" height="50"/>
+                                                <rect key="frame" x="20" y="412" width="335" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="QsP-uI-w6R"/>
                                                 </constraints>
@@ -313,7 +313,7 @@ Through our Crisis Grants, we cover the cost of living expenses for restaurant w
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Et-kF-fp3">
-                                                <rect key="frame" x="20" y="342" width="335" height="50"/>
+                                                <rect key="frame" x="20" y="463" width="335" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="Nmx-AM-Wze"/>
                                                 </constraints>
@@ -323,27 +323,27 @@ Through our Crisis Grants, we cover the cost of living expenses for restaurant w
                                                 </connections>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jdF-eG-ymE">
-                                                <rect key="frame" x="20" y="341" width="355" height="1"/>
+                                                <rect key="frame" x="20" y="462" width="355" height="1"/>
                                                 <color key="backgroundColor" red="0.0" green="1" blue="0.030457442939999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="mvB-xe-liq"/>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Volunteer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JYW-Dp-OQV">
-                                                <rect key="frame" x="20" y="423" width="335" height="20.5"/>
+                                                <rect key="frame" x="20" y="544" width="335" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aJl-qf-Fu4">
-                                                <rect key="frame" x="20" y="459.5" width="335" height="101.5"/>
+                                                <rect key="frame" x="20" y="580.5" width="335" height="101.5"/>
                                                 <string key="text">From educating the public about our program services to providing special event support, GK would not exist without the dedication of our champion volunteers. Join the team!</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JT5-HK-hh6">
-                                                <rect key="frame" x="20" y="577" width="335" height="50"/>
+                                                <rect key="frame" x="20" y="698" width="335" height="50"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="kiP-7P-LP6"/>
@@ -356,33 +356,33 @@ Through our Crisis Grants, we cover the cost of living expenses for restaurant w
                                                 </connections>
                                             </button>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="donateVolunteerHero" translatesAutoresizingMaskIntoConstraints="NO" id="oYO-eK-DXJ">
-                                                <rect key="frame" x="20" y="643" width="335" height="188"/>
+                                                <rect key="frame" x="20" y="764" width="335" height="188"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="oYO-eK-DXJ" secondAttribute="height" multiplier="335:188" id="0Kp-iQ-blu"/>
                                                 </constraints>
                                             </imageView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4v4-BU-z5B">
-                                                <rect key="frame" x="0.0" y="847" width="375" height="7"/>
+                                                <rect key="frame" x="0.0" y="968" width="375" height="7"/>
                                                 <color key="backgroundColor" red="0.0" green="1" blue="0.030457442939999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="7" id="cCK-nw-TXa"/>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Partner" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rhv-6V-ccZ">
-                                                <rect key="frame" x="20" y="870" width="335" height="20.5"/>
+                                                <rect key="frame" x="20" y="991" width="335" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H1d-Ir-WPW">
-                                                <rect key="frame" x="20" y="906.5" width="335" height="81.5"/>
+                                                <rect key="frame" x="20" y="1027.5" width="335" height="81.5"/>
                                                 <string key="text">Would you like to become part of Giving Kitchen's social service or community resource referral program? We'd love to hear from you!</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xLn-8G-gFU">
-                                                <rect key="frame" x="20" y="1004" width="335" height="50"/>
+                                                <rect key="frame" x="20" y="1125" width="335" height="50"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="5gU-W9-WmB"/>
@@ -395,11 +395,26 @@ Through our Crisis Grants, we cover the cost of living expenses for restaurant w
                                                 </connections>
                                             </button>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="donatePartnerHero" translatesAutoresizingMaskIntoConstraints="NO" id="j6a-0J-DS6">
-                                                <rect key="frame" x="20" y="1070" width="335" height="188"/>
+                                                <rect key="frame" x="20" y="1191" width="335" height="188"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="j6a-0J-DS6" secondAttribute="height" multiplier="335:188" id="wCR-um-wPa"/>
                                                 </constraints>
                                             </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x1q-9B-cz7">
+                                                <rect key="frame" x="20" y="123" width="335" height="61"/>
+                                                <string key="text">Donate, Volunteer, or Partner:
+Three Ways to Get Involved &amp; Make a Difference.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aoi-Wl-yiq">
+                                                <rect key="frame" x="148.5" y="200" width="78" height="30"/>
+                                                <state key="normal" title="Learn more"/>
+                                                <connections>
+                                                    <action selector="learnMorePressed:" destination="y0F-uA-TV7" eventType="touchUpInside" id="bNP-X1-8yT"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -407,9 +422,12 @@ Through our Crisis Grants, we cover the cost of living expenses for restaurant w
                                             <constraint firstAttribute="trailing" secondItem="Rhv-6V-ccZ" secondAttribute="trailing" constant="20" id="0Wk-J5-RCD"/>
                                             <constraint firstItem="jdF-eG-ymE" firstAttribute="leading" secondItem="dXY-68-AYz" secondAttribute="leading" id="1Np-FL-hIG"/>
                                             <constraint firstItem="npw-v7-TQ7" firstAttribute="top" secondItem="uJi-g7-Xap" secondAttribute="top" constant="40" id="2eR-9D-5O0"/>
+                                            <constraint firstItem="x1q-9B-cz7" firstAttribute="centerX" secondItem="Aoi-Wl-yiq" secondAttribute="centerX" id="3Qw-u2-r1u"/>
                                             <constraint firstAttribute="trailing" secondItem="aJl-qf-Fu4" secondAttribute="trailing" constant="20" id="5ek-uw-EWl"/>
+                                            <constraint firstItem="Aoi-Wl-yiq" firstAttribute="top" secondItem="x1q-9B-cz7" secondAttribute="bottom" constant="16" id="5ho-na-nel"/>
                                             <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="j6a-0J-DS6" secondAttribute="bottom" constant="16" id="6UC-wv-vRT"/>
                                             <constraint firstItem="9Et-kF-fp3" firstAttribute="top" secondItem="dXY-68-AYz" secondAttribute="bottom" constant="1" id="9qf-9m-7bU"/>
+                                            <constraint firstItem="x1q-9B-cz7" firstAttribute="top" secondItem="npw-v7-TQ7" secondAttribute="bottom" constant="40" id="ASE-IS-t9d"/>
                                             <constraint firstItem="9Et-kF-fp3" firstAttribute="trailing" secondItem="dXY-68-AYz" secondAttribute="trailing" id="BRp-th-rkm"/>
                                             <constraint firstAttribute="trailing" secondItem="4v4-BU-z5B" secondAttribute="trailing" id="Ccl-Av-MCD"/>
                                             <constraint firstItem="aJl-qf-Fu4" firstAttribute="top" secondItem="JYW-Dp-OQV" secondAttribute="bottom" constant="16" id="Cg1-lI-PBf"/>
@@ -421,6 +439,7 @@ Through our Crisis Grants, we cover the cost of living expenses for restaurant w
                                             <constraint firstItem="JT5-HK-hh6" firstAttribute="leading" secondItem="aJl-qf-Fu4" secondAttribute="leading" id="Gwu-eC-VNC"/>
                                             <constraint firstItem="j6a-0J-DS6" firstAttribute="leading" secondItem="xLn-8G-gFU" secondAttribute="leading" id="JI0-jf-uIy"/>
                                             <constraint firstItem="xLn-8G-gFU" firstAttribute="top" secondItem="H1d-Ir-WPW" secondAttribute="bottom" constant="16" id="KmK-mi-RPG"/>
+                                            <constraint firstItem="eiH-3H-mJe" firstAttribute="top" secondItem="Aoi-Wl-yiq" secondAttribute="bottom" constant="24" id="N8M-GW-1Rd"/>
                                             <constraint firstItem="oYO-eK-DXJ" firstAttribute="top" secondItem="JT5-HK-hh6" secondAttribute="bottom" constant="16" id="NKS-Xc-bj5"/>
                                             <constraint firstItem="oYO-eK-DXJ" firstAttribute="trailing" secondItem="JT5-HK-hh6" secondAttribute="trailing" id="QKy-Af-8N9"/>
                                             <constraint firstItem="B5W-os-NSz" firstAttribute="leading" secondItem="uJi-g7-Xap" secondAttribute="leading" id="QQc-Qh-as5"/>
@@ -438,8 +457,9 @@ Through our Crisis Grants, we cover the cost of living expenses for restaurant w
                                             <constraint firstItem="jdF-eG-ymE" firstAttribute="top" secondItem="dXY-68-AYz" secondAttribute="bottom" id="hYC-1E-ZEQ"/>
                                             <constraint firstItem="xLn-8G-gFU" firstAttribute="trailing" secondItem="H1d-Ir-WPW" secondAttribute="trailing" id="hc9-Ng-rfh"/>
                                             <constraint firstItem="JYW-Dp-OQV" firstAttribute="top" secondItem="B5W-os-NSz" secondAttribute="bottom" constant="16" id="kBv-Td-PMv"/>
+                                            <constraint firstAttribute="trailing" secondItem="x1q-9B-cz7" secondAttribute="trailing" constant="20" id="lQJ-Pc-UN1"/>
                                             <constraint firstItem="dXY-68-AYz" firstAttribute="leading" secondItem="uJi-g7-Xap" secondAttribute="leading" constant="20" id="mxw-3J-Lmc"/>
-                                            <constraint firstItem="wY0-Fm-pUJ" firstAttribute="top" secondItem="npw-v7-TQ7" secondAttribute="bottom" constant="50" id="rTB-M3-4kc"/>
+                                            <constraint firstItem="x1q-9B-cz7" firstAttribute="leading" secondItem="uJi-g7-Xap" secondAttribute="leading" constant="20" id="rMS-dq-VTu"/>
                                             <constraint firstItem="JYW-Dp-OQV" firstAttribute="leading" secondItem="uJi-g7-Xap" secondAttribute="leading" constant="20" id="re6-i7-sgE"/>
                                             <constraint firstItem="9Et-kF-fp3" firstAttribute="leading" secondItem="dXY-68-AYz" secondAttribute="leading" id="roF-Od-kbD"/>
                                             <constraint firstItem="aJl-qf-Fu4" firstAttribute="leading" secondItem="uJi-g7-Xap" secondAttribute="leading" constant="20" id="tJD-aK-HPi"/>
@@ -483,6 +503,7 @@ Through our Crisis Grants, we cover the cost of living expenses for restaurant w
                         <outlet property="amountView" destination="wY0-Fm-pUJ" id="Qs3-lZ-O7f"/>
                         <outlet property="donateTypeDividerView" destination="jdF-eG-ymE" id="Sfl-wh-46W"/>
                         <outlet property="firstDividerView" destination="B5W-os-NSz" id="skb-2p-cGP"/>
+                        <outlet property="learnMoreButton" destination="Aoi-Wl-yiq" id="tc9-3j-8c2"/>
                         <outlet property="mainScrollView" destination="lPZ-5u-gVs" id="lrk-C3-5RQ"/>
                         <outlet property="partnerButton" destination="xLn-8G-gFU" id="vbx-KD-oDh"/>
                         <outlet property="partnerDescriptionLabel" destination="H1d-Ir-WPW" id="Yvc-sg-SNg"/>
@@ -490,6 +511,7 @@ Through our Crisis Grants, we cover the cost of living expenses for restaurant w
                         <outlet property="partnerImageView" destination="j6a-0J-DS6" id="vgu-hQ-wi3"/>
                         <outlet property="recurringDonationButton" destination="9Et-kF-fp3" id="MZH-rX-Of8"/>
                         <outlet property="secondDividerView" destination="4v4-BU-z5B" id="F7R-4L-gWG"/>
+                        <outlet property="topDescriptionLabel" destination="x1q-9B-cz7" id="E5Q-TU-N1u"/>
                         <outlet property="useCreditCardButton" destination="dXY-68-AYz" id="92I-Ss-pwW"/>
                         <outlet property="volunteerButton" destination="JT5-HK-hh6" id="bqU-0p-bSI"/>
                         <outlet property="volunteerDescriptionLabel" destination="aJl-qf-Fu4" id="d8z-Tg-eSW"/>
@@ -513,41 +535,42 @@ Through our Crisis Grants, we cover the cost of living expenses for restaurant w
                                 <rect key="frame" x="0.0" y="20" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="33F-jG-XtU">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="280"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="290"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="249" verticalCompressionResistancePriority="1000" image="tgkLogoOrange" translatesAutoresizingMaskIntoConstraints="NO" id="VD9-Tn-tAf">
-                                            <rect key="frame" x="161" y="40" width="53" height="62"/>
+                                            <rect key="frame" x="161" y="40" width="53" height="43"/>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Events" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gij-Cn-FbB">
-                                            <rect key="frame" x="162" y="142" width="51.5" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZYo-Rq-2Bv">
-                                            <rect key="frame" x="8" y="179" width="359" height="61"/>
+                                            <rect key="frame" x="16" y="123" width="343" height="81.5"/>
                                             <string key="text">The Giving Kitchen's signature and third-party events are rooted in great food, drink, service—and care for those who serve us every day. </string>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L9p-Rn-6M2">
+                                            <rect key="frame" x="148.5" y="220.5" width="78" height="30"/>
+                                            <state key="normal" title="Learn more"/>
+                                            <connections>
+                                                <action selector="learnMorePressed:" destination="rZT-zD-RsE" eventType="touchUpInside" id="uVx-gp-TUg"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
-                                        <constraint firstAttribute="bottom" secondItem="ZYo-Rq-2Bv" secondAttribute="bottom" constant="40" id="8wz-cV-l7w"/>
-                                        <constraint firstItem="Gij-Cn-FbB" firstAttribute="centerX" secondItem="VD9-Tn-tAf" secondAttribute="centerX" id="A8N-8Y-qzZ"/>
-                                        <constraint firstItem="Gij-Cn-FbB" firstAttribute="top" secondItem="VD9-Tn-tAf" secondAttribute="bottom" priority="750" constant="40" id="JIH-II-Cru"/>
+                                        <constraint firstItem="L9p-Rn-6M2" firstAttribute="top" secondItem="ZYo-Rq-2Bv" secondAttribute="bottom" constant="16" id="6me-Tq-GZp"/>
+                                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="L9p-Rn-6M2" secondAttribute="bottom" constant="20" id="KRF-TB-Aem"/>
+                                        <constraint firstItem="L9p-Rn-6M2" firstAttribute="centerX" secondItem="ZYo-Rq-2Bv" secondAttribute="centerX" id="OAw-Do-8Wb"/>
                                         <constraint firstItem="VD9-Tn-tAf" firstAttribute="centerX" secondItem="33F-jG-XtU" secondAttribute="centerX" id="TuB-au-lJi"/>
-                                        <constraint firstItem="ZYo-Rq-2Bv" firstAttribute="top" secondItem="Gij-Cn-FbB" secondAttribute="bottom" constant="16" id="buK-jt-hd1"/>
-                                        <constraint firstAttribute="trailing" secondItem="ZYo-Rq-2Bv" secondAttribute="trailing" constant="8" id="cys-tN-9qI"/>
-                                        <constraint firstItem="VD9-Tn-tAf" firstAttribute="top" secondItem="33F-jG-XtU" secondAttribute="top" priority="750" constant="40" id="qta-TK-jbe"/>
-                                        <constraint firstItem="ZYo-Rq-2Bv" firstAttribute="leading" secondItem="33F-jG-XtU" secondAttribute="leading" constant="8" id="vz1-s7-sF7"/>
+                                        <constraint firstAttribute="trailing" secondItem="ZYo-Rq-2Bv" secondAttribute="trailing" constant="16" id="cys-tN-9qI"/>
+                                        <constraint firstItem="ZYo-Rq-2Bv" firstAttribute="top" secondItem="VD9-Tn-tAf" secondAttribute="bottom" constant="40" id="kYr-GL-5mb"/>
+                                        <constraint firstItem="VD9-Tn-tAf" firstAttribute="top" secondItem="33F-jG-XtU" secondAttribute="top" constant="40" id="qta-TK-jbe"/>
+                                        <constraint firstItem="ZYo-Rq-2Bv" firstAttribute="leading" secondItem="33F-jG-XtU" secondAttribute="leading" constant="16" id="vz1-s7-sF7"/>
                                     </constraints>
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="eventCellReuseId" rowHeight="424" id="S0x-H7-GYl" customClass="CalendarEventOverviewTableViewCell" customModule="TGK" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="308" width="375" height="424"/>
+                                        <rect key="frame" x="0.0" y="318" width="375" height="424"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="S0x-H7-GYl" id="sgc-CW-2kl">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="424"/>
@@ -663,9 +686,9 @@ Through our Crisis Grants, we cover the cost of living expenses for restaurant w
                         <viewLayoutGuide key="safeArea" id="6kz-VN-6Ln"/>
                     </view>
                     <connections>
+                        <outlet property="learnMoreButton" destination="L9p-Rn-6M2" id="lWA-xc-nDR"/>
                         <outlet property="tableView" destination="tDv-7m-6z5" id="4dU-HY-THD"/>
                         <outlet property="tableViewHeaderEventsDescriptionLabel" destination="ZYo-Rq-2Bv" id="tER-yI-SLM"/>
-                        <outlet property="tableViewHeaderEventsLabel" destination="Gij-Cn-FbB" id="FlA-I2-ZhD"/>
                         <outlet property="volunteerTextButton" destination="1n5-VZ-J9Q" id="oKs-Fz-OFY"/>
                         <outlet property="volunteerView" destination="EJc-ej-rDV" id="lwV-cb-agj"/>
                         <outlet property="volunteerViewHeightConstraint" destination="3Q3-X9-0ot" id="mdp-1b-ovn"/>

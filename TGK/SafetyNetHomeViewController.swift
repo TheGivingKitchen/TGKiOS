@@ -292,6 +292,13 @@ extension SafetyNetHomeViewController :SafetyNetHomeTooltipCellDelegate {
         AppDataStore.hasClosedSafetyNetTooltip = true
         self.tableView.reloadSections(NSIndexSet(index: SafetyNetTableSection.tooltip.rawValue) as IndexSet, with: UITableViewRowAnimation.bottom)
     }
+    
+    func safetyNetHomeTooltipCellDidPressLearnMore(cell: SafetyNetHomeTooltipCell) {
+        if let url = URL(string: "TODO replace with safetynet url") {
+            let learnMoreVC = TGKSafariViewController(url: url)
+            self.present(learnMoreVC, animated:true)
+        }
+    }
 }
 
 

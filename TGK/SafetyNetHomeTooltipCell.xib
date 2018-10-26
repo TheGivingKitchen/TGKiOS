@@ -20,8 +20,8 @@
                     <rect key="frame" x="163" y="40" width="53" height="43"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FSJ-Gr-fa2">
-                    <rect key="frame" x="20" y="123" width="339" height="122"/>
-                    <string key="text">SafetyNet is a network of resources for restaurant workers providing aid from mental heath to dental health. Even if The Giving Kitchen is unable to assist immediately, these local heroes are standing by to help.</string>
+                    <rect key="frame" x="20" y="123" width="339" height="81.5"/>
+                    <string key="text">SafetyNet is a network of local resources providing aid. If the Giving Kitchen is unable to assist, these local heroes are here to help.</string>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>

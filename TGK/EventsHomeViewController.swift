@@ -15,8 +15,8 @@ class EventsHomeViewController: UIViewController {
     
     
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var tableViewHeaderEventsLabel: UILabel!
     @IBOutlet weak var tableViewHeaderEventsDescriptionLabel: UILabel!
+    @IBOutlet weak var learnMoreButton: UIButton!
     
     @IBOutlet weak var volunteerView: UIView!
     @IBOutlet weak var volunteerViewHeightConstraint: NSLayoutConstraint!
@@ -47,6 +47,19 @@ class EventsHomeViewController: UIViewController {
         self.fetchData()
     }
     
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        guard let headerView = tableView.tableHeaderView else {
+            return
+        }
+        
+        let size = headerView.systemLayoutSizeFitting(UILayoutFittingCompressedSize)
+        if headerView.frame.size.height != size.height {
+            headerView.frame.size.height = size.height
+            tableView.layoutIfNeeded()
+        }
+    }
+    
     func fetchData() {
         ServiceManager.sharedInstace.getEventFeed { (calendarEventModels, error) in
             if let calendarEventModels = calendarEventModels {
@@ -71,15 +84,22 @@ class EventsHomeViewController: UIViewController {
     }
     
     func styleView() {
-        self.tableViewHeaderEventsLabel.font = UIFont.tgkSubtitle
-        self.tableViewHeaderEventsLabel.textColor = UIColor.tgkOrange
-        
-        self.tableViewHeaderEventsDescriptionLabel.font = UIFont.tgkBody
+        self.tableViewHeaderEventsDescriptionLabel.font = UIFont.tgkSubtitle
         self.tableViewHeaderEventsDescriptionLabel.textColor = UIColor.tgkBlue
+        
+        self.learnMoreButton.titleLabel?.font = UIFont.tgkBody
+        self.learnMoreButton.setTitleColor(UIColor.tgkOrange, for: .normal)
         
         self.volunteerView.backgroundColor = UIColor.tgkBlue
         self.volunteerTextButton.titleLabel?.font = UIFont.tgkBody
         self.volunteerTextButton.titleLabel?.minimumScaleFactor = 0.7
+    }
+    
+    @IBAction func learnMorePressed(_ sender: Any) {
+        if let url = URL(string: "https://thegivingkitchen.org/events/") {
+            let learnMoreVC = TGKSafariViewController(url: url)
+            self.present(learnMoreVC, animated:true)
+        }
     }
     
     @IBAction func volunteerCloseButton(_ sender: Any) {

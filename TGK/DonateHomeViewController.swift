@@ -13,6 +13,8 @@ import Firebase
 
 class DonateHomeViewController: UIViewController {
 
+    @IBOutlet weak var topDescriptionLabel: UILabel!
+    @IBOutlet weak var learnMoreButton: UIButton!
     @IBOutlet weak var useCreditCardButton: UIButton!
     @IBOutlet weak var donateTypeDividerView: UIView!
     @IBOutlet weak var recurringDonationButton: UIButton!
@@ -70,6 +72,12 @@ class DonateHomeViewController: UIViewController {
     }
     
     func styleView() {
+        self.topDescriptionLabel.font = UIFont.tgkSubtitle
+        self.topDescriptionLabel.textColor = UIColor.tgkBlue
+        
+        self.learnMoreButton.setTitleColor(UIColor.tgkOrange, for: .normal)
+        self.learnMoreButton.titleLabel?.font = UIFont.tgkBody
+        
         self.amountDescriptionView.backgroundColor = UIColor.tgkBlue
         self.amountAssociatedIconBackgroundView.backgroundColor = UIColor.tgkDarkBlue
         self.amountView.backgroundColor = UIColor.tgkBlue
@@ -172,6 +180,13 @@ class DonateHomeViewController: UIViewController {
                     strongSelf.view.layoutIfNeeded()
                 }
             }
+        }
+    }
+    
+    @IBAction func learnMorePressed(_ sender: Any) {
+        if let url = URL(string: "https://thegivingkitchen.org/support/") {
+            let learnMoreVC = TGKSafariViewController(url: url)
+            self.present(learnMoreVC, animated:true)
         }
     }
     
