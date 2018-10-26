@@ -56,14 +56,12 @@ class AssistanceHomeViewController: UIViewController {
         self.startFormInfoLabel.textColor = UIColor.tgkLightGray
         
         if let programDescriptionString = self.programDescriptionLabel.text {
-            let crisisGrantRange = (programDescriptionString as NSString).range(of: "CRISIS GRANTS")
             let illnessRange = (programDescriptionString as NSString).range(of: "illness")
             let injuryRange = (programDescriptionString as NSString).range(of: "injury")
             let deathString = (programDescriptionString as NSString).range(of: "death")
             let disasterString = (programDescriptionString as NSString).range(of: "disaster")
             
             let programAttributedString = NSMutableAttributedString(string: programDescriptionString, attributes: [NSAttributedStringKey.foregroundColor:UIColor.tgkBlue])
-            programAttributedString.addAttribute(.foregroundColor, value: UIColor.tgkOrange, range: crisisGrantRange)
             programAttributedString.addAttribute(.foregroundColor, value: UIColor.tgkOrange, range: illnessRange)
             programAttributedString.addAttribute(.foregroundColor, value: UIColor.tgkOrange, range: injuryRange)
             programAttributedString.addAttribute(.foregroundColor, value: UIColor.tgkOrange, range: deathString)
