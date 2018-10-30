@@ -17,6 +17,7 @@ class EventsHomeViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var tableViewHeaderEventsDescriptionLabel: UILabel!
     @IBOutlet weak var learnMoreButton: UIButton!
+    @IBOutlet weak var tableViewBottomDividerView: UIView!
     
     @IBOutlet weak var volunteerView: UIView!
     @IBOutlet weak var volunteerViewHeightConstraint: NSLayoutConstraint!
@@ -86,6 +87,8 @@ class EventsHomeViewController: UIViewController {
     func styleView() {
         self.tableViewHeaderEventsDescriptionLabel.font = UIFont.tgkSubtitle
         self.tableViewHeaderEventsDescriptionLabel.textColor = UIColor.tgkBlue
+        
+        self.tableViewBottomDividerView.backgroundColor = UIColor.tgkBackgroundGray
         
         self.learnMoreButton.titleLabel?.font = UIFont.tgkBody
         self.learnMoreButton.setTitleColor(UIColor.tgkOrange, for: .normal)

@@ -28,7 +28,7 @@ class MainTabBarController: UITabBarController {
         let eventsHomeVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "EventsHomeViewControllerId") as! EventsHomeViewController
         _ = eventsHomeVC.view
         let eventsHomeNavVC = UINavigationController(rootViewController: eventsHomeVC)
-        eventsHomeNavVC.tabBarItem = UITabBarItem(title: "Events", image: UIImage(named: "tabBarEvents"), selectedImage: nil)
+        eventsHomeNavVC.tabBarItem = UITabBarItem(title: "Home", image: UIImage(named: "tabBarHome"), selectedImage: nil)
         
         let donateHomeVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DonateHomeViewControllerId") as! DonateHomeViewController
         _ = donateHomeVC.view

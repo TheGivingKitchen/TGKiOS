@@ -26,6 +26,8 @@ class DonateHomeViewController: UIViewController {
     @IBOutlet weak var amountDescriptionViewTrailingConstraint: NSLayoutConstraint!
     @IBOutlet weak var amountDollarLabel: UILabel!
     @IBOutlet weak var amountDescriptionLabel: UILabel!
+    @IBOutlet weak var amountViewBottomDividerView: UIView!
+    
     @IBOutlet weak var firstDividerView: UIView!
     @IBOutlet weak var volunteerHeaderLabel: UILabel!
     @IBOutlet weak var volunteerDescriptionLabel: UILabel!
@@ -85,6 +87,8 @@ class DonateHomeViewController: UIViewController {
         self.amountDescriptionLabel.font = UIFont.tgkBody
         
         self.amountDollarLabel.font = UIFont.kulturistaMedium(size: 60)
+        
+        self.amountViewBottomDividerView.backgroundColor = UIColor.tgkBackgroundGray
         
         self.useCreditCardButton.titleLabel?.font = UIFont.tgkNavigation
         self.useCreditCardButton.tintColor = UIColor.tgkOrange

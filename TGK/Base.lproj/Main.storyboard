@@ -296,14 +296,14 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B5W-os-NSz">
-                                                <rect key="frame" x="0.0" y="511" width="375" height="7"/>
+                                                <rect key="frame" x="0.0" y="519" width="375" height="7"/>
                                                 <color key="backgroundColor" red="0.0" green="1" blue="0.030457442939999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="7" id="efm-5q-AON"/>
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dXY-68-AYz">
-                                                <rect key="frame" x="20" y="402" width="335" height="50"/>
+                                                <rect key="frame" x="20" y="410" width="335" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="QsP-uI-w6R"/>
                                                 </constraints>
@@ -313,7 +313,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Et-kF-fp3">
-                                                <rect key="frame" x="20" y="453" width="335" height="50"/>
+                                                <rect key="frame" x="20" y="461" width="335" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="Nmx-AM-Wze"/>
                                                 </constraints>
@@ -323,27 +323,27 @@
                                                 </connections>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jdF-eG-ymE">
-                                                <rect key="frame" x="20" y="452" width="355" height="1"/>
+                                                <rect key="frame" x="20" y="460" width="355" height="1"/>
                                                 <color key="backgroundColor" red="0.0" green="1" blue="0.030457442939999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="mvB-xe-liq"/>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Volunteer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JYW-Dp-OQV">
-                                                <rect key="frame" x="20" y="534" width="335" height="20.5"/>
+                                                <rect key="frame" x="20" y="542" width="335" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aJl-qf-Fu4">
-                                                <rect key="frame" x="20" y="570.5" width="335" height="101.5"/>
+                                                <rect key="frame" x="20" y="578.5" width="335" height="101.5"/>
                                                 <string key="text">From educating the public about our program services to providing special event support, GK would not exist without the dedication of our champion volunteers. Join the team!</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JT5-HK-hh6">
-                                                <rect key="frame" x="20" y="688" width="335" height="50"/>
+                                                <rect key="frame" x="20" y="696" width="335" height="50"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="kiP-7P-LP6"/>
@@ -356,33 +356,33 @@
                                                 </connections>
                                             </button>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="donateVolunteerHero" translatesAutoresizingMaskIntoConstraints="NO" id="oYO-eK-DXJ">
-                                                <rect key="frame" x="20" y="754" width="335" height="188"/>
+                                                <rect key="frame" x="20" y="762" width="335" height="188"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="oYO-eK-DXJ" secondAttribute="height" multiplier="335:188" id="0Kp-iQ-blu"/>
                                                 </constraints>
                                             </imageView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4v4-BU-z5B">
-                                                <rect key="frame" x="0.0" y="958" width="375" height="7"/>
+                                                <rect key="frame" x="0.0" y="966" width="375" height="7"/>
                                                 <color key="backgroundColor" red="0.0" green="1" blue="0.030457442939999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="7" id="cCK-nw-TXa"/>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Partner" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rhv-6V-ccZ">
-                                                <rect key="frame" x="20" y="981" width="335" height="20.5"/>
+                                                <rect key="frame" x="20" y="989" width="335" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H1d-Ir-WPW">
-                                                <rect key="frame" x="20" y="1017.5" width="335" height="81.5"/>
+                                                <rect key="frame" x="20" y="1025.5" width="335" height="81.5"/>
                                                 <string key="text">Would you like to become part of Giving Kitchen's social service or community resource referral program? We'd love to hear from you!</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xLn-8G-gFU">
-                                                <rect key="frame" x="20" y="1115" width="335" height="50"/>
+                                                <rect key="frame" x="20" y="1123" width="335" height="50"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="5gU-W9-WmB"/>
@@ -395,7 +395,7 @@
                                                 </connections>
                                             </button>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="donatePartnerHero" translatesAutoresizingMaskIntoConstraints="NO" id="j6a-0J-DS6">
-                                                <rect key="frame" x="20" y="1181" width="335" height="188"/>
+                                                <rect key="frame" x="20" y="1189" width="335" height="188"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="j6a-0J-DS6" secondAttribute="height" multiplier="335:188" id="wCR-um-wPa"/>
                                                 </constraints>
@@ -415,6 +415,13 @@ Three Ways to Get Involved &amp; Make a Difference.</string>
                                                     <action selector="learnMorePressed:" destination="y0F-uA-TV7" eventType="touchUpInside" id="bNP-X1-8yT"/>
                                                 </connections>
                                             </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jez-M5-DDe">
+                                                <rect key="frame" x="0.0" y="394" width="375" height="8"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="8" id="rfO-Hp-qPe"/>
+                                                </constraints>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -422,9 +429,11 @@ Three Ways to Get Involved &amp; Make a Difference.</string>
                                             <constraint firstAttribute="trailing" secondItem="Rhv-6V-ccZ" secondAttribute="trailing" constant="20" id="0Wk-J5-RCD"/>
                                             <constraint firstItem="jdF-eG-ymE" firstAttribute="leading" secondItem="dXY-68-AYz" secondAttribute="leading" id="1Np-FL-hIG"/>
                                             <constraint firstItem="npw-v7-TQ7" firstAttribute="top" secondItem="uJi-g7-Xap" secondAttribute="top" constant="40" id="2eR-9D-5O0"/>
+                                            <constraint firstItem="Jez-M5-DDe" firstAttribute="leading" secondItem="uJi-g7-Xap" secondAttribute="leading" id="2h6-7n-hgH"/>
                                             <constraint firstAttribute="trailing" secondItem="aJl-qf-Fu4" secondAttribute="trailing" constant="20" id="5ek-uw-EWl"/>
                                             <constraint firstItem="Aoi-Wl-yiq" firstAttribute="top" secondItem="x1q-9B-cz7" secondAttribute="bottom" constant="16" id="5ho-na-nel"/>
                                             <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="j6a-0J-DS6" secondAttribute="bottom" constant="16" id="6UC-wv-vRT"/>
+                                            <constraint firstItem="dXY-68-AYz" firstAttribute="top" secondItem="Jez-M5-DDe" secondAttribute="bottom" constant="8" id="8gX-Mr-c4V"/>
                                             <constraint firstItem="9Et-kF-fp3" firstAttribute="top" secondItem="dXY-68-AYz" secondAttribute="bottom" constant="1" id="9qf-9m-7bU"/>
                                             <constraint firstItem="x1q-9B-cz7" firstAttribute="top" secondItem="npw-v7-TQ7" secondAttribute="bottom" constant="40" id="ASE-IS-t9d"/>
                                             <constraint firstItem="9Et-kF-fp3" firstAttribute="trailing" secondItem="dXY-68-AYz" secondAttribute="trailing" id="BRp-th-rkm"/>
@@ -449,7 +458,6 @@ Three Ways to Get Involved &amp; Make a Difference.</string>
                                             <constraint firstItem="npw-v7-TQ7" firstAttribute="centerX" secondItem="uJi-g7-Xap" secondAttribute="centerX" id="WvE-go-SJY"/>
                                             <constraint firstAttribute="trailing" secondItem="B5W-os-NSz" secondAttribute="trailing" id="a2s-RS-mkd"/>
                                             <constraint firstItem="4v4-BU-z5B" firstAttribute="leading" secondItem="uJi-g7-Xap" secondAttribute="leading" id="axy-5z-avY"/>
-                                            <constraint firstItem="dXY-68-AYz" firstAttribute="top" secondItem="wY0-Fm-pUJ" secondAttribute="bottom" constant="8" id="cEM-rl-YF6"/>
                                             <constraint firstItem="xLn-8G-gFU" firstAttribute="leading" secondItem="H1d-Ir-WPW" secondAttribute="leading" id="dTH-tJ-LFn"/>
                                             <constraint firstAttribute="trailing" secondItem="JYW-Dp-OQV" secondAttribute="trailing" constant="20" id="fM5-CX-92d"/>
                                             <constraint firstItem="j6a-0J-DS6" firstAttribute="trailing" secondItem="xLn-8G-gFU" secondAttribute="trailing" id="fhR-CS-ZGb"/>
@@ -458,9 +466,11 @@ Three Ways to Get Involved &amp; Make a Difference.</string>
                                             <constraint firstItem="JYW-Dp-OQV" firstAttribute="top" secondItem="B5W-os-NSz" secondAttribute="bottom" constant="16" id="kBv-Td-PMv"/>
                                             <constraint firstAttribute="trailing" secondItem="x1q-9B-cz7" secondAttribute="trailing" constant="20" id="lQJ-Pc-UN1"/>
                                             <constraint firstItem="dXY-68-AYz" firstAttribute="leading" secondItem="uJi-g7-Xap" secondAttribute="leading" constant="20" id="mxw-3J-Lmc"/>
+                                            <constraint firstItem="Jez-M5-DDe" firstAttribute="top" secondItem="wY0-Fm-pUJ" secondAttribute="bottom" id="qgB-zD-met"/>
                                             <constraint firstItem="x1q-9B-cz7" firstAttribute="leading" secondItem="uJi-g7-Xap" secondAttribute="leading" constant="20" id="rMS-dq-VTu"/>
                                             <constraint firstItem="JYW-Dp-OQV" firstAttribute="leading" secondItem="uJi-g7-Xap" secondAttribute="leading" constant="20" id="re6-i7-sgE"/>
                                             <constraint firstItem="9Et-kF-fp3" firstAttribute="leading" secondItem="dXY-68-AYz" secondAttribute="leading" id="roF-Od-kbD"/>
+                                            <constraint firstAttribute="trailing" secondItem="Jez-M5-DDe" secondAttribute="trailing" id="rsG-3e-wqv"/>
                                             <constraint firstItem="Aoi-Wl-yiq" firstAttribute="centerX" secondItem="uJi-g7-Xap" secondAttribute="centerX" id="tHj-c4-c36"/>
                                             <constraint firstItem="aJl-qf-Fu4" firstAttribute="leading" secondItem="uJi-g7-Xap" secondAttribute="leading" constant="20" id="tJD-aK-HPi"/>
                                             <constraint firstItem="j6a-0J-DS6" firstAttribute="top" secondItem="xLn-8G-gFU" secondAttribute="bottom" constant="16" id="uFM-3k-kIJ"/>
@@ -501,6 +511,7 @@ Three Ways to Get Involved &amp; Make a Difference.</string>
                         <outlet property="amountDescriptionViewTrailingConstraint" destination="sW3-f0-7OE" id="Roz-B3-RDO"/>
                         <outlet property="amountDollarLabel" destination="XeF-aG-FaQ" id="Odu-d5-rGW"/>
                         <outlet property="amountView" destination="wY0-Fm-pUJ" id="Qs3-lZ-O7f"/>
+                        <outlet property="amountViewBottomDividerView" destination="Jez-M5-DDe" id="3ss-D0-IzH"/>
                         <outlet property="donateTypeDividerView" destination="jdF-eG-ymE" id="Sfl-wh-46W"/>
                         <outlet property="firstDividerView" destination="B5W-os-NSz" id="skb-2p-cGP"/>
                         <outlet property="learnMoreButton" destination="Aoi-Wl-yiq" id="tc9-3j-8c2"/>
@@ -521,7 +532,7 @@ Three Ways to Get Involved &amp; Make a Difference.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ol3-Ci-4Li" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1428" y="1291.7541229385308"/>
+            <point key="canvasLocation" x="-1487.2" y="1288.1559220389806"/>
         </scene>
         <!--Events Home View Controller-->
         <scene sceneID="9lq-0s-qPZ">
@@ -541,9 +552,8 @@ Three Ways to Get Involved &amp; Make a Difference.</string>
                                         <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="249" verticalCompressionResistancePriority="1000" image="tgkLogoOrange" translatesAutoresizingMaskIntoConstraints="NO" id="VD9-Tn-tAf">
                                             <rect key="frame" x="161" y="40" width="53" height="43"/>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZYo-Rq-2Bv">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="The Giving Kitchen is building a restaurant community where crisis is met with compassion and care, and anyone can be a hero." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZYo-Rq-2Bv">
                                             <rect key="frame" x="16" y="123" width="343" height="81.5"/>
-                                            <string key="text">The Giving Kitchen's signature and third-party events are rooted in great food, drink, service—and care for those who serve us every day. </string>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -555,10 +565,18 @@ Three Ways to Get Involved &amp; Make a Difference.</string>
                                                 <action selector="learnMorePressed:" destination="rZT-zD-RsE" eventType="touchUpInside" id="uVx-gp-TUg"/>
                                             </connections>
                                         </button>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="reQ-Kp-SGn">
+                                            <rect key="frame" x="0.0" y="282" width="375" height="8"/>
+                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="8" id="mz7-in-QlS"/>
+                                            </constraints>
+                                        </view>
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstItem="L9p-Rn-6M2" firstAttribute="top" secondItem="ZYo-Rq-2Bv" secondAttribute="bottom" constant="16" id="6me-Tq-GZp"/>
+                                        <constraint firstAttribute="bottom" secondItem="reQ-Kp-SGn" secondAttribute="bottom" id="Efr-6Q-1vh"/>
                                         <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="L9p-Rn-6M2" secondAttribute="bottom" constant="20" id="KRF-TB-Aem"/>
                                         <constraint firstItem="L9p-Rn-6M2" firstAttribute="centerX" secondItem="ZYo-Rq-2Bv" secondAttribute="centerX" id="OAw-Do-8Wb"/>
                                         <constraint firstItem="VD9-Tn-tAf" firstAttribute="centerX" secondItem="33F-jG-XtU" secondAttribute="centerX" id="TuB-au-lJi"/>
@@ -566,6 +584,8 @@ Three Ways to Get Involved &amp; Make a Difference.</string>
                                         <constraint firstItem="ZYo-Rq-2Bv" firstAttribute="top" secondItem="VD9-Tn-tAf" secondAttribute="bottom" constant="40" id="kYr-GL-5mb"/>
                                         <constraint firstItem="VD9-Tn-tAf" firstAttribute="top" secondItem="33F-jG-XtU" secondAttribute="top" constant="40" id="qta-TK-jbe"/>
                                         <constraint firstItem="ZYo-Rq-2Bv" firstAttribute="leading" secondItem="33F-jG-XtU" secondAttribute="leading" constant="16" id="vz1-s7-sF7"/>
+                                        <constraint firstAttribute="trailing" secondItem="reQ-Kp-SGn" secondAttribute="trailing" id="wTj-8c-JPu"/>
+                                        <constraint firstItem="reQ-Kp-SGn" firstAttribute="leading" secondItem="33F-jG-XtU" secondAttribute="leading" id="xBC-Nw-p9h"/>
                                     </constraints>
                                 </view>
                                 <prototypes>
@@ -688,6 +708,7 @@ Three Ways to Get Involved &amp; Make a Difference.</string>
                     <connections>
                         <outlet property="learnMoreButton" destination="L9p-Rn-6M2" id="lWA-xc-nDR"/>
                         <outlet property="tableView" destination="tDv-7m-6z5" id="4dU-HY-THD"/>
+                        <outlet property="tableViewBottomDividerView" destination="reQ-Kp-SGn" id="oLd-Ea-Pgj"/>
                         <outlet property="tableViewHeaderEventsDescriptionLabel" destination="ZYo-Rq-2Bv" id="tER-yI-SLM"/>
                         <outlet property="volunteerTextButton" destination="1n5-VZ-J9Q" id="oKs-Fz-OFY"/>
                         <outlet property="volunteerView" destination="EJc-ej-rDV" id="lwV-cb-agj"/>
@@ -696,7 +717,7 @@ Three Ways to Get Involved &amp; Make a Difference.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S6M-BK-8zV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-676" y="918.89055472263874"/>
+            <point key="canvasLocation" x="-3058.4000000000001" y="922.48875562218893"/>
         </scene>
         <!--Feedback Home View Controller-->
         <scene sceneID="mNn-ld-e4k">
@@ -787,7 +808,7 @@ Three Ways to Get Involved &amp; Make a Difference.</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C41-c2-AsY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="64.799999999999997" y="916.1919040479761"/>
+            <point key="canvasLocation" x="154" y="914"/>
         </scene>
         <!--Safety Net Home View Controller-->
         <scene sceneID="zlU-ob-gPy">
@@ -862,7 +883,7 @@ Three Ways to Get Involved &amp; Make a Difference.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="foT-PX-2D4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3058.4000000000001" y="917.99100449775119"/>
+            <point key="canvasLocation" x="-690" y="922"/>
         </scene>
         <!--Location Warming View Controller-->
         <scene sceneID="lZZ-QK-Vaz">
@@ -948,7 +969,7 @@ Three Ways to Get Involved &amp; Make a Difference.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sZw-lX-iZh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3058.4000000000001" y="1669.1154422788607"/>
+            <point key="canvasLocation" x="-690" y="1663"/>
         </scene>
         <!--Test Home View Controller-->
         <scene sceneID="Bo2-0V-Hhr">
