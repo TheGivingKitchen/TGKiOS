@@ -185,6 +185,7 @@ class SafetyNetHomeViewController: UIViewController {
     }
 }
 
+//MARK: Tableview delegate and datasource
 extension SafetyNetHomeViewController: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 3
@@ -240,6 +241,12 @@ extension SafetyNetHomeViewController: UITableViewDelegate, UITableViewDataSourc
             break
         }
         return UITableViewCell()
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let resource = self.safetyNetModels[indexPath.row]
+        let detailVC = SafetyNetDetailSheetViewController.instantiateWith(safetyNetResource: resource)
+        self.tabBarController?.present(detailVC, animated: true)
     }
 }
 

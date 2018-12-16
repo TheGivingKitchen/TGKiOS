@@ -86,6 +86,8 @@
 		4ED3884E209D030600A8BEE2 /* FormTextViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4ED3883C209D030600A8BEE2 /* FormTextViewTableViewCell.xib */; };
 		4ED38851209D04AE00A8BEE2 /* UIColor+TGK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED3884F209D04AD00A8BEE2 /* UIColor+TGK.swift */; };
 		4ED38852209D04AE00A8BEE2 /* String+TGK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED38850209D04AD00A8BEE2 /* String+TGK.swift */; };
+		4EDC78E321C6A912004AFCBB /* SafetyNet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EDC78E221C6A912004AFCBB /* SafetyNet.storyboard */; };
+		4EDC78E521C6A9A2004AFCBB /* SafetyNetDetailSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDC78E421C6A9A2004AFCBB /* SafetyNetDetailSheetViewController.swift */; };
 		4EE12A8721487096003DFBB5 /* LocationWarmingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE12A8621487096003DFBB5 /* LocationWarmingViewController.swift */; };
 		4EE12A9021507A72003DFBB5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4EE12A8F21507A72003DFBB5 /* GoogleService-Info.plist */; };
 		4EE12A9321507FB1003DFBB5 /* Analytics+TGK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE12A9221507FB1003DFBB5 /* Analytics+TGK.swift */; };
@@ -195,6 +197,8 @@
 		4ED3883C209D030600A8BEE2 /* FormTextViewTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FormTextViewTableViewCell.xib; sourceTree = "<group>"; };
 		4ED3884F209D04AD00A8BEE2 /* UIColor+TGK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+TGK.swift"; sourceTree = "<group>"; };
 		4ED38850209D04AD00A8BEE2 /* String+TGK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+TGK.swift"; sourceTree = "<group>"; };
+		4EDC78E221C6A912004AFCBB /* SafetyNet.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SafetyNet.storyboard; sourceTree = "<group>"; };
+		4EDC78E421C6A9A2004AFCBB /* SafetyNetDetailSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafetyNetDetailSheetViewController.swift; sourceTree = "<group>"; };
 		4EE12A8621487096003DFBB5 /* LocationWarmingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationWarmingViewController.swift; sourceTree = "<group>"; };
 		4EE12A8F21507A72003DFBB5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4EE12A9221507FB1003DFBB5 /* Analytics+TGK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Analytics+TGK.swift"; sourceTree = "<group>"; };
@@ -520,6 +524,7 @@
 		4ED38818209D01EF00A8BEE2 /* TGK */ = {
 			isa = PBXGroup;
 			children = (
+				4EDC78E121C6A8FF004AFCBB /* SafetyNet */,
 				4EE12A9121507F99003DFBB5 /* Analytics */,
 				4E09B7E6211921E000584924 /* Assistance */,
 				C0A259812114E55D0007AB20 /* Donate */,
@@ -540,6 +545,15 @@
 				4EE12A8F21507A72003DFBB5 /* GoogleService-Info.plist */,
 			);
 			path = TGK;
+			sourceTree = "<group>";
+		};
+		4EDC78E121C6A8FF004AFCBB /* SafetyNet */ = {
+			isa = PBXGroup;
+			children = (
+				4EDC78E221C6A912004AFCBB /* SafetyNet.storyboard */,
+				4EDC78E421C6A9A2004AFCBB /* SafetyNetDetailSheetViewController.swift */,
+			);
+			name = SafetyNet;
 			sourceTree = "<group>";
 		};
 		4EE12A8521487078003DFBB5 /* LocationModal */ = {
@@ -679,6 +693,7 @@
 				4E7C2E2620B1D8AF00A20303 /* RobotoMono-Thin.ttf in Resources */,
 				C0B9C4952135D3D3009BEE60 /* safetyNet.json in Resources */,
 				4E7C2E2F20B1D8AF00A20303 /* RobotoMono-Medium.ttf in Resources */,
+				4EDC78E321C6A912004AFCBB /* SafetyNet.storyboard in Resources */,
 				4E0E0C8C216D764F0082240E /* safetyNetPartner.json in Resources */,
 				4ECA9C0320A744700084A317 /* volunteerSignup.json in Resources */,
 				4ED38821209D01F200A8BEE2 /* Assets.xcassets in Resources */,
@@ -825,6 +840,7 @@
 				4EE12A8721487096003DFBB5 /* LocationWarmingViewController.swift in Sources */,
 				4EF4348A213F2F0E009C2679 /* FormTimeTableViewCell.swift in Sources */,
 				4ED38851209D04AE00A8BEE2 /* UIColor+TGK.swift in Sources */,
+				4EDC78E521C6A9A2004AFCBB /* SafetyNetDetailSheetViewController.swift in Sources */,
 				4E83549A20C8B976009DF8CE /* RSSCalendarEventModel.swift in Sources */,
 				4ECA9C0120A72D230084A317 /* FormQuestionSubfieldModel.swift in Sources */,
 				4ED3883F209D030600A8BEE2 /* FormQuestionModel.swift in Sources */,
