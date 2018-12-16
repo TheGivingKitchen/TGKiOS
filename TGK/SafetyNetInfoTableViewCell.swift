@@ -9,25 +9,15 @@
 import UIKit
 import Firebase
 
-protocol SafetyNetInfoTableViewCellDelegate:class {
-    func safetyNetInfoTableViewCellRequestOpenWeb(url:URL, cell:SafetyNetInfoTableViewCell)
-    func safetyNetInfoTableViewCellRequestCallPhone(url:URL, cell:SafetyNetInfoTableViewCell)
-    func safetyNetInfoTableViewCellRequestOpenMap(address:String, cell:SafetyNetInfoTableViewCell)
-}
-
 class SafetyNetInfoTableViewCell: UITableViewCell {
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var categoryLabel: UILabel!
-    @IBOutlet weak var websiteButton: UIButton!
-    @IBOutlet weak var addressButton: UIButton!
-    @IBOutlet weak var phoneButton: UIButton!
     @IBOutlet weak var contactNameLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var countiesLabel: UILabel!
     @IBOutlet weak var bottomDividerView: UIView!
     
-    weak var delegate:SafetyNetInfoTableViewCellDelegate?
     var safetyNetModel:SafetyNetResourceModel?
     
     override func awakeFromNib() {
@@ -39,20 +29,10 @@ class SafetyNetInfoTableViewCell: UITableViewCell {
     
     func styleView() {
         self.nameLabel.font = UIFont.tgkSubtitle
-        self.nameLabel.textColor = UIColor.tgkOrange
+        self.nameLabel.textColor = UIColor.tgkBlue
         
         self.categoryLabel.font = UIFont.tgkNavigation
-        self.categoryLabel.textColor = UIColor.tgkBlue
-        
-        self.websiteButton.titleLabel?.font = UIFont.tgkBody
-        self.websiteButton.tintColor = UIColor.tgkBlue
-        
-        self.addressButton.titleLabel?.font = UIFont.tgkBody
-        self.addressButton.tintColor = UIColor.tgkBlue
-        self.addressButton.titleLabel?.numberOfLines = 0
-        
-        self.phoneButton.titleLabel?.font = UIFont.tgkBody
-        self.phoneButton.tintColor = UIColor.tgkBlue
+        self.categoryLabel.textColor = UIColor.tgkOrange
         
         self.contactNameLabel.font = UIFont.tgkBody
         self.contactNameLabel.textColor = UIColor.tgkDarkDarkGray
@@ -61,7 +41,7 @@ class SafetyNetInfoTableViewCell: UITableViewCell {
         self.descriptionLabel.textColor = UIColor.tgkDarkDarkGray
         
         self.countiesLabel.font = UIFont.tgkBody
-        self.countiesLabel.textColor = UIColor.tgkDarkDarkGray
+        self.countiesLabel.textColor = UIColor.tgkGray
         
         self.bottomDividerView.backgroundColor = UIColor.tgkBackgroundGray
     }
@@ -76,27 +56,6 @@ class SafetyNetInfoTableViewCell: UITableViewCell {
         }
         else {
             self.categoryLabel.text = model.category
-        }
-        
-        if model.websiteUrl == nil {
-            self.websiteButton.isHidden = true
-        }
-        else {
-            self.websiteButton.setTitle("Go to website", for: .normal)
-        }
-        
-        if model.address.isNilOrEmpty {
-            self.addressButton.isHidden = true
-        }
-        else {
-            self.addressButton.setTitle(model.address, for: .normal)
-        }
-        
-        if model.phoneNumber.isNilOrEmpty {
-            self.phoneButton.isHidden = true
-        }
-        else {
-            self.phoneButton.setTitle(model.phoneNumber?.formatStringToPhoneNumber(), for: .normal)
         }
         
         if model.contactName.isNilOrEmpty {
@@ -127,39 +86,8 @@ class SafetyNetInfoTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    @IBAction func websiteButtonPressed(_ sender: Any) {
-        if let model = self.safetyNetModel,
-            let url = model.websiteUrl {
-            self.delegate?.safetyNetInfoTableViewCellRequestOpenWeb(url: url, cell: self)
-            
-            Analytics.logEvent(customName: .safetyNetVisitWebsite, parameters: [.safetyNetName:model.name])
-        }
-    }
-    
-    @IBAction func addressButtonPressed(_ sender: Any) {
-        if let model = self.safetyNetModel,
-            let address = self.safetyNetModel?.address {
-            self.delegate?.safetyNetInfoTableViewCellRequestOpenMap(address: address, cell: self)
-            
-            Analytics.logEvent(customName: .safetyNetVisitAddress, parameters: [.safetyNetName:model.name])
-        }
-    }
-    
-    @IBAction func phoneButtonPressed(_ sender: Any) {
-        if let model = self.safetyNetModel,
-            let phoneNumber = self.safetyNetModel?.phoneNumber,
-            let phoneUrl = URL(string: "tel://\(phoneNumber)") {
-            self.delegate?.safetyNetInfoTableViewCellRequestCallPhone(url: phoneUrl, cell: self)
-            
-            Analytics.logEvent(customName: .safetyNetCallPhone, parameters: [.safetyNetName:model.name])
-        }
-    }
-    
     override func prepareForReuse() {
         self.categoryLabel.isHidden = false
-        self.websiteButton.isHidden = false
-        self.addressButton.isHidden = false
-        self.phoneButton.isHidden = false
         self.contactNameLabel.isHidden = false
         self.descriptionLabel.isHidden = false
         self.countiesLabel.isHidden = false

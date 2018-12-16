@@ -7,9 +7,7 @@
 //
 
 import UIKit
-protocol SafetyNetDetailSheetViewControllerDelegate {
-    
-}
+import Firebase
 
 class SafetyNetDetailSheetViewController: UIViewController {
     
@@ -125,10 +123,10 @@ class SafetyNetDetailSheetViewController: UIViewController {
         if safetyNetModel.websiteUrl == nil {
             self.websiteStackView.isHidden = true
         }
-        if safetyNetModel.address == nil {
+        if safetyNetModel.address.isNilOrEmpty {
             self.directionsStackView.isHidden = true
         }
-        if safetyNetModel.phoneNumber == nil {
+        if safetyNetModel.phoneNumber.isNilOrEmpty {
             self.callStackView.isHidden = true
         }
         
@@ -141,10 +139,61 @@ class SafetyNetDetailSheetViewController: UIViewController {
     }
     
     @IBAction func websiteButtonPressed(_ sender: Any) {
+        if let model = self.safetyNetModel,
+            let url = model.websiteUrl {
+            let webviewVC = TGKSafariViewController(url: url)
+            self.present(webviewVC, animated:true)
+            
+            Analytics.logEvent(customName: .safetyNetVisitWebsite, parameters: [.safetyNetName:model.name])
+        }
     }
+    
     @IBAction func directionsButtonPressed(_ sender: Any) {
+        if let model = self.safetyNetModel,
+            let address = self.safetyNetModel?.address {
+            let formattedAddressString = address.replacingOccurrences(of: " ", with: "+")
+            
+            if let googleDeepLinkUrl = URL(string:"comgooglemapsurl://?daddr=\(formattedAddressString)"),
+                UIApplication.shared.canOpenURL(googleDeepLinkUrl) {
+                
+                let alertController = UIAlertController(title: "Open in", message: nil, preferredStyle: .actionSheet)
+                let googleMapAction = UIAlertAction(title: "Google Maps", style: .default) { (action) in
+                    UIApplication.shared.open(googleDeepLinkUrl, options: [:])
+                }
+                alertController.addAction(googleMapAction)
+                
+                let appleMapAction = UIAlertAction(title: "Apple Maps", style: .default) { (action) in
+                    if let appleMapsUrl = URL(string: "http://maps.apple.com/?address=\(formattedAddressString)") {
+                        UIApplication.shared.open(appleMapsUrl, options: [:])
+                    }
+                }
+                alertController.addAction(appleMapAction)
+                
+                let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
+                    self.dismiss(animated: true)
+                }
+                alertController.addAction(cancelAction)
+                
+                alertController.view.tintColor = UIColor.tgkBlue
+                self.present(alertController, animated: true)
+            }
+            else if let appleMapsUrl = URL(string: "http://maps.apple.com/?address=\(formattedAddressString)") {
+                UIApplication.shared.open(appleMapsUrl, options: [:])
+            }
+            
+            Analytics.logEvent(customName: .safetyNetVisitAddress, parameters: [.safetyNetName:model.name])
+        }
     }
+    
     @IBAction func callButtonPressed(_ sender: Any) {
+        if let model = self.safetyNetModel,
+            let phoneNumber = self.safetyNetModel?.phoneNumber,
+            let phoneUrl = URL(string: "tel://\(phoneNumber)") {
+            UIApplication.shared.open(phoneUrl, options: [:]) { (success) in
+            }
+            
+            Analytics.logEvent(customName: .safetyNetCallPhone, parameters: [.safetyNetName:model.name])
+        }
     }
     
 }
