@@ -2,8 +2,9 @@
 	"ID":"z1a0tap91any17q",
     "FormTitle":"Volunteer Signup",
     "FormSubtitle":"Join The Almighty Giving Team!",
-    "FormMetadata":"Thanks for your interest in volunteering! Please fill this out and we'll contact you soon about upcoming opportunities!",
+    "FormMetadata":"Thanks for your interest in volunteering! Please fill out this form to let us know how you'd like to help, and we'll add you to our monthly volunteer newsletter so you see our upcoming opportunities.",
     "FormShareString":"Sign up to be a Giving Kitchen Volunteer!",
+    "FormShareButtonText":"Share Link to Volunteer Sign-up",
 	"Pages" : [
 		{
             "pageInformation" : "[Test] Tell us about yourself",

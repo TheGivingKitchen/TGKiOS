@@ -15,6 +15,7 @@ struct SegmentedFormModel {
     let subtitle:String
     let metadata:String
     let shareString:String
+    let shareButtonText:String
     let pages:[FormPagePageModel]
     let defaultAnswers:[FormQuestionAnswerModel]
     
@@ -28,6 +29,7 @@ struct SegmentedFormModel {
         self.subtitle = jsonDict["FormSubtitle"] as? String ?? ""
         self.metadata = jsonDict["FormMetadata"] as? String ?? ""
         self.shareString = jsonDict["FormShareString"] as? String ?? ""
+        self.shareButtonText = jsonDict["FormShareButtonText"] as? String ?? ""
         
         var parsedDefaultAnswers = [FormQuestionAnswerModel]()
         if let defaultAnswersArray = jsonDict["DefaultAnswers"] as? [[String:String]] {

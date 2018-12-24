@@ -88,6 +88,7 @@
 		4ED38852209D04AE00A8BEE2 /* String+TGK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED38850209D04AD00A8BEE2 /* String+TGK.swift */; };
 		4EDC78E321C6A912004AFCBB /* SafetyNet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EDC78E221C6A912004AFCBB /* SafetyNet.storyboard */; };
 		4EDC78E521C6A9A2004AFCBB /* SafetyNetDetailSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDC78E421C6A9A2004AFCBB /* SafetyNetDetailSheetViewController.swift */; };
+		4EDC78E821C87268004AFCBB /* AboutHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDC78E721C87268004AFCBB /* AboutHomeViewController.swift */; };
 		4EE12A8721487096003DFBB5 /* LocationWarmingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE12A8621487096003DFBB5 /* LocationWarmingViewController.swift */; };
 		4EE12A9021507A72003DFBB5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4EE12A8F21507A72003DFBB5 /* GoogleService-Info.plist */; };
 		4EE12A9321507FB1003DFBB5 /* Analytics+TGK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE12A9221507FB1003DFBB5 /* Analytics+TGK.swift */; };
@@ -199,6 +200,7 @@
 		4ED38850209D04AD00A8BEE2 /* String+TGK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+TGK.swift"; sourceTree = "<group>"; };
 		4EDC78E221C6A912004AFCBB /* SafetyNet.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SafetyNet.storyboard; sourceTree = "<group>"; };
 		4EDC78E421C6A9A2004AFCBB /* SafetyNetDetailSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafetyNetDetailSheetViewController.swift; sourceTree = "<group>"; };
+		4EDC78E721C87268004AFCBB /* AboutHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutHomeViewController.swift; sourceTree = "<group>"; };
 		4EE12A8621487096003DFBB5 /* LocationWarmingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationWarmingViewController.swift; sourceTree = "<group>"; };
 		4EE12A8F21507A72003DFBB5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4EE12A9221507FB1003DFBB5 /* Analytics+TGK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Analytics+TGK.swift"; sourceTree = "<group>"; };
@@ -273,6 +275,7 @@
 				4E75177520C8A95700B2D7E0 /* EventsHomeViewController.swift */,
 				C0B9C4982135D79F009BEE60 /* SafetyNetHomeViewController.swift */,
 				4E71AFCD215C3EEF0033494D /* FeedbackHomeViewController.swift */,
+				4EDC78E721C87268004AFCBB /* AboutHomeViewController.swift */,
 			);
 			name = MainTabBarRootViewControllers;
 			sourceTree = "<group>";
@@ -870,6 +873,7 @@
 				4ED38845209D030600A8BEE2 /* FormPageViewController.swift in Sources */,
 				C0B9C4A021371E54009BEE60 /* SafetyNetInfoTableViewCell.swift in Sources */,
 				4E8354A220CBFD33009DF8CE /* RemoteConfigDefaults.swift in Sources */,
+				4EDC78E821C87268004AFCBB /* AboutHomeViewController.swift in Sources */,
 				4E75177020C8954C00B2D7E0 /* AssistanceHomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

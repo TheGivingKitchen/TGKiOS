@@ -40,11 +40,11 @@ class DonateHomeViewController: UIViewController {
     @IBOutlet weak var partnerImageView: UIImageView!
     @IBOutlet weak var mainScrollView: UIScrollView!
     
-    var amountAndDescriptions:[(amount:String, description:String)] = [("$25", "Covers a late fee"),
-                                                   ("$50", "Covers a water bill"),
-                                                   ("$100", "Covers a power bill"),
-                                                   ("$150", "Covers a gas bill"),
-                                                   ("$500", "Covers housing"),
+    var amountAndDescriptions:[(amount:String, description:String)] = [("$25", "Funds a late fee"),
+                                                   ("$50", "Funds a water bill"),
+                                                   ("$100", "Funds a power bill"),
+                                                   ("$150", "Funds a gas bill"),
+                                                   ("$500", "Funds housing"),
                                                    ("$1800", "A total grant!!"),
                                                    ("$5", "Every bit helps!")]
     var currentAmountAndDescriptionIndex:Int = 1

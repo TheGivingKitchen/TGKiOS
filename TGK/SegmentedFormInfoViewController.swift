@@ -106,6 +106,10 @@ class SegmentedFormInfoViewController: UIViewController {
         self.formSubtitle.text = self.segmentedFormModel.subtitle
         
         self.formMetadata.text = self.segmentedFormModel.metadata
+        
+        if !self.segmentedFormModel.shareButtonText.isEmpty {
+            self.shareFormLabel.text = self.segmentedFormModel.shareButtonText.uppercased()
+        }
     }
     
     @IBAction func continuePressed(_ sender: Any) {

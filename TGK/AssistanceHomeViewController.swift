@@ -58,8 +58,8 @@ class AssistanceHomeViewController: UIViewController {
         if let programDescriptionString = self.programDescriptionLabel.text {
             let illnessRange = (programDescriptionString as NSString).range(of: "illness")
             let injuryRange = (programDescriptionString as NSString).range(of: "injury")
-            let deathString = (programDescriptionString as NSString).range(of: "death")
-            let disasterString = (programDescriptionString as NSString).range(of: "disaster")
+            let deathString = (programDescriptionString as NSString).range(of: "death of an immediate family member")
+            let disasterString = (programDescriptionString as NSString).range(of: "house fire or flood")
             
             let programAttributedString = NSMutableAttributedString(string: programDescriptionString, attributes: [NSAttributedStringKey.foregroundColor:UIColor.tgkBlue])
             programAttributedString.addAttribute(.foregroundColor, value: UIColor.tgkOrange, range: illnessRange)

@@ -11,7 +11,6 @@ import Firebase
 
 protocol FacebookGroupAccessTableViewCellDelegate:class {
     func facebookGroupAccessTableViewCellRequestOpen(url: URL)
-    func facebookGroupAccessTableViewCellRequestTableViewUpdate()
 }
 
 class FacebookGroupAccessTableViewCell: UITableViewCell {
@@ -22,17 +21,8 @@ class FacebookGroupAccessTableViewCell: UITableViewCell {
     @IBOutlet weak var southGaLabel: UILabel!
     @IBOutlet weak var bottomDividerView: UIView!
     @IBOutlet weak var viewAllDividerView: UIView!
-    @IBOutlet weak var viewAllGroupsButton: UIButton!
-    @IBOutlet weak var stackViewRowTwo: UIStackView! {
-        didSet {
-            self.stackViewRowTwo.isHidden = true
-        }
-    }
-    @IBOutlet weak var stackViewRowThree: UIStackView! {
-        didSet {
-            self.stackViewRowThree.isHidden = true
-        }
-    }
+    @IBOutlet weak var stackViewRowTwo: UIStackView!
+    @IBOutlet weak var stackViewRowThree: UIStackView!
     
     weak var delegate:FacebookGroupAccessTableViewCellDelegate?
     
@@ -70,10 +60,6 @@ class FacebookGroupAccessTableViewCell: UITableViewCell {
         self.southGaLabel.textColor = UIColor.tgkBlue
         
         self.bottomDividerView.backgroundColor = UIColor.tgkBackgroundGray
-        self.viewAllDividerView.backgroundColor = UIColor.tgkBackgroundGray
-        
-        self.viewAllGroupsButton.setTitleColor(UIColor.tgkOrange, for: .normal)
-        self.viewAllGroupsButton.titleLabel?.font = UIFont.tgkNavigation
     }
     
     fileprivate func open(groupId:String, analyticsName:String) {
@@ -92,19 +78,6 @@ class FacebookGroupAccessTableViewCell: UITableViewCell {
         }
         
         Analytics.logEvent(customName: .safetyNetFacebookGroupVisit, parameters: [.safetyNetFacebookGroupName:analyticsName])
-    }
-
-    @IBAction func toggleViewAllPressed(_ sender: Any) {
-        self.stackViewRowTwo.isHidden = !self.stackViewRowTwo.isHidden
-        self.stackViewRowThree.isHidden = !self.stackViewRowThree.isHidden
-        
-        if self.stackViewRowTwo.isHidden {
-            self.viewAllGroupsButton.setTitle("View all", for: .normal)
-        }
-        else {
-            self.viewAllGroupsButton.setTitle("View less", for: .normal)
-        }
-        self.delegate?.facebookGroupAccessTableViewCellRequestTableViewUpdate()
     }
     
     //MARK: Facebook group button actions

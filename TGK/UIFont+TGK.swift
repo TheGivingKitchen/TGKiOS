@@ -70,7 +70,9 @@ extension UIFont {
     }
     
     static var tgkSubtitle:UIFont {
-        return UIFontMetrics.default.scaledFont(for:UIFont.kulturistaMedium(size: 24))
+        let font = UIFontMetrics.default.scaledFont(for:UIFont.kulturistaMedium(size: 24))
+        font.lineHeight 
+        return font
     }
     
     static var tgkContentTitle:UIFont {

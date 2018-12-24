@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -23,14 +23,15 @@
                         <constraint firstAttribute="height" constant="8" id="mND-9Y-dF8"/>
                     </constraints>
                 </view>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Join our Restaurant Workers group on Facebook" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CuK-uH-zRh">
-                    <rect key="frame" x="16" y="36" width="297" height="41"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CuK-uH-zRh">
+                    <rect key="frame" x="16" y="36" width="297" height="101.5"/>
+                    <string key="text">Join the GK Restaurant Workers group in your region on Facebook to connect with other food service workers about job openings and other relevant topics:</string>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="fR9-lZ-HdV">
-                    <rect key="frame" x="16" y="93" width="297" height="333.5"/>
+                    <rect key="frame" x="16" y="153.5" width="297" height="333.5"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="kuF-hF-Bl3">
                             <rect key="frame" x="0.0" y="0.0" width="297" height="100.5"/>
@@ -117,7 +118,7 @@
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CtO-rm-NLy">
                                             <rect key="frame" x="0.0" y="0.0" width="99" height="72"/>
-                                            <state key="normal" image="facebookGroupNorth"/>
+                                            <state key="normal" image="facebookGroupMetro"/>
                                             <connections>
                                                 <action selector="maconGroupPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="pfX-uV-N7L"/>
                                             </connections>
@@ -135,7 +136,7 @@
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kuC-G4-46v">
                                             <rect key="frame" x="0.0" y="0.0" width="99" height="72"/>
-                                            <state key="normal" image="facebookGroupSouth"/>
+                                            <state key="normal" image="facebookGroupCoastal"/>
                                             <connections>
                                                 <action selector="coastalGroupPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="V69-DQ-CwQ"/>
                                             </connections>
@@ -176,7 +177,7 @@
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YBo-LE-L9N">
                                             <rect key="frame" x="0.0" y="0.0" width="99" height="72"/>
-                                            <state key="normal" image="facebookGroupNorth"/>
+                                            <state key="normal" image="facebookGroupMetro"/>
                                             <connections>
                                                 <action selector="columbusGroupPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="Sos-v0-Cah"/>
                                             </connections>
@@ -194,7 +195,7 @@
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eZv-Gk-qbT">
                                             <rect key="frame" x="0.0" y="0.0" width="99" height="72"/>
-                                            <state key="normal" image="facebookGroupSouth"/>
+                                            <state key="normal" image="facebookGroupMetro"/>
                                             <connections>
                                                 <action selector="romeGroupPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="i6Q-8a-xRy"/>
                                             </connections>
@@ -211,38 +212,16 @@
                         </stackView>
                     </subviews>
                 </stackView>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xze-SR-kTx">
-                    <rect key="frame" x="16" y="442.5" width="313" height="1"/>
-                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="1" id="ccg-YB-VlB"/>
-                    </constraints>
-                </view>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qhd-2U-uJp">
-                    <rect key="frame" x="16" y="451.5" width="71" height="34"/>
-                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <state key="normal" title="View all  ">
-                        <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </state>
-                    <connections>
-                        <action selector="toggleViewAllPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="OTz-MW-gbr"/>
-                    </connections>
-                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="05b-qk-JMJ" secondAttribute="bottom" id="9HA-6L-BQy"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="05b-qk-JMJ" secondAttribute="trailing" id="AJB-oL-8kx"/>
-                <constraint firstItem="Qhd-2U-uJp" firstAttribute="top" secondItem="xze-SR-kTx" secondAttribute="bottom" constant="8" id="BaR-Pi-Z5e"/>
-                <constraint firstItem="xze-SR-kTx" firstAttribute="top" secondItem="fR9-lZ-HdV" secondAttribute="bottom" constant="16" id="CRu-BA-Fv4"/>
-                <constraint firstItem="xze-SR-kTx" firstAttribute="leading" secondItem="CuK-uH-zRh" secondAttribute="leading" id="D8E-wp-efe"/>
                 <constraint firstItem="05b-qk-JMJ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Knh-DL-rOU"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="CuK-uH-zRh" secondAttribute="trailing" constant="16" id="OKt-T7-rtH"/>
                 <constraint firstItem="CuK-uH-zRh" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="16" id="ZcJ-ku-2dJ"/>
-                <constraint firstItem="05b-qk-JMJ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Qhd-2U-uJp" secondAttribute="bottom" constant="8" id="hpQ-BU-vnA"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="xze-SR-kTx" secondAttribute="trailing" id="kEF-XH-sAp"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="fR9-lZ-HdV" secondAttribute="trailing" constant="16" id="kH2-0O-Znh"/>
-                <constraint firstItem="Qhd-2U-uJp" firstAttribute="leading" secondItem="xze-SR-kTx" secondAttribute="leading" id="nia-JP-7Xe"/>
+                <constraint firstItem="05b-qk-JMJ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="fR9-lZ-HdV" secondAttribute="bottom" constant="8" id="l8j-HN-gej"/>
                 <constraint firstItem="fR9-lZ-HdV" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="o0M-J8-hfJ"/>
                 <constraint firstItem="fR9-lZ-HdV" firstAttribute="top" secondItem="CuK-uH-zRh" secondAttribute="bottom" constant="16" id="u1f-Kw-WoF"/>
                 <constraint firstItem="CuK-uH-zRh" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="wvX-Ph-AHm"/>
@@ -257,13 +236,12 @@
                 <outlet property="southGaLabel" destination="wfk-Rw-3YK" id="dn3-zs-sld"/>
                 <outlet property="stackViewRowThree" destination="GHz-uK-UwH" id="adE-Nd-M79"/>
                 <outlet property="stackViewRowTwo" destination="Lj4-ix-DBx" id="ocG-t9-kPP"/>
-                <outlet property="viewAllDividerView" destination="xze-SR-kTx" id="EC5-ke-udj"/>
-                <outlet property="viewAllGroupsButton" destination="Qhd-2U-uJp" id="npe-Gt-A2Q"/>
             </connections>
             <point key="canvasLocation" x="0.80000000000000004" y="-82.758620689655174"/>
         </view>
     </objects>
     <resources>
+        <image name="facebookGroupCoastal" width="72" height="72"/>
         <image name="facebookGroupMetro" width="72" height="72"/>
         <image name="facebookGroupNorth" width="72" height="72"/>
         <image name="facebookGroupSouth" width="72" height="72"/>
