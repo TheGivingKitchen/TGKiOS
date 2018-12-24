@@ -766,14 +766,14 @@ Three Ways to Get Involved &amp; Make a Difference.</string>
             <objects>
                 <viewController storyboardIdentifier="AboutHomeViewControllerId" id="Lxf-CB-859" customClass="AboutHomeViewController" customModule="TGK" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="T5H-9a-Wgm">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="1450"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="2000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ti4-mU-Up7">
-                                <rect key="frame" x="0.0" y="20" width="375" height="1430"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="1980"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hFR-Ud-RwR">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1430"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1980"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" image="aboutHomeTopIcon" translatesAutoresizingMaskIntoConstraints="NO" id="LGQ-I7-6AH">
                                                 <rect key="frame" x="168.5" y="40" width="38" height="37"/>
@@ -804,27 +804,97 @@ Three Ways to Get Involved &amp; Make a Difference.</string>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gll-it-H3d">
+                                                <rect key="frame" x="16" y="327" width="343" height="50"/>
+                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="SPR-mz-w3H"/>
+                                                </constraints>
+                                                <state key="normal" title="How it works">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="assistanceHowPressed:" destination="Lxf-CB-859" eventType="touchUpInside" id="S6z-zT-cI9"/>
+                                                </connections>
+                                            </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gIR-Pe-pUL">
+                                                <rect key="frame" x="0.0" y="393" width="375" height="8"/>
+                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="8" id="YPm-mP-D0D"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bSc-Kv-DSd">
+                                                <rect key="frame" x="16" y="417" width="53.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1YH-9b-iUF">
+                                                <rect key="frame" x="16" y="654.5" width="167" height="30"/>
+                                                <state key="normal" title="When Irma hit (Read on)"/>
+                                            </button>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="aboutStory2" translatesAutoresizingMaskIntoConstraints="NO" id="d69-Jx-uZ7">
+                                                <rect key="frame" x="16" y="453.5" width="343" height="193"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="d69-Jx-uZ7" secondAttribute="height" multiplier="16:9" id="OgP-5a-akD"/>
+                                                </constraints>
+                                            </imageView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gf0-DJ-eOQ">
+                                                <rect key="frame" x="16" y="692.5" width="359" height="1"/>
+                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="xLw-Tr-qhb"/>
+                                                </constraints>
+                                            </view>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="aboutStory2" translatesAutoresizingMaskIntoConstraints="NO" id="jpO-Cl-nyW">
+                                                <rect key="frame" x="16" y="716" width="343" height="193"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="jpO-Cl-nyW" secondAttribute="height" multiplier="16:9" id="UL4-QM-KMn"/>
+                                                </constraints>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rwG-ik-oPr">
+                                                <rect key="frame" x="16" y="917" width="167" height="30"/>
+                                                <state key="normal" title="When Irma hit (Read on)"/>
+                                            </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="031-8C-RyA">
+                                                <rect key="frame" x="16" y="955" width="359" height="1"/>
+                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="DL6-f9-MHb"/>
+                                                </constraints>
+                                            </view>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="aboutStory2" translatesAutoresizingMaskIntoConstraints="NO" id="Ile-pZ-cZw">
+                                                <rect key="frame" x="16" y="972" width="343" height="193"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="Ile-pZ-cZw" secondAttribute="height" multiplier="16:9" id="zzT-cA-ono"/>
+                                                </constraints>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lx7-4J-Mqk">
+                                                <rect key="frame" x="16" y="1173" width="167" height="30"/>
+                                                <state key="normal" title="When Irma hit (Read on)"/>
+                                            </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feedback" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sTn-BQ-fip">
-                                                <rect key="frame" x="16" y="724.5" width="75.5" height="20.5"/>
+                                                <rect key="frame" x="16" y="1235" width="75.5" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gzh-Gb-gOT">
-                                                <rect key="frame" x="0.0" y="700.5" width="375" height="8"/>
+                                                <rect key="frame" x="0.0" y="1211" width="375" height="8"/>
                                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="8" id="Jsd-Ck-E2D"/>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How do you like using the Giving Kitchen app?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ned-aj-fzF">
-                                                <rect key="frame" x="16" y="761" width="343" height="41"/>
+                                                <rect key="frame" x="16" y="1271.5" width="343" height="41"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="4f7-cD-jqO">
-                                                <rect key="frame" x="0.0" y="810" width="375" height="153"/>
+                                                <rect key="frame" x="0.0" y="1320.5" width="375" height="153"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bf4-ME-YQu">
                                                         <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
@@ -870,46 +940,14 @@ Three Ways to Get Involved &amp; Make a Difference.</string>
                                                     </view>
                                                 </subviews>
                                             </stackView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gll-it-H3d">
-                                                <rect key="frame" x="16" y="327" width="343" height="50"/>
-                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="50" id="SPR-mz-w3H"/>
-                                                </constraints>
-                                                <state key="normal" title="How it works">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                            </button>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gIR-Pe-pUL">
-                                                <rect key="frame" x="0.0" y="393" width="375" height="8"/>
-                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="8" id="YPm-mP-D0D"/>
-                                                </constraints>
-                                            </view>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bSc-Kv-DSd">
-                                                <rect key="frame" x="16" y="417" width="53.5" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1YH-9b-iUF">
-                                                <rect key="frame" x="16" y="654.5" width="167" height="30"/>
-                                                <state key="normal" title="When Irma hit (Read on)"/>
-                                            </button>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="aboutStory2" translatesAutoresizingMaskIntoConstraints="NO" id="d69-Jx-uZ7">
-                                                <rect key="frame" x="16" y="453.5" width="343" height="193"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="d69-Jx-uZ7" secondAttribute="height" multiplier="16:9" id="OgP-5a-akD"/>
-                                                </constraints>
-                                            </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
+                                            <constraint firstItem="Ile-pZ-cZw" firstAttribute="width" secondItem="Ile-pZ-cZw" secondAttribute="height" multiplier="16:9" id="1Kr-1z-qlE"/>
                                             <constraint firstAttribute="trailing" secondItem="gIR-Pe-pUL" secondAttribute="trailing" id="5rp-MK-qX5"/>
-                                            <constraint firstItem="Gzh-Gb-gOT" firstAttribute="top" secondItem="1YH-9b-iUF" secondAttribute="bottom" constant="16" id="67Z-Ra-AVl"/>
                                             <constraint firstItem="o3t-sx-RFh" firstAttribute="top" secondItem="LGQ-I7-6AH" secondAttribute="bottom" constant="40" id="6AY-f1-pnu"/>
                                             <constraint firstAttribute="trailing" secondItem="o3t-sx-RFh" secondAttribute="trailing" constant="16" id="6BC-4Z-SpE"/>
+                                            <constraint firstItem="031-8C-RyA" firstAttribute="leading" secondItem="rwG-ik-oPr" secondAttribute="leading" id="77Y-Wb-Zpn"/>
                                             <constraint firstItem="1YH-9b-iUF" firstAttribute="leading" secondItem="hFR-Ud-RwR" secondAttribute="leading" constant="16" id="7P8-nB-M9a"/>
                                             <constraint firstItem="LGQ-I7-6AH" firstAttribute="top" secondItem="hFR-Ud-RwR" secondAttribute="top" constant="40" id="7Ri-MH-zQd"/>
                                             <constraint firstItem="SPo-eE-xKw" firstAttribute="leading" secondItem="hFR-Ud-RwR" secondAttribute="leading" constant="16" id="7h4-yf-i7h"/>
@@ -917,32 +955,50 @@ Three Ways to Get Involved &amp; Make a Difference.</string>
                                             <constraint firstItem="4f7-cD-jqO" firstAttribute="leading" secondItem="hFR-Ud-RwR" secondAttribute="leading" id="8GO-uA-k89"/>
                                             <constraint firstItem="Gll-it-H3d" firstAttribute="leading" secondItem="hFR-Ud-RwR" secondAttribute="leading" constant="16" id="8dw-XK-JP2"/>
                                             <constraint firstItem="4f7-cD-jqO" firstAttribute="width" secondItem="hFR-Ud-RwR" secondAttribute="width" id="8x1-IC-Bng"/>
+                                            <constraint firstAttribute="trailing" secondItem="Gf0-DJ-eOQ" secondAttribute="trailing" id="98j-kK-pvZ"/>
                                             <constraint firstItem="SPo-eE-xKw" firstAttribute="top" secondItem="ajt-Xb-NF2" secondAttribute="bottom" constant="16" id="99D-yn-KHx"/>
                                             <constraint firstItem="sTn-BQ-fip" firstAttribute="top" secondItem="Gzh-Gb-gOT" secondAttribute="bottom" constant="16" id="E5l-7V-Bas"/>
                                             <constraint firstItem="ned-aj-fzF" firstAttribute="top" secondItem="sTn-BQ-fip" secondAttribute="bottom" constant="16" id="Gag-PF-a2T"/>
                                             <constraint firstItem="LGQ-I7-6AH" firstAttribute="centerX" secondItem="hFR-Ud-RwR" secondAttribute="centerX" id="HCh-Vj-Leb"/>
+                                            <constraint firstItem="Lx7-4J-Mqk" firstAttribute="leading" secondItem="Ile-pZ-cZw" secondAttribute="leading" id="Ja8-bz-g8W"/>
+                                            <constraint firstItem="031-8C-RyA" firstAttribute="top" secondItem="rwG-ik-oPr" secondAttribute="bottom" constant="8" id="K3a-sL-oYj"/>
+                                            <constraint firstAttribute="trailing" secondItem="031-8C-RyA" secondAttribute="trailing" id="K9u-15-Kik"/>
                                             <constraint firstItem="d69-Jx-uZ7" firstAttribute="leading" secondItem="hFR-Ud-RwR" secondAttribute="leading" constant="16" id="KAi-BF-h9s"/>
                                             <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="4f7-cD-jqO" secondAttribute="bottom" constant="8" id="L2S-aV-iI2"/>
+                                            <constraint firstItem="Gzh-Gb-gOT" firstAttribute="top" secondItem="Lx7-4J-Mqk" secondAttribute="bottom" constant="8" id="NCI-jg-Vut"/>
                                             <constraint firstItem="5MB-c9-1Ik" firstAttribute="leading" secondItem="hFR-Ud-RwR" secondAttribute="leading" constant="16" id="NCR-qr-wkA"/>
                                             <constraint firstAttribute="trailing" secondItem="ajt-Xb-NF2" secondAttribute="trailing" id="Pr2-Qa-xFK"/>
                                             <constraint firstItem="bSc-Kv-DSd" firstAttribute="top" secondItem="gIR-Pe-pUL" secondAttribute="bottom" constant="16" id="R0t-qK-2S5"/>
+                                            <constraint firstItem="Gf0-DJ-eOQ" firstAttribute="top" secondItem="1YH-9b-iUF" secondAttribute="bottom" constant="8" id="RQz-dV-Wyv"/>
+                                            <constraint firstItem="jpO-Cl-nyW" firstAttribute="top" secondItem="Gf0-DJ-eOQ" secondAttribute="bottom" constant="22.5" id="Udh-3B-cIy"/>
                                             <constraint firstItem="1YH-9b-iUF" firstAttribute="top" secondItem="d69-Jx-uZ7" secondAttribute="bottom" constant="8" id="YJB-Ff-TEg"/>
                                             <constraint firstItem="Gzh-Gb-gOT" firstAttribute="leading" secondItem="hFR-Ud-RwR" secondAttribute="leading" id="acc-iv-svg"/>
                                             <constraint firstItem="o3t-sx-RFh" firstAttribute="leading" secondItem="hFR-Ud-RwR" secondAttribute="leading" constant="16" id="b0c-d4-B8k"/>
+                                            <constraint firstItem="jpO-Cl-nyW" firstAttribute="width" secondItem="jpO-Cl-nyW" secondAttribute="height" multiplier="16:9" id="b6x-fD-qC2"/>
                                             <constraint firstItem="gIR-Pe-pUL" firstAttribute="leading" secondItem="hFR-Ud-RwR" secondAttribute="leading" id="bRT-hl-a6x"/>
                                             <constraint firstAttribute="trailing" secondItem="d69-Jx-uZ7" secondAttribute="trailing" constant="16" id="chN-lY-eba"/>
+                                            <constraint firstItem="Gf0-DJ-eOQ" firstAttribute="leading" secondItem="hFR-Ud-RwR" secondAttribute="leading" constant="16" id="dO6-Ym-H7E"/>
                                             <constraint firstAttribute="trailing" secondItem="Gll-it-H3d" secondAttribute="trailing" constant="16" id="ddV-l8-hH7"/>
                                             <constraint firstAttribute="trailing" secondItem="4f7-cD-jqO" secondAttribute="trailing" id="eeq-oK-e2t"/>
+                                            <constraint firstItem="Ile-pZ-cZw" firstAttribute="top" secondItem="031-8C-RyA" secondAttribute="bottom" constant="16" id="elX-AD-FxO"/>
+                                            <constraint firstItem="jpO-Cl-nyW" firstAttribute="leading" secondItem="hFR-Ud-RwR" secondAttribute="leading" constant="16" id="fCV-Ub-Vpl"/>
+                                            <constraint firstItem="rwG-ik-oPr" firstAttribute="top" secondItem="jpO-Cl-nyW" secondAttribute="bottom" constant="8" id="feC-Nz-Hol"/>
                                             <constraint firstItem="ned-aj-fzF" firstAttribute="leading" secondItem="hFR-Ud-RwR" secondAttribute="leading" constant="16" id="iYh-db-FhJ"/>
+                                            <constraint firstItem="rwG-ik-oPr" firstAttribute="leading" secondItem="jpO-Cl-nyW" secondAttribute="leading" id="ihc-Y6-c8p"/>
                                             <constraint firstItem="bSc-Kv-DSd" firstAttribute="leading" secondItem="hFR-Ud-RwR" secondAttribute="leading" constant="16" id="juC-nX-yXS"/>
                                             <constraint firstAttribute="trailing" secondItem="5MB-c9-1Ik" secondAttribute="trailing" constant="16" id="lCK-rs-QWt"/>
                                             <constraint firstItem="5MB-c9-1Ik" firstAttribute="top" secondItem="SPo-eE-xKw" secondAttribute="bottom" constant="16" id="m5G-ft-pXn"/>
                                             <constraint firstAttribute="trailing" secondItem="ned-aj-fzF" secondAttribute="trailing" constant="16" id="mXj-39-aym"/>
+                                            <constraint firstAttribute="trailing" secondItem="jpO-Cl-nyW" secondAttribute="trailing" constant="16" id="n9B-Yy-Qoj"/>
                                             <constraint firstItem="sTn-BQ-fip" firstAttribute="leading" secondItem="hFR-Ud-RwR" secondAttribute="leading" constant="16" id="nRb-SJ-UUS"/>
                                             <constraint firstItem="ajt-Xb-NF2" firstAttribute="top" secondItem="o3t-sx-RFh" secondAttribute="bottom" constant="40" id="oPo-tL-hks"/>
+                                            <constraint firstAttribute="trailing" secondItem="Ile-pZ-cZw" secondAttribute="trailing" constant="16" id="opI-r0-oFI"/>
+                                            <constraint firstItem="Lx7-4J-Mqk" firstAttribute="top" secondItem="Ile-pZ-cZw" secondAttribute="bottom" constant="8" id="pDM-Xz-TqA"/>
                                             <constraint firstItem="4f7-cD-jqO" firstAttribute="top" secondItem="ned-aj-fzF" secondAttribute="bottom" constant="8" id="pLx-1g-gKz"/>
                                             <constraint firstItem="d69-Jx-uZ7" firstAttribute="top" secondItem="bSc-Kv-DSd" secondAttribute="bottom" constant="16" id="pWg-eg-U1M"/>
+                                            <constraint firstItem="Ile-pZ-cZw" firstAttribute="leading" secondItem="hFR-Ud-RwR" secondAttribute="leading" constant="16" id="pnK-Dg-ePc"/>
                                             <constraint firstAttribute="trailing" secondItem="Gzh-Gb-gOT" secondAttribute="trailing" id="qi8-Cy-3qp"/>
+                                            <constraint firstItem="Ile-pZ-cZw" firstAttribute="width" secondItem="Ile-pZ-cZw" secondAttribute="height" multiplier="16:9" id="tkC-wf-60u"/>
                                             <constraint firstItem="Gll-it-H3d" firstAttribute="top" secondItem="5MB-c9-1Ik" secondAttribute="bottom" constant="8" id="xbj-gg-aD3"/>
                                             <constraint firstItem="gIR-Pe-pUL" firstAttribute="top" secondItem="Gll-it-H3d" secondAttribute="bottom" constant="16" id="yto-SU-qHt"/>
                                         </constraints>
@@ -967,7 +1023,7 @@ Three Ways to Get Involved &amp; Make a Difference.</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Wci-g9-uOx"/>
                     </view>
-                    <size key="freeformSize" width="375" height="1450"/>
+                    <size key="freeformSize" width="375" height="2000"/>
                     <connections>
                         <outlet property="aboutUsLabel" destination="SPo-eE-xKw" id="uVm-ci-kLU"/>
                         <outlet property="assistanceDescriptionLabel" destination="5MB-c9-1Ik" id="7kG-Vq-rV3"/>
@@ -990,7 +1046,7 @@ Three Ways to Get Involved &amp; Make a Difference.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="16F-zQ-zbH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="125.59999999999999" y="1274.6626686656673"/>
+            <point key="canvasLocation" x="122.40000000000001" y="1522.0389805097452"/>
         </scene>
         <!--Feedback Home View Controller-->
         <scene sceneID="mNn-ld-e4k">

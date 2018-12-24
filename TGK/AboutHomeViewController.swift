@@ -80,5 +80,22 @@ class AboutHomeViewController: UIViewController {
         self.feedbackProblemButton.titleLabel?.font = UIFont.tgkNavigation
         self.feedbackProblemButton.setTitleColor(UIColor.tgkOrange, for: .normal)
     }
+    
+    @IBAction func assistanceHowPressed(_ sender: Any) {
+        
+        guard let pdfUrl = Bundle.main.url(forResource: "GK Crisis Grants", withExtension: "pdf") else {
+            return
+        }
+        let documentInteractionController = UIDocumentInteractionController(url: pdfUrl)
+        documentInteractionController.delegate = self
+        documentInteractionController.presentPreview(animated: true)
+    }
+    
+}
 
+extension AboutHomeViewController:UIDocumentInteractionControllerDelegate {
+    func documentInteractionControllerViewControllerForPreview(_ controller: UIDocumentInteractionController) -> UIViewController {
+        return self
+    }
+    
 }
