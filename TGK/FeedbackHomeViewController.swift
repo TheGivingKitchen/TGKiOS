@@ -53,7 +53,8 @@ class FeedbackHomeViewController: UITableViewController {
         ServiceManager.sharedInstace.submitAnswersToForm("z11e77nq1xzi5uf", withAnswers: [formQuestionAnswer]) { (success, error, errorModels) in
             if success == true {
                 let successModal = UIAlertController(title: "Success!", message: "Thank you! Your feedback is greatly appreciated ✨🧡👊", preferredStyle: .alert)
-                let doneAction = UIAlertAction(title: "Awesome!", style: .default, handler: { (action) in
+                let doneAction = UIAlertAction(title: "Awesome!", style: .default, handler: {[weak self] (action) in
+                    self?.dismiss(animated: true)
                 })
                 successModal.addAction(doneAction)
                 DispatchQueue.main.async {
@@ -72,6 +73,9 @@ class FeedbackHomeViewController: UITableViewController {
                 }
             }
         }
+    }
+    @IBAction func donePressed(_ sender: Any) {
+        self.dismiss(animated: true)
     }
 }
 
@@ -99,5 +103,14 @@ extension FeedbackHomeViewController: UITextViewDelegate {
             self.submitButton.isEnabled = true
             self.submitButton.backgroundColor = UIColor.tgkOrange
         }
+    }
+}
+
+//MARK: convenience initializer
+extension FeedbackHomeViewController {
+    static func feedbackViewControllerWithNavigation() -> UINavigationController {
+        let feedbackVC = UIStoryboard(name: "Feedback", bundle: nil).instantiateViewController(withIdentifier: "FeedbackHomeViewControllerId")
+        let feedbackNavVC = UINavigationController(rootViewController: feedbackVC)
+        return feedbackNavVC
     }
 }

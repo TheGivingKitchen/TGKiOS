@@ -147,46 +147,7 @@
 GK can fund the cost of living expenses for food service workers who miss work due to an illness, injury, house fire or flood, or death of an immediate family member.</string>
                                         <attributes>
                                             <font key="NSFont" size="13" name="HelveticaNeue"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                <tabStops>
-                                                    <textTab alignment="left" location="28">
-                                                        <options/>
-                                                    </textTab>
-                                                    <textTab alignment="left" location="56">
-                                                        <options/>
-                                                    </textTab>
-                                                    <textTab alignment="left" location="84">
-                                                        <options/>
-                                                    </textTab>
-                                                    <textTab alignment="left" location="112">
-                                                        <options/>
-                                                    </textTab>
-                                                    <textTab alignment="left" location="140">
-                                                        <options/>
-                                                    </textTab>
-                                                    <textTab alignment="left" location="168">
-                                                        <options/>
-                                                    </textTab>
-                                                    <textTab alignment="left" location="196">
-                                                        <options/>
-                                                    </textTab>
-                                                    <textTab alignment="left" location="224">
-                                                        <options/>
-                                                    </textTab>
-                                                    <textTab alignment="left" location="252">
-                                                        <options/>
-                                                    </textTab>
-                                                    <textTab alignment="left" location="280">
-                                                        <options/>
-                                                    </textTab>
-                                                    <textTab alignment="left" location="308">
-                                                        <options/>
-                                                    </textTab>
-                                                    <textTab alignment="left" location="336">
-                                                        <options/>
-                                                    </textTab>
-                                                </tabStops>
-                                            </paragraphStyle>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
@@ -831,10 +792,13 @@ Three Ways to Get Involved &amp; Make a Difference.</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1YH-9b-iUF">
-                                                <rect key="frame" x="16" y="654.5" width="167" height="30"/>
-                                                <state key="normal" title="When Irma hit (Read on)"/>
+                                                <rect key="frame" x="16" y="654.5" width="171" height="30"/>
+                                                <state key="normal" title="The Performer (Read on)"/>
+                                                <connections>
+                                                    <action selector="aboutStory1Pressed:" destination="Lxf-CB-859" eventType="touchUpInside" id="PdZ-gS-Msn"/>
+                                                </connections>
                                             </button>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="aboutStory2" translatesAutoresizingMaskIntoConstraints="NO" id="d69-Jx-uZ7">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="aboutStory1" translatesAutoresizingMaskIntoConstraints="NO" id="d69-Jx-uZ7">
                                                 <rect key="frame" x="16" y="453.5" width="343" height="193"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="d69-Jx-uZ7" secondAttribute="height" multiplier="16:9" id="OgP-5a-akD"/>
@@ -854,8 +818,11 @@ Three Ways to Get Involved &amp; Make a Difference.</string>
                                                 </constraints>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rwG-ik-oPr">
-                                                <rect key="frame" x="16" y="917" width="167" height="30"/>
-                                                <state key="normal" title="When Irma hit (Read on)"/>
+                                                <rect key="frame" x="16" y="917" width="169" height="30"/>
+                                                <state key="normal" title="When Irma Hit (Read on)"/>
+                                                <connections>
+                                                    <action selector="aboutStory2Pressed:" destination="Lxf-CB-859" eventType="touchUpInside" id="JST-Da-IwA"/>
+                                                </connections>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="031-8C-RyA">
                                                 <rect key="frame" x="16" y="955" width="359" height="1"/>
@@ -864,15 +831,18 @@ Three Ways to Get Involved &amp; Make a Difference.</string>
                                                     <constraint firstAttribute="height" constant="1" id="DL6-f9-MHb"/>
                                                 </constraints>
                                             </view>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="aboutStory2" translatesAutoresizingMaskIntoConstraints="NO" id="Ile-pZ-cZw">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="aboutStory3" translatesAutoresizingMaskIntoConstraints="NO" id="Ile-pZ-cZw">
                                                 <rect key="frame" x="16" y="972" width="343" height="193"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="Ile-pZ-cZw" secondAttribute="height" multiplier="16:9" id="zzT-cA-ono"/>
                                                 </constraints>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lx7-4J-Mqk">
-                                                <rect key="frame" x="16" y="1173" width="167" height="30"/>
-                                                <state key="normal" title="When Irma hit (Read on)"/>
+                                                <rect key="frame" x="16" y="1173" width="196" height="30"/>
+                                                <state key="normal" title="Comfort in Athens (Read on)"/>
+                                                <connections>
+                                                    <action selector="aboutStory3Pressed:" destination="Lxf-CB-859" eventType="touchUpInside" id="X7k-Cj-gos"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feedback" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sTn-BQ-fip">
                                                 <rect key="frame" x="16" y="1235" width="75.5" height="20.5"/>
@@ -916,6 +886,9 @@ Three Ways to Get Involved &amp; Make a Difference.</string>
                                                             <constraint firstAttribute="height" constant="50" id="ifk-xI-w3C"/>
                                                         </constraints>
                                                         <state key="normal" title="    It could be better."/>
+                                                        <connections>
+                                                            <action selector="feedbackNegativePressed:" destination="Lxf-CB-859" eventType="touchUpInside" id="LFJ-61-beN"/>
+                                                        </connections>
                                                     </button>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xa6-bQ-sPk">
                                                         <rect key="frame" x="0.0" y="101" width="375" height="1"/>
@@ -930,6 +903,9 @@ Three Ways to Get Involved &amp; Make a Difference.</string>
                                                             <constraint firstAttribute="height" constant="50" id="cvd-rC-mFI"/>
                                                         </constraints>
                                                         <state key="normal" title="    I'd like to report a problem."/>
+                                                        <connections>
+                                                            <action selector="feedbackProblemPressed:" destination="Lxf-CB-859" eventType="touchUpInside" id="8dm-LY-9SC"/>
+                                                        </connections>
                                                     </button>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TQA-Bs-UWC">
                                                         <rect key="frame" x="0.0" y="152" width="375" height="1"/>
@@ -1040,6 +1016,10 @@ Three Ways to Get Involved &amp; Make a Difference.</string>
                         <outlet property="storiesDividerView" destination="gIR-Pe-pUL" id="pG9-wb-y65"/>
                         <outlet property="storiesLabel" destination="bSc-Kv-DSd" id="pp1-8X-fVD"/>
                         <outlet property="story1Button" destination="1YH-9b-iUF" id="C4g-XT-XTG"/>
+                        <outlet property="story1Divider" destination="Gf0-DJ-eOQ" id="ZOR-NF-RPg"/>
+                        <outlet property="story2Button" destination="rwG-ik-oPr" id="kPG-9u-OpW"/>
+                        <outlet property="story2Divider" destination="031-8C-RyA" id="rob-y4-fas"/>
+                        <outlet property="story3Button" destination="Lx7-4J-Mqk" id="rYc-Kg-ONF"/>
                         <outlet property="topTitleLabel" destination="o3t-sx-RFh" id="nGk-iC-aOx"/>
                         <outlet property="topTitleLabelDivider" destination="ajt-Xb-NF2" id="8gf-pO-S6T"/>
                     </connections>
@@ -1047,97 +1027,6 @@ Three Ways to Get Involved &amp; Make a Difference.</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="16F-zQ-zbH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="122.40000000000001" y="1522.0389805097452"/>
-        </scene>
-        <!--Feedback Home View Controller-->
-        <scene sceneID="mNn-ld-e4k">
-            <objects>
-                <tableViewController storyboardIdentifier="FeedbackHomeViewControllerId" id="7LS-q3-1B4" customClass="FeedbackHomeViewController" customModule="TGK" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="HgY-xv-qee">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <sections>
-                            <tableViewSection id="ees-hr-GvX">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="433" id="UzT-dV-Dz2">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="433"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UzT-dV-Dz2" id="6nZ-oy-YBJ">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="432.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tgkLogoOrange" translatesAutoresizingMaskIntoConstraints="NO" id="8V0-s4-cYq">
-                                                    <rect key="frame" x="161" y="40" width="53" height="43"/>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We're constantly trying to do better. Please leave your comments and suggestions to help us serve our community" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5DR-r6-wuR">
-                                                    <rect key="frame" x="20" y="152" width="335" height="61"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zuw-AE-E84">
-                                                    <rect key="frame" x="20" y="362.5" width="335" height="50"/>
-                                                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="50" id="N6a-d7-mYn"/>
-                                                    </constraints>
-                                                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <state key="normal" title="Submit">
-                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </state>
-                                                    <connections>
-                                                        <action selector="submitButtonPressed:" destination="7LS-q3-1B4" eventType="touchUpInside" id="O83-mO-rhN"/>
-                                                    </connections>
-                                                </button>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feedback" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9wa-gy-xJm">
-                                                    <rect key="frame" x="149.5" y="123" width="76" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="qto-gJ-ado">
-                                                    <rect key="frame" x="20" y="229" width="335" height="117.5"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                </textView>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="8V0-s4-cYq" firstAttribute="centerX" secondItem="6nZ-oy-YBJ" secondAttribute="centerX" id="2C9-a3-8VQ"/>
-                                                <constraint firstItem="qto-gJ-ado" firstAttribute="trailing" secondItem="5DR-r6-wuR" secondAttribute="trailing" id="4m6-lm-Kem"/>
-                                                <constraint firstItem="9wa-gy-xJm" firstAttribute="top" secondItem="8V0-s4-cYq" secondAttribute="bottom" constant="40" id="JIg-dj-RCp"/>
-                                                <constraint firstAttribute="bottom" secondItem="Zuw-AE-E84" secondAttribute="bottom" constant="20" id="O7E-cC-KbE"/>
-                                                <constraint firstItem="8V0-s4-cYq" firstAttribute="top" secondItem="6nZ-oy-YBJ" secondAttribute="top" constant="40" id="Scm-Xn-Rcq"/>
-                                                <constraint firstItem="qto-gJ-ado" firstAttribute="leading" secondItem="5DR-r6-wuR" secondAttribute="leading" id="X3a-5x-mK9"/>
-                                                <constraint firstAttribute="trailing" secondItem="Zuw-AE-E84" secondAttribute="trailing" constant="20" id="YKH-sS-LK7"/>
-                                                <constraint firstItem="Zuw-AE-E84" firstAttribute="leading" secondItem="6nZ-oy-YBJ" secondAttribute="leading" constant="20" id="Yg2-H5-aaw"/>
-                                                <constraint firstItem="qto-gJ-ado" firstAttribute="top" secondItem="5DR-r6-wuR" secondAttribute="bottom" constant="16" id="ac2-p8-fIN"/>
-                                                <constraint firstItem="5DR-r6-wuR" firstAttribute="leading" secondItem="6nZ-oy-YBJ" secondAttribute="leading" constant="20" id="c4C-Dd-XbQ"/>
-                                                <constraint firstItem="5DR-r6-wuR" firstAttribute="top" secondItem="9wa-gy-xJm" secondAttribute="bottom" constant="8" id="frZ-uD-JLd"/>
-                                                <constraint firstItem="9wa-gy-xJm" firstAttribute="centerX" secondItem="8V0-s4-cYq" secondAttribute="centerX" id="hrd-kS-2m1"/>
-                                                <constraint firstItem="Zuw-AE-E84" firstAttribute="top" secondItem="qto-gJ-ado" secondAttribute="bottom" constant="16" id="inZ-q2-QGC"/>
-                                                <constraint firstAttribute="trailing" secondItem="5DR-r6-wuR" secondAttribute="trailing" constant="20" id="kr5-kk-a4x"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                        </sections>
-                        <connections>
-                            <outlet property="dataSource" destination="7LS-q3-1B4" id="PDc-g3-nmp"/>
-                            <outlet property="delegate" destination="7LS-q3-1B4" id="gCw-YF-Icz"/>
-                        </connections>
-                    </tableView>
-                    <connections>
-                        <outlet property="descriptionLabel" destination="5DR-r6-wuR" id="SbF-Wf-HI6"/>
-                        <outlet property="mainTitleLabel" destination="9wa-gy-xJm" id="AHS-xs-MkF"/>
-                        <outlet property="submitButton" destination="Zuw-AE-E84" id="vf3-4o-ekt"/>
-                        <outlet property="textView" destination="qto-gJ-ado" id="Hab-1u-2yl"/>
-                    </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="C41-c2-AsY" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="858" y="923"/>
         </scene>
         <!--Safety Net Home View Controller-->
         <scene sceneID="zlU-ob-gPy">
@@ -1372,7 +1261,9 @@ Three Ways to Get Involved &amp; Make a Difference.</string>
     </scenes>
     <resources>
         <image name="aboutHomeTopIcon" width="38" height="37"/>
+        <image name="aboutStory1" width="750" height="500"/>
         <image name="aboutStory2" width="250" height="166"/>
+        <image name="aboutStory3" width="250" height="166"/>
         <image name="assistanceHomeTopIcon" width="37" height="47"/>
         <image name="donateHomeTopIcon" width="38" height="37"/>
         <image name="donateIconWaterBill" width="37" height="48"/>
@@ -1382,6 +1273,5 @@ Three Ways to Get Involved &amp; Make a Difference.</string>
         <image name="eventsReadMore" width="98" height="14"/>
         <image name="iconArrowRight" width="9" height="8"/>
         <image name="iconCloseX" width="18" height="18"/>
-        <image name="tgkLogoOrange" width="53" height="43"/>
     </resources>
 </document>
