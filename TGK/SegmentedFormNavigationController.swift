@@ -103,6 +103,8 @@ class SegmentedFormNavigationController: UINavigationController {
             
             if success == true {
                 self.formDelegate?.segmentedFormNavigationControllerDidFinish(viewController: self)
+                Analytics.logEvent(customName: .formCompleted, parameters: [.formName: self.segmentedFormModel.title,
+                                                                          .formId: self.segmentedFormModel.id])
             }
             else if let fieldErrors = formFieldErrorModels {
                 var firstformPageWithErrors:FormPageViewController?

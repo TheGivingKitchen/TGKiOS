@@ -8,6 +8,8 @@
 
 import UIKit
 import MessageUI
+import Firebase
+import StoreKit
 
 class AboutHomeViewController: UIViewController {
     
@@ -102,6 +104,8 @@ class AboutHomeViewController: UIViewController {
         let documentInteractionController = UIDocumentInteractionController(url: pdfUrl)
         documentInteractionController.delegate = self
         documentInteractionController.presentPreview(animated: true)
+        
+        Analytics.logEvent(customName: .learnMorePressed, parameters: [.learnMoreType:"crisis_grant_info_graphic"])
     }
     
     @IBAction func aboutStory1Pressed(_ sender: Any) {
@@ -109,12 +113,16 @@ class AboutHomeViewController: UIViewController {
             let safariVC = TGKSafariViewController(url: url)
             self.present(safariVC, animated: true)
         }
+        
+        Analytics.logEvent(customName: .learnMorePressed, parameters: [.learnMoreType:"story_the_performer"])
     }
     
     @IBAction func aboutStory2Pressed(_ sender: Any) {
         if let url = URL(string: "https://thegivingkitchen.org/when-irma-hit") {
             let safariVC = TGKSafariViewController(url: url)
             self.present(safariVC, animated: true)
+            
+            Analytics.logEvent(customName: .learnMorePressed, parameters: [.learnMoreType:"when_irma_hit"])
         }
     }
     
@@ -122,12 +130,23 @@ class AboutHomeViewController: UIViewController {
         if let url = URL(string: "https://thegivingkitchen.org/shannon-brown-shares-her-story-in-athens") {
             let safariVC = TGKSafariViewController(url: url)
             self.present(safariVC, animated: true)
+            
+            Analytics.logEvent(customName: .learnMorePressed, parameters: [.learnMoreType:"comfort_in_athens"])
         }
+    }
+    
+    @IBAction func feedbackPositivePressed(_ sender: Any) {
+        let reviewWarmer = StoreReviewWarmerViewController.instantiateWith(delegate: self)
+        self.tabBarController?.present(reviewWarmer, animated: true)
+        
+        Analytics.logEvent(customName: .feedbackPositive)
     }
     
     @IBAction func feedbackNegativePressed(_ sender: Any) {
         let feedbackVC = FeedbackHomeViewController.feedbackViewControllerWithNavigation()
         self.tabBarController?.present(feedbackVC, animated: true)
+        
+        Analytics.logEvent(customName: .feedbackComment)
     }
     
     @IBAction func feedbackProblemPressed(_ sender: Any) {
@@ -137,6 +156,8 @@ class AboutHomeViewController: UIViewController {
             mailVC.setSubject("I'd like to report a problem with the GK App")
             mailVC.setToRecipients(["info@thegivingkitchen.org"])
             self.tabBarController?.present(mailVC, animated: true)
+            
+            Analytics.logEvent(customName: .feedbackReportProblem)
         }
     }
 }
@@ -150,5 +171,19 @@ extension AboutHomeViewController:UIDocumentInteractionControllerDelegate {
 extension AboutHomeViewController:MFMailComposeViewControllerDelegate {
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         controller.dismiss(animated: true)
+    }
+}
+
+extension AboutHomeViewController:StoreReviewWarmerViewControllerDelegate {
+    func storeReviewWarmerViewControllerDidAccept(viewController: StoreReviewWarmerViewController) {
+        viewController.dismiss(animated: false) {
+            DispatchQueue.main.async {
+                SKStoreReviewController.requestReview()
+            }
+        }
+    }
+    
+    func storeReviewWarmerViewControllerDidDecline(viewController: StoreReviewWarmerViewController) {
+        viewController.dismiss(animated: true)
     }
 }

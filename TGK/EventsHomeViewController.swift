@@ -102,12 +102,15 @@ class EventsHomeViewController: UIViewController {
         if let url = URL(string: "https://thegivingkitchen.org/events/") {
             let learnMoreVC = TGKSafariViewController(url: url)
             self.present(learnMoreVC, animated:true)
+            
+            Analytics.logEvent(customName: .learnMorePressed, parameters: [.learnMoreType:"events_home"])
         }
     }
     
     @IBAction func volunteerCloseButton(_ sender: Any) {
         AppDataStore.hasClosedEventHomeVolunteerButton = true
         self.configureVolunteerView(animated: true)
+        Analytics.logEvent(customName: .eventVolunteerBannerClose)
     }
     
     @IBAction func volunteerConfirmButton(_ sender: Any) {
@@ -119,6 +122,7 @@ class EventsHomeViewController: UIViewController {
         segmentedNav.segmentedFormModel = formModel
         segmentedNav.formDelegate = self
         self.present(segmentedNav, animated: true)
+        Analytics.logEvent(customName: .eventVolunteerBannerOpen)
     }
     
     private func configureVolunteerView(animated:Bool) {

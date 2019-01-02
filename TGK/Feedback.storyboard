@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -123,6 +124,92 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y9g-1h-C4S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="892" y="914"/>
+        </scene>
+        <!--Store Review Warmer View Controller-->
+        <scene sceneID="Qnp-dJ-mzV">
+            <objects>
+                <viewController storyboardIdentifier="StoreReviewWarmerViewControllerId" modalPresentationStyle="formSheet" id="l3F-yu-OQQ" customClass="StoreReviewWarmerViewController" customModule="TGK" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aal-B9-WCB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G4a-WC-fjR">
+                                <rect key="frame" x="37.5" y="147" width="300" height="324"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cWM-cG-ok1">
+                                        <rect key="frame" x="20" y="266" width="260" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="BTa-Wv-L7z"/>
+                                        </constraints>
+                                        <state key="normal" title="Maybe later"/>
+                                        <connections>
+                                            <action selector="declinePressed:" destination="l3F-yu-OQQ" eventType="touchUpInside" id="cso-wM-wW5"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thank you!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZwI-nf-ohL">
+                                        <rect key="frame" x="20" y="40" width="260" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ELA-lN-PWA">
+                                        <rect key="frame" x="20" y="208" width="260" height="50"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="qBj-Rt-iWN"/>
+                                        </constraints>
+                                        <state key="normal" title="Rate the Giving Kitchen">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="acceptPressed:" destination="l3F-yu-OQQ" eventType="touchUpInside" id="q7D-q6-pNS"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="cWM-cG-ok1" secondAttribute="bottom" constant="8" id="5Yi-dz-8Hx"/>
+                                    <constraint firstAttribute="trailing" secondItem="cWM-cG-ok1" secondAttribute="trailing" constant="20" id="9AC-2i-c8u"/>
+                                    <constraint firstItem="ZwI-nf-ohL" firstAttribute="top" secondItem="G4a-WC-fjR" secondAttribute="top" constant="40" id="Ack-CP-2AU"/>
+                                    <constraint firstItem="ZwI-nf-ohL" firstAttribute="leading" secondItem="G4a-WC-fjR" secondAttribute="leading" constant="20" id="Iam-Iy-lBF"/>
+                                    <constraint firstItem="ELA-lN-PWA" firstAttribute="trailing" secondItem="cWM-cG-ok1" secondAttribute="trailing" id="Pee-sN-aKu"/>
+                                    <constraint firstItem="cWM-cG-ok1" firstAttribute="leading" secondItem="G4a-WC-fjR" secondAttribute="leading" constant="20" id="QhJ-2y-flR"/>
+                                    <constraint firstAttribute="trailing" secondItem="ZwI-nf-ohL" secondAttribute="trailing" constant="20" id="j3B-om-IxT"/>
+                                    <constraint firstItem="cWM-cG-ok1" firstAttribute="top" secondItem="ELA-lN-PWA" secondAttribute="bottom" constant="8" id="j9s-aU-GgY"/>
+                                    <constraint firstItem="ELA-lN-PWA" firstAttribute="leading" secondItem="cWM-cG-ok1" secondAttribute="leading" id="mbh-VK-Uf3"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999998807907104" translatesAutoresizingMaskIntoConstraints="NO" id="r4l-u2-h0g">
+                                <rect key="frame" x="57.5" y="223.5" width="260" height="101.5"/>
+                                <string key="text">We're fan of you too! If you wouldn't mind leaving a rating for us, it would help us reach more restaurant workers in need across Georgia.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ELA-lN-PWA" firstAttribute="top" secondItem="r4l-u2-h0g" secondAttribute="bottom" constant="30" id="KgC-03-NOK"/>
+                            <constraint firstItem="r4l-u2-h0g" firstAttribute="trailing" secondItem="ZwI-nf-ohL" secondAttribute="trailing" id="R7z-gE-EKY"/>
+                            <constraint firstItem="G4a-WC-fjR" firstAttribute="centerX" secondItem="uyi-Fb-MlT" secondAttribute="centerX" id="Zg0-hY-y5R"/>
+                            <constraint firstItem="G4a-WC-fjR" firstAttribute="width" secondItem="aal-B9-WCB" secondAttribute="width" multiplier="80:100" id="lId-Hi-i3d"/>
+                            <constraint firstItem="r4l-u2-h0g" firstAttribute="leading" secondItem="ZwI-nf-ohL" secondAttribute="leading" id="npw-r6-Jde"/>
+                            <constraint firstItem="r4l-u2-h0g" firstAttribute="top" secondItem="ZwI-nf-ohL" secondAttribute="bottom" constant="16" id="po0-Py-vhp"/>
+                            <constraint firstItem="G4a-WC-fjR" firstAttribute="centerY" secondItem="uyi-Fb-MlT" secondAttribute="centerY" multiplier="90:100" id="tu8-mH-J5D"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="uyi-Fb-MlT"/>
+                    </view>
+                    <connections>
+                        <outlet property="acceptButton" destination="ELA-lN-PWA" id="gYs-Xb-0OX"/>
+                        <outlet property="declineButton" destination="cWM-cG-ok1" id="Jsa-Uz-esQ"/>
+                        <outlet property="descriptionLabel" destination="r4l-u2-h0g" id="fqP-eg-Llv"/>
+                        <outlet property="innerContentView" destination="G4a-WC-fjR" id="hpP-fH-pqo"/>
+                        <outlet property="titleLabel" destination="ZwI-nf-ohL" id="wqj-MN-IKu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0ZM-1F-SoD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1441" y="1199"/>
         </scene>
     </scenes>
     <resources>

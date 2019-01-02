@@ -51,6 +51,7 @@
 		4E890FFD209E32120034A83B /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E890FFC209E32120034A83B /* Router.swift */; };
 		4E89100B209F6F360034A83B /* FormPageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E89100A209F6F360034A83B /* FormPageModel.swift */; };
 		4E89100D209F779E0034A83B /* assistanceInquiry.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E89100C209F779E0034A83B /* assistanceInquiry.json */; };
+		4E9E1D5B21DC441D0096F705 /* StoreReviewWarmerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9E1D5A21DC441D0096F705 /* StoreReviewWarmerViewController.swift */; };
 		4EAF08EB2139FBB20083E023 /* SafetyNetHomeTooltipCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EAF08EA2139FBB20083E023 /* SafetyNetHomeTooltipCell.xib */; };
 		4EAF08ED2139FBC90083E023 /* SafetyNetHomeTooltipCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAF08EC2139FBC90083E023 /* SafetyNetHomeTooltipCell.swift */; };
 		4ECA9BFB20A2687B0084A317 /* BaseNibLoadedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECA9BFA20A2687B0084A317 /* BaseNibLoadedView.swift */; };
@@ -161,6 +162,7 @@
 		4E890FFC209E32120034A83B /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		4E89100A209F6F360034A83B /* FormPageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormPageModel.swift; sourceTree = "<group>"; };
 		4E89100C209F779E0034A83B /* assistanceInquiry.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = assistanceInquiry.json; sourceTree = "<group>"; };
+		4E9E1D5A21DC441D0096F705 /* StoreReviewWarmerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreReviewWarmerViewController.swift; sourceTree = "<group>"; };
 		4EAF08EA2139FBB20083E023 /* SafetyNetHomeTooltipCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SafetyNetHomeTooltipCell.xib; sourceTree = "<group>"; };
 		4EAF08EC2139FBC90083E023 /* SafetyNetHomeTooltipCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafetyNetHomeTooltipCell.swift; sourceTree = "<group>"; };
 		4ECA9BFA20A2687B0084A317 /* BaseNibLoadedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNibLoadedView.swift; sourceTree = "<group>"; };
@@ -271,6 +273,7 @@
 			isa = PBXGroup;
 			children = (
 				4E2A476E21D419B100C5E435 /* Feedback.storyboard */,
+				4E9E1D5A21DC441D0096F705 /* StoreReviewWarmerViewController.swift */,
 			);
 			name = Feedback;
 			sourceTree = "<group>";
@@ -870,6 +873,7 @@
 				4ECA9C0720A85B4E0084A317 /* FormShortNameTableViewCell.swift in Sources */,
 				4EE12A8721487096003DFBB5 /* LocationWarmingViewController.swift in Sources */,
 				4EF4348A213F2F0E009C2679 /* FormTimeTableViewCell.swift in Sources */,
+				4E9E1D5B21DC441D0096F705 /* StoreReviewWarmerViewController.swift in Sources */,
 				4ED38851209D04AE00A8BEE2 /* UIColor+TGK.swift in Sources */,
 				4EDC78E521C6A9A2004AFCBB /* SafetyNetDetailSheetViewController.swift in Sources */,
 				4E83549A20C8B976009DF8CE /* RSSCalendarEventModel.swift in Sources */,

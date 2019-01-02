@@ -44,6 +44,11 @@ class SegmentedFormInfoViewController: UIViewController {
         super.viewDidLoad()
         self.styleView()
         self.configureView()
+        
+        if let model = self.segmentedFormModel {
+            Analytics.logEvent(customName: .formViewDetails, parameters: [.formName:model.title,
+                                                                          .formId: model.id])
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {

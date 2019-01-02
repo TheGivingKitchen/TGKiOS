@@ -872,6 +872,9 @@ Three Ways to Get Involved &amp; Make a Difference.</string>
                                                             <constraint firstAttribute="height" constant="50" id="pev-6K-aEH"/>
                                                         </constraints>
                                                         <state key="normal" title="    I'm a fan!"/>
+                                                        <connections>
+                                                            <action selector="feedbackPositivePressed:" destination="Lxf-CB-859" eventType="touchUpInside" id="6ot-PD-aEr"/>
+                                                        </connections>
                                                     </button>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FcT-L8-ET7">
                                                         <rect key="frame" x="0.0" y="50" width="375" height="1"/>
@@ -1261,13 +1264,13 @@ Three Ways to Get Involved &amp; Make a Difference.</string>
     </scenes>
     <resources>
         <image name="aboutHomeTopIcon" width="38" height="37"/>
-        <image name="aboutStory1" width="750" height="500"/>
-        <image name="aboutStory2" width="250" height="166"/>
-        <image name="aboutStory3" width="250" height="166"/>
+        <image name="aboutStory1" width="360" height="240.24000549316406"/>
+        <image name="aboutStory2" width="500" height="333"/>
+        <image name="aboutStory3" width="500" height="333"/>
         <image name="assistanceHomeTopIcon" width="37" height="47"/>
         <image name="donateHomeTopIcon" width="38" height="37"/>
         <image name="donateIconWaterBill" width="37" height="48"/>
-        <image name="donatePartnerHero" width="388" height="229"/>
+        <image name="donatePartnerHero" width="1165" height="687"/>
         <image name="donateVolunteerHero" width="343" height="194"/>
         <image name="eventHomeTopIcon" width="37" height="39"/>
         <image name="eventsReadMore" width="98" height="14"/>

@@ -97,6 +97,7 @@ class AssistanceHomeViewController: UIViewController {
             let learnMoreVC = TGKSafariViewController(url: url)
             self.present(learnMoreVC, animated:true)
         }
+        Analytics.logEvent(customName: .learnMorePressed, parameters: [.learnMoreType:"assistance_home"])
     }
     
     @IBAction func startSelfAssistancePressed(_ sender: Any) {

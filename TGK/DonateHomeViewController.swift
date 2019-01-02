@@ -191,6 +191,8 @@ class DonateHomeViewController: UIViewController {
         if let url = URL(string: "https://thegivingkitchen.org/support/") {
             let learnMoreVC = TGKSafariViewController(url: url)
             self.present(learnMoreVC, animated:true)
+            
+            Analytics.logEvent(customName: .learnMorePressed, parameters: [.learnMoreType:"donate_home"])
         }
     }
     
