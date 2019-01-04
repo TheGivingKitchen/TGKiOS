@@ -40,13 +40,13 @@ class DonateHomeViewController: UIViewController {
     @IBOutlet weak var partnerImageView: UIImageView!
     @IBOutlet weak var mainScrollView: UIScrollView!
     
-    var amountAndDescriptions:[(amount:String, description:String)] = [("$25", "Funds a late fee"),
-                                                   ("$50", "Funds a water bill"),
-                                                   ("$100", "Funds a power bill"),
-                                                   ("$150", "Funds a gas bill"),
-                                                   ("$500", "Funds housing"),
-                                                   ("$1800", "A total grant!!"),
-                                                   ("$5", "Every bit helps!")]
+    var amountAndDescriptions:[(amount:String, description:String, iconName:String)] = [("$25", "Funds a late fee", "donateIconLateBill"),
+                                                   ("$50", "Funds a water bill", "donateIconWaterBill"),
+                                                   ("$100", "Funds a power bill", "donateIconPowerBill"),
+                                                   ("$150", "Funds a gas bill", "donateIconGasBill"),
+                                                   ("$500", "Funds housing", "donateIconHousingBill"),
+                                                   ("$1800", "A total grant!!", "donateIconTotalGrant"),
+                                                   ("$5", "Every bit helps!", "donateIconAnyBill")]
     var currentAmountAndDescriptionIndex:Int = 1
     var volunteerFormModel:SegmentedFormModel?
     var safetyNetParterFormModel:SegmentedFormModel?
@@ -169,8 +169,10 @@ class DonateHomeViewController: UIViewController {
                 }
                 strongSelf.amountDollarLabel.text = amountAndDescription.amount
                 strongSelf.amountDescriptionLabel.text = amountAndDescription.description
+                strongSelf.amountAssociatedIcon.image = UIImage(named: amountAndDescription.iconName)
                 strongSelf.amountAssociatedIconLeadingConstraint.constant = 0
                 strongSelf.amountDescriptionViewTrailingConstraint.constant = 0
+                
                 strongSelf.view.layoutIfNeeded()
                 
             }) {[weak self] (finished) in

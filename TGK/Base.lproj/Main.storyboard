@@ -658,24 +658,17 @@ Three Ways to Get Involved &amp; Make a Difference.</string>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EJc-ej-rDV">
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wq0-0p-VrW">
-                                        <rect key="frame" x="358" y="11" width="9" height="22"/>
-                                        <state key="normal" image="iconArrowRight"/>
-                                        <connections>
-                                            <action selector="volunteerConfirmButton:" destination="rZT-zD-RsE" eventType="touchUpInside" id="Wkb-6k-e6L"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rR5-6l-jps">
-                                        <rect key="frame" x="8" y="11" width="18" height="22"/>
-                                        <state key="normal" image="iconCloseX"/>
+                                        <rect key="frame" x="344" y="11" width="19" height="22"/>
+                                        <state key="normal" image="iconCloseXOpenCircle"/>
                                         <connections>
                                             <action selector="volunteerCloseButton:" destination="rZT-zD-RsE" eventType="touchUpInside" id="MsW-yG-qhk"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1n5-VZ-J9Q">
-                                        <rect key="frame" x="34" y="7" width="316" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1n5-VZ-J9Q">
+                                        <rect key="frame" x="12" y="7" width="316" height="30"/>
                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Volunteer at an event!">
+                                        <state key="normal" title="Give back! Volunteer at an event!">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
@@ -685,14 +678,12 @@ Three Ways to Get Involved &amp; Make a Difference.</string>
                                 </subviews>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="wq0-0p-VrW" firstAttribute="leading" secondItem="1n5-VZ-J9Q" secondAttribute="trailing" constant="8" id="2fC-ds-ehK"/>
                                     <constraint firstAttribute="height" constant="44" id="3Q3-X9-0ot"/>
-                                    <constraint firstItem="rR5-6l-jps" firstAttribute="leading" secondItem="EJc-ej-rDV" secondAttribute="leading" constant="8" id="bY5-Qb-2xJ"/>
+                                    <constraint firstItem="rR5-6l-jps" firstAttribute="leading" secondItem="1n5-VZ-J9Q" secondAttribute="trailing" constant="16" id="EzR-6W-cCD"/>
                                     <constraint firstItem="rR5-6l-jps" firstAttribute="centerY" secondItem="EJc-ej-rDV" secondAttribute="centerY" id="gVy-AO-dBb"/>
-                                    <constraint firstAttribute="trailing" secondItem="wq0-0p-VrW" secondAttribute="trailing" constant="8" id="pMx-7n-JbA"/>
-                                    <constraint firstItem="1n5-VZ-J9Q" firstAttribute="leading" secondItem="rR5-6l-jps" secondAttribute="trailing" constant="8" id="rat-F3-2Ze"/>
                                     <constraint firstItem="1n5-VZ-J9Q" firstAttribute="centerY" secondItem="EJc-ej-rDV" secondAttribute="centerY" id="tzu-V6-KUa"/>
-                                    <constraint firstItem="wq0-0p-VrW" firstAttribute="centerY" secondItem="EJc-ej-rDV" secondAttribute="centerY" id="vyj-ge-UYC"/>
+                                    <constraint firstItem="1n5-VZ-J9Q" firstAttribute="leading" secondItem="EJc-ej-rDV" secondAttribute="leading" constant="12" id="ufL-6Z-7wm"/>
+                                    <constraint firstAttribute="trailing" secondItem="rR5-6l-jps" secondAttribute="trailing" constant="12" id="xBI-I7-B9C"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -1269,12 +1260,12 @@ Three Ways to Get Involved &amp; Make a Difference.</string>
         <image name="aboutStory3" width="500" height="333"/>
         <image name="assistanceHomeTopIcon" width="37" height="47"/>
         <image name="donateHomeTopIcon" width="38" height="37"/>
-        <image name="donateIconWaterBill" width="37" height="48"/>
+        <image name="donateIconWaterBill" width="84" height="88"/>
         <image name="donatePartnerHero" width="1165" height="687"/>
         <image name="donateVolunteerHero" width="343" height="194"/>
         <image name="eventHomeTopIcon" width="37" height="39"/>
         <image name="eventsReadMore" width="98" height="14"/>
-        <image name="iconArrowRight" width="9" height="8"/>
         <image name="iconCloseX" width="18" height="18"/>
+        <image name="iconCloseXOpenCircle" width="19" height="19"/>
     </resources>
 </document>
