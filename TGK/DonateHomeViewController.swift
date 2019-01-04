@@ -11,13 +11,14 @@ import SafariServices
 import PassKit
 import Firebase
 
-class DonateHomeViewController: UIViewController {
+class DonateHomeViewController: UITableViewController {
 
     @IBOutlet weak var topDescriptionLabel: UILabel!
     @IBOutlet weak var learnMoreButton: UIButton!
     @IBOutlet weak var useCreditCardButton: UIButton!
     @IBOutlet weak var donateTypeDividerView: UIView!
     @IBOutlet weak var recurringDonationButton: UIButton!
+    @IBOutlet weak var donationAnimatedInfoView: UIView!
     @IBOutlet weak var amountView: UIView!
     @IBOutlet weak var amountAssociatedIconBackgroundView:UIView!
     @IBOutlet weak var amountAssociatedIcon: UIImageView!
@@ -28,17 +29,17 @@ class DonateHomeViewController: UIViewController {
     @IBOutlet weak var amountDescriptionLabel: UILabel!
     @IBOutlet weak var amountViewBottomDividerView: UIView!
     
-    @IBOutlet weak var firstDividerView: UIView!
+    @IBOutlet weak var donateBottomDividerView: UIView!
     @IBOutlet weak var volunteerHeaderLabel: UILabel!
     @IBOutlet weak var volunteerDescriptionLabel: UILabel!
     @IBOutlet weak var volunteerButton: UIButton!
     @IBOutlet weak var volunteerImageView: UIImageView!
-    @IBOutlet weak var secondDividerView: UIView!
+    @IBOutlet weak var volunteerBottomDividerView: UIView!
+    
     @IBOutlet weak var partnerHeaderLabel: UILabel!
     @IBOutlet weak var partnerDescriptionLabel: UILabel!
     @IBOutlet weak var partnerButton: UIButton!
     @IBOutlet weak var partnerImageView: UIImageView!
-    @IBOutlet weak var mainScrollView: UIScrollView!
     
     var amountAndDescriptions:[(amount:String, description:String, iconName:String)] = [("$25", "Funds a late fee", "donateIconLateBill"),
                                                    ("$50", "Funds a water bill", "donateIconWaterBill"),
@@ -54,9 +55,9 @@ class DonateHomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tableView.rowHeight = UITableViewAutomaticDimension
+        self.tableView.estimatedRowHeight = 400
         self.styleView()
-        let endEditTapGestureRec = UITapGestureRecognizer(target: self, action: #selector(self.endEditing))
-        self.mainScrollView.addGestureRecognizer(endEditTapGestureRec)
         
         self.fetchData()
     }
@@ -80,6 +81,7 @@ class DonateHomeViewController: UIViewController {
         self.learnMoreButton.setTitleColor(UIColor.tgkOrange, for: .normal)
         self.learnMoreButton.titleLabel?.font = UIFont.tgkBody
         
+        self.donationAnimatedInfoView.backgroundColor = UIColor.tgkBlue
         self.amountDescriptionView.backgroundColor = UIColor.tgkBlue
         self.amountAssociatedIconBackgroundView.backgroundColor = UIColor.tgkDarkBlue
         self.amountView.backgroundColor = UIColor.tgkBlue
@@ -98,7 +100,7 @@ class DonateHomeViewController: UIViewController {
         self.recurringDonationButton.titleLabel?.font = UIFont.tgkNavigation
         self.recurringDonationButton.tintColor = UIColor.tgkOrange
         
-        self.firstDividerView.backgroundColor = UIColor.tgkBackgroundGray
+        self.donateBottomDividerView.backgroundColor = UIColor.tgkBackgroundGray
         
         self.volunteerHeaderLabel.font = UIFont.tgkBody
         self.volunteerHeaderLabel.textColor = UIColor.tgkGray
@@ -109,7 +111,7 @@ class DonateHomeViewController: UIViewController {
         self.volunteerButton.backgroundColor = UIColor.tgkOrange
         self.volunteerButton.titleLabel?.font = UIFont.tgkNavigation
         
-        self.secondDividerView.backgroundColor = UIColor.tgkBackgroundGray
+        self.volunteerBottomDividerView.backgroundColor = UIColor.tgkBackgroundGray
         
         self.partnerHeaderLabel.font = UIFont.tgkBody
         self.partnerHeaderLabel.textColor = UIColor.tgkGray
@@ -141,10 +143,6 @@ class DonateHomeViewController: UIViewController {
                 self.partnerButton.isEnabled = true
             }
         }
-    }
-    
-    @objc func endEditing() {
-        self.view.endEditing(true)
     }
     
     @objc func timerUpdateDonationDescription() {
@@ -250,6 +248,13 @@ class DonateHomeViewController: UIViewController {
         segmentedNav.segmentedFormModel = formModel
         segmentedNav.formDelegate = self
         self.present(segmentedNav, animated: true)
+    }
+}
+
+//MARK: uitableview overrides for static table
+extension DonateHomeViewController {
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
     }
 }
 
