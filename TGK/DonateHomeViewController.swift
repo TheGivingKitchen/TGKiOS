@@ -46,7 +46,7 @@ class DonateHomeViewController: UITableViewController {
                                                    ("$100", "Funds a power bill", "donateIconPowerBill"),
                                                    ("$150", "Funds a gas bill", "donateIconGasBill"),
                                                    ("$500", "Funds housing", "donateIconHousingBill"),
-                                                   ("$1800", "A total grant!!", "donateIconTotalGrant"),
+                                                   ("$1,800", "A total grant!", "donateIconTotalGrant"),
                                                    ("$5", "Every bit helps!", "donateIconAnyBill")]
     var currentAmountAndDescriptionIndex:Int = 1
     var volunteerFormModel:SegmentedFormModel?
