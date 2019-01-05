@@ -11,13 +11,15 @@ import MessageUI
 import Firebase
 import StoreKit
 
-class AboutHomeViewController: UIViewController {
+class AboutHomeViewController: UITableViewController {
     
     @IBOutlet weak var topTitleLabel: UILabel!
     @IBOutlet weak var topTitleLabelDivider: UIView!
     @IBOutlet weak var aboutUsLabel: UILabel!
     @IBOutlet weak var assistanceDescriptionLabel: UILabel!
     @IBOutlet weak var howItWorksButton: UIButton!
+    @IBOutlet weak var aboutUsDividerView: UIView!
+    
     
     @IBOutlet weak var storiesLabel: UILabel!
     @IBOutlet weak var story1Button: UIButton!
@@ -36,13 +38,12 @@ class AboutHomeViewController: UIViewController {
     @IBOutlet weak var feedbackProblemButton: UIButton!
     @IBOutlet weak var feedbackDivider1: UIView!
     @IBOutlet weak var feedbackDivider2: UIView!
-    @IBOutlet weak var feedbackDivider3: UIView!
-    
-    
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tableView.rowHeight = UITableViewAutomaticDimension
+        self.tableView.estimatedRowHeight = 400
 
         self.styleView()
     }
@@ -55,6 +56,7 @@ class AboutHomeViewController: UIViewController {
         
         self.aboutUsLabel.font = UIFont.tgkBody
         self.aboutUsLabel.textColor = UIColor.tgkLightGray
+        self.aboutUsDividerView.backgroundColor = UIColor.tgkBackgroundGray
         
         self.assistanceDescriptionLabel.font = UIFont.tgkBody
         self.assistanceDescriptionLabel.textColor = UIColor.tgkGray
@@ -86,7 +88,6 @@ class AboutHomeViewController: UIViewController {
         
         self.feedbackDivider1.backgroundColor = UIColor.tgkLightGray
         self.feedbackDivider2.backgroundColor = UIColor.tgkLightGray
-        self.feedbackDivider3.backgroundColor = UIColor.tgkLightGray
         
         self.feedbackPositiveButton.titleLabel?.font = UIFont.tgkNavigation
         self.feedbackPositiveButton.setTitleColor(UIColor.tgkOrange, for: .normal)
@@ -159,6 +160,13 @@ class AboutHomeViewController: UIViewController {
             
             Analytics.logEvent(customName: .feedbackReportProblem)
         }
+    }
+}
+
+//MARK: uitableview overrides for static table
+extension AboutHomeViewController {
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
     }
 }
 
