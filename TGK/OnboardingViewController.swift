@@ -67,7 +67,7 @@ class OnboardingViewController: UIViewController {
     }
     
     private func setupCollectionViewData() {
-        let onboardingWelcomeModel = OnboardingContentModel(title:"Welcome!", description:"Thanks for supporting Giving Kitchen! You can request assistance for food service workers in crisis, see upcoming events that benefit GK and join our forces - all though this app.", heroImage:UIImage(named:"onboardingSafetyNetHero"))
+        let onboardingWelcomeModel = OnboardingContentModel(title:"Welcome!", description:"Thanks for supporting Giving Kitchen! You can request assistance for food service workers in crisis, see upcoming events that benefit GK and join our forces - all though this app.", heroImage:UIImage(named:"onboardingWelcomeHero"))
         let onboardingAssistanceModel = OnboardingContentModel(title:"Assistance", description:"Request assistance for yourself or a food service worker in crisis. Just fill out our assistance inquiry form, and one of our team members will contact you.", heroImage:UIImage(named:"onboardingAssistanceHero"))
         let onboardingSafetyNetModel = OnboardingContentModel(title:"SafetyNet", description:"We also have a SafetyNet program to connect food service workers to community resources throughout Georgia.", heroImage:UIImage(named:"onboardingSafetyNetHero"))
         let onboardingEventsModel = OnboardingContentModel(title:"Events", description:"Get info about new upcoming events. Sign up through the app to get alerts about new volunteer opportunities.", heroImage:UIImage(named:"onboardingEventsHero"))

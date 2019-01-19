@@ -20,6 +20,8 @@ class AboutHomeViewController: UITableViewController {
     @IBOutlet weak var howItWorksButton: UIButton!
     @IBOutlet weak var aboutUsDividerView: UIView!
     
+    @IBOutlet weak var newsletterSignupButton: UIButton!
+    @IBOutlet weak var newsletterSignupDivider: UIView!
     
     @IBOutlet weak var storiesLabel: UILabel!
     @IBOutlet weak var story1Button: UIButton!
@@ -57,6 +59,10 @@ class AboutHomeViewController: UITableViewController {
         self.aboutUsLabel.font = UIFont.tgkBody
         self.aboutUsLabel.textColor = UIColor.tgkLightGray
         self.aboutUsDividerView.backgroundColor = UIColor.tgkBackgroundGray
+        
+        self.newsletterSignupButton.titleLabel?.font = UIFont.tgkNavigation
+        self.newsletterSignupButton.setTitleColor(UIColor.tgkOrange, for: .normal)
+        self.newsletterSignupDivider.backgroundColor = UIColor.tgkBackgroundGray
         
         self.assistanceDescriptionLabel.font = UIFont.tgkBody
         self.assistanceDescriptionLabel.textColor = UIColor.tgkGray
@@ -107,6 +113,15 @@ class AboutHomeViewController: UITableViewController {
         documentInteractionController.presentPreview(animated: true)
         
         Analytics.logEvent(customName: .learnMorePressed, parameters: [.learnMoreType:"crisis_grant_info_graphic"])
+    }
+    
+    @IBAction func newsletterSignupButtonPressed(_ sender: Any) {
+        if let url = URL(string: "https://thegivingkitchen.us3.list-manage.com/subscribe?u=8ce234d2bdddfb2c1ba574d4f&id=9071a9bab9") {
+            let safariVC = TGKSafariViewController(url: url)
+            self.present(safariVC, animated: true)
+            
+            Analytics.logEvent(customName: .newsletterSignupStarted)
+        }
     }
     
     @IBAction func aboutStory1Pressed(_ sender: Any) {

@@ -862,7 +862,7 @@ Three Ways to Get Involved &amp; Make a Difference.</string>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="VRd-Z4-qgA">
                                 <rect key="frame" x="57.5" y="213.5" width="260" height="122"/>
-                                <string key="text">If you would like us to find SafetyNet resources near you, the Giving Kitchen app needs permission to look up your location. Would you like to turn on location services for this app?</string>
+                                <string key="text">If you would like us to find Stability Network resources near you, the Giving Kitchen app needs permission to look up your location. Would you like to turn on location services for this app?</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -955,7 +955,7 @@ Three Ways to Get Involved &amp; Make a Difference.</string>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5MB-c9-1Ik">
                                                     <rect key="frame" x="16" y="52.5" width="343" height="81.5"/>
-                                                    <string key="text">The Giving Kitchen provides emergency assistance to restaurant workers through financial support and a network of community resources.</string>
+                                                    <string key="text">Giving Kitchen provides emergency assistance to food service workers through financial support and a network of community resources.</string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -997,8 +997,44 @@ Three Ways to Get Involved &amp; Make a Difference.</string>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="62" id="qXM-MA-W4J">
+                                        <rect key="frame" x="0.0" y="407" width="375" height="62"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qXM-MA-W4J" id="fAH-zu-18e">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="62"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tHS-Ft-CCM">
+                                                    <rect key="frame" x="16" y="0.0" width="343" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="2p8-IT-cyl"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Sign up for our newsletter here"/>
+                                                    <connections>
+                                                        <action selector="newsletterSignupButtonPressed:" destination="lpt-Xd-vIc" eventType="touchUpInside" id="L5F-5z-GBi"/>
+                                                    </connections>
+                                                </button>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fd8-Dp-kqx">
+                                                    <rect key="frame" x="0.0" y="50" width="375" height="8"/>
+                                                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="8" id="k5j-Tg-834"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Fd8-Dp-kqx" firstAttribute="leading" secondItem="fAH-zu-18e" secondAttribute="leading" id="A9k-c0-cA0"/>
+                                                <constraint firstAttribute="trailing" secondItem="Fd8-Dp-kqx" secondAttribute="trailing" id="GWY-KZ-KxI"/>
+                                                <constraint firstAttribute="trailing" secondItem="tHS-Ft-CCM" secondAttribute="trailing" constant="16" id="GkB-Am-G7d"/>
+                                                <constraint firstItem="Fd8-Dp-kqx" firstAttribute="top" secondItem="tHS-Ft-CCM" secondAttribute="bottom" id="deh-4u-Sow"/>
+                                                <constraint firstItem="tHS-Ft-CCM" firstAttribute="top" secondItem="fAH-zu-18e" secondAttribute="top" id="fF1-Uy-n6y"/>
+                                                <constraint firstItem="tHS-Ft-CCM" firstAttribute="leading" secondItem="fAH-zu-18e" secondAttribute="leading" constant="16" id="sOR-kg-vP6"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Fd8-Dp-kqx" secondAttribute="bottom" id="sVg-8t-fja"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="825" id="Hlx-5N-Lbj">
-                                        <rect key="frame" x="0.0" y="407" width="375" height="825"/>
+                                        <rect key="frame" x="0.0" y="469" width="375" height="825"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Hlx-5N-Lbj" id="IqT-pJ-8tW">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="825"/>
@@ -1106,7 +1142,7 @@ Three Ways to Get Involved &amp; Make a Difference.</string>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="271" id="hFx-1p-fep">
-                                        <rect key="frame" x="0.0" y="1232" width="375" height="271"/>
+                                        <rect key="frame" x="0.0" y="1294" width="375" height="271"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hFx-1p-fep" id="MOO-7a-xdL">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="271"/>
@@ -1226,6 +1262,8 @@ Three Ways to Get Involved &amp; Make a Difference.</string>
                         <outlet property="feedbackPositiveButton" destination="bf4-ME-YQu" id="pFB-A6-ZvX"/>
                         <outlet property="feedbackProblemButton" destination="dnP-wM-BKp" id="ZNc-mD-icB"/>
                         <outlet property="howItWorksButton" destination="Gll-it-H3d" id="MZW-Lg-xyn"/>
+                        <outlet property="newsletterSignupButton" destination="tHS-Ft-CCM" id="90v-OR-n1b"/>
+                        <outlet property="newsletterSignupDivider" destination="Fd8-Dp-kqx" id="6R3-Dd-BQG"/>
                         <outlet property="storiesDividerView" destination="Gzh-Gb-gOT" id="32h-4x-oRA"/>
                         <outlet property="storiesLabel" destination="bSc-Kv-DSd" id="Mia-F9-ISu"/>
                         <outlet property="story1Button" destination="1YH-9b-iUF" id="1Dv-HD-VoE"/>
@@ -1239,7 +1277,7 @@ Three Ways to Get Involved &amp; Make a Difference.</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vjo-hv-8Wu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="25" y="1610"/>
+            <point key="canvasLocation" x="24.800000000000001" y="1609.2953523238382"/>
         </scene>
         <!--Test Home View Controller-->
         <scene sceneID="Bo2-0V-Hhr">

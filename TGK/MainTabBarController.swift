@@ -38,7 +38,7 @@ class MainTabBarController: UITabBarController {
         let safetyNetHomeVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SafetyNetHomeViewControllerId") as! SafetyNetHomeViewController
         _ = safetyNetHomeVC.view
         let safetyNetNavVC = UINavigationController(rootViewController: safetyNetHomeVC)
-        safetyNetNavVC.tabBarItem = UITabBarItem(title: "SafetyNet", image: UIImage(named: "tabBarSafetyNet"), selectedImage: nil)
+        safetyNetNavVC.tabBarItem = UITabBarItem(title: "Stability Network", image: UIImage(named: "tabBarSafetyNet"), selectedImage: nil)
         
         let aboutHomeVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AboutHomeViewControllerId") as! AboutHomeViewController
         _ = aboutHomeVC.view

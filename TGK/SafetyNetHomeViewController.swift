@@ -279,7 +279,7 @@ extension SafetyNetHomeViewController: UISearchResultsUpdating, UISearchBarDeleg
         self.searchController.searchBar.delegate = self
         self.searchController.searchResultsUpdater = self
         self.searchController.obscuresBackgroundDuringPresentation = false
-        self.searchController.searchBar.placeholder = "Search SafetyNet"
+        self.searchController.searchBar.placeholder = "Search Stability Network"
         self.searchController.searchBar.barTintColor = UIColor.tgkBlue
         self.searchController.searchBar.tintColor = UIColor.tgkOrange
         UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).font = UIFont.tgkBody

@@ -35,6 +35,7 @@ extension Analytics {
         case safetyNetFacebookGroupVisit = "safetynet_visit_facebook_group"
         
         //MARK: About
+        case newsletterSignupStarted = "newsletter_signup_started"
         case feedbackPositive = "feedback_positive"
         case feedbackComment = "feedback_comment"
         case feedbackReportProblem = "feedback_report_problem"

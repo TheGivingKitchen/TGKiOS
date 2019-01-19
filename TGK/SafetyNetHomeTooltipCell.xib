@@ -21,7 +21,7 @@
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FSJ-Gr-fa2">
                     <rect key="frame" x="20" y="126" width="339" height="101.5"/>
-                    <string key="text">Our SafetyNet program connects food service workers to various types of resources. Whether you receive a GK grant or not, these local services are standing by to help you.</string>
+                    <string key="text">Our Stability Network program connects food service workers to various types of resources. Whether you receive a GK grant or not, these local services are standing by to help you.</string>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
