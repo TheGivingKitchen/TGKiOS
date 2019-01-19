@@ -44,7 +44,6 @@ struct SegmentedFormModel {
         }
         self.defaultAnswers = parsedDefaultAnswers
         
-        //pagesArray is a 2D array. each element in the top level contains a
         guard let pagesArray = jsonDict["Pages"] as? [[String:Any]] else {
             self.pages = [FormPagePageModel]()
             return

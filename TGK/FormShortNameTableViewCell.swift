@@ -80,6 +80,16 @@ class FormShortNameTableViewCell: UITableViewCell, FormItemView {
         self.errorMessageLabel.font = UIFont.tgkMetadata
         self.errorMessageLabel.textColor = UIColor.tgkOrange
         
+        self.firstNameTextField.textContentType = UITextContentType.givenName
+        self.firstNameTextField.keyboardType = .default
+        self.firstNameTextField.autocapitalizationType = .words
+        self.firstNameTextField.autocorrectionType = .no
+        
+        self.lastNameTextField.textContentType = UITextContentType.familyName
+        self.lastNameTextField.keyboardType = .default
+        self.lastNameTextField.autocapitalizationType = .words
+        self.lastNameTextField.autocorrectionType = .no
+        
         self.firstNameTextField.delegate = self
         self.lastNameTextField.delegate = self
     }

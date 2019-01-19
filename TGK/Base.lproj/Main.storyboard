@@ -565,11 +565,11 @@ Three Ways to Get Involved &amp; Make a Difference.</string>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="482" id="hQC-Nm-lod">
-                                        <rect key="frame" x="0.0" y="532" width="375" height="482"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="440" id="hQC-Nm-lod">
+                                        <rect key="frame" x="0.0" y="532" width="375" height="440"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hQC-Nm-lod" id="PW1-nN-RHQ">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="482"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="440"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Volunteer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JYW-Dp-OQV">
@@ -632,11 +632,11 @@ Three Ways to Get Involved &amp; Make a Difference.</string>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="454" id="EXc-hu-LHF">
-                                        <rect key="frame" x="0.0" y="1014" width="375" height="454"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="401" id="EXc-hu-LHF">
+                                        <rect key="frame" x="0.0" y="972" width="375" height="401"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EXc-hu-LHF" id="FUu-PA-KpT">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="454"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="401"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Partner" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rhv-6V-ccZ">
@@ -645,20 +645,19 @@ Three Ways to Get Involved &amp; Make a Difference.</string>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H1d-Ir-WPW">
-                                                    <rect key="frame" x="16" y="52.5" width="335" height="81.5"/>
-                                                    <string key="text">Know of another organization or community resource that would be a good resource for our SafetyNet program? We'd love to hear from you!</string>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Want to host an event to benefit GK? Join our forces!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H1d-Ir-WPW">
+                                                    <rect key="frame" x="16" y="52.5" width="335" height="41"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xLn-8G-gFU">
-                                                    <rect key="frame" x="16" y="150" width="335" height="50"/>
+                                                    <rect key="frame" x="16" y="109.5" width="335" height="50"/>
                                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="5gU-W9-WmB"/>
                                                     </constraints>
-                                                    <state key="normal" title="Tell Us about a SafetyNet Partner">
+                                                    <state key="normal" title="Join Our Forces">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
                                                     <connections>
@@ -666,7 +665,7 @@ Three Ways to Get Involved &amp; Make a Difference.</string>
                                                     </connections>
                                                 </button>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="donatePartnerHero" translatesAutoresizingMaskIntoConstraints="NO" id="j6a-0J-DS6">
-                                                    <rect key="frame" x="16" y="216" width="335" height="188"/>
+                                                    <rect key="frame" x="16" y="175.5" width="335" height="188"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="j6a-0J-DS6" secondAttribute="height" multiplier="335:188" id="wCR-um-wPa"/>
                                                     </constraints>

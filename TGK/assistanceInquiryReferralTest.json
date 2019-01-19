@@ -1,35 +1,81 @@
 {
-    "ID" : "w1t7006405irhin",
-    "FormTitle":"Assistance Inquiry",
-    "FormSubtitle":"Do you need help?",
+    "ID" : "zl0n8dd0u0hk0z",
+    "FormTitle":"Assistance Inquiry Referral",
+    "FormSubtitle":"Does someone you know need help?",
     "FormMetadata":"Our Crisis Grants program currently serve restaurant workers living in Metro Atlanta, Athens, Columbus and Rome. Grants are awarded based on the restaurant worker's financial need as well as a set of criteria according to the type of crisis. Most often, our financial assistance covers the cost of rent and utilities, paid directly to the service provider(s). Applications are reviewed by Giving Kitchen staff and a review committee consisting of GK board members. The average time to fully process an application from beginning to end is three weeks.\n\nPlease note: we do not pay medical expenses.",
     "FormShareString":"Request assistance for restaurant a worker in need",
     "DefaultAnswers": [
-    	{
-    		"ID": "Field1",
-    		"Answer": "Self"
-    	},
-    	{
-    		"ID": "Field34",
-    		"Answer": "Yes"
-    	}
     ],
 	"Pages" : [
 		{
-            "pageInformation" : "Please tell us about yourself",
+            "pageInformation" : "[Test] Please tell us about the person in need",
 			"questions" : [
 				{
-		            "Title": "Full Name:",
+	            "Title": "Who you know in need?",
+	            "Instructions": "",
+	            "IsRequired": "1",
+	            "ClassNames": "",
+	            "DefaultVal": "",
+	            "Page": "1",
+	            "Choices": [
+	                {
+	                    "Label": "Friend"
+	                },
+	                {
+	                    "Label": "Coworker"
+	                },
+	                {
+	                    "Label": "Employee"
+	                },
+	                {
+	                    "Label": "Other"
+	                }
+	            ],
+	            "Type": "radio",
+	            "ID": "Field1",
+	            "HasOtherField": false
+	        	}
+			]
+		},
+		{
+            "pageInformation" : "Acknowledgement",
+			"questions" : [
+				{
+		            "Title": "Have you informed this person that you're referring them to GK?",
 		            "Instructions": "",
 		            "IsRequired": "1",
 		            "ClassNames": "",
 		            "DefaultVal": "",
 		            "Page": "1",
-		            "Type": "fullname",
+		            "Choices": [
+		                {
+		                    "Label": "Yes"
+		                },
+		                {
+		                    "Label": "Not yet"
+		                }
+		            ],
+		            "Type": "radio",
+		            "ID": "Field34",
+		            "HasOtherField": false
+		        }
+			]
+		},
+		{
+            "pageInformation" : "Please tell us about the person in need",
+			"questions" : [
+				{
+		            "Title": "Name of person in need:",
+		            "Instructions": "",
+		            "IsRequired": "1",
+		            "ClassNames": "",
+		            "DefaultVal": "",
+		            "Page": "1",
+		            "Type": "text",
 		            "ID": "Field10"
 		        },
 		        {
-		            "Title": "Email:",
+		            "Title": "Email of person  in need:",
 		            "Instructions": "",
 		            "IsRequired": "0",
 		            "ClassNames": "",
@@ -39,7 +85,7 @@
 		            "ID": "Field11"
 		        },
 		        {
-		            "Title": "Phone Number:",
+		            "Title": "Phone Number of person  in need:",
 		            "Instructions": "",
 		            "IsRequired": "0",
 		            "ClassNames": "",
@@ -54,7 +100,7 @@
             "pageInformation" : "How can we get in touch?",
 			"questions" : [
 				{
-		            "Title": "Best method of contact for you:",
+		            "Title": "Best method of contact for person in need:",
 		            "Instructions": "",
 		            "IsRequired": "1",
 		            "ClassNames": "",
@@ -69,6 +115,9 @@
 		                },
 		                {
 		                    "Label": "Email"
+		                },
+		                {
+		                    "Label": "Contact the person submitting referral instead"
 		                }
 		            ],
 		            "Type": "radio",
@@ -78,10 +127,10 @@
 			]
 		},
 		{
-            "pageInformation" : "Where are you working?",
+            "pageInformation" : "Where is the person in need located?",
 			"questions" : [
 				{
-		            "Title": "Restauarant where you work:",
+		            "Title": "Restauarant where the person in need works:",
 		            "Instructions": "",
 		            "IsRequired": "1",
 		            "ClassNames": "",
@@ -91,7 +140,7 @@
 		            "ID": "Field6"
 		        },
 		        {
-		            "Title": "Your position:",
+		            "Title": "Position of worker",
 		            "Instructions": "",
 		            "IsRequired": "0",
 		            "ClassNames": "",
@@ -99,6 +148,41 @@
 		            "Page": "1",
 		            "Type": "text",
 		            "ID": "Field16"
+		        }
+			]
+		},
+		{
+            "pageInformation" : "Please tell us about the person submitting this referral.",
+			"questions" : [
+				{
+		            "Title": "Name of person submitting referral:",
+		            "Instructions": "",
+		            "IsRequired": "0",
+		            "ClassNames": "",
+		            "DefaultVal": "",
+		            "Page": "1",
+		            "Type": "text",
+		            "ID": "Field2"
+		        },
+		        {
+		            "Title": "Email of person submitting referral: ",
+		            "Instructions": "",
+		            "IsRequired": "0",
+		            "ClassNames": "",
+		            "DefaultVal": "",
+		            "Page": "1",
+		            "Type": "email",
+		            "ID": "Field8"
+		        },
+		        {
+		            "Title": "Phone Number of person submitting referral: ",
+		            "Instructions": "",
+		            "IsRequired": "0",
+		            "ClassNames": "",
+		            "DefaultVal": "",
+		            "Page": "1",
+		            "Type": "phone",
+		            "ID": "Field7"
 		        }
 			]
 		},
@@ -151,7 +235,7 @@
 			]
 		},
 		{
-            "pageInformation" : "Where are you roughly located?",
+            "pageInformation" : "Where is the person of need roughly located?",
 			"questions" : [
 				{
 		            "Title": "Zip code of person in need:",

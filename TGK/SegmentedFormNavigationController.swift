@@ -119,6 +119,10 @@ class SegmentedFormNavigationController: UINavigationController {
                 if let firstSegmentedForWithErrors = firstformPageWithErrors {
                     self.popToViewController(firstSegmentedForWithErrors, animated: true)
                 }
+                else {
+                    let alertController = UIAlertController(title: "Oh no!", message: "There is an error with this form. Please contact Giving Kitchen.", preferredStyle: .alert)
+                    self.present(alertController, animated: true)
+                }
             }
             else if let error = error {
                 //Catch any unexptected errors

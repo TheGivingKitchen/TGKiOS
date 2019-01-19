@@ -16,33 +16,6 @@ extension ServiceManager {
         return ["Authorization":"Basic \(wufooAPIKey.base64String)"]
     }
     
-    func getWufooForm(id:String, completion:@escaping ([FormQuestionModel]?, Error?)->Void) {
-        self.sessionManager.request(Router.getWufooForm(id).url, encoding: URLEncoding.default, headers: self.wufooAuthenticationHeaders).responseJSON { (response) in
-            
-            if let error = response.result.error {
-                completion(nil, error)
-                return
-            }
-            
-            guard let topLevelJsonDict = response.result.value as? [String:Any],
-                let jsonArray = topLevelJsonDict["Fields"] as? [[String:Any]] else {
-                    completion(nil, NSError(domain: "", code: 999, userInfo: [NSLocalizedDescriptionKey:"Parsing error"]))
-                    return
-            }
-            
-            let filteredArray = jsonArray.filter({ (dict) -> Bool in
-                //filtering out noise using a common question attribute. fragile
-                return dict["IsRequired"] != nil ? true : false
-            })
-            
-            var parsedModels = [FormQuestionModel]()
-            for jsonDict in filteredArray {
-                parsedModels.append(FormQuestionModel(jsonDict: jsonDict))
-            }
-            completion(parsedModels, nil)
-        }
-    }
-    
     func getFirebaseForm(id:String, completion: @escaping (SegmentedFormModel?, Error?) -> Void) {
         self.sessionManager.request(Router.getFirebaseForm(id).url, encoding: URLEncoding.default, headers:nil).responseJSON { (response) in
             if let error = response.result.error {
@@ -131,6 +104,33 @@ extension ServiceManager {
         else {
             print("Invalid filename/path.")
             completion(nil, nil)
+        }
+    }
+    
+    func getWufooForm(id:String, completion:@escaping ([FormQuestionModel]?, Error?)->Void) {
+        self.sessionManager.request(Router.getWufooForm(id).url, encoding: URLEncoding.default, headers: self.wufooAuthenticationHeaders).responseJSON { (response) in
+            
+            if let error = response.result.error {
+                completion(nil, error)
+                return
+            }
+            
+            guard let topLevelJsonDict = response.result.value as? [String:Any],
+                let jsonArray = topLevelJsonDict["Fields"] as? [[String:Any]] else {
+                    completion(nil, NSError(domain: "", code: 999, userInfo: [NSLocalizedDescriptionKey:"Parsing error"]))
+                    return
+            }
+            
+            let filteredArray = jsonArray.filter({ (dict) -> Bool in
+                //filtering out noise using a common question attribute. fragile
+                return dict["IsRequired"] != nil ? true : false
+            })
+            
+            var parsedModels = [FormQuestionModel]()
+            for jsonDict in filteredArray {
+                parsedModels.append(FormQuestionModel(jsonDict: jsonDict))
+            }
+            completion(parsedModels, nil)
         }
     }
 }

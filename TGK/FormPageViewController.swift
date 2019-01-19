@@ -229,6 +229,13 @@ extension FormPageViewController {
             listSelectCell.selectionType = .multiple
             listSelectCell.delegate = self
             return listSelectCell
+        case .fullName:
+            let textCell = Bundle.main.loadNibNamed("FormTextFieldTableViewCell", owner: self, options: [:])?.first as! FormTextFieldTableViewCell
+            textCell.inputType = .fullName
+            textCell.formQuestion = questionModel
+            textCell.delegate = self
+            self.formQuestionCells.append(textCell)
+            return textCell
         case .shortName:
             let shortNameCell = Bundle.main.loadNibNamed("FormShortNameTableViewCell", owner: self, options: [:])?.first as! FormShortNameTableViewCell
             self.formQuestionCells.append(shortNameCell)

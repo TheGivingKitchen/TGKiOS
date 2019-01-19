@@ -137,7 +137,7 @@ class DonateHomeViewController: UITableViewController {
             }
         }
         
-        ServiceManager.sharedInstace.getFirebaseForm(id: "safetyNetPartner") { (safetyNetFormModel, error) in
+        ServiceManager.sharedInstace.getFirebaseForm(id: "joinourforces") { (safetyNetFormModel, error) in
             if let unwrappedModel = safetyNetFormModel {
                 self.safetyNetParterFormModel = unwrappedModel
                 self.partnerButton.isEnabled = true

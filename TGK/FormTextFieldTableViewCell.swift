@@ -91,6 +91,7 @@ class FormTextFieldTableViewCell: UITableViewCell, FormItemView {
         self.textField.keyboardType = .default
         self.textField.autocapitalizationType = .sentences
         self.textField.placeholder = ""
+        self.textField.autocorrectionType = .default
     }
 }
 
@@ -107,6 +108,7 @@ extension FormTextFieldTableViewCell: UITextFieldDelegate {
             self.textField.textContentType = UITextContentType.emailAddress
             self.textField.keyboardType = .emailAddress
             self.textField.autocapitalizationType = .none
+            self.textField.autocorrectionType = .no
             self.textField.placeholder = "johnnyappleseed@gmail.com"
             break
         case .phoneNumber:
@@ -119,6 +121,7 @@ extension FormTextFieldTableViewCell: UITextFieldDelegate {
             self.textField.textContentType = UITextContentType.name
             self.textField.keyboardType = .asciiCapable
             self.textField.autocapitalizationType = .words
+            self.textField.autocorrectionType = .no
             self.textField.placeholder = "Johnny Appleseed"
             break
         case .jobTitle:
@@ -142,7 +145,8 @@ extension FormTextFieldTableViewCell: UITextFieldDelegate {
             self.textField.textContentType = UITextContentType.URL
             self.textField.keyboardType = .URL
             self.textField.autocapitalizationType = .none
-            self.textField.placeholder = "httpl://example.com"
+            self.textField.autocorrectionType = .no
+            self.textField.placeholder = "http://example.com"
             break
         }
     }
