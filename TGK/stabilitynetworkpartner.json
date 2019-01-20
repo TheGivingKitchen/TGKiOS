@@ -1,0 +1,158 @@
+{
+    "ID" : "z176lwo104hfvol",
+    "FormTitle":"Stability Network Partner",
+    "FormSubtitle":"Connecting restaurant workers to emergency assistance",
+    "FormMetadata":"Through partnerships with national, regional and local service organizations, as well as curated services specific to Giving Kitchen referrals, our SafetyNet program has connected thousands of people to housing, transportation, mental health, medical and child care assistance",
+    "FormShareString":"Join our forces. Partner with The Giving Kitchen!",
+	"Pages" : [
+		{
+            "pageInformation" : "Contact information",
+			"questions" : [
+				{
+		            "Title": "Contact Name",
+		            "Instructions": "",
+		            "IsRequired": "0",
+		            "ClassNames": "",
+		            "DefaultVal": "",
+		            "Page": "1",
+		            "SubFields": [
+		                {
+		                    "DefaultVal": "",
+		                    "ID": "Field1",
+		                    "Label": "First"
+		                },
+		                {
+		                    "DefaultVal": "",
+		                    "ID": "Field2",
+		                    "Label": "Last"
+		                }
+		            ],
+		            "Type": "shortname",
+		            "ID": "Field1"
+		        },
+		        {
+		            "Title": "Contact Phone Number",
+		            "Instructions": "",
+		            "IsRequired": "0",
+		            "ClassNames": "",
+		            "DefaultVal": "",
+		            "Page": "1",
+		            "Type": "phone",
+		            "ID": "Field14"
+		        },
+		        {
+		            "Title": "Contact Email",
+		            "Instructions": "",
+		            "IsRequired": "0",
+		            "ClassNames": "",
+		            "DefaultVal": "",
+		            "Page": "1",
+		            "Type": "email",
+		            "ID": "Field16"
+		        }
+			]
+		},
+		{
+            "pageInformation" : "Organization information",
+			"questions" : [
+				{
+		            "Title": "Name of Organization or Resource",
+		            "Instructions": "",
+		            "IsRequired": "0",
+		            "ClassNames": "",
+		            "DefaultVal": "",
+		            "Page": "1",
+		            "Type": "text",
+		            "ID": "Field6"
+		        },
+		        {
+		            "Title": "Website",
+		            "Instructions": "",
+		            "IsRequired": "0",
+		            "ClassNames": "",
+		            "DefaultVal": "",
+		            "Page": "1",
+		            "Type": "url",
+		            "ID": "Field19"
+		        }
+			]
+		},
+		{
+            "pageInformation" : "Organization information",
+			"questions" : [
+				{
+		            "Title": "Address of Organization",
+		            "Instructions": "",
+		            "IsRequired": "0",
+		            "ClassNames": "",
+		            "DefaultVal": "",
+		            "Page": "1",
+		            "SubFields": [
+		                {
+		                    "DefaultVal": "",
+		                    "ID": "Field8",
+		                    "Label": "Street Address"
+		                },
+		                {
+		                    "DefaultVal": "",
+		                    "ID": "Field9",
+		                    "Label": "Address Line 2"
+		                },
+		                {
+		                    "DefaultVal": "",
+		                    "ID": "Field10",
+		                    "Label": "City"
+		                },
+		                {
+		                    "DefaultVal": "",
+		                    "ID": "Field11",
+		                    "Label": "State / Province / Region"
+		                },
+		                {
+		                    "DefaultVal": "",
+		                    "ID": "Field12",
+		                    "Label": "Postal / Zip Code"
+		                },
+		                {
+		                    "DefaultVal": "",
+		                    "ID": "Field13",
+		                    "Label": "Country"
+		                }
+		            ],
+		            "Type": "address",
+		            "ID": "Field8"
+		        }
+			]
+		},
+		{
+            "pageInformation" : "What do you do?",
+			"questions" : [
+				{
+		            "Title": "Please describe the resource you provide and how it would benefit restaurant workers",
+		            "Instructions": "",
+		            "IsRequired": "0",
+		            "ClassNames": "",
+		            "DefaultVal": "",
+		            "Page": "1",
+		            "Type": "textarea",
+		            "ID": "Field17"
+		        }
+			]
+		},
+		{
+            "pageInformation" : "How are applicants referred to you?",
+			"questions" : [
+				{
+		            "Title": "Please describe your referral system for how to connect an applicant to your services",
+		            "Instructions": "",
+		            "IsRequired": "0",
+		            "ClassNames": "",
+		            "DefaultVal": "",
+		            "Page": "1",
+		            "Type": "textarea",
+		            "ID": "Field21"
+		        }
+			]
+		}
+	]
+}

@@ -13,6 +13,7 @@
 		4E0D101421F3A71F003EE14C /* assistanceInquiryReferral.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E0D101021F3A71F003EE14C /* assistanceInquiryReferral.json */; };
 		4E0D101521F3A71F003EE14C /* assistanceInquirySelf.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E0D101121F3A71F003EE14C /* assistanceInquirySelf.json */; };
 		4E0D101621F3A71F003EE14C /* joinourforces.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E0D101221F3A71F003EE14C /* joinourforces.json */; };
+		4E0D101821F4F864003EE14C /* stabilitynetworkpartner.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E0D101721F4F864003EE14C /* stabilitynetworkpartner.json */; };
 		4E0E0C852161705C0082240E /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0E0C842161705C0082240E /* OnboardingViewController.swift */; };
 		4E0E0C88216171F80082240E /* OnboardingContentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0E0C87216171F80082240E /* OnboardingContentModel.swift */; };
 		4E0E0C8A2161745F0082240E /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0E0C892161745F0082240E /* OnboardingCollectionViewCell.swift */; };
@@ -124,6 +125,7 @@
 		4E0D101021F3A71F003EE14C /* assistanceInquiryReferral.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = assistanceInquiryReferral.json; sourceTree = "<group>"; };
 		4E0D101121F3A71F003EE14C /* assistanceInquirySelf.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = assistanceInquirySelf.json; sourceTree = "<group>"; };
 		4E0D101221F3A71F003EE14C /* joinourforces.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = joinourforces.json; sourceTree = "<group>"; };
+		4E0D101721F4F864003EE14C /* stabilitynetworkpartner.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stabilitynetworkpartner.json; sourceTree = "<group>"; };
 		4E0E0C842161705C0082240E /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		4E0E0C87216171F80082240E /* OnboardingContentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContentModel.swift; sourceTree = "<group>"; };
 		4E0E0C892161745F0082240E /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -270,6 +272,7 @@
 		4E0D100621F384F6003EE14C /* FormJson */ = {
 			isa = PBXGroup;
 			children = (
+				4E0D101721F4F864003EE14C /* stabilitynetworkpartner.json */,
 				4E0D101021F3A71F003EE14C /* assistanceInquiryReferral.json */,
 				4E0D101121F3A71F003EE14C /* assistanceInquirySelf.json */,
 				4E0D101221F3A71F003EE14C /* joinourforces.json */,
@@ -626,7 +629,6 @@
 			isa = PBXGroup;
 			children = (
 				C0965F472114C583005EAB0C /* Utilities.storyboard */,
-				C0965F4A2114C8BF005EAB0C /* DonationSuccessViewController.swift */,
 				4EDC78EC21D15BD2004AFCBB /* WebKitViewController.swift */,
 			);
 			name = "View Controllers";
@@ -636,6 +638,7 @@
 			isa = PBXGroup;
 			children = (
 				4E09B7E32117697500584924 /* Donate.storyboard */,
+				C0965F4A2114C8BF005EAB0C /* DonationSuccessViewController.swift */,
 			);
 			name = Donate;
 			sourceTree = "<group>";
@@ -755,6 +758,7 @@
 				4E09B7E42117697500584924 /* Donate.storyboard in Resources */,
 				4E8354A420CC597A009DF8CE /* multiplyJoyInquiryTest.json in Resources */,
 				4ED3884D209D030600A8BEE2 /* FormPickerTableViewCell.xib in Resources */,
+				4E0D101821F4F864003EE14C /* stabilitynetworkpartner.json in Resources */,
 				4E89100D209F779E0034A83B /* assistanceInquiryTest.json in Resources */,
 				4ED38840209D030600A8BEE2 /* FormTextFieldTableViewCell.xib in Resources */,
 				4E7C2E2B20B1D8AF00A20303 /* RobotoMono-MediumItalic.ttf in Resources */,

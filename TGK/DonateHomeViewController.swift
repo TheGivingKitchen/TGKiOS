@@ -37,8 +37,11 @@ class DonateHomeViewController: UITableViewController {
     @IBOutlet weak var volunteerBottomDividerView: UIView!
     
     @IBOutlet weak var partnerHeaderLabel: UILabel!
-    @IBOutlet weak var partnerDescriptionLabel: UILabel!
-    @IBOutlet weak var partnerButton: UIButton!
+    @IBOutlet weak var stabilityPartnerLabel: UILabel!
+    @IBOutlet weak var partnerDividerView: UIView!
+    @IBOutlet weak var stabilityPartnerButton: UIButton!
+    @IBOutlet weak var eventPartnerDescriptionLabel: UILabel!
+    @IBOutlet weak var eventPartnerButton: UIButton!
     @IBOutlet weak var partnerImageView: UIImageView!
     
     var amountAndDescriptions:[(amount:String, description:String, iconName:String)] = [("$25", "Funds a late fee", "donateIconLateBill"),
@@ -50,7 +53,8 @@ class DonateHomeViewController: UITableViewController {
                                                    ("$5", "Every bit helps!", "donateIconAnyBill")]
     var currentAmountAndDescriptionIndex:Int = 1
     var volunteerFormModel:SegmentedFormModel?
-    var safetyNetParterFormModel:SegmentedFormModel?
+    var eventPartnerFormModel:SegmentedFormModel?
+    var stabilityPartnerFormModel:SegmentedFormModel?
     var timer = Timer()
     
     override func viewDidLoad() {
@@ -115,12 +119,19 @@ class DonateHomeViewController: UITableViewController {
         
         self.partnerHeaderLabel.font = UIFont.tgkBody
         self.partnerHeaderLabel.textColor = UIColor.tgkGray
+        self.partnerDividerView.backgroundColor = UIColor.tgkBackgroundGray
         
-        self.partnerDescriptionLabel.font = UIFont.tgkBody
-        self.partnerDescriptionLabel.textColor = UIColor.tgkDarkDarkGray
+        self.stabilityPartnerLabel.font = UIFont.tgkBody
+        self.stabilityPartnerLabel.textColor = UIColor.tgkDarkDarkGray
         
-        self.partnerButton.backgroundColor = UIColor.tgkOrange
-        self.partnerButton.titleLabel?.font = UIFont.tgkNavigation
+        self.stabilityPartnerButton.backgroundColor = UIColor.tgkOrange
+        self.stabilityPartnerButton.titleLabel?.font = UIFont.tgkNavigation
+        
+        self.eventPartnerDescriptionLabel.font = UIFont.tgkBody
+        self.eventPartnerDescriptionLabel.textColor = UIColor.tgkDarkDarkGray
+        
+        self.eventPartnerButton.backgroundColor = UIColor.tgkOrange
+        self.eventPartnerButton.titleLabel?.font = UIFont.tgkNavigation
     }
     
     func startTimer() {
@@ -137,10 +148,17 @@ class DonateHomeViewController: UITableViewController {
             }
         }
         
-        ServiceManager.sharedInstace.getFirebaseForm(id: "joinourforces") { (safetyNetFormModel, error) in
-            if let unwrappedModel = safetyNetFormModel {
-                self.safetyNetParterFormModel = unwrappedModel
-                self.partnerButton.isEnabled = true
+        ServiceManager.sharedInstace.getFirebaseForm(id: "joinourforces") { (eventPartnerFormModel, error) in
+            if let unwrappedModel = eventPartnerFormModel {
+                self.eventPartnerFormModel = unwrappedModel
+                self.eventPartnerButton.isEnabled = true
+            }
+        }
+        
+        ServiceManager.sharedInstace.getFirebaseForm(id: "stabilitynetworkpartner") { (stabilityPartnerFormModel, error) in
+            if let unwrappedModel = stabilityPartnerFormModel {
+                self.stabilityPartnerFormModel = unwrappedModel
+                self.stabilityPartnerButton.isEnabled = true
             }
         }
     }
@@ -239,8 +257,19 @@ class DonateHomeViewController: UITableViewController {
         self.present(segmentedNav, animated: true)
     }
     
-    @IBAction func safetyNetPartnerPressed(_ sender: Any) {
-        guard let formModel = self.safetyNetParterFormModel else {
+    @IBAction func stabilityPartnerPressed(_ sender: Any) {
+        guard let formModel = self.stabilityPartnerFormModel else {
+            return
+        }
+        
+        let segmentedNav = UIStoryboard(name: "Forms", bundle: nil).instantiateViewController(withIdentifier: "SegmentedFormNavigationControllerId") as! SegmentedFormNavigationController
+        segmentedNav.segmentedFormModel = formModel
+        segmentedNav.formDelegate = self
+        self.present(segmentedNav, animated: true)
+    }
+    
+    @IBAction func eventPartnerPressed(_ sender: Any) {
+        guard let formModel = self.eventPartnerFormModel else {
             return
         }
         
