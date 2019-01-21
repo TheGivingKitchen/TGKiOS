@@ -222,10 +222,7 @@ class DonateHomeViewController: UITableViewController {
         }
         
         UIApplication.shared.open(externalDonationFormUrl, options: [:]) { (success) in
-            DispatchQueue.main.async {
-                let donationSuccessVC = DonationSuccessViewController.donationSuccessViewController(withDelegate: self)
-                self.present(donationSuccessVC, animated: true)
-            }
+            self.presentMonetaryDonationSuccessScreen()
         }
         
         Analytics.logEvent(customName: .donateOneTimeDonationStarted)
@@ -237,13 +234,23 @@ class DonateHomeViewController: UITableViewController {
         }
         
         UIApplication.shared.open(externalDonationFormUrl, options: [:]) { (success) in
-            DispatchQueue.main.async {
-                let donationSuccessVC = DonationSuccessViewController.donationSuccessViewController(withDelegate: self)
-                self.present(donationSuccessVC, animated: true)
-            }
+            self.presentMonetaryDonationSuccessScreen()
         }
         
         Analytics.logEvent(customName: .donateRecurringDonationStarted)
+    }
+    
+    private func presentMonetaryDonationSuccessScreen() {
+        DispatchQueue.main.async {
+            let donationSuccessVC = DonationSuccessViewController.donationSuccessViewController(withDelegate: self)
+            donationSuccessVC.titleLabelText = "welcome to the fight!"
+            donationSuccessVC.messageLabelText = "Thank you for your donation. In supporting GK's mission, you share in our commitment to provide emergency assistance to restaurant workers, often locked in the fight of their lives, who serve their community every day."
+            donationSuccessVC.shareText = "I support The Giving Kitchen and helping food service workers in need"
+            donationSuccessVC.bottomLabelText = "Your donation is 100 percent tax deductible and truly makes a difference."
+            donationSuccessVC.shareUrlString = "https://thegivingkitchen.org/"
+            donationSuccessVC.shareImage = UIImage(named: "tgkShareIcon")
+            self.present(donationSuccessVC, animated: true)
+        }
     }
     
     @IBAction func volunteerPressed(_ sender: Any) {
@@ -287,16 +294,50 @@ extension DonateHomeViewController {
     }
 }
 
-extension DonateHomeViewController:DonationSuccessViewControllerDelegate {
-    func donationSuccessViewControllerDonePressed(viewController: DonationSuccessViewController) {
-        viewController.dismiss(animated: true)
-    }
-}
-
 //MARK: Segmented Form Delegate
 extension DonateHomeViewController:SegmentedFormNavigationControllerDelegate {
     func segmentedFormNavigationControllerDidFinish(viewController: SegmentedFormNavigationController) {
         viewController.dismiss(animated: true) {
+            guard let volunteerModel = self.volunteerFormModel,
+                let eventPartnerModel = self.eventPartnerFormModel,
+                let stabilityPartnerModel = self.stabilityPartnerFormModel else {
+                    return
+            }
+            
+            if viewController.segmentedFormModel.id == volunteerModel.id {
+                let successConfirmationVC = DonationSuccessViewController.donationSuccessViewController(withDelegate: self)
+                successConfirmationVC.titleLabelText = "welcome to the fight!"
+                successConfirmationVC.messageLabelText = "Thank you for signing up to be a GK volunteer! You'll be added to our volunteer newsletter to hear about opportunities each month and on an as-needed basis. From there, you can simply head over to our volunteer calendar and sign up for as many or as few opportunities as your heart desires."
+                successConfirmationVC.shareText = "I signed up to be a GK Volunteer!"
+                successConfirmationVC.shareUrlString = "https://thegivingkitchen.org/volunteer"
+                successConfirmationVC.shareImage = UIImage(named: "tgkShareIcon")
+                self.present(successConfirmationVC, animated: true)
+            }
+            else if viewController.segmentedFormModel.id == eventPartnerModel.id {
+                let successConfirmationVC = DonationSuccessViewController.donationSuccessViewController(withDelegate: self)
+                successConfirmationVC.titleLabelText = "thank you!"
+                successConfirmationVC.messageLabelText = "Thank you for your interest in partnering with GK for an event. A member of our staff will reach out to you shortly with more details on how we can best work together."
+                successConfirmationVC.shareText = "Support Giving Kitchen by hosting an event!"
+                successConfirmationVC.shareUrlString = "https://thegivingkitchen.wufoo.com/forms/join-our-forces/"
+                successConfirmationVC.shareImage = UIImage(named: "tgkShareIcon")
+                self.present(successConfirmationVC, animated: true)
+            }
+            else if viewController.segmentedFormModel.id == stabilityPartnerModel.id {
+                let successConfirmationVC = DonationSuccessViewController.donationSuccessViewController(withDelegate: self)
+                successConfirmationVC.titleLabelText = "thank you!"
+                successConfirmationVC.messageLabelText = "Thank you for your service and interest in becoming a Giving Kitchen Stability Network partner. A member of our staff will reach out to you shortly with more details on how we can best work together."
+                successConfirmationVC.shareText = "Become a Giving Kitchen Stability Network Partner!"
+                successConfirmationVC.shareUrlString = "https://thegivingkitchen.wufoo.com/forms/z176lwo104hfvol/"
+                successConfirmationVC.shareImage = UIImage(named: "tgkShareIcon")
+                self.present(successConfirmationVC, animated: true)
+            }
+            
         }
+    }
+}
+
+extension DonateHomeViewController:DonationSuccessViewControllerDelegate {
+    func donationSuccessViewControllerDonePressed(viewController: DonationSuccessViewController) {
+        viewController.dismiss(animated: true)
     }
 }

@@ -19,10 +19,43 @@ class DonationSuccessViewController: UIViewController {
     @IBOutlet weak var doneButton: UIButton!
     @IBOutlet weak var taxInfoLabel: UILabel!
     
+    //Customization and dependencies
     weak var delegate:DonationSuccessViewControllerDelegate?
+    var titleLabelText:String? {
+        didSet {
+            guard self.isViewLoaded else {return}
+            self.configureView()
+        }
+    }
+    var messageLabelText:String? {
+        didSet {
+            guard self.isViewLoaded else {return}
+            self.configureView()
+        }
+    }
+    var bottomLabelText:String? {
+        didSet {
+            guard self.isViewLoaded else {return}
+            self.configureView()
+        }
+    }
+    var shareText:String?
+    var shareUrlString:String?
+    var shareImage:UIImage?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.styleView()
+        self.configureView()
+    }
+    
+    private func configureView() {
+        self.welcomeLabel.text = titleLabelText
+        self.messageLabel.text = messageLabelText
+        self.taxInfoLabel.text = bottomLabelText
+    }
+    
+    private func styleView() {
         self.welcomeLabel.font = UIFont.tgkTitle
         self.welcomeLabel.textColor = UIColor.tgkOrange
         
@@ -40,7 +73,11 @@ class DonationSuccessViewController: UIViewController {
     }
     
     @IBAction func sharePressed(_ sender: Any) {
-        ExternalShareManager.sharedInstance.presentShareControllerFromViewController(fromController: self, title: "I support The Giving Kitchen and helping restaurants workers in need", urlString: "https://thegivingkitchen.org/", image: UIImage(named: "tgkShareIcon"))
+        guard let text = self.shareText,
+            let urlString = self.shareUrlString else {
+                return
+        }
+        ExternalShareManager.sharedInstance.presentShareControllerFromViewController(fromController: self, title: text, urlString: urlString, image: self.shareImage)
     }
     
     @IBAction func doneButtonPressed(_ sender: Any) {

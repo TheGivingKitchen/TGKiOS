@@ -182,5 +182,19 @@ extension EventsHomeViewController:SegmentedFormNavigationControllerDelegate {
         viewController.dismiss(animated: true)
         AppDataStore.hasClosedEventHomeVolunteerButton = true
         self.configureVolunteerView(animated: true)
+        
+        let donationSuccessVC = DonationSuccessViewController.donationSuccessViewController(withDelegate: self)
+        donationSuccessVC.titleLabelText = "welcome to the fight!"
+        donationSuccessVC.messageLabelText = "Thank you for signing up to be a GK volunteer! You'll be added to our volunteer newsletter to hear about opportunities each month and on an as-needed basis. From there, you can simply head over to our volunteer calendar and sign up for as many or as few opportunities as your heart desires."
+        donationSuccessVC.shareText = "I signed up to be a GK Volunteer!"
+        donationSuccessVC.shareUrlString = "https://thegivingkitchen.org/volunteer"
+        donationSuccessVC.shareImage = UIImage(named: "tgkShareIcon")
+        self.present(donationSuccessVC, animated: true)
+    }
+}
+
+extension EventsHomeViewController:DonationSuccessViewControllerDelegate {
+    func donationSuccessViewControllerDonePressed(viewController: DonationSuccessViewController) {
+        viewController.dismiss(animated: true)
     }
 }
