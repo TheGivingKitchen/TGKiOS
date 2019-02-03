@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import GooglePlaces
+import MapKit
 import Firebase
 
 class SafetyNetHomeViewController: UIViewController {
@@ -419,32 +419,29 @@ extension SafetyNetHomeViewController:CLLocationManagerDelegate {
         
         self.userLocationCounty = nil
         
-        let placesClient = GMSPlacesClient.shared()
-        placesClient.currentPlace { (placeLikelihoodList, error) in
-            if let error = error {
-                print(error)
-                return
-            }
-            
-            if let placeLikelihoodList = placeLikelihoodList,
-                let place = placeLikelihoodList.likelihoods.first?.place,
-                let addressComponenets = place.addressComponents {
-                for component in addressComponenets {
-                    if component.type == "administrative_area_level_2" {
-                        self.userLocationCounty = component.name
-                        let sanitizedCountyString = component.name.lowercased().replacingOccurrences(of: "county", with: "").trimmingCharacters(in: .whitespaces)
-                        
-                        self.currentUserCounty = sanitizedCountyString
-                        
-                        self.searchController.searchBar.text = ""
-                        self.isLocationBasedSearching = true
-                        self.updateSearchResults(for: self.searchController)
-                        self.scrollToTop()
-                        self.tableView.reloadData()
-                    }
+        let locationManager = CLLocationManager()
+        let geoCoder = CLGeocoder()
+        
+        if let location = locationManager.location {
+            geoCoder.reverseGeocodeLocation(location) { (placemarks, error) in
+                if let placemarks = placemarks,
+                    let place = placemarks.first,
+                    let county = place.subAdministrativeArea {
+                    self.userLocationCounty = county
+                    let sanitizedCountyString = county.lowercased().replacingOccurrences(of: "county", with: "").trimmingCharacters(in: .whitespaces)
+                    
+                    self.currentUserCounty = sanitizedCountyString
+                    
+                    self.searchController.searchBar.text = ""
+                    self.isLocationBasedSearching = true
+                    self.updateSearchResults(for: self.searchController)
+                    self.scrollToTop()
+                    self.tableView.reloadData()
                 }
             }
         }
+        
+        
     }
     
     func showLocationServicesDeniedAlert() {

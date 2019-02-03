@@ -11,9 +11,8 @@ import Firebase
 import FirebaseDatabase
 import Alamofire
 import FirebaseAuth
-import GooglePlaces
 
-class TestHomeViewController: UIViewController, CLLocationManagerDelegate, UISearchBarDelegate {
+class TestHomeViewController: UIViewController, UISearchBarDelegate {
     
     @IBOutlet weak var headerHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var cancelButton: UIButton!
