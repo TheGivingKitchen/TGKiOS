@@ -181,7 +181,7 @@
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999998807907104" translatesAutoresizingMaskIntoConstraints="NO" id="r4l-u2-h0g">
                                 <rect key="frame" x="57.5" y="223.5" width="260" height="101.5"/>
-                                <string key="text">We're fan of you too! If you wouldn't mind leaving a rating for us, it would help us reach more restaurant workers in need across Georgia.</string>
+                                <string key="text">We're fan of you too! If you wouldn't mind leaving a rating for us, it would help us reach more food service workers in need across Georgia.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>

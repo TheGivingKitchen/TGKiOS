@@ -244,7 +244,7 @@ class DonateHomeViewController: UITableViewController {
         DispatchQueue.main.async {
             let donationSuccessVC = DonationSuccessViewController.donationSuccessViewController(withDelegate: self)
             donationSuccessVC.titleLabelText = "welcome to the fight!"
-            donationSuccessVC.messageLabelText = "Thank you for your donation. In supporting GK's mission, you share in our commitment to provide emergency assistance to restaurant workers, often locked in the fight of their lives, who serve their community every day."
+            donationSuccessVC.messageLabelText = "Thank you for your donation. In supporting GK's mission, you share in our commitment to provide emergency assistance to food service workers, often locked in the fight of their lives, who serve their community every day."
             donationSuccessVC.shareText = "I support The Giving Kitchen and helping food service workers in need"
             donationSuccessVC.bottomLabelText = "Your donation is 100 percent tax deductible and truly makes a difference."
             donationSuccessVC.shareUrlString = "https://thegivingkitchen.org/"

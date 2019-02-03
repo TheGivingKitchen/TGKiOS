@@ -139,21 +139,22 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="250" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hlc-ft-XxK">
-                                <rect key="frame" x="20" y="147" width="335" height="61"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="250" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Hlc-ft-XxK">
+                                <rect key="frame" x="20" y="147" width="335" height="180.5"/>
                                 <attributedString key="attributedText">
                                     <fragment>
                                         <string key="content">Crisis Grants
 GK can fund the cost of living expenses for food service workers who miss work due to an illness, injury, house fire or flood, or death of an immediate family member.</string>
                                         <attributes>
-                                            <font key="NSFont" size="13" name="HelveticaNeue"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" size="24" name="Kulturista"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start here to request assistance from GK:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iqU-2Y-j7z">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start here to request assistance" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iqU-2Y-j7z">
                                 <rect key="frame" x="8" y="441.5" width="359" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -176,7 +177,7 @@ GK can fund the cost of living expenses for food service workers who miss work d
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="200" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z1b-Yc-9Dd">
-                                <rect key="frame" x="148.5" y="228" width="78" height="30"/>
+                                <rect key="frame" x="148.5" y="347.5" width="78" height="30"/>
                                 <state key="normal" title="Learn more"/>
                                 <connections>
                                     <action selector="learnMorePressed:" destination="a7e-3s-qQ7" eventType="touchUpInside" id="ifG-es-ebi"/>
@@ -240,15 +241,22 @@ GK can fund the cost of living expenses for food service workers who miss work d
                                         <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="249" verticalCompressionResistancePriority="1000" image="eventHomeTopIcon" translatesAutoresizingMaskIntoConstraints="NO" id="VD9-Tn-tAf">
                                             <rect key="frame" x="169" y="40" width="37" height="39"/>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZYo-Rq-2Bv">
-                                            <rect key="frame" x="16" y="119" width="343" height="81.5"/>
-                                            <string key="text">Giving Kitchen's signature and third-party events are rooted in great food, drink, service - and care for those who serve us every day.</string>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZYo-Rq-2Bv">
+                                            <rect key="frame" x="16" y="119" width="343" height="120"/>
+                                            <attributedString key="attributedText">
+                                                <fragment>
+                                                    <string key="content">Giving Kitchen's signature and third-party events are rooted in great food, drink, service - and care for those who serve us every day.</string>
+                                                    <attributes>
+                                                        <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                        <font key="NSFont" size="24" name="Kulturista"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" minimumLineHeight="24" maximumLineHeight="24" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L9p-Rn-6M2">
-                                            <rect key="frame" x="148.5" y="216.5" width="78" height="30"/>
+                                            <rect key="frame" x="148.5" y="255" width="78" height="15"/>
                                             <state key="normal" title="Learn more"/>
                                             <connections>
                                                 <action selector="learnMorePressed:" destination="rZT-zD-RsE" eventType="touchUpInside" id="uVx-gp-TUg"/>
@@ -344,15 +352,16 @@ GK can fund the cost of living expenses for food service workers who miss work d
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EJc-ej-rDV">
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rR5-6l-jps">
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" horizontalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rR5-6l-jps">
                                         <rect key="frame" x="344" y="11" width="19" height="22"/>
                                         <state key="normal" image="iconCloseXOpenCircle"/>
                                         <connections>
                                             <action selector="volunteerCloseButton:" destination="rZT-zD-RsE" eventType="touchUpInside" id="MsW-yG-qhk"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1n5-VZ-J9Q">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="1n5-VZ-J9Q">
                                         <rect key="frame" x="12" y="7" width="316" height="30"/>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Give back! Volunteer at an event!">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -410,18 +419,18 @@ GK can fund the cost of living expenses for food service workers who miss work d
                         <sections>
                             <tableViewSection id="B3h-33-blT">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="532" id="Mib-lE-Bvj">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="532"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="581" id="Mib-lE-Bvj">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="581"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Mib-lE-Bvj" id="39u-E8-HSv">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="532"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="581"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="donateHomeTopIcon" translatesAutoresizingMaskIntoConstraints="NO" id="npw-v7-TQ7">
                                                     <rect key="frame" x="168.5" y="40" width="38" height="37"/>
                                                 </imageView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wY0-Fm-pUJ">
-                                                    <rect key="frame" x="0.0" y="248" width="375" height="150"/>
+                                                    <rect key="frame" x="0.0" y="271" width="375" height="150"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="60C-oM-vTJ">
                                                             <rect key="frame" x="0.0" y="0.0" width="94" height="150"/>
@@ -478,37 +487,51 @@ GK can fund the cost of living expenses for food service workers who miss work d
                                                         <constraint firstItem="60C-oM-vTJ" firstAttribute="width" secondItem="wY0-Fm-pUJ" secondAttribute="width" multiplier="25:100" id="wXg-fx-lAs"/>
                                                     </constraints>
                                                 </view>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x1q-9B-cz7">
-                                                    <rect key="frame" x="20" y="117" width="335" height="61"/>
-                                                    <string key="text">Donate, Volunteer, or Partner:
-Three Ways to Get Involved &amp; Make a Difference.</string>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x1q-9B-cz7">
+                                                    <rect key="frame" x="20" y="117" width="335" height="84"/>
+                                                    <attributedString key="attributedText">
+                                                        <fragment>
+                                                            <string key="content">Donate, Volunteer, or Partner:
+</string>
+                                                            <attributes>
+                                                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                                <font key="NSFont" size="24" name="Kulturista"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="Three Ways to Get Involved &amp; Make a Difference.">
+                                                            <attributes>
+                                                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                                <font key="NSFont" size="24" name="Kulturista"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" minimumLineHeight="24" maximumLineHeight="24" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aoi-Wl-yiq">
-                                                    <rect key="frame" x="148.5" y="198" width="78" height="30"/>
+                                                    <rect key="frame" x="148.5" y="221" width="78" height="30"/>
                                                     <state key="normal" title="Learn more"/>
                                                     <connections>
                                                         <action selector="learnMorePressed:" destination="xAW-Db-Mx5" eventType="touchUpInside" id="rTl-5o-vnP"/>
                                                     </connections>
                                                 </button>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jez-M5-DDe">
-                                                    <rect key="frame" x="0.0" y="398" width="375" height="8"/>
+                                                    <rect key="frame" x="0.0" y="421" width="375" height="8"/>
                                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="8" id="rfO-Hp-qPe"/>
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B5W-os-NSz">
-                                                    <rect key="frame" x="0.0" y="523" width="375" height="7"/>
+                                                    <rect key="frame" x="0.0" y="546" width="375" height="7"/>
                                                     <color key="backgroundColor" red="0.0" green="1" blue="0.030457442939999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="7" id="efm-5q-AON"/>
                                                     </constraints>
                                                 </view>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dXY-68-AYz">
-                                                    <rect key="frame" x="20" y="414" width="335" height="50"/>
+                                                    <rect key="frame" x="20" y="437" width="335" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="QsP-uI-w6R"/>
                                                     </constraints>
@@ -518,7 +541,7 @@ Three Ways to Get Involved &amp; Make a Difference.</string>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Et-kF-fp3">
-                                                    <rect key="frame" x="20" y="465" width="335" height="50"/>
+                                                    <rect key="frame" x="20" y="488" width="335" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="Nmx-AM-Wze"/>
                                                     </constraints>
@@ -528,7 +551,7 @@ Three Ways to Get Involved &amp; Make a Difference.</string>
                                                     </connections>
                                                 </button>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jdF-eG-ymE">
-                                                    <rect key="frame" x="20" y="464" width="355" height="1"/>
+                                                    <rect key="frame" x="20" y="487" width="355" height="1"/>
                                                     <color key="backgroundColor" red="0.0" green="1" blue="0.030457442939999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="1" id="mvB-xe-liq"/>
@@ -565,28 +588,28 @@ Three Ways to Get Involved &amp; Make a Difference.</string>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="440" id="hQC-Nm-lod">
-                                        <rect key="frame" x="0.0" y="532" width="375" height="440"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="458" id="hQC-Nm-lod">
+                                        <rect key="frame" x="0.0" y="581" width="375" height="458"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hQC-Nm-lod" id="PW1-nN-RHQ">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="440"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="458"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Volunteer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JYW-Dp-OQV">
-                                                    <rect key="frame" x="16" y="16" width="335" height="20.5"/>
+                                                    <rect key="frame" x="16" y="20" width="335" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aJl-qf-Fu4">
-                                                    <rect key="frame" x="16" y="52.5" width="335" height="81.5"/>
+                                                    <rect key="frame" x="16" y="60.5" width="335" height="81.5"/>
                                                     <string key="text">From educating the public about our program services to helping out at events, GK would not exist without the dedication of our volunteers! Join our team:</string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JT5-HK-hh6">
-                                                    <rect key="frame" x="16" y="150" width="335" height="50"/>
+                                                    <rect key="frame" x="16" y="162" width="335" height="50"/>
                                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="kiP-7P-LP6"/>
@@ -599,13 +622,13 @@ Three Ways to Get Involved &amp; Make a Difference.</string>
                                                     </connections>
                                                 </button>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="donateVolunteerHero" translatesAutoresizingMaskIntoConstraints="NO" id="oYO-eK-DXJ">
-                                                    <rect key="frame" x="16" y="216" width="335" height="188"/>
+                                                    <rect key="frame" x="16" y="232" width="335" height="188"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="oYO-eK-DXJ" secondAttribute="height" multiplier="335:188" id="0Kp-iQ-blu"/>
                                                     </constraints>
                                                 </imageView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4v4-BU-z5B">
-                                                    <rect key="frame" x="0.0" y="420" width="375" height="7"/>
+                                                    <rect key="frame" x="0.0" y="440" width="375" height="7"/>
                                                     <color key="backgroundColor" red="0.0" green="1" blue="0.030457442939999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="7" id="cCK-nw-TXa"/>
@@ -613,17 +636,17 @@ Three Ways to Get Involved &amp; Make a Difference.</string>
                                                 </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="oYO-eK-DXJ" firstAttribute="top" secondItem="JT5-HK-hh6" secondAttribute="bottom" constant="16" id="0IS-yE-hq0"/>
+                                                <constraint firstItem="oYO-eK-DXJ" firstAttribute="top" secondItem="JT5-HK-hh6" secondAttribute="bottom" constant="20" id="0IS-yE-hq0"/>
                                                 <constraint firstItem="4v4-BU-z5B" firstAttribute="leading" secondItem="PW1-nN-RHQ" secondAttribute="leading" id="3YD-3Q-EkY"/>
                                                 <constraint firstAttribute="trailing" secondItem="aJl-qf-Fu4" secondAttribute="trailing" constant="24" id="CDi-nR-rxL"/>
                                                 <constraint firstItem="aJl-qf-Fu4" firstAttribute="leading" secondItem="PW1-nN-RHQ" secondAttribute="leading" constant="16" id="GFg-vW-50g"/>
-                                                <constraint firstItem="JYW-Dp-OQV" firstAttribute="top" secondItem="PW1-nN-RHQ" secondAttribute="top" constant="16" id="HCS-wq-VKa"/>
+                                                <constraint firstItem="JYW-Dp-OQV" firstAttribute="top" secondItem="PW1-nN-RHQ" secondAttribute="top" constant="20" id="HCS-wq-VKa"/>
                                                 <constraint firstItem="oYO-eK-DXJ" firstAttribute="leading" secondItem="JT5-HK-hh6" secondAttribute="leading" id="Kcv-Sg-gS9"/>
                                                 <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="4v4-BU-z5B" secondAttribute="bottom" id="Kry-JU-gph"/>
-                                                <constraint firstItem="JT5-HK-hh6" firstAttribute="top" secondItem="aJl-qf-Fu4" secondAttribute="bottom" constant="16" id="MXf-BS-QQR"/>
+                                                <constraint firstItem="JT5-HK-hh6" firstAttribute="top" secondItem="aJl-qf-Fu4" secondAttribute="bottom" constant="20" id="MXf-BS-QQR"/>
                                                 <constraint firstAttribute="trailing" secondItem="JYW-Dp-OQV" secondAttribute="trailing" constant="24" id="R5e-Sf-0BW"/>
-                                                <constraint firstItem="4v4-BU-z5B" firstAttribute="top" secondItem="oYO-eK-DXJ" secondAttribute="bottom" constant="16" id="XqP-a9-Jfv"/>
-                                                <constraint firstItem="aJl-qf-Fu4" firstAttribute="top" secondItem="JYW-Dp-OQV" secondAttribute="bottom" constant="16" id="fjM-5U-wei"/>
+                                                <constraint firstItem="4v4-BU-z5B" firstAttribute="top" secondItem="oYO-eK-DXJ" secondAttribute="bottom" constant="20" id="XqP-a9-Jfv"/>
+                                                <constraint firstItem="aJl-qf-Fu4" firstAttribute="top" secondItem="JYW-Dp-OQV" secondAttribute="bottom" constant="20" id="fjM-5U-wei"/>
                                                 <constraint firstAttribute="trailing" secondItem="4v4-BU-z5B" secondAttribute="trailing" id="l75-C0-urL"/>
                                                 <constraint firstItem="JYW-Dp-OQV" firstAttribute="leading" secondItem="PW1-nN-RHQ" secondAttribute="leading" constant="16" id="nXi-xZ-OHW"/>
                                                 <constraint firstItem="JT5-HK-hh6" firstAttribute="trailing" secondItem="aJl-qf-Fu4" secondAttribute="trailing" id="oZw-y9-2wb"/>
@@ -632,33 +655,33 @@ Three Ways to Get Involved &amp; Make a Difference.</string>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="222" id="3zb-Kr-8Nb">
-                                        <rect key="frame" x="0.0" y="972" width="375" height="222"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="240" id="3zb-Kr-8Nb">
+                                        <rect key="frame" x="0.0" y="1039" width="375" height="240"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3zb-Kr-8Nb" id="hOY-21-pKG">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="222"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="240"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Partner" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rhv-6V-ccZ">
-                                                    <rect key="frame" x="16" y="11" width="343" height="20.5"/>
+                                                    <rect key="frame" x="16" y="20" width="343" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mII-nC-Vaw">
-                                                    <rect key="frame" x="16" y="47.5" width="343" height="81.5"/>
+                                                    <rect key="frame" x="16" y="60.5" width="343" height="81.5"/>
                                                     <string key="text">Would you like to become part of Giving Kitchen's social service or community resource referral program? We'l love to hear from you!</string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dyi-2h-bfs">
-                                                    <rect key="frame" x="16" y="145" width="343" height="50"/>
+                                                    <rect key="frame" x="16" y="162" width="343" height="50"/>
                                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="m7e-qe-LdP"/>
                                                     </constraints>
-                                                    <state key="normal" title="Become a Stability Network Partner">
+                                                    <state key="normal" title="Stability Network Partner">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
                                                     <connections>
@@ -666,7 +689,7 @@ Three Ways to Get Involved &amp; Make a Difference.</string>
                                                     </connections>
                                                 </button>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="izL-eb-r0l">
-                                                    <rect key="frame" x="16" y="211" width="359" height="1"/>
+                                                    <rect key="frame" x="16" y="232" width="359" height="1"/>
                                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="1" id="y1h-0d-p2k"/>
@@ -675,36 +698,36 @@ Three Ways to Get Involved &amp; Make a Difference.</string>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="dyi-2h-bfs" firstAttribute="trailing" secondItem="mII-nC-Vaw" secondAttribute="trailing" id="3KV-hT-CuB"/>
-                                                <constraint firstItem="Rhv-6V-ccZ" firstAttribute="top" secondItem="hOY-21-pKG" secondAttribute="top" constant="11" id="5Jd-Jv-LN4"/>
+                                                <constraint firstItem="Rhv-6V-ccZ" firstAttribute="top" secondItem="hOY-21-pKG" secondAttribute="top" constant="20" id="5Jd-Jv-LN4"/>
                                                 <constraint firstItem="izL-eb-r0l" firstAttribute="leading" secondItem="dyi-2h-bfs" secondAttribute="leading" id="CfJ-Ya-c5m"/>
-                                                <constraint firstItem="izL-eb-r0l" firstAttribute="top" secondItem="dyi-2h-bfs" secondAttribute="bottom" constant="16" id="Ddu-7F-ow8"/>
+                                                <constraint firstItem="izL-eb-r0l" firstAttribute="top" secondItem="dyi-2h-bfs" secondAttribute="bottom" constant="20" id="Ddu-7F-ow8"/>
                                                 <constraint firstItem="Rhv-6V-ccZ" firstAttribute="leading" secondItem="hOY-21-pKG" secondAttribute="leading" constant="16" id="LA1-w2-2bn"/>
                                                 <constraint firstAttribute="trailing" secondItem="Rhv-6V-ccZ" secondAttribute="trailing" constant="16" id="Uzv-0x-S2l"/>
                                                 <constraint firstItem="mII-nC-Vaw" firstAttribute="leading" secondItem="Rhv-6V-ccZ" secondAttribute="leading" id="Zd4-k1-3iw"/>
                                                 <constraint firstItem="mII-nC-Vaw" firstAttribute="trailing" secondItem="Rhv-6V-ccZ" secondAttribute="trailing" id="bRi-pc-amV"/>
-                                                <constraint firstItem="dyi-2h-bfs" firstAttribute="top" secondItem="mII-nC-Vaw" secondAttribute="bottom" constant="16" id="j6L-93-qKr"/>
+                                                <constraint firstItem="dyi-2h-bfs" firstAttribute="top" secondItem="mII-nC-Vaw" secondAttribute="bottom" constant="20" id="j6L-93-qKr"/>
                                                 <constraint firstAttribute="trailing" secondItem="izL-eb-r0l" secondAttribute="trailing" id="lbg-y4-yDQ"/>
-                                                <constraint firstItem="mII-nC-Vaw" firstAttribute="top" secondItem="Rhv-6V-ccZ" secondAttribute="bottom" constant="16" id="mWL-gI-4z4"/>
+                                                <constraint firstItem="mII-nC-Vaw" firstAttribute="top" secondItem="Rhv-6V-ccZ" secondAttribute="bottom" constant="20" id="mWL-gI-4z4"/>
                                                 <constraint firstItem="dyi-2h-bfs" firstAttribute="leading" secondItem="mII-nC-Vaw" secondAttribute="leading" id="pBR-eE-Zp2"/>
                                                 <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="izL-eb-r0l" secondAttribute="bottom" id="pG2-vm-pqw"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="401" id="EXc-hu-LHF">
-                                        <rect key="frame" x="0.0" y="1194" width="375" height="401"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="432" id="EXc-hu-LHF">
+                                        <rect key="frame" x="0.0" y="1279" width="375" height="432"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EXc-hu-LHF" id="FUu-PA-KpT">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="401"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="432"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Want to host an event to benefit GK? Join our forces!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H1d-Ir-WPW">
-                                                    <rect key="frame" x="16" y="16" width="343" height="41"/>
+                                                    <rect key="frame" x="16" y="20" width="343" height="41"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xLn-8G-gFU">
-                                                    <rect key="frame" x="16" y="73" width="343" height="50"/>
+                                                    <rect key="frame" x="16" y="81" width="343" height="50"/>
                                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="5gU-W9-WmB"/>
@@ -717,7 +740,7 @@ Three Ways to Get Involved &amp; Make a Difference.</string>
                                                     </connections>
                                                 </button>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="donatePartnerHero" translatesAutoresizingMaskIntoConstraints="NO" id="j6a-0J-DS6">
-                                                    <rect key="frame" x="16" y="139" width="343" height="192.5"/>
+                                                    <rect key="frame" x="16" y="151" width="343" height="192.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="j6a-0J-DS6" secondAttribute="height" multiplier="335:188" id="wCR-um-wPa"/>
                                                     </constraints>
@@ -725,9 +748,9 @@ Three Ways to Get Involved &amp; Make a Difference.</string>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="j6a-0J-DS6" secondAttribute="bottom" constant="16" id="2mZ-4O-6yG"/>
-                                                <constraint firstItem="j6a-0J-DS6" firstAttribute="top" secondItem="xLn-8G-gFU" secondAttribute="bottom" constant="16" id="5tq-Aa-x9i"/>
-                                                <constraint firstItem="xLn-8G-gFU" firstAttribute="top" secondItem="H1d-Ir-WPW" secondAttribute="bottom" constant="16" id="6p7-82-zx2"/>
-                                                <constraint firstItem="H1d-Ir-WPW" firstAttribute="top" secondItem="FUu-PA-KpT" secondAttribute="top" constant="16" id="7uq-Qs-lBF"/>
+                                                <constraint firstItem="j6a-0J-DS6" firstAttribute="top" secondItem="xLn-8G-gFU" secondAttribute="bottom" constant="20" id="5tq-Aa-x9i"/>
+                                                <constraint firstItem="xLn-8G-gFU" firstAttribute="top" secondItem="H1d-Ir-WPW" secondAttribute="bottom" constant="20" id="6p7-82-zx2"/>
+                                                <constraint firstItem="H1d-Ir-WPW" firstAttribute="top" secondItem="FUu-PA-KpT" secondAttribute="top" constant="20" id="7uq-Qs-lBF"/>
                                                 <constraint firstItem="j6a-0J-DS6" firstAttribute="width" secondItem="j6a-0J-DS6" secondAttribute="height" multiplier="335:188" id="BKD-ox-1Ny"/>
                                                 <constraint firstItem="xLn-8G-gFU" firstAttribute="leading" secondItem="H1d-Ir-WPW" secondAttribute="leading" id="Dle-kB-Plv"/>
                                                 <constraint firstItem="H1d-Ir-WPW" firstAttribute="leading" secondItem="FUu-PA-KpT" secondAttribute="leading" constant="16" id="Ihj-Pm-cpD"/>

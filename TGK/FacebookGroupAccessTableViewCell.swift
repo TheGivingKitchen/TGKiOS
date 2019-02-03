@@ -19,8 +19,13 @@ class FacebookGroupAccessTableViewCell: UITableViewCell {
     @IBOutlet weak var metroAtlLabel: UILabel!
     @IBOutlet weak var northGaLabel: UILabel!
     @IBOutlet weak var southGaLabel: UILabel!
+    @IBOutlet weak var gainesvilleLabel: UILabel!
+    @IBOutlet weak var maconLabel: UILabel!
+    @IBOutlet weak var coastalLabel: UILabel!
+    @IBOutlet weak var athensLabel: UILabel!
+    @IBOutlet weak var columbusLabel: UILabel!
+    @IBOutlet weak var romeLabel: UILabel!
     @IBOutlet weak var bottomDividerView: UIView!
-    @IBOutlet weak var viewAllDividerView: UIView!
     @IBOutlet weak var stackViewRowTwo: UIStackView!
     @IBOutlet weak var stackViewRowThree: UIStackView!
     
@@ -58,6 +63,24 @@ class FacebookGroupAccessTableViewCell: UITableViewCell {
         
         self.southGaLabel.font = UIFont.tgkBody
         self.southGaLabel.textColor = UIColor.tgkBlue
+        
+        self.gainesvilleLabel.font = UIFont.tgkBody
+        self.gainesvilleLabel.textColor = UIColor.tgkBlue
+        
+        self.maconLabel.font = UIFont.tgkBody
+        self.maconLabel.textColor = UIColor.tgkBlue
+        
+        self.coastalLabel.font = UIFont.tgkBody
+        self.coastalLabel.textColor = UIColor.tgkBlue
+        
+        self.athensLabel.font = UIFont.tgkBody
+        self.athensLabel.textColor = UIColor.tgkBlue
+        
+        self.columbusLabel.font = UIFont.tgkBody
+        self.columbusLabel.textColor = UIColor.tgkBlue
+        
+        self.romeLabel.font = UIFont.tgkBody
+        self.romeLabel.textColor = UIColor.tgkBlue
         
         self.bottomDividerView.backgroundColor = UIColor.tgkBackgroundGray
     }
