@@ -44,15 +44,10 @@ class MainTabBarController: UITabBarController {
         _ = aboutHomeVC.view
         aboutHomeVC.tabBarItem = UITabBarItem(title: "About", image: UIImage(named: "tabBarHome"), selectedImage: nil)
         
-        
-        
-//        let feedbackVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "FeedbackHomeViewControllerId") as! FeedbackHomeViewController
-//        feedbackVC.tabBarItem = UITabBarItem(title: "Feedback", image: UIImage(named: "feedbackBubble"), selectedImage: nil)
-        
         #if DEBUG
-        self.viewControllers = [eventsHomeNavVC, assistanceHomeNavVC, donateHomeNavVC, safetyNetNavVC, aboutHomeVC, testHomeNavVC]
+        self.viewControllers = [aboutHomeVC, eventsHomeNavVC, assistanceHomeNavVC, safetyNetNavVC, donateHomeNavVC, testHomeNavVC]
         #else
-        self.viewControllers = [eventsHomeNavVC, assistanceHomeNavVC, donateHomeNavVC, safetyNetNavVC, aboutHomeVC]
+        self.viewControllers = [aboutHomeVC, eventsHomeNavVC, assistanceHomeNavVC, safetyNetNavVC, donateHomeNavVC]
         #endif
         
         //Remote config
