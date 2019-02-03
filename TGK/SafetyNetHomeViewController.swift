@@ -243,7 +243,7 @@ extension SafetyNetHomeViewController: UITableViewDelegate, UITableViewDataSourc
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let resource = self.safetyNetModels[indexPath.row]
+        let resource = self.isSearchingOrFiltering ? self.filteredSafetyNetModels[indexPath.row] : self.safetyNetModels[indexPath.row]
         let detailVC = SafetyNetDetailSheetViewController.instantiateWith(safetyNetResource: resource)
         self.tabBarController?.present(detailVC, animated: true)
     }
