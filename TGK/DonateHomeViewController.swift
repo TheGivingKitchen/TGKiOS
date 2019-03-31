@@ -215,9 +215,7 @@ class DonateHomeViewController: UITableViewController {
     }
     
     @IBAction func useCreditCardButtonPressed(_ sender: Any) {
-        ///live address
-        /// test wufoo form https://thegivingkitchen.wufoo.com/forms/credit-card-donation-user-testing/
-        guard let externalDonationFormUrl = URL(string: "https://connect.clickandpledge.com/w/Form/d11bff52-0cd0-44d8-9403-465614e4f342") else {
+        guard let externalDonationFormUrl = URL(string: "https://connect.clickandpledge.com/w/Form/d00e52d7-f298-4d35-8be9-05fd93d3194a") else {
             return
         }
         
@@ -229,7 +227,7 @@ class DonateHomeViewController: UITableViewController {
     }
     
     @IBAction func recurringDonationPressed(_ sender: Any) {
-        guard let externalDonationFormUrl = URL(string: "https://connect.clickandpledge.com/w/Form/40b3de1f-fa46-4735-874f-c152e272620e") else {
+        guard let externalDonationFormUrl = URL(string: "https://connect.clickandpledge.com/w/Form/a4eb8d47-b792-4285-8ef9-24c353715cd7") else {
             return
         }
         

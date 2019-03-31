@@ -65,6 +65,7 @@ class SafetyNetHomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.title = "Stability Network"
         self.styleView()
         
         self.collapseSearchHeader()
