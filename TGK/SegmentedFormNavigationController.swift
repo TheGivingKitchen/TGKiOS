@@ -121,12 +121,20 @@ class SegmentedFormNavigationController: UINavigationController {
                 }
                 else {
                     let alertController = UIAlertController(title: "Oh no!", message: "There is an error with this form. Please contact Giving Kitchen.", preferredStyle: .alert)
+                    let doneAction = UIAlertAction(title: "Okay", style: .default, handler: { (action) in
+                        
+                    })
+                    alertController.addAction(doneAction)
                     self.present(alertController, animated: true)
                 }
             }
             else if let error = error {
                 //Catch any unexptected errors
                 let alertController = UIAlertController(title: "Oh no!", message: error.localizedDescription, preferredStyle: .alert)
+                let doneAction = UIAlertAction(title: "Okay", style: .default, handler: { (action) in
+                    
+                })
+                alertController.addAction(doneAction)
                 self.present(alertController, animated: true)
             }
         }

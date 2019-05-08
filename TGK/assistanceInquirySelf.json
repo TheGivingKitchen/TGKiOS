@@ -74,7 +74,25 @@
 		            "Type": "radio",
 		            "ID": "Field32",
 		            "HasOtherField": false
-		        }
+                },
+                {
+                    "Title": "Primary language:",
+                    "Instructions": "",
+                    "IsRequired": "0",
+                    "ClassNames": "",
+                    "DefaultVal": "",
+                    "Page": "1",
+                    "Choices": [
+                        {
+                            "Label": "English"
+                        },
+                        {
+                            "Label": "Spanish"
+                        }
+                    ],
+                    "Type": "radio",
+                    "ID": "Field36"
+                }
 			]
 		},
 		{
