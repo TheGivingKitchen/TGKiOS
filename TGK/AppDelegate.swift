@@ -10,6 +10,8 @@ import UIKit
 import Firebase
 import FirebaseRemoteConfig
 import FirebaseAuth
+import FirebaseMessaging
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -27,8 +29,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        self.setupRemoteConfig()
         
         Auth.auth().signInAnonymously { (result, error) in
+        }
+        
+        UNUserNotificationCenter.current().delegate = self
+        Messaging.messaging().delegate = self
+        
+        //TODO TESTING PUSH NOTIFICATIONS
+        /*
+        let notificationOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
+        UNUserNotificationCenter.current().requestAuthorization(options: notificationOptions) { (granted, error) in
             
         }
+         */
+        //TODO end remove
+        
+        application.registerForRemoteNotifications()
         
         return true
     }
@@ -99,6 +114,45 @@ extension AppDelegate {
                 break
             }
         }
+    }
+}
+
+
+//MARK: Push notifications
+extension AppDelegate: UNUserNotificationCenterDelegate {
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        print("successfully registered for remote notifications")
+//        Messaging.messaging().apnsToken = deviceToken
+    }
+    
+    func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
+        print("failed to register for remote notifications")
+    }
+    
+    //Fires when about to present a notification in the foreground
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        
+        let userInfo = notification.request.content.userInfo
+        Messaging.messaging().appDidReceiveMessage(userInfo)
+        
+        print("did receive notification while app is open")
+        completionHandler([.alert, .sound])
+    }
+    
+    //Fires when tapping into a notification from anywhere
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        
+        let userInfo = response.notification.request.content.userInfo
+        Messaging.messaging().appDidReceiveMessage(userInfo)
+        
+        print("received push notification")
+    }
+}
+
+extension AppDelegate: MessagingDelegate {
+    //This callback is fired at each app startup and whenever a new token is generated.
+    func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String) {
+        print("FCM push token:\(fcmToken)")
     }
 }
 

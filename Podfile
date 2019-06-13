@@ -9,6 +9,7 @@ target 'TGK' do
   pod 'Firebase/Core'
   pod 'Firebase/RemoteConfig'
   pod 'Firebase/Database'
+  pod 'Firebase/Messaging'
   pod 'Firebase/Auth'
   pod 'SwiftyXMLParser', :git => 'https://github.com/yahoojapan/SwiftyXMLParser.git'
 
