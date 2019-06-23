@@ -40,9 +40,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UNUserNotificationCenter.current().requestAuthorization(options: notificationOptions) { (granted, error) in
             
         }
-         */
+ 
         //TODO end remove
-        
+        */
         application.registerForRemoteNotifications()
         
         return true
@@ -68,6 +68,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    
+    func topViewController() -> UIViewController? {
+        guard let window = UIApplication.shared.keyWindow, let rootViewController = window.rootViewController else {
+            return nil
+        }
+        
+        var topViewController = rootViewController
+        
+        while let newTopController = topViewController.presentedViewController {
+            topViewController = newTopController
+        }
+        
+        return topViewController
     }
 }
 
@@ -121,12 +135,9 @@ extension AppDelegate {
 //MARK: Push notifications
 extension AppDelegate: UNUserNotificationCenterDelegate {
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
-        print("successfully registered for remote notifications")
-//        Messaging.messaging().apnsToken = deviceToken
     }
     
     func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
-        print("failed to register for remote notifications")
     }
     
     //Fires when about to present a notification in the foreground
@@ -135,7 +146,6 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
         let userInfo = notification.request.content.userInfo
         Messaging.messaging().appDidReceiveMessage(userInfo)
         
-        print("did receive notification while app is open")
         completionHandler([.alert, .sound])
     }
     
@@ -145,7 +155,16 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
         let userInfo = response.notification.request.content.userInfo
         Messaging.messaging().appDidReceiveMessage(userInfo)
         
-        print("received push notification")
+        if let presentUrlString = userInfo["display_url"] as? String,
+            let parsedUrl = URL(string: presentUrlString),
+            let topVC = self.topViewController() {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
+                let tgkSafariVC = TGKSafariViewController(url: parsedUrl)
+                topVC.present(tgkSafariVC, animated: true)
+            })
+        }
+        
+        completionHandler()
     }
 }
 
