@@ -8,8 +8,26 @@
 
 import Foundation
 import UIKit
+import MapKit
 
 struct SafetyNetResourceModel:Equatable, Codable {
+    static func == (lhs: SafetyNetResourceModel, rhs: SafetyNetResourceModel) -> Bool {
+        if lhs.name == rhs.name &&
+            lhs.address == rhs.address &&
+            lhs.websiteUrl?.absoluteString == rhs.websiteUrl?.absoluteString &&
+            lhs.phoneNumber == rhs.phoneNumber &&
+            lhs.contactName == rhs.contactName &&
+            lhs.category == rhs.category &&
+            lhs.resourceDescription == rhs.resourceDescription &&
+            lhs.counties == rhs.counties &&
+            lhs.location?.latitude == rhs.location?.latitude &&
+            lhs.location?.longitude == rhs.location?.longitude {
+            return true
+        }
+        return false
+    }
+    
+    
     var name:String
     var address:String?
     var websiteUrl:URL?
@@ -18,6 +36,7 @@ struct SafetyNetResourceModel:Equatable, Codable {
     var category:String?
     var resourceDescription:String?
     var counties:[String]?
+    var location:CLLocationCoordinate2D?
     
     enum CodingKeys:String, CodingKey {
         case name
@@ -28,12 +47,16 @@ struct SafetyNetResourceModel:Equatable, Codable {
         case category
         case resourceDescription = "description"
         case counties = "countiesServed"
+        case location
+        case latitude
+        case longitude
     }
+    
+    
     
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         name = try container.decodeIfPresent(String.self, forKey: .name) ?? ""
-        print(name)
         contactName = try container.decodeIfPresent(String.self, forKey: .contactName)
         resourceDescription = try container.decodeIfPresent(String.self, forKey: .resourceDescription)
         
@@ -72,7 +95,30 @@ struct SafetyNetResourceModel:Equatable, Codable {
             }
             self.counties = trimmedArray
         }
+        
+        let latidude = try container.decodeIfPresent(Double.self, forKey: .latitude)
+        let longitude = try container.decodeIfPresent(Double.self, forKey: .longitude)
+        
+        if let lat = latidude,
+            let long = longitude {
+            location = CLLocationCoordinate2D(latitude: lat, longitude: long)
+        }
     }
     
-//TODO still need to add custom encoder to match decoder
+    func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encodeIfPresent(name, forKey: .name)
+        try container.encodeIfPresent(contactName, forKey: .contactName)
+        try container.encodeIfPresent(resourceDescription, forKey: .resourceDescription)
+        try container.encodeIfPresent(address, forKey: .address)
+        try container.encodeIfPresent(websiteUrl?.absoluteString, forKey: .websiteUrl)
+        try container.encodeIfPresent(phoneNumber, forKey: .phoneNumber)
+        
+        let countiesString = self.counties == nil ? nil : self.counties?.joined(separator: ",")
+        
+        try container.encodeIfPresent(countiesString, forKey: .counties)
+        
+        try container.encodeIfPresent(location?.latitude, forKey: .latitude)
+            try container.encodeIfPresent(location?.longitude, forKey: .longitude)
+    }
 }
