@@ -123,7 +123,7 @@ class SafetyNetHomeViewController: UIViewController {
     
     func fetchData() {
         ServiceManager.sharedInstace.getSafetyNetResources { (safetyNetModels, error) in
-            ServiceManager.sharedInstace.getLocalSafetyNetResources { (safetyNetModels, error) in
+            ServiceManager.sharedInstace.getSafetyNetResources { (safetyNetModels, error) in
                 if let error = error {
                     print(error)
                     return

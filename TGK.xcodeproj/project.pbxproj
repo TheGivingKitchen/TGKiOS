@@ -18,6 +18,7 @@
 		4E0E0C88216171F80082240E /* OnboardingContentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0E0C87216171F80082240E /* OnboardingContentModel.swift */; };
 		4E0E0C8A2161745F0082240E /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0E0C892161745F0082240E /* OnboardingCollectionViewCell.swift */; };
 		4E0E0C8C216D764F0082240E /* safetyNetPartnerTest.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E0E0C8B216D764F0082240E /* safetyNetPartnerTest.json */; };
+		4E1DA38122C0300F0032740A /* StabilityNetMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1DA38022C0300F0032740A /* StabilityNetMapViewController.swift */; };
 		4E1EED452108157A0084CFF3 /* AssistanceChooseRecipientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1EED442108157A0084CFF3 /* AssistanceChooseRecipientViewController.swift */; };
 		4E1EED4E210A57B40084CFF3 /* Forms.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E1EED4D210A57B40084CFF3 /* Forms.storyboard */; };
 		4E2A476F21D419B100C5E435 /* Feedback.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E2A476E21D419B100C5E435 /* Feedback.storyboard */; };
@@ -130,6 +131,7 @@
 		4E0E0C87216171F80082240E /* OnboardingContentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContentModel.swift; sourceTree = "<group>"; };
 		4E0E0C892161745F0082240E /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
 		4E0E0C8B216D764F0082240E /* safetyNetPartnerTest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = safetyNetPartnerTest.json; sourceTree = "<group>"; };
+		4E1DA38022C0300F0032740A /* StabilityNetMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StabilityNetMapViewController.swift; sourceTree = "<group>"; };
 		4E1EED442108157A0084CFF3 /* AssistanceChooseRecipientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssistanceChooseRecipientViewController.swift; sourceTree = "<group>"; };
 		4E1EED4D210A57B40084CFF3 /* Forms.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Forms.storyboard; path = ../Forms.storyboard; sourceTree = "<group>"; };
 		4E228D9220ED5639002912AB /* AssistanceOverviewCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssistanceOverviewCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -599,6 +601,7 @@
 			children = (
 				4EDC78E221C6A912004AFCBB /* SafetyNet.storyboard */,
 				4EDC78E421C6A9A2004AFCBB /* SafetyNetDetailSheetViewController.swift */,
+				4E1DA38022C0300F0032740A /* StabilityNetMapViewController.swift */,
 			);
 			name = SafetyNet;
 			sourceTree = "<group>";
@@ -907,6 +910,7 @@
 				4E75177620C8A95700B2D7E0 /* EventsHomeViewController.swift in Sources */,
 				4ED38843209D030600A8BEE2 /* SegmentedFormNavigationController.swift in Sources */,
 				4EAF08ED2139FBC90083E023 /* SafetyNetHomeTooltipCell.swift in Sources */,
+				4E1DA38122C0300F0032740A /* StabilityNetMapViewController.swift in Sources */,
 				4E75176320B6291C00B2D7E0 /* SegmentedFormInfoViewController.swift in Sources */,
 				4EF43480213AD008009C2679 /* UIButton+TGK.swift in Sources */,
 				4ED38848209D030600A8BEE2 /* FormListSelectTableViewCell.swift in Sources */,

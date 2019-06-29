@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -188,6 +188,38 @@ like website here</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oah-TM-oen" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="157.59999999999999" y="246.9265367316342"/>
+        </scene>
+        <!--Map View-->
+        <scene sceneID="zgN-gX-ZuZ">
+            <objects>
+                <viewController storyboardIdentifier="StabilityNetMapViewControllerId" id="ViJ-cC-O4I" customClass="StabilityNetMapViewController" customModule="TGK" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fKd-ti-3vA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Z5c-aa-6e2">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Z5c-aa-6e2" firstAttribute="leading" secondItem="XCG-Vt-t0a" secondAttribute="leading" id="Kps-3r-Pz2"/>
+                            <constraint firstItem="Z5c-aa-6e2" firstAttribute="top" secondItem="XCG-Vt-t0a" secondAttribute="top" id="Qs3-G9-2DC"/>
+                            <constraint firstItem="XCG-Vt-t0a" firstAttribute="trailing" secondItem="Z5c-aa-6e2" secondAttribute="trailing" id="SaL-O8-mTr"/>
+                            <constraint firstItem="XCG-Vt-t0a" firstAttribute="bottom" secondItem="Z5c-aa-6e2" secondAttribute="bottom" id="faZ-pX-vhi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="XCG-Vt-t0a"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Map View" id="3d1-Tc-NC0"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
+                    <connections>
+                        <outlet property="mapView" destination="Z5c-aa-6e2" id="NgO-2N-M5O"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MrK-65-W1M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="885.60000000000002" y="247.82608695652175"/>
         </scene>
     </scenes>
 </document>
