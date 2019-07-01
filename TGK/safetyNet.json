@@ -42,7 +42,9 @@
             "contactName": "Keith Kirshner",
             "category": "Dental",
             "description": "Needs-based dental services.",
-            "countiesServed": "Butts, Cherokee, Clayton, Cobb, Coweta, DeKalb, Douglas, Fayette, Fulton, Gwinnett, Henry, Paulding, Rockdale"
+            "countiesServed": "Butts, Cherokee, Clayton, Cobb, Coweta, DeKalb, Douglas, Fayette, Fulton, Gwinnett, Henry, Paulding, Rockdale",
+            "latitude":33.785500,
+            "longitude":-84.410010
         },
         {
             "name": "Ser Familia, Inc.",
@@ -342,7 +344,9 @@
             "contactName": "",
             "category": "Housing Assistance",
             "description": "Emergency housing-needs assistance to low-income families.",
-            "countiesServed": "Dekalb, Gwinnett, Rockdale"
+            "countiesServed": "Dekalb, Gwinnett, Rockdale",
+            "latitude":33.657120,
+            "longitude":-84.021990
         },
         {
             "name": "Clayton County Community Services Authority",

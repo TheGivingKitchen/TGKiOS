@@ -10,7 +10,9 @@ import Foundation
 import UIKit
 import MapKit
 
-struct SafetyNetResourceModel:Equatable, Codable {
+class SafetyNetResourceModel:NSObject, Codable {
+    
+    //TODO equitable implementation. remove now that we subclass nsobject?
     static func == (lhs: SafetyNetResourceModel, rhs: SafetyNetResourceModel) -> Bool {
         if lhs.name == rhs.name &&
             lhs.address == rhs.address &&
@@ -54,10 +56,11 @@ struct SafetyNetResourceModel:Equatable, Codable {
     
     
     
-    init(from decoder: Decoder) throws {
+    required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         name = try container.decodeIfPresent(String.self, forKey: .name) ?? ""
         contactName = try container.decodeIfPresent(String.self, forKey: .contactName)
+        category = try container.decodeIfPresent(String.self, forKey: .category)
         resourceDescription = try container.decodeIfPresent(String.self, forKey: .resourceDescription)
         
         
@@ -103,6 +106,8 @@ struct SafetyNetResourceModel:Equatable, Codable {
             let long = longitude {
             location = CLLocationCoordinate2D(latitude: lat, longitude: long)
         }
+        
+        super.init()
     }
     
     func encode(to encoder: Encoder) throws {
@@ -120,5 +125,22 @@ struct SafetyNetResourceModel:Equatable, Codable {
         
         try container.encodeIfPresent(location?.latitude, forKey: .latitude)
             try container.encodeIfPresent(location?.longitude, forKey: .longitude)
+    }
+    
+    
+}
+
+//MARK: MKAnnotation conformance
+extension SafetyNetResourceModel:MKAnnotation {
+    var title: String? {
+        return self.name
+    }
+    
+    var subtitle: String? {
+        return self.resourceDescription
+    }
+    
+    var coordinate: CLLocationCoordinate2D {
+        return self.location ?? kCLLocationCoordinate2DInvalid
     }
 }
