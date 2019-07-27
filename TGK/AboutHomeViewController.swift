@@ -134,20 +134,20 @@ class AboutHomeViewController: UITableViewController {
     }
     
     @IBAction func aboutStory2Pressed(_ sender: Any) {
-        if let url = URL(string: "https://thegivingkitchen.org/when-irma-hit") {
+        if let url = URL(string: "https://thegivingkitchen.org/lets-talk-about-it") {
             let safariVC = TGKSafariViewController(url: url)
             self.present(safariVC, animated: true)
             
-            Analytics.logEvent(customName: .learnMorePressed, parameters: [.learnMoreType:"when_irma_hit"])
+            Analytics.logEvent(customName: .learnMorePressed, parameters: [.learnMoreType:"lets_talk_about_it"])
         }
     }
     
     @IBAction func aboutStory3Pressed(_ sender: Any) {
-        if let url = URL(string: "https://thegivingkitchen.org/shannon-brown-shares-her-story-in-athens") {
+        if let url = URL(string: "https://thegivingkitchen.org/why-qpr") {
             let safariVC = TGKSafariViewController(url: url)
             self.present(safariVC, animated: true)
             
-            Analytics.logEvent(customName: .learnMorePressed, parameters: [.learnMoreType:"comfort_in_athens"])
+            Analytics.logEvent(customName: .learnMorePressed, parameters: [.learnMoreType:"why_qpr"])
         }
     }
     

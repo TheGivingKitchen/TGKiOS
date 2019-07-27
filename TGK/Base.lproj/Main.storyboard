@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FqZ-EA-ONs">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FqZ-EA-ONs">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -313,7 +313,7 @@ GK can fund the cost of living expenses for food service workers who miss work d
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eventsReadMore" translatesAutoresizingMaskIntoConstraints="NO" id="u2g-nS-bPI">
-                                                    <rect key="frame" x="16" y="337" width="98" height="14"/>
+                                                    <rect key="frame" x="16" y="337" width="16" height="16"/>
                                                 </imageView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E1a-Ar-8fA">
                                                     <rect key="frame" x="0.0" y="423" width="375" height="1"/>
@@ -1148,8 +1148,8 @@ GK can fund the cost of living expenses for food service workers who miss work d
                                                     </constraints>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rwG-ik-oPr">
-                                                    <rect key="frame" x="16" y="516" width="169" height="30"/>
-                                                    <state key="normal" title="When Irma Hit (Read on)"/>
+                                                    <rect key="frame" x="16" y="516" width="193" height="30"/>
+                                                    <state key="normal" title="Let's Talk About It (Read on)"/>
                                                     <connections>
                                                         <action selector="aboutStory2Pressed:" destination="lpt-Xd-vIc" eventType="touchUpInside" id="jIx-sp-IZ0"/>
                                                     </connections>
@@ -1168,8 +1168,8 @@ GK can fund the cost of living expenses for food service workers who miss work d
                                                     </constraints>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lx7-4J-Mqk">
-                                                    <rect key="frame" x="16" y="772" width="196" height="30"/>
-                                                    <state key="normal" title="Comfort in Athens (Read on)"/>
+                                                    <rect key="frame" x="16" y="772" width="144" height="30"/>
+                                                    <state key="normal" title="Why QPR? (Read on)"/>
                                                     <connections>
                                                         <action selector="aboutStory3Pressed:" destination="lpt-Xd-vIc" eventType="touchUpInside" id="6MM-Sj-Lbl"/>
                                                     </connections>
@@ -1426,13 +1426,13 @@ GK can fund the cost of living expenses for food service workers who miss work d
     </scenes>
     <resources>
         <image name="aboutHomeTopIcon" width="38" height="37"/>
-        <image name="aboutStory1" width="360" height="240.24000549316406"/>
-        <image name="aboutStory2" width="500" height="333"/>
-        <image name="aboutStory3" width="500" height="333"/>
+        <image name="aboutStory1" width="750" height="500.5"/>
+        <image name="aboutStory2" width="1248" height="573"/>
+        <image name="aboutStory3" width="750" height="422"/>
         <image name="assistanceHomeTopIcon" width="37" height="47"/>
         <image name="donateHomeTopIcon" width="38" height="37"/>
         <image name="donateIconWaterBill" width="84" height="88"/>
-        <image name="donatePartnerHero" width="1165" height="687"/>
+        <image name="donatePartnerHero" width="388.33334350585938" height="229"/>
         <image name="donateVolunteerHero" width="343" height="194"/>
         <image name="eventHomeTopIcon" width="37" height="39"/>
         <image name="eventsReadMore" width="98" height="14"/>
