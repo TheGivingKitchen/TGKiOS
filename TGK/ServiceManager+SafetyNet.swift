@@ -46,10 +46,11 @@ extension ServiceManager {
 //            do {
 //                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .alwaysMapped)
 //                let jsonObj = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as! [String:Any]
-//                
 //                let safetyNetArray = jsonObj["safetyNet"] as! [[String:Any]]
 //                
-//                let models = SafetyNetResourceModel.modelsWithJsonArray(jsonArray: safetyNetArray)
+//                let jsonData = try JSONSerialization.data(withJSONObject: safetyNetArray, options: .prettyPrinted)
+//                
+//                let models = try JSONDecoder().decode([SafetyNetResourceModel].self, from: jsonData)
 //                completion(models, nil)
 //                
 //            }

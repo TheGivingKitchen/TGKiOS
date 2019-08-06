@@ -9,8 +9,8 @@
             "category": "Health and Wellness",
             "description": "Promote social well being for families and individuals.",
             "countiesServed": "Fulton",
-            "latitude":33.756790,
-            "longitude":-84.389730
+            "latitude": 33.7537359,
+            "longitude": -84.3937495
         },
         {
             "name": "Aid Atlanta",
@@ -21,8 +21,8 @@
             "category": "HIV/AIDS",
             "description": "HIV/AIDS related services, care and education.",
             "countiesServed": "All",
-            "latitude":33.797530,
-            "longitude":-84.389820
+            "latitude": 33.7978527,
+            "longitude": -84.3896654
         },
         {
             "name": "American Cancer Society",
@@ -43,8 +43,8 @@
             "category": "Dental",
             "description": "Needs-based dental services.",
             "countiesServed": "Butts, Cherokee, Clayton, Cobb, Coweta, DeKalb, Douglas, Fayette, Fulton, Gwinnett, Henry, Paulding, Rockdale",
-            "latitude":33.785500,
-            "longitude":-84.410010
+            "latitude": 33.7854439,
+            "longitude": -84.40992109999999
         },
         {
             "name": "Ser Familia, Inc.",
@@ -54,7 +54,9 @@
             "contactName": "",
             "category": "Domestic Violence, Counseling, Therapy",
             "description": "Support to victims of domestic violence, family counseling.",
-            "countiesServed": "All"
+            "countiesServed": "All",
+            "latitude": 34.0737504,
+            "longitude": -84.65019099999999
         },
         {
             "name": "Good Rx",
@@ -74,7 +76,9 @@
             "contactName": "Tenille Johnson",
             "category": "Food Assistance",
             "description": "Meal delivery for low-income and homebound seniors.",
-            "countiesServed": "Fulton"
+            "countiesServed": "Fulton",
+            "latitude": 33.8008215,
+            "longitude": -84.4104546
         },
         {
             "name": "NeedyMeds",
@@ -94,7 +98,9 @@
             "contactName": "",
             "category": "Food Assistance",
             "description": "Provides healthy prepared meals for low-income clients.",
-            "countiesServed": "All"
+            "countiesServed": "All",
+            "latitude": 33.8090055,
+            "longitude": -84.38282919999999
         },
         {
             "name": "Patients Advocate Foundation",
@@ -134,7 +140,9 @@
             "contactName": "Kimberly P. Heywood: Team Manager, Nicola Canty: Special Projects Director,Donna Burnham:Vice President",
             "category": "Community Outreach",
             "description": "Resources for community improvement.",
-            "countiesServed": "Metro Atlanta"
+            "countiesServed": "Metro Atlanta",
+            "latitude": 33.7552402,
+            "longitude": -84.3845972
         },
         {
             "name": "Northside Hospital: Domestic Violence",
@@ -144,7 +152,9 @@
             "contactName": "",
             "category": "Domestic Violence",
             "description": "Support to victims of domestic violence.",
-            "countiesServed": "All"
+            "countiesServed": "All",
+            "latitude": 33.9093745,
+            "longitude": -84.3546157
         },
         {
             "name": "Northside Hospital: HIPAA Privacy Practices",
@@ -154,7 +164,9 @@
             "contactName": "",
             "category": "Healthcare",
             "description": "Education about disclosure of medical information.",
-            "countiesServed": "All"
+            "countiesServed": "All",
+            "latitude": 33.9093745,
+            "longitude": -84.3546157
         },
         {
             "name": "Northside Hospital: Partnership for Safety",
@@ -164,7 +176,9 @@
             "contactName": "",
             "category": "Health and Wellness",
             "description": "Wellness and safety resources and education.",
-            "countiesServed": "All"
+            "countiesServed": "All",
+            "latitude": 33.9093745,
+            "longitude": -84.3546157
         },
         {
             "name": "West End Medical Free Dental Care",
@@ -174,7 +188,9 @@
             "contactName": "",
             "category": "Dental",
             "description": "Needs-based dental services.",
-            "countiesServed": "Fulton"
+            "countiesServed": "Fulton",
+            "latitude": 33.736796,
+            "longitude": -84.41637399999999
         },
         {
             "name": "Alcoholics Anonymous",
@@ -194,7 +210,9 @@
             "contactName": "",
             "category": "Mental Health",
             "description": "Mental health crisis intervention.",
-            "countiesServed": "All"
+            "countiesServed": "All",
+            "latitude": 33.7605589,
+            "longitude": -84.38705399999999
         },
         {
             "name": "Big Table",
@@ -204,7 +222,9 @@
             "contactName": "Chris Deitz, Hala Mana'o",
             "category": "Mental Health",
             "description": "Comprehensive care for food service workers facing a crisis.",
-            "countiesServed": ""
+            "countiesServed": "",
+            "latitude": 47.6582426,
+            "longitude": -117.4276219
         },
         {
             "name": "CEPTA",
@@ -214,7 +234,9 @@
             "contactName": "Gloria Juliao",
             "category": "Mental Health",
             "description": "Latin Americn behavioral health and prevention organization.",
-            "countiesServed": "30093"
+            "countiesServed": "Gwinnett",
+            "latitude": 33.9065074,
+            "longitude": -84.208292
         },
         {
             "name": "Heirloom Foundation",
@@ -234,7 +256,9 @@
             "contactName": "Elaine Gibson",
             "category": "Mental Health",
             "description": "Counseling and psychotherapy for famiies and individuals.",
-            "countiesServed": "Metro Atlanta"
+            "countiesServed": "Metro Atlanta",
+            "latitude": 33.9071482,
+            "longitude": -84.47915379999999
         },
         {
             "name": "Metropolitan Counseling Services",
@@ -244,7 +268,9 @@
             "contactName": "Rachelle Kennedy",
             "category": "Mental Health",
             "description": "Affordable mental health services.",
-            "countiesServed": "Metro Atlanta"
+            "countiesServed": "Metro Atlanta",
+            "latitude": 33.8302995,
+            "longitude": -84.3425788
         },
         {
             "name": "Substance Abuse and Mental Health Services Administration",
@@ -254,7 +280,9 @@
             "contactName": "",
             "category": "Mental Health",
             "description": "Reduce the impact of substanc abuse and mental illness.",
-            "countiesServed": "Maryland"
+            "countiesServed": "Maryland",
+            "latitude": 39.0627951,
+            "longitude": -77.11364999999999
         },
         {
             "name": "Smart Recovery",
@@ -264,7 +292,9 @@
             "contactName": "",
             "category": "Mental Health",
             "description": "Addicition recovery support group.",
-            "countiesServed": "Ohio"
+            "countiesServed": "Ohio",
+            "latitude": 41.650949,
+            "longitude": -81.38027199999999
         },
         {
             "name": "DFS Memorials",
@@ -294,7 +324,9 @@
             "contactName": "Harriet Campbell",
             "category": "Funeral Services",
             "description": "Needs-based funeral services.",
-            "countiesServed": "Fulton"
+            "countiesServed": "Fulton",
+            "latitude": 33.7737531,
+            "longitude": -84.4281838
         },
         {
             "name": "Clearpoint Credit Counseling Solutions",
@@ -304,7 +336,9 @@
             "contactName": "",
             "category": "Financial Services",
             "description": "Free financial literacy education for individuals struggling with debt.",
-            "countiesServed": "Metro Atlanta"
+            "countiesServed": "Metro Atlanta",
+            "latitude": 33.7651895,
+            "longitude": -84.3899484
         },
         {
             "name": "FDIC Money Smart",
@@ -324,7 +358,9 @@
             "contactName": "",
             "category": "Financial Services",
             "description": "National financial education.",
-            "countiesServed": "All"
+            "countiesServed": "All",
+            "latitude": 38.8982472,
+            "longitude": -77.0342677
         },
         {
             "name": "Pro Management Group",
@@ -334,7 +370,9 @@
             "contactName": "Gail Collins",
             "category": "Financial Services",
             "description": "Restaurant financial solutions.",
-            "countiesServed": "All"
+            "countiesServed": "All",
+            "latitude": 33.7555736,
+            "longitude": -84.390137
         },
         {
             "name": "Partnership for Community Action",
@@ -345,8 +383,8 @@
             "category": "Housing Assistance",
             "description": "Emergency housing-needs assistance to low-income families.",
             "countiesServed": "Dekalb, Gwinnett, Rockdale",
-            "latitude":33.657120,
-            "longitude":-84.021990
+            "latitude": 33.65737,
+            "longitude": -84.021367
         },
         {
             "name": "Clayton County Community Services Authority",
@@ -356,7 +394,9 @@
             "contactName": "",
             "category": "Housing Assistance",
             "description": "Emergency housing-needs assistance to low-income families.",
-            "countiesServed": "Clayton"
+            "countiesServed": "Clayton",
+            "latitude": 33.6206312,
+            "longitude": -84.3574089
         },
         {
             "name": "Furniture Bank of Metro Atlanta",
@@ -366,7 +406,9 @@
             "contactName": "Katie Leware",
             "category": "Housing Assistance",
             "description": "Provides gently used furniture to low-income families and families transitioning out of  homelessness.",
-            "countiesServed": "Metro Atlanta"
+            "countiesServed": "Metro Atlanta",
+            "latitude": 33.7299881,
+            "longitude": -84.41422999999999
         },
         {
             "name": "Atlanta Community Tool Bank",
@@ -376,7 +418,9 @@
             "contactName": "Patty Russart",
             "category": "Tool Lending Program",
             "description": "Provides charities with tools for their volunteers.",
-            "countiesServed": "Metro Atlanta"
+            "countiesServed": "Metro Atlanta",
+            "latitude": 33.7226383,
+            "longitude": -84.3749866
         },
         {
             "name": "Fulton Atlanta Community Action Authority",
@@ -386,7 +430,9 @@
             "contactName": "",
             "category": "Housing Assistance",
             "description": "Emergency housing-needs assistance to low-income families.",
-            "countiesServed": "Fulton"
+            "countiesServed": "Fulton",
+            "latitude": 33.825064,
+            "longitude": -84.3473248
         },
         {
             "name": "Midtown Assistance Center",
@@ -396,7 +442,9 @@
             "contactName": "Keira Dandridge",
             "category": "Housing Assistance",
             "description": "Emergency housing-needs assistance to low-income families.",
-            "countiesServed": "Metro Atlanta"
+            "countiesServed": "Metro Atlanta",
+            "latitude": 33.764486,
+            "longitude": -84.38676339999999
         },
         {
             "name": "Project Share",
@@ -406,7 +454,9 @@
             "contactName": "",
             "category": "Housing Assistance",
             "description": "Emergency assistance to Georgians who need help with basic nessecities.",
-            "countiesServed": "All"
+            "countiesServed": "All",
+            "latitude": 33.94,
+            "longitude": -84.2099999
         },
         {
             "name": "Star-C",
@@ -416,7 +466,9 @@
             "contactName": "Allie Reeser",
             "category": "Housing Assistance",
             "description": "Works with landlords to willing to offer wrap around services to individual tenants.",
-            "countiesServed": "All"
+            "countiesServed": "All",
+            "latitude": 33.787648,
+            "longitude": -84.383102
         },
         {
             "name": "American Immigration Services",
@@ -436,7 +488,9 @@
             "contactName": "",
             "category": "Immigration Assistance",
             "description": "Helps low-income people meet their basic needs through free civil legal services.",
-            "countiesServed": "Clayton, Cobb, Dekalb, Fulton, and Gwinnett"
+            "countiesServed": "Clayton, Cobb, Dekalb, Fulton, and Gwinnett",
+            "latitude": 33.7586791,
+            "longitude": -84.3857031
         },
         {
             "name": "Latin American Association - Atlanta",
@@ -446,7 +500,9 @@
             "contactName": "",
             "category": "Immigration Assistance",
             "description": "Offers immigrants the tools and resources they need to improve their lives through a vide variety of services.",
-            "countiesServed": "Metro Atlanta"
+            "countiesServed": "Metro Atlanta",
+            "latitude": 33.8290248,
+            "longitude": -84.346071
         },
         {
             "name": "Latin American Association - Norcross",
@@ -456,7 +512,9 @@
             "contactName": "",
             "category": "Immigration Assistance",
             "description": "Offers immigrants the tools and resources they need to improve their lives through a vide variety of services.",
-            "countiesServed": "Metro Atlanta"
+            "countiesServed": "Metro Atlanta",
+            "latitude": 33.9427554,
+            "longitude": -84.2103303
         },
         {
             "name": "US Ctizenship and Immigration services",
@@ -476,7 +534,9 @@
             "contactName": "Rebecca Richard",
             "category": "Housing Assistance",
             "description": "Emergency housing-needs assistance to low-income families.",
-            "countiesServed": "Metro Atlanta"
+            "countiesServed": "Metro Atlanta",
+            "latitude": 33.764486,
+            "longitude": -84.38676339999999
         },
         {
             "name": "Mark A. Hagins",
@@ -496,7 +556,9 @@
             "contactName": "Emily Kilduff",
             "category": "Family Assistance",
             "description": "Grants support to children of food and beverage service navigating life-altering circumstances.",
-            "countiesServed": ""
+            "countiesServed": "",
+            "latitude": 34.107497,
+            "longitude": -84.54002299999999
         },
         {
             "name": "Trusted CFO Solutions",
@@ -506,7 +568,9 @@
             "contactName": "Deborah Schwartz Griffin",
             "category": "Business Assistance",
             "description": "Using real-time, orderly data & information, we turn chaos into order, delivering actionable insights to help you effectively run your company.",
-            "countiesServed": "All"
+            "countiesServed": "All",
+            "latitude": 33.8737655,
+            "longitude": -84.45853199999999
         },
         {
             "name": "Kanner & Pintaluga Accident Attorneys",
@@ -516,7 +580,9 @@
             "contactName": "Kevin S. Sobel",
             "category": "Legal Services",
             "description": " Law firm committed to representing accident and serious injury victims in various states. ",
-            "countiesServed": "All"
+            "countiesServed": "All",
+            "latitude": 33.7592752,
+            "longitude": -84.38725409999999
         },
         {
             "name": "Compassion Fund",
@@ -536,7 +602,9 @@
             "contactName": "Carolyn Bridges",
             "category": "Financial Services, Medical, Food Pantry",
             "description": "A Cobb County-based organization that works exclusively to serve local families and individuals that are either homeless or in danger of becoming homeless.",
-            "countiesServed": "Cobb "
+            "countiesServed": "Cobb ",
+            "latitude": 33.951718,
+            "longitude": -84.52311999999999
         },
         {
             "name": "Mary Hall Freedom House",
@@ -546,7 +614,9 @@
             "contactName": "Lucy Hall-Gainer",
             "category": "Women's Services",
             "description": "A nonprofit organization and national leader in gender-specific treatment, recovery, housing and support services to help women and women with children break the cycle of poverty, homelessness, mental health disorders, and addiction.",
-            "countiesServed": "Metro Atlanta"
+            "countiesServed": "Metro Atlanta",
+            "latitude": 33.9969708,
+            "longitude": -84.3524685
         },
         {
             "name": "Friendship Fund",
@@ -566,7 +636,9 @@
             "contactName": "Ayur Veda",
             "category": "Mental Health",
             "description": "An international NGO, focused on various dimensions such as social transformation, child eduction, women and youth empowerment and world peace through yoga meditation, Sudarshan Kriya and other spiritual philosophies.",
-            "countiesServed": "All"
+            "countiesServed": "All",
+            "latitude": 33.965567,
+            "longitude": -84.3641449
         },
         {
             "name": "Atlanta Volunteer Lawyers Foundation",
@@ -576,7 +648,9 @@
             "contactName": "Cole Thaler",
             "category": "Legal Services",
             "description": "Promotes access to justice by inspiring volunteer attorneys to provide high-quality education, advocacy, and representation at no charge to low-income families with basic civil legal needs at critical times in their lives. Through its Saturday Lawyer Program, free legal representation is available to eligible tenants in a variety of landlord/tenant disputes. Through this program, the AVLF also provides free legal representation to eligible workers with a claim for unpaid wages against an employer. The Safe Families Office, a collaboration among the AVLF, Partnership Against Domestic Violence, and the Fulton County Superior Court, provides legal assistance and safety planning on a walk-in basis to victims of intimate partner violence and stalking who are seeking to file a Temporary Protective Order in Fulton County.  ",
-            "countiesServed": "Greater Atlanta"
+            "countiesServed": "Greater Atlanta",
+            "latitude": 33.7607751,
+            "longitude": -84.38718
         },
         {
             "name": "Cobb & Douglas County Community Services Board",
@@ -586,7 +660,9 @@
             "contactName": "Bryan Stephens",
             "category": "Mental Health",
             "description": "Provides citizens challenged by mental health, developmental disabilities and/or addictive disease issues with appropriate care and resources.",
-            "countiesServed": ""
+            "countiesServed": "",
+            "latitude": 33.8601252,
+            "longitude": -84.51947740000001
         },
         {
             "name": "Atlanta Children's Shelter",
@@ -596,7 +672,9 @@
             "contactName": "Sandy Keating",
             "category": "Family & Children Housing",
             "description": "To provide loving, quality child development and support services for homeless families striving to become self-sufficient.",
-            "countiesServed": "Metro Atlanta"
+            "countiesServed": "Metro Atlanta",
+            "latitude": 33.7709437,
+            "longitude": -84.3844309
         },
         {
             "name": "D&E Housing and Economic",
@@ -606,7 +684,9 @@
             "contactName": "Tony Chung",
             "category": "Housing & Ecoonomic Services",
             "description": "To develop & empower underserved populations, by providing training and resources that facilitate greater participation in the economic and societal mainstream.  ",
-            "countiesServed": ""
+            "countiesServed": "",
+            "latitude": 33.6311378,
+            "longitude": -84.356115
         },
         {
             "name": "National Domestic Violence Hotline",
@@ -666,7 +746,9 @@
             "contactName": "",
             "category": "Mental Health",
             "description": "",
-            "countiesServed": ""
+            "countiesServed": "",
+            "latitude": 33.751841,
+            "longitude": -84.385566
         },
         {
             "name": "Emory University Psychological Center",
@@ -676,7 +758,9 @@
             "contactName": "",
             "category": "Mental Health",
             "description": "",
-            "countiesServed": ""
+            "countiesServed": "",
+            "latitude": 33.7910739,
+            "longitude": -84.327529
         },
         {
             "name": "Families First",
@@ -686,7 +770,9 @@
             "contactName": "",
             "category": "Family Assistance",
             "description": "",
-            "countiesServed": ""
+            "countiesServed": "",
+            "latitude": 33.7847751,
+            "longitude": -84.3874142
         },
         {
             "name": "Grady Health System-\"Grady Card\"",
@@ -706,7 +792,9 @@
             "contactName": "",
             "category": "Crisis Assistance",
             "description": "",
-            "countiesServed": "Dekalb "
+            "countiesServed": "Dekalb ",
+            "latitude": 33.7870412,
+            "longitude": -84.2794395
         },
         {
             "name": "Ridgeview Institute Access Center",
@@ -716,7 +804,9 @@
             "contactName": "",
             "category": "Crisis Assistance",
             "description": "",
-            "countiesServed": "Metro Atlanta"
+            "countiesServed": "Metro Atlanta",
+            "latitude": 33.8560495,
+            "longitude": -84.51256579999999
         },
         {
             "name": "Peachford Hospital",
@@ -726,7 +816,9 @@
             "contactName": "",
             "category": "Crisis Assistance",
             "description": "",
-            "countiesServed": "Metro Atlanta"
+            "countiesServed": "Metro Atlanta",
+            "latitude": 33.928705,
+            "longitude": -84.3006
         },
         {
             "name": "Anchor Hospital",
@@ -736,7 +828,9 @@
             "contactName": "",
             "category": "Crisis Assistance",
             "description": "",
-            "countiesServed": "Metro Atlanta"
+            "countiesServed": "Metro Atlanta",
+            "latitude": 33.6067858,
+            "longitude": -84.4523067
         },
         {
             "name": "Georgia Helpline",
@@ -756,7 +850,9 @@
             "contactName": "Ashlee Starr",
             "category": "Housing Assistance",
             "description": "Pulls together nonprofit, government, and business leaders to zero in on a shared, consistent, and measured approach toward success.",
-            "countiesServed": "Metro Atlanta"
+            "countiesServed": "Metro Atlanta",
+            "latitude": 33.7483996,
+            "longitude": -84.39026009999999
         },
         {
             "name": "Georgia Law Center for the Homeless",
@@ -766,7 +862,9 @@
             "contactName": "",
             "category": "Homeless Assistance",
             "description": "Provides free legal services to the homeless in civil cases throughout Metropolitan Atlanta.",
-            "countiesServed": "Clayton, Cobb, Dekalb, Fulton, Gwinnett"
+            "countiesServed": "Clayton, Cobb, Dekalb, Fulton, Gwinnett",
+            "latitude": 33.7549536,
+            "longitude": -84.38965309999999
         },
         {
             "name": "Rapid Re-Housing",
@@ -956,7 +1054,9 @@
             "contactName": "Christy Onyeabor",
             "category": "Family Assistance",
             "description": "Engage, serve, and strengthen community through health and education.",
-            "countiesServed": "Whitefoord Community"
+            "countiesServed": "Whitefoord Community",
+            "latitude": 33.7524072,
+            "longitude": -84.3255257
         },
         {
             "name": "Highland Urgent Care Family Medicine- Direct Primary Care",
@@ -966,7 +1066,9 @@
             "contactName": "Dr. Nicholas Beaulieu",
             "category": "Healthcare",
             "description": "Streamlined system for receiving healthcare with out third party insurance.",
-            "countiesServed": ""
+            "countiesServed": "",
+            "latitude": 33.7741552,
+            "longitude": -84.35726509999999
         },
         {
             "name": "Urban Health and Wellness",
@@ -976,7 +1078,9 @@
             "contactName": "",
             "category": "Healthcare",
             "description": "Freed medical clinic for uninsured and Medicaid recipients.",
-            "countiesServed": "Metro Atlanta"
+            "countiesServed": "Metro Atlanta",
+            "latitude": 33.7369467,
+            "longitude": -84.37667019999999
         },
         {
             "name": "OutPatient Imaging",
@@ -986,7 +1090,9 @@
             "contactName": "",
             "category": "Healthcare",
             "description": "Ultrasound, xray, catscan, mri, etc.",
-            "countiesServed": "All"
+            "countiesServed": "All",
+            "latitude": 33.8170274,
+            "longitude": -84.3906216
         },
         {
             "name": "OutPatient Imaging",
@@ -996,7 +1102,9 @@
             "contactName": "",
             "category": "Healthcare",
             "description": "Ultrasound, xray, catscan, mri, etc.",
-            "countiesServed": "All"
+            "countiesServed": "All",
+            "latitude": 33.4100785,
+            "longitude": -84.5651703
         },
         {
             "name": "OutPatient Imaging",
@@ -1006,7 +1114,9 @@
             "contactName": "",
             "category": "Healthcare",
             "description": "Ultrasound, xray, catscan, mri, etc.",
-            "countiesServed": "All"
+            "countiesServed": "All",
+            "latitude": 33.4026155,
+            "longitude": -84.710126
         },
         {
             "name": "Another Chance",
@@ -1016,7 +1126,9 @@
             "contactName": "",
             "category": "Homeless Prevention",
             "description": "Provides housing and support to homeless Veterans, families, and individuals. ",
-            "countiesServed": "Metro Atlanta"
+            "countiesServed": "Metro Atlanta",
+            "latitude": 33.6817995,
+            "longitude": -84.4148564
         },
         {
             "name": "Making A Way",
@@ -1026,7 +1138,9 @@
             "contactName": "",
             "category": "Homeless Prevention",
             "description": "Addresses the growing epidemic of homelessness in metropolitan Atlanta through its shelters.",
-            "countiesServed": "Metro Atlanta"
+            "countiesServed": "Metro Atlanta",
+            "latitude": 33.7656064,
+            "longitude": -84.4528936
         },
         {
             "name": "MusiCares Medical Network",
@@ -1056,7 +1170,9 @@
             "contactName": "",
             "category": "Children & Family",
             "description": "Provides mortgage and rent assistance to families with sick children.",
-            "countiesServed": "All"
+            "countiesServed": "All",
+            "latitude": 33.787648,
+            "longitude": -84.383102
         },
         {
             "name": "National Foundation for Credit Counseling",
@@ -1066,7 +1182,9 @@
             "contactName": "",
             "category": "Financial Services",
             "description": "NFCC member agencies provide financial reviews and education to more than a million consumers each year in person, over the phone, or online. Every NFCC member agency client receives comprehensive money management services based on their individual needs.",
-            "countiesServed": ""
+            "countiesServed": "",
+            "latitude": 38.9051637,
+            "longitude": -77.0453824
         },
         {
             "name": "Common Courtesy, Inc. ",
@@ -1086,7 +1204,9 @@
             "contactName": "Anna Jones",
             "category": "Healthcare",
             "description": "Prevent blindness and preserve sight for all Georgians, so that no Georgian needlessly lose their sight due to preventable vison loss.",
-            "countiesServed": "All of Georgia"
+            "countiesServed": "All of Georgia",
+            "latitude": 33.7749417,
+            "longitude": -84.3869553
         },
         {
             "name": "Piedmont Cancer Wellness Center",
@@ -1096,7 +1216,9 @@
             "contactName": "Kim Taff",
             "category": "Healthcare",
             "description": "Provides comprehensive cancer services and programs to anyone affected by cancer at any phase in his or her journey free of charge.",
-            "countiesServed": "Atlanta, Fayetteville, Newnan, Henry"
+            "countiesServed": "Atlanta, Fayetteville, Newnan, Henry",
+            "latitude": 33.8047584,
+            "longitude": -84.4148045
         },
         {
             "name": "BB&T",
@@ -1106,7 +1228,9 @@
             "contactName": "Elisabeth Cassidy",
             "category": "Financial Assistance",
             "description": "They give access to personalized, comprehensive package of banking, loan and insurance services as well as easy-to-understand educational resources.",
-            "countiesServed": "All"
+            "countiesServed": "All",
+            "latitude": 33.7916277,
+            "longitude": -84.3956788
         },
         {
             "name": "Gwinnett Housing Resource Partnership-Impact Group",
@@ -1116,7 +1240,9 @@
             "contactName": "",
             "category": "Housing Assistance",
             "description": "They providing quality housing solutions. They have a spectrum of services and programs addressing housing issues from homelessness to homeownership.",
-            "countiesServed": "Gwinnett"
+            "countiesServed": "Gwinnett",
+            "latitude": 33.96207589999999,
+            "longitude": -84.2166404
         },
         {
             "name": "Center for Family Resources",
@@ -1126,7 +1252,9 @@
             "contactName": "",
             "category": "Housing Assistance",
             "description": "Help with rent and utilities is available for families once-in-a-lifetime so the family can remain in their current home.",
-            "countiesServed": "Cobb"
+            "countiesServed": "Cobb",
+            "latitude": 33.951718,
+            "longitude": -84.52311999999999
         },
         {
             "name": "Center for Family Resources",
@@ -1136,7 +1264,9 @@
             "contactName": "",
             "category": "Food Assistance",
             "description": "They provide a on-site food pantry that has fresh produce and breads, plus other necessities like diapers, formula, and basic hygiene items.",
-            "countiesServed": "Cobb"
+            "countiesServed": "Cobb",
+            "latitude": 33.951718,
+            "longitude": -84.52311999999999
         },
         {
             "name": "Center for Family Resources",
@@ -1146,7 +1276,9 @@
             "contactName": "",
             "category": "Transportation Assistance",
             "description": "They can assist with bus tickets so local individuals can obtain and maintain employment to support themselves and their families.",
-            "countiesServed": "Cobb"
+            "countiesServed": "Cobb",
+            "latitude": 33.951718,
+            "longitude": -84.52311999999999
         },
         {
             "name": "Center for Family Resources",
@@ -1156,7 +1288,9 @@
             "contactName": "",
             "category": "Educational Assistance",
             "description": "They offer GED prep classes, life skills training, as well as counseling and instruction in interviewing skills, job search and retention skills, and resume preparation.",
-            "countiesServed": "Cobb"
+            "countiesServed": "Cobb",
+            "latitude": 33.951718,
+            "longitude": -84.52311999999999
         },
         {
             "name": "Housing Initiative of North Fulton (Home Stretch)",
@@ -1166,7 +1300,9 @@
             "contactName": "",
             "category": "Housing Assistance",
             "description": "Offers working homeless families a proven path toward financial stability, improved employment, stronger family relationships and permanent affordable housing.",
-            "countiesServed": "Fulton"
+            "countiesServed": "Fulton",
+            "latitude": 34.0185138,
+            "longitude": -84.35942159999999
         },
         {
             "name": "Urban League of Greater Atlanta",
@@ -1176,7 +1312,9 @@
             "contactName": "",
             "category": "Employment Services",
             "description": "Provides job search assistance including job matching support cor clients seeking employment.",
-            "countiesServed": "Metro Atlanta"
+            "countiesServed": "Metro Atlanta",
+            "latitude": 33.7599108,
+            "longitude": -84.3866011
         },
         {
             "name": "Urban League of Greater Atlanta",
@@ -1186,7 +1324,9 @@
             "contactName": "",
             "category": "Educational Assistance",
             "description": "They provide training in computer skills, occupational skills, soft skills, job searching techniques, resume writing, interview skills, mock inteviews and job sustainability. They also provide GED preparation and academic upgrade partner referrals.",
-            "countiesServed": "Metro Atlanta"
+            "countiesServed": "Metro Atlanta",
+            "latitude": 33.7599108,
+            "longitude": -84.3866011
         },
         {
             "name": "Urban League of Greater Atlanta",
@@ -1196,7 +1336,9 @@
             "contactName": "",
             "category": "Transitional Employment Services",
             "description": "Designed to assist ex-offenders, the homeless, youth existing foster care, and TANF recipients with counseling, career exploration, testing, placement, referrals, resume preparation, and case management.",
-            "countiesServed": "Metro Atlanta"
+            "countiesServed": "Metro Atlanta",
+            "latitude": 33.7599108,
+            "longitude": -84.3866011
         },
         {
             "name": "Urban League of Greater Atlanta",
@@ -1206,7 +1348,9 @@
             "contactName": "",
             "category": "Housing Assistance",
             "description": "Provides homeownership counseling and education for first time homebuyers and foreclosure intervention/ prevention services for homeowners.",
-            "countiesServed": "Metro Atlanta"
+            "countiesServed": "Metro Atlanta",
+            "latitude": 33.7599108,
+            "longitude": -84.3866011
         },
         {
             "name": "Urban League of Greater Atlanta",
@@ -1216,7 +1360,9 @@
             "contactName": "",
             "category": "Career/ Life Empowerment Services",
             "description": "Designed to assist adults in exploring career opportunites in high growth fields and in developing a Career/ Life Action Plan.",
-            "countiesServed": "Metro Atlanta"
+            "countiesServed": "Metro Atlanta",
+            "latitude": 33.7599108,
+            "longitude": -84.3866011
         },
         {
             "name": "Urban League of Greater Atlanta",
@@ -1226,7 +1372,9 @@
             "contactName": "",
             "category": "Entrepreneurship Assistance",
             "description": "Designed to help start and/ or grow your business. ",
-            "countiesServed": "Metro Atlanta"
+            "countiesServed": "Metro Atlanta",
+            "latitude": 33.7599108,
+            "longitude": -84.3866011
         },
         {
             "name": "Living Room",
@@ -1236,7 +1384,9 @@
             "contactName": "",
             "category": "Housing Assistance",
             "description": "Serves individuals and families living with HIV/AIDS by providing subsidized supportive housing, housing referrals, and housing-related emergency assistance. ",
-            "countiesServed": "Metro Atlanta, Rural Northwest Georgia"
+            "countiesServed": "Metro Atlanta, Rural Northwest Georgia",
+            "latitude": 33.7543349,
+            "longitude": -84.3868116
         },
         {
             "name": "Initiative for Affordable Housing DeKalb",
@@ -1246,7 +1396,9 @@
             "contactName": "",
             "category": "Housing Assistance",
             "description": "Families live for up to two years in Initiative-owned single family houses and apartments in safe, stable neighborhoods where children can attend local schools. With their support, families get jobs, earn income, practice new skills and ultimately move into their own independent housing. \n",
-            "countiesServed": "Metro Atlanta  "
+            "countiesServed": "Metro Atlanta  ",
+            "latitude": 33.7938654,
+            "longitude": -84.2685991
         },
         {
             "name": "Fannie Mae",
@@ -1276,7 +1428,9 @@
             "contactName": "",
             "category": "Information/Resource Services",
             "description": "Provide assistance with information and community resources that relate to disability and community resources/opportunities.",
-            "countiesServed": "Baldwin, Bibb, Crawford, Houston, Jasper, Jones, Monroe, Peach, Pulaski, Putnam, Twiggs, Wilkinson"
+            "countiesServed": "Baldwin, Bibb, Crawford, Houston, Jasper, Jones, Monroe, Peach, Pulaski, Putnam, Twiggs, Wilkinson",
+            "latitude": 32.7984596,
+            "longitude": -83.641285
         },
         {
             "name": "Disability Connections",
@@ -1286,7 +1440,9 @@
             "contactName": "",
             "category": "Peer Support Services",
             "description": "Connect people with disabilities with trained peer supporters who share their valuable life experiences.",
-            "countiesServed": "Baldwin, Bibb, Crawford, Houston, Jasper, Jones, Monroe, Peach, Pulaski, Putnam, Twiggs,Wilkinson"
+            "countiesServed": "Baldwin, Bibb, Crawford, Houston, Jasper, Jones, Monroe, Peach, Pulaski, Putnam, Twiggs,Wilkinson",
+            "latitude": 32.7984596,
+            "longitude": -83.641285
         },
         {
             "name": "Disability Connections",
@@ -1296,7 +1452,9 @@
             "contactName": "",
             "category": "Advocacy Services",
             "description": "Empower individuals to advocate in their own lives (self-advocacy) and for those willing to work along side other people with disabilities to advocate for the rights of all people with disabilities (systems advocacy).",
-            "countiesServed": "Baldwin, Bibb, Crawford, Houston, Jasper, Jones, Monroe, Peach, Pulaski, Putnam, Twiggs, Wilkinson"
+            "countiesServed": "Baldwin, Bibb, Crawford, Houston, Jasper, Jones, Monroe, Peach, Pulaski, Putnam, Twiggs, Wilkinson",
+            "latitude": 32.7984596,
+            "longitude": -83.641285
         },
         {
             "name": "Disability Connections",
@@ -1306,7 +1464,9 @@
             "contactName": "",
             "category": "Independent Living Services",
             "description": "Give people with disabilities the knowledge and skills to lead a more productive and independent life.  Provided training one on one and sometimes in larger groups.  Examples could be how to manage attendant care, learn how to ride public transportation, to navigate around home and community safely and much more.",
-            "countiesServed": "Baldwin, Bibb, Crawford, Houston, Jasper, Jones, Monroe, Peach, Pulaski, Putnam, Twiggs, Wilkinson"
+            "countiesServed": "Baldwin, Bibb, Crawford, Houston, Jasper, Jones, Monroe, Peach, Pulaski, Putnam, Twiggs, Wilkinson",
+            "latitude": 32.7984596,
+            "longitude": -83.641285
         },
         {
             "name": "Disability Connections",
@@ -1316,7 +1476,9 @@
             "contactName": "",
             "category": "Transition Services",
             "description": "Assist people to relocate from nursing facilities or institutions, keep from going into a nursing home or institution or transition from school to community living in the community.",
-            "countiesServed": "Baldwin, Bibb, Crawford, Houston, Jasper, Jones, Monroe, Peach, Pulaski, Putnam, Twiggs, Wilkinson"
+            "countiesServed": "Baldwin, Bibb, Crawford, Houston, Jasper, Jones, Monroe, Peach, Pulaski, Putnam, Twiggs, Wilkinson",
+            "latitude": 32.7984596,
+            "longitude": -83.641285
         },
         {
             "name": "Disability Link",
@@ -1326,7 +1488,9 @@
             "contactName": "",
             "category": "Advocacy Services",
             "description": "Provide information and assistance for people with disabilities and their families in accessing support systems, and promoting changes that enhance full access to the community.",
-            "countiesServed": "Metro Atlanta and Cherokee, Clayton, Cobb, Coweta, Dekalb, Douglas, Fayette, Fulton, Gwinnet, Henry, Newton, Rockdale Counties"
+            "countiesServed": "Metro Atlanta and Cherokee, Clayton, Cobb, Coweta, Dekalb, Douglas, Fayette, Fulton, Gwinnet, Henry, Newton, Rockdale Counties",
+            "latitude": 33.8388662,
+            "longitude": -84.25603
         },
         {
             "name": "Disability Link",
@@ -1336,7 +1500,9 @@
             "contactName": "",
             "category": "Independent Living Services",
             "description": "Provide opportunities for people with disabilities to gain the skills that empower them to live independently.",
-            "countiesServed": "Metro Atlanta and Cherokee, Clayton, Cobb, Coweta, Dekalb, Douglas, Fayette, Fulton, Gwinnet, Henry, Newton, Rockdale Counties."
+            "countiesServed": "Metro Atlanta and Cherokee, Clayton, Cobb, Coweta, Dekalb, Douglas, Fayette, Fulton, Gwinnet, Henry, Newton, Rockdale Counties.",
+            "latitude": 33.8388662,
+            "longitude": -84.25603
         },
         {
             "name": "Disability Link",
@@ -1346,7 +1512,9 @@
             "contactName": "",
             "category": "Information/ Referral Services",
             "description": "Provide comprehensive and up to date information on available resources for people with disabilities and assist individuals by providing referrals for housing, education, attendant assistance services, and community resources for related services.",
-            "countiesServed": "Metro Atlanta and Cherokee, Clayton, Cobb, Coweta, Dekalb, Douglas, Fayette, Fulton, Gwinnet, Henry, Newton, Rockdale Counties"
+            "countiesServed": "Metro Atlanta and Cherokee, Clayton, Cobb, Coweta, Dekalb, Douglas, Fayette, Fulton, Gwinnet, Henry, Newton, Rockdale Counties",
+            "latitude": 33.8388662,
+            "longitude": -84.25603
         },
         {
             "name": "Disability Link",
@@ -1356,7 +1524,9 @@
             "contactName": "",
             "category": "Peer Counseling Services",
             "description": "Offer people with disabilities the opportunity to interact with peers sharing knowledge, experiences and related issues such as friendship, leisure recreation, and family support.",
-            "countiesServed": "Metro Atlanta and Cherokee, Clayton, Cobb, Coweta, Dekalb, Douglas, Fayette, Fulton, Gwinnet, Henry, Newton, Rockdale Counties"
+            "countiesServed": "Metro Atlanta and Cherokee, Clayton, Cobb, Coweta, Dekalb, Douglas, Fayette, Fulton, Gwinnet, Henry, Newton, Rockdale Counties",
+            "latitude": 33.8388662,
+            "longitude": -84.25603
         },
         {
             "name": "Disability Link",
@@ -1366,7 +1536,9 @@
             "contactName": "",
             "category": "Transition Services",
             "description": "Transition services empowers consumers to participate and advance as members of the community. This service focuses on independent living skills, community supports, social leisure activities and appropriate referrals for education, training and employment.",
-            "countiesServed": "Metro Atlanta and Cherokee, Clayton, Cobb, Coweta, Dekalb, Douglas, Fayette, Fulton, Gwinnet, Henry, Newton, Rockdale Counties"
+            "countiesServed": "Metro Atlanta and Cherokee, Clayton, Cobb, Coweta, Dekalb, Douglas, Fayette, Fulton, Gwinnet, Henry, Newton, Rockdale Counties",
+            "latitude": 33.8388662,
+            "longitude": -84.25603
         },
         {
             "name": "Georgia Legal Services Program",
@@ -1376,7 +1548,9 @@
             "contactName": "",
             "category": "Legal Services",
             "description": "We provide representation to eligible clients in selected civil matters.",
-            "countiesServed": "All of Georgia excluding the five-county Metro Atlanta "
+            "countiesServed": "All of Georgia excluding the five-county Metro Atlanta ",
+            "latitude": 33.756481,
+            "longitude": -84.3927702
         },
         {
             "name": "Community Friendship",
@@ -1386,7 +1560,9 @@
             "contactName": "",
             "category": "Mental Health",
             "description": "Provide a supportive community for people whose mental illness prevents them from participating in community life, employment and relationships by offering a comprehensive range of services providing educational support, training, skills building, preparation for work, career development and full integration in the community.",
-            "countiesServed": "Metro Atlanta"
+            "countiesServed": "Metro Atlanta",
+            "latitude": 33.7683969,
+            "longitude": -84.38461509999999
         },
         {
             "name": "DeKalb Community Service Board",
@@ -1396,7 +1572,9 @@
             "contactName": "",
             "category": "Mental Health",
             "description": "The program provides housing options for individuals with severe and persistent mental illness who are homeless or have lower income and would benefit from support in a residential setting. Mental Health Residential Services are integrated therapeutic, rehabilitative, skill building and recovery promoting services. Individuals gain the skills necessary to allow them to remain in or return to naturally occurring community settings and activities. This structured supportive housing program is designed to teach residents the independent living skills they need to manage the symptoms of their mental illnesses and to maintain stable housing.",
-            "countiesServed": "DeKalb "
+            "countiesServed": "DeKalb ",
+            "latitude": 33.7867447,
+            "longitude": -84.278697
         },
         {
             "name": "DeKalb Community Service Board",
@@ -1406,7 +1584,9 @@
             "contactName": "",
             "category": "Developmental Disabilities",
             "description": "They provide a variety of educational, therapeutic and behavioral support services to individuals, ages 21 and up, and their families. Our programs are designed to provide opportunities for individuals to maximize their independence, increase skills and live meaningful lives.",
-            "countiesServed": "DeKalb "
+            "countiesServed": "DeKalb ",
+            "latitude": 33.7867447,
+            "longitude": -84.278697
         },
         {
             "name": "DeKalb Community Service Board",
@@ -1416,7 +1596,9 @@
             "contactName": "",
             "category": "Substance Abuse",
             "description": "Mental Health Residential Services are integrated therapeutic, rehabilitative, skill building and recovery promoting services. Individuals gain the skills necessary to allow them to remain in or return to naturally occurring community settings and activities. This structured supportive housing program is designed to teach residents the independent living skills they need to manage the symptoms of their mental illnesses and to maintain stable housing.",
-            "countiesServed": "DeKalb "
+            "countiesServed": "DeKalb ",
+            "latitude": 33.7867447,
+            "longitude": -84.278697
         },
         {
             "name": "Mental Health America of Georgia",
@@ -1426,7 +1608,9 @@
             "contactName": "",
             "category": "Mental Health",
             "description": "They enhance the mental health and wellness of Georgians through education, outreach, and advocacy.",
-            "countiesServed": "All"
+            "countiesServed": "All",
+            "latitude": 33.8295072,
+            "longitude": -84.3309915
         },
         {
             "name": "Cobb & Douglas County Community Services Board",
@@ -1436,7 +1620,9 @@
             "contactName": "",
             "category": "Substance Abuse",
             "description": "Disease treatment programs are offered at their outpatient locations providing aftercare, case management, childcare, family therapy, GED enrichment, group therapy, HIV education and prevention, individual therapy, medical nurse services, multi-family education, parenting classes, psychiatric referrals, residential services, substance abuse evaluation, and trauma recovery.",
-            "countiesServed": "Cobb, Douglas"
+            "countiesServed": "Cobb, Douglas",
+            "latitude": 33.8601252,
+            "longitude": -84.51947740000001
         },
         {
             "name": "Cobb & Douglas County Community Services Board",
@@ -1446,7 +1632,9 @@
             "contactName": "",
             "category": "Developmental Disabilities",
             "description": "Offers innovative community service programs like supported employment, family support, day service programs, prevocational services, community access services and more.",
-            "countiesServed": "Cobb, Douglas"
+            "countiesServed": "Cobb, Douglas",
+            "latitude": 33.8601252,
+            "longitude": -84.51947740000001
         },
         {
             "name": "Georgia Council on Substance Abuse",
@@ -1456,7 +1644,9 @@
             "contactName": "",
             "category": "Substance Abuse",
             "description": "They provide and disseminate education and training relevant to the addiction recovery field and acting as a clearinghouse of information on substance abuse prevention, treatment and recovery-oriented systems of care.",
-            "countiesServed": "All"
+            "countiesServed": "All",
+            "latitude": 33.8545752,
+            "longitude": -84.2480471
         },
         {
             "name": "Aging and Disability Resource Connection",
@@ -1466,7 +1656,9 @@
             "contactName": "",
             "category": "Elderly Assistance",
             "description": "Supports the larger goals of Department of Human Services by assisting older individuals, at-risk adults, persons with disabilities, their families and caregivers to achieve safe, healthy, independent and self-reliant lives.",
-            "countiesServed": "All"
+            "countiesServed": "All",
+            "latitude": 33.76150459999999,
+            "longitude": -84.3866064
         },
         {
             "name": "Clayton County Aging Program",
@@ -1476,7 +1668,9 @@
             "contactName": "",
             "category": "Elderly Assistance (Meals)",
             "description": "Currently partners with Program Open Hands who brings chilled meals and frozen lunches for Clayton Senior Adult Program participants at the Frank Bailey Senior Center.",
-            "countiesServed": "Clayton"
+            "countiesServed": "Clayton",
+            "latitude": 33.552587,
+            "longitude": -84.36327399999999
         },
         {
             "name": "Clayton County Aging Program",
@@ -1486,7 +1680,9 @@
             "contactName": "",
             "category": "Elderly Assistance (Transportation)",
             "description": "Our transportation services include demand/response services, dialysis appointments, and transportation of clients to our Congregate Program (Clayton Senior Adult Program)",
-            "countiesServed": "Clayton"
+            "countiesServed": "Clayton",
+            "latitude": 33.552587,
+            "longitude": -84.36327399999999
         },
         {
             "name": "Cobb County Senior Services",
@@ -1496,7 +1692,9 @@
             "contactName": "",
             "category": "Elderly Assistance",
             "description": "Their primary goal is to assist clients in their efforts to remain independent through affordable transportation, nutrition, recreation, education, socialization and in home services.",
-            "countiesServed": "Cobb"
+            "countiesServed": "Cobb",
+            "latitude": 33.9262739,
+            "longitude": -84.5741597
         },
         {
             "name": "Gwinnett County Senior Services",
@@ -1506,7 +1704,9 @@
             "contactName": "",
             "category": "Elderly Assistance (Meals)",
             "description": "This service assists seniors who are homebound or unable to prepare their own meals. Meals on Wheels delivers frozen, chilled, or hot meals on a regular basis Monday through Friday. The meals are tailored to meet the nutritional needs of seniors.",
-            "countiesServed": "Gwinnett"
+            "countiesServed": "Gwinnett",
+            "latitude": 33.9514072,
+            "longitude": -83.9931893
         },
         {
             "name": "Gwinnett County Senior Services",
@@ -1516,7 +1716,9 @@
             "contactName": "",
             "category": "Elderly Assistance (Homemaking)",
             "description": "This service helps to meet life's basic needs through light housekeeping.",
-            "countiesServed": "Gwinnett"
+            "countiesServed": "Gwinnett",
+            "latitude": 33.9514072,
+            "longitude": -83.9931893
         },
         {
             "name": "Gwinnett County Senior Services",
@@ -1526,7 +1728,9 @@
             "contactName": "",
             "category": "Elderly Assistance (In-home Respite Care)",
             "description": "The Respite Program is designed for those with or without dementia. It provides caregivers of seniors a break from caring for their loved ones.",
-            "countiesServed": "Gwinnett"
+            "countiesServed": "Gwinnett",
+            "latitude": 33.9514072,
+            "longitude": -83.9931893
         },
         {
             "name": "Gwinnett County Senior Services",
@@ -1536,7 +1740,9 @@
             "contactName": "",
             "category": "Elderly Assistance (Transportation)",
             "description": "Limited transportation is available to seniors who need assistance commuting to and from senior centers, medical appointments, and treatments. Vehicles used to transport seniors are wheelchair accessible.",
-            "countiesServed": "Gwinnett"
+            "countiesServed": "Gwinnett",
+            "latitude": 33.9514072,
+            "longitude": -83.9931893
         },
         {
             "name": "Aesthetic Housing II (Ethel Place)",
@@ -1546,7 +1752,9 @@
             "contactName": "",
             "category": "Elderly Assistance (Housing)",
             "description": "Residency is restricted to persons who earn 50% of the Area Median Income (AMI) or less. Like other rental assistance programs like Section 8, resident's rents are based on their income and the tenant contribution is set at 30% of the tenants income.",
-            "countiesServed": ""
+            "countiesServed": "",
+            "latitude": 31.5075805,
+            "longitude": -82.8379214
         },
         {
             "name": "Atlanta Group Home",
@@ -1556,7 +1764,9 @@
             "contactName": "",
             "category": "Elderly Assistance (Housing)",
             "description": "Residency is restricted to elderly persons who earn 50% of the Area Median Income (AMI) or less. Like other rental assistance programs like Section 8, resident's rents are based on their income and the tenant contribution is set at 30% of the tenants income. (One Bedroom)",
-            "countiesServed": ""
+            "countiesServed": "",
+            "latitude": 33.8385672,
+            "longitude": -84.4283241
         },
         {
             "name": "Atlanta Manor",
@@ -1566,7 +1776,9 @@
             "contactName": "",
             "category": "Elderly Assistance (Housing)",
             "description": "Residency is restricted to elderly persons who earn 50% of the Area Median Income (AMI) or less. Like other rental assistance programs like Section 8, resident's rents are based on their income and the tenant contribution is set at 30% of the tenants income. (3 Bedrooms)",
-            "countiesServed": ""
+            "countiesServed": "",
+            "latitude": 33.7418846,
+            "longitude": -84.50980659999999
         },
         {
             "name": "Butterfield House, Inc.",
@@ -1576,7 +1788,9 @@
             "contactName": "",
             "category": "Disabled Assistance (Housing)",
             "description": "An affordable rental housing community (subsidized and low rent) for disabled persons located in Marietta, GA. (One Room)",
-            "countiesServed": ""
+            "countiesServed": "",
+            "latitude": 33.8762813,
+            "longitude": -84.5941619
         },
         {
             "name": "Cassie's Corner",
@@ -1586,7 +1800,9 @@
             "contactName": "",
             "category": "Housing Assistance",
             "description": "Subsidized, Low-rent apartment. (One bedroom)",
-            "countiesServed": ""
+            "countiesServed": "",
+            "latitude": 33.8081151,
+            "longitude": -84.611341
         },
         {
             "name": "Cherokee Residential Services",
@@ -1596,7 +1812,9 @@
             "contactName": "",
             "category": "Disabled Assistance (Housing)",
             "description": "Cherokee Residential Services is a Disabled low income housing apartment. (One Bedroom)",
-            "countiesServed": ""
+            "countiesServed": "",
+            "latitude": 34.2019925,
+            "longitude": -84.5054023
         },
         {
             "name": "Community Housing",
@@ -1606,7 +1824,9 @@
             "contactName": "",
             "category": "Disabled Assistance (Housing)",
             "description": "For persons with disabilities, residency is restricted to persons who earn 50% of the Area Median Income (AMI) or less. Like other rental assistance programs like Section 8, resident's rents are based on their income and the tenant contribution is set at 30% of the tenants income. (One Bedroom)",
-            "countiesServed": "Decatur"
+            "countiesServed": "Decatur",
+            "latitude": 33.760127,
+            "longitude": -84.2745221
         },
         {
             "name": "DeKalb Mr Homes II",
@@ -1616,7 +1836,9 @@
             "contactName": "",
             "category": "Disabled Assistance (Housing)",
             "description": "Provides supportive housing for persons with disabilities, residency is restricted to persons who earn 50% of the Area Median Income (AMI) or less. Like other rental assistance programs like Section 8, resident's rents are based on their income and the tenant contribution is set at 30% of the tenants income. (One Bedroom)",
-            "countiesServed": "Lithonia"
+            "countiesServed": "Lithonia",
+            "latitude": 33.7607584,
+            "longitude": -84.11799099999999
         },
         {
             "name": "Douglasville VOA HSG",
@@ -1626,7 +1848,9 @@
             "contactName": "",
             "category": "Disabled Assistance (Housing)",
             "description": "Douglasville Voa Hsg is a Disabled low income housing apartment. (One Bedroom)",
-            "countiesServed": "Douglasville"
+            "countiesServed": "Douglasville",
+            "latitude": 33.7555,
+            "longitude": -84.75455300000002
         },
         {
             "name": "Lawrenceville Handicapped Housing",
@@ -1636,7 +1860,9 @@
             "contactName": "",
             "category": "Disabled Assistance (Housing)",
             "description": "Lawrenceville Handicapped Housing is a disabled low income housing apartment. (1-2 Bedrooms)",
-            "countiesServed": "Lawrenceville"
+            "countiesServed": "Lawrenceville",
+            "latitude": 33.8944834,
+            "longitude": -84.1442144
         },
         {
             "name": "Gwinnett County Residential Services, Inc.",
@@ -1646,7 +1872,9 @@
             "contactName": "",
             "category": "Disabled Assistance (Housing)",
             "description": "Supportive Housing for Persons with Disabilities program, residency is restricted to persons who earn 50% of the Area Median Income (AMI) or less. Like other rental assistance programs like Section 8, resident's rents are based on their income and the tenant contribution is set at 30% of the tenants income. (One bedroom)",
-            "countiesServed": "Gwinnett "
+            "countiesServed": "Gwinnett ",
+            "latitude": 33.8363053,
+            "longitude": -84.02940249999999
         },
         {
             "name": "North Fulton County Group Home",
@@ -1656,7 +1884,9 @@
             "contactName": "",
             "category": "Disabled Assistance (Housing)",
             "description": "North Fulton County Group Home is a Disabled low income housing apartment subsidized by the federal governments HUD (Housing and Urban Development Division). (One Room)",
-            "countiesServed": "North Fulton "
+            "countiesServed": "North Fulton ",
+            "latitude": 34.0505209,
+            "longitude": -84.3253202
         },
         {
             "name": "North Metro Group Homes Assn Inc",
@@ -1666,7 +1896,9 @@
             "contactName": "",
             "category": "Elderly Assistance (Housing)",
             "description": "A 6 unit low income housing apartment community in Roswell for seniors. Some or all apartments in this community are rent subsidized, which means rent is income based.",
-            "countiesServed": ""
+            "countiesServed": "",
+            "latitude": 34.0672976,
+            "longitude": -84.3360252
         },
         {
             "name": "Positive Impact Residential Serv.",
@@ -1676,7 +1908,9 @@
             "contactName": "",
             "category": "",
             "description": "They provide housing for persons with mental health complicatons and require a supportive community. They have community mental health centers as well. (Mental Health halfway houses)",
-            "countiesServed": ""
+            "countiesServed": "",
+            "latitude": 33.773636,
+            "longitude": -84.31461329999999
         },
         {
             "name": "The Arc House",
@@ -1686,7 +1920,9 @@
             "contactName": "",
             "category": "",
             "description": "Supportive Housing for Persons with Disabilities program, residency is restricted to persons who earn 50% of the Area Median Income (AMI) or less. Like other rental assistance programs like Section 8, resident's rents are based on their income and the tenant contribution is set at 30% of the tenants income. (One room)",
-            "countiesServed": ""
+            "countiesServed": "",
+            "latitude": 33.8907538,
+            "longitude": -84.5442922
         },
         {
             "name": "The Greenbrook House",
@@ -1696,7 +1932,9 @@
             "contactName": "",
             "category": "Elderly Assistance (Housing)",
             "description": "The House on Greenbrook Circle is an assisted living facility. Assisted living facilities are an apartment-style habitat designed to focus on providing assistance with daily living activities. They provide a higher level of service for the elderly which can include preparing meals, housekeeping, medication assistance, laundry, and also do regular check-in's on the residents.",
-            "countiesServed": ""
+            "countiesServed": "",
+            "latitude": 33.8011654,
+            "longitude": -84.6016069
         },
         {
             "name": "The Lewis Road House",
@@ -1706,7 +1944,9 @@
             "contactName": "",
             "category": "Disabled Assistance (Housing)",
             "description": "Subsidized, Low-Rent Apartment for the Disabled. (One room)",
-            "countiesServed": ""
+            "countiesServed": "",
+            "latitude": 33.83935,
+            "longitude": -84.68733979999999
         },
         {
             "name": "Travis House",
@@ -1716,7 +1956,9 @@
             "contactName": "",
             "category": "Disabled Assistance (Housing)",
             "description": "Supportive Housing for Persons with Disabilities program, residency is restricted to persons who earn 50% of the Area Median Income (AMI) or less. Like other rental assistance programs like Section 8, resident's rents are based on their income and the tenant contribution is set at 30% of the tenants income. (One room)",
-            "countiesServed": ""
+            "countiesServed": "",
+            "latitude": 33.7536786,
+            "longitude": -84.1982744
         },
         {
             "name": "South Metro Homes Inc.",
@@ -1726,7 +1968,9 @@
             "contactName": "",
             "category": "Disabled Assistance (Housing)",
             "description": "Is a disabled low income housing apartment subsidized by the federal governments hud (housing and urban development division). (One room)",
-            "countiesServed": ""
+            "countiesServed": "",
+            "latitude": 34.0505209,
+            "longitude": -84.3253202
         },
         {
             "name": "South Fulton Homes, Inc.",
@@ -1736,7 +1980,9 @@
             "contactName": "",
             "category": "Disabled Assistance (Housing)",
             "description": "Supportive Housing for Persons with Disabilities program, residency is restricted to persons who earn 50% of the Area Median Income (AMI) or less. Like other rental assistance programs like Section 8, resident's rents are based on their income and the tenant contribution is set at 30% of the tenants income. (One room)",
-            "countiesServed": ""
+            "countiesServed": "",
+            "latitude": 33.5832603,
+            "longitude": -84.5542614
         },
         {
             "name": "Sussex Court Residential Services",
@@ -1746,7 +1992,9 @@
             "contactName": "",
             "category": "Disabled Assistance (Housing)",
             "description": "Provides disabled low income housing apartments. (One room)",
-            "countiesServed": ""
+            "countiesServed": "",
+            "latitude": 33.8513801,
+            "longitude": -84.033388
         },
         {
             "name": "UCP of Atlanta",
@@ -1756,7 +2004,9 @@
             "contactName": "",
             "category": "Disabled Assistance (Housing)",
             "description": "UCP of Georgia offers a range of community living options to enable adults with intellectual and developmental disabilities to live in residential settings which best meet their individual choices and needs. These options are designed to help individuals become as independent as possible and enjoy full access to all aspects of community life. UCP community living options include single family houses, host homes and supported living. ",
-            "countiesServed": ""
+            "countiesServed": "",
+            "latitude": 33.8749321,
+            "longitude": -84.2767969
         }
     ]
 }

@@ -10,6 +10,46 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Stability Net Search View Controller-->
+        <scene sceneID="eBE-z0-Svd">
+            <objects>
+                <viewController storyboardIdentifier="StabilityNetSearchViewControllerId" id="bg9-KS-cmT" customClass="StabilityNetSearchViewController" customModule="TGK" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TR8-W0-wyd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="j1c-UW-fFz">
+                                <rect key="frame" x="0.0" y="76" width="375" height="591"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <searchBar contentMode="redraw" placeholder="Search Stability Network" translatesAutoresizingMaskIntoConstraints="NO" id="qZ4-Gp-CKB">
+                                <rect key="frame" x="0.0" y="20" width="375" height="56"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="qZ4-Gp-CKB" firstAttribute="top" secondItem="IUY-0V-mOf" secondAttribute="top" id="Ard-Qs-1PY"/>
+                            <constraint firstItem="qZ4-Gp-CKB" firstAttribute="leading" secondItem="IUY-0V-mOf" secondAttribute="leading" id="DZa-LR-IeM"/>
+                            <constraint firstItem="IUY-0V-mOf" firstAttribute="bottom" secondItem="j1c-UW-fFz" secondAttribute="bottom" id="Gm8-ZV-PZx"/>
+                            <constraint firstItem="j1c-UW-fFz" firstAttribute="leading" secondItem="IUY-0V-mOf" secondAttribute="leading" id="H6i-nc-y3b"/>
+                            <constraint firstItem="j1c-UW-fFz" firstAttribute="top" secondItem="qZ4-Gp-CKB" secondAttribute="bottom" id="HTG-KW-Yed"/>
+                            <constraint firstItem="IUY-0V-mOf" firstAttribute="trailing" secondItem="j1c-UW-fFz" secondAttribute="trailing" id="qAn-WS-nfX"/>
+                            <constraint firstItem="IUY-0V-mOf" firstAttribute="trailing" secondItem="qZ4-Gp-CKB" secondAttribute="trailing" id="t3c-Dx-41m"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="IUY-0V-mOf"/>
+                    </view>
+                    <connections>
+                        <outlet property="searchBar" destination="qZ4-Gp-CKB" id="3BQ-Hy-8qT"/>
+                        <outlet property="tableView" destination="j1c-UW-fFz" id="tU7-tP-A9i"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bkU-EO-Ziu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-615.20000000000005" y="247.82608695652175"/>
+        </scene>
         <!--Safety Net Detail Sheet View Controller-->
         <scene sceneID="pvu-T7-G7N">
             <objects>

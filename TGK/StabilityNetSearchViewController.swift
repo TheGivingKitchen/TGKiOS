@@ -1,24 +1,30 @@
 //
-//  SafetyNetHomeViewController.swift
+//  StabilityNetSearchViewController.swift
 //  TGK
 //
-//  Created by Jay Park on 8/28/18.
-//  Copyright © 2018 TheGivingKitchen. All rights reserved.
+//  Created by Jay Park on 8/4/19.
+//  Copyright © 2019 TheGivingKitchen. All rights reserved.
 //
 
 import UIKit
 import MapKit
 import Firebase
 
-class SafetyNetHomeViewController: UIViewController {
-    
+protocol StabilityNetSearchViewControllerDelegate:class {
+    func stabilityNetSearchViewControllerDidFind(resources: [SafetyNetResourceModel])
+}
+
+class StabilityNetSearchViewController: UIViewController {
+
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var searchExpandableHeaderHeightConstraint: NSLayoutConstraint!
-    @IBOutlet weak var searchExpandableHeaderBottomDivider: UIView!
-    @IBOutlet weak var searchExpandableHeaderCloseButton: UIButton!
-    @IBOutlet weak var searchCountyLabel: UILabel!
+    @IBOutlet weak var searchBar: UISearchBar!
     
-    fileprivate let searchExpandableHeaderExpandedHeight:CGFloat = 50.0
+    weak var delegate:StabilityNetSearchViewControllerDelegate?
+    
+    let topStickyPoint: CGFloat = 100
+    var bottomStickyPoint: CGFloat {
+        return UIScreen.main.bounds.height - 350
+    }
     
     private enum SafetyNetTableSection:Int {
         case tooltip = 0
@@ -34,7 +40,7 @@ class SafetyNetHomeViewController: UIViewController {
     }
     
     fileprivate var isTextSearching:Bool {
-        if self.searchController.searchBar.text.isNilOrEmpty {
+        if self.searchBar.text.isNilOrEmpty {
             return false
         }
         return true
@@ -42,7 +48,7 @@ class SafetyNetHomeViewController: UIViewController {
     
     fileprivate var isLocationBasedSearching:Bool = false {
         didSet {
-            self.configureViewControlsBasedOnState()
+            //do something
         }
     }
     
@@ -61,72 +67,39 @@ class SafetyNetHomeViewController: UIViewController {
     private let safetyNetTooltipReuseId = "safetyNetTooltipReuseId"
     private let safetyNetFacebookCellReuseId = "safetyNetFacebookCellReuseId"
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "Stability Network"
         self.styleView()
         
-        self.collapseSearchHeader()
+        let viewPanGesture = UIPanGestureRecognizer(target: self, action: #selector(panGesture(_:)))
+        viewPanGesture.delegate = self
+        view.addGestureRecognizer(viewPanGesture)
         
         self.tableView.register(UINib(nibName: "SafetyNetInfoTableViewCell", bundle: nil), forCellReuseIdentifier: self.safetyNetCellReuseId)
         self.tableView.register(UINib(nibName: "FacebookGroupAccessTableViewCell", bundle: nil), forCellReuseIdentifier: self.safetyNetFacebookCellReuseId)
         self.tableView.register(UINib(nibName: "SafetyNetHomeTooltipCell", bundle: nil), forCellReuseIdentifier: self.safetyNetTooltipReuseId)
         
-        self.tableView.tableFooterView = UIView()
+//        self.tableView.tableFooterView = UIView()
+        self.tableView.keyboardDismissMode = .onDrag
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.dataSource = self
         self.tableView.delegate = self
         
         self.setupSearchController()
-        self.configureViewControlsBasedOnState()
         
         self.fetchData()
-        
-        
     }
     
     private func styleView() {
-        self.searchCountyLabel.font = UIFont.tgkBody
-        self.searchCountyLabel.textColor = UIColor.tgkDarkGray
-        
-        self.searchExpandableHeaderBottomDivider.backgroundColor = UIColor.tgkBackgroundGray
-        
-        self.searchExpandableHeaderCloseButton.setTemplateImage(named: "iconCloseX", for: .normal, tint: UIColor.tgkDarkGray)
+        UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).backgroundColor = UIColor.tgkBackgroundGray
+
+        self.roundTopCorners()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.fetchData()
-    }
-    
-    @objc func mapViewBarButtonItemPressed() {
-        let mapViewVC = UIStoryboard(name: "SafetyNet", bundle: nil).instantiateViewController(withIdentifier: "StabilityNetMapViewControllerId") as! StabilityNetMapViewController
-        self.navigationController?.pushViewController(mapViewVC, animated: true)
-    }
-    
-    func configureViewControlsBasedOnState() {
-
-        if self.isLocationBasedSearching {
-            self.expandSearchHeader()
-            
-            let mapViewBarButton = UIBarButtonItem(barButtonSystemItem: .bookmarks, target: self, action: #selector(mapViewBarButtonItemPressed))
-            self.navigationItem.rightBarButtonItem = mapViewBarButton
-            
-            if let userCounty = self.userLocationCounty {
-                self.searchCountyLabel.text = "Searching within \(userCounty)"
-            }
-            else {
-                self.searchCountyLabel.text = "Searching within your county"
-            }
-        }
-        else {
-            self.collapseSearchHeader()
-            
-            let locationFilterBarButton = UIBarButtonItem(image: UIImage(named: "iconLocationMarker"), style: .plain, target: self, action: #selector(changeToLocationSearchPressed(_:)))
-            self.navigationItem.rightBarButtonItem = locationFilterBarButton
-        }
     }
     
     func fetchData() {
@@ -143,57 +116,86 @@ class SafetyNetHomeViewController: UIViewController {
             
             self.safetyNetModels = safetyNetModels
             self.tableView.reloadData()
-        }
-    }
-    
-    func collapseSearchHeader() {
-        UIView.animate(withDuration: 0.25) {
-            self.searchExpandableHeaderHeightConstraint.constant = 0
-            self.view.layoutIfNeeded()
-        }
-    }
-    
-    func expandSearchHeader() {
-        UIView.animate(withDuration: 0.25) {
-            self.searchExpandableHeaderHeightConstraint.constant = self.searchExpandableHeaderExpandedHeight
-            self.view.layoutIfNeeded()
-        }
-    }
-    
-    @IBAction func searchExpandableHeaderClosePressed(_ sender: Any) {
-        self.changeToNormalSearch()
-    }
-    
-    @IBAction func changeToLocationSearchPressed(_ sender: Any) {
-        switch CLLocationManager.authorizationStatus() {
-        case .notDetermined:
-            let locationWarmingVC = LocationWarmingViewController.instantiateWith(delegate: self)
             
-            self.tabBarController?.present(locationWarmingVC, animated: true)
-            break
-            
-        case .restricted, .denied:
-            self.showLocationServicesDeniedAlert()
-            break
-            
-        case .authorizedWhenInUse, .authorizedAlways:
-            self.getUserLocationAndFilter()
-            break
+            let resourcesToShowOnMap = self.isSearchingOrFiltering ? self.filteredSafetyNetModels : self.safetyNetModels
+            self.delegate?.stabilityNetSearchViewControllerDidFind(resources: resourcesToShowOnMap)
         }
     }
     
-    func changeToNormalSearch() {
-        self.searchController.searchBar.text = ""
-        self.currentUserCounty = nil
-        self.isLocationBasedSearching = false
-        self.tableView.reloadData()
+    
+    
+    @objc func panGesture(_ recognizer: UIPanGestureRecognizer) {
         
-        Analytics.logEvent(customName: .safetyNetChangeToGlobalSearch)
+        let translation = recognizer.translation(in: self.view)
+        let velocity = recognizer.velocity(in: self.view)
+//        print(velocity)
+        
+        let currentY = self.view.frame.minY
+        
+        self.view.frame = CGRect(x: 0, y: currentY + translation.y, width: view.frame.width, height: view.frame.height)
+        recognizer.setTranslation(CGPoint.zero, in: self.view)
+        
+        if recognizer.state == .ended {
+            self.searchBar.resignFirstResponder()
+            
+            UIView.animate(withDuration: 0.35, delay: 0.0, usingSpringWithDamping: 0.75, initialSpringVelocity: 0.0, options: [.allowUserInteraction], animations: {[weak self] in
+                if let unwrappedSelf = self {
+                    
+                    //the point at which the velocity of the movement combined with the "ended" recognition state counts as a user flicking. values are arbitrary
+                    let downWardFlickThreshold:CGFloat = 1400.0
+                    let upwardFlickThreshold:CGFloat = -1400.0
+                    let midpoint = (unwrappedSelf.topStickyPoint + unwrappedSelf.bottomStickyPoint) / 2.0
+                    var targetY:CGFloat = 0
+                    
+                    switch velocity.y {
+                    case _ where velocity.y > downWardFlickThreshold:
+                        targetY = unwrappedSelf.bottomStickyPoint
+                        break
+                    case _ where velocity.y < upwardFlickThreshold:
+                        targetY = unwrappedSelf.topStickyPoint
+                        break
+                    default:
+                        targetY = unwrappedSelf.view.frame.minY > midpoint ? unwrappedSelf.bottomStickyPoint : unwrappedSelf.topStickyPoint
+                        break
+                    }
+                    
+                    unwrappedSelf.view.frame = CGRect(x: 0, y: targetY, width: unwrappedSelf.view.frame.width, height: unwrappedSelf.view.frame.height)
+                }
+                }, completion: { [weak self] _ in
+                    if ( velocity.y < 0 ) {
+                        self?.tableView.isScrollEnabled = true
+                    }
+            })
+        }
+    }
+    
+    func moveToTopStickyPoint() {
+        DispatchQueue.main.async {
+            UIView.animate(withDuration: 0.35, delay: 0.0, options: [], animations: {[weak self] in
+                if let unwrappedSelf = self {
+                    unwrappedSelf.view.frame = CGRect(x: 0, y: unwrappedSelf.topStickyPoint, width: unwrappedSelf.view.frame.width, height: unwrappedSelf.view.frame.height)
+                }
+                }, completion: { _ in
+            })
+        }
+    }
+    
+    func moveToBottomStickyPoint() {
+        DispatchQueue.main.async {
+            self.searchBar.resignFirstResponder()
+            
+            UIView.animate(withDuration: 0.35, delay: 0.0, options: [], animations: {[weak self] in
+                if let unwrappedSelf = self {
+                    unwrappedSelf.view.frame = CGRect(x: 0, y: unwrappedSelf.bottomStickyPoint, width: unwrappedSelf.view.frame.width, height: unwrappedSelf.view.frame.height)
+                }
+                }, completion: { _ in
+            })
+        }
     }
 }
 
 //MARK: Tableview delegate and datasource
-extension SafetyNetHomeViewController: UITableViewDelegate, UITableViewDataSource {
+extension StabilityNetSearchViewController: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 3
     }
@@ -256,7 +258,7 @@ extension SafetyNetHomeViewController: UITableViewDelegate, UITableViewDataSourc
     }
 }
 
-extension SafetyNetHomeViewController :SafetyNetHomeTooltipCellDelegate {
+extension StabilityNetSearchViewController :SafetyNetHomeTooltipCellDelegate {
     func safetyNetHomeTooltipCellDidPressClose(cell: SafetyNetHomeTooltipCell) {
         AppDataStore.hasClosedSafetyNetTooltip = true
         self.tableView.reloadSections(NSIndexSet(index: SafetyNetTableSection.tooltip.rawValue) as IndexSet, with: UITableViewRowAnimation.bottom)
@@ -272,7 +274,7 @@ extension SafetyNetHomeViewController :SafetyNetHomeTooltipCellDelegate {
 
 
 //MARK: - FacebookCell Delegate
-extension SafetyNetHomeViewController:FacebookGroupAccessTableViewCellDelegate {
+extension StabilityNetSearchViewController:FacebookGroupAccessTableViewCellDelegate {
     func facebookGroupAccessTableViewCellRequestOpen(url: URL) {
         let tgkSafariVC = TGKSafariViewController(url: url)
         self.present(tgkSafariVC, animated: true)
@@ -280,18 +282,12 @@ extension SafetyNetHomeViewController:FacebookGroupAccessTableViewCellDelegate {
 }
 
 //MARK: - UISearchResultsUpdating Delegate
-extension SafetyNetHomeViewController: UISearchResultsUpdating, UISearchBarDelegate {
+extension StabilityNetSearchViewController: UISearchBarDelegate {
     
     func setupSearchController() {
-        self.searchController.searchBar.delegate = self
-        self.searchController.searchResultsUpdater = self
-        self.searchController.obscuresBackgroundDuringPresentation = false
-        self.searchController.searchBar.placeholder = "Search Stability Network"
-        self.searchController.searchBar.barTintColor = UIColor.tgkBlue
-        self.searchController.searchBar.tintColor = UIColor.tgkOrange
+        self.searchBar.delegate = self
+        
         UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).font = UIFont.tgkBody
-        self.navigationItem.searchController = self.searchController
-        self.navigationItem.hidesSearchBarWhenScrolling = false
         self.definesPresentationContext = true
     }
     
@@ -305,15 +301,21 @@ extension SafetyNetHomeViewController: UISearchResultsUpdating, UISearchBarDeleg
         }
     }
     
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        self.moveToTopStickyPoint()
+    }
+    
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if searchText.isEmpty {
             self.scrollToTop()
             self.tableView.reloadData()
         }
-    }
-    
-    func updateSearchResults(for searchController: UISearchController) {
-        self.filterContentForSearchText(searchController.searchBar.text)
+        else {
+            self.filterContentForSearchText(searchText)
+        }
+        
+        let resourcesToShowOnMap = self.isSearchingOrFiltering ? self.filteredSafetyNetModels : self.safetyNetModels
+        self.delegate?.stabilityNetSearchViewControllerDidFind(resources: resourcesToShowOnMap)
     }
     
     func filterContentForSearchText(_ searchText:String?) {
@@ -406,7 +408,7 @@ extension SafetyNetHomeViewController: UISearchResultsUpdating, UISearchBarDeleg
 }
 
 //MARK: CLLocationManagerDelegate
-extension SafetyNetHomeViewController:CLLocationManagerDelegate {
+extension StabilityNetSearchViewController:CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         switch CLLocationManager.authorizationStatus() {
         case .notDetermined:
@@ -441,14 +443,11 @@ extension SafetyNetHomeViewController:CLLocationManagerDelegate {
                     
                     self.searchController.searchBar.text = ""
                     self.isLocationBasedSearching = true
-                    self.updateSearchResults(for: self.searchController)
                     self.scrollToTop()
                     self.tableView.reloadData()
                 }
             }
         }
-        
-        
     }
     
     func showLocationServicesDeniedAlert() {
@@ -471,7 +470,7 @@ extension SafetyNetHomeViewController:CLLocationManagerDelegate {
 }
 
 //MARK: LocationWarmingViewControllerDelegate
-extension SafetyNetHomeViewController:LocationWarmingViewControllerDelegate {
+extension StabilityNetSearchViewController:LocationWarmingViewControllerDelegate {
     func locationWarmingViewControllerDidAccept(viewController: LocationWarmingViewController) {
         viewController.dismiss(animated: true)
         
@@ -483,3 +482,40 @@ extension SafetyNetHomeViewController:LocationWarmingViewControllerDelegate {
         viewController.dismiss(animated: true)
     }
 }
+
+//MARK: PanGestureRecognizerDelegate
+extension StabilityNetSearchViewController: UIGestureRecognizerDelegate {
+    
+    //TODO these two delegate functions aren't quite right. they work but the logic is flawed
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        
+        let gesture = (gestureRecognizer as! UIPanGestureRecognizer)
+        let direction = gesture.velocity(in: view).y
+        let y = view.frame.minY
+        
+        //if we're at the topStickyPoint, and the of the tableview, and the user is dragging downward, disable scrolling to enable the flick downward
+        if ((y == topStickyPoint && tableView.contentOffset.y == 0 && direction > 0) || (y == bottomStickyPoint)) {
+            tableView.isScrollEnabled = false
+        }
+        else {
+            tableView.isScrollEnabled = true
+        }
+
+        return false
+    }
+    
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldBeRequiredToFailBy otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        
+        let gesture = (gestureRecognizer as! UIPanGestureRecognizer)
+        let direction = gesture.velocity(in: view).y
+        let y = view.frame.minY
+        
+        //if we're at the topStickyPoint, and the top of the tableview, just allow the tableview to scroll and cancel the panGesture so it doesn't try to move the view upward.
+        if ((y == topStickyPoint && tableView.contentOffset.y == 0 && direction < 0) || (y == bottomStickyPoint)) {
+            return true
+        }
+        
+        return false
+    }
+}
+

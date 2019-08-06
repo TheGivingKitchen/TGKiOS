@@ -63,7 +63,6 @@ class SafetyNetResourceModel:NSObject, Codable {
         category = try container.decodeIfPresent(String.self, forKey: .category)
         resourceDescription = try container.decodeIfPresent(String.self, forKey: .resourceDescription)
         
-        
         let addressUnsanitized = try container.decodeIfPresent(String.self, forKey: .address)
         if let addressUnsanitized = addressUnsanitized {
             let trimmedAddress = addressUnsanitized.trimmingCharacters(in: .whitespacesAndNewlines)

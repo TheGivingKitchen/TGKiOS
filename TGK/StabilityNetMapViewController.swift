@@ -13,10 +13,110 @@ class StabilityNetMapViewController: UIViewController {
     
     @IBOutlet weak var mapView: MKMapView!
     
+    var filteredResources:[SafetyNetResourceModel] = []
+    
+    let locationManager = CLLocationManager()
+    
+    let mileRadius = CLLocationDistance(24140) //15 miles for now
+    
+    var searchViewController:StabilityNetSearchViewController!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        let mapTapGesture = UITapGestureRecognizer(target: self, action: #selector(mapTapGesture(_:)))
+        self.mapView.addGestureRecognizer(mapTapGesture)
+        
+        if let userLocation = self.locationManager.location?.coordinate {
+            self.centerMapOnLocation(location: userLocation)
+            self.addRadiusCircle(location: userLocation)
+        }
+        
+        self.mapView.delegate = self
+        self.mapView.showsUserLocation = true
+        
+        self.addAnnotationsToMap()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.addBottomSheetView()
+    }
+    
+    func addBottomSheetView(scrollable: Bool? = true) {
+        self.searchViewController = UIStoryboard(name: "SafetyNet", bundle: nil).instantiateViewController(withIdentifier: "StabilityNetSearchViewControllerId") as? StabilityNetSearchViewController
+        
+        self.addChildViewController(self.searchViewController)
+        self.view.addSubview(self.searchViewController.view)
+        self.searchViewController.didMove(toParentViewController: self)
+        
+        let height = view.frame.height - self.searchViewController.topStickyPoint
+        let width  = view.frame.width
+        self.searchViewController.view.frame = CGRect(x: 0, y: self.searchViewController.bottomStickyPoint, width: width, height: height)
+        
+        self.searchViewController.delegate = self
+    }
+    
+    func addAnnotationsToMap() {
+        let geoCoder = CLGeocoder()
+        if let location = locationManager.location {
+            geoCoder.reverseGeocodeLocation(location) { (placemarks, error) in
+                let circularRegion = CLCircularRegion(center: location.coordinate, radius: self.mileRadius, identifier: "aroundUser")
+                
+                var resourcesInRegion = [SafetyNetResourceModel]()
+                for resource in self.filteredResources {
+                    if let resourceCoordinates = resource.location {
+                        if circularRegion.contains(resourceCoordinates) {
+                            resourcesInRegion.append(resource)
+                        }
+                    }
+                }
+                self.mapView.addAnnotations(resourcesInRegion)
+            }
+        }
+    }
+    
+    func centerMapOnLocation(location: CLLocationCoordinate2D) {
+        let coordinateRegion = MKCoordinateRegionMakeWithDistance(location, self.mileRadius, self.mileRadius * 1.5)
+        mapView.setRegion(coordinateRegion, animated: true)
+    }
+    
+    func addRadiusCircle(location: CLLocationCoordinate2D){
+        let circle = MKCircle(center: location, radius: self.mileRadius)
+        self.mapView.add(circle)
+    }
+    
+    @objc func mapTapGesture(_ recognizer:UITapGestureRecognizer) {
+        self.searchViewController.moveToBottomStickyPoint()
     }
 
+}
 
+//MARK: MKMapViewDelegate
+extension StabilityNetMapViewController: MKMapViewDelegate {
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+        if overlay is MKCircle {
+            let circle = MKCircleRenderer(overlay: overlay)
+            circle.strokeColor = UIColor.tgkBlue
+            circle.fillColor = UIColor.tgkLightTeal.withAlphaComponent(0.3)
+            circle.lineWidth = 1
+            return circle
+        } else {
+            return MKPolylineRenderer()
+        }
+    }
+    
+    func mapView(_ mapView: MKMapView, regionWillChangeAnimated animated: Bool) {
+        self.searchViewController.moveToBottomStickyPoint()
+    }
+}
+
+//MARK: StabilityNetSearchViewControllerDelegate
+extension StabilityNetMapViewController:StabilityNetSearchViewControllerDelegate {
+    func stabilityNetSearchViewControllerDidFind(resources: [SafetyNetResourceModel]) {
+        self.mapView.removeAnnotations(self.filteredResources)
+        self.filteredResources = resources
+        self.addAnnotationsToMap()
+    }
 }
