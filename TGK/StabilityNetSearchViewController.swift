@@ -12,6 +12,7 @@ import Firebase
 
 protocol StabilityNetSearchViewControllerDelegate:class {
     func stabilityNetSearchViewControllerDidFind(resources: [SafetyNetResourceModel])
+    func stabilityNetSearchViewControllerDidSelect(resource: SafetyNetResourceModel)
 }
 
 class StabilityNetSearchViewController: UIViewController {
@@ -23,17 +24,16 @@ class StabilityNetSearchViewController: UIViewController {
     
     let topStickyPoint: CGFloat = 100
     var bottomStickyPoint: CGFloat {
-        return UIScreen.main.bounds.height - 350
+        return UIScreen.main.bounds.height - 400
     }
     
     private enum SafetyNetTableSection:Int {
-        case tooltip = 0
-        case facebook = 1
-        case resource = 2
+        case categoryFilter = 0
+        case resource = 1
     }
     
     fileprivate var isSearchingOrFiltering:Bool {
-        if self.isTextSearching == true || self.isLocationBasedSearching == true {
+        if self.isTextSearching == true || self.isLocationBasedSearching == true || self.selectedCategories.count > 0 {
             return true
         }
         return false
@@ -48,7 +48,7 @@ class StabilityNetSearchViewController: UIViewController {
     
     fileprivate var isLocationBasedSearching:Bool = false {
         didSet {
-            //do something
+            //TODO
         }
     }
     
@@ -67,6 +67,10 @@ class StabilityNetSearchViewController: UIViewController {
     private let safetyNetTooltipReuseId = "safetyNetTooltipReuseId"
     private let safetyNetFacebookCellReuseId = "safetyNetFacebookCellReuseId"
     
+    //persistent category filter cell to preserve category selections while scrolling
+    private var stabilityNetCategoryFilterCell:StabilityNetCategoryFilterTableViewCell?
+    private var selectedCategories:Set<String> = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -78,7 +82,6 @@ class StabilityNetSearchViewController: UIViewController {
         
         self.tableView.register(UINib(nibName: "SafetyNetInfoTableViewCell", bundle: nil), forCellReuseIdentifier: self.safetyNetCellReuseId)
         self.tableView.register(UINib(nibName: "FacebookGroupAccessTableViewCell", bundle: nil), forCellReuseIdentifier: self.safetyNetFacebookCellReuseId)
-        self.tableView.register(UINib(nibName: "SafetyNetHomeTooltipCell", bundle: nil), forCellReuseIdentifier: self.safetyNetTooltipReuseId)
         
 //        self.tableView.tableFooterView = UIView()
         self.tableView.keyboardDismissMode = .onDrag
@@ -197,20 +200,12 @@ class StabilityNetSearchViewController: UIViewController {
 //MARK: Tableview delegate and datasource
 extension StabilityNetSearchViewController: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 3
+        return 2
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
-        case SafetyNetTableSection.tooltip.rawValue:
-            if AppDataStore.hasClosedSafetyNetTooltip || self.isSearchingOrFiltering {
-                return 0
-            }
-            return 1
-        case SafetyNetTableSection.facebook.rawValue:
-            if self.isSearchingOrFiltering {
-                return 0
-            }
+        case SafetyNetTableSection.categoryFilter.rawValue:
             return 1
         case SafetyNetTableSection.resource.rawValue:
             if self.isSearchingOrFiltering {
@@ -224,15 +219,18 @@ extension StabilityNetSearchViewController: UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.section {
-        case SafetyNetTableSection.tooltip.rawValue:
-            let cell = tableView.dequeueReusableCell(withIdentifier: self.safetyNetTooltipReuseId) as! SafetyNetHomeTooltipCell
-            cell.delegate = self
-            return cell
+        case SafetyNetTableSection.categoryFilter.rawValue:
             
-        case SafetyNetTableSection.facebook.rawValue:
-            let cell = tableView.dequeueReusableCell(withIdentifier: self.safetyNetFacebookCellReuseId) as! FacebookGroupAccessTableViewCell
-            cell.delegate = self
-            return cell
+            //keep the category cell in memory to preserve state
+            if let persistentCategoryFilterCell  = self.stabilityNetCategoryFilterCell {
+                return persistentCategoryFilterCell
+            }
+            else {
+                let cell = tableView.dequeueReusableCell(withIdentifier: "StabilityNetCategoryFilterTableViewCellId") as! StabilityNetCategoryFilterTableViewCell
+                cell.delegate = self
+                self.stabilityNetCategoryFilterCell = cell
+                return cell
+            }
             
         case SafetyNetTableSection.resource.rawValue:
             let cell = tableView.dequeueReusableCell(withIdentifier: self.safetyNetCellReuseId) as! SafetyNetInfoTableViewCell
@@ -253,15 +251,23 @@ extension StabilityNetSearchViewController: UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let resource = self.isSearchingOrFiltering ? self.filteredSafetyNetModels[indexPath.row] : self.safetyNetModels[indexPath.row]
-        let detailVC = SafetyNetDetailSheetViewController.instantiateWith(safetyNetResource: resource)
-        self.tabBarController?.present(detailVC, animated: true)
+        self.delegate?.stabilityNetSearchViewControllerDidSelect(resource: resource)
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        switch indexPath.section {
+        case SafetyNetTableSection.categoryFilter.rawValue:
+            return 120
+        default:
+            return UITableViewAutomaticDimension
+        }
     }
 }
 
 extension StabilityNetSearchViewController :SafetyNetHomeTooltipCellDelegate {
     func safetyNetHomeTooltipCellDidPressClose(cell: SafetyNetHomeTooltipCell) {
         AppDataStore.hasClosedSafetyNetTooltip = true
-        self.tableView.reloadSections(NSIndexSet(index: SafetyNetTableSection.tooltip.rawValue) as IndexSet, with: UITableViewRowAnimation.bottom)
+        self.tableView.reloadSections(NSIndexSet(index: SafetyNetTableSection.categoryFilter.rawValue) as IndexSet, with: UITableViewRowAnimation.bottom)
     }
     
     func safetyNetHomeTooltipCellDidPressLearnMore(cell: SafetyNetHomeTooltipCell) {
@@ -272,16 +278,7 @@ extension StabilityNetSearchViewController :SafetyNetHomeTooltipCellDelegate {
     }
 }
 
-
-//MARK: - FacebookCell Delegate
-extension StabilityNetSearchViewController:FacebookGroupAccessTableViewCellDelegate {
-    func facebookGroupAccessTableViewCellRequestOpen(url: URL) {
-        let tgkSafariVC = TGKSafariViewController(url: url)
-        self.present(tgkSafariVC, animated: true)
-    }
-}
-
-//MARK: - UISearchResultsUpdating Delegate
+//MARK: - UISearchBarDelegate
 extension StabilityNetSearchViewController: UISearchBarDelegate {
     
     func setupSearchController() {
@@ -309,16 +306,16 @@ extension StabilityNetSearchViewController: UISearchBarDelegate {
         if searchText.isEmpty {
             self.scrollToTop()
             self.tableView.reloadData()
+            self.updateParentMapView()
         }
         else {
-            self.filterContentForSearchText(searchText)
+            self.filterAndShowContentForSearchText()
         }
         
-        let resourcesToShowOnMap = self.isSearchingOrFiltering ? self.filteredSafetyNetModels : self.safetyNetModels
-        self.delegate?.stabilityNetSearchViewControllerDidFind(resources: resourcesToShowOnMap)
+        
     }
     
-    func filterContentForSearchText(_ searchText:String?) {
+    func filterAndShowContentForSearchText() {
         ///Location based filter first
         var filteredModels = self.safetyNetModels
         if let userCounty = self.currentUserCounty,
@@ -340,12 +337,12 @@ extension StabilityNetSearchViewController: UISearchBarDelegate {
         self.filteredSafetyNetModels = filteredModels
         
         ///Text Based searching next
-        guard let lowercaseTrimmedSearchText = searchText?.trimmingCharacters(in: .whitespacesAndNewlines).lowercased(),
-            lowercaseTrimmedSearchText.isEmpty == false else {
-                return
-        }
+        let searchText = self.searchBar.text
+        let lowercaseTrimmedSearchText = searchText?.trimmingCharacters(in: .whitespacesAndNewlines).lowercased()
         
-        if self.isTextSearching {
+        if let lowercaseTrimmedSearchText = lowercaseTrimmedSearchText,
+            lowercaseTrimmedSearchText.isEmpty == false,
+            self.isTextSearching {
             filteredModels = filteredModels.filter({ (safetyNetModel) -> Bool in
                 if safetyNetModel.name.lowercased().contains(lowercaseTrimmedSearchText) {
                     return true
@@ -388,22 +385,40 @@ extension StabilityNetSearchViewController: UISearchBarDelegate {
             })
         }
         
+        //Filter if the user has selected categories
+        if selectedCategories.count > 0 {
+            filteredModels = filteredModels.filter { (resource) -> Bool in
+                for category in self.selectedCategories {
+                    if resource.category?.caseInsensitiveCompare(category) == .orderedSame {
+                        return true
+                    }
+                }
+                return false
+            }
+        }
+        
         self.filteredSafetyNetModels = filteredModels
         
         self.scrollToTop()
         self.tableView.reloadData()
+        self.updateParentMapView()
         
         Analytics.logEvent(customName: .safetyNetSearch, parameters: [.safetyNetSearchLocationBased:self.isLocationBasedSearching,
-                                                                      .safetyNetSearchTerm:lowercaseTrimmedSearchText])
+                                                                      .safetyNetSearchTerm:lowercaseTrimmedSearchText as Any])
     }
     
     func scrollToTop() {
         DispatchQueue.main.async {
             if self.tableView.numberOfRows(inSection: SafetyNetTableSection.resource.rawValue) > 0 {
-                let indexPath = IndexPath(row: 0, section: SafetyNetTableSection.resource.rawValue)
+                let indexPath = IndexPath(row: 0, section: SafetyNetTableSection.categoryFilter.rawValue)
                 self.tableView.scrollToRow(at: indexPath, at: .top, animated: true)
             }
         }
+    }
+    
+    func updateParentMapView() {
+        let resourcesToShowOnMap = self.isSearchingOrFiltering ? self.filteredSafetyNetModels : self.safetyNetModels
+        self.delegate?.stabilityNetSearchViewControllerDidFind(resources: resourcesToShowOnMap)
     }
 }
 
@@ -494,7 +509,10 @@ extension StabilityNetSearchViewController: UIGestureRecognizerDelegate {
         let y = view.frame.minY
         
         //if we're at the topStickyPoint, and the of the tableview, and the user is dragging downward, disable scrolling to enable the flick downward
-        if ((y == topStickyPoint && tableView.contentOffset.y == 0 && direction > 0) || (y == bottomStickyPoint)) {
+        if ((y == topStickyPoint && tableView.contentOffset.y <= 0 && direction > 0)) {
+            tableView.isScrollEnabled = false
+        }
+        else if (y == self.bottomStickyPoint && direction < 0) {
             tableView.isScrollEnabled = false
         }
         else {
@@ -511,11 +529,27 @@ extension StabilityNetSearchViewController: UIGestureRecognizerDelegate {
         let y = view.frame.minY
         
         //if we're at the topStickyPoint, and the top of the tableview, just allow the tableview to scroll and cancel the panGesture so it doesn't try to move the view upward.
-        if ((y == topStickyPoint && tableView.contentOffset.y == 0 && direction < 0) || (y == bottomStickyPoint)) {
+        if ((y == topStickyPoint && tableView.contentOffset.y == 0 && direction < 0)) {
+            return true
+        }
+        
+        if (y == self.bottomStickyPoint && direction < 0) {
             return true
         }
         
         return false
+    }
+}
+
+extension StabilityNetSearchViewController:StabilityNetCategoryFilterTableViewCellDelegate {
+    func stabilityNetCategoryFilterTableViewCellDidSelect(category: String) {
+        self.selectedCategories.insert(category)
+        self.filterAndShowContentForSearchText()
+    }
+    
+    func stabilityNetCategoryFilterTableViewCellDidDeselect(category: String) {
+        self.selectedCategories.remove(category)
+        self.filterAndShowContentForSearchText()
     }
 }
 

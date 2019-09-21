@@ -22,8 +22,7 @@ class SafetyNetHomeViewController: UIViewController {
     
     private enum SafetyNetTableSection:Int {
         case tooltip = 0
-        case facebook = 1
-        case resource = 2
+        case resource = 1
     }
     
     fileprivate var isSearchingOrFiltering:Bool {
@@ -195,7 +194,7 @@ class SafetyNetHomeViewController: UIViewController {
 //MARK: Tableview delegate and datasource
 extension SafetyNetHomeViewController: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 3
+        return 2
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -205,11 +204,7 @@ extension SafetyNetHomeViewController: UITableViewDelegate, UITableViewDataSourc
                 return 0
             }
             return 1
-        case SafetyNetTableSection.facebook.rawValue:
-            if self.isSearchingOrFiltering {
-                return 0
-            }
-            return 1
+
         case SafetyNetTableSection.resource.rawValue:
             if self.isSearchingOrFiltering {
                 return self.filteredSafetyNetModels.count
@@ -226,12 +221,6 @@ extension SafetyNetHomeViewController: UITableViewDelegate, UITableViewDataSourc
             let cell = tableView.dequeueReusableCell(withIdentifier: self.safetyNetTooltipReuseId) as! SafetyNetHomeTooltipCell
             cell.delegate = self
             return cell
-            
-        case SafetyNetTableSection.facebook.rawValue:
-            let cell = tableView.dequeueReusableCell(withIdentifier: self.safetyNetFacebookCellReuseId) as! FacebookGroupAccessTableViewCell
-            cell.delegate = self
-            return cell
-            
         case SafetyNetTableSection.resource.rawValue:
             let cell = tableView.dequeueReusableCell(withIdentifier: self.safetyNetCellReuseId) as! SafetyNetInfoTableViewCell
             
@@ -267,15 +256,6 @@ extension SafetyNetHomeViewController :SafetyNetHomeTooltipCellDelegate {
             let learnMoreVC = TGKSafariViewController(url: url)
             self.present(learnMoreVC, animated:true)
         }
-    }
-}
-
-
-//MARK: - FacebookCell Delegate
-extension SafetyNetHomeViewController:FacebookGroupAccessTableViewCellDelegate {
-    func facebookGroupAccessTableViewCellRequestOpen(url: URL) {
-        let tgkSafariVC = TGKSafariViewController(url: url)
-        self.present(tgkSafariVC, animated: true)
     }
 }
 

@@ -62,6 +62,8 @@
 		4E9E1D5B21DC441D0096F705 /* StoreReviewWarmerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9E1D5A21DC441D0096F705 /* StoreReviewWarmerViewController.swift */; };
 		4EAF08EB2139FBB20083E023 /* SafetyNetHomeTooltipCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EAF08EA2139FBB20083E023 /* SafetyNetHomeTooltipCell.xib */; };
 		4EAF08ED2139FBC90083E023 /* SafetyNetHomeTooltipCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAF08EC2139FBC90083E023 /* SafetyNetHomeTooltipCell.swift */; };
+		4EC8F22C2309E2C800CA0945 /* StabilityNetCategoryFilterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC8F22B2309E2C800CA0945 /* StabilityNetCategoryFilterTableViewCell.swift */; };
+		4EC8F22E2309E3C800CA0945 /* StabilityNetCatgeoryInfoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC8F22D2309E3C800CA0945 /* StabilityNetCatgeoryInfoCollectionViewCell.swift */; };
 		4ECA9BFB20A2687B0084A317 /* BaseNibLoadedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECA9BFA20A2687B0084A317 /* BaseNibLoadedView.swift */; };
 		4ECA9BFD20A269A10084A317 /* FormListSelectTableViewCellRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECA9BFC20A269A10084A317 /* FormListSelectTableViewCellRow.swift */; };
 		4ECA9BFF20A269D00084A317 /* FormListSelectTableViewCellRow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4ECA9BFE20A269D00084A317 /* FormListSelectTableViewCellRow.xib */; };
@@ -106,8 +108,6 @@
 		4EE6770B22DBA73A0061373D /* UIViewController+TGK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE6770A22DBA73A0061373D /* UIViewController+TGK.swift */; };
 		4EF1617722B1CBB3005821F5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4EF1617622B1CBB2005821F5 /* GoogleService-Info.plist */; };
 		4EF43480213AD008009C2679 /* UIButton+TGK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF4347F213AD008009C2679 /* UIButton+TGK.swift */; };
-		4EF43482213C2381009C2679 /* FacebookGroupAccessTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EF43481213C2381009C2679 /* FacebookGroupAccessTableViewCell.xib */; };
-		4EF43484213C239A009C2679 /* FacebookGroupAccessTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF43483213C239A009C2679 /* FacebookGroupAccessTableViewCell.swift */; };
 		4EF43488213F2E63009C2679 /* FormTimeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EF43487213F2E63009C2679 /* FormTimeTableViewCell.xib */; };
 		4EF4348A213F2F0E009C2679 /* FormTimeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF43489213F2F0E009C2679 /* FormTimeTableViewCell.swift */; };
 		C0965F482114C583005EAB0C /* Utilities.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0965F472114C583005EAB0C /* Utilities.storyboard */; };
@@ -183,6 +183,8 @@
 		4E9E1D5A21DC441D0096F705 /* StoreReviewWarmerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreReviewWarmerViewController.swift; sourceTree = "<group>"; };
 		4EAF08EA2139FBB20083E023 /* SafetyNetHomeTooltipCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SafetyNetHomeTooltipCell.xib; sourceTree = "<group>"; };
 		4EAF08EC2139FBC90083E023 /* SafetyNetHomeTooltipCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafetyNetHomeTooltipCell.swift; sourceTree = "<group>"; };
+		4EC8F22B2309E2C800CA0945 /* StabilityNetCategoryFilterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StabilityNetCategoryFilterTableViewCell.swift; sourceTree = "<group>"; };
+		4EC8F22D2309E3C800CA0945 /* StabilityNetCatgeoryInfoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StabilityNetCatgeoryInfoCollectionViewCell.swift; sourceTree = "<group>"; };
 		4ECA9BFA20A2687B0084A317 /* BaseNibLoadedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNibLoadedView.swift; sourceTree = "<group>"; };
 		4ECA9BFC20A269A10084A317 /* FormListSelectTableViewCellRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormListSelectTableViewCellRow.swift; sourceTree = "<group>"; };
 		4ECA9BFE20A269D00084A317 /* FormListSelectTableViewCellRow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FormListSelectTableViewCellRow.xib; sourceTree = "<group>"; };
@@ -344,6 +346,8 @@
 		4E75176020B615DA00B2D7E0 /* PartsBinNoTarget */ = {
 			isa = PBXGroup;
 			children = (
+				4EF43481213C2381009C2679 /* FacebookGroupAccessTableViewCell.xib */,
+				4EF43483213C239A009C2679 /* FacebookGroupAccessTableViewCell.swift */,
 				4E228D9220ED5639002912AB /* AssistanceOverviewCollectionViewCell.swift */,
 				4E228D9420ED5675002912AB /* AssistanceOverviewCollectionViewCell.xib */,
 				4E228D9620ED5715002912AB /* AssistanceFormsCollectionViewCell.swift */,
@@ -611,6 +615,8 @@
 				4EDC78E421C6A9A2004AFCBB /* SafetyNetDetailSheetViewController.swift */,
 				4E1DA38022C0300F0032740A /* StabilityNetMapViewController.swift */,
 				4E97DF9E22F73B92003B0E13 /* StabilityNetSearchViewController.swift */,
+				4EC8F22B2309E2C800CA0945 /* StabilityNetCategoryFilterTableViewCell.swift */,
+				4EC8F22D2309E3C800CA0945 /* StabilityNetCatgeoryInfoCollectionViewCell.swift */,
 			);
 			name = SafetyNet;
 			sourceTree = "<group>";
@@ -672,8 +678,6 @@
 				C0B9C49F21371E54009BEE60 /* SafetyNetInfoTableViewCell.swift */,
 				4EAF08EA2139FBB20083E023 /* SafetyNetHomeTooltipCell.xib */,
 				4EAF08EC2139FBC90083E023 /* SafetyNetHomeTooltipCell.swift */,
-				4EF43481213C2381009C2679 /* FacebookGroupAccessTableViewCell.xib */,
-				4EF43483213C239A009C2679 /* FacebookGroupAccessTableViewCell.swift */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -787,7 +791,6 @@
 				4ED3884E209D030600A8BEE2 /* FormTextViewTableViewCell.xib in Resources */,
 				4E7C2E2D20B1D8AF00A20303 /* RobotoMono-Italic.ttf in Resources */,
 				4EAF08EB2139FBB20083E023 /* SafetyNetHomeTooltipCell.xib in Resources */,
-				4EF43482213C2381009C2679 /* FacebookGroupAccessTableViewCell.xib in Resources */,
 				4E7C2E2C20B1D8AF00A20303 /* RobotoMono-BoldItalic.ttf in Resources */,
 				4ECA9BFF20A269D00084A317 /* FormListSelectTableViewCellRow.xib in Resources */,
 				4E7C2E1B20B1D8A600A20303 /* Kulturista-Bold.otf in Resources */,
@@ -883,10 +886,12 @@
 				4ED38849209D030600A8BEE2 /* FormQuestionAnswerModel.swift in Sources */,
 				4ECA9C0B20A868440084A317 /* FormAddressTableViewCell.swift in Sources */,
 				C0A259832130AA870007AB20 /* SafetyNetResourceModel.swift in Sources */,
+				4EC8F22C2309E2C800CA0945 /* StabilityNetCategoryFilterTableViewCell.swift in Sources */,
 				4ED3883E209D030600A8BEE2 /* FormTextFieldTableViewCell.swift in Sources */,
 				4E71AFCE215C3EEF0033494D /* FeedbackHomeViewController.swift in Sources */,
 				4ECA9BFD20A269A10084A317 /* FormListSelectTableViewCellRow.swift in Sources */,
 				4ED38844209D030600A8BEE2 /* FormTextViewTableViewCell.swift in Sources */,
+				4EC8F22E2309E3C800CA0945 /* StabilityNetCatgeoryInfoCollectionViewCell.swift in Sources */,
 				C0B9C4A3213870BC009BEE60 /* AppDataStore.swift in Sources */,
 				4E885BB820A1221700D05ED9 /* FormFieldErrorModel.swift in Sources */,
 				4EE6770B22DBA73A0061373D /* UIViewController+TGK.swift in Sources */,
@@ -926,7 +931,6 @@
 				4EF43480213AD008009C2679 /* UIButton+TGK.swift in Sources */,
 				4ED38848209D030600A8BEE2 /* FormListSelectTableViewCell.swift in Sources */,
 				4E0E0C852161705C0082240E /* OnboardingViewController.swift in Sources */,
-				4EF43484213C239A009C2679 /* FacebookGroupAccessTableViewCell.swift in Sources */,
 				4E97DF9D22F73B0B003B0E13 /* ScrollableBottomSheetViewController.swift in Sources */,
 				4ED38852209D04AE00A8BEE2 /* String+TGK.swift in Sources */,
 				4ED3883D209D030600A8BEE2 /* FormPickerTableViewCell.swift in Sources */,

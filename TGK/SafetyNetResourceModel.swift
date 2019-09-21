@@ -12,6 +12,8 @@ import MapKit
 
 class SafetyNetResourceModel:NSObject, Codable {
     
+    static var allCategories:[String] = []
+    
     //TODO equitable implementation. remove now that we subclass nsobject?
     static func == (lhs: SafetyNetResourceModel, rhs: SafetyNetResourceModel) -> Bool {
         if lhs.name == rhs.name &&
@@ -61,6 +63,12 @@ class SafetyNetResourceModel:NSObject, Codable {
         name = try container.decodeIfPresent(String.self, forKey: .name) ?? ""
         contactName = try container.decodeIfPresent(String.self, forKey: .contactName)
         category = try container.decodeIfPresent(String.self, forKey: .category)
+        if let unwrappedCategory = category {
+            if !SafetyNetResourceModel.allCategories.contains(unwrappedCategory) {
+                SafetyNetResourceModel.allCategories.append(unwrappedCategory)
+            }
+        }
+        
         resourceDescription = try container.decodeIfPresent(String.self, forKey: .resourceDescription)
         
         let addressUnsanitized = try container.decodeIfPresent(String.self, forKey: .address)
@@ -142,4 +150,5 @@ extension SafetyNetResourceModel:MKAnnotation {
     var coordinate: CLLocationCoordinate2D {
         return self.location ?? kCLLocationCoordinate2DInvalid
     }
+
 }
