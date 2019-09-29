@@ -14,22 +14,22 @@ class SafetyNetResourceModel:NSObject, Codable {
     
     static var allCategories:[String] = []
     
-    //TODO equitable implementation. remove now that we subclass nsobject?
-    static func == (lhs: SafetyNetResourceModel, rhs: SafetyNetResourceModel) -> Bool {
-        if lhs.name == rhs.name &&
-            lhs.address == rhs.address &&
-            lhs.websiteUrl?.absoluteString == rhs.websiteUrl?.absoluteString &&
-            lhs.phoneNumber == rhs.phoneNumber &&
-            lhs.contactName == rhs.contactName &&
-            lhs.category == rhs.category &&
-            lhs.resourceDescription == rhs.resourceDescription &&
-            lhs.counties == rhs.counties &&
-            lhs.location?.latitude == rhs.location?.latitude &&
-            lhs.location?.longitude == rhs.location?.longitude {
-            return true
-        }
-        return false
-    }
+//    //TODO equitable implementation. remove now that we subclass nsobject?
+//    static func == (lhs: SafetyNetResourceModel, rhs: SafetyNetResourceModel) -> Bool {
+//        if lhs.name == rhs.name &&
+//            lhs.address == rhs.address &&
+//            lhs.websiteUrl?.absoluteString == rhs.websiteUrl?.absoluteString &&
+//            lhs.phoneNumber == rhs.phoneNumber &&
+//            lhs.contactName == rhs.contactName &&
+//            lhs.category == rhs.category &&
+//            lhs.resourceDescription == rhs.resourceDescription &&
+//            lhs.counties == rhs.counties &&
+//            lhs.location?.latitude == rhs.location?.latitude &&
+//            lhs.location?.longitude == rhs.location?.longitude {
+//            return true
+//        }
+//        return false
+//    }
     
     
     var name:String

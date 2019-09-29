@@ -237,10 +237,10 @@ GK can fund the cost of living expenses for food service workers who miss work d
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="290"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="249" verticalCompressionResistancePriority="1000" ambiguous="YES" image="eventHomeTopIcon" translatesAutoresizingMaskIntoConstraints="NO" id="VD9-Tn-tAf">
-                                            <rect key="frame" x="150.5" y="40" width="74" height="39"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="249" verticalCompressionResistancePriority="1000" image="eventHomeTopIcon" translatesAutoresizingMaskIntoConstraints="NO" id="VD9-Tn-tAf">
+                                            <rect key="frame" x="169" y="40" width="37" height="39"/>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" ambiguous="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZYo-Rq-2Bv">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZYo-Rq-2Bv">
                                             <rect key="frame" x="16" y="119" width="343" height="120"/>
                                             <attributedString key="attributedText">
                                                 <fragment>
@@ -255,7 +255,7 @@ GK can fund the cost of living expenses for food service workers who miss work d
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L9p-Rn-6M2">
-                                            <rect key="frame" x="148.5" y="270" width="78" height="0.0"/>
+                                            <rect key="frame" x="148.5" y="255" width="78" height="15"/>
                                             <state key="normal" title="Learn more"/>
                                             <connections>
                                                 <action selector="learnMorePressed:" destination="rZT-zD-RsE" eventType="touchUpInside" id="uVx-gp-TUg"/>
@@ -311,7 +311,7 @@ GK can fund the cost of living expenses for food service workers who miss work d
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eventsReadMore" translatesAutoresizingMaskIntoConstraints="NO" id="u2g-nS-bPI">
-                                                    <rect key="frame" x="16" y="337" width="196" height="28"/>
+                                                    <rect key="frame" x="16" y="337" width="98.000000000000028" height="14"/>
                                                 </imageView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E1a-Ar-8fA">
                                                     <rect key="frame" x="0.0" y="423" width="375" height="1"/>
@@ -352,14 +352,14 @@ GK can fund the cost of living expenses for food service workers who miss work d
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" horizontalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rR5-6l-jps">
-                                        <rect key="frame" x="325" y="3" width="38" height="38"/>
+                                        <rect key="frame" x="344" y="11" width="19" height="22"/>
                                         <state key="normal" image="iconCloseXOpenCircle"/>
                                         <connections>
                                             <action selector="volunteerCloseButton:" destination="rZT-zD-RsE" eventType="touchUpInside" id="MsW-yG-qhk"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="1n5-VZ-J9Q">
-                                        <rect key="frame" x="12" y="7" width="297" height="30"/>
+                                        <rect key="frame" x="12" y="7" width="316" height="30"/>
                                         <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Give back! Volunteer at an event!">

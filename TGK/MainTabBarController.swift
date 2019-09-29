@@ -35,9 +35,9 @@ class MainTabBarController: UITabBarController {
         let donateHomeNavVC = UINavigationController(rootViewController: donateHomeVC)
         donateHomeNavVC.tabBarItem = UITabBarItem(title: "Give", image: UIImage(named: "tabBarDonate"), selectedImage: nil)
         
-        let safetyNetHomeVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SafetyNetHomeViewControllerId") as! SafetyNetHomeViewController
-        _ = safetyNetHomeVC.view
-        let safetyNetNavVC = UINavigationController(rootViewController: safetyNetHomeVC)
+        let stabilityNetHomeVC = UIStoryboard(name: "SafetyNet", bundle: nil).instantiateViewController(withIdentifier: "StabilityNetMapViewControllerId") as! StabilityNetMapViewController
+        _ = stabilityNetHomeVC.view
+        let safetyNetNavVC = UINavigationController(rootViewController: stabilityNetHomeVC)
         safetyNetNavVC.tabBarItem = UITabBarItem(title: "Resources", image: UIImage(named: "tabBarSafetyNet"), selectedImage: nil)
         
         let aboutHomeVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AboutHomeViewControllerId") as! AboutHomeViewController

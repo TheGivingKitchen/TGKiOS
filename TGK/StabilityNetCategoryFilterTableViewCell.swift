@@ -69,7 +69,7 @@ extension StabilityNetCategoryFilterTableViewCell:UICollectionViewDataSource, UI
             return
         }
         let categoryString = SafetyNetResourceModel.allCategories[indexPath.row]
-        print("select \(categoryString)")
+        
         self.delegate?.stabilityNetCategoryFilterTableViewCellDidSelect(category: categoryString)
     }
     
@@ -78,7 +78,7 @@ extension StabilityNetCategoryFilterTableViewCell:UICollectionViewDataSource, UI
             return
         }
         let categoryString = SafetyNetResourceModel.allCategories[indexPath.row]
-        print("select \(categoryString)")
+        
         self.delegate?.stabilityNetCategoryFilterTableViewCellDidDeselect(category: categoryString)
     }
 }

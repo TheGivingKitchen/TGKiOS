@@ -115,7 +115,6 @@
 		C0A259832130AA870007AB20 /* SafetyNetResourceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A259822130AA870007AB20 /* SafetyNetResourceModel.swift */; };
 		C0B9C4952135D3D3009BEE60 /* safetyNet.json in Resources */ = {isa = PBXBuildFile; fileRef = C0B9C4942135D3D3009BEE60 /* safetyNet.json */; };
 		C0B9C4972135D55E009BEE60 /* ServiceManager+SafetyNet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B9C4962135D55E009BEE60 /* ServiceManager+SafetyNet.swift */; };
-		C0B9C4992135D79F009BEE60 /* SafetyNetHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B9C4982135D79F009BEE60 /* SafetyNetHomeViewController.swift */; };
 		C0B9C49E21371E45009BEE60 /* SafetyNetInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0B9C49D21371E45009BEE60 /* SafetyNetInfoTableViewCell.xib */; };
 		C0B9C4A021371E54009BEE60 /* SafetyNetInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B9C49F21371E54009BEE60 /* SafetyNetInfoTableViewCell.swift */; };
 		C0B9C4A3213870BC009BEE60 /* AppDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B9C4A2213870BC009BEE60 /* AppDataStore.swift */; };
@@ -323,7 +322,6 @@
 				4E75176D20C8953B00B2D7E0 /* DonateHomeViewController.swift */,
 				4E75176F20C8954C00B2D7E0 /* AssistanceHomeViewController.swift */,
 				4E75177520C8A95700B2D7E0 /* EventsHomeViewController.swift */,
-				C0B9C4982135D79F009BEE60 /* SafetyNetHomeViewController.swift */,
 				4E71AFCD215C3EEF0033494D /* FeedbackHomeViewController.swift */,
 				4EDC78E721C87268004AFCBB /* AboutHomeViewController.swift */,
 			);
@@ -346,6 +344,7 @@
 		4E75176020B615DA00B2D7E0 /* PartsBinNoTarget */ = {
 			isa = PBXGroup;
 			children = (
+				C0B9C4982135D79F009BEE60 /* SafetyNetHomeViewController.swift */,
 				4EF43481213C2381009C2679 /* FacebookGroupAccessTableViewCell.xib */,
 				4EF43483213C239A009C2679 /* FacebookGroupAccessTableViewCell.swift */,
 				4E228D9220ED5639002912AB /* AssistanceOverviewCollectionViewCell.swift */,
@@ -921,7 +920,6 @@
 				4E75176A20BC87B000B2D7E0 /* ExternalShareManager.swift in Sources */,
 				4E83549F20CA0E50009DF8CE /* ServiceManager+Events.swift in Sources */,
 				4E8354A720CC6CF1009DF8CE /* TGKSafariViewController.swift in Sources */,
-				C0B9C4992135D79F009BEE60 /* SafetyNetHomeViewController.swift in Sources */,
 				4ECA9BFB20A2687B0084A317 /* BaseNibLoadedView.swift in Sources */,
 				4E75177620C8A95700B2D7E0 /* EventsHomeViewController.swift in Sources */,
 				4ED38843209D030600A8BEE2 /* SegmentedFormNavigationController.swift in Sources */,
