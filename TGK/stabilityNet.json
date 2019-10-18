@@ -1,0 +1,3351 @@
+{
+    "records": [
+        {
+            "id": "rec0fBd0EKyEv7hfO",
+            "fields": {
+                "name": "Highland Urgent Care Family Medicine- Direct Primary Care",
+                "address": "920 Ponce de Leon Atlanta, GA 30306",
+                "website": "https://atlantafamilymedicine.com/highland-personal-health/",
+                "phone": "404-815-1957",
+                "contactName": "Dr. Nicholas Beaulieu",
+                "category": "Healthcare",
+                "description": "Streamlined system for receiving healthcare with out third party insurance.",
+                "latitude": 33.7741552,
+                "longitude": -84.3572651
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "rec0jnU9t55BQmUAh",
+            "fields": {
+                "name": "OutPatient Imaging",
+                "address": "2284 Peachtree Rd. Atlanta, GA 30309",
+                "website": "www.opi.bz",
+                "phone": "404-225-5674",
+                "category": "Healthcare",
+                "description": "Ultrasound, xray, catscan, mri, etc.",
+                "countiesServed": [
+                    "All"
+                ],
+                "latitude": 33.8170274,
+                "longitude": -84.3906216
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "rec0o89GWl503mriG",
+            "fields": {
+                "name": "Peachford Hospital",
+                "address": "2151 Peachford Road Atlanta, GA 30338",
+                "website": "www.peachford.com",
+                "phone": "770-454-2302",
+                "category": "Mental Health, Substance Abuse and Addiction",
+                "subcategories": [
+                    "Crisis Assistance",
+                    "Rehab",
+                    "Counseling",
+                    "Crisis Intervention",
+                    "Stabilization",
+                    "Stability",
+                    "Suicide",
+                    "Suicidal Thoughts",
+                    "Help",
+                    "Immediate Help",
+                    "Mental Health",
+                    "Mental Breakdown",
+                    "Psychiatric Help",
+                    "Psychiatric Hospital",
+                    "Treatment",
+                    "Inpatient Services",
+                    "Outpatient Services"
+                ],
+                "countiesServed": [
+                    "Metro Atlanta"
+                ],
+                "latitude": 33.928705,
+                "longitude": -84.3006
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "rec1GffSuOxF9F2uf",
+            "fields": {
+                "name": "Open Hand",
+                "address": "181 Armour Drive NE Atlanta 30324",
+                "website": "www.projectopenhand.org",
+                "phone": "404-480-7704",
+                "category": "Family and Social Services",
+                "subcategories": [
+                    "Food Assistance",
+                    "Elderly",
+                    "Senior Assistance",
+                    "Healthy",
+                    "Lifestyle Change"
+                ],
+                "description": "Provides healthy prepared meals for low-income clients",
+                "countiesServed": [
+                    "All"
+                ],
+                "latitude": 33.8090055,
+                "longitude": -84.3828292
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "rec1tWTGviKZuIiU4",
+            "fields": {
+                "name": "Cherokee Residential Services",
+                "address": "133 Univerter Rd. Canton, GA 30114",
+                "phone": "770-345-7682",
+                "category": "Disabled Assistance (Housing)",
+                "description": "Cherokee Residential Services is a Disabled low income housing apartment. (One Bedroom)",
+                "latitude": 34.2019925,
+                "longitude": -84.5054023
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "rec1uttmTS3q0cB8j",
+            "fields": {
+                "name": "Urban League of Greater Atlanta",
+                "address": "229 Peachtree St. NE #300, Atlanta, GA 30303",
+                "website": "http://ulgatl.org/",
+                "phone": "404-659-1150",
+                "category": "Transitional Employment Services",
+                "description": "Designed to assist ex-offenders, the homeless, youth existing foster care, and TANF recipients with counseling, career exploration, testing, placement, referrals, resume preparation, and case management.",
+                "countiesServed": [
+                    "Metro Atlanta"
+                ],
+                "latitude": 33.7599229,
+                "longitude": -84.3864441
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "rec25FMzpd5BmLcUk",
+            "fields": {
+                "name": "Atlanta Gas Light \"Home and Heartwarming Program\"",
+                "website": "https://www.truenaturalgas.com/low-income-home-energy-assistance-program",
+                "phone": "800-869-1150",
+                "category": "Housing/Utilities",
+                "subcategories": [
+                    "Heat bill",
+                    "gas bill",
+                    "power bill",
+                    "utilities",
+                    "utility assistance"
+                ],
+                "description": "Helps low to moderate income pay their utility and energy bills.",
+                "countiesServed": [
+                    "Metro Atlanta"
+                ]
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "rec27iOvDqFTYaP1L",
+            "fields": {
+                "name": "Disability Connections",
+                "address": "3695 Broadway Macon, GA 31206",
+                "website": "https://www.disabilityconnections.com/",
+                "phone": "478-741-1425",
+                "category": "Independent Living Services",
+                "description": "Give people with disabilities the knowledge and skills to lead a more productive and independent life.Provided training one on one and sometimes in larger groups.Examples could be how to manage attendant care, learn how to ride public transportation, to navigate around home and community safely and much more.",
+                "countiesServed": [
+                    "Baldwin",
+                    "Bibb",
+                    "Crawford",
+                    "Houston",
+                    "Jasper",
+                    "Jones",
+                    "Monroe",
+                    "Peach",
+                    "Pulaski",
+                    "Putnam",
+                    "Twiggs and Wilkinson"
+                ],
+                "latitude": 32.7984596,
+                "longitude": -83.641285
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "rec2Esm0UeImWk8T3",
+            "fields": {
+                "name": "Gwinnett County Senior Services",
+                "address": "75 Langley Drive Lawrenceville, GA 30046",
+                "website": "https://www.gwinnettcounty.com/portal/gwinnett/Departments/CommunityServices/HealthandHumanServices/GwinnettSeniorServices",
+                "phone": "678-377-4150",
+                "category": "Elderly Assistance (Homemaking)",
+                "description": "This service helps to meet life's basic needs through light housekeeping.",
+                "countiesServed": [
+                    "Gwinnett County"
+                ],
+                "latitude": 33.9514072,
+                "longitude": -83.9931893
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "rec2YjsO6OWxkIlOu",
+            "fields": {
+                "name": "Pro Management Group",
+                "address": "44 Broad Street NW Suite 510 Atlanta 30303",
+                "website": "www.michonwilson.wixsite.com/promgt/services",
+                "phone": "678-705-7217",
+                "contactName": "Gail Collins",
+                "category": "Financial Services",
+                "description": "Restaurant financial solutions",
+                "countiesServed": [
+                    "All"
+                ],
+                "latitude": 33.7555736,
+                "longitude": -84.390137
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "rec3ldJ9mpblzBkPL",
+            "fields": {
+                "name": "Butterfield House, Inc.",
+                "address": "1379 Pair Rd. Marietta, GA 30060",
+                "phone": "770-427-8401",
+                "category": "Disabled Assistance (Housing)",
+                "description": "An affordable rental housing community (subsidized and low rent) for disabled persons located in Marietta, GA. (One Room)",
+                "latitude": 33.8762813,
+                "longitude": -84.5941619
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "rec3p7ebk80JGEQ3B",
+            "fields": {
+                "name": "Aesthetic Housing II (Ethel Place)",
+                "address": "919 E Ethel St Douglas, GA 31533",
+                "phone": "866-933-2293",
+                "category": "Elderly Assistance (Housing)",
+                "description": "Residency is restricted to persons who earn 50% of the Area Median Income (AMI) or less. Like other rental assistance programs like Section 8, resident's rents are based on their income and the tenant contribution is set at 30% of the tenants income.",
+                "latitude": 31.5075805,
+                "longitude": -82.8379214
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "rec43OPc8BTkQUawC",
+            "fields": {
+                "name": "Gwinnett Housing Resource Partnership-Impact Group",
+                "address": "40 Technology Parkway South Suite 180, Norcross, GA 30092",
+                "phone": "678-808-4477",
+                "category": "Housing Assistance",
+                "description": "They providing quality housing solutions. They have a spectrum of services and programs addressing housing issues from homelessness to homeownership.",
+                "countiesServed": [
+                    "Gwinnett County"
+                ],
+                "latitude": 33.9620759,
+                "longitude": -84.2166404
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "rec49uHVyIQEgI8rL",
+            "fields": {
+                "name": "The Link Counseling Center",
+                "address": "1820 The Exchange Suite 650 Atlanta 30339",
+                "website": "www.thelink.org",
+                "phone": "404-256-9797",
+                "contactName": "Elaine Gibson",
+                "category": "Mental Health",
+                "description": "Counseling and psychotherapy for famiies and individuals",
+                "countiesServed": [
+                    "Greater Atlanta"
+                ],
+                "latitude": 33.9071482,
+                "longitude": -84.4791538
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "rec4R6weE1HLGPhO7",
+            "fields": {
+                "name": "United Way",
+                "address": "40 Courtland Street NE Atlanta 30303",
+                "website": "https://www.unitedwayatlanta.org",
+                "phone": "404-527-7200",
+                "contactName": "Kimberly P. Heywood: Team Manager, Nicola Canty: Special Projects Director,Donna Burnham:Vice President",
+                "category": "Family and Social Services, Community Outreach",
+                "subcategories": [
+                    "211",
+                    "United Way",
+                    "Resources"
+                ],
+                "description": "Resources for community improvement",
+                "countiesServed": [
+                    "Greater Atlanta"
+                ],
+                "latitude": 33.7553049,
+                "longitude": -84.3845912
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "rec51BTNJrxakmON6",
+            "fields": {
+                "name": "Non-Profit Industries (Social Serve)",
+                "website": "www.socialserve.com",
+                "phone": "704-334-8722",
+                "category": "Housing Assistance",
+                "description": "Offers a national call center that provides jobs to hard-to-employ people who then help others access affordable housing and supportive services in their communities.",
+                "countiesServed": [
+                    "All of Georgia"
+                ]
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "rec5UP8uA2ZYEXVIe",
+            "fields": {
+                "name": "Gwinnett County Residential Services, Inc.",
+                "address": "3094 Ashly Forest Dr. Snellville, GA 30078",
+                "phone": "770-676-2000",
+                "category": "Disabled Assistance (Housing)",
+                "description": "Supportive Housing for Persons with Disabilities program, residency is restricted to persons who earn 50% of the Area Median Income (AMI) or less. Like other rental assistance programs like Section 8, resident's rents are based on their income and the tenant contribution is set at 30% of the tenants income. (One bedroom)",
+                "countiesServed": [
+                    "Gwinnett County"
+                ],
+                "latitude": 33.8363053,
+                "longitude": -84.0294025
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "rec5baFrCLEPrX5JS",
+            "fields": {
+                "name": "Georgia Crisis and Access Hotline",
+                "phone": "800-715-4225",
+                "category": "Mental Health",
+                "subcategories": [
+                    "Suicide",
+                    "Suicidal Ideation",
+                    "Death",
+                    "Want to die",
+                    "Depressed",
+                    "Counseling",
+                    "Therapy"
+                ]
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "rec65n0PkizyxvG1V",
+            "fields": {
+                "name": "Clayton County Aging Program",
+                "address": "877 Battle Creek Road Jonesboro, GA 30236",
+                "website": "http://www.claytonseniors.com/senior-center-locations/clayton-county-aging-program/",
+                "phone": "770-603-4050",
+                "category": "Elderly Assistance (Transportation)",
+                "description": "Our transportation services include demand/response services, dialysis appointments, and transportation of clients to our Congregate Program (Clayton Senior Adult Program)",
+                "countiesServed": [
+                    "Clayton County"
+                ],
+                "latitude": 33.552587,
+                "longitude": -84.363274
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "rec6Aa9pCyMhoiZ4A",
+            "fields": {
+                "name": "Center for Family Resources",
+                "address": "995 Roswell Street NE Suite 100 Marietta, Marietta, GA 30060",
+                "website": "www.thecfr.org",
+                "phone": "770-428-2601",
+                "category": "Housing Assistance",
+                "description": "Help with rent and utilities is available for families once-in-a-lifetime so the family can remain in their current home.",
+                "countiesServed": [
+                    "Cobb County"
+                ],
+                "latitude": 33.951718,
+                "longitude": -84.52312
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "rec6D6ZT94lNrysrx",
+            "fields": {
+                "name": "MusiCares Medical Network",
+                "website": "https://www.grammy.com/musicares",
+                "category": "Healthcare (Insurance)",
+                "description": "Provides a safety net of critical assistance for music people in times of need. MusiCares' services and resources cover a wide range of financial, medical, and personal emergencies,",
+                "countiesServed": [
+                    "All"
+                ]
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "rec6EGvIuV7aZR3Lo",
+            "fields": {
+                "name": "Administration for Children & Families",
+                "address": "61 Forsyth Street Atlanta 30303",
+                "website": "https://www.acf.hhs.gov/oro/regional-offices/region4",
+                "phone": "404-562-2800",
+                "category": "Physical Health and Wellness",
+                "description": "Promote social well being for families and individuals",
+                "countiesServed": [
+                    "Fulton"
+                ],
+                "latitude": 33.7537359,
+                "longitude": -84.3937495
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "rec6v3kM8PWjtQQuh",
+            "fields": {
+                "name": "Substance Abuse and Mental Health Services Administration",
+                "address": "5600 Fishers Lane Rockville, MD 20857",
+                "website": "www.samhsa.gov",
+                "phone": "1-800-662-4357",
+                "category": "Mental Health",
+                "description": "Reduce the impact of substanc abuse and mental illness.",
+                "countiesServed": [
+                    "Maryland (state)"
+                ],
+                "latitude": 39.0627951,
+                "longitude": -77.11365
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "rec7VoYwdVINnEFVN",
+            "fields": {
+                "name": "South Fulton Homes, Inc.",
+                "address": "5074 Dixie Lake Rd. Union City, GA 30291",
+                "phone": "770-664-4347",
+                "category": "Disabled Assistance (Housing)",
+                "subcategories": [
+                    "Supportive Housing for Persons with Disabilities program",
+                    "residency is restricted to persons who earn 50% of the Area Median Income (AMI) or less. Like other rental assistance programs like Section 8",
+                    "resident's rents are based on their income and the tenant contribution is set at 30% of the tenants income. (One room)"
+                ],
+                "latitude": 33.5832603,
+                "longitude": -84.5542614
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "rec7lXkQZ04R0DLnd",
+            "fields": {
+                "name": "Senior Connections",
+                "address": "5238 Peachtree Rd. Atlanta, GA 30341",
+                "website": "https://www.seniorconnectionsatl.org/",
+                "phone": "770-455-7602",
+                "category": "Elderly Assistance (Health and Wellness)",
+                "description": "We can incorporate Medical Nutrition Therapy, which includes nutrition counseling and training conducted for the purpose of disease management. These services are provided by our registered dietitians.",
+                "countiesServed": [
+                    "DeKalb",
+                    "Fulton",
+                    "Gwinnett",
+                    "Rockdale"
+                ],
+                "latitude": 33.8890597,
+                "longitude": -84.3059137
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "rec7mOsDnXafnWBDi",
+            "fields": {
+                "name": "Cobb & Douglas County Community Services Board",
+                "address": "3830 South Cobb Drive, Suite 300, Smyrna, GA 30080",
+                "website": "http://www.cobbcsb.com/",
+                "phone": "770-422-0202",
+                "category": "Substance Abuse",
+                "description": "Disease treatment programs are offered at their outpatient locations providing aftercare, case management, childcare, family therapy, GED enrichment, group therapy, HIV education and prevention, individual therapy, medical nurse services, multi-family education, parenting classes, psychiatric referrals, residential services, substance abuse evaluation, and trauma recovery.",
+                "countiesServed": [
+                    "Cobb and Douglas"
+                ],
+                "latitude": 33.8601252,
+                "longitude": -84.5194774
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "rec7o0FGi9RdZadCk",
+            "fields": {
+                "name": "Ben Massell Dental Clinic",
+                "address": "700 14th Street NW Atlanta 30308",
+                "website": "www.benmasselldentalclinic.org",
+                "phone": "404-881-1858",
+                "contactName": "Keith Kirshner",
+                "category": "Dental/Vision",
+                "subcategories": [
+                    "Dentist",
+                    "Teeth",
+                    "Tooth Pain",
+                    "Mouth Pain"
+                ],
+                "description": "Needs-based dental services",
+                "countiesServed": [
+                    "Butts",
+                    "Cherokee",
+                    "Clayton",
+                    "Cobb",
+                    "Coweta",
+                    "DeKalb",
+                    "Douglas",
+                    "Fayette",
+                    "Fulton",
+                    "Gwinnett",
+                    "Henry",
+                    "Paulding",
+                    "Rockdale"
+                ],
+                "latitude": 33.7854439,
+                "longitude": -84.4099211
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "rec8AYHyvcGVQgjgI",
+            "fields": {
+                "name": "Metropolitan Counseling Services",
+                "address": "2801 Buford Hwy NE Suite 470 Atlanta 30329",
+                "website": "www.mcsatlanta.org",
+                "phone": "404-321-1794",
+                "contactName": "Rachelle Kennedy",
+                "category": "Mental Health",
+                "description": "Affordable mental health services",
+                "countiesServed": [
+                    "Greater Atlanta"
+                ],
+                "latitude": 33.8302995,
+                "longitude": -84.3425788
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "rec8WSsTB9uoa7foL",
+            "fields": {
+                "name": "North Metro Group Homes Assn Inc",
+                "address": "805 E Hembree Crossing Roswell, GA 30076",
+                "phone": "770-664-4347",
+                "category": "Elderly Assistance (Housing)",
+                "description": "A 6 unit low income housing apartment community in Roswell for seniors. Some or all apartments in this community are rent subsidized, which means rent is income based.",
+                "latitude": 34.0672976,
+                "longitude": -84.3360252
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "rec8WeHObELQJjy8h",
+            "fields": {
+                "name": "Atlanta Alcohol and Drug Abuse Hotline",
+                "phone": "404-525-3178",
+                "category": "Mental Health, Substance Abuse and Addiction",
+                "subcategories": [
+                    "Addiction",
+                    "Addicted",
+                    "Recovery",
+                    "Rehab",
+                    "Alcoholic",
+                    "Drinking problem"
+                ]
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "rec8kNNJk2dcOM62U",
+            "fields": {
+                "name": "Red Robin Foundation",
+                "website": "www.redrobinfoundation.org",
+                "phone": "303-846-5492",
+                "contactName": "Mara Wheeler",
+                "category": "Employee Assistance",
+                "description": "Offers housing emergency relief for Red Robin employees in need."
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "rec8sRk6rLq2Y8WC9",
+            "fields": {
+                "name": "The Heating Energy Assistance Team",
+                "address": "P.O. Box 451008, Atlanta, GA 31145",
+                "website": "https://www.heatga.org/",
+                "phone": "678-406-0212",
+                "category": "Housing/Utilities",
+                "subcategories": [
+                    "Heat bill",
+                    "gas bill",
+                    "power bill",
+                    "utilities",
+                    "utility assistance"
+                ],
+                "description": "Helps low to moderate income pay their utility and energy bills.",
+                "countiesServed": [
+                    "All"
+                ],
+                "latitude": 33.85,
+                "longitude": -84.28
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "rec98bKU5V0q7TvQN",
+            "fields": {
+                "name": "DeKalb Mr Homes II",
+                "address": "1116 Alford Rd. Lithonia, GA 30058",
+                "phone": "404-327-9491",
+                "category": "Disabled Assistance (Housing)",
+                "description": "Provides supportive housing for persons with disabilities, residency is restricted to persons who earn 50% of the Area Median Income (AMI) or less. Like other rental assistance programs like Section 8, resident's rents are based on their income and the tenant contribution is set at 30% of the tenants income. (One Bedroom)",
+                "countiesServed": [
+                    "All of Lithonia",
+                    "GA"
+                ],
+                "latitude": 33.7607584,
+                "longitude": -84.117991
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "rec9PVzkn6tYpZEER",
+            "fields": {
+                "name": "Ruby Has Heart Fund",
+                "website": "www.rubytuesday.com",
+                "phone": "865-379-5741",
+                "contactName": "Rhonda Sallas",
+                "category": "Employee Assistance",
+                "description": "Offers housing emergency relief for Ruby Tuesday employees in need."
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recAHrqjZuKtgT5GR",
+            "fields": {
+                "name": "Urban League of Greater Atlanta",
+                "address": "229 Peachtree St. NE #300, Atlanta, GA 30303",
+                "website": "http://ulgatl.org/",
+                "phone": "404-659-1150",
+                "category": "Employment Services",
+                "description": "Provides job search assistance including job matching support cor clients seeking employment.",
+                "countiesServed": [
+                    "Metro Atlanta"
+                ],
+                "latitude": 33.7599229,
+                "longitude": -84.3864441
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recAfODe8bDA002be",
+            "fields": {
+                "name": "Aging and Disability Resource Connection",
+                "address": "Two Peachtree Street, NW, 33rd Floor, Atlanta, GA 30303",
+                "website": "https://aging.georgia.gov/aging-and-disability-resource-connection-adrc",
+                "phone": "404-463-3333",
+                "category": "Elderly Assistance",
+                "description": "Supports the larger goals of Department of Human Services by assisting older individuals, at-risk adults, persons with disabilities, their families and caregivers to achieve safe, healthy, independent and self-reliant lives.",
+                "countiesServed": [
+                    "All of Georgia"
+                ],
+                "latitude": 33.7541825,
+                "longitude": -84.3906261
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recAzruv08OSDLYnn",
+            "fields": {
+                "name": "Georgia State University Psychology Clinic",
+                "address": "Urban Life Building, Suite 1053 Atlanta, GA 30303",
+                "website": "www2.gsu.edu/~wwwpsy/clinic.htm",
+                "phone": "404-413-6229",
+                "category": "Mental Health",
+                "subcategories": [
+                    "Counseling",
+                    "Therapy",
+                    "Anxiety",
+                    "Stress",
+                    "Overwhelm",
+                    "Depressed",
+                    "Depression"
+                ],
+                "latitude": 33.751841,
+                "longitude": -84.385566
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recB7u7iirCl68mRf",
+            "fields": {
+                "name": "Another Chance",
+                "address": "777 Cleveland Ave. SW Suite 520\n\n Atlanta, Georga 30315",
+                "website": "https://anotherchanceofatlanta.org/",
+                "phone": "(678) 974-5989",
+                "category": "Homeless Prevention",
+                "description": "Provides housing and support to homeless Veterans, families, and individuals.",
+                "countiesServed": [
+                    "Greater Atlanta"
+                ],
+                "latitude": 33.6817995,
+                "longitude": -84.4148564
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recBOiMyUoIKbVq8P",
+            "fields": {
+                "name": "Clearpoint Credit Counseling Solutions",
+                "address": "55 Ivan Allen Blvd NW Atlanta 30308",
+                "website": "www.moneymanagement.org",
+                "phone": "404-527-7630",
+                "category": "Financial Services",
+                "description": "Free financial literacy education for individuals struggling with debt",
+                "countiesServed": [
+                    "Metro Atlanta"
+                ],
+                "latitude": 33.7651895,
+                "longitude": -84.3899484
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recCdBLnEGgN4e6zQ",
+            "fields": {
+                "name": "DeKalb Community Service Board",
+                "address": "445 Winn Way Decatur, GA 30030",
+                "website": "https://dekcsb.org/",
+                "phone": "404-892-4646",
+                "category": "Substance Abuse",
+                "description": "Mental Health Residential Services are integrated therapeutic, rehabilitative, skill building and recovery promoting services. Individuals gain the skills necessary to allow them to remain in or return to naturally occurring community settings and activities. This structured supportive housing program is designed to teach residents the independent living skills they need to manage the symptoms of their mental illnesses and to maintain stable housing.",
+                "countiesServed": [
+                    "DeKalb"
+                ],
+                "latitude": 33.7867447,
+                "longitude": -84.278697
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recD9WJ6J3aqdEAQb",
+            "fields": {
+                "name": "National Drug & Alcohol Hotline",
+                "phone": "800-662-4357",
+                "category": "Mental Health, Substance Abuse and Addiction",
+                "subcategories": [
+                    "Addiction",
+                    "Addicted",
+                    "Recovery",
+                    "Rehab",
+                    "Alcoholic",
+                    "Drinking problem"
+                ]
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recDMVfElIgZ8Y4wS",
+            "fields": {
+                "name": "Carroll Electric Membership Corporation",
+                "website": "https://www.carrollemc.com/content/budget-billing",
+                "phone": "770-832-3552",
+                "category": "Housing/Utilities",
+                "subcategories": [
+                    "Electric bill",
+                    "utility bill",
+                    "utility assistance",
+                    "power bill"
+                ],
+                "description": "Helps those over 65 years oldpay their utility and energy bills."
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recDY0fl6NkWrBOh5",
+            "fields": {
+                "name": "Georgia Legal Services Program",
+                "address": "104 Marietta St. NW #250, Atlanta, GA 30303",
+                "website": "http://www.glsp.org/",
+                "phone": "404-206-5175",
+                "category": "Legal Services",
+                "description": "We provide representation to eligible clients in selected civil matters.",
+                "countiesServed": [
+                    "All of Georgia excluding the five-county Metro Atlanta"
+                ],
+                "latitude": 33.756481,
+                "longitude": -84.3927702
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recDkKSe7R5d4WinH",
+            "fields": {
+                "name": "Furniture Bank of Metro Atlanta",
+                "address": "908 Murphy Avenue SW Atlanta 30310",
+                "website": "www.furniturebankatlanta.org",
+                "phone": "404-355-8530",
+                "contactName": "Katie Leware",
+                "category": "Housing/Utilities, Furniture",
+                "description": "Provides gently used furniture to low-income families and families transitioning out ofhomelessness",
+                "countiesServed": [
+                    "Metro Atlanta"
+                ],
+                "latitude": 33.7299881,
+                "longitude": -84.41423
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recE7DvYhEOlPs4TO",
+            "fields": {
+                "name": "Midtown Assistance Center",
+                "address": "30 Porter Place NE Atlanta 30308",
+                "website": "www.midtownassistancectr.org",
+                "phone": "404-681-0470",
+                "contactName": "Rebecca Richard",
+                "category": "Housing/Utilities",
+                "description": "Emergency housing-needs assistance to low-income families",
+                "countiesServed": [
+                    "Metro Atlanta"
+                ],
+                "latitude": 33.764486,
+                "longitude": -84.3867634
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recEAi6AnqVYhLDNc",
+            "fields": {
+                "name": "Disability Link",
+                "address": "1901 Montreal Road #102, Tucker, GA 30084",
+                "website": "http://disabilitylink.org/",
+                "phone": "404-687-8890",
+                "category": "Independent Living Services",
+                "description": "Provide opportunities for people with disabilities to gain the skills that empower them to live independently.",
+                "countiesServed": [
+                    "Metro Atlanta and Cherokee",
+                    "Clayton",
+                    "Cobb",
+                    "Coweta",
+                    "Dekalb",
+                    "Douglas",
+                    "Fayette",
+                    "Fulton",
+                    "Gwinnet",
+                    "Henry",
+                    "Newton",
+                    "Rockdale Counties."
+                ],
+                "latitude": 33.8388662,
+                "longitude": -84.25603
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recEpfxjbSHPpUIkY",
+            "fields": {
+                "name": "Urban Health and Wellness",
+                "address": "645 Grant St SE Atlana, GA 30312",
+                "website": "www.uhw.clinic",
+                "phone": "404-618-6983",
+                "category": "Healthcare",
+                "description": "Freed medical clinic for uninsured and Medicaid recipients.",
+                "countiesServed": [
+                    "Greater Atlanta"
+                ],
+                "latitude": 33.7369467,
+                "longitude": -84.3766702
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recEsqApQ7kbFY7Ni",
+            "fields": {
+                "name": "Patients Advocate Foundation",
+                "website": "www.patientadvocate.org",
+                "phone": "1-800-532-5274",
+                "category": "Physical Health and Wellness",
+                "subcategories": [
+                    "Healthcare",
+                    "Insurance"
+                ],
+                "description": "Assistance with accessing insurance and healthcare",
+                "countiesServed": [
+                    "All"
+                ]
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recFPxbz1LWe7ZWsu",
+            "fields": {
+                "name": "Urban League of Greater Atlanta",
+                "address": "229 Peachtree St. NE #300, Atlanta, GA 30303",
+                "website": "http://ulgatl.org/",
+                "phone": "404-659-1150",
+                "category": "Educational Assistance",
+                "description": "They provide training in computer skills, occupational skills, soft skills, job searching techniques, resume writing, interview skills, mock inteviews and job sustainability. They also provide GED preparation and academic upgrade partner referrals.",
+                "countiesServed": [
+                    "Metro Atlanta"
+                ],
+                "latitude": 33.7599229,
+                "longitude": -84.3864441
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recFa7gyOFXDJEd79",
+            "fields": {
+                "name": "Sussex Court Residential Services",
+                "address": "2275 Sussex Ct. Snellville, Ga 30078",
+                "phone": "404-329-9390",
+                "category": "Disabled Assistance (Housing)",
+                "description": "Provides disabled low income housing apartments. (One room)",
+                "latitude": 33.8513801,
+                "longitude": -84.033388
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recFmovBAgEVc3eyp",
+            "fields": {
+                "name": "North Fulton County Group Home",
+                "address": "1200 Old Ellis Rd. Ste A, Roswell, GA 30076",
+                "phone": "404-664-4642",
+                "category": "Disabled Assistance (Housing)",
+                "description": "North Fulton County Group Home is a Disabled low income housing apartment subsidized by the federal governments HUD (Housing and Urban Development Division). (One Room)",
+                "countiesServed": [
+                    "North Fulton"
+                ],
+                "latitude": 34.0505209,
+                "longitude": -84.3253202
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recG8xlmu8jEy5Bwo",
+            "fields": {
+                "name": "Safety Net Foundation",
+                "website": "www.amgensafetynetfoundation.com",
+                "phone": "1-888-762-6436",
+                "category": "Physical Health and Wellness",
+                "subcategories": [
+                    "Amgen",
+                    "Medication",
+                    "Medicine",
+                    "Prescription",
+                    "Pharmacy",
+                    "Free medicine",
+                    "Medication Discount",
+                    "Prescription Discount"
+                ],
+                "description": "Patient assistance program to access Amgen medicines for free",
+                "countiesServed": [
+                    "All"
+                ]
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recGUpStf5WLs4IWz",
+            "fields": {
+                "name": "Clayton County Aging Program",
+                "address": "877 Battle Creek Road Jonesboro, GA 30236",
+                "website": "http://www.claytonseniors.com/senior-center-locations/clayton-county-aging-program/",
+                "phone": "770-603-4050",
+                "category": "Elderly Assistance (Meals)",
+                "description": "Currently partners with Program Open Hands who brings chilled meals and frozen lunches for Clayton Senior Adult Program participants at the Frank Bailey Senior Center.",
+                "countiesServed": [
+                    "Clayton County"
+                ],
+                "latitude": 33.552587,
+                "longitude": -84.363274
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recGijgKNXCbG50KR",
+            "fields": {
+                "name": "Atmos Energy \"Sharing the Warmth\"",
+                "website": "https://www.atmosenergy.com/community/sharing-warmth",
+                "phone": "888-286-6700",
+                "category": "Housing/Utilities",
+                "subcategories": [
+                    "Heat bill",
+                    "gas bill",
+                    "power bill",
+                    "utilities",
+                    "utility assistance"
+                ],
+                "description": "Helps low to moderate income pay their utility and energy bills.",
+                "countiesServed": [
+                    "Dallas",
+                    "GA"
+                ]
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recGrnfvPzIJdC9aW",
+            "fields": {
+                "name": "Disability Connections",
+                "address": "3695 Broadway Macon, GA 31206",
+                "website": "https://www.disabilityconnections.com/",
+                "phone": "478-741-1425",
+                "category": "Information/Resource Services",
+                "description": "Provide assistance with information and community resources that relate to disability and community resources/opportunities.",
+                "countiesServed": [
+                    "Baldwin",
+                    "Bibb",
+                    "Crawford",
+                    "Houston",
+                    "Jasper",
+                    "Jones",
+                    "Monroe",
+                    "Peach",
+                    "Pulaski",
+                    "Putnam",
+                    "Twiggs and Wilkinson"
+                ],
+                "latitude": 32.7984596,
+                "longitude": -83.641285
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recH7UZLbSg6bSIxp",
+            "fields": {
+                "name": "OutPatient Imaging",
+                "address": "10 Eastbrook Bend Peachtree City, GA 30269",
+                "website": "www.opi.bz",
+                "phone": "770-305-4674",
+                "category": "Healthcare",
+                "description": "Ultrasound, xray, catscan, mri, etc.",
+                "countiesServed": [
+                    "All"
+                ],
+                "latitude": 33.4100785,
+                "longitude": -84.5651703
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recINV9YrfntW6K99",
+            "fields": {
+                "name": "FDIC Money Smart",
+                "website": "www.fdic.gov/moneysmart",
+                "phone": "1-877-275-3342",
+                "category": "Financial Services",
+                "description": "Comprehensive financial curriculum for low-income families",
+                "countiesServed": [
+                    "All"
+                ]
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recIhr4RpSpR39lXG",
+            "fields": {
+                "name": "Latin American Association - Norcross",
+                "address": "128 Lawrenceville St. Norcross, GA 30071",
+                "website": "thelaa.org/",
+                "phone": "678-205-1018",
+                "category": "Legal Services and Immigration",
+                "description": "Offers immigrants the tools and resources they need to improve their lives through a vide variety of services.",
+                "countiesServed": [
+                    "Metro Atlanta"
+                ],
+                "latitude": 33.9427554,
+                "longitude": -84.2103303
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recJ2gCQm3cguplZ3",
+            "fields": {
+                "name": "Atlanta Manor",
+                "address": "450 Fairburn Rd. SW Atlanta, GA 30331",
+                "phone": "404-696-3187",
+                "category": "Elderly Assistance (Housing)",
+                "description": "Residency is restricted to elderly persons who earn 50% of the Area Median Income (AMI) or less. Like other rental assistance programs like Section 8, resident's rents are based on their income and the tenant contribution is set at 30% of the tenants income. (3 Bedrooms)",
+                "latitude": 33.7418846,
+                "longitude": -84.5098066
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recJp8bo2FF08CARU",
+            "fields": {
+                "name": "Heirloom Foundation",
+                "website": "www.theheirloomdfoundation.org",
+                "phone": "347-927-0827",
+                "contactName": "Sarah Ory",
+                "category": "Mental Health",
+                "description": "Support for food service workers struggling with substance abuse and/or mental health needs",
+                "countiesServed": [
+                    "All"
+                ]
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recKJyjvAHvOS27h8",
+            "fields": {
+                "name": "Housing and Urban Development Homelessness Assistance Programs",
+                "website": "https://www.hudexchange.info/homelessness-assistance/",
+                "category": "Housing/Utilities",
+                "subcategories": [
+                    "Homeless",
+                    "Homelessness",
+                    "Homelessness prevention",
+                    "rapid re-housing",
+                    "home"
+                ],
+                "description": "A local information technology system used to collect client-level data and data on the provision of housing and services to homeless individuals and families and persons at risk of homelessness.",
+                "countiesServed": [
+                    "All"
+                ]
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recKOKwet4dvE5vis",
+            "fields": {
+                "name": "Gas South",
+                "website": "https://support.gas-south.com/hc/en-us/categories/202541838-BridgePlan-Pay-As-You-Go-",
+                "phone": "877-332-5442",
+                "category": "Housing/Utilities",
+                "description": "Helps those over 65 years oldpay their utility and energy bills."
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recKOhcvhjmSIWbJW",
+            "fields": {
+                "name": "Fannie Mae",
+                "website": "www.fanniemae.com",
+                "phone": "1-800-232-6643",
+                "category": "Housing Assistance",
+                "description": "Provide access to reliable, affordable mortgage financing in all markets at all times.",
+                "countiesServed": [
+                    "All of Georgia"
+                ]
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recKaAZGRfRIpsbGI",
+            "fields": {
+                "name": "OutPatient Imaging",
+                "address": "60 Oak Hill Blvd., Suite 101 Newnan, GA 30265",
+                "website": "www.opi.bz",
+                "phone": "770-502-9883",
+                "category": "Healthcare",
+                "description": "Ultrasound, xray, catscan, mri, etc.",
+                "countiesServed": [
+                    "All"
+                ],
+                "latitude": 33.4026155,
+                "longitude": -84.710126
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recKncDzpz6doVf7u",
+            "fields": {
+                "name": "Urban League of Greater Atlanta",
+                "address": "229 Peachtree St. NE #300, Atlanta, GA 30303",
+                "website": "http://ulgatl.org/",
+                "phone": "404-659-1150",
+                "category": "Housing Assistance",
+                "description": "Provides homeownership counseling and education for first time homebuyers and foreclosure intervention/ prevention services for homeowners.",
+                "countiesServed": [
+                    "Metro Atlanta"
+                ],
+                "latitude": 33.7599229,
+                "longitude": -84.3864441
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recLVIqymV4ACF2AN",
+            "fields": {
+                "name": "Mary Hall Freedom House",
+                "address": "200 Hannover Park Rd. Atlanta, GA 30350",
+                "website": "www.mhfh.org",
+                "phone": "770-642-5500",
+                "contactName": "Lucy Hall-Gainer",
+                "category": "Women’s/LGBTQ, Mental Health, Family and Social Services, Housing/Utilities, Substance Abuse and Addiction",
+                "subcategories": [
+                    "Therapy",
+                    "Counseling",
+                    "Treatment",
+                    "Recovery",
+                    "Addiction",
+                    "Women’s Resources",
+                    "Homeless"
+                ],
+                "description": "A nonprofit organization and national leader in gender-specific treatment, recovery, housing and support services to help women and women with children break the cycle of poverty, homelessness, mental health disorders, and addiction.",
+                "countiesServed": [
+                    "Metro Atlanta"
+                ],
+                "latitude": 33.9969708,
+                "longitude": -84.3524685
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recLfw3kKaFXtZxRz",
+            "fields": {
+                "name": "Aid Atlanta",
+                "address": "1605 Peachtree Street Atlanta 30309",
+                "website": "www.aidatlanta.org",
+                "phone": "404-870-7700",
+                "category": "Physical Health and Wellness",
+                "subcategories": [
+                    "HIV/AIDS",
+                    "STDs",
+                    "Sexual Health",
+                    "HIV/AIDS education"
+                ],
+                "description": "HIV/AIDS related services, care and education",
+                "countiesServed": [
+                    "All"
+                ],
+                "latitude": 33.7978527,
+                "longitude": -84.3896654
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recLoc7cnme8Nfpor",
+            "fields": {
+                "name": "Travis House",
+                "address": "1407 South Hariston Rd. Stone Mountain, GA 30032",
+                "phone": "770-329-9390",
+                "category": "Disabled Assistance (Housing)",
+                "description": "Supportive Housing for Persons with Disabilities program, residency is restricted to persons who earn 50% of the Area Median Income (AMI) or less. Like other rental assistance programs like Section 8, resident's rents are based on their income and the tenant contribution is set at 30% of the tenants income. (One room)",
+                "latitude": 33.7536786,
+                "longitude": -84.1982744
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recLsMhr6pAOQh93r",
+            "fields": {
+                "name": "Making A Way",
+                "address": "Making A Way Housing, Inc.\n 377 Westchester Blvd\n Atlanta, Georgia 30314",
+                "website": "http://www.makingawayhousing.org",
+                "phone": "404 799-9652",
+                "category": "Homeless Prevention",
+                "description": "Addresses the growing epidemic of homelessness in metropolitan Atlanta through its shelters.",
+                "countiesServed": [
+                    "Greater Atlanta"
+                ],
+                "latitude": 33.7655407,
+                "longitude": -84.4529383
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recMA6vRNAcSjcTdN",
+            "fields": {
+                "name": "Cobb & Douglas County Community Services Board",
+                "address": "3830 South Cobb Drive, Suite 300, Smyrna, GA 30080",
+                "website": "http://www.cobbcsb.com/",
+                "phone": "770-422-0202",
+                "category": "Developmental Disabilities",
+                "description": "Offers innovative community service programs like supported employment, family support, day service programs, prevocational services, community access services and more.",
+                "countiesServed": [
+                    "Cobb and Douglas"
+                ],
+                "latitude": 33.8601252,
+                "longitude": -84.5194774
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recMasU6RR1oVUFVF",
+            "fields": {
+                "name": "Everest Funeral Planning and Concierge",
+                "website": "www.everestfuneral.com",
+                "phone": "1-800-913-8318",
+                "category": "Family and Social Services, Mental Health, Funeral Services",
+                "description": "Assistance with funeral planning for families",
+                "countiesServed": [
+                    "All"
+                ]
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recNBbq6mYK2kIE7k",
+            "fields": {
+                "name": "SCANA Energy",
+                "phone": "877-467-2262",
+                "category": "Housing/Utilities",
+                "description": "Helps those over 65 years oldpay their utility and energy bills."
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recNMZDHEG2vTtHxz",
+            "fields": {
+                "name": "Atlanta Volunteer Lawyers Foundation",
+                "address": "235 Peachtree St NW, Atlanta, GA 30303",
+                "website": "https://avlf.org/",
+                "phone": "404-521-0790",
+                "contactName": "Cole Thaler",
+                "category": "Legal Services and Immigration",
+                "subcategories": [
+                    "Legal Help",
+                    "Legal Assistance",
+                    "Lawyer",
+                    "Affordable Lawyer",
+                    "Custody Battle",
+                    "Eviction",
+                    "Eviction rights",
+                    "Housing Rights",
+                    "Divorce",
+                    "Sue"
+                ],
+                "description": "Promotes access to justice by inspiring volunteer attorneys to provide high-quality education, advocacy, and representation at no charge to low-income families with basic civil legal needs at critical times in their lives. Through its Saturday Lawyer Program, free legal representation is available to eligible tenants in a variety of landlord/tenant disputes. Through this program, the AVLF also provides free legal representation to eligible workers with a claim for unpaid wages against an employer. The Safe Families Office, a collaboration among the AVLF, Partnership Against Domestic Violence, and the Fulton County Superior Court, provides legal assistance and safety planning on a walk-in basis to victims of intimate partner violence and stalking who are seeking to file a Temporary Protective Order in Fulton County.",
+                "countiesServed": [
+                    "Greater Atlanta"
+                ],
+                "latitude": 33.7607751,
+                "longitude": -84.38718
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recNpDSjLLVqdymRx",
+            "fields": {
+                "name": "Anchor Hospital",
+                "address": "5454 Yorktowne Dr, Atlanta, GA 30349",
+                "website": "www.anchorhospital.com",
+                "phone": "770-991-6044",
+                "category": "Mental Health, Substance Abuse and Addiction",
+                "subcategories": [
+                    "Crisis Assistance",
+                    "Rehab",
+                    "Counseling",
+                    "Crisis Intervention",
+                    "Stabilization",
+                    "Stability",
+                    "Suicide",
+                    "Suicidal Thoughts",
+                    "Help",
+                    "Immediate Help",
+                    "Mental Health",
+                    "Mental Breakdown",
+                    "Psychiatric Help",
+                    "Psychiatric Hospital",
+                    "Treatment",
+                    "Inpatient Services",
+                    "Outpatient Services"
+                ],
+                "countiesServed": [
+                    "Metro Atlanta"
+                ],
+                "latitude": 33.6067858,
+                "longitude": -84.4523067
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recO9b3kytS3nIips",
+            "fields": {
+                "name": "Cobb County Senior Services",
+                "address": "1150 Powder Springs St. Marietta, GA 30064",
+                "website": "https://cobbcounty.org/index.php?option=com_content&view=category&layout=blog&id=383&Itemid=2821",
+                "phone": "770-528-5355",
+                "category": "Elderly Assistance",
+                "description": "Their primary goal is to assist clients in their efforts to remain independent through affordable transportation, nutrition, recreation, education, socialization and in home services.",
+                "countiesServed": [
+                    "Cobb County"
+                ],
+                "latitude": 33.9262739,
+                "longitude": -84.5741597
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recOirN7WNlWledmP",
+            "fields": {
+                "name": "Atlanta Community Tool Bank",
+                "address": "410 Engelwood Avenue SE Atlanta 30315",
+                "website": "www.atlantacommunitytoolbank.org",
+                "phone": "404-880-0054",
+                "contactName": "Patty Russart",
+                "category": "Family and Social Services, Tool Lending Program",
+                "description": "Provides charities with tools for their volunteers",
+                "countiesServed": [
+                    "Metro Atlanta"
+                ],
+                "latitude": 33.7226383,
+                "longitude": -84.3749866
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recPDZLixiKiTSYC6",
+            "fields": {
+                "name": "Piedmont Cancer Wellness Center",
+                "address": "1800 Howell Mill Rd, Suite 700\n Atlanta, GA 30318",
+                "website": "https://www.piedmont.org/cancer/support-services/cancer-wellness-sub",
+                "phone": "404-419-6082",
+                "contactName": "Kim Taff",
+                "category": "Healthcare",
+                "description": "Provides comprehensive cancer services and programs to anyone affected by cancer at any phase in his or her journey free of charge.",
+                "countiesServed": [
+                    "Atlanta",
+                    "Fayetteville",
+                    "Newnan",
+                    "Henry"
+                ],
+                "latitude": 33.8047584,
+                "longitude": -84.4148045
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recPFZZo4LBmeYqeu",
+            "fields": {
+                "name": "Compassion Fund",
+                "website": "https://nationalcompassionfund.org/",
+                "phone": "888-881-2622",
+                "category": "Family and Social Services, Mental Health",
+                "subcategories": [
+                    "Give Back",
+                    "Mass Shootings",
+                    "Donate",
+                    "Donations"
+                ],
+                "description": "A safe, transparent way for the public to give directly to the victims of mass casualty crimes, including shootings and terrorist attacks",
+                "countiesServed": [
+                    "All"
+                ]
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recPVteFK0ubQZIiy",
+            "fields": {
+                "name": "Sussex Court Residential Services",
+                "address": "2275 Sussex Ct. Snellville, Ga 30078",
+                "phone": "404-329-9390",
+                "category": "Disabled Assistance (Housing)",
+                "subcategories": [
+                    "Provides disabled low income housing apartments. (One room)"
+                ],
+                "latitude": 33.8513801,
+                "longitude": -84.033388
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recPwK5nZnwD6GN6J",
+            "fields": {
+                "name": "Urban League of Greater Atlanta",
+                "address": "229 Peachtree St. NE #300, Atlanta, GA 30303",
+                "website": "http://ulgatl.org/",
+                "phone": "404-659-1150",
+                "category": "Entrepreneurship Assistance",
+                "description": "Designed to help start and/ or grow your business.",
+                "countiesServed": [
+                    "Metro Atlanta"
+                ],
+                "latitude": 33.7599229,
+                "longitude": -84.3864441
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recQOrnsyfWBwARsq",
+            "fields": {
+                "name": "BB&T",
+                "address": "271 17th St. NW, Suite 800, Atlanta, GA 30363",
+                "website": "www.bbt.com",
+                "phone": "404-720-9237 (Cassidy) 803-608-1411(Brodkin)",
+                "contactName": "Elisabeth Cassidy and Ashley Brodkin",
+                "category": "Financial Assistance",
+                "description": "They give access to personalized, comprehensive package of banking, loan and insurance services as well as easy-to-understand educational resources.",
+                "countiesServed": [
+                    "All of Georgia"
+                ],
+                "latitude": 33.7916277,
+                "longitude": -84.3956788
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recQRpTVy7qkqlEiJ",
+            "fields": {
+                "name": "Living Room",
+                "address": "50 Hurt Plaza SE Suite #1200, Atlanta, GA 30303",
+                "website": "www.livingroomatl.org",
+                "phone": "404-382-8991",
+                "category": "Housing Assistance",
+                "description": "Serves individuals and families living with HIV/AIDS by providing subsidized supportive housing, housing referrals, and housing-related emergency assistance.",
+                "countiesServed": [
+                    "Metro Atlanta (29 Counties) and rural Northwest Georgia"
+                ],
+                "latitude": 33.7543349,
+                "longitude": -84.3868116
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recQYEqJrNRbON2aB",
+            "fields": {
+                "name": "Kanner & Pintaluga Accident Attorneys",
+                "address": "201 Peachtree St. NE Suite 200, Atlanta, GA 30303",
+                "website": "www.kpattorney.com",
+                "phone": "404-952-2995",
+                "contactName": "Kevin S. Sobel",
+                "category": "Legal Services and Immigration",
+                "description": "Law firm committed to representing accident and serious injury victims in various states.",
+                "countiesServed": [
+                    "All"
+                ],
+                "latitude": 33.7592858,
+                "longitude": -84.387152
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recQnx9LlcPxR2scK",
+            "fields": {
+                "name": "Georgia Natural Gas",
+                "phone": "770-850-6200",
+                "category": "Housing/Utilities",
+                "description": "Helps those over 65 years oldpay their utility and energy bills."
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recRSTNpGDCnwPLXd",
+            "fields": {
+                "name": "Dekalb Regional Crisis Center",
+                "address": "450 Winn Way, Dectaur, GA",
+                "website": "https://dekcsb.org/crisis/",
+                "phone": "404-892-4646",
+                "category": "Mental Health",
+                "subcategories": [
+                    "Crisis Assistance",
+                    "Rehab",
+                    "Counseling",
+                    "Crisis Intervention",
+                    "Stabilization",
+                    "Stability",
+                    "Suicide",
+                    "Suicidal Thoughts",
+                    "Help",
+                    "Immediate Help"
+                ],
+                "countiesServed": [
+                    "Dekalb"
+                ],
+                "latitude": 33.7870412,
+                "longitude": -84.2794395
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recRdsYFdRtH1xO2A",
+            "fields": {
+                "name": "Smart Recovery",
+                "address": "7304 Mentor Avenue Suite F Mentor, OH 44060",
+                "website": "www.smartrecovery.org",
+                "phone": "440-951-5357",
+                "category": "Mental Health",
+                "description": "Addicition recovery support group",
+                "countiesServed": [
+                    "Ohio (state)"
+                ],
+                "latitude": 41.6508993,
+                "longitude": -81.3801854
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recS3BIzICLtQKRB1",
+            "fields": {
+                "name": "Atlanta Legal Aid",
+                "address": "54 Ellis St NE, Atlanta, GA 30303",
+                "website": "https://www.atlantalegalaid.org/",
+                "phone": "404-524-5811",
+                "category": "Legal Services and Immigration",
+                "description": "Helps low-income people meet their basic needs through free civil legal services.",
+                "countiesServed": [
+                    "Clayton",
+                    "Cobb",
+                    "Dekalb",
+                    "Fulton",
+                    "and Gwinnett"
+                ],
+                "latitude": 33.7586791,
+                "longitude": -84.3857031
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recSAUYmnybjdXR4o",
+            "fields": {
+                "name": "Disability Connections",
+                "address": "3695 Broadway Macon, GA 31206",
+                "website": "https://www.disabilityconnections.com/",
+                "phone": "478-741-1425",
+                "category": "Transition Services",
+                "description": "Assist people to relocate from nursing facilities or institutions, keep from going into a nursing home or institution or transition from school to community living in the community.",
+                "countiesServed": [
+                    "Baldwin",
+                    "Bibb",
+                    "Crawford",
+                    "Houston",
+                    "Jasper",
+                    "Jones",
+                    "Monroe",
+                    "Peach",
+                    "Pulaski",
+                    "Putnam",
+                    "Twiggs and Wilkinson"
+                ],
+                "latitude": 32.7984596,
+                "longitude": -83.641285
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recSigCeL1HWvsOYj",
+            "fields": {
+                "name": "Community Housing",
+                "address": "1179 Russell Dr. Decatur, GA 30030",
+                "category": "Disabled Assistance (Housing)",
+                "description": "For persons with disabilities, residency is restricted to persons who earn 50% of the Area Median Income (AMI) or less. Like other rental assistance programs like Section 8, resident's rents are based on their income and the tenant contribution is set at 30% of the tenants income. (One Bedroom)",
+                "countiesServed": [
+                    "All of Decatur",
+                    "GA"
+                ],
+                "latitude": 33.760127,
+                "longitude": -84.2745221
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recTExzLdeXAveCti",
+            "fields": {
+                "name": "Fulton Atlanta Community Action Authority",
+                "address": "1690 Chantilly Drive NE Atlanta 30324",
+                "website": "www.facaa.org",
+                "phone": "404-320-0166",
+                "category": "Housing/Utilities",
+                "description": "Emergency housing-needs assistance to low-income families",
+                "countiesServed": [
+                    "Fulton"
+                ],
+                "latitude": 33.825064,
+                "longitude": -84.3473248
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recTwHFPMbOS3R4Yh",
+            "fields": {
+                "name": "Whitefoord, Inc.",
+                "address": "30 Warren St. Atlanta, GA 30317",
+                "website": "www.Whitefoord.org",
+                "phone": "404-373-2282",
+                "contactName": "Christy Onyeabor",
+                "category": "Family Assistance",
+                "description": "Engage, serve, and strengthen community through health and education.",
+                "countiesServed": [
+                    "Whitefoord Community"
+                ],
+                "latitude": 33.7525722,
+                "longitude": -84.3256878
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recUByQn7oRPLeq0u",
+            "fields": {
+                "name": "Georgia Power",
+                "phone": "888-660-5890",
+                "category": "Housing/Utilities",
+                "description": "Helps those over 65 years oldpay their utility and energy bills."
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recUDjEDKuJOyTCdG",
+            "fields": {
+                "name": "Midtown Assistance Center",
+                "address": "30 Porter Place NE Atlanta 30308",
+                "website": "www.midtownassistancectr.org",
+                "phone": "404-681-5777",
+                "contactName": "Keira Dandridge",
+                "category": "Housing/Utilities",
+                "description": "Emergency housing-needs assistance to low-income families",
+                "countiesServed": [
+                    "Metro Atlanta"
+                ],
+                "latitude": 33.764486,
+                "longitude": -84.3867634
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recUNyXDYEEaJAQoR",
+            "fields": {
+                "name": "Initiative for Affordable Housing DeKalb",
+                "address": "3032 N Decatur Rd. Scottdale, GA 30079",
+                "website": "www.affordablehousingatl.org",
+                "phone": "404-299-9979",
+                "category": "Housing Assistance",
+                "description": "Families live for up to two years in Initiative-owned single family houses and apartments in safe, stable neighborhoods where children can attend local schools. With their support, families get jobs, earn income, practice new skills and ultimately move into their own independent housing.",
+                "countiesServed": [
+                    "Metro Atlanta"
+                ],
+                "latitude": 33.7938654,
+                "longitude": -84.2685991
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recUb0FsIfi6XzinB",
+            "fields": {
+                "name": "Mark A. Hagins",
+                "phone": "404-453-7908",
+                "contactName": "Mark A. Hagins",
+                "category": "Financial Services"
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recUp6Q7gXzL6L77f",
+            "fields": {
+                "name": "American Cancer Society",
+                "website": "www.cancer.org",
+                "phone": "1-800-227-2345",
+                "category": "Physical Health and Wellness",
+                "subcategories": [
+                    "Cancer",
+                    "Cancer Diagnosis",
+                    "Chemo",
+                    "Radiation Therapy"
+                ],
+                "description": "Cancer research, support services and education",
+                "countiesServed": [
+                    "All"
+                ]
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recVNAqlCPvy6So6P",
+            "fields": {
+                "name": "Emory University Psychological Center",
+                "address": "Psychology Building 36 Eagle Row Atlanta, GA 30322",
+                "website": "psychology.emory.edu/home/about/psychological-center/index.html",
+                "phone": "404-727-7451",
+                "category": "Mental Health",
+                "subcategories": [
+                    "Counseling",
+                    "Therapy",
+                    "Anxiety",
+                    "Stress",
+                    "Overwhelm",
+                    "Depressed",
+                    "Depression"
+                ],
+                "latitude": 33.7910739,
+                "longitude": -84.327529
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recVfbqiASDa5w3cW",
+            "fields": {
+                "name": "DeKalb Community Service Board",
+                "address": "445 Winn Way Decatur, GA30030",
+                "website": "https://dekcsb.org/",
+                "phone": "404-892-4646",
+                "category": "Mental Health",
+                "description": "The program provides housing options for individuals with severe and persistent mental illness who are homeless or have lower income and would benefit from support in a residential setting. Mental Health Residential Services are integrated therapeutic, rehabilitative, skill building and recovery promoting services. Individuals gain the skills necessary to allow them to remain in or return to naturally occurring community settings and activities. This structured supportive housing program is designed to teach residents the independent living skills they need to manage the symptoms of their mental illnesses and to maintain stable housing.",
+                "countiesServed": [
+                    "DeKalb"
+                ],
+                "latitude": 33.7867447,
+                "longitude": -84.278697
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recWgZoMCRVj1vWSW",
+            "fields": {
+                "name": "Screen for Life",
+                "website": "https://www.cdc.gov/cancer/colorectal/sfl/index.htm",
+                "phone": "1-800-232-4636",
+                "category": "Physical Health and Wellness",
+                "subcategories": [
+                    "Cancer",
+                    "Cancer Diagnosis",
+                    "Chemo",
+                    "Radiation Therapy"
+                ],
+                "description": "Education about regular colorectal cancer screening tests",
+                "countiesServed": [
+                    "All"
+                ]
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recWno1ECgichOz5b",
+            "fields": {
+                "name": "US Ctizenship and Immigration services",
+                "website": "https://www.uscis.gov/",
+                "phone": "800-375-5283",
+                "category": "Legal Services and Immigration",
+                "description": "Oversees lawful immigration to the United States.",
+                "countiesServed": [
+                    "All"
+                ]
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recXzoTi2pQXXTqW8",
+            "fields": {
+                "name": "Trusted CFO Solutions",
+                "address": "3330 Cumberland Blvd SE #900, Atlanta, GA 30339",
+                "website": "trustedcfosolutions.com",
+                "phone": "404-630-5535",
+                "contactName": "Deborah Schwartz Griffin",
+                "category": "Employment, Financial Services, Business Assistance",
+                "description": "Using real-time, orderly data & information, we turn chaos into order, delivering actionable insights to help you effectively run your company",
+                "countiesServed": [
+                    "All"
+                ],
+                "latitude": 33.8737655,
+                "longitude": -84.458532
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recYNBWrprlzb6Lur",
+            "fields": {
+                "name": "Gwinnett County Senior Services",
+                "address": "75 Langley Drive Lawrenceville, GA 30046",
+                "website": "https://www.gwinnettcounty.com/portal/gwinnett/Departments/CommunityServices/HealthandHumanServices/GwinnettSeniorServices",
+                "phone": "678-377-4150",
+                "category": "Elderly Assistance (Meals)",
+                "description": "This service assists seniors who are homebound or unable to prepare their own meals. Meals on Wheels delivers frozen, chilled, or hot meals on a regular basis Monday through Friday. The meals are tailored to meet the nutritional needs of seniors.",
+                "countiesServed": [
+                    "Gwinnett County"
+                ],
+                "latitude": 33.9514072,
+                "longitude": -83.9931893
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recYO9yXJghAMIyt8",
+            "fields": {
+                "name": "Georgia Council on Substance Abuse",
+                "address": "2310 Parklake Drive NE, Suite 540, Atlanta, GA 30345",
+                "website": "https://www.gasubstanceabuse.org/",
+                "phone": "404-523-3440",
+                "category": "Substance Abuse",
+                "description": "They provide and disseminate education and training relevant to the addiction recovery field and acting as a clearinghouse of information on substance abuse prevention, treatment and recovery-oriented systems of care.",
+                "countiesServed": [
+                    "All of Georgia"
+                ],
+                "latitude": 33.8545752,
+                "longitude": -84.2480471
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recYUoFULuFDGuDqR",
+            "fields": {
+                "name": "National Foundation for Credit Counseling",
+                "address": "2000 M St NW #505,\n Washington, District of Columbia 20036",
+                "website": "https://www.nfcc.org/",
+                "phone": "202.677.4300",
+                "category": "Financial Services",
+                "description": "NFCC member agencies provide financial reviews and education to more than a million consumers each year in person, over the phone, or online. Every NFCC member agency client receives comprehensive money management services based on their individual needs.",
+                "latitude": 38.9051637,
+                "longitude": -77.0453824
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recYxlqSXgzDD7HNk",
+            "fields": {
+                "name": "Urban League of Greater Atlanta",
+                "address": "229 Peachtree St. NE #300, Atlanta, GA 30303",
+                "website": "http://ulgatl.org/",
+                "phone": "404-659-1150",
+                "category": "Career/ Life Empowerment Services",
+                "description": "Designed to assist adults in exploring career opportunites in high growth fields and in developing a Career/ Life Action Plan.",
+                "countiesServed": [
+                    "Metro Atlanta"
+                ],
+                "latitude": 33.7599229,
+                "longitude": -84.3864441
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recZ555apOtEyiWEO",
+            "fields": {
+                "name": "Lawrenceville Handicapped Housing",
+                "address": "420 Hillcrest Rd. Lilburn, GA 30247",
+                "phone": "770-806-8156",
+                "category": "Disabled Assistance (Housing)",
+                "description": "Lawrenceville Handicapped Housing is a disabled low income housing apartment. (1-2 Bedrooms)",
+                "countiesServed": [
+                    "All of Lawrenceville"
+                ],
+                "latitude": 33.8944834,
+                "longitude": -84.1442144
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recZ6JzmbO4udnH9N",
+            "fields": {
+                "name": "NeedyMeds",
+                "website": "www.needymeds.org",
+                "phone": "1-800-503-6897",
+                "category": "Physical Health and Wellness",
+                "subcategories": [
+                    "Medical",
+                    "Prescriptions",
+                    "Medication",
+                    "Meds",
+                    "Pharmacy"
+                ],
+                "description": "Prescription and medical resource assistance",
+                "countiesServed": [
+                    "All"
+                ]
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recZa6eyeKhPtahHE",
+            "fields": {
+                "name": "Center for Family Resources",
+                "address": "995 Roswell Street NE Suite 100 Marietta, Marietta, GA 30060",
+                "website": "www.thecfr.org",
+                "phone": "770-428-2601",
+                "category": "Transportation Assistance",
+                "description": "They can assist with bus tickets so local individuals can obtain and maintain employment to support themselves and their families.",
+                "countiesServed": [
+                    "Cobb County"
+                ],
+                "latitude": 33.951718,
+                "longitude": -84.52312
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recZyjenS3QBIReNh",
+            "fields": {
+                "name": "Gwinnett County Senior Services",
+                "address": "75 Langley Drive Lawrenceville, GA 30046",
+                "website": "https://www.gwinnettcounty.com/portal/gwinnett/Departments/CommunityServices/HealthandHumanServices/GwinnettSeniorServices",
+                "phone": "678-377-4150",
+                "category": "Elderly Assistance (In-home Respite Care)",
+                "description": "The Respite Program is designed for those with or without dementia. It provides caregivers of seniors a break from caring for their loved ones.",
+                "countiesServed": [
+                    "Gwinnett County"
+                ],
+                "latitude": 33.9514072,
+                "longitude": -83.9931893
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recaXbdG6m3WIffuw",
+            "fields": {
+                "name": "Behavioral Link",
+                "address": "233 Peachtree Street NE Suite 500 Atlanta 30303",
+                "website": "www.behaviorhealthlink.com",
+                "phone": "404-420-3202",
+                "category": "Mental Health",
+                "description": "Mental health crisis intervention",
+                "countiesServed": [
+                    "All"
+                ],
+                "latitude": 33.7605589,
+                "longitude": -84.387054
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recal7Wgw7g6Y5Vbj",
+            "fields": {
+                "name": "Asurion's Compassion Forward grant",
+                "website": "asurion.com",
+                "phone": "615-762-1148",
+                "contactName": "Theresa Gallardo",
+                "category": "Employee Assistance",
+                "description": "Offers housing emergency relief for Asurion employees in need."
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recasrXHIuj1s6AQG",
+            "fields": {
+                "name": "Grady Health System-\"Grady Card\"",
+                "phone": "404-616-6920",
+                "category": "Physical Health and Wellness",
+                "subcategories": [
+                    "Medical Services",
+                    "Discounted Medical",
+                    "Discount Healthcare",
+                    "Healthcare Assistance"
+                ],
+                "description": "Disount medical services for uninsured residents.",
+                "countiesServed": [
+                    "Fulton",
+                    "Dekalb"
+                ]
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recbmdm2Ll3sDk3aQ",
+            "fields": {
+                "name": "Big Table",
+                "address": "1023 West Riverside Suite 201\n Spokane, WA 99201",
+                "website": "www.big-table.com",
+                "phone": "509-828-8474",
+                "contactName": "Chris Deitz, Hala Mana'o",
+                "category": "Mental Health",
+                "description": "Comprehensive care for food service workers facing a crisis",
+                "countiesServed": [
+                    "99210 / 98141"
+                ],
+                "latitude": 47.6582426,
+                "longitude": -117.4276219
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "reccx8o2psxP76Aqe",
+            "fields": {
+                "name": "Alcoholics Anonymous",
+                "website": "www.atlantaaa.org",
+                "phone": "404-525-3178",
+                "category": "Mental Health, Substance Abuse and Addiction",
+                "subcategories": [
+                    "Alcohol",
+                    "alcoholic",
+                    "alcohol abuse",
+                    "drinking",
+                    "drinking problem",
+                    "recovery",
+                    "addiction"
+                ],
+                "description": "Support group for individuals struggling with alcohol",
+                "countiesServed": [
+                    "Fulton"
+                ]
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recdDYZ3pYoBlnDRL",
+            "fields": {
+                "name": "Positive Impact Residential Serv.",
+                "address": "2189 W Ponce De Leon Avenue Decatur, GA 30030",
+                "description": "They provide housing for persons with mental health complicatons and require a supportive community. They have community mental health centers as well. (Mental Health halfway houses)",
+                "latitude": 33.773636,
+                "longitude": -84.3146133
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recdFxm3oY32KuU8g",
+            "fields": {
+                "name": "The Greenbrook House",
+                "address": "6171 Greenbrook Circle Austell, GA 30168",
+                "phone": "770-427-8401",
+                "category": "Elderly Assistance (Housing)",
+                "description": "The House on Greenbrook Circle is an assisted living facility. Assisted living facilities are an apartment-style habitat designed to focus on providing assistance with daily living activities. They provide a higher level of service for the elderly which can include preparing meals, housekeeping, medication assistance, laundry, and also do regular check-in's on the residents.",
+                "latitude": 33.8011654,
+                "longitude": -84.6016069
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recdGaDN8fC7J6GzN",
+            "fields": {
+                "name": "Gwinnett County Senior Services",
+                "address": "75 Langley Drive Lawrenceville, GA 30046",
+                "website": "https://www.gwinnettcounty.com/portal/gwinnett/Departments/CommunityServices/HealthandHumanServices/GwinnettSeniorServices",
+                "phone": "678-377-4150",
+                "category": "Elderly Assistance (Transportation)",
+                "description": "Limited transportation is available to seniors who need assistance commuting to and from senior centers, medical appointments, and treatments. Vehicles used to transport seniors are wheelchair accessible.",
+                "countiesServed": [
+                    "Gwinnett County"
+                ],
+                "latitude": 33.9514072,
+                "longitude": -83.9931893
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recdHtytFHGD29CiS",
+            "fields": {
+                "name": "GK|Restaurant Workers Group",
+                "address": "900 DeKalb Ave NE Atlanta, GA 30307",
+                "website": "Facebook group",
+                "phone": "404-254-1227",
+                "category": "Employment",
+                "subcategories": [
+                    "Work",
+                    "Job",
+                    "Career",
+                    "Unemployed"
+                ],
+                "description": "GK closed Facebook group for industry folks",
+                "countiesServed": [
+                    "All"
+                ],
+                "latitude": 33.7550704,
+                "longitude": -84.3581229
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recdYbusVI41u9Kr4",
+            "fields": {
+                "name": "South Metro Homes Inc.",
+                "address": "1200 Old Ellis Rd. Roswell, GA 30076",
+                "category": "Disabled Assistance (Housing)",
+                "description": "Is a disabled low income housing apartment subsidized by the federal governments hud (housing and urban development division). (One room)",
+                "latitude": 34.0505209,
+                "longitude": -84.3253202
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recduUkiy2RiDbNj8",
+            "fields": {
+                "name": "Senior Connections",
+                "address": "5238 Peachtree Rd. Atlanta, GA 30341",
+                "website": "https://www.seniorconnectionsatl.org/",
+                "phone": "770-455-7602",
+                "category": "Eldery Assistance (Senior Centers)",
+                "description": "The centers are open Monday through Friday from 8:00 a.m. to 4:30 p.m. Within the center, a variety of activities and a meal are offered.",
+                "countiesServed": [
+                    "DeKalb"
+                ],
+                "latitude": 33.8890597,
+                "longitude": -84.3059137
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "rece1MDhMCEcVyaQ3",
+            "fields": {
+                "name": "Housing Initiative of North Fulton (Home Stretch)",
+                "address": "89 Grove Way Roswell, GA 30075",
+                "website": "www.homestretch.org",
+                "phone": "770-642-9185",
+                "category": "Housing Assistance",
+                "description": "Offers working homeless families a proven path toward financial stability, improved employment, stronger family relationships and permanent affordable housing.",
+                "countiesServed": [
+                    "Metro-North Fulton County"
+                ],
+                "latitude": 34.0185138,
+                "longitude": -84.3594216
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "rece52UPxYypmS50M",
+            "fields": {
+                "name": "Center for Family Resources",
+                "address": "995 Roswell Street NE Suite 100 Marietta, Marietta, GA 30060",
+                "website": "www.thecfr.org",
+                "phone": "770-428-2601",
+                "category": "Food Assistance",
+                "description": "They provide a on-site food pantry that has fresh produce and breads, plus other necessities like diapers, formula, and basic hygiene items.",
+                "countiesServed": [
+                    "Cobb County"
+                ],
+                "latitude": 33.951718,
+                "longitude": -84.52312
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "receOKc1aCbSCkaKT",
+            "fields": {
+                "name": "UCP of Atlanta",
+                "address": "3300 Northeast Expy NE, Bldg. 9, Atlanta, GA 30341",
+                "phone": "404-329-9390",
+                "category": "Disabled Assistance (Housing)",
+                "description": "UCP of Georgia offers a range of community living options to enable adults with intellectual and developmental disabilities to live in residential settings which best meet their individual choices and needs. These options are designed to help individuals become as independent as possible and enjoy full access to all aspects of community life. UCP community living options include single family houses, host homes and supported living.",
+                "latitude": 33.8749321,
+                "longitude": -84.2767969
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "receUliXkcLgopGdX",
+            "fields": {
+                "name": "UCP of Atlanta",
+                "address": "3300 Northeast Expy NE, Bldg. 9, Atlanta, GA 30341",
+                "phone": "404-329-9390",
+                "category": "Disabled Assistance (Housing)",
+                "subcategories": [
+                    "host homes and supported living."
+                ],
+                "latitude": 33.8749321,
+                "longitude": -84.2767969
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recf0GRe8sMFhq7bp",
+            "fields": {
+                "name": "The Lewis Road House",
+                "address": "4715 Lewis Rd. Powder Springs, GA 30127",
+                "phone": "770-427-8401",
+                "category": "Disabled Assistance (Housing)",
+                "description": "Subsidized, Low-Rent Apartment for the Disabled. (One room)",
+                "latitude": 33.83935,
+                "longitude": -84.6873398
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recfJXtlr6Kx0fx9l",
+            "fields": {
+                "name": "Douglasville VOA HSG",
+                "address": "6865 Forrest Ave. Douglasville, GA 30134",
+                "phone": "251-666-4431",
+                "category": "Disabled Assistance (Housing)",
+                "description": "Douglasville Voa Hsg is a Disabled low income housing apartment. (One Bedroom)",
+                "countiesServed": [
+                    "All of Douglasville",
+                    "GA"
+                ],
+                "latitude": 33.7555,
+                "longitude": -84.754553
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recfPxoUyRpuYlPOk",
+            "fields": {
+                "name": "Georgia Natural Gas",
+                "phone": "770-850-6200",
+                "category": "Housing/Utilities",
+                "description": "Helps low to moderate income pay their utility and energy bills."
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recfRCXncYl4ppq4h",
+            "fields": {
+                "name": "Coweta-Fayetee Electric Membership Corporation",
+                "website": "https://utility.org/operation-round-up-purpose/",
+                "phone": "770-502-0226",
+                "category": "Housing/Utilities",
+                "subcategories": [
+                    "Electric bill",
+                    "utility bill",
+                    "utility assistance",
+                    "power bill"
+                ],
+                "description": "Helps low to moderate income pay their utility and energy bills.",
+                "countiesServed": [
+                    "Coweta-Fayette"
+                ]
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recfZkjTGyL77SHzG",
+            "fields": {
+                "name": "National Suicide Hotline",
+                "phone": "800-784-2433",
+                "category": "Mental Health",
+                "subcategories": [
+                    "Suicide",
+                    "Suicidal Ideation",
+                    "Death",
+                    "Want to die",
+                    "Depressed",
+                    "Counseling",
+                    "Therapy"
+                ]
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recfhymUHhbZERvft",
+            "fields": {
+                "name": "Disability Connections",
+                "address": "3695 Broadway Macon, GA 31206",
+                "website": "https://www.disabilityconnections.com/",
+                "phone": "478-741-1425",
+                "category": "Advocacy Services",
+                "description": "Empower individuals to advocate in their own lives (self-advocacy) and for those willing to work along side other people with disabilities to advocate for the rights of all people with disabilities (systems advocacy)",
+                "countiesServed": [
+                    "Baldwin",
+                    "Bibb",
+                    "Crawford",
+                    "Houston",
+                    "Jasper",
+                    "Jones",
+                    "Monroe",
+                    "Peach",
+                    "Pulaski",
+                    "Putnam",
+                    "Twiggs and Wilkinson"
+                ],
+                "latitude": 32.7984596,
+                "longitude": -83.641285
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recgwfYNGfjxoLorz",
+            "fields": {
+                "name": "Indigent Burials Assistance Program",
+                "address": "1249 Donald Lee Hollowell Pkwy Atlanta 30318",
+                "phone": "404-206-5300",
+                "contactName": "Harriet Campbell",
+                "category": "Family and Social Services, Mental Health, Funeral Services",
+                "description": "Needs-based funeral services",
+                "countiesServed": [
+                    "Fulton"
+                ],
+                "latitude": 33.7737531,
+                "longitude": -84.4281838
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "rech2URYDwyhG2DxG",
+            "fields": {
+                "name": "CORE - Children of Restaurant Employees",
+                "address": "1196 Buckhead Crossing, Woodstock, GA 30189",
+                "website": "www.COREgives.org",
+                "phone": "404-655-4690",
+                "contactName": "Emily Kilduff",
+                "category": "Family and Social Services, Housing/Utilities",
+                "description": "Grants support to children of food and beverage service navigating life-altering circumstances.",
+                "latitude": 34.107497,
+                "longitude": -84.540023
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "rechGVR47f983kRes",
+            "fields": {
+                "name": "D&E Housing and Economic",
+                "address": "4532 Jonesboro Road\n Forest Park, GA 30297",
+                "website": "https://www.depower.org/",
+                "phone": "770-961-6900",
+                "contactName": "Tony Chung",
+                "category": "Housing/Utilities, Financial Services",
+                "subcategories": [
+                    "Training",
+                    "Home",
+                    "House",
+                    "Buy a house",
+                    "Empowerment",
+                    "Economic Development"
+                ],
+                "description": "To develop & empower underserved populations, by providing training and resources that facilitate greater participation in the economic and societal mainstream.",
+                "latitude": 33.6311378,
+                "longitude": -84.356115
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "rechM5zKSEOVBXvCx",
+            "fields": {
+                "name": "Cassie's Corner",
+                "address": "1829 Witt Dr. Lot B, Austell, GA 30168",
+                "phone": "770-427-8401",
+                "category": "Housing Assistance",
+                "description": "Subsidized, Low-rent apartment. (One bedroom)",
+                "latitude": 33.8081151,
+                "longitude": -84.611341
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "reciQSGxTRpxdfd4n",
+            "fields": {
+                "name": "Families First",
+                "address": "80 Joseph E. Lowery Blvd NW, Atlanta GA 30314",
+                "website": "https://www.familiesfirst.org",
+                "phone": "(404) 853-2844",
+                "category": "Family and Social Services, Mental Health, Women’s/LGBTQ",
+                "subcategories": [
+                    "Foster child",
+                    "Family services",
+                    "Family assistance",
+                    "adopt",
+                    "adopted",
+                    "adoption",
+                    "foster",
+                    "counseling",
+                    "stability"
+                ],
+                "description": "Families First is Georgia's largest family and children's services organization in metro Atlanta. We work to improve outcomes for youth at every stage of life by providing them with mental health support, mentorship, early education, and supportive housing and strengthening families no matter what challenges they may be facing.",
+                "countiesServed": [
+                    "All"
+                ],
+                "latitude": 33.7570072,
+                "longitude": -84.4179641
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "reciVZiVlV6MXC9DP",
+            "fields": {
+                "name": "Good Rx",
+                "website": "www.goodrx.com",
+                "phone": "1-888-799-2553",
+                "category": "Physical Health and Wellness",
+                "subcategories": [
+                    "Medical",
+                    "Prescriptions",
+                    "Medication",
+                    "Meds",
+                    "Pharmacy"
+                ],
+                "description": "App that locates prices and discounts from 60,000 pharmacies",
+                "countiesServed": [
+                    "All"
+                ]
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recig4N2iHD9DjY6w",
+            "fields": {
+                "name": "Disability Link",
+                "address": "1901 Montreal Road #102, Tucker, GA 30084",
+                "website": "http://disabilitylink.org/",
+                "phone": "404-687-8890",
+                "category": "Transition Services",
+                "description": "Transition services empowers consumers to participate and advance as members of the community. This service focuses on independent living skills, community supports, social leisure activities and appropriate referrals for education, training and employment.",
+                "countiesServed": [
+                    "Metro Atlanta and Cherokee",
+                    "Clayton",
+                    "Cobb",
+                    "Coweta",
+                    "Dekalb",
+                    "Douglas",
+                    "Fayette",
+                    "Fulton",
+                    "Gwinnet",
+                    "Henry",
+                    "Newton",
+                    "Rockdale Counties."
+                ],
+                "latitude": 33.8388662,
+                "longitude": -84.25603
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recj0DHAYzCJALgLe",
+            "fields": {
+                "name": "Ser Familia, Inc.",
+                "address": "209 Northridge Drive Acworth 30101",
+                "website": "www.gladv.org",
+                "phone": "678-363-3079",
+                "category": "Mental Health",
+                "subcategories": [
+                    "Domestic Violence",
+                    "Counseling",
+                    "Therapy",
+                    "Healing",
+                    "Abuse",
+                    "Family Counseling"
+                ],
+                "description": "Support to victims of domestic violence, family counseling",
+                "countiesServed": [
+                    "All"
+                ],
+                "latitude": 34.0737504,
+                "longitude": -84.650191
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recjU2TsWxtS0KoNg",
+            "fields": {
+                "name": "Financial Literacy and Education Commission",
+                "address": "1500 Pennsylvania Avenue NW Washington, DC 20220",
+                "website": "www.mymoney.gov",
+                "phone": "1-800-333-4630",
+                "category": "Financial Services",
+                "description": "National financial education",
+                "countiesServed": [
+                    "All"
+                ],
+                "latitude": 38.8982472,
+                "longitude": -77.0342677
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recjjzDQ4qzCRUshj",
+            "fields": {
+                "name": "Ridgeview Institute Access Center",
+                "address": "3995 South Cobb Drive, Atlanta, GA",
+                "website": "www.ridgeviewinstitute.com",
+                "phone": "770-434-4567",
+                "category": "Mental Health, Substance Abuse and Addiction",
+                "subcategories": [
+                    "Crisis Assistance",
+                    "Rehab",
+                    "Counseling",
+                    "Crisis Intervention",
+                    "Stabilization",
+                    "Stability",
+                    "Suicide",
+                    "Suicidal Thoughts",
+                    "Help",
+                    "Immediate Help",
+                    "Mental Health",
+                    "Mental Breakdown",
+                    "Psychiatric Help",
+                    "Psychiatric Hospital",
+                    "Treatment",
+                    "Inpatient Services",
+                    "Outpatient Services"
+                ],
+                "countiesServed": [
+                    "Metro Atlanta"
+                ],
+                "latitude": 33.8560495,
+                "longitude": -84.5125658
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "reckG3GoKon5HUwuQ",
+            "fields": {
+                "name": "Project Share",
+                "address": "PO Box 930188 Norcross 30003",
+                "website": "https://www.georgiapower.com/content/dam/georgia-power/pdfs/community-pdfs/project-share-brochure.pdf",
+                "phone": "1-888-660-5890",
+                "category": "Housing/Utilities, Family and Social Services",
+                "description": "Emergency assistance to Georgians who need help with basic necessities",
+                "countiesServed": [
+                    "All"
+                ],
+                "latitude": 33.94,
+                "longitude": -84.2099999
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "reckpSfNsT4qT3XmU",
+            "fields": {
+                "name": "West End Medical Free Dental Care",
+                "address": "868 York Avenue SW Atlanta 30310",
+                "website": "www.fhcga.org",
+                "phone": "404-752-1400",
+                "category": "Dental/Vision, Physical Health and Wellness",
+                "subcategories": [
+                    "Doctor",
+                    "Dentist",
+                    "Healthcare",
+                    "Medicaid",
+                    "PeachCare",
+                    "OB/GYN",
+                    "OBGYN",
+                    "family planning",
+                    "counseling",
+                    "anger management",
+                    "cancer",
+                    "cancer screenings",
+                    "heart health",
+                    "chronic illness",
+                    "primary care",
+                    "physicals",
+                    "immunizations",
+                    "medication",
+                    "discounted medication",
+                    "affordable medication"
+                ],
+                "description": "Needs-based primary care, dental care, and women’s care.",
+                "countiesServed": [
+                    "Fulton",
+                    "Cobb"
+                ],
+                "latitude": 33.736796,
+                "longitude": -84.416374
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "reclWeUwJrW127tXD",
+            "fields": {
+                "name": "Partners for Home",
+                "address": "The Gateway Center, 275 Pryor Street SW, Atlanta, GA 30303",
+                "website": "www.partnersforhome.org",
+                "phone": "404-838-6497",
+                "contactName": "Ashlee Starr",
+                "category": "Housing/Utilities, Family and Social Services",
+                "subcategories": [
+                    "Housing",
+                    "Homeless",
+                    "Eviction",
+                    "Shelter"
+                ],
+                "description": "Pulls together nonprofit, government, and business leaders to zero in on a shared, consistent, and measured approach toward success.",
+                "countiesServed": [
+                    "Greater Atlanta"
+                ],
+                "latitude": 33.7475583,
+                "longitude": -84.3941644
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recm8JwLP4Y52ffrx",
+            "fields": {
+                "name": "Art of Living Foundation",
+                "address": "7730 Roswell Rd, Atlanta, GA 30350",
+                "website": "https://www.artofliving.org/",
+                "phone": "(877) 265-4846",
+                "contactName": "Ayur Veda",
+                "category": "Mental Health, Women’s/LGBTQ",
+                "subcategories": [
+                    "Healing",
+                    "Meditation",
+                    "Spirituality",
+                    "Yoga",
+                    "Physical Health and Wellness"
+                ],
+                "description": "An international NGO, focused on various dimensions such as social transformation, child education, women and youth empowerment and world peace through yoga meditation, Sudarshan Kriya and other spiritual philosophies.",
+                "countiesServed": [
+                    "All"
+                ],
+                "latitude": 33.965567,
+                "longitude": -84.3641449
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recmLPqrYxMeRPI24",
+            "fields": {
+                "name": "Friendship Fund",
+                "category": "Emergency Assistance",
+                "countiesServed": [
+                    "Cobb"
+                ]
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recmgFKaNRjQFrI8g",
+            "fields": {
+                "name": "Disability Link",
+                "address": "1901 Montreal Road #102, Tucker, GA 30084",
+                "website": "http://disabilitylink.org/",
+                "phone": "404-687-8890",
+                "category": "Peer Counseling Services",
+                "description": "Offer people with disabilities the opportunity to interact with peers sharing knowledge, experiences and related issues such as friendship, leisure recreation, and family support.",
+                "countiesServed": [
+                    "Metro Atlanta and Cherokee",
+                    "Clayton",
+                    "Cobb",
+                    "Coweta",
+                    "Dekalb",
+                    "Douglas",
+                    "Fayette",
+                    "Fulton",
+                    "Gwinnet",
+                    "Henry",
+                    "Newton",
+                    "Rockdale Counties."
+                ],
+                "latitude": 33.8388662,
+                "longitude": -84.25603
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recmssm7aKrDfTrYn",
+            "fields": {
+                "name": "Coast2CoastRx",
+                "website": "www.coast2coastrx.com",
+                "category": "Healthcare",
+                "description": "Free prescription discount card provided by township, city, and country governments - and by local United Way organizations. The program includes participation by U.S. pharmacies to provide annual savings up to 55%.",
+                "countiesServed": [
+                    "Augusta-Richmond",
+                    "Banks",
+                    "Barrow",
+                    "Bartow",
+                    "Ben Hill",
+                    "Camden",
+                    "Charlton",
+                    "Chatham",
+                    "Cherokee",
+                    "Cobb",
+                    "Cook",
+                    "Dawson",
+                    "Effingham",
+                    "Forsyth",
+                    "Franklin",
+                    "Greene",
+                    "Gwinnett",
+                    "Habersham",
+                    "Harris",
+                    "Hart",
+                    "Heard",
+                    "Henry",
+                    "Jackson",
+                    "Jones",
+                    "Liberty",
+                    "Lumpkin",
+                    "Mitchell",
+                    "Monroe",
+                    "Newton",
+                    "Oconee",
+                    "Oglethorpe",
+                    "Peach",
+                    "Putnam",
+                    "Seminole",
+                    "Spalding",
+                    "Stephens",
+                    "Talbot",
+                    "Thomas",
+                    "Towns",
+                    "Turner",
+                    "Union",
+                    "White",
+                    "Wilkes"
+                ]
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recnmHV6hOPcM1qbJ",
+            "fields": {
+                "name": "DFS Memorials",
+                "website": "www.dfsmemorials.com",
+                "phone": "404-445-0239",
+                "category": "Family and Social Services, Mental Health, Funeral Services",
+                "description": "Funeral care and cremation services",
+                "countiesServed": [
+                    "All"
+                ]
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recnrKmv40sLrbm5W",
+            "fields": {
+                "name": "Common Courtesy, Inc.",
+                "website": "https://www.commoncourtesyrides.org/",
+                "phone": "404-215-9600",
+                "category": "Mobility Services",
+                "description": "A program which began as a way to help poor, elderly medical patients get to and from hospitals has been repurposed to get homeless people rides to warming shelters. In partnership with Central Atlanta Progress and rideshare services such as Lyft and Uber.",
+                "countiesServed": [
+                    "Greater Atlanta"
+                ]
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recoTlpqJZXCQ9Hai",
+            "fields": {
+                "name": "Community Friendship",
+                "address": "85 Renaissance Pkwy NE, Atlanta, GA 30308",
+                "website": "http://www.communityfriendship.org/",
+                "phone": "404-875-0381",
+                "category": "Mental Health",
+                "description": "Provide a supportive community for people whose mental illness prevents them from participating in community life, employment and relationships by offering a comprehensive range of services providing educational support, training, skills building, preparation for work, career development and full integration in the community.",
+                "countiesServed": [
+                    "Metro-Atlanta"
+                ],
+                "latitude": 33.7683969,
+                "longitude": -84.3846151
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recoXRaR2wuJEUNCd",
+            "fields": {
+                "name": "Atlanta Children's Shelter",
+                "address": "607 Peachtree Street NE Atlanta, GA 30308",
+                "website": "https://www.acsatl.org/",
+                "phone": "404-892-3713",
+                "contactName": "Sandy Keating",
+                "category": "Housing/Utilities, Family and Social Services",
+                "subcategories": [
+                    "Homeless",
+                    "Eviction",
+                    "Family",
+                    "Life skills"
+                ],
+                "description": "To provide loving, quality child development and support services for homeless families striving to become self-sufficient.",
+                "countiesServed": [
+                    "Metro Atlanta"
+                ],
+                "latitude": 33.7709437,
+                "longitude": -84.3844309
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recoggGU7r1n2kbNJ",
+            "fields": {
+                "name": "Disability Link",
+                "address": "1901 Montreal Road #102, Tucker, GA 30084",
+                "website": "http://disabilitylink.org/",
+                "phone": "404-687-8890",
+                "category": "Advocacy Services",
+                "description": "Provide information and assistance for people with disabilities and their families in accessing support systems, and promoting changes that enhance full access to the community.",
+                "countiesServed": [
+                    "Metro Atlanta and Cherokee",
+                    "Clayton",
+                    "Cobb",
+                    "Coweta",
+                    "Dekalb",
+                    "Douglas",
+                    "Fayette",
+                    "Fulton",
+                    "Gwinnet",
+                    "Henry",
+                    "Newton",
+                    "Rockdale Counties."
+                ],
+                "latitude": 33.8388662,
+                "longitude": -84.25603
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recotxBi00H9mEueI",
+            "fields": {
+                "name": "South Fulton Homes, Inc.",
+                "address": "5074 Dixie Lake Rd. Union City, GA 30291",
+                "phone": "770-664-4347",
+                "category": "Disabled Assistance (Housing)",
+                "description": "Supportive Housing for Persons with Disabilities program, residency is restricted to persons who earn 50% of the Area Median Income (AMI) or less. Like other rental assistance programs like Section 8, resident's rents are based on their income and the tenant contribution is set at 30% of the tenants income. (One room)",
+                "latitude": 33.5832603,
+                "longitude": -84.5542614
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recpFwxW1hre89z3K",
+            "fields": {
+                "name": "Prevent Blindness Georgia",
+                "address": "739 West Peachtree St. NW, Suite 200",
+                "website": "https://georgia.preventblindness.org/",
+                "phone": "404-266-1465",
+                "contactName": "Anna Jones",
+                "category": "Healthcare",
+                "description": "Prevent blindness and preserve sight for all Georgians, so that no Georgian needlessly lose their sight due to preventable vison loss.",
+                "countiesServed": [
+                    "All of Georgia"
+                ],
+                "latitude": 33.7749417,
+                "longitude": -84.3869553
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recq7dNeFM2vC8EXu",
+            "fields": {
+                "name": "Cobb & Douglas County Community Services Board",
+                "address": "3830 South Cobb Drive, Suite 300\n Smyrna, GA 30080",
+                "website": "http://www.cobbcsb.com/",
+                "phone": "770-422-0202",
+                "contactName": "Bryan Stephens",
+                "category": "Mental Health, Substance Abuse and Addiction",
+                "subcategories": [
+                    "Recovery",
+                    "Healing",
+                    "Rehab",
+                    "Mental Health Disorders",
+                    "Depression",
+                    "Depressed",
+                    "Anxiety",
+                    "Anxious"
+                ],
+                "description": "Provides citizens challenged by mental health, developmental disabilities and/or addictive disease issues with appropriate care and resources.",
+                "latitude": 33.8601252,
+                "longitude": -84.5194774
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recqNFIbjaIq1y4yi",
+            "fields": {
+                "name": "National Domestic Violence Hotline",
+                "phone": "800-799-7233",
+                "category": "Mental Health",
+                "subcategories": [
+                    "Domestic Violence",
+                    "Counseling",
+                    "Therapy",
+                    "Healing",
+                    "Abuse"
+                ]
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recqnST3vlfpSLFCi",
+            "fields": {
+                "name": "Clayton County Community Services Authority",
+                "address": "1000 Main Street Forest Park 30297",
+                "website": "http://www.claytoncountycsa.org/",
+                "phone": "404-363-0575",
+                "category": "Housing/Utilities",
+                "description": "Emergency housing-needs assistance to low-income families",
+                "countiesServed": [
+                    "Clayton"
+                ],
+                "latitude": 33.6206312,
+                "longitude": -84.3574089
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recqvGlNxYDEsyoyI",
+            "fields": {
+                "name": "The Arc House",
+                "address": "315 Smyrna Powder Springs Rd Smryna, GA 30060",
+                "phone": "770-427-8401",
+                "description": "Supportive Housing for Persons with Disabilities program, residency is restricted to persons who earn 50% of the Area Median Income (AMI) or less. Like other rental assistance programs like Section 8, resident's rents are based on their income and the tenant contribution is set at 30% of the tenants income. (One room)",
+                "latitude": 33.8907538,
+                "longitude": -84.5442922
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recrk3ItQg2kNvdwH",
+            "fields": {
+                "name": "Georgia statewide energy bill assistance program",
+                "phone": "866-245-7742",
+                "category": "Housing/Utilities",
+                "subcategories": [
+                    "power bill",
+                    "utilities",
+                    "utility assistance",
+                    "gas bill"
+                ],
+                "description": "Helps low to moderate income pay their utility and energy bills.",
+                "countiesServed": [
+                    "All"
+                ]
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recrotyZTNHDCfHCX",
+            "fields": {
+                "name": "The Silverton Foundation",
+                "address": "1201 Peachtree St. NE, Ste. 2050 Atlanta, GA 30361",
+                "website": "www.thesilvertonfoundation.org",
+                "phone": "404-815-0291",
+                "category": "Children & Family",
+                "description": "Provides mortgage and rent assistance to families with sick children.",
+                "countiesServed": [
+                    "All of Georgia"
+                ],
+                "latitude": 33.787648,
+                "longitude": -84.383102
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recrs6Qs6IifvRnVW",
+            "fields": {
+                "name": "The Center for Family Resources",
+                "address": "995 Roswell Street NE, Suite 100, Marietta, GA 30060",
+                "website": "www.TheCFR.org",
+                "phone": "770-428-2601",
+                "contactName": "Carolyn Bridges",
+                "category": "Housing/Utilities",
+                "subcategories": [
+                    "Medical",
+                    "Food Pantry",
+                    "Assistance",
+                    "Rent",
+                    "Utilities",
+                    "Power bill",
+                    "Water bill"
+                ],
+                "description": "A Cobb County-based organization that works exclusively to serve local families and individuals that are either homeless or in danger of becoming homeless.",
+                "countiesServed": [
+                    "Cobb"
+                ],
+                "latitude": 33.951718,
+                "longitude": -84.52312
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recsLcaaVQlhvyRDZ",
+            "fields": {
+                "name": "CEPTA",
+                "address": "6020 Dawson Boulevard Norcross 30093",
+                "website": "http://www.cetpa.org/",
+                "phone": "770-662-0249",
+                "contactName": "Gloria Juliao",
+                "category": "Mental Health",
+                "description": "Latin Americn behavioral health and prevention organization",
+                "countiesServed": [
+                    "30093"
+                ],
+                "latitude": 33.9065074,
+                "longitude": -84.208292
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recstIEikYzy9W7y8",
+            "fields": {
+                "name": "Georgia Helpline",
+                "phone": "800-338-6745",
+                "category": "Mental Health, Substance Abuse and Addiction",
+                "subcategories": [
+                    "Crisis Assistance",
+                    "Crisis Intervention",
+                    "Help",
+                    "Immediate Help"
+                ],
+                "countiesServed": [
+                    "All"
+                ]
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "rectN8BdHKXqs1COw",
+            "fields": {
+                "name": "Meals on Wheels",
+                "address": "1705 Commerce Drive NW Atlanta 30318",
+                "website": "www.mealsonwheelsatlanta.org",
+                "phone": "404-351-3889",
+                "contactName": "Tenille Johnson",
+                "category": "Family and Social Services, Food Assistance",
+                "subcategories": [
+                    "Food Assistance",
+                    "Elderly",
+                    "Senior Assistance",
+                    "pet food",
+                    "pet assistance"
+                ],
+                "description": "Meal delivery for low-income and homebound seniors; pet pantry for animals",
+                "countiesServed": [
+                    "Fulton"
+                ],
+                "latitude": 33.8008215,
+                "longitude": -84.4104546
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "rectvVyEPtcPyd1LP",
+            "fields": {
+                "name": "Senior Connections",
+                "address": "5238 Peachtree Rd. Atlanta, GA 30341",
+                "website": "https://www.seniorconnectionsatl.org/",
+                "phone": "770-455-7602",
+                "category": "Elderly Assistance (In-home Care)",
+                "description": "They provide quality in-home care services with experienced, caring aides. They offer homemaker services, personal care, and companion/respite care.",
+                "countiesServed": [
+                    "DeKalb",
+                    "Fulton",
+                    "Gwinnett",
+                    "Rockdale"
+                ],
+                "latitude": 33.8890597,
+                "longitude": -84.3059137
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recu0zk20S8tt27oR",
+            "fields": {
+                "name": "Northside Hospital: Partnership for Safety",
+                "address": "1000 Johnson Ferry Road NE Atlanta 303432",
+                "website": "www.nohttps://www.northside.com/oth/Page.asp?PageID=OTHG01796rthside.com",
+                "category": "Physical Health and Wellness",
+                "subcategories": [
+                    "Health screening",
+                    "doctor",
+                    "doctor appointment"
+                ],
+                "description": "Listed times, dates, and types of health screenings offered by Northside throughout the year at low-cost/no-cost",
+                "countiesServed": [
+                    "All"
+                ],
+                "latitude": 33.9093745,
+                "longitude": -84.3546157
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recuRXcs2DyyzvwxH",
+            "fields": {
+                "name": "Disability Connections",
+                "address": "3695 Broadway Macon, GA 31206",
+                "website": "https://www.disabilityconnections.com/",
+                "phone": "478-741-1425",
+                "category": "Peer Support Services",
+                "description": "Connect people with disabilities with trained peer supporters who share their valuable life experiences.",
+                "countiesServed": [
+                    "Baldwin",
+                    "Bibb",
+                    "Crawford",
+                    "Houston",
+                    "Jasper",
+                    "Jones",
+                    "Monroe",
+                    "Peach",
+                    "Pulaski",
+                    "Putnam",
+                    "Twiggs and Wilkinson"
+                ],
+                "latitude": 32.7984596,
+                "longitude": -83.641285
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recuhnSC7TI7cODF4",
+            "fields": {
+                "name": "Senior Connections",
+                "address": "5238 Peachtree Rd. Atlanta, GA 30341",
+                "website": "https://www.seniorconnectionsatl.org/",
+                "phone": "770-455-7602",
+                "category": "Elderly Assistance (Meals)",
+                "description": "Senior Connections’ Meals On Wheels program provides several options, including hot, nutritious meals delivered to your door. You have options to choose from daily hot meals or weekly frozen meals that cater to regular and thereaputic diets.",
+                "countiesServed": [
+                    "DeKalb",
+                    "Fulton",
+                    "Gwinnett",
+                    "Rockdale",
+                    "Macon/Bibb"
+                ],
+                "latitude": 33.8890597,
+                "longitude": -84.3059137
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recvehKsc4lt4mH92",
+            "fields": {
+                "name": "Latin American Association - Atlanta",
+                "address": "2750 Buford Hwy, Atlanta, GA 30324",
+                "website": "thelaa.org/",
+                "phone": "(404) 638-1800",
+                "category": "Legal Services and Immigration",
+                "description": "Offers immigrants the tools and resources they need to improve their lives through a vide variety of services.",
+                "countiesServed": [
+                    "Metro Atlanta"
+                ],
+                "latitude": 33.8290248,
+                "longitude": -84.346071
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recvwg0URQvPTQbsA",
+            "fields": {
+                "name": "Northside Hospital: Domestic Violence",
+                "address": "1000 Johnson Ferry Road NE Atlanta 303432",
+                "website": "https://www.northside.com/oth/Page.asp?PageID=OTH006585",
+                "phone": "404-851-8960",
+                "category": "Mental Health, Physical Health and Wellness, Women’s/LGBTQ, Domestic Violence",
+                "subcategories": [
+                    "Domestic Violence",
+                    "Counseling",
+                    "Therapy",
+                    "Healing",
+                    "Abuse"
+                ],
+                "description": "Support to victims of domestic violence",
+                "countiesServed": [
+                    "All"
+                ],
+                "latitude": 33.9093745,
+                "longitude": -84.3546157
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recwP3FhuK5R3dN2f",
+            "fields": {
+                "name": "American Immigration Services",
+                "website": "https://www.uscis.gov/",
+                "phone": "800-375-5283",
+                "category": "Legal Services and Immigration",
+                "description": "A source for every aspect of the immigration proccess. Forms, how-to manuals, etc.",
+                "countiesServed": [
+                    "All"
+                ]
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recwbs4zDYIJGLAsH",
+            "fields": {
+                "name": "Star-C",
+                "address": "1201 Peachtree Street Suite 1110 Atlanta 30361",
+                "website": "www.star-c.org",
+                "phone": "404-698-3535",
+                "contactName": "Allie Reeser",
+                "category": "Housing/Utilities, Assistance",
+                "description": "Works with landlords to willing to offer wrap around services to individual tenants",
+                "countiesServed": [
+                    "All"
+                ],
+                "latitude": 33.787648,
+                "longitude": -84.383102
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recxa5SyKNRY9Pcs7",
+            "fields": {
+                "name": "Mental Health America of Georgia",
+                "address": "2250 N Druid Hills Rd. NE, Suite 275, Atlanta, GA 30329",
+                "website": "http://www.mhageorgia.org/",
+                "phone": "770-741-1481",
+                "category": "Mental Health",
+                "description": "They enhance the mental health and wellness of Georgians through education, outreach, and advocacy.",
+                "countiesServed": [
+                    "All of Georgia"
+                ],
+                "latitude": 33.8295072,
+                "longitude": -84.3309915
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recy0gSyl5b7QUDnQ",
+            "fields": {
+                "name": "Atlanta Group Home",
+                "address": "3095 Margaret Mitchell Dr. Atlanta, GA 30327",
+                "phone": "404-351-3536",
+                "category": "Elderly Assistance (Housing)",
+                "description": "Residency is restricted to elderly persons who earn 50% of the Area Median Income (AMI) or less. Like other rental assistance programs like Section 8, resident's rents are based on their income and the tenant contribution is set at 30% of the tenants income. (One Bedroom)",
+                "latitude": 33.8385672,
+                "longitude": -84.4283241
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recyjpt1WNtxxIT4G",
+            "fields": {
+                "name": "DeKalb Community Service Board",
+                "address": "445 Winn Way Decatur, GA 30030",
+                "website": "https://dekcsb.org/",
+                "phone": "404-892-4646",
+                "category": "Developmental Disabilities",
+                "description": "They provide a variety of educational, therapeutic and behavioral support services to individuals, ages 21 and up, and their families. Our programs are designed to provide opportunities for individuals to maximize their independence, increase skills and live meaningful lives.",
+                "countiesServed": [
+                    "DeKalb"
+                ],
+                "latitude": 33.7867447,
+                "longitude": -84.278697
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recytZBmrQKMYQhUn",
+            "fields": {
+                "name": "Staples Share Fund",
+                "website": "www.staplessharefund.org/",
+                "category": "Employee Assistance",
+                "description": "Offers emergency relief for Staples' employees in need."
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "recz8p9zRKNv69AYS",
+            "fields": {
+                "name": "Disability Link",
+                "address": "1901 Montreal Road #102, Tucker, GA 30084",
+                "website": "http://disabilitylink.org/",
+                "phone": "404-687-8890",
+                "category": "Information/ Referral Services",
+                "description": "Provide comprehensive and up to date information on available resources for people with disabilities and assist individuals by providing referrals for housing, education, attendant assistance services, and community resources for related services.",
+                "countiesServed": [
+                    "Metro Atlanta and Cherokee",
+                    "Clayton",
+                    "Cobb",
+                    "Coweta",
+                    "Dekalb",
+                    "Douglas",
+                    "Fayette",
+                    "Fulton",
+                    "Gwinnet",
+                    "Henry",
+                    "Newton",
+                    "Rockdale Counties."
+                ],
+                "latitude": 33.8388662,
+                "longitude": -84.25603
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "reczVbym9KihYKw6b",
+            "fields": {
+                "name": "Partnership for Community Action",
+                "address": "1261 Commercial Drive Conyers 30094",
+                "website": "www.pcaction.org",
+                "phone": "404-929-2467",
+                "category": "Housing/Utilities",
+                "description": "Emergency housing-needs assistance to low-income families",
+                "countiesServed": [
+                    "Dekalb",
+                    "Gwinnett",
+                    "Rockdale"
+                ],
+                "latitude": 33.65737,
+                "longitude": -84.021367
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        },
+        {
+            "id": "reczubC3GDMzXn4YC",
+            "fields": {
+                "name": "Center for Family Resources",
+                "address": "995 Roswell Street NE Suite 100 Marietta, Marietta, GA 30060",
+                "website": "www.thecfr.org",
+                "phone": "770-428-2601",
+                "category": "Educational Assistance",
+                "description": "They offer GED prep classes, life skills training, as well as counseling and instruction in interviewing skills, job search and retention skills, and resume preparation.",
+                "countiesServed": [
+                    "Cobb County"
+                ],
+                "latitude": 33.951718,
+                "longitude": -84.52312
+            },
+            "createdTime": "2019-10-16T01:57:05.000Z"
+        }
+    ]
+}

@@ -20,23 +20,26 @@ extension ServiceManager {
             }
         
             guard let topLevelJsonDict = response.result.value as? [String:Any],
-            let safetyNetArray = topLevelJsonDict["safetyNet"] as? [[String:Any]] else {
+            let safetyNetArray = topLevelJsonDict["records"] as? [[String:Any]] else {
                 completion(nil, NSError(domain: "", code: 999, userInfo: [NSLocalizedDescriptionKey:"Parsing error"]))
                 return
             }
             
-            do {
-                let jsonData = try JSONSerialization.data(withJSONObject: safetyNetArray, options: .prettyPrinted)
-                
-                let models = try JSONDecoder().decode([SafetyNetResourceModel].self, from: jsonData)
-                //            let models = SafetyNetResourceModel.modelsWithJsonArray(jsonArray: safetyNetArray)
-                completion(models, nil)
+            var safetyNetModels = [SafetyNetResourceModel]()
+            for record in safetyNetArray {
+                do {
+                    if let innerFieldDictionary = record["fields"] {
+                        let jsonData = try JSONSerialization.data(withJSONObject: innerFieldDictionary, options: .prettyPrinted)
+                        let safetyNetModel = try JSONDecoder().decode(SafetyNetResourceModel.self, from: jsonData)
+                        safetyNetModels.append(safetyNetModel)
+                    }
+                }
+                catch {
+                    //throw the record out
+                }
             }
-            catch {
-                completion(nil, NSError(domain: "", code: 999, userInfo: [NSLocalizedDescriptionKey:"Parsing error"]))
-            }
-
             
+            completion(safetyNetModels, nil)
         }
     }
     

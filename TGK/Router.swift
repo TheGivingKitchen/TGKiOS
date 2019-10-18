@@ -76,8 +76,7 @@ extension Router {
             
         //Safety Net
         case .getSafetyNet:
-            return "\(Router.firebaseBaseStorageUrl)/safetyNet%2FsafetyNet.json?alt=media"
-
+            return "\(Router.firebaseBaseStorageUrl)/stabilityNet%2FstabilityNet.json?alt=media"
         }
     }
     

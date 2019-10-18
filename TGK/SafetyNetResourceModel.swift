@@ -38,6 +38,7 @@ class SafetyNetResourceModel:NSObject, Codable {
     var phoneNumber:String?
     var contactName:String?
     var category:String?
+    var subcategories:[String]?
     var resourceDescription:String?
     var counties:[String]?
     var location:CLLocationCoordinate2D?
@@ -49,6 +50,7 @@ class SafetyNetResourceModel:NSObject, Codable {
         case phoneNumber = "phone"
         case contactName
         case category
+        case subcategories
         case resourceDescription = "description"
         case counties = "countiesServed"
         case location
@@ -69,6 +71,7 @@ class SafetyNetResourceModel:NSObject, Codable {
             }
         }
         
+        subcategories = try container.decodeIfPresent([String].self, forKey: .subcategories)
         resourceDescription = try container.decodeIfPresent(String.self, forKey: .resourceDescription)
         
         let addressUnsanitized = try container.decodeIfPresent(String.self, forKey: .address)
@@ -91,20 +94,7 @@ class SafetyNetResourceModel:NSObject, Codable {
         let phoneNumberString = try container.decodeIfPresent(String.self, forKey: .phoneNumber)
         self.phoneNumber = phoneNumberString?.formatStringToNumericString()
         
-        let countiesString = try container.decodeIfPresent(String.self, forKey: .counties)
-        if let countiesString = countiesString {
-            let splitStringArray = countiesString.components(separatedBy: ",")
-            let sanitizedArray = splitStringArray.filter { (county) -> Bool in
-                if county.trimmingCharacters(in: .whitespaces).isEmpty {
-                    return false
-                }
-                return true
-            }
-            let trimmedArray = sanitizedArray.map { (countyString) -> String in
-                return countyString.trimmingCharacters(in: .whitespaces)
-            }
-            self.counties = trimmedArray
-        }
+        counties = try container.decodeIfPresent([String].self, forKey: .counties)
         
         let latidude = try container.decodeIfPresent(Double.self, forKey: .latitude)
         let longitude = try container.decodeIfPresent(Double.self, forKey: .longitude)
@@ -121,17 +111,15 @@ class SafetyNetResourceModel:NSObject, Codable {
         var container = encoder.container(keyedBy: CodingKeys.self)
         try container.encodeIfPresent(name, forKey: .name)
         try container.encodeIfPresent(contactName, forKey: .contactName)
+        try container.encodeIfPresent(category, forKey: .category)
+        try container.encodeIfPresent(subcategories, forKey: .subcategories)
         try container.encodeIfPresent(resourceDescription, forKey: .resourceDescription)
         try container.encodeIfPresent(address, forKey: .address)
         try container.encodeIfPresent(websiteUrl?.absoluteString, forKey: .websiteUrl)
         try container.encodeIfPresent(phoneNumber, forKey: .phoneNumber)
-        
-        let countiesString = self.counties == nil ? nil : self.counties?.joined(separator: ",")
-        
-        try container.encodeIfPresent(countiesString, forKey: .counties)
-        
+        try container.encodeIfPresent(counties, forKey: .counties)
         try container.encodeIfPresent(location?.latitude, forKey: .latitude)
-            try container.encodeIfPresent(location?.longitude, forKey: .longitude)
+        try container.encodeIfPresent(location?.longitude, forKey: .longitude)
     }
     
     

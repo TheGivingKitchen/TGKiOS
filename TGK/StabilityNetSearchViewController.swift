@@ -351,28 +351,39 @@ extension StabilityNetSearchViewController: UISearchBarDelegate {
                 if let phoneNumber = safetyNetModel.phoneNumber,
                     phoneNumber.contains(lowercaseTrimmedSearchText),
                     lowercaseTrimmedSearchText.count > 2 {
-                    //make keyword searching restrictive to at least 3 characters to reduce noise
+                    //make keyword searching restrictive to at least 2 characters to reduce noise
                     return true
                 }
                 
                 if let contactName = safetyNetModel.contactName?.lowercased(),
                     contactName.contains(lowercaseTrimmedSearchText),
                     lowercaseTrimmedSearchText.count > 2 {
-                    //make keyword searching restrictive to at least 3 characters to reduce noise
+                    //make keyword searching restrictive to at least 2 characters to reduce noise
                     return true
                 }
                 
                 if let category = safetyNetModel.category?.lowercased(),
                     category.contains(lowercaseTrimmedSearchText),
                     lowercaseTrimmedSearchText.count > 2 {
-                    //make keyword searching restrictive to at least 3 characters to reduce noise
                     return true
+                    //make keyword searching restrictive to at least 2 characters to reduce noise
+                }
+                
+                if let subcategories = safetyNetModel.subcategories {
+                    for subcategory in subcategories {
+                        if let _ = subcategory.range(of: lowercaseTrimmedSearchText, options: .caseInsensitive),
+                            lowercaseTrimmedSearchText.count > 2 {
+                            return true
+                            //make keyword searching restrictive to at least 2 characters to reduce noise
+                        }
+                    }
                 }
                 
                 if let counties = safetyNetModel.counties {
                     for county in counties {
                         //make keyword searching restrictive to at least 3 characters to reduce noise
-                        if lowercaseTrimmedSearchText.count < 3 {
+                        if let _ = county.range(of: lowercaseTrimmedSearchText, options: .caseInsensitive),
+                            lowercaseTrimmedSearchText.count < 3 {
                             break
                         }
                         if county.lowercased().range(of: lowercaseTrimmedSearchText) != nil {
