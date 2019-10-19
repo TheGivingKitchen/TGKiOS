@@ -12,7 +12,7 @@ import MapKit
 class StabilityNetMapViewController: UIViewController {
     
     @IBOutlet weak var mapView: MKMapView!
-    @IBOutlet weak var userLocationButton: UIButton!
+    var userLocationButton: UIButton!
     
     var stabilityNetResources:[SafetyNetResourceModel] = []
     
@@ -29,6 +29,9 @@ class StabilityNetMapViewController: UIViewController {
         let mapTapGesture = UITapGestureRecognizer(target: self, action: #selector(mapTapGesture(_:)))
         self.mapView.addGestureRecognizer(mapTapGesture)
         
+        self.addBottomSheetView()
+        self.addUserLocationButton()
+        
         if let _ = self.locationManager.location?.coordinate {
             self.centerOnUserLocation()
             //self.addRadiusCircle(location: userLocation)
@@ -43,12 +46,26 @@ class StabilityNetMapViewController: UIViewController {
         
         self.addAnnotationsToMap()
         
-        self.addBottomSheetView()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.isNavigationBarHidden = true
+    }
+    
+    func addUserLocationButton() {
+        self.userLocationButton = UIButton(frame: CGRect(x: 0, y: 0, width: 60.0, height: 60.0))
+        self.userLocationButton.setImage(UIImage(named: "iconUserLocationPointer"), for: .normal)
+        self.userLocationButton.addTarget(self, action: #selector(self.userLocationButtonPressed(_:)), for: .touchUpInside)
+        self.userLocationButton.translatesAutoresizingMaskIntoConstraints = false
+        self.view.addSubview(self.userLocationButton)
+        
+        self.userLocationButton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -16.0).isActive = true
+        self.userLocationButton.bottomAnchor.constraint(equalTo: self.searchViewController.view.topAnchor, constant: -16).isActive = true
+        self.userLocationButton.widthAnchor.constraint(equalToConstant: 60.0).isActive = true
+        self.userLocationButton.heightAnchor.constraint(equalToConstant: 60.0).isActive = true
+        
     }
     
     func addBottomSheetView(scrollable: Bool? = true) {
@@ -114,7 +131,7 @@ class StabilityNetMapViewController: UIViewController {
         self.searchViewController.moveToBottomStickyPoint()
     }
     
-    @IBAction func userLocationButtonPressed(_ sender: Any) {
+    @objc func userLocationButtonPressed(_ sender: Any) {
         switch CLLocationManager.authorizationStatus() {
         case .notDetermined:
             let locationWarmingVC = LocationWarmingViewController.instantiateWith(delegate: self)
@@ -185,6 +202,7 @@ extension StabilityNetMapViewController: MKMapViewDelegate {
             let annotationView = MKPinAnnotationView(annotation:annotation, reuseIdentifier:identifier)
             annotationView.isEnabled = true
             annotationView.canShowCallout = true
+            annotationView.pinTintColor = UIColor.tgkOrange
             let rightAccessoryButton = UIButton(type: .detailDisclosure)
             annotationView.rightCalloutAccessoryView = rightAccessoryButton
             

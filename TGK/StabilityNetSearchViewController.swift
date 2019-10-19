@@ -24,7 +24,8 @@ class StabilityNetSearchViewController: UIViewController {
     
     let topStickyPoint: CGFloat = 100
     var bottomStickyPoint: CGFloat {
-        return UIScreen.main.bounds.height - 400
+        //round it so that the pan guesture recognizer has an integer value to work with
+        return (UIScreen.main.bounds.height * 0.6).rounded()
     }
     
     private enum SafetyNetTableSection:Int {

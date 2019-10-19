@@ -117,6 +117,9 @@ class SafetyNetDetailSheetViewController: UIViewController {
         if let phoneString = safetyNetModel.phoneNumber {
             businessInfo.append(phoneString)
         }
+        if let contactPersonString = safetyNetModel.contactName {
+            businessInfo.append("Ask for \(contactPersonString)")
+        }
         let businessInfoString = businessInfo.count > 0 ? businessInfo.joined(separator: "\n") : nil
         self.businessContactInfoLabel.text = businessInfoString
         
@@ -188,7 +191,7 @@ class SafetyNetDetailSheetViewController: UIViewController {
     @IBAction func callButtonPressed(_ sender: Any) {
         if let model = self.safetyNetModel,
             let phoneNumber = self.safetyNetModel?.phoneNumber,
-            let phoneUrl = URL(string: "tel://\(phoneNumber)") {
+            let phoneUrl = URL(string: "tel://\(phoneNumber.formatStringToNumericString())") {
             UIApplication.shared.open(phoneUrl, options: [:]) { (success) in
             }
             

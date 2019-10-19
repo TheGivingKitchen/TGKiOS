@@ -91,8 +91,7 @@ class SafetyNetResourceModel:NSObject, Codable {
             }
         }
         
-        let phoneNumberString = try container.decodeIfPresent(String.self, forKey: .phoneNumber)
-        self.phoneNumber = phoneNumberString?.formatStringToNumericString()
+        self.phoneNumber = try container.decodeIfPresent(String.self, forKey: .phoneNumber)
         
         counties = try container.decodeIfPresent([String].self, forKey: .counties)
         
