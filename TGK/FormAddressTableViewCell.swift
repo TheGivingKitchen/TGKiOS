@@ -95,6 +95,7 @@ class FormAddressTableViewCell: UITableViewCell, FormItemView {
         self.cityTextField.delegate = self
         self.stateTextField.delegate = self
         self.zipTextField.delegate = self
+    
         
         //style
         self.questionLabel.font = UIFont.tgkBody
@@ -110,6 +111,7 @@ class FormAddressTableViewCell: UITableViewCell, FormItemView {
         let address1SpacerView = UIView(frame:CGRect(x:0, y:0, width:10, height:10))
         self.address1TextField.leftViewMode = UITextFieldViewMode.always
         self.address1TextField.leftView = address1SpacerView
+        self.address1TextField.autocorrectionType = .no
         
         self.address2Label.font = UIFont.tgkBody
         self.address2Label.textColor = UIColor.tgkDarkDarkGray
@@ -121,6 +123,7 @@ class FormAddressTableViewCell: UITableViewCell, FormItemView {
         let address2SpacerView = UIView(frame:CGRect(x:0, y:0, width:10, height:10))
         self.address2TextField.leftViewMode = UITextFieldViewMode.always
         self.address2TextField.leftView = address2SpacerView
+        self.address2TextField.autocorrectionType = .no
         
         self.cityLabel.font = UIFont.tgkBody
         self.cityLabel.textColor = UIColor.tgkDarkDarkGray
@@ -143,6 +146,7 @@ class FormAddressTableViewCell: UITableViewCell, FormItemView {
         let stateSpacerView = UIView(frame:CGRect(x:0, y:0, width:10, height:10))
         self.stateTextField.leftViewMode = UITextFieldViewMode.always
         self.stateTextField.leftView = stateSpacerView
+        self.stateTextField.autocorrectionType = .no
         
         self.zipLabel.font = UIFont.tgkBody
         self.zipLabel.textColor = UIColor.tgkDarkDarkGray

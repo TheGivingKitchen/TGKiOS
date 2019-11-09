@@ -91,7 +91,7 @@ class FormTextFieldTableViewCell: UITableViewCell, FormItemView {
         self.textField.keyboardType = .default
         self.textField.autocapitalizationType = .sentences
         self.textField.placeholder = ""
-        self.textField.autocorrectionType = .default
+        self.textField.autocorrectionType = .no
     }
 }
 

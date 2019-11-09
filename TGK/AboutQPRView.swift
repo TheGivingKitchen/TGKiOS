@@ -7,9 +7,14 @@
 //
 
 import UIKit
-
+protocol AboutQPRViewDelegate:class {
+    func AboutQPRViewDelegateClosePressed() -> Void
+    func AboutQPRViewDelegateTapped() -> Void
+}
 class AboutQPRView: BaseNibLoadedView {
     @IBOutlet weak var closeButton: UIButton!
+    
+    weak var delegate:AboutQPRViewDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -27,13 +32,11 @@ class AboutQPRView: BaseNibLoadedView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    @IBAction func trainingButtonTapped(_ sender: Any) {
+        self.delegate?.AboutQPRViewDelegateTapped()
+    }
+    
     @IBAction func closePressed(_ sender: Any) {
-        ///Doing this all the short and sloppy way, likely to be removed in later version  
-        AppDataStore.hasClosedQPRTrainingButton = true
-        UIView.animate(withDuration: 0.3, delay: 0.0, options: .curveEaseOut, animations: {
-            self.frame = CGRect(x: self.frame.minX, y: UIScreen.main.bounds.height, width: self.frame.width, height: self.frame.height)
-        }) { (finished) in
-            self.isHidden = true
-        }
+        self.delegate?.AboutQPRViewDelegateClosePressed()
     }
 }

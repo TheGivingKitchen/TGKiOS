@@ -54,6 +54,7 @@ class AboutHomeViewController: UITableViewController {
     @IBOutlet weak var feedbackDivider2: UIView!
     
     private var qprTrainingView:AboutQPRView!
+    private var qprTrainingFormModel:SegmentedFormModel?
     
     //Facebook Group Ids for deep linking
     private let fbDeepLinkBaseString = "fb://group?id="
@@ -74,20 +75,48 @@ class AboutHomeViewController: UITableViewController {
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 400
 
-        self.setupQPRButton()
         self.styleView()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.fetchFormsIfNeeded()
     }
     
     func setupQPRButton() {
         if AppDataStore.hasClosedQPRTrainingButton == true {
             return
         }
+        if self.qprTrainingView != nil {
+            return
+        }
         
-        self.qprTrainingView = AboutQPRView(frame: CGRect.zero)
+        self.qprTrainingView = AboutQPRView(frame: CGRect(x: 0, y: self.view.frame.maxY, width: 0, height: 0))
+        self.qprTrainingView.delegate = self
         self.tableView.addSubview(self.qprTrainingView)
-        self.qprTrainingView.trailingAnchor.constraint(equalTo: self.tableView.safeAreaLayoutGuide.trailingAnchor, constant: -16.0).isActive = true
-        self.qprTrainingView.bottomAnchor.constraint(equalTo: self.tableView.safeAreaLayoutGuide.bottomAnchor, constant: -16.0).isActive = true
         
+        self.qprTrainingView.trailingAnchor.constraint(equalTo: self.tableView.safeAreaLayoutGuide.trailingAnchor, constant: -16.0).isActive = true
+        let qprViewBottomAnchor = self.qprTrainingView.bottomAnchor.constraint(equalTo: self.tableView.safeAreaLayoutGuide.bottomAnchor, constant: 2000.0)
+        qprViewBottomAnchor.isActive = true
+        
+        UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseInOut, animations: {
+            qprViewBottomAnchor.constant = -16.0
+            self.view.layoutIfNeeded()
+        }) { (finished) in
+        }
+    }
+    
+    func fetchFormsIfNeeded() {
+        if self.qprTrainingFormModel != nil {
+            return
+        }
+        
+        ServiceManager.sharedInstace.getFirebaseForm(id: "qprSignupForm") { (formModel, error) in
+            if let formModel = formModel {
+                self.qprTrainingFormModel = formModel
+                self.setupQPRButton()
+            }
+        }
     }
     
     private func styleView() {
@@ -330,6 +359,52 @@ extension AboutHomeViewController:StoreReviewWarmerViewControllerDelegate {
     }
     
     func storeReviewWarmerViewControllerDidDecline(viewController: StoreReviewWarmerViewController) {
+        viewController.dismiss(animated: true)
+    }
+}
+
+extension AboutHomeViewController:AboutQPRViewDelegate {
+    func AboutQPRViewDelegateClosePressed() {
+        self.dismissQPRView()
+    }
+    
+    func AboutQPRViewDelegateTapped() {
+        guard let trainingForm = self.qprTrainingFormModel else {
+            return
+        }
+        
+        let segmentedNav = UIStoryboard(name: "Forms", bundle: nil).instantiateViewController(withIdentifier: "SegmentedFormNavigationControllerId") as! SegmentedFormNavigationController
+        segmentedNav.segmentedFormModel = trainingForm
+        segmentedNav.formDelegate = self
+        self.present(segmentedNav, animated: true)
+    }
+    
+    func dismissQPRView() {
+        AppDataStore.hasClosedQPRTrainingButton = true
+        UIView.animate(withDuration: 0.3, delay: 0.0, options: .curveEaseOut, animations: {
+            self.qprTrainingView.frame = CGRect(x: self.view.frame.minX, y: UIScreen.main.bounds.height, width: self.view.frame.width, height: self.view.frame.height)
+        }) { (finished) in
+            self.qprTrainingView.isHidden = true
+        }
+    }
+}
+
+//MARK: Segmented Form Delegate
+extension AboutHomeViewController:SegmentedFormNavigationControllerDelegate {
+    //the only form we're tracking here is QPR training signup
+    func segmentedFormNavigationControllerDidFinish(viewController: SegmentedFormNavigationController) {
+        self.dismissQPRView()
+        
+        viewController.dismiss(animated: true) {
+            let successVC = AssistanceSuccessViewController.assistanceSuccessViewController(withDelegate: self)
+            self.present(successVC, animated:true)
+        }
+    }
+}
+
+//MARK: AssistanceSuccessViewControllerDelegate
+extension AboutHomeViewController:AssistanceSuccessViewControllerDelegate {
+    func assistanceSuccessViewControllerDelegateDonePressed(viewController: AssistanceSuccessViewController) {
         viewController.dismiss(animated: true)
     }
 }

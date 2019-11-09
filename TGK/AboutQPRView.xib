@@ -18,10 +18,7 @@
             <rect key="frame" x="0.0" y="0.0" width="465" height="263"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconAboutQPR" translatesAutoresizingMaskIntoConstraints="NO" id="eYF-8o-2HQ">
-                    <rect key="frame" x="0.0" y="44" width="250" height="185"/>
-                </imageView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HY3-gf-eqp">
+                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HY3-gf-eqp">
                     <rect key="frame" x="262" y="44" width="18" height="22"/>
                     <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                     <state key="normal" image="iconCloseX"/>
@@ -29,15 +26,28 @@
                         <action selector="closePressed:" destination="-1" eventType="touchUpInside" id="mO1-9f-q4L"/>
                     </connections>
                 </button>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconAboutQPR" translatesAutoresizingMaskIntoConstraints="NO" id="pa1-uy-km5">
+                    <rect key="frame" x="0.0" y="44" width="250" height="188"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oL7-tP-fXG">
+                    <rect key="frame" x="0.0" y="44" width="250" height="188"/>
+                    <state key="normal" image="iconAboutQPR"/>
+                    <connections>
+                        <action selector="trainingButtonTapped:" destination="-1" eventType="touchUpInside" id="jsA-Bs-qEG"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="top" secondItem="eYF-8o-2HQ" secondAttribute="top" id="0Tb-JH-HHw"/>
-                <constraint firstItem="HY3-gf-eqp" firstAttribute="leading" secondItem="eYF-8o-2HQ" secondAttribute="trailing" constant="12" id="FiH-Zv-uDz"/>
-                <constraint firstItem="eYF-8o-2HQ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="WzH-jR-Qjz"/>
-                <constraint firstItem="HY3-gf-eqp" firstAttribute="top" secondItem="eYF-8o-2HQ" secondAttribute="top" id="beh-5K-daE"/>
+                <constraint firstItem="oL7-tP-fXG" firstAttribute="top" secondItem="pa1-uy-km5" secondAttribute="top" id="2b3-he-QHc"/>
+                <constraint firstItem="oL7-tP-fXG" firstAttribute="trailing" secondItem="pa1-uy-km5" secondAttribute="trailing" id="6uh-my-VhB"/>
+                <constraint firstItem="pa1-uy-km5" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="CE9-Pg-vFh"/>
+                <constraint firstItem="oL7-tP-fXG" firstAttribute="bottom" secondItem="pa1-uy-km5" secondAttribute="bottom" id="CHf-yr-dTe"/>
+                <constraint firstItem="HY3-gf-eqp" firstAttribute="leading" secondItem="oL7-tP-fXG" secondAttribute="trailing" constant="12" id="OUa-jn-2jU"/>
+                <constraint firstItem="oL7-tP-fXG" firstAttribute="leading" secondItem="pa1-uy-km5" secondAttribute="leading" id="Vul-bs-SHf"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="HY3-gf-eqp" secondAttribute="trailing" id="g91-l4-6Wd"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="eYF-8o-2HQ" secondAttribute="bottom" id="hZ8-nh-jhD"/>
+                <constraint firstItem="pa1-uy-km5" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" constant="3" id="rii-v4-Ltt"/>
+                <constraint firstItem="pa1-uy-km5" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="xkf-hL-yWr"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>

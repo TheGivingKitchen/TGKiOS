@@ -30,6 +30,9 @@ class SegmentedFormNavigationController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        if #available(iOS 13.0, *) {
+            self.isModalInPresentation = true
+        }
         self.setupFormPages()
         self.styleNavigationBar()
     }
@@ -96,10 +99,13 @@ class SegmentedFormNavigationController: UINavigationController {
     }
     
     fileprivate func submitFormAnswers() {
+        self.navigationItem.rightBarButtonItem?.isEnabled = false
+        
         ///Add default answers to the list before submitting
         self.storeNewAnswers(segmentedFormModel.defaultAnswers)
         
         ServiceManager.sharedInstace.submitAnswersToForm(self.segmentedFormModel.id, withAnswers: self.formAnswers) { (success, error, formFieldErrorModels) in
+            self.navigationItem.rightBarButtonItem?.isEnabled = true
             
             if success == true {
                 self.formDelegate?.segmentedFormNavigationControllerDidFinish(viewController: self)
