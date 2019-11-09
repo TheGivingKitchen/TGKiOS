@@ -53,6 +53,8 @@ class AboutHomeViewController: UITableViewController {
     @IBOutlet weak var feedbackDivider1: UIView!
     @IBOutlet weak var feedbackDivider2: UIView!
     
+    private var qprTrainingView:AboutQPRView!
+    
     //Facebook Group Ids for deep linking
     private let fbDeepLinkBaseString = "fb://group?id="
     private let fbGroupUrlBaseString = "https://www.facebook.com/groups/"
@@ -72,7 +74,20 @@ class AboutHomeViewController: UITableViewController {
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 400
 
+        self.setupQPRButton()
         self.styleView()
+    }
+    
+    func setupQPRButton() {
+        if AppDataStore.hasClosedQPRTrainingButton == true {
+            return
+        }
+        
+        self.qprTrainingView = AboutQPRView(frame: CGRect.zero)
+        self.tableView.addSubview(self.qprTrainingView)
+        self.qprTrainingView.trailingAnchor.constraint(equalTo: self.tableView.safeAreaLayoutGuide.trailingAnchor, constant: -16.0).isActive = true
+        self.qprTrainingView.bottomAnchor.constraint(equalTo: self.tableView.safeAreaLayoutGuide.bottomAnchor, constant: -16.0).isActive = true
+        
     }
     
     private func styleView() {
