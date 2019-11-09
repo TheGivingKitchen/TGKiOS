@@ -51,11 +51,11 @@ class SafetyNetInfoTableViewCell: UITableViewCell {
         
         self.nameLabel.text = model.name
         
-        if model.category.isNilOrEmpty {
+        if model.categories.count == 0 {
             self.categoryLabel.isHidden = true
         }
         else {
-            self.categoryLabel.text = model.category
+            self.categoryLabel.text = model.categories.first
         }
         
         if model.contactName.isNilOrEmpty {

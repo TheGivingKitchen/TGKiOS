@@ -59,6 +59,9 @@ class MainTabBarController: UITabBarController {
         
         if AppDataStore.hasFinishedOnboarding == false {
             let onboardingVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "OnboardingViewControllerId") as! OnboardingViewController
+            if #available(iOS 13.0, *) {
+                onboardingVC.isModalInPresentation = true
+            }
             let onboardingNavVC = UINavigationController(rootViewController: onboardingVC)
             onboardingVC.delegate = self
             self.present(onboardingNavVC, animated: true)

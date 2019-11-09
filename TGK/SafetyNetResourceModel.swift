@@ -33,11 +33,36 @@ class SafetyNetResourceModel:NSObject, Codable {
     
     
     var name:String
-    var address:String?
+    var address:String? {
+        get {
+            //naive check for the rest of the address
+            guard var formattedAddress = self.address1 else {
+                return nil
+            }
+            if let address2 = self.address2 {
+                formattedAddress += " \(address2)"
+            }
+            if let city = self.city {
+                formattedAddress += ", \(city)"
+            }
+            if let state = self.state {
+                formattedAddress += ", \(state)"
+            }
+            if let zip = self.zip {
+                formattedAddress += " \(zip)"
+            }
+            return formattedAddress
+        }
+    }
+    var address1:String?
+    var address2:String?
+    var city:String?
+    var state:String?
+    var zip:String?
     var websiteUrl:URL?
     var phoneNumber:String?
     var contactName:String?
-    var category:String?
+    var categories:[String]
     var subcategories:[String]?
     var resourceDescription:String?
     var counties:[String]?
@@ -45,7 +70,11 @@ class SafetyNetResourceModel:NSObject, Codable {
     
     enum CodingKeys:String, CodingKey {
         case name
-        case address
+        case address1 = "address1"
+        case address2 = "address2"
+        case city
+        case state
+        case zip
         case websiteUrl = "website"
         case phoneNumber = "phone"
         case contactName
@@ -64,23 +93,21 @@ class SafetyNetResourceModel:NSObject, Codable {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         name = try container.decodeIfPresent(String.self, forKey: .name) ?? ""
         contactName = try container.decodeIfPresent(String.self, forKey: .contactName)
-        category = try container.decodeIfPresent(String.self, forKey: .category)
-        if let unwrappedCategory = category {
-            if !SafetyNetResourceModel.allCategories.contains(unwrappedCategory) {
-                SafetyNetResourceModel.allCategories.append(unwrappedCategory)
+        categories = try container.decodeIfPresent([String].self, forKey: .category) ?? []
+        for category in self.categories {
+            if !SafetyNetResourceModel.allCategories.contains(category) {
+                SafetyNetResourceModel.allCategories.append(category)
             }
         }
         
         subcategories = try container.decodeIfPresent([String].self, forKey: .subcategories)
         resourceDescription = try container.decodeIfPresent(String.self, forKey: .resourceDescription)
         
-        let addressUnsanitized = try container.decodeIfPresent(String.self, forKey: .address)
-        if let addressUnsanitized = addressUnsanitized {
-            let trimmedAddress = addressUnsanitized.trimmingCharacters(in: .whitespacesAndNewlines)
-            if trimmedAddress.isEmpty == false {
-                self.address = trimmedAddress
-            }
-        }
+        address1 = try container.decodeIfPresent(String.self, forKey: .address1)
+        address2 = try container.decodeIfPresent(String.self, forKey: .address2)
+        city = try container.decodeIfPresent(String.self, forKey: .city)
+        state = try container.decodeIfPresent(String.self, forKey: .state)
+        zip = try container.decodeIfPresent(String.self, forKey: .zip)
         
         let websiteString = try container.decodeIfPresent(String.self, forKey: .websiteUrl)
         if let websiteString = websiteString,
@@ -110,10 +137,14 @@ class SafetyNetResourceModel:NSObject, Codable {
         var container = encoder.container(keyedBy: CodingKeys.self)
         try container.encodeIfPresent(name, forKey: .name)
         try container.encodeIfPresent(contactName, forKey: .contactName)
-        try container.encodeIfPresent(category, forKey: .category)
+        try container.encodeIfPresent(categories, forKey: .category)
         try container.encodeIfPresent(subcategories, forKey: .subcategories)
         try container.encodeIfPresent(resourceDescription, forKey: .resourceDescription)
-        try container.encodeIfPresent(address, forKey: .address)
+        try container.encodeIfPresent(address1, forKey: .address1)
+        try container.encodeIfPresent(address2, forKey: .address2)
+        try container.encodeIfPresent(city, forKey: .city)
+        try container.encodeIfPresent(state, forKey: .state)
+        try container.encodeIfPresent(zip, forKey: .zip)
         try container.encodeIfPresent(websiteUrl?.absoluteString, forKey: .websiteUrl)
         try container.encodeIfPresent(phoneNumber, forKey: .phoneNumber)
         try container.encodeIfPresent(counties, forKey: .counties)

@@ -132,7 +132,6 @@ class StabilityNetSearchViewController: UIViewController {
         
         let translation = recognizer.translation(in: self.view)
         let velocity = recognizer.velocity(in: self.view)
-//        print(velocity)
         
         let currentY = self.view.frame.minY
         
@@ -251,6 +250,7 @@ extension StabilityNetSearchViewController: UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.moveToBottomStickyPoint()
         let resource = self.isSearchingOrFiltering ? self.filteredSafetyNetModels[indexPath.row] : self.safetyNetModels[indexPath.row]
         self.delegate?.stabilityNetSearchViewControllerDidSelect(resource: resource)
     }
@@ -363,11 +363,12 @@ extension StabilityNetSearchViewController: UISearchBarDelegate {
                     return true
                 }
                 
-                if let category = safetyNetModel.category?.lowercased(),
-                    category.contains(lowercaseTrimmedSearchText),
-                    lowercaseTrimmedSearchText.count > 2 {
-                    return true
-                    //make keyword searching restrictive to at least 2 characters to reduce noise
+                for category in safetyNetModel.categories {
+                    if category.contains(lowercaseTrimmedSearchText),
+                        lowercaseTrimmedSearchText.count > 2 {
+                        return true
+                        //make keyword searching restrictive to at least 2 characters to reduce noise
+                    }
                 }
                 
                 if let subcategories = safetyNetModel.subcategories {
@@ -400,9 +401,11 @@ extension StabilityNetSearchViewController: UISearchBarDelegate {
         //Filter if the user has selected categories
         if selectedCategories.count > 0 {
             filteredModels = filteredModels.filter { (resource) -> Bool in
-                for category in self.selectedCategories {
-                    if resource.category?.caseInsensitiveCompare(category) == .orderedSame {
-                        return true
+                for selectedCategory in self.selectedCategories {
+                    for resourceCategory in resource.categories {
+                        if resourceCategory.caseInsensitiveCompare(selectedCategory) == .orderedSame {
+                            return true
+                        }
                     }
                 }
                 return false
