@@ -55,6 +55,7 @@ class AboutHomeViewController: UITableViewController {
     
     private var qprTrainingView:AboutQPRView!
     private var qprTrainingFormModel:SegmentedFormModel?
+    private var qprViewBottomAnchor:NSLayoutConstraint!
     
     //Facebook Group Ids for deep linking
     private let fbDeepLinkBaseString = "fb://group?id="
@@ -96,11 +97,11 @@ class AboutHomeViewController: UITableViewController {
         self.tableView.addSubview(self.qprTrainingView)
         
         self.qprTrainingView.trailingAnchor.constraint(equalTo: self.tableView.safeAreaLayoutGuide.trailingAnchor, constant: -16.0).isActive = true
-        let qprViewBottomAnchor = self.qprTrainingView.bottomAnchor.constraint(equalTo: self.tableView.safeAreaLayoutGuide.bottomAnchor, constant: 2000.0)
-        qprViewBottomAnchor.isActive = true
+        self.qprViewBottomAnchor = self.qprTrainingView.bottomAnchor.constraint(equalTo: self.tableView.safeAreaLayoutGuide.bottomAnchor, constant: 2000.0)
+        self.qprViewBottomAnchor.isActive = true
         
         UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseInOut, animations: {
-            qprViewBottomAnchor.constant = -16.0
+            self.qprViewBottomAnchor.constant = -16.0
             self.view.layoutIfNeeded()
         }) { (finished) in
         }
@@ -381,8 +382,10 @@ extension AboutHomeViewController:AboutQPRViewDelegate {
     
     func dismissQPRView() {
         AppDataStore.hasClosedQPRTrainingButton = true
+        
         UIView.animate(withDuration: 0.3, delay: 0.0, options: .curveEaseOut, animations: {
-            self.qprTrainingView.frame = CGRect(x: self.view.frame.minX, y: UIScreen.main.bounds.height, width: self.view.frame.width, height: self.view.frame.height)
+            self.qprViewBottomAnchor.constant = self.view.frame.height
+            self.view.layoutIfNeeded()
         }) { (finished) in
             self.qprTrainingView.isHidden = true
         }

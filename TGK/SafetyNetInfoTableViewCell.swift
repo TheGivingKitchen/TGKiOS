@@ -13,6 +13,7 @@ class SafetyNetInfoTableViewCell: UITableViewCell {
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var categoryLabel: UILabel!
+    @IBOutlet weak var subcategoryLabel: UILabel!
     @IBOutlet weak var contactNameLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var countiesLabel: UILabel!
@@ -33,6 +34,9 @@ class SafetyNetInfoTableViewCell: UITableViewCell {
         
         self.categoryLabel.font = UIFont.tgkNavigation
         self.categoryLabel.textColor = UIColor.tgkOrange
+        
+        self.subcategoryLabel.font = UIFont.tgkMetadata
+        self.subcategoryLabel.textColor = UIColor.tgkGray
         
         self.contactNameLabel.font = UIFont.tgkBody
         self.contactNameLabel.textColor = UIColor.tgkDarkDarkGray
@@ -56,6 +60,20 @@ class SafetyNetInfoTableViewCell: UITableViewCell {
         }
         else {
             self.categoryLabel.text = model.categories.first
+        }
+        
+        if let subcategories = model.subcategories {
+            if subcategories.count == 0 {
+                self.subcategoryLabel.isHidden = true
+            }
+            else if subcategories.count < 3 {
+                self.subcategoryLabel.text = subcategories.joined(separator: " & ")
+            }
+            else {
+                self.subcategoryLabel.text = "\(subcategories[0]), \(subcategories[1]) & more"
+            }
+        } else {
+            self.subcategoryLabel.isHidden = true
         }
         
         if model.contactName.isNilOrEmpty {
