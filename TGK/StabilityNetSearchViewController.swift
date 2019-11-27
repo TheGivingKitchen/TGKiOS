@@ -363,21 +363,18 @@ extension StabilityNetSearchViewController: UISearchBarDelegate {
                     return true
                 }
                 
-                for category in safetyNetModel.categories {
-                    if category.contains(lowercaseTrimmedSearchText),
+                if safetyNetModel.category.contains(lowercaseTrimmedSearchText),
+                    lowercaseTrimmedSearchText.count > 2 {
+                    return true
+                    //make keyword searching restrictive to at least 2 characters to reduce noise
+                }
+                
+                
+                for subcategory in safetyNetModel.subcategories {
+                    if let _ = subcategory.range(of: lowercaseTrimmedSearchText, options: .caseInsensitive),
                         lowercaseTrimmedSearchText.count > 2 {
                         return true
                         //make keyword searching restrictive to at least 2 characters to reduce noise
-                    }
-                }
-                
-                if let subcategories = safetyNetModel.subcategories {
-                    for subcategory in subcategories {
-                        if let _ = subcategory.range(of: lowercaseTrimmedSearchText, options: .caseInsensitive),
-                            lowercaseTrimmedSearchText.count > 2 {
-                            return true
-                            //make keyword searching restrictive to at least 2 characters to reduce noise
-                        }
                     }
                 }
                 
@@ -394,6 +391,17 @@ extension StabilityNetSearchViewController: UISearchBarDelegate {
                     }
                 }
                 
+                for keyword in safetyNetModel.keywords {
+                    //make keyword searching restrictive to at least 3 characters to reduce noise
+                    if let _ = keyword.range(of: lowercaseTrimmedSearchText, options: .caseInsensitive),
+                        lowercaseTrimmedSearchText.count < 3 {
+                        break
+                    }
+                    if keyword.lowercased().range(of: lowercaseTrimmedSearchText) != nil {
+                        return true
+                    }
+                }
+                
                 return false
             })
         }
@@ -402,10 +410,8 @@ extension StabilityNetSearchViewController: UISearchBarDelegate {
         if selectedCategories.count > 0 {
             filteredModels = filteredModels.filter { (resource) -> Bool in
                 for selectedCategory in self.selectedCategories {
-                    for resourceCategory in resource.categories {
-                        if resourceCategory.caseInsensitiveCompare(selectedCategory) == .orderedSame {
-                            return true
-                        }
+                    if resource.category.caseInsensitiveCompare(selectedCategory) == .orderedSame {
+                        return true
                     }
                 }
                 return false

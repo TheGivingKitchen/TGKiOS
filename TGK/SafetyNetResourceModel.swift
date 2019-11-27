@@ -62,11 +62,12 @@ class SafetyNetResourceModel:NSObject, Codable {
     var websiteUrl:URL?
     var phoneNumber:String?
     var contactName:String?
-    var categories:[String]
-    var subcategories:[String]?
+    var category:String
+    var subcategories:[String]
     var resourceDescription:String?
     var counties:[String]?
     var location:CLLocationCoordinate2D?
+    var keywords:[String]
     
     enum CodingKeys:String, CodingKey {
         case name
@@ -85,6 +86,7 @@ class SafetyNetResourceModel:NSObject, Codable {
         case location
         case latitude
         case longitude
+        case keywords
     }
     
     
@@ -93,14 +95,12 @@ class SafetyNetResourceModel:NSObject, Codable {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         name = try container.decodeIfPresent(String.self, forKey: .name) ?? ""
         contactName = try container.decodeIfPresent(String.self, forKey: .contactName)
-        categories = try container.decodeIfPresent([String].self, forKey: .category) ?? []
-        for category in self.categories {
-            if !SafetyNetResourceModel.allCategories.contains(category) {
-                SafetyNetResourceModel.allCategories.append(category)
-            }
+        category = try container.decodeIfPresent(String.self, forKey: .category) ?? ""
+        if !SafetyNetResourceModel.allCategories.contains(category) {
+            SafetyNetResourceModel.allCategories.append(category)
         }
         
-        subcategories = try container.decodeIfPresent([String].self, forKey: .subcategories)
+        subcategories = try container.decodeIfPresent([String].self, forKey: .subcategories) ?? []
         resourceDescription = try container.decodeIfPresent(String.self, forKey: .resourceDescription)
         
         address1 = try container.decodeIfPresent(String.self, forKey: .address1)
@@ -130,6 +130,8 @@ class SafetyNetResourceModel:NSObject, Codable {
             location = CLLocationCoordinate2D(latitude: lat, longitude: long)
         }
         
+        keywords = try container.decodeIfPresent([String].self, forKey: .keywords) ?? []
+        
         super.init()
     }
     
@@ -137,7 +139,7 @@ class SafetyNetResourceModel:NSObject, Codable {
         var container = encoder.container(keyedBy: CodingKeys.self)
         try container.encodeIfPresent(name, forKey: .name)
         try container.encodeIfPresent(contactName, forKey: .contactName)
-        try container.encodeIfPresent(categories, forKey: .category)
+        try container.encodeIfPresent(category, forKey: .category)
         try container.encodeIfPresent(subcategories, forKey: .subcategories)
         try container.encodeIfPresent(resourceDescription, forKey: .resourceDescription)
         try container.encodeIfPresent(address1, forKey: .address1)
@@ -150,6 +152,7 @@ class SafetyNetResourceModel:NSObject, Codable {
         try container.encodeIfPresent(counties, forKey: .counties)
         try container.encodeIfPresent(location?.latitude, forKey: .latitude)
         try container.encodeIfPresent(location?.longitude, forKey: .longitude)
+        try container.encodeIfPresent(keywords, forKey: .keywords)
     }
     
     

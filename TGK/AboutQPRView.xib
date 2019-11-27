@@ -23,7 +23,7 @@
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconAboutQPR" translatesAutoresizingMaskIntoConstraints="NO" id="pa1-uy-km5">
                     <rect key="frame" x="0.0" y="44" width="150" height="186"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="186" id="Dmx-sk-Swo"/>
+                        <constraint firstAttribute="height" constant="150" id="Dmx-sk-Swo"/>
                         <constraint firstAttribute="width" constant="150" id="rDe-Xk-OMN"/>
                     </constraints>
                 </imageView>
@@ -60,7 +60,7 @@
                 <constraint firstItem="oL7-tP-fXG" firstAttribute="leading" secondItem="pa1-uy-km5" secondAttribute="leading" id="Vul-bs-SHf"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Q76-RG-0g3" secondAttribute="bottom" id="Y6O-y1-f9b"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="pa1-uy-km5" secondAttribute="trailing" id="avG-7U-7q0"/>
-                <constraint firstItem="Q76-RG-0g3" firstAttribute="top" secondItem="pa1-uy-km5" secondAttribute="bottom" constant="-20" id="iV5-pl-Ijr"/>
+                <constraint firstItem="Q76-RG-0g3" firstAttribute="top" secondItem="pa1-uy-km5" secondAttribute="bottom" constant="-5" id="iV5-pl-Ijr"/>
                 <constraint firstItem="Aoc-QU-HdQ" firstAttribute="trailing" secondItem="oL7-tP-fXG" secondAttribute="trailing" id="nFH-JL-b2Z"/>
                 <constraint firstItem="Aoc-QU-HdQ" firstAttribute="top" secondItem="oL7-tP-fXG" secondAttribute="top" id="qiP-e8-q1k"/>
                 <constraint firstItem="Aoc-QU-HdQ" firstAttribute="leading" secondItem="oL7-tP-fXG" secondAttribute="leading" id="tds-6i-Lt2"/>
@@ -72,6 +72,6 @@
         </view>
     </objects>
     <resources>
-        <image name="iconAboutQPR" width="150" height="150"/>
+        <image name="iconAboutQPR" width="158" height="158"/>
     </resources>
 </document>

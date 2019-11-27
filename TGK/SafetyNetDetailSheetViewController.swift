@@ -104,7 +104,7 @@ class SafetyNetDetailSheetViewController: UIViewController {
     
     fileprivate func configureView() {
         self.businessNameLabel.text = self.safetyNetModel.name
-        self.categoryLabel.text = self.safetyNetModel.categories.first
+        self.categoryLabel.text = self.safetyNetModel.category
         self.descriptionLabel.text = self.safetyNetModel.resourceDescription
         
         var businessInfo:[String] = []

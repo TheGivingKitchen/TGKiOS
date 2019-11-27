@@ -55,25 +55,21 @@ class SafetyNetInfoTableViewCell: UITableViewCell {
         
         self.nameLabel.text = model.name
         
-        if model.categories.count == 0 {
+        if model.category.isEmpty {
             self.categoryLabel.isHidden = true
         }
         else {
-            self.categoryLabel.text = model.categories.first
+            self.categoryLabel.text = model.category
         }
         
-        if let subcategories = model.subcategories {
-            if subcategories.count == 0 {
-                self.subcategoryLabel.isHidden = true
-            }
-            else if subcategories.count < 3 {
-                self.subcategoryLabel.text = subcategories.joined(separator: " & ")
-            }
-            else {
-                self.subcategoryLabel.text = "\(subcategories[0]), \(subcategories[1]) & more"
-            }
-        } else {
+        if model.subcategories.count == 0 {
             self.subcategoryLabel.isHidden = true
+        }
+        else if model.subcategories.count < 3 {
+            self.subcategoryLabel.text = model.subcategories.joined(separator: " & ")
+        }
+        else {
+            self.subcategoryLabel.text = "\(model.subcategories[0]), \(model.subcategories[1]) & more"
         }
         
         if model.contactName.isNilOrEmpty {
