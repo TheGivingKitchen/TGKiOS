@@ -86,10 +86,17 @@ class SafetyNetInfoTableViewCell: UITableViewCell {
             self.descriptionLabel.text = model.resourceDescription
         }
         
-        if let counties = model.counties,
+        if model.isNationwide {
+            self.countiesLabel.text = "This is a nationwide resource"
+        }
+        else if model.isStatewide,
+            let state = model.state {
+            self.countiesLabel.text = "Serves all of \(state)"
+        }
+        else if let counties = model.counties,
             counties.count > 0 {
             let joinedCounties = counties.joined(separator: ", ")
-            self.countiesLabel.text = "Serving counties: \(joinedCounties)"
+            self.countiesLabel.text = "Serves: \(joinedCounties)"
         }
         else {
             self.countiesLabel.isHidden = true
@@ -102,6 +109,7 @@ class SafetyNetInfoTableViewCell: UITableViewCell {
     
     override func prepareForReuse() {
         self.categoryLabel.isHidden = false
+        self.subcategoryLabel.isHidden = false
         self.contactNameLabel.isHidden = false
         self.descriptionLabel.isHidden = false
         self.countiesLabel.isHidden = false

@@ -133,7 +133,14 @@ class SafetyNetDetailSheetViewController: UIViewController {
             self.callStackView.isHidden = true
         }
         
-        if let countiesArray = self.safetyNetModel.counties {
+        if self.safetyNetModel.isNationwide {
+            self.countiesLabel.text = "This is a nationwide resource"
+        }
+        else if self.safetyNetModel.isStatewide,
+            let state = self.safetyNetModel.state {
+            self.countiesLabel.text = "Serves all of \(state)"
+        }
+        else if let countiesArray = self.safetyNetModel.counties {
             self.countiesLabel.text = "Serves \(countiesArray.joined(separator: ", "))"
         }
         else {

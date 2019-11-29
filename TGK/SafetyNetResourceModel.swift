@@ -68,6 +68,8 @@ class SafetyNetResourceModel:NSObject, Codable {
     var counties:[String]?
     var location:CLLocationCoordinate2D?
     var keywords:[String]
+    var isStatewide:Bool
+    var isNationwide:Bool
     
     enum CodingKeys:String, CodingKey {
         case name
@@ -87,6 +89,8 @@ class SafetyNetResourceModel:NSObject, Codable {
         case latitude
         case longitude
         case keywords
+        case isStatewide
+        case isNationwide
     }
     
     
@@ -96,8 +100,11 @@ class SafetyNetResourceModel:NSObject, Codable {
         name = try container.decodeIfPresent(String.self, forKey: .name) ?? ""
         contactName = try container.decodeIfPresent(String.self, forKey: .contactName)
         category = try container.decodeIfPresent(String.self, forKey: .category) ?? ""
-        if !SafetyNetResourceModel.allCategories.contains(category) {
-            SafetyNetResourceModel.allCategories.append(category)
+        
+        //set a pointer to category since 'self' isn't initialized
+        let categoryHolder = category
+        if !SafetyNetResourceModel.allCategories.contains(category) && !categoryHolder.isEmpty {
+            SafetyNetResourceModel.allCategories.append(categoryHolder)
         }
         
         subcategories = try container.decodeIfPresent([String].self, forKey: .subcategories) ?? []
@@ -131,6 +138,8 @@ class SafetyNetResourceModel:NSObject, Codable {
         }
         
         keywords = try container.decodeIfPresent([String].self, forKey: .keywords) ?? []
+        isStatewide = try container.decodeIfPresent(Bool.self, forKey: .isStatewide) ?? false
+        isNationwide = try container.decodeIfPresent(Bool.self, forKey: .isNationwide) ?? false
         
         super.init()
     }

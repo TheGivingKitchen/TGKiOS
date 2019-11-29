@@ -33,6 +33,8 @@ class AboutHomeViewController: UITableViewController {
     @IBOutlet weak var fbAthensLabel: UILabel!
     @IBOutlet weak var fbColumbusLabel: UILabel!
     @IBOutlet weak var fbRomeLabel: UILabel!
+    @IBOutlet weak var fbNorthCarolinaLabel: UILabel!
+    @IBOutlet weak var fbSouthCarolinaLabel: UILabel!
     @IBOutlet weak var fbBottomDividerView: UIView!
     
     @IBOutlet weak var storiesLabel: UILabel!
@@ -69,6 +71,8 @@ class AboutHomeViewController: UITableViewController {
     private let fbAthensGroupId = "187999045361005"
     private let fbColumbusGroupId = "186740988816183"
     private let fbRomeGroupId = "182229385767905"
+    private let fbSouthCarolinaGroupId = "374109090187642"
+    private let fbNorthCarolinaGroupId = "365550184378708"
     
 
     override func viewDidLoad() {
@@ -97,9 +101,10 @@ class AboutHomeViewController: UITableViewController {
         self.tableView.addSubview(self.qprTrainingView)
         
         self.qprTrainingView.trailingAnchor.constraint(equalTo: self.tableView.safeAreaLayoutGuide.trailingAnchor, constant: -16.0).isActive = true
-        self.qprViewBottomAnchor = self.qprTrainingView.bottomAnchor.constraint(equalTo: self.tableView.safeAreaLayoutGuide.bottomAnchor, constant: 2000.0)
+        self.qprViewBottomAnchor = self.qprTrainingView.bottomAnchor.constraint(equalTo: self.tableView.safeAreaLayoutGuide.bottomAnchor, constant: 200)
         self.qprViewBottomAnchor.isActive = true
         
+        self.view.layoutIfNeeded()
         UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseInOut, animations: {
             self.qprViewBottomAnchor.constant = -16.0
             self.view.layoutIfNeeded()
@@ -169,6 +174,12 @@ class AboutHomeViewController: UITableViewController {
         
         self.fbRomeLabel.font = UIFont.tgkBody
         self.fbRomeLabel.textColor = UIColor.tgkBlue
+        
+        self.fbNorthCarolinaLabel.font = UIFont.tgkBody
+        self.fbNorthCarolinaLabel.textColor = UIColor.tgkBlue
+        
+        self.fbSouthCarolinaLabel.font = UIFont.tgkBody
+        self.fbSouthCarolinaLabel.textColor = UIColor.tgkBlue
         
         self.fbBottomDividerView.backgroundColor = UIColor.tgkBackgroundGray
         
@@ -255,6 +266,12 @@ class AboutHomeViewController: UITableViewController {
     }
     @IBAction func romeGroupPressed(_ sender: Any) {
         self.open(groupId: self.fbRomeGroupId, analyticsName: "rome_ga")
+    }
+    @IBAction func northCarolinaGroupPressed(_ sender: Any) {
+        self.open(groupId: self.fbNorthCarolinaGroupId, analyticsName: "north_carolina")
+    }
+    @IBAction func southCarolinaGroupPressed(_ sender: Any) {
+        self.open(groupId: self.fbSouthCarolinaGroupId, analyticsName: "south_carolina")
     }
     
     fileprivate func open(groupId:String, analyticsName:String) {
