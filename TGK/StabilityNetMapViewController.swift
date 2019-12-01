@@ -41,6 +41,9 @@ class StabilityNetMapViewController: UIViewController {
             self.centerMapOnLocation(location: atlanta2dCoordinates)
         }
         
+        self.mapView.register(MKMarkerAnnotationView.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
+        self.mapView.register(StabilityNetClusterAnnotationView.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultClusterAnnotationViewReuseIdentifier)
+        
         self.mapView.delegate = self
         self.mapView.showsUserLocation = true
         
@@ -109,6 +112,14 @@ class StabilityNetMapViewController: UIViewController {
             self.centerMapOnLocation(location: userLocation, mileRadius: 15)
             self.userLocationButton.isHidden = true
         }
+    }
+    
+    func centerMapOnLocation(location: CLLocationCoordinate2D, zoomScale: Double) {
+        let offsetLocation = CLLocationCoordinate2D(latitude: location.latitude - self.mapView.region.span.latitudeDelta * 0.05, longitude: location.longitude)
+        
+        let newCoordinateRegion = MKCoordinateRegionMakeWithDistance(offsetLocation, self.mapView.currentRadius() * zoomScale, self.mapView.currentRadius() * zoomScale)
+        
+        self.mapView.setRegion(newCoordinateRegion, animated: true)
     }
     
     func centerMapOnLocation(location: CLLocationCoordinate2D, mileRadius:CLLocationDistance = 25.0) {
@@ -188,31 +199,68 @@ extension StabilityNetMapViewController: MKMapViewDelegate {
     }
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        if annotation is MKUserLocation {
-            //return nil so map view draws "blue dot" for standard user location
-            return nil
-        }
-        
-        let identifier = "mapAnnotationReuseId"
-        
-        if let annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier) {
-            annotationView.annotation = annotation
-            return annotationView
-        } else {
-            let annotationView = MKPinAnnotationView(annotation:annotation, reuseIdentifier:identifier)
+        switch annotation {
+        case is MKUserLocation:
+            return nil //return nil so map view draws "blue dot" for standard user location
+        case is MKClusterAnnotation:
+            let clusterAnnotation = self.mapView.dequeueReusableAnnotationView(withIdentifier: MKMapViewDefaultClusterAnnotationViewReuseIdentifier, for: annotation)
+            clusterAnnotation.displayPriority = .required
+            return clusterAnnotation
+        case is SafetyNetResourceModel:
+            let annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier, for: annotation)
+            annotationView.clusteringIdentifier = "stabilityNetClusterId"
             annotationView.isEnabled = true
             annotationView.canShowCallout = true
-            annotationView.pinTintColor = UIColor.tgkOrange
+            
             let rightAccessoryButton = UIButton(type: .detailDisclosure)
             annotationView.rightCalloutAccessoryView = rightAccessoryButton
-            
+            annotationView.displayPriority = .required
             return annotationView
+        default:
+            return nil
         }
     }
     
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
-        let calloutTapGestureRec = UITapGestureRecognizer(target: self, action: #selector(handleAnnotationCalloutTapped(sender:)))
-        view.addGestureRecognizer(calloutTapGestureRec)
+        if view is MKMarkerAnnotationView {
+            let calloutTapGestureRec = UITapGestureRecognizer(target: self, action: #selector(handleAnnotationCalloutTapped(sender:)))
+            view.addGestureRecognizer(calloutTapGestureRec)
+        }
+        else if view is StabilityNetClusterAnnotationView,
+            let annotation = view.annotation as? MKClusterAnnotation {
+            
+            //check if the cluster is actually a cluster of items with the same lat/long
+            
+            let firstAnnotationCoordinate = annotation.memberAnnotations[0].coordinate
+            let filteredAnnotations = annotation.memberAnnotations.filter { (annotationMember) -> Bool in
+                if annotationMember.coordinate.latitude == firstAnnotationCoordinate.latitude && annotationMember.coordinate.longitude == firstAnnotationCoordinate.longitude {
+                    return true
+                }
+                return false
+            }
+            //true case - it's multiple locations with same lat/long in a cluster
+            if filteredAnnotations.count == annotation.memberAnnotations.count {
+                let alertController = UIAlertController(title: nil, message: "There are multiple locations here. Please select one", preferredStyle: .actionSheet)
+                for memberAnnotation in annotation.memberAnnotations {
+                    let action = UIAlertAction(title: memberAnnotation.title ?? "", style: .default) { (action) in
+                        DispatchQueue.main.async {
+                            self.presentDetailSheetForSelectedAnnotation(annotation: memberAnnotation)
+                        }
+                    }
+                    alertController.addAction(action)
+                }
+                let cancelAction = UIAlertAction(title: "Cancel", style: .destructive) { (action) in
+                }
+                alertController.addAction(cancelAction)
+                alertController.view.tintColor = UIColor.tgkBlue
+                self.tabBarController?.present(alertController, animated:true)
+            }
+            //false case - it's a true cluster annotation
+            else {
+                self.centerMapOnLocation(location: annotation.coordinate, zoomScale: 0.3)
+            }
+            self.mapView.deselectAnnotation(annotation, animated: false)
+        }
     }
     
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
@@ -228,9 +276,15 @@ extension StabilityNetMapViewController: MKMapViewDelegate {
     }
     
     private func presentDetailSheetForSelectedAnnotationView(annotationView: MKAnnotationView) {
+        if let annotation = annotationView.annotation {
+            self.presentDetailSheetForSelectedAnnotation(annotation: annotation)
+        }
+    }
+    
+    private func presentDetailSheetForSelectedAnnotation(annotation: MKAnnotation) {
         //TODO this is pretty inefficient searching. Could consider creating custom annotation view and cache the model there
         let possibleMatchedModel = self.stabilityNetResources.filter { (resourceModel) -> Bool in
-            if resourceModel.name == annotationView.annotation?.title {
+            if resourceModel.name == annotation.title {
                 return true
             }
             return false

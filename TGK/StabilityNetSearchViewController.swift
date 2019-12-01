@@ -103,7 +103,9 @@ class StabilityNetSearchViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.fetchData()
+        if self.safetyNetModels.count == 0 {
+            self.fetchData()
+        }
     }
     
     func fetchData() {
@@ -363,7 +365,7 @@ extension StabilityNetSearchViewController: UISearchBarDelegate {
                     return true
                 }
                 
-                if safetyNetModel.category.contains(lowercaseTrimmedSearchText),
+                if safetyNetModel.category.lowercased().contains(lowercaseTrimmedSearchText),
                     lowercaseTrimmedSearchText.count > 2 {
                     return true
                     //make keyword searching restrictive to at least 2 characters to reduce noise
