@@ -222,15 +222,16 @@ extension StabilityNetMapViewController: MKMapViewDelegate {
     }
     
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        //if its a plain pin, show the callout and add a gesture recognizer to make the overall callout tappable
         if view is MKMarkerAnnotationView {
             let calloutTapGestureRec = UITapGestureRecognizer(target: self, action: #selector(handleAnnotationCalloutTapped(sender:)))
             view.addGestureRecognizer(calloutTapGestureRec)
         }
+        //if its a clustered pin
         else if view is StabilityNetClusterAnnotationView,
             let annotation = view.annotation as? MKClusterAnnotation {
             
             //check if the cluster is actually a cluster of items with the same lat/long
-            
             let firstAnnotationCoordinate = annotation.memberAnnotations[0].coordinate
             let filteredAnnotations = annotation.memberAnnotations.filter { (annotationMember) -> Bool in
                 if annotationMember.coordinate.latitude == firstAnnotationCoordinate.latitude && annotationMember.coordinate.longitude == firstAnnotationCoordinate.longitude {
@@ -255,10 +256,11 @@ extension StabilityNetMapViewController: MKMapViewDelegate {
                 alertController.view.tintColor = UIColor.tgkBlue
                 self.tabBarController?.present(alertController, animated:true)
             }
-            //false case - it's a true cluster annotation
+            //false case - it's a true cluster annotation. Center it and zoom in
             else {
                 self.centerMapOnLocation(location: annotation.coordinate, zoomScale: 0.3)
             }
+            //Force deselect the clustered pin so it can be tapped again
             self.mapView.deselectAnnotation(annotation, animated: false)
         }
     }
