@@ -250,7 +250,7 @@ extension StabilityNetMapViewController: MKMapViewDelegate {
                     }
                     alertController.addAction(action)
                 }
-                let cancelAction = UIAlertAction(title: "Cancel", style: .destructive) { (action) in
+                let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
                 }
                 alertController.addAction(cancelAction)
                 alertController.view.tintColor = UIColor.tgkBlue
