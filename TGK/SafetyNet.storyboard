@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,35 +20,35 @@
                                 <rect key="frame" x="0.0" y="56" width="375" height="611"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="StabilityNetCategoryFilterTableViewCellId" rowHeight="206" id="Eqw-vs-9Ri" customClass="StabilityNetCategoryFilterTableViewCell" customModule="TGK" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="206"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="StabilityNetCategoryFilterTableViewCellId" rowHeight="146" id="Eqw-vs-9Ri" customClass="StabilityNetCategoryFilterTableViewCell" customModule="TGK" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="146"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Eqw-vs-9Ri" id="ZdO-bF-uTb">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="206"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="146"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="HpC-gr-k5Q">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="206"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="146"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="8k5-gk-FQp">
-                                                        <size key="itemSize" width="132" height="176"/>
+                                                        <size key="itemSize" width="132" height="144"/>
                                                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                     </collectionViewFlowLayout>
                                                     <cells>
                                                         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="StabilityNetCatgeoryInfoCollectionViewCellId" id="XZL-an-HYJ" customClass="StabilityNetCatgeoryInfoCollectionViewCell" customModule="TGK" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="15" width="132" height="176"/>
+                                                            <rect key="frame" x="0.0" y="1" width="132" height="144"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                                                <rect key="frame" x="0.0" y="0.0" width="132" height="176"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="132" height="144"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <subviews>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eZ5-rs-XvY">
-                                                                        <rect key="frame" x="8" y="8" width="116" height="128.5"/>
+                                                                        <rect key="frame" x="8" y="8" width="116" height="128"/>
                                                                     </imageView>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="760" text="Category" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="304-K9-AOJ">
-                                                                        <rect key="frame" x="8" y="147.5" width="116" height="20.5"/>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="760" text="Category" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="304-K9-AOJ">
+                                                                        <rect key="frame" x="16" y="62" width="100" height="20.5"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
@@ -56,14 +56,15 @@
                                                                 </subviews>
                                                             </view>
                                                             <constraints>
-                                                                <constraint firstItem="304-K9-AOJ" firstAttribute="leading" secondItem="XZL-an-HYJ" secondAttribute="leading" constant="8" id="73S-d6-lmL"/>
+                                                                <constraint firstItem="304-K9-AOJ" firstAttribute="centerY" secondItem="eZ5-rs-XvY" secondAttribute="centerY" id="E3x-NZ-sQ9"/>
+                                                                <constraint firstAttribute="bottom" secondItem="eZ5-rs-XvY" secondAttribute="bottom" constant="8" id="G3p-SS-c1l"/>
                                                                 <constraint firstAttribute="trailing" secondItem="eZ5-rs-XvY" secondAttribute="trailing" constant="8" id="JLF-m0-GNi"/>
-                                                                <constraint firstAttribute="trailing" secondItem="304-K9-AOJ" secondAttribute="trailing" constant="8" id="Rm0-tM-jdE"/>
-                                                                <constraint firstItem="304-K9-AOJ" firstAttribute="top" secondItem="eZ5-rs-XvY" secondAttribute="bottom" constant="11" id="Scv-mf-bUP"/>
+                                                                <constraint firstItem="304-K9-AOJ" firstAttribute="leading" secondItem="XZL-an-HYJ" secondAttribute="leading" constant="16" id="adZ-C9-j05"/>
                                                                 <constraint firstItem="eZ5-rs-XvY" firstAttribute="top" secondItem="XZL-an-HYJ" secondAttribute="top" constant="8" id="gd0-ib-xeD"/>
                                                                 <constraint firstItem="eZ5-rs-XvY" firstAttribute="leading" secondItem="XZL-an-HYJ" secondAttribute="leading" constant="8" id="lMx-9s-kAA"/>
-                                                                <constraint firstAttribute="bottom" secondItem="304-K9-AOJ" secondAttribute="bottom" constant="8" id="tVa-De-wLb"/>
+                                                                <constraint firstAttribute="trailing" secondItem="304-K9-AOJ" secondAttribute="trailing" constant="16" id="qMS-Iw-Vay"/>
                                                             </constraints>
+                                                            <size key="customSize" width="132" height="144"/>
                                                             <connections>
                                                                 <outlet property="categoryLabel" destination="304-K9-AOJ" id="O0C-gV-AGl"/>
                                                                 <outlet property="iconImageView" destination="eZ5-rs-XvY" id="8WC-5U-u1h"/>

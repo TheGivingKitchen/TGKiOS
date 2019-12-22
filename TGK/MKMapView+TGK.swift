@@ -21,5 +21,10 @@ extension MKMapView {
         let topCenterLocation = CLLocation(latitude: topCenterCoordinate.latitude, longitude: topCenterCoordinate.longitude)
         return centerLocation.distance(from: topCenterLocation)
     }
-
+    
+    func setRegion(_ zoomRegion:MKCoordinateRegion, animationDuration:TimeInterval) {
+        MKMapView.animate(withDuration: animationDuration, delay: 0, usingSpringWithDamping: 0.6, initialSpringVelocity: 10, options: UIView.AnimationOptions.curveEaseIn, animations: {
+            self.setRegion(zoomRegion, animated: true)
+            }, completion: nil)
+    }
 }

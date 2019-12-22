@@ -119,18 +119,18 @@ class StabilityNetMapViewController: UIViewController {
         
         let newCoordinateRegion = MKCoordinateRegionMakeWithDistance(offsetLocation, self.mapView.currentRadius() * zoomScale, self.mapView.currentRadius() * zoomScale)
         
-        self.mapView.setRegion(newCoordinateRegion, animated: true)
+        self.mapView.setRegion(newCoordinateRegion, animationDuration: 0.3)
     }
     
     func centerMapOnLocation(location: CLLocationCoordinate2D, mileRadius:CLLocationDistance = 25.0) {
         
         let baseCoordinateRegion = MKCoordinateRegionMakeWithDistance(location, self.oneMileInMeters * mileRadius, self.oneMileInMeters * mileRadius)
         
-        let offsetLocation = CLLocationCoordinate2D(latitude: location.latitude - baseCoordinateRegion.span.latitudeDelta * 0.3, longitude: location.longitude)
+        let offsetLocation = CLLocationCoordinate2D(latitude: location.latitude - baseCoordinateRegion.span.latitudeDelta * 0.6, longitude: location.longitude)
         
         let offsetCoordinateRegion = MKCoordinateRegionMakeWithDistance(offsetLocation, self.oneMileInMeters * mileRadius, self.oneMileInMeters * mileRadius)
 
-        mapView.setRegion(offsetCoordinateRegion, animated: true)
+        self.mapView.setRegion(offsetCoordinateRegion, animationDuration: 0.3)
     }
     
     func addRadiusCircle(location: CLLocationCoordinate2D){
@@ -309,7 +309,7 @@ extension StabilityNetMapViewController:StabilityNetSearchViewControllerDelegate
     
     func stabilityNetSearchViewControllerDidSelect(resource: SafetyNetResourceModel) {
         if let location = resource.location {
-            self.centerMapOnLocation(location: location, mileRadius: 5)
+            self.centerMapOnLocation(location: location, mileRadius: 1)
             
             let possibleMatchedAnnotation = self.mapView.annotations.filter { (annotation) -> Bool in
                 if resource.name == annotation.title {
@@ -317,8 +317,10 @@ extension StabilityNetMapViewController:StabilityNetSearchViewControllerDelegate
                 }
                 return false
                 }.first
-            if let foundAnnotation = possibleMatchedAnnotation {
-                self.mapView.selectAnnotation(foundAnnotation, animated: true)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
+                if let foundAnnotation = possibleMatchedAnnotation {
+                    self.mapView.selectAnnotation(foundAnnotation, animated: true)
+                }
             }
         }
         

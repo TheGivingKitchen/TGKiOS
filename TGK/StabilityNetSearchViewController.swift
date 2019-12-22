@@ -128,8 +128,6 @@ class StabilityNetSearchViewController: UIViewController {
         }
     }
     
-    
-    
     @objc func panGesture(_ recognizer: UIPanGestureRecognizer) {
         
         let translation = recognizer.translation(in: self.view)
@@ -260,7 +258,7 @@ extension StabilityNetSearchViewController: UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.section {
         case SafetyNetTableSection.categoryFilter.rawValue:
-            return 120
+            return 100
         default:
             return UITableViewAutomaticDimension
         }
