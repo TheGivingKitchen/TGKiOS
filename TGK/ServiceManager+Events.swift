@@ -9,6 +9,7 @@
 import Foundation
 import Alamofire
 import SwiftyXMLParser
+import Combine
 
 extension ServiceManager {
     func getEventFeed(completion: @escaping ([RSSCalendarEventModel]?, Error?) -> Void) {
@@ -31,5 +32,24 @@ extension ServiceManager {
             }
             completion(parsedEventModels, response.error)
         }
+    }
+    
+    @available(iOS 13.0, *)
+    func getEventFeedPublisher() -> AnyPublisher<[RSSCalendarEventModel], ServiceError> {
+        //LOOK the format:rss parameters arent getting encoded properly. http header? how does this affect the base getData call?
+        return self.getData(url: Router.getEventFeed.url, parameters: ["format":"rss"]).map { (data) -> [RSSCalendarEventModel] in
+            var parsedEventModels = [RSSCalendarEventModel]()
+            let xml = XML.parse(data)
+            let xmlChannelItems = xml["rss"]["channel"]["item"]
+            
+            for xmlItem in xmlChannelItems {
+                let parsedEventModel = RSSCalendarEventModel(xmlItem: xmlItem)
+                parsedEventModels.append(parsedEventModel)
+            }
+            
+            return parsedEventModels
+        }.mapError { (ServiceError) -> ServiceError in
+            return ServiceManager.ServiceError.parsing
+        }.eraseToAnyPublisher()
     }
 }

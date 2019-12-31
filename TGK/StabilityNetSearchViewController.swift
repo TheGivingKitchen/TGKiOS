@@ -9,6 +9,7 @@
 import UIKit
 import MapKit
 import Firebase
+import Combine
 
 protocol StabilityNetSearchViewControllerDelegate:class {
     func stabilityNetSearchViewControllerDidFind(resources: [SafetyNetResourceModel])
@@ -21,6 +22,8 @@ class StabilityNetSearchViewController: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     
     weak var delegate:StabilityNetSearchViewControllerDelegate?
+    
+    var stabNetPublisher:AnyCancellable?
     
     let topStickyPoint: CGFloat = 100
     var bottomStickyPoint: CGFloat {
@@ -103,9 +106,9 @@ class StabilityNetSearchViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        if self.safetyNetModels.count == 0 {
+//        if self.safetyNetModels.count == 0 {
             self.fetchData()
-        }
+//        }
     }
     
     func fetchData() {
@@ -115,17 +118,30 @@ class StabilityNetSearchViewController: UIViewController {
                 return
             }
             
-            guard let safetyNetModels = safetyNetModels,
-                self.safetyNetModels != safetyNetModels else {
+            guard let fetchedSafetyNetModels = safetyNetModels,
+                self.safetyNetModels != fetchedSafetyNetModels else {
                     return
             }
             
-            self.safetyNetModels = safetyNetModels
+            self.safetyNetModels = fetchedSafetyNetModels
             self.tableView.reloadData()
             
             let resourcesToShowOnMap = self.isSearchingOrFiltering ? self.filteredSafetyNetModels : self.safetyNetModels
             self.delegate?.stabilityNetSearchViewControllerDidFind(resources: resourcesToShowOnMap)
         }
+        
+        self.stabNetPublisher = ServiceManager.sharedInstace.getStabilityNetResourcesPublisher().sink(receiveCompletion: { (completion) in
+            switch completion {
+            case .failure(let serviceError):
+                break
+            case .finished:
+                break
+            }
+        }, receiveValue: { (stabilityNetModels) in
+            print("got em")
+        })
+        
+        
     }
     
     @objc func panGesture(_ recognizer: UIPanGestureRecognizer) {

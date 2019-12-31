@@ -10,6 +10,7 @@ import UIKit
 import Alamofire
 import SwiftyXMLParser
 import Firebase
+import Combine
 
 class EventsHomeViewController: UIViewController {
     
@@ -25,6 +26,8 @@ class EventsHomeViewController: UIViewController {
     
     var calendarEventModels = [RSSCalendarEventModel]()
     var volunteerFormModel:SegmentedFormModel?
+    
+    var eventsPublisher:AnyCancellable?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,17 +65,36 @@ class EventsHomeViewController: UIViewController {
     }
     
     func fetchData() {
-        ServiceManager.sharedInstace.getEventFeed { (calendarEventModels, error) in
-            if let calendarEventModels = calendarEventModels {
-                if self.calendarEventModels != calendarEventModels {
-                    self.calendarEventModels = calendarEventModels
+//        ServiceManager.sharedInstace.getEventFeed { (calendarEventModels, error) in
+//            if let calendarEventModels = calendarEventModels {
+//                if self.calendarEventModels != calendarEventModels {
+//                    self.calendarEventModels = calendarEventModels
+//                    self.tableView.reloadData()
+//                }
+//            }
+//            else if let error = error {
+//                print(error)
+//            }
+//        }
+        
+
+
+            self.eventsPublisher = ServiceManager.sharedInstace.getEventFeedPublisher().sink(receiveCompletion: { (completion) in
+                switch completion {
+                case .failure(let serviceError):
+                    break
+                case .finished:
+                    break
+                }
+            }) { (calendarEventModels) in
+                self.calendarEventModels = calendarEventModels
+                DispatchQueue.main.async {
                     self.tableView.reloadData()
                 }
+
             }
-            else if let error = error {
-                print(error)
-            }
-        }
+
+    
         
         ServiceManager.sharedInstace.getFirebaseForm(id: "volunteerSignup") { (volunteerFormModel, error) in
             if let unwrappedModel = volunteerFormModel {
