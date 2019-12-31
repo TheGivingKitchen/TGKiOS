@@ -97,7 +97,8 @@ class StabilityNetSearchViewController: UIViewController {
     
     private func styleView() {
         UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).backgroundColor = UIColor.tgkBackgroundGray
-
+        
+        self.searchBar.setBackgroundImage(UIImage(), for: .top, barMetrics: .default)
         self.roundTopCorners()
     }
     
