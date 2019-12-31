@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="j1c-UW-fFz">
-                                <rect key="frame" x="0.0" y="56" width="375" height="611"/>
+                                <rect key="frame" x="0.0" y="70" width="375" height="597"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="StabilityNetCategoryFilterTableViewCellId" rowHeight="146" id="Eqw-vs-9Ri" customClass="StabilityNetCategoryFilterTableViewCell" customModule="TGK" customModuleProvider="target">
@@ -87,19 +87,24 @@
                                 </prototypes>
                             </tableView>
                             <searchBar contentMode="redraw" placeholder="Search Stability Network" translatesAutoresizingMaskIntoConstraints="NO" id="qZ4-Gp-CKB">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                                <rect key="frame" x="0.0" y="14" width="375" height="56"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconDrawerIndicator" translatesAutoresizingMaskIntoConstraints="NO" id="URN-uu-gDL">
+                                <rect key="frame" x="161.5" y="8" width="52" height="8"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="qZ4-Gp-CKB" firstAttribute="top" secondItem="IUY-0V-mOf" secondAttribute="top" id="Ard-Qs-1PY"/>
                             <constraint firstItem="qZ4-Gp-CKB" firstAttribute="leading" secondItem="IUY-0V-mOf" secondAttribute="leading" id="DZa-LR-IeM"/>
                             <constraint firstItem="IUY-0V-mOf" firstAttribute="bottom" secondItem="j1c-UW-fFz" secondAttribute="bottom" id="Gm8-ZV-PZx"/>
                             <constraint firstItem="j1c-UW-fFz" firstAttribute="leading" secondItem="IUY-0V-mOf" secondAttribute="leading" id="H6i-nc-y3b"/>
+                            <constraint firstItem="URN-uu-gDL" firstAttribute="top" secondItem="IUY-0V-mOf" secondAttribute="top" constant="8" id="Lhn-ab-XYp"/>
                             <constraint firstItem="j1c-UW-fFz" firstAttribute="top" secondItem="qZ4-Gp-CKB" secondAttribute="bottom" id="X4y-ep-06e"/>
+                            <constraint firstItem="URN-uu-gDL" firstAttribute="centerX" secondItem="IUY-0V-mOf" secondAttribute="centerX" id="Xjh-IA-jA8"/>
+                            <constraint firstItem="qZ4-Gp-CKB" firstAttribute="top" secondItem="URN-uu-gDL" secondAttribute="bottom" constant="-2" id="c5k-u3-niA"/>
                             <constraint firstItem="IUY-0V-mOf" firstAttribute="trailing" secondItem="j1c-UW-fFz" secondAttribute="trailing" id="qAn-WS-nfX"/>
                             <constraint firstItem="IUY-0V-mOf" firstAttribute="trailing" secondItem="qZ4-Gp-CKB" secondAttribute="trailing" id="t3c-Dx-41m"/>
                         </constraints>
@@ -326,4 +331,7 @@ like website here</string>
             <point key="canvasLocation" x="885.60000000000002" y="247.82608695652175"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="iconDrawerIndicator" width="52" height="8"/>
+    </resources>
 </document>
