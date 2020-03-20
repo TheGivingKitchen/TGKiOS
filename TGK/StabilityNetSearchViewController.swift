@@ -68,8 +68,6 @@ class StabilityNetSearchViewController: UIViewController {
     private let safetyNetTooltipReuseId = "safetyNetTooltipReuseId"
     private let safetyNetFacebookCellReuseId = "safetyNetFacebookCellReuseId"
     
-    //persistent category filter cell to preserve category selections while scrolling
-    private var stabilityNetCategoryFilterCell:StabilityNetCategoryFilterTableViewCell?
     private var selectedCategories:Set<String> = []
     
     override func viewDidLoad() {
@@ -221,18 +219,10 @@ extension StabilityNetSearchViewController: UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.section {
         case SafetyNetTableSection.categoryFilter.rawValue:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "StabilityNetSearchMapFilterTableViewCellId") as! StabilityNetSearchMapFilterTableViewCell
+            cell.delegate = self
             
-            //keep the category cell in memory to preserve state
-            if let persistentCategoryFilterCell  = self.stabilityNetCategoryFilterCell {
-                return persistentCategoryFilterCell
-            }
-            else {
-                let cell = tableView.dequeueReusableCell(withIdentifier: "StabilityNetCategoryFilterTableViewCellId") as! StabilityNetCategoryFilterTableViewCell
-                cell.delegate = self
-                self.stabilityNetCategoryFilterCell = cell
-                return cell
-            }
-            
+            return cell
         case SafetyNetTableSection.resource.rawValue:
             let cell = tableView.dequeueReusableCell(withIdentifier: self.safetyNetCellReuseId) as! SafetyNetInfoTableViewCell
             
@@ -563,15 +553,23 @@ extension StabilityNetSearchViewController: UIGestureRecognizerDelegate {
     }
 }
 
-extension StabilityNetSearchViewController:StabilityNetCategoryFilterTableViewCellDelegate {
-    func stabilityNetCategoryFilterTableViewCellDidSelect(category: String) {
-        self.selectedCategories.insert(category)
-        self.filterAndShowContentForSearchText()
-    }
-    
-    func stabilityNetCategoryFilterTableViewCellDidDeselect(category: String) {
-        self.selectedCategories.remove(category)
-        self.filterAndShowContentForSearchText()
+//extension StabilityNetSearchViewController:StabilityNetCategoryFilterTableViewCellDelegate {
+//    func stabilityNetCategoryFilterTableViewCellDidSelect(category: String) {
+//        self.selectedCategories.insert(category)
+//        self.filterAndShowContentForSearchText()
+//    }
+//
+//    func stabilityNetCategoryFilterTableViewCellDidDeselect(category: String) {
+//        self.selectedCategories.remove(category)
+//        self.filterAndShowContentForSearchText()
+//    }
+//}
+
+extension StabilityNetSearchViewController:StabilityNetSearchMapFilterTableViewCellDelegate {
+    func stabilityNetSearchMapFilterTableViewCellDidTapFilter() {
+        let filterVC = UIStoryboard(name: "SafetyNet", bundle: nil).instantiateViewController(withIdentifier: "StabilityNetCategoryFilterViewControllerId") as! StabilityNetCategoryFilterViewController
+        filterVC.selectedCategories = self.selectedCategories
+        self.present(filterVC, animated: true)
     }
 }
 

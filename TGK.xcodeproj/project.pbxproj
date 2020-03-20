@@ -65,6 +65,9 @@
 		4E8B7DC42394551300E6164F /* MKMapView+TGK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8B7DC32394551300E6164F /* MKMapView+TGK.swift */; };
 		4E97DF9D22F73B0B003B0E13 /* ScrollableBottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E97DF9C22F73B0B003B0E13 /* ScrollableBottomSheetViewController.swift */; };
 		4E97DF9F22F73B92003B0E13 /* StabilityNetSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E97DF9E22F73B92003B0E13 /* StabilityNetSearchViewController.swift */; };
+		4E9DE5462401875400D3A716 /* StabilityNetSearchMapFilterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9DE5452401875400D3A716 /* StabilityNetSearchMapFilterTableViewCell.swift */; };
+		4E9DE54824018A6500D3A716 /* StabilityNetFilterCategoryTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9DE54724018A6500D3A716 /* StabilityNetFilterCategoryTypeCell.swift */; };
+		4E9DE54C24018EAD00D3A716 /* StabilityNetCategoryFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9DE54B24018EAD00D3A716 /* StabilityNetCategoryFilterViewController.swift */; };
 		4E9E1D5B21DC441D0096F705 /* StoreReviewWarmerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9E1D5A21DC441D0096F705 /* StoreReviewWarmerViewController.swift */; };
 		4EAF08EB2139FBB20083E023 /* SafetyNetHomeTooltipCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EAF08EA2139FBB20083E023 /* SafetyNetHomeTooltipCell.xib */; };
 		4EAF08ED2139FBC90083E023 /* SafetyNetHomeTooltipCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAF08EC2139FBC90083E023 /* SafetyNetHomeTooltipCell.swift */; };
@@ -191,6 +194,9 @@
 		4E8B7DC32394551300E6164F /* MKMapView+TGK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKMapView+TGK.swift"; sourceTree = "<group>"; };
 		4E97DF9C22F73B0B003B0E13 /* ScrollableBottomSheetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollableBottomSheetViewController.swift; sourceTree = "<group>"; };
 		4E97DF9E22F73B92003B0E13 /* StabilityNetSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StabilityNetSearchViewController.swift; sourceTree = "<group>"; };
+		4E9DE5452401875400D3A716 /* StabilityNetSearchMapFilterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StabilityNetSearchMapFilterTableViewCell.swift; sourceTree = "<group>"; };
+		4E9DE54724018A6500D3A716 /* StabilityNetFilterCategoryTypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StabilityNetFilterCategoryTypeCell.swift; sourceTree = "<group>"; };
+		4E9DE54B24018EAD00D3A716 /* StabilityNetCategoryFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StabilityNetCategoryFilterViewController.swift; sourceTree = "<group>"; };
 		4E9E1D5A21DC441D0096F705 /* StoreReviewWarmerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreReviewWarmerViewController.swift; sourceTree = "<group>"; };
 		4EAF08EA2139FBB20083E023 /* SafetyNetHomeTooltipCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SafetyNetHomeTooltipCell.xib; sourceTree = "<group>"; };
 		4EAF08EC2139FBC90083E023 /* SafetyNetHomeTooltipCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafetyNetHomeTooltipCell.swift; sourceTree = "<group>"; };
@@ -533,6 +539,26 @@
 			name = Utilities;
 			sourceTree = "<group>";
 		};
+		4E9DE54924018E4900D3A716 /* Filtering */ = {
+			isa = PBXGroup;
+			children = (
+				4E9DE5452401875400D3A716 /* StabilityNetSearchMapFilterTableViewCell.swift */,
+				4E9DE54B24018EAD00D3A716 /* StabilityNetCategoryFilterViewController.swift */,
+				4E9DE54724018A6500D3A716 /* StabilityNetFilterCategoryTypeCell.swift */,
+				4E9DE54A24018E6400D3A716 /* to be removed or deprecated */,
+			);
+			name = Filtering;
+			sourceTree = "<group>";
+		};
+		4E9DE54A24018E6400D3A716 /* to be removed or deprecated */ = {
+			isa = PBXGroup;
+			children = (
+				4EC8F22B2309E2C800CA0945 /* StabilityNetCategoryFilterTableViewCell.swift */,
+				4EC8F22D2309E3C800CA0945 /* StabilityNetCatgeoryInfoCollectionViewCell.swift */,
+			);
+			name = "to be removed or deprecated";
+			sourceTree = "<group>";
+		};
 		4ECA9BF920A268590084A317 /* CommonComponents */ = {
 			isa = PBXGroup;
 			children = (
@@ -625,13 +651,12 @@
 		4EDC78E121C6A8FF004AFCBB /* SafetyNet */ = {
 			isa = PBXGroup;
 			children = (
+				4E9DE54924018E4900D3A716 /* Filtering */,
 				4E97DF9C22F73B0B003B0E13 /* ScrollableBottomSheetViewController.swift */,
 				4EDC78E221C6A912004AFCBB /* SafetyNet.storyboard */,
 				4EDC78E421C6A9A2004AFCBB /* SafetyNetDetailSheetViewController.swift */,
 				4E1DA38022C0300F0032740A /* StabilityNetMapViewController.swift */,
 				4E97DF9E22F73B92003B0E13 /* StabilityNetSearchViewController.swift */,
-				4EC8F22B2309E2C800CA0945 /* StabilityNetCategoryFilterTableViewCell.swift */,
-				4EC8F22D2309E3C800CA0945 /* StabilityNetCatgeoryInfoCollectionViewCell.swift */,
 				4E8B7DC123943ADE00E6164F /* StabilityNetClusterAnnotationView.swift */,
 			);
 			name = SafetyNet;
@@ -900,7 +925,9 @@
 				4E8897AE209E134700A361D8 /* ServiceManager+Forms.swift in Sources */,
 				4ED3884B209D030600A8BEE2 /* FormItemView.swift in Sources */,
 				C0965F4B2114C8BF005EAB0C /* DonationSuccessViewController.swift in Sources */,
+				4E9DE54824018A6500D3A716 /* StabilityNetFilterCategoryTypeCell.swift in Sources */,
 				4ED38841209D030600A8BEE2 /* SegmentedFormModel.swift in Sources */,
+				4E9DE54C24018EAD00D3A716 /* StabilityNetCategoryFilterViewController.swift in Sources */,
 				4ECA9C0F20A8A2640084A317 /* FormDateTableViewCell.swift in Sources */,
 				4ED38847209D030600A8BEE2 /* ServiceManager.swift in Sources */,
 				4ED38849209D030600A8BEE2 /* FormQuestionAnswerModel.swift in Sources */,
@@ -927,6 +954,7 @@
 				4EF4348A213F2F0E009C2679 /* FormTimeTableViewCell.swift in Sources */,
 				4E9E1D5B21DC441D0096F705 /* StoreReviewWarmerViewController.swift in Sources */,
 				4ED38851209D04AE00A8BEE2 /* UIColor+TGK.swift in Sources */,
+				4E9DE5462401875400D3A716 /* StabilityNetSearchMapFilterTableViewCell.swift in Sources */,
 				4EDC78E521C6A9A2004AFCBB /* SafetyNetDetailSheetViewController.swift in Sources */,
 				4E83549A20C8B976009DF8CE /* RSSCalendarEventModel.swift in Sources */,
 				4ECA9C0120A72D230084A317 /* FormQuestionSubfieldModel.swift in Sources */,

@@ -36,7 +36,7 @@ class FormPageViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.informationlabel.font = UIFontMetrics.default.scaledFont(for:UIFont.kulturistaMedium(size: 23))
+        self.informationlabel.font = UIFont.kulturistaMedium(size:23)
         self.informationlabel.textColor = UIColor.tgkBlue
         
         self.tableView.delegate = self

@@ -59,7 +59,7 @@ extension UIFont {
     }
     
     static func kulturistaMedium(size:CGFloat) -> UIFont {
-        return UIFontMetrics.default.scaledFont(for:UIFont(name: "Kulturista", size: size) ?? UIFont.systemFont(ofSize:size))
+        return UIFontMetrics.default.scaledFont(for:UIFont(name: "Kulturista-Medium", size: size) ?? UIFont.systemFont(ofSize:size))
     }
 }
 

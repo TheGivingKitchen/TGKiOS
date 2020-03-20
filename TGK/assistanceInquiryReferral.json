@@ -121,7 +121,7 @@
 		                }
 		            ],
 		            "Type": "radio",
-		            "ID": "Field32",
+		            "ID": "Field139",
 		            "HasOtherField": false
                 },
                 {
@@ -144,6 +144,39 @@
                 }
 			]
 		},
+        {
+            "pageInformation" : "Please tell us more",
+            "questions" : [
+                {
+                    "Title": "Which type of food service does the person in need work in?",
+                    "Instructions": "",
+                    "IsRequired": "0",
+                    "ClassNames": "",
+                    "DefaultVal": "",
+                    "Page": "1",
+                    "Choices": [
+                        {
+                            "Label": "Restaurant"
+                        },
+                        {
+                            "Label": "Catering"
+                        },
+                        {
+                            "Label": "Food Truck"
+                        },
+                        {
+                            "Label": "Concessions"
+                        },
+                        {
+                            "Label": "Other"
+                        }
+                    ],
+                    "Type": "radio",
+                    "ID": "Field242",
+                    "HasOtherField": true
+                }
+            ]
+        },
 		{
             "pageInformation" : "Where is the person in need located?",
 			"questions" : [
@@ -241,7 +274,7 @@
             "pageInformation" : "Please tell use more about the current circumstances",
 			"questions" : [
 				{
-		            "Title": "Please tell us just a few words about the crisis and about any lost work or wages.",
+		            "Title": "What has caused your crisis? Please include missed time from work and lost wages.",
 		            "Instructions": "",
 		            "IsRequired": "0",
 		            "ClassNames": "",
