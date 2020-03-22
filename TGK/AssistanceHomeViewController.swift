@@ -37,6 +37,7 @@ class AssistanceHomeViewController: UIViewController {
     }
     
     private func styleView() {
+        self.programDescriptionLabel.text = "Financial Assistance\nGK can fund the cost of living expenses for food service workers who miss work due to an illness, injury, housing disaster, or death of an immediate family member."
         self.programDescriptionLabel.font = UIFont.tgkSubtitle
         self.programDescriptionLabel.textColor = UIColor.tgkBlue
         
@@ -59,7 +60,7 @@ class AssistanceHomeViewController: UIViewController {
             let illnessRange = (programDescriptionString as NSString).range(of: "illness")
             let injuryRange = (programDescriptionString as NSString).range(of: "injury")
             let deathString = (programDescriptionString as NSString).range(of: "death of an immediate family member")
-            let disasterString = (programDescriptionString as NSString).range(of: "house fire or flood")
+            let disasterString = (programDescriptionString as NSString).range(of: "housing disaster")
             
             let programAttributedString = NSMutableAttributedString(string: programDescriptionString, attributes: [NSAttributedStringKey.foregroundColor:UIColor.tgkBlue])
             programAttributedString.addAttribute(.foregroundColor, value: UIColor.tgkOrange, range: illnessRange)
@@ -93,7 +94,7 @@ class AssistanceHomeViewController: UIViewController {
     }
     
     @IBAction func learnMorePressed(_ sender: Any) {
-        if let url = URL(string: "https://thegivingkitchen.org/grant-program") {
+        if let url = URL(string: "https://thegivingkitchen.org/what-we-do") {
             let learnMoreVC = TGKSafariViewController(url: url)
             self.present(learnMoreVC, animated:true)
         }

@@ -23,6 +23,7 @@
 		4E1EED4E210A57B40084CFF3 /* Forms.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E1EED4D210A57B40084CFF3 /* Forms.storyboard */; };
 		4E221AFE235946050010F56D /* stabilityNet.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E221AFD235946050010F56D /* stabilityNet.json */; };
 		4E2A476F21D419B100C5E435 /* Feedback.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E2A476E21D419B100C5E435 /* Feedback.storyboard */; };
+		4E3EC5B624281E250073D4D6 /* GK Crisis Grants.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4E3EC5B524281E250073D4D6 /* GK Crisis Grants.pdf */; };
 		4E4D229E20B1B1F400BA7577 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4D229D20B1B1F400BA7577 /* MainTabBarController.swift */; };
 		4E4D22A120B1B2A700BA7577 /* FormsHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4D22A020B1B2A700BA7577 /* FormsHomeViewController.swift */; };
 		4E71AFCE215C3EEF0033494D /* FeedbackHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E71AFCD215C3EEF0033494D /* FeedbackHomeViewController.swift */; };
@@ -110,7 +111,6 @@
 		4EDC78E321C6A912004AFCBB /* SafetyNet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EDC78E221C6A912004AFCBB /* SafetyNet.storyboard */; };
 		4EDC78E521C6A9A2004AFCBB /* SafetyNetDetailSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDC78E421C6A9A2004AFCBB /* SafetyNetDetailSheetViewController.swift */; };
 		4EDC78E821C87268004AFCBB /* AboutHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDC78E721C87268004AFCBB /* AboutHomeViewController.swift */; };
-		4EDC78EB21D15A53004AFCBB /* GK Crisis Grants.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4EDC78EA21D15A53004AFCBB /* GK Crisis Grants.pdf */; };
 		4EDC78ED21D15BD2004AFCBB /* WebKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDC78EC21D15BD2004AFCBB /* WebKitViewController.swift */; };
 		4EE12A8721487096003DFBB5 /* LocationWarmingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE12A8621487096003DFBB5 /* LocationWarmingViewController.swift */; };
 		4EE12A9321507FB1003DFBB5 /* Analytics+TGK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE12A9221507FB1003DFBB5 /* Analytics+TGK.swift */; };
@@ -151,6 +151,7 @@
 		4E228D9620ED5715002912AB /* AssistanceFormsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssistanceFormsCollectionViewCell.swift; sourceTree = "<group>"; };
 		4E228D9820ED571F002912AB /* AssistanceFormsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AssistanceFormsCollectionViewCell.xib; sourceTree = "<group>"; };
 		4E2A476E21D419B100C5E435 /* Feedback.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Feedback.storyboard; sourceTree = "<group>"; };
+		4E3EC5B524281E250073D4D6 /* GK Crisis Grants.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "GK Crisis Grants.pdf"; sourceTree = "<group>"; };
 		4E4D229D20B1B1F400BA7577 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		4E4D22A020B1B2A700BA7577 /* FormsHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormsHomeViewController.swift; sourceTree = "<group>"; };
 		4E71AFCD215C3EEF0033494D /* FeedbackHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackHomeViewController.swift; sourceTree = "<group>"; };
@@ -244,7 +245,6 @@
 		4EDC78E221C6A912004AFCBB /* SafetyNet.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SafetyNet.storyboard; sourceTree = "<group>"; };
 		4EDC78E421C6A9A2004AFCBB /* SafetyNetDetailSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafetyNetDetailSheetViewController.swift; sourceTree = "<group>"; };
 		4EDC78E721C87268004AFCBB /* AboutHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutHomeViewController.swift; sourceTree = "<group>"; };
-		4EDC78EA21D15A53004AFCBB /* GK Crisis Grants.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "GK Crisis Grants.pdf"; sourceTree = "<group>"; };
 		4EDC78EC21D15BD2004AFCBB /* WebKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebKitViewController.swift; sourceTree = "<group>"; };
 		4EE12A8621487096003DFBB5 /* LocationWarmingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationWarmingViewController.swift; sourceTree = "<group>"; };
 		4EE12A9221507FB1003DFBB5 /* Analytics+TGK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Analytics+TGK.swift"; sourceTree = "<group>"; };
@@ -665,7 +665,7 @@
 		4EDC78E921D15A29004AFCBB /* CrisisGrantsPdf */ = {
 			isa = PBXGroup;
 			children = (
-				4EDC78EA21D15A53004AFCBB /* GK Crisis Grants.pdf */,
+				4E3EC5B524281E250073D4D6 /* GK Crisis Grants.pdf */,
 			);
 			name = CrisisGrantsPdf;
 			sourceTree = "<group>";
@@ -807,6 +807,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E3EC5B624281E250073D4D6 /* GK Crisis Grants.pdf in Resources */,
 				4E0D101621F3A71F003EE14C /* joinourforces.json in Resources */,
 				4ED38824209D01F200A8BEE2 /* LaunchScreen.storyboard in Resources */,
 				4E7C2E2620B1D8AF00A20303 /* RobotoMono-Thin.ttf in Resources */,
@@ -814,7 +815,6 @@
 				C0B9C4952135D3D3009BEE60 /* safetyNet.json in Resources */,
 				4E7C2E2F20B1D8AF00A20303 /* RobotoMono-Medium.ttf in Resources */,
 				4EDC78E321C6A912004AFCBB /* SafetyNet.storyboard in Resources */,
-				4EDC78EB21D15A53004AFCBB /* GK Crisis Grants.pdf in Resources */,
 				4E0E0C8C216D764F0082240E /* safetyNetPartnerTest.json in Resources */,
 				4ECA9C0320A744700084A317 /* volunteerSignupTest.json in Resources */,
 				4ED38821209D01F200A8BEE2 /* Assets.xcassets in Resources */,

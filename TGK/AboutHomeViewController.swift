@@ -222,6 +222,7 @@ class AboutHomeViewController: UITableViewController {
             return
         }
         let documentInteractionController = UIDocumentInteractionController(url: pdfUrl)
+        documentInteractionController.name = "GK Financial Assistance"
         documentInteractionController.delegate = self
         documentInteractionController.presentPreview(animated: true)
         

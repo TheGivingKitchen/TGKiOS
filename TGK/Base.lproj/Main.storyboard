@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FqZ-EA-ONs">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FqZ-EA-ONs">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -125,14 +125,14 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="pak-zq-tGP"/>
                                 </constraints>
-                                <state key="normal" title="For You">
+                                <state key="normal" title="Ask for help">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="startSelfAssistancePressed:" destination="a7e-3s-qQ7" eventType="touchUpInside" id="HoX-ES-HOb"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="240" verticalCompressionResistancePriority="240" text="You can start an assistance inquiry for yourself or someone else." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AUo-kV-WcL">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="240" verticalCompressionResistancePriority="240" text="You can ask for help for yourself or someone else." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AUo-kV-WcL">
                                 <rect key="frame" x="20" y="606" width="335" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -142,7 +142,7 @@
                                 <rect key="frame" x="20" y="127" width="335" height="180.5"/>
                                 <attributedString key="attributedText">
                                     <fragment>
-                                        <string key="content">Crisis Grants
+                                        <string key="content">Financial Assistance
 GK can fund the cost of living expenses for food service workers who miss work due to an illness, injury, house fire or flood, or death of an immediate family member.</string>
                                         <attributes>
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -153,7 +153,7 @@ GK can fund the cost of living expenses for food service workers who miss work d
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start here to request assistance" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iqU-2Y-j7z">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start here to ask for help" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iqU-2Y-j7z">
                                 <rect key="frame" x="8" y="441.5" width="359" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -234,35 +234,35 @@ GK can fund the cost of living expenses for food service workers who miss work d
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="33F-jG-XtU">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="290"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="320"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="249" verticalCompressionResistancePriority="1000" ambiguous="YES" image="eventHomeTopIcon" translatesAutoresizingMaskIntoConstraints="NO" id="VD9-Tn-tAf">
-                                            <rect key="frame" x="150.5" y="40" width="74" height="39"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="249" verticalCompressionResistancePriority="1000" image="eventHomeTopIcon" translatesAutoresizingMaskIntoConstraints="NO" id="VD9-Tn-tAf">
+                                            <rect key="frame" x="169" y="40" width="37" height="39"/>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" ambiguous="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZYo-Rq-2Bv">
-                                            <rect key="frame" x="16" y="119" width="343" height="120"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ZYo-Rq-2Bv">
+                                            <rect key="frame" x="16" y="119" width="343" height="144"/>
                                             <attributedString key="attributedText">
                                                 <fragment>
-                                                    <string key="content">Giving Kitchen's signature and third-party events are rooted in great food, drink, service - and care for those who serve us every day.</string>
+                                                    <string key="content">Giving Kitchen's signature and community partner events are rooted in great food, drink, service - and care for those who serve us every day.</string>
                                                     <attributes>
                                                         <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                         <font key="NSFont" size="24" name="Kulturista"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" minimumLineHeight="24" maximumLineHeight="100" tighteningFactorForTruncation="0.0"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" minimumLineHeight="24" maximumLineHeight="100" tighteningFactorForTruncation="0.0"/>
                                                     </attributes>
                                                 </fragment>
                                             </attributedString>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L9p-Rn-6M2">
-                                            <rect key="frame" x="148.5" y="270" width="78" height="0.0"/>
+                                            <rect key="frame" x="148.5" y="279" width="78" height="21"/>
                                             <state key="normal" title="Learn more"/>
                                             <connections>
                                                 <action selector="learnMorePressed:" destination="rZT-zD-RsE" eventType="touchUpInside" id="uVx-gp-TUg"/>
                                             </connections>
                                         </button>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="reQ-Kp-SGn">
-                                            <rect key="frame" x="0.0" y="282" width="375" height="8"/>
+                                            <rect key="frame" x="0.0" y="312" width="375" height="8"/>
                                             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="8" id="mz7-in-QlS"/>
@@ -274,11 +274,11 @@ GK can fund the cost of living expenses for food service workers who miss work d
                                         <constraint firstItem="L9p-Rn-6M2" firstAttribute="top" secondItem="ZYo-Rq-2Bv" secondAttribute="bottom" constant="16" id="6me-Tq-GZp"/>
                                         <constraint firstAttribute="bottom" secondItem="reQ-Kp-SGn" secondAttribute="bottom" id="Efr-6Q-1vh"/>
                                         <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="L9p-Rn-6M2" secondAttribute="bottom" constant="20" id="KRF-TB-Aem"/>
-                                        <constraint firstItem="L9p-Rn-6M2" firstAttribute="centerX" secondItem="ZYo-Rq-2Bv" secondAttribute="centerX" id="OAw-Do-8Wb"/>
                                         <constraint firstItem="VD9-Tn-tAf" firstAttribute="centerX" secondItem="33F-jG-XtU" secondAttribute="centerX" id="TuB-au-lJi"/>
                                         <constraint firstAttribute="trailing" secondItem="ZYo-Rq-2Bv" secondAttribute="trailing" constant="16" id="cys-tN-9qI"/>
                                         <constraint firstItem="ZYo-Rq-2Bv" firstAttribute="top" secondItem="VD9-Tn-tAf" secondAttribute="bottom" constant="40" id="kYr-GL-5mb"/>
                                         <constraint firstItem="VD9-Tn-tAf" firstAttribute="top" secondItem="33F-jG-XtU" secondAttribute="top" constant="40" id="qta-TK-jbe"/>
+                                        <constraint firstItem="L9p-Rn-6M2" firstAttribute="centerX" secondItem="ZYo-Rq-2Bv" secondAttribute="centerX" id="tSo-MQ-pVz"/>
                                         <constraint firstItem="ZYo-Rq-2Bv" firstAttribute="leading" secondItem="33F-jG-XtU" secondAttribute="leading" constant="16" id="vz1-s7-sF7"/>
                                         <constraint firstAttribute="trailing" secondItem="reQ-Kp-SGn" secondAttribute="trailing" id="wTj-8c-JPu"/>
                                         <constraint firstItem="reQ-Kp-SGn" firstAttribute="leading" secondItem="33F-jG-XtU" secondAttribute="leading" id="xBC-Nw-p9h"/>
@@ -286,7 +286,7 @@ GK can fund the cost of living expenses for food service workers who miss work d
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="eventCellReuseId" rowHeight="424" id="S0x-H7-GYl" customClass="CalendarEventOverviewTableViewCell" customModule="TGK" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="318" width="375" height="424"/>
+                                        <rect key="frame" x="0.0" y="348" width="375" height="424"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="S0x-H7-GYl" id="sgc-CW-2kl">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="424"/>
@@ -311,7 +311,7 @@ GK can fund the cost of living expenses for food service workers who miss work d
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eventsReadMore" translatesAutoresizingMaskIntoConstraints="NO" id="u2g-nS-bPI">
-                                                    <rect key="frame" x="16" y="337" width="196" height="28"/>
+                                                    <rect key="frame" x="16" y="337" width="98.000000000000028" height="14"/>
                                                 </imageView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E1a-Ar-8fA">
                                                     <rect key="frame" x="0.0" y="423" width="375" height="1"/>
@@ -352,14 +352,14 @@ GK can fund the cost of living expenses for food service workers who miss work d
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" horizontalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rR5-6l-jps">
-                                        <rect key="frame" x="325" y="3" width="38" height="38"/>
+                                        <rect key="frame" x="344" y="11" width="19" height="22"/>
                                         <state key="normal" image="iconCloseXOpenCircle"/>
                                         <connections>
                                             <action selector="volunteerCloseButton:" destination="rZT-zD-RsE" eventType="touchUpInside" id="MsW-yG-qhk"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="1n5-VZ-J9Q">
-                                        <rect key="frame" x="12" y="7" width="297" height="30"/>
+                                        <rect key="frame" x="12" y="7" width="316" height="30"/>
                                         <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Give back! Volunteer at an event!">
@@ -405,7 +405,7 @@ GK can fund the cost of living expenses for food service workers who miss work d
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S6M-BK-8zV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2910" y="922"/>
+            <point key="canvasLocation" x="-2911.1999999999998" y="921.58920539730138"/>
         </scene>
         <!--Donate Home View Controller-->
         <scene sceneID="2UP-Ff-Nay">
@@ -669,7 +669,7 @@ GK can fund the cost of living expenses for food service workers who miss work d
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mII-nC-Vaw">
                                                     <rect key="frame" x="16" y="60.5" width="343" height="81.5"/>
-                                                    <string key="text">Would you like to become part of Giving Kitchen's social service or community resource referral program? We'l love to hear from you!</string>
+                                                    <string key="text">Would you like to become part of Giving Kitchen's social service or community resource referral program? We'd love to hear from you!</string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -719,7 +719,7 @@ GK can fund the cost of living expenses for food service workers who miss work d
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="432"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Want to host an event to benefit GK? Join our forces!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H1d-Ir-WPW">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Want to host an event to benefit GK? Let us know!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H1d-Ir-WPW">
                                                     <rect key="frame" x="16" y="20" width="343" height="41"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -731,7 +731,7 @@ GK can fund the cost of living expenses for food service workers who miss work d
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="5gU-W9-WmB"/>
                                                     </constraints>
-                                                    <state key="normal" title="Join Our Forces">
+                                                    <state key="normal" title="Community Partner Form">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
                                                     <connections>
@@ -1120,7 +1120,7 @@ GK can fund the cost of living expenses for food service workers who miss work d
                                                         <constraint firstAttribute="height" constant="8" id="a24-YM-Wxb"/>
                                                     </constraints>
                                                 </view>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Join the GK Food Service Workers group on Facebook for support and potential employement opportunities near you" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="swB-g7-Tk0">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Join the GK Food Service Workers group on Facebook for support and potential employment opportunities near you" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="swB-g7-Tk0">
                                                     <rect key="frame" x="16" y="16" width="343" height="56"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -1488,14 +1488,14 @@ GK can fund the cost of living expenses for food service workers who miss work d
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How do you like using the Giving Kitchen app?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ned-aj-fzF">
-                                                    <rect key="frame" x="16" y="52.5" width="343" height="41"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How do you like using Giving Kitchen app?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ned-aj-fzF">
+                                                    <rect key="frame" x="16" y="52.5" width="343" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bf4-ME-YQu">
-                                                    <rect key="frame" x="16" y="109.5" width="359" height="50"/>
+                                                    <rect key="frame" x="16" y="89" width="359" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="pev-6K-aEH"/>
                                                     </constraints>
@@ -1505,14 +1505,14 @@ GK can fund the cost of living expenses for food service workers who miss work d
                                                     </connections>
                                                 </button>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kie-RY-vHH">
-                                                    <rect key="frame" x="16" y="159" width="359" height="1"/>
+                                                    <rect key="frame" x="16" y="138.5" width="359" height="1"/>
                                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="1" id="qM8-pi-9kG"/>
                                                     </constraints>
                                                 </view>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UbB-gd-PNL">
-                                                    <rect key="frame" x="16" y="160" width="359" height="50"/>
+                                                    <rect key="frame" x="16" y="139.5" width="359" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="ifk-xI-w3C"/>
                                                     </constraints>
@@ -1522,14 +1522,14 @@ GK can fund the cost of living expenses for food service workers who miss work d
                                                     </connections>
                                                 </button>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bgd-WL-WPJ">
-                                                    <rect key="frame" x="16" y="210" width="359" height="1"/>
+                                                    <rect key="frame" x="16" y="189.5" width="359" height="1"/>
                                                     <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="1" id="gzI-mB-nXh"/>
                                                     </constraints>
                                                 </view>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dnP-wM-BKp">
-                                                    <rect key="frame" x="16" y="211" width="359" height="50"/>
+                                                    <rect key="frame" x="16" y="190.5" width="359" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="cvd-rC-mFI"/>
                                                     </constraints>
@@ -1539,7 +1539,7 @@ GK can fund the cost of living expenses for food service workers who miss work d
                                                     </connections>
                                                 </button>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g1Z-PF-g4Z">
-                                                    <rect key="frame" x="0.0" y="261" width="375" height="8"/>
+                                                    <rect key="frame" x="0.0" y="240.5" width="375" height="8"/>
                                                     <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="8" id="gdh-iN-9eq"/>

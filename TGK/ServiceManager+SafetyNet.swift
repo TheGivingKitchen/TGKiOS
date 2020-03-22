@@ -39,7 +39,38 @@ extension ServiceManager {
                 }
             }
             
-            completion(safetyNetModels, nil)
+            var allDicts = [[String:Any]]()
+            
+            for model in safetyNetModels {
+                var dict = [String:Any]()
+                dict["name"] = model.name
+                dict["address"] = model.address ?? ""
+                dict["website"] = model.websiteUrl?.absoluteString ?? ""
+                dict["phone"] = model.phoneNumber ?? ""
+                dict["contactName"] = model.contactName ?? ""
+                dict["category"] = model.category
+                dict["description"] = model.resourceDescription
+                dict["countiesServed"] = model.counties?.joined(separator: ",")
+                if let lat = model.location?.latitude,
+                    let long = model.location?.longitude {
+                    dict["latitude"] = lat
+                    dict["longitude"] = long
+                }
+                
+                allDicts.append(dict)
+            }
+            
+            do {
+                let jsonData = try JSONSerialization.data(withJSONObject: allDicts, options:.prettyPrinted)
+                let jsonstring = String(data: jsonData, encoding: String.Encoding.utf8) as! NSString ?? ""
+                print(jsonstring as String)
+                
+                completion(safetyNetModels, nil)
+            }
+            catch {
+            
+            }
+            
         }
     }
     
