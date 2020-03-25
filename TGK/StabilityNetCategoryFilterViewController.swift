@@ -10,13 +10,16 @@ import Foundation
 import UIKit
 
 protocol StabilityNetCategoryFilterViewControllerDelegate:class {
-    func stabilityNetCategoryFilterViewControllerDidPressDoneWith(filters:Set<String>)
+    func stabilityNetCategoryFilterViewControllerDidPressDone(viewController:StabilityNetCategoryFilterViewController, filters:Set<String>)
 }
+
 class StabilityNetCategoryFilterViewController:UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var doneButton: UIButton!
     @IBOutlet weak var headerLabel: UILabel!
+    
+    weak var delegate:StabilityNetCategoryFilterViewControllerDelegate?
     
     var selectedCategories:Set<String> = [] {
         didSet {
@@ -47,6 +50,10 @@ class StabilityNetCategoryFilterViewController:UIViewController {
         self.doneButton.backgroundColor = UIColor.tgkOrange
         self.doneButton.titleLabel?.font = UIFont.tgkNavigation
     }
+    
+    @IBAction func donePressed(_ sender: Any) {
+        self.delegate?.stabilityNetCategoryFilterViewControllerDidPressDone(viewController: self, filters: self.selectedCategories)
+    }
 }
 
 extension StabilityNetCategoryFilterViewController:UITableViewDelegate, UITableViewDataSource {
@@ -67,6 +74,7 @@ extension StabilityNetCategoryFilterViewController:UITableViewDelegate, UITableV
         
         let category = SafetyNetResourceModel.allCategories[indexPath.row]
         categoryCell.configureWith(category: category, isOn: self.selectedCategories.contains(category))
+        categoryCell.delegate = self
         
         return categoryCell
     }
@@ -75,10 +83,10 @@ extension StabilityNetCategoryFilterViewController:UITableViewDelegate, UITableV
 extension StabilityNetCategoryFilterViewController:StabilityNetFilterCategoryTypeCellDelegate {
     func stabilityNetFilterCategoryTypeCellDidSetFilter(category: String, isActive: Bool) {
         if isActive {
-            
+            self.selectedCategories.insert(category)
         }
         else {
-            
+            self.selectedCategories.remove(category)
         }
     }
 }

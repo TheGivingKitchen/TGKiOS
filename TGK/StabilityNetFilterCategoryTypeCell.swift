@@ -34,8 +34,10 @@ class StabilityNetFilterCategoryTypeCell:UITableViewCell {
     }
     
     func configureWith(category:String, isOn:Bool) {
+        self.category = category
         self.categoryImage.image = categoryImageFor(stabilityNetCategory: category)
         self.categoryNameLabel.text = category
+        self.isActiveSwitch.isOn = isOn
     }
     
     private func categoryImageFor(stabilityNetCategory:String) -> UIImage? {

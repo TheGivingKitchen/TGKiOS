@@ -220,6 +220,7 @@ extension StabilityNetSearchViewController: UITableViewDelegate, UITableViewData
         switch indexPath.section {
         case SafetyNetTableSection.categoryFilter.rawValue:
             let cell = tableView.dequeueReusableCell(withIdentifier: "StabilityNetSearchMapFilterTableViewCellId") as! StabilityNetSearchMapFilterTableViewCell
+            cell.configureWithFilters(selectedCategories: self.selectedCategories)
             cell.delegate = self
             
             return cell
@@ -249,7 +250,7 @@ extension StabilityNetSearchViewController: UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.section {
         case SafetyNetTableSection.categoryFilter.rawValue:
-            return 100
+            return 60
         default:
             return UITableViewAutomaticDimension
         }
@@ -307,6 +308,7 @@ extension StabilityNetSearchViewController: UISearchBarDelegate {
         
     }
     
+    //MARK: The main search results reload method. getting a little big now
     func filterAndShowContentForSearchText() {
         ///Location based filter first
         var filteredModels = self.safetyNetModels
@@ -553,23 +555,21 @@ extension StabilityNetSearchViewController: UIGestureRecognizerDelegate {
     }
 }
 
-//extension StabilityNetSearchViewController:StabilityNetCategoryFilterTableViewCellDelegate {
-//    func stabilityNetCategoryFilterTableViewCellDidSelect(category: String) {
-//        self.selectedCategories.insert(category)
-//        self.filterAndShowContentForSearchText()
-//    }
-//
-//    func stabilityNetCategoryFilterTableViewCellDidDeselect(category: String) {
-//        self.selectedCategories.remove(category)
-//        self.filterAndShowContentForSearchText()
-//    }
-//}
-
 extension StabilityNetSearchViewController:StabilityNetSearchMapFilterTableViewCellDelegate {
     func stabilityNetSearchMapFilterTableViewCellDidTapFilter() {
         let filterVC = UIStoryboard(name: "SafetyNet", bundle: nil).instantiateViewController(withIdentifier: "StabilityNetCategoryFilterViewControllerId") as! StabilityNetCategoryFilterViewController
         filterVC.selectedCategories = self.selectedCategories
+        filterVC.delegate = self
         self.present(filterVC, animated: true)
+    }
+}
+
+//MARK: Filter view controller
+extension StabilityNetSearchViewController:StabilityNetCategoryFilterViewControllerDelegate {
+    func stabilityNetCategoryFilterViewControllerDidPressDone(viewController: StabilityNetCategoryFilterViewController, filters: Set<String>) {
+        self.selectedCategories = filters
+        self.filterAndShowContentForSearchText()
+        viewController.dismiss(animated: true)
     }
 }
 
