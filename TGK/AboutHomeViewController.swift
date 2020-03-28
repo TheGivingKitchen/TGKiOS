@@ -38,6 +38,7 @@ class AboutHomeViewController: UITableViewController {
     @IBOutlet weak var fbBottomDividerView: UIView!
     
     @IBOutlet weak var storiesLabel: UILabel!
+    @IBOutlet weak var storyOldePinkHouseButton: UIButton!
     @IBOutlet weak var story1Button: UIButton!
     @IBOutlet weak var story2Button: UIButton!
     @IBOutlet weak var story3Button: UIButton!
@@ -45,6 +46,7 @@ class AboutHomeViewController: UITableViewController {
     @IBOutlet weak var storiesDividerView: UIView!
     @IBOutlet weak var story1Divider: UIView!
     @IBOutlet weak var story2Divider: UIView!
+    @IBOutlet weak var story3Divider: UIView!
     
     @IBOutlet weak var feedbackDivider: UIView!
     @IBOutlet weak var feedbackLabel: UILabel!
@@ -161,10 +163,13 @@ class AboutHomeViewController: UITableViewController {
         self.storiesDividerView.backgroundColor = UIColor.tgkBackgroundGray
         self.story1Divider.backgroundColor = UIColor.tgkBackgroundGray
         self.story2Divider.backgroundColor = UIColor.tgkBackgroundGray
+        self.story3Divider.backgroundColor = UIColor.tgkBackgroundGray
 
         self.storiesLabel.font = UIFont.tgkBody
         self.storiesLabel.textColor = UIColor.tgkLightGray
         
+        self.storyOldePinkHouseButton.titleLabel?.font = UIFont.tgkNavigation
+        self.storyOldePinkHouseButton.setTitleColor(UIColor.tgkOrange, for: .normal)
         self.story1Button.titleLabel?.font = UIFont.tgkNavigation
         self.story1Button.setTitleColor(UIColor.tgkOrange, for: .normal)
         self.story2Button.titleLabel?.font = UIFont.tgkNavigation
@@ -270,6 +275,15 @@ class AboutHomeViewController: UITableViewController {
     }
     
     //MARK: Story button actions
+    @IBAction func aboutStoryOldePinkHousePressed(_ sender: Any) {
+        if let url = URL(string: "https://thegivingkitchen.org/olde-pink-house-fire") {
+            let safariVC = TGKSafariViewController(url: url)
+            self.present(safariVC, animated: true)
+        }
+        
+        Analytics.logEvent(customName: .learnMorePressed, parameters: [.learnMoreType:"olde_pink_house_fire"])
+    }
+    
     @IBAction func aboutStory1Pressed(_ sender: Any) {
         if let url = URL(string: "https://thegivingkitchen.org/reggie-ealy") {
             let safariVC = TGKSafariViewController(url: url)
