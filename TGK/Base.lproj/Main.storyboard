@@ -241,7 +241,7 @@ GK can fund the cost of living expenses for food service workers who miss work d
                                             <rect key="frame" x="169" y="40" width="37" height="39"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ZYo-Rq-2Bv">
-                                            <rect key="frame" x="16" y="119" width="343" height="140"/>
+                                            <rect key="frame" x="16" y="119" width="343" height="144"/>
                                             <attributedString key="attributedText">
                                                 <fragment>
                                                     <string key="content">Giving Kitchen's signature and community partner events are rooted in great food, drink, service - and care for those who serve us every day.</string>
@@ -255,7 +255,7 @@ GK can fund the cost of living expenses for food service workers who miss work d
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L9p-Rn-6M2">
-                                            <rect key="frame" x="148.5" y="275" width="78" height="25"/>
+                                            <rect key="frame" x="148.5" y="279" width="78" height="21"/>
                                             <state key="normal" title="Learn more"/>
                                             <connections>
                                                 <action selector="learnMorePressed:" destination="rZT-zD-RsE" eventType="touchUpInside" id="uVx-gp-TUg"/>
@@ -1426,9 +1426,9 @@ GK can fund the cost of living expenses for food service workers who miss work d
                                                         <constraint firstAttribute="width" secondItem="Ile-pZ-cZw" secondAttribute="height" multiplier="16:9" id="zzT-cA-ono"/>
                                                     </constraints>
                                                 </imageView>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lx7-4J-Mqk">
-                                                    <rect key="frame" x="16" y="772" width="144" height="30"/>
-                                                    <state key="normal" title="Why QPR? (Read on)"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Lx7-4J-Mqk">
+                                                    <rect key="frame" x="16" y="772" width="343" height="30"/>
+                                                    <state key="normal" title="Free Online Suicide Prevention Training (Read on)"/>
                                                     <connections>
                                                         <action selector="aboutStory3Pressed:" destination="lpt-Xd-vIc" eventType="touchUpInside" id="6MM-Sj-Lbl"/>
                                                     </connections>
@@ -1456,11 +1456,13 @@ GK can fund the cost of living expenses for food service workers who miss work d
                                                 <constraint firstItem="bSc-Kv-DSd" firstAttribute="leading" secondItem="IqT-pJ-8tW" secondAttribute="leading" constant="16" id="MZK-eD-WL1"/>
                                                 <constraint firstItem="Ile-pZ-cZw" firstAttribute="width" secondItem="Ile-pZ-cZw" secondAttribute="height" multiplier="16:9" id="O1J-vy-Tcj"/>
                                                 <constraint firstItem="Gf0-DJ-eOQ" firstAttribute="top" secondItem="1YH-9b-iUF" secondAttribute="bottom" constant="8" id="Obx-gG-3iP"/>
+                                                <constraint firstAttribute="trailing" secondItem="Lx7-4J-Mqk" secondAttribute="trailing" constant="16" id="Oix-pU-IJc"/>
                                                 <constraint firstItem="Gzh-Gb-gOT" firstAttribute="leading" secondItem="IqT-pJ-8tW" secondAttribute="leading" id="PEA-Ef-vul"/>
                                                 <constraint firstItem="1YH-9b-iUF" firstAttribute="top" secondItem="d69-Jx-uZ7" secondAttribute="bottom" constant="8" id="PEs-48-8Xs"/>
                                                 <constraint firstItem="031-8C-RyA" firstAttribute="top" secondItem="rwG-ik-oPr" secondAttribute="bottom" constant="8" id="Sh5-OH-AXs"/>
                                                 <constraint firstItem="Ile-pZ-cZw" firstAttribute="leading" secondItem="IqT-pJ-8tW" secondAttribute="leading" constant="16" id="SyW-uG-RJX"/>
                                                 <constraint firstItem="Lx7-4J-Mqk" firstAttribute="top" secondItem="Ile-pZ-cZw" secondAttribute="bottom" constant="8" id="T2f-Ri-170"/>
+                                                <constraint firstItem="Lx7-4J-Mqk" firstAttribute="leading" secondItem="IqT-pJ-8tW" secondAttribute="leading" constant="16" id="TMJ-kA-EGb"/>
                                                 <constraint firstAttribute="trailing" secondItem="d69-Jx-uZ7" secondAttribute="trailing" constant="16" id="Tc3-Rs-kJi"/>
                                                 <constraint firstAttribute="trailing" secondItem="jpO-Cl-nyW" secondAttribute="trailing" constant="16" id="TwU-bk-oy6"/>
                                                 <constraint firstItem="rwG-ik-oPr" firstAttribute="leading" secondItem="jpO-Cl-nyW" secondAttribute="leading" id="VWr-JP-eAQ"/>

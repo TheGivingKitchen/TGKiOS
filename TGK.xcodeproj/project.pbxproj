@@ -34,8 +34,6 @@
 		4E75177220C89C0400B2D7E0 /* assistanceInquirySelfTest.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E75177120C89C0400B2D7E0 /* assistanceInquirySelfTest.json */; };
 		4E75177420C89FFC00B2D7E0 /* assistanceInquiryReferralTest.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E75177320C89FFC00B2D7E0 /* assistanceInquiryReferralTest.json */; };
 		4E75177620C8A95700B2D7E0 /* EventsHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E75177520C8A95700B2D7E0 /* EventsHomeViewController.swift */; };
-		4E762DFD237724D200A323FC /* AboutQPRView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E762DFC237724D200A323FC /* AboutQPRView.xib */; };
-		4E762DFF2377257100A323FC /* AboutQPRView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E762DFE2377257100A323FC /* AboutQPRView.swift */; };
 		4E762E032377313100A323FC /* qprSignupForm.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E762E022377313100A323FC /* qprSignupForm.json */; };
 		4E7C2E1720B1D89F00A20303 /* Becker-Egyptian.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4E7C2E1620B1D89F00A20303 /* Becker-Egyptian.otf */; };
 		4E7C2E1A20B1D8A600A20303 /* Kulturista-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4E7C2E1820B1D8A600A20303 /* Kulturista-Medium.otf */; };
@@ -362,6 +360,8 @@
 		4E75176020B615DA00B2D7E0 /* PartsBinNoTarget */ = {
 			isa = PBXGroup;
 			children = (
+				4E762DFC237724D200A323FC /* AboutQPRView.xib */,
+				4E762DFE2377257100A323FC /* AboutQPRView.swift */,
 				C0B9C4982135D79F009BEE60 /* SafetyNetHomeViewController.swift */,
 				4EF43481213C2381009C2679 /* FacebookGroupAccessTableViewCell.xib */,
 				4EF43483213C239A009C2679 /* FacebookGroupAccessTableViewCell.swift */,
@@ -411,8 +411,6 @@
 		4E762DF72377234200A323FC /* About */ = {
 			isa = PBXGroup;
 			children = (
-				4E762DFC237724D200A323FC /* AboutQPRView.xib */,
-				4E762DFE2377257100A323FC /* AboutQPRView.swift */,
 			);
 			name = About;
 			sourceTree = "<group>";
@@ -852,7 +850,6 @@
 				4EF1617722B1CBB3005821F5 /* GoogleService-Info.plist in Resources */,
 				4E1EED4E210A57B40084CFF3 /* Forms.storyboard in Resources */,
 				4E7C2E2920B1D8AF00A20303 /* RobotoMono-Light.ttf in Resources */,
-				4E762DFD237724D200A323FC /* AboutQPRView.xib in Resources */,
 				4E7C2E2A20B1D8AF00A20303 /* RobotoMono-LightItalic.ttf in Resources */,
 				C0B9C49E21371E45009BEE60 /* SafetyNetInfoTableViewCell.xib in Resources */,
 				4ECF47FF211921FA00B273E4 /* Assistance.storyboard in Resources */,
@@ -979,7 +976,6 @@
 				4E75176320B6291C00B2D7E0 /* SegmentedFormInfoViewController.swift in Sources */,
 				4EF43480213AD008009C2679 /* UIButton+TGK.swift in Sources */,
 				4ED38848209D030600A8BEE2 /* FormListSelectTableViewCell.swift in Sources */,
-				4E762DFF2377257100A323FC /* AboutQPRView.swift in Sources */,
 				4E0E0C852161705C0082240E /* OnboardingViewController.swift in Sources */,
 				4E97DF9D22F73B0B003B0E13 /* ScrollableBottomSheetViewController.swift in Sources */,
 				4ED38852209D04AE00A8BEE2 /* String+TGK.swift in Sources */,

@@ -49,3 +49,28 @@ class AboutQPRView: BaseNibLoadedView {
         self.delegate?.AboutQPRViewDelegateClosePressed()
     }
 }
+
+//
+//func setupQPRButton() {
+//    if AppDataStore.hasClosedQPRTrainingButton == true {
+//        return
+//    }
+//    if self.qprTrainingView != nil {
+//        return
+//    }
+//    
+//    self.qprTrainingView = AboutQPRView(frame: CGRect(x: 0, y: self.view.frame.maxY, width: 0, height: 0))
+//    self.qprTrainingView.delegate = self
+//    self.tableView.addSubview(self.qprTrainingView)
+//    
+//    self.qprTrainingView.trailingAnchor.constraint(equalTo: self.tableView.safeAreaLayoutGuide.trailingAnchor, constant: -16.0).isActive = true
+//    self.qprViewBottomAnchor = self.qprTrainingView.bottomAnchor.constraint(equalTo: self.tableView.safeAreaLayoutGuide.bottomAnchor, constant: 200)
+//    self.qprViewBottomAnchor.isActive = true
+//    
+//    self.view.layoutIfNeeded()
+//    UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseInOut, animations: {
+//        self.qprViewBottomAnchor.constant = -16.0
+//        self.view.layoutIfNeeded()
+//    }) { (finished) in
+//    }
+//}

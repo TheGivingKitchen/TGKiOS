@@ -42,13 +42,4 @@ class AppDataStore {
             UserDefaults.standard.set(newValue, forKey: AppDataStoreKey.hasClosedEventHomeVolunteerButton.rawValue)
         }
     }
-    
-    static var hasClosedQPRTrainingButton:Bool {
-        get {
-            return UserDefaults.standard.bool(forKey: AppDataStoreKey.hasClosedQPRTrainingButton.rawValue)
-        }
-        set {
-            UserDefaults.standard.set(newValue, forKey: AppDataStoreKey.hasClosedQPRTrainingButton.rawValue)
-        }
-    }
 }

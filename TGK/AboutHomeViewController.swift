@@ -55,7 +55,6 @@ class AboutHomeViewController: UITableViewController {
     @IBOutlet weak var feedbackDivider1: UIView!
     @IBOutlet weak var feedbackDivider2: UIView!
     
-    private var qprTrainingView:AboutQPRView!
     private var qprTrainingFormModel:SegmentedFormModel?
     private var qprViewBottomAnchor:NSLayoutConstraint!
     
@@ -88,29 +87,6 @@ class AboutHomeViewController: UITableViewController {
         self.fetchFormsIfNeeded()
     }
     
-    func setupQPRButton() {
-        if AppDataStore.hasClosedQPRTrainingButton == true {
-            return
-        }
-        if self.qprTrainingView != nil {
-            return
-        }
-        
-        self.qprTrainingView = AboutQPRView(frame: CGRect(x: 0, y: self.view.frame.maxY, width: 0, height: 0))
-        self.qprTrainingView.delegate = self
-        self.tableView.addSubview(self.qprTrainingView)
-        
-        self.qprTrainingView.trailingAnchor.constraint(equalTo: self.tableView.safeAreaLayoutGuide.trailingAnchor, constant: -16.0).isActive = true
-        self.qprViewBottomAnchor = self.qprTrainingView.bottomAnchor.constraint(equalTo: self.tableView.safeAreaLayoutGuide.bottomAnchor, constant: 200)
-        self.qprViewBottomAnchor.isActive = true
-        
-        self.view.layoutIfNeeded()
-        UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseInOut, animations: {
-            self.qprViewBottomAnchor.constant = -16.0
-            self.view.layoutIfNeeded()
-        }) { (finished) in
-        }
-    }
     
     func fetchFormsIfNeeded() {
         if self.qprTrainingFormModel != nil {
@@ -120,7 +96,6 @@ class AboutHomeViewController: UITableViewController {
         ServiceManager.sharedInstace.getFirebaseForm(id: "qprSignupForm") { (formModel, error) in
             if let formModel = formModel {
                 self.qprTrainingFormModel = formModel
-                self.setupQPRButton()
             }
         }
     }
@@ -314,12 +289,16 @@ class AboutHomeViewController: UITableViewController {
     }
     
     @IBAction func aboutStory3Pressed(_ sender: Any) {
-        if let url = URL(string: "https://thegivingkitchen.org/why-qpr") {
-            let safariVC = TGKSafariViewController(url: url)
-            self.present(safariVC, animated: true)
-            
-            Analytics.logEvent(customName: .learnMorePressed, parameters: [.learnMoreType:"why_qpr"])
+        guard let trainingForm = self.qprTrainingFormModel else {
+            return
         }
+        
+        let segmentedNav = UIStoryboard(name: "Forms", bundle: nil).instantiateViewController(withIdentifier: "SegmentedFormNavigationControllerId") as! SegmentedFormNavigationController
+        segmentedNav.segmentedFormModel = trainingForm
+        segmentedNav.formDelegate = self
+        self.present(segmentedNav, animated: true)
+        
+        Analytics.logEvent(customName: .learnMorePressed, parameters: [.learnMoreType:"why_qpr"])
     }
     
     @IBAction func feedbackPositivePressed(_ sender: Any) {
@@ -382,39 +361,10 @@ extension AboutHomeViewController:StoreReviewWarmerViewControllerDelegate {
     }
 }
 
-extension AboutHomeViewController:AboutQPRViewDelegate {
-    func AboutQPRViewDelegateClosePressed() {
-        self.dismissQPRView()
-    }
-    
-    func AboutQPRViewDelegateTapped() {
-        guard let trainingForm = self.qprTrainingFormModel else {
-            return
-        }
-        
-        let segmentedNav = UIStoryboard(name: "Forms", bundle: nil).instantiateViewController(withIdentifier: "SegmentedFormNavigationControllerId") as! SegmentedFormNavigationController
-        segmentedNav.segmentedFormModel = trainingForm
-        segmentedNav.formDelegate = self
-        self.present(segmentedNav, animated: true)
-    }
-    
-    func dismissQPRView() {
-        AppDataStore.hasClosedQPRTrainingButton = true
-        
-        UIView.animate(withDuration: 0.3, delay: 0.0, options: .curveEaseOut, animations: {
-            self.qprViewBottomAnchor.constant = self.view.frame.height
-            self.view.layoutIfNeeded()
-        }) { (finished) in
-            self.qprTrainingView.isHidden = true
-        }
-    }
-}
-
 //MARK: Segmented Form Delegate
 extension AboutHomeViewController:SegmentedFormNavigationControllerDelegate {
     //the only form we're tracking here is QPR training signup
     func segmentedFormNavigationControllerDidFinish(viewController: SegmentedFormNavigationController) {
-        self.dismissQPRView()
         
         viewController.dismiss(animated: true) {
             let successVC = AssistanceSuccessViewController.assistanceSuccessViewController(withDelegate: self)
