@@ -162,13 +162,13 @@ GK can fund the cost of living expenses for food service workers who miss work d
                             <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" image="assistanceHomeTopIcon" translatesAutoresizingMaskIntoConstraints="NO" id="tVF-Ik-691">
                                 <rect key="frame" x="169" y="40" width="37" height="47"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ipr-hK-3V8">
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="ipr-hK-3V8">
                                 <rect key="frame" x="20" y="536" width="335" height="50"/>
                                 <color key="backgroundColor" red="0.51764705879999995" green="0.87058823529999996" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="jRt-RX-bPG"/>
                                 </constraints>
-                                <state key="normal" title="For Someone Else">
+                                <state key="normal" title="Refer someone for help">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
