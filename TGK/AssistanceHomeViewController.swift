@@ -11,6 +11,7 @@ import Firebase
 
 class AssistanceHomeViewController: UIViewController {
     
+    @IBOutlet weak var programHeaderLabel: UILabel!
     @IBOutlet weak var programDescriptionLabel: UILabel!
     @IBOutlet weak var requestAssistanceLabel: UILabel!
     
@@ -37,7 +38,10 @@ class AssistanceHomeViewController: UIViewController {
     }
     
     private func styleView() {
-        self.programDescriptionLabel.text = "Financial Assistance\nGK can fund the cost of living expenses for food service workers who miss work due to an illness, injury, housing disaster, or death of an immediate family member."
+        self.programHeaderLabel.font = UIFont.tgkContentSmallTitle
+        self.programHeaderLabel.textColor = UIColor.tgkOrange
+        
+        self.programDescriptionLabel.text = "GK can fund the cost of living expenses for food service workers who miss work due to an illness, injury, housing disaster, or death of an immediate family member."
         self.programDescriptionLabel.font = UIFont.tgkSubtitle
         self.programDescriptionLabel.textColor = UIColor.tgkBlue
         

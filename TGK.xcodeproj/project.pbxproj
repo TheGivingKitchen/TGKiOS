@@ -27,6 +27,8 @@
 		4E4D229E20B1B1F400BA7577 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4D229D20B1B1F400BA7577 /* MainTabBarController.swift */; };
 		4E4D22A120B1B2A700BA7577 /* FormsHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4D22A020B1B2A700BA7577 /* FormsHomeViewController.swift */; };
 		4E71AFCE215C3EEF0033494D /* FeedbackHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E71AFCD215C3EEF0033494D /* FeedbackHomeViewController.swift */; };
+		4E73C8C42431330400B0E1B1 /* StabilityNetOnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E73C8C32431330400B0E1B1 /* StabilityNetOnboardingViewController.swift */; };
+		4E73C8C62433C40C00B0E1B1 /* communityPartner.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E73C8C52433C40C00B0E1B1 /* communityPartner.json */; };
 		4E75176320B6291C00B2D7E0 /* SegmentedFormInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E75176220B6291C00B2D7E0 /* SegmentedFormInfoViewController.swift */; };
 		4E75176A20BC87B000B2D7E0 /* ExternalShareManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E75176920BC87B000B2D7E0 /* ExternalShareManager.swift */; };
 		4E75176E20C8953B00B2D7E0 /* DonateHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E75176D20C8953B00B2D7E0 /* DonateHomeViewController.swift */; };
@@ -153,6 +155,8 @@
 		4E4D229D20B1B1F400BA7577 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		4E4D22A020B1B2A700BA7577 /* FormsHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormsHomeViewController.swift; sourceTree = "<group>"; };
 		4E71AFCD215C3EEF0033494D /* FeedbackHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackHomeViewController.swift; sourceTree = "<group>"; };
+		4E73C8C32431330400B0E1B1 /* StabilityNetOnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StabilityNetOnboardingViewController.swift; sourceTree = "<group>"; };
+		4E73C8C52433C40C00B0E1B1 /* communityPartner.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = communityPartner.json; sourceTree = "<group>"; };
 		4E75176220B6291C00B2D7E0 /* SegmentedFormInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedFormInfoViewController.swift; sourceTree = "<group>"; };
 		4E75176920BC87B000B2D7E0 /* ExternalShareManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalShareManager.swift; sourceTree = "<group>"; };
 		4E75176D20C8953B00B2D7E0 /* DonateHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonateHomeViewController.swift; sourceTree = "<group>"; };
@@ -298,6 +302,7 @@
 		4E0D100621F384F6003EE14C /* FormJson */ = {
 			isa = PBXGroup;
 			children = (
+				4E73C8C52433C40C00B0E1B1 /* communityPartner.json */,
 				4E762E022377313100A323FC /* qprSignupForm.json */,
 				4E0D101721F4F864003EE14C /* stabilitynetworkpartner.json */,
 				4E0D101021F3A71F003EE14C /* assistanceInquiryReferral.json */,
@@ -656,6 +661,7 @@
 				4E1DA38022C0300F0032740A /* StabilityNetMapViewController.swift */,
 				4E97DF9E22F73B92003B0E13 /* StabilityNetSearchViewController.swift */,
 				4E8B7DC123943ADE00E6164F /* StabilityNetClusterAnnotationView.swift */,
+				4E73C8C32431330400B0E1B1 /* StabilityNetOnboardingViewController.swift */,
 			);
 			name = SafetyNet;
 			sourceTree = "<group>";
@@ -843,6 +849,7 @@
 				4E75177420C89FFC00B2D7E0 /* assistanceInquiryReferralTest.json in Resources */,
 				4ED3884C209D030600A8BEE2 /* FormListSelectTableViewCell.xib in Resources */,
 				4ECA9C1120A8A26E0084A317 /* FormDateTableViewCell.xib in Resources */,
+				4E73C8C62433C40C00B0E1B1 /* communityPartner.json in Resources */,
 				4E221AFE235946050010F56D /* stabilityNet.json in Resources */,
 				4E0D101421F3A71F003EE14C /* assistanceInquiryReferral.json in Resources */,
 				4E7C2E1720B1D89F00A20303 /* Becker-Egyptian.otf in Resources */,
@@ -918,6 +925,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4ECF4801211922F600B273E4 /* AssistanceSuccessViewController.swift in Sources */,
+				4E73C8C42431330400B0E1B1 /* StabilityNetOnboardingViewController.swift in Sources */,
 				4ED3881A209D01EF00A8BEE2 /* AppDelegate.swift in Sources */,
 				4E8897AE209E134700A361D8 /* ServiceManager+Forms.swift in Sources */,
 				4ED3884B209D030600A8BEE2 /* FormItemView.swift in Sources */,
@@ -1133,6 +1141,7 @@
 				CODE_SIGN_ENTITLEMENTS = TGK/TGK.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 72XCFBRL5H;
 				INFOPLIST_FILE = TGK/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -1140,6 +1149,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = org.thegivingkitchen.gkios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -1161,6 +1171,7 @@
 				CODE_SIGN_ENTITLEMENTS = TGK/TGK.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 72XCFBRL5H;
 				INFOPLIST_FILE = TGK/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -1168,6 +1179,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = org.thegivingkitchen.gkios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

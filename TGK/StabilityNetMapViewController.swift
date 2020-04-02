@@ -57,6 +57,16 @@ class StabilityNetMapViewController: UIViewController {
         self.navigationController?.isNavigationBarHidden = true
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if AppDataStore.hasClosedStabilityNetOnboarding == false &&
+            self.tabBarController?.presentedViewController == nil {
+            let onboardingVC = UIStoryboard(name: "SafetyNet", bundle: nil).instantiateViewController(withIdentifier: "StabilityNetOnboardingViewControllerId") as! StabilityNetOnboardingViewController
+            self.tabBarController?.present(onboardingVC, animated:true)
+        }
+    }
+    
     func addUserLocationButton() {
         self.userLocationButton = UIButton(frame: CGRect(x: 0, y: 0, width: 60.0, height: 60.0))
         self.userLocationButton.setImage(UIImage(named: "iconUserLocationPointer"), for: .normal)

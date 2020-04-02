@@ -20,7 +20,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j2H-F4-XZh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1487" y="196"/>
+            <point key="canvasLocation" x="-2746" y="220"/>
         </scene>
         <!--Onboarding View Controller-->
         <scene sceneID="pr6-D2-E6Y">
@@ -109,7 +109,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rdl-4P-mCq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-690.39999999999998" y="195.6521739130435"/>
+            <point key="canvasLocation" x="-1950" y="220"/>
         </scene>
         <!--Assistance Home View Controller-->
         <scene sceneID="z5k-eB-2g1">
@@ -138,12 +138,11 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="250" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Hlc-ft-XxK">
-                                <rect key="frame" x="20" y="127" width="335" height="180.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="246" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Hlc-ft-XxK">
+                                <rect key="frame" x="20" y="164" width="335" height="158"/>
                                 <attributedString key="attributedText">
                                     <fragment>
-                                        <string key="content">Financial Assistance
-GK can fund the cost of living expenses for food service workers who miss work due to an illness, injury, house fire or flood, or death of an immediate family member.</string>
+                                        <string key="content">GK can fund the cost of living expenses for food service workers who miss work due to an illness, injury, house fire or flood, or death of an immediate family member.</string>
                                         <attributes>
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                             <font key="NSFont" size="24" name="Kulturista"/>
@@ -176,27 +175,35 @@ GK can fund the cost of living expenses for food service workers who miss work d
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="200" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z1b-Yc-9Dd">
-                                <rect key="frame" x="148.5" y="327.5" width="78" height="30"/>
+                                <rect key="frame" x="148.5" y="342" width="78" height="30"/>
                                 <state key="normal" title="Learn more"/>
                                 <connections>
                                     <action selector="learnMorePressed:" destination="a7e-3s-qQ7" eventType="touchUpInside" id="ifG-es-ebi"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Financial Assistance" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="vmm-zv-bMn">
+                                <rect key="frame" x="20" y="127" width="335" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Hlc-ft-XxK" firstAttribute="top" secondItem="tVF-Ik-691" secondAttribute="bottom" constant="40" id="2EM-Sr-z4J"/>
+                            <constraint firstItem="Hlc-ft-XxK" firstAttribute="top" secondItem="vmm-zv-bMn" secondAttribute="bottom" constant="16" id="1OX-s9-RON"/>
                             <constraint firstItem="cop-Q0-oCn" firstAttribute="bottom" secondItem="AUo-kV-WcL" secondAttribute="bottom" constant="20" id="4Jb-4S-6Nj"/>
                             <constraint firstItem="wBB-eB-bcJ" firstAttribute="top" secondItem="iqU-2Y-j7z" secondAttribute="bottom" constant="16" id="5K4-fR-E4T"/>
                             <constraint firstItem="iqU-2Y-j7z" firstAttribute="centerX" secondItem="cop-Q0-oCn" secondAttribute="centerX" id="5lB-En-8W9"/>
                             <constraint firstItem="wBB-eB-bcJ" firstAttribute="leading" secondItem="cop-Q0-oCn" secondAttribute="leading" constant="20" id="CaZ-Ca-jfe"/>
                             <constraint firstItem="Z1b-Yc-9Dd" firstAttribute="centerX" secondItem="cop-Q0-oCn" secondAttribute="centerX" id="EyS-Jk-pX3"/>
                             <constraint firstItem="Hlc-ft-XxK" firstAttribute="leading" secondItem="cop-Q0-oCn" secondAttribute="leading" constant="20" id="FjK-CY-kPC"/>
+                            <constraint firstItem="vmm-zv-bMn" firstAttribute="leading" secondItem="cop-Q0-oCn" secondAttribute="leading" constant="20" id="GV9-yX-Pwx"/>
                             <constraint firstItem="cop-Q0-oCn" firstAttribute="trailing" secondItem="iqU-2Y-j7z" secondAttribute="trailing" constant="8" id="My3-eE-eOX"/>
                             <constraint firstItem="AUo-kV-WcL" firstAttribute="trailing" secondItem="ipr-hK-3V8" secondAttribute="trailing" id="O2r-el-xh9"/>
                             <constraint firstItem="cop-Q0-oCn" firstAttribute="trailing" secondItem="Hlc-ft-XxK" secondAttribute="trailing" constant="20" id="PRj-6t-PZe"/>
                             <constraint firstItem="cop-Q0-oCn" firstAttribute="trailing" secondItem="wBB-eB-bcJ" secondAttribute="trailing" constant="20" id="QPr-ne-0NB"/>
                             <constraint firstItem="ipr-hK-3V8" firstAttribute="top" secondItem="wBB-eB-bcJ" secondAttribute="bottom" constant="8" id="WGy-kT-moB"/>
+                            <constraint firstItem="vmm-zv-bMn" firstAttribute="top" secondItem="tVF-Ik-691" secondAttribute="bottom" constant="40" id="WTW-nO-3wv"/>
                             <constraint firstItem="wBB-eB-bcJ" firstAttribute="trailing" secondItem="ipr-hK-3V8" secondAttribute="trailing" id="aUZ-cZ-fJs"/>
                             <constraint firstItem="iqU-2Y-j7z" firstAttribute="leading" secondItem="cop-Q0-oCn" secondAttribute="leading" constant="8" id="cfS-3j-qrv"/>
                             <constraint firstItem="tVF-Ik-691" firstAttribute="top" secondItem="cop-Q0-oCn" secondAttribute="top" constant="40" id="dRl-Nv-CDq"/>
@@ -205,6 +212,7 @@ GK can fund the cost of living expenses for food service workers who miss work d
                             <constraint firstItem="AUo-kV-WcL" firstAttribute="leading" secondItem="ipr-hK-3V8" secondAttribute="leading" id="gZL-2o-uYs"/>
                             <constraint firstItem="iqU-2Y-j7z" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Z1b-Yc-9Dd" secondAttribute="bottom" constant="20" id="h6e-Ig-Qko"/>
                             <constraint firstItem="wBB-eB-bcJ" firstAttribute="leading" secondItem="ipr-hK-3V8" secondAttribute="leading" id="kMg-dP-cZI"/>
+                            <constraint firstItem="cop-Q0-oCn" firstAttribute="trailing" secondItem="vmm-zv-bMn" secondAttribute="trailing" constant="20" id="mvR-nR-XZl"/>
                             <constraint firstItem="AUo-kV-WcL" firstAttribute="top" secondItem="ipr-hK-3V8" secondAttribute="bottom" constant="20" id="pW2-0L-7ns"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cop-Q0-oCn"/>
@@ -212,6 +220,7 @@ GK can fund the cost of living expenses for food service workers who miss work d
                     <connections>
                         <outlet property="learnMoreButton" destination="Z1b-Yc-9Dd" id="k2e-mk-fWk"/>
                         <outlet property="programDescriptionLabel" destination="Hlc-ft-XxK" id="0Hj-kP-WdN"/>
+                        <outlet property="programHeaderLabel" destination="vmm-zv-bMn" id="MIt-0W-2u9"/>
                         <outlet property="requestAssistanceLabel" destination="iqU-2Y-j7z" id="hMs-Cl-fYH"/>
                         <outlet property="startFormInfoLabel" destination="AUo-kV-WcL" id="OlX-pb-YLw"/>
                         <outlet property="startReferralInquiryButton" destination="ipr-hK-3V8" id="11C-gx-xCk"/>
@@ -241,7 +250,7 @@ GK can fund the cost of living expenses for food service workers who miss work d
                                             <rect key="frame" x="169" y="40" width="37" height="39"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ZYo-Rq-2Bv">
-                                            <rect key="frame" x="16" y="119" width="343" height="144"/>
+                                            <rect key="frame" x="16" y="119" width="343" height="140"/>
                                             <attributedString key="attributedText">
                                                 <fragment>
                                                     <string key="content">Giving Kitchen's signature and community partner events are rooted in great food, drink, service - and care for those who serve us every day.</string>
@@ -255,7 +264,7 @@ GK can fund the cost of living expenses for food service workers who miss work d
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L9p-Rn-6M2">
-                                            <rect key="frame" x="148.5" y="279" width="78" height="21"/>
+                                            <rect key="frame" x="148.5" y="275" width="78" height="25"/>
                                             <state key="normal" title="Learn more"/>
                                             <connections>
                                                 <action selector="learnMorePressed:" destination="rZT-zD-RsE" eventType="touchUpInside" id="uVx-gp-TUg"/>
@@ -802,7 +811,7 @@ GK can fund the cost of living expenses for food service workers who miss work d
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PoA-WF-L99" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1477.5999999999999" y="1521.1394302848578"/>
+            <point key="canvasLocation" x="-690" y="1521"/>
         </scene>
         <!--Safety Net Home View Controller-->
         <scene sceneID="zlU-ob-gPy">
@@ -877,7 +886,7 @@ GK can fund the cost of living expenses for food service workers who miss work d
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="foT-PX-2D4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-690" y="922"/>
+            <point key="canvasLocation" x="-1418" y="922"/>
         </scene>
         <!--Location Warming View Controller-->
         <scene sceneID="lZZ-QK-Vaz">
@@ -963,7 +972,7 @@ GK can fund the cost of living expenses for food service workers who miss work d
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sZw-lX-iZh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-690" y="1663"/>
+            <point key="canvasLocation" x="-1418" y="1664"/>
         </scene>
         <!--About Home View Controller-->
         <scene sceneID="t3o-jl-u3f">
@@ -1120,7 +1129,7 @@ GK can fund the cost of living expenses for food service workers who miss work d
                                                         <constraint firstAttribute="height" constant="8" id="a24-YM-Wxb"/>
                                                     </constraints>
                                                 </view>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Join the GK Food Service Workers group on Facebook for support and potential employment opportunities near you" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="swB-g7-Tk0">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Join the GK Food Service Workers group on Facebook for support and potential employment opportunities near you:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="swB-g7-Tk0">
                                                     <rect key="frame" x="16" y="16" width="343" height="56"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -1381,13 +1390,13 @@ GK can fund the cost of living expenses for food service workers who miss work d
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1YH-9b-iUF">
-                                                    <rect key="frame" x="16" y="509.5" width="171" height="30"/>
-                                                    <state key="normal" title="The Performer (Read on)"/>
+                                                    <rect key="frame" x="16" y="509.5" width="214" height="30"/>
+                                                    <state key="normal" title="Olde Pink House Fire (Read on)"/>
                                                     <connections>
-                                                        <action selector="aboutStory1Pressed:" destination="lpt-Xd-vIc" eventType="touchUpInside" id="0c2-xl-axR"/>
+                                                        <action selector="aboutStoryOldePinkHousePressed:" destination="lpt-Xd-vIc" eventType="touchUpInside" id="eS3-AQ-oks"/>
                                                     </connections>
                                                 </button>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="aboutStoryPerformer" translatesAutoresizingMaskIntoConstraints="NO" id="d69-Jx-uZ7">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="aboutStoryOldePink" translatesAutoresizingMaskIntoConstraints="NO" id="d69-Jx-uZ7">
                                                     <rect key="frame" x="16" y="308.5" width="343" height="193"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="d69-Jx-uZ7" secondAttribute="height" multiplier="16:9" id="OgP-5a-akD"/>
@@ -1410,7 +1419,7 @@ GK can fund the cost of living expenses for food service workers who miss work d
                                                     <rect key="frame" x="16" y="765.5" width="193" height="30"/>
                                                     <state key="normal" title="Let's Talk About It (Read on)"/>
                                                     <connections>
-                                                        <action selector="aboutStory2Pressed:" destination="lpt-Xd-vIc" eventType="touchUpInside" id="jIx-sp-IZ0"/>
+                                                        <action selector="aboutStoryLetsTalkPressed:" destination="lpt-Xd-vIc" eventType="touchUpInside" id="tLW-sD-eXK"/>
                                                     </connections>
                                                 </button>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="031-8C-RyA">
@@ -1420,7 +1429,7 @@ GK can fund the cost of living expenses for food service workers who miss work d
                                                         <constraint firstAttribute="height" constant="1" id="DL6-f9-MHb"/>
                                                     </constraints>
                                                 </view>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="aboutStoryQpr" translatesAutoresizingMaskIntoConstraints="NO" id="Ile-pZ-cZw">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="aboutStoryPerformer" translatesAutoresizingMaskIntoConstraints="NO" id="Ile-pZ-cZw">
                                                     <rect key="frame" x="16" y="820.5" width="343" height="192.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="Ile-pZ-cZw" secondAttribute="height" multiplier="16:9" id="zzT-cA-ono"/>
@@ -1428,9 +1437,9 @@ GK can fund the cost of living expenses for food service workers who miss work d
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Lx7-4J-Mqk">
                                                     <rect key="frame" x="16" y="1021.5" width="343" height="30"/>
-                                                    <state key="normal" title="Free Online Suicide Prevention Training (Read on)"/>
+                                                    <state key="normal" title="The Performer (Read on)"/>
                                                     <connections>
-                                                        <action selector="aboutStory3Pressed:" destination="lpt-Xd-vIc" eventType="touchUpInside" id="6MM-Sj-Lbl"/>
+                                                        <action selector="aboutStoryThePerformerPressed:" destination="lpt-Xd-vIc" eventType="touchUpInside" id="xTU-Lt-qCT"/>
                                                     </connections>
                                                 </button>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gzh-Gb-gOT">
@@ -1440,17 +1449,17 @@ GK can fund the cost of living expenses for food service workers who miss work d
                                                         <constraint firstAttribute="height" constant="8" id="Jsd-Ck-E2D"/>
                                                     </constraints>
                                                 </view>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="aboutStoryOldePink" translatesAutoresizingMaskIntoConstraints="NO" id="WGO-Nd-IaY">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="aboutStoryQpr" translatesAutoresizingMaskIntoConstraints="NO" id="WGO-Nd-IaY">
                                                     <rect key="frame" x="16" y="52.5" width="343" height="193"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="WGO-Nd-IaY" secondAttribute="height" multiplier="16:9" id="N6A-q6-HCT"/>
                                                     </constraints>
                                                 </imageView>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2hL-no-TTE">
-                                                    <rect key="frame" x="16" y="253.5" width="214" height="30"/>
-                                                    <state key="normal" title="Olde Pink House Fire (Read on)"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="2hL-no-TTE">
+                                                    <rect key="frame" x="16" y="253.5" width="343" height="30"/>
+                                                    <state key="normal" title="Free Online Suicide Prevention Training (Read on)"/>
                                                     <connections>
-                                                        <action selector="aboutStoryOldePinkHousePressed:" destination="lpt-Xd-vIc" eventType="touchUpInside" id="4tb-Zg-WBF"/>
+                                                        <action selector="aboutStoryQprTrainingPressed:" destination="lpt-Xd-vIc" eventType="touchUpInside" id="8XK-9t-GYw"/>
                                                     </connections>
                                                 </button>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gg2-D4-tWU">
@@ -1495,6 +1504,7 @@ GK can fund the cost of living expenses for food service workers who miss work d
                                                 <constraint firstItem="d69-Jx-uZ7" firstAttribute="top" secondItem="Gg2-D4-tWU" secondAttribute="bottom" constant="16" id="acZ-wp-W5X"/>
                                                 <constraint firstAttribute="trailing" secondItem="Gzh-Gb-gOT" secondAttribute="trailing" id="dDe-X2-bxa"/>
                                                 <constraint firstItem="2hL-no-TTE" firstAttribute="top" secondItem="WGO-Nd-IaY" secondAttribute="bottom" constant="8" id="eLa-ph-QZS"/>
+                                                <constraint firstAttribute="trailing" secondItem="2hL-no-TTE" secondAttribute="trailing" constant="16" id="egD-qD-kM4"/>
                                                 <constraint firstItem="031-8C-RyA" firstAttribute="leading" secondItem="rwG-ik-oPr" secondAttribute="leading" id="fKR-0s-9FP"/>
                                                 <constraint firstItem="1YH-9b-iUF" firstAttribute="leading" secondItem="IqT-pJ-8tW" secondAttribute="leading" constant="16" id="irg-gb-naY"/>
                                                 <constraint firstItem="Lx7-4J-Mqk" firstAttribute="leading" secondItem="Ile-pZ-cZw" secondAttribute="leading" id="pjh-Ju-dml"/>
@@ -1519,7 +1529,7 @@ GK can fund the cost of living expenses for food service workers who miss work d
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How do you like using Giving Kitchen app?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ned-aj-fzF">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How do you like using Giving Kitchen's app?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ned-aj-fzF">
                                                     <rect key="frame" x="16" y="52.5" width="343" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -1644,20 +1654,20 @@ GK can fund the cost of living expenses for food service workers who miss work d
                         <outlet property="newsletterSignupDivider" destination="Fd8-Dp-kqx" id="6R3-Dd-BQG"/>
                         <outlet property="storiesDividerView" destination="Gzh-Gb-gOT" id="32h-4x-oRA"/>
                         <outlet property="storiesLabel" destination="bSc-Kv-DSd" id="Mia-F9-ISu"/>
-                        <outlet property="story1Button" destination="1YH-9b-iUF" id="1Dv-HD-VoE"/>
                         <outlet property="story1Divider" destination="Gg2-D4-tWU" id="JmA-hs-SAu"/>
-                        <outlet property="story2Button" destination="rwG-ik-oPr" id="Oec-5o-XF5"/>
                         <outlet property="story2Divider" destination="Gf0-DJ-eOQ" id="g4Z-Q8-XUh"/>
-                        <outlet property="story3Button" destination="Lx7-4J-Mqk" id="kMi-v7-haS"/>
                         <outlet property="story3Divider" destination="031-8C-RyA" id="kYa-N7-9ba"/>
-                        <outlet property="storyOldePinkHouseButton" destination="2hL-no-TTE" id="WXY-fs-Hf4"/>
+                        <outlet property="storyLetsTalkButton" destination="rwG-ik-oPr" id="Kyd-Ng-6jY"/>
+                        <outlet property="storyOldePinkHouseButton" destination="1YH-9b-iUF" id="78d-yG-50v"/>
+                        <outlet property="storyQPRTraining" destination="2hL-no-TTE" id="dTf-ey-Mw6"/>
+                        <outlet property="storyThePerformer" destination="Lx7-4J-Mqk" id="mKb-Dn-PIn"/>
                         <outlet property="topTitleLabel" destination="o3t-sx-RFh" id="2Yr-hY-dIe"/>
                         <outlet property="topTitleLabelDivider" destination="ajt-Xb-NF2" id="Civ-QI-kr6"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vjo-hv-8Wu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="24.800000000000001" y="1609.2953523238382"/>
+            <point key="canvasLocation" x="-3682" y="1881"/>
         </scene>
         <!--Test Home View Controller-->
         <scene sceneID="Bo2-0V-Hhr">
@@ -1726,7 +1736,7 @@ GK can fund the cost of living expenses for food service workers who miss work d
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pv4-A4-DEc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1647" y="922"/>
+            <point key="canvasLocation" x="990" y="922"/>
         </scene>
     </scenes>
     <resources>

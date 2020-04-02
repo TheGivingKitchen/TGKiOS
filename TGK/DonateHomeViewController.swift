@@ -148,7 +148,7 @@ class DonateHomeViewController: UITableViewController {
             }
         }
         
-        ServiceManager.sharedInstace.getFirebaseForm(id: "joinourforces") { (eventPartnerFormModel, error) in
+        ServiceManager.sharedInstace.getFirebaseForm(id: "communityPartner") { (eventPartnerFormModel, error) in
             if let unwrappedModel = eventPartnerFormModel {
                 self.eventPartnerFormModel = unwrappedModel
                 self.eventPartnerButton.isEnabled = true
@@ -316,7 +316,7 @@ extension DonateHomeViewController:SegmentedFormNavigationControllerDelegate {
                 successConfirmationVC.titleLabelText = "thank you!"
                 successConfirmationVC.messageLabelText = "Thank you for your interest in partnering with GK for an event. A member of our staff will reach out to you shortly with more details on how we can best work together."
                 successConfirmationVC.shareText = "Support Giving Kitchen by hosting an event!"
-                successConfirmationVC.shareUrlString = "https://thegivingkitchen.wufoo.com/forms/join-our-forces/"
+                successConfirmationVC.shareUrlString = "https://thegivingkitchen.wufoo.com/forms/gk-community-partner-form/"
                 successConfirmationVC.shareImage = UIImage(named: "tgkShareIcon")
                 self.present(successConfirmationVC, animated: true)
             }

@@ -83,6 +83,83 @@
             </objects>
             <point key="canvasLocation" x="-615.20000000000005" y="247.82608695652175"/>
         </scene>
+        <!--Stability Net Onboarding View Controller-->
+        <scene sceneID="9IA-f6-H0t">
+            <objects>
+                <viewController storyboardIdentifier="StabilityNetOnboardingViewControllerId" modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="CbX-xI-b85" customClass="StabilityNetOnboardingViewController" customModule="TGK" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BaV-xs-G4f">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gQe-xc-Z2k">
+                                <rect key="frame" x="40" y="80" width="295" height="420"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="assistanceHomeTopIcon" translatesAutoresizingMaskIntoConstraints="NO" id="zPf-Ia-E0c">
+                                        <rect key="frame" x="129" y="40" width="37" height="47"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="iFt-4B-qvm">
+                                        <rect key="frame" x="20" y="167.5" width="255" height="142.5"/>
+                                        <string key="text">Our Stability Network program connects food service workers to various types of resources. Whether you receive financial assistance from GK or not, these local services are standing by to help you.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VcS-a8-tnw">
+                                        <rect key="frame" x="20" y="350" width="255" height="50"/>
+                                        <color key="backgroundColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="sc6-tY-Cys"/>
+                                        </constraints>
+                                        <state key="normal" title="Okay">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="doneButtonPressed:" destination="CbX-xI-b85" eventType="touchUpInside" id="mcF-29-Afe"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stability Network" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="GJc-Qj-3hL">
+                                        <rect key="frame" x="20" y="127" width="255" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="VcS-a8-tnw" firstAttribute="top" secondItem="iFt-4B-qvm" secondAttribute="bottom" constant="40" id="AIX-dP-MGx"/>
+                                    <constraint firstAttribute="trailing" secondItem="GJc-Qj-3hL" secondAttribute="trailing" constant="20" id="Ffc-3k-Ult"/>
+                                    <constraint firstAttribute="bottom" secondItem="VcS-a8-tnw" secondAttribute="bottom" constant="20" id="Ngo-6S-68S"/>
+                                    <constraint firstAttribute="trailing" secondItem="iFt-4B-qvm" secondAttribute="trailing" constant="20" id="Xsu-dL-a7A"/>
+                                    <constraint firstItem="zPf-Ia-E0c" firstAttribute="top" secondItem="gQe-xc-Z2k" secondAttribute="top" constant="40" id="ZYh-3b-VRa"/>
+                                    <constraint firstItem="GJc-Qj-3hL" firstAttribute="top" secondItem="zPf-Ia-E0c" secondAttribute="bottom" constant="40" id="Zcn-fL-Bhb"/>
+                                    <constraint firstItem="GJc-Qj-3hL" firstAttribute="leading" secondItem="gQe-xc-Z2k" secondAttribute="leading" constant="20" id="aKO-nO-LGT"/>
+                                    <constraint firstItem="iFt-4B-qvm" firstAttribute="leading" secondItem="gQe-xc-Z2k" secondAttribute="leading" constant="20" id="bac-hU-q1o"/>
+                                    <constraint firstItem="zPf-Ia-E0c" firstAttribute="centerX" secondItem="gQe-xc-Z2k" secondAttribute="centerX" id="eGY-Dy-Tlk"/>
+                                    <constraint firstItem="iFt-4B-qvm" firstAttribute="top" secondItem="GJc-Qj-3hL" secondAttribute="bottom" constant="20" id="m6q-ye-58x"/>
+                                    <constraint firstAttribute="trailing" secondItem="VcS-a8-tnw" secondAttribute="trailing" constant="20" id="wAX-xB-TMR"/>
+                                    <constraint firstItem="VcS-a8-tnw" firstAttribute="leading" secondItem="gQe-xc-Z2k" secondAttribute="leading" constant="20" id="zsg-4T-3kG"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="gQe-xc-Z2k" firstAttribute="leading" secondItem="CRS-jg-ocX" secondAttribute="leading" constant="40" id="Q0p-cr-ifW"/>
+                            <constraint firstItem="CRS-jg-ocX" firstAttribute="trailing" secondItem="gQe-xc-Z2k" secondAttribute="trailing" constant="40" id="Wxa-qW-8dD"/>
+                            <constraint firstItem="gQe-xc-Z2k" firstAttribute="top" secondItem="CRS-jg-ocX" secondAttribute="top" constant="80" id="bo7-eV-jsC"/>
+                            <constraint firstItem="CRS-jg-ocX" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="gQe-xc-Z2k" secondAttribute="bottom" constant="80" id="w25-Av-NhZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="CRS-jg-ocX"/>
+                    </view>
+                    <connections>
+                        <outlet property="doneButton" destination="VcS-a8-tnw" id="o3s-Bx-4UE"/>
+                        <outlet property="mainTitleLabel" destination="GJc-Qj-3hL" id="SRd-4d-FHV"/>
+                        <outlet property="programDescriptionLabel" destination="iFt-4B-qvm" id="P49-kn-KFW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UjQ-Sn-zgA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-608.79999999999995" y="947.67616191904051"/>
+        </scene>
         <!--Stability Net Category Filter View Controller-->
         <scene sceneID="pxf-We-b9P">
             <objects>
@@ -98,7 +175,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="142"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="StabilityNet Categories" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LXc-qR-24K">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stability Network Categories" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LXc-qR-24K">
                                             <rect key="frame" x="20" y="80" width="339" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -192,7 +269,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4uO-MB-Fb7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-615.20000000000005" y="982.75862068965523"/>
+            <point key="canvasLocation" x="886" y="950"/>
         </scene>
         <!--Safety Net Detail Sheet View Controller-->
         <scene sceneID="pvu-T7-G7N">
@@ -407,6 +484,7 @@ like website here</string>
         </scene>
     </scenes>
     <resources>
+        <image name="assistanceHomeTopIcon" width="37" height="47"/>
         <image name="iconDrawerIndicator" width="52" height="8"/>
         <image name="iconFilter" width="44" height="46"/>
     </resources>

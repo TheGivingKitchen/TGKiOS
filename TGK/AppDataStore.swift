@@ -14,6 +14,7 @@ class AppDataStore {
         case hasFinishedOnboarding = "hasFinishedOnboarding"
         case hasClosedEventHomeVolunteerButton = "hasClosedEventHomeVolunteerButton"
         case hasClosedQPRTrainingButton = "hasClosedQPRTrainingButton"
+        case hasClosedStabilityNetOnboarding = "hasClosedStabilityNetOnboarding"
     }
     
     static var hasFinishedOnboarding:Bool {
@@ -40,6 +41,15 @@ class AppDataStore {
         }
         set {
             UserDefaults.standard.set(newValue, forKey: AppDataStoreKey.hasClosedEventHomeVolunteerButton.rawValue)
+        }
+    }
+    
+    static var hasClosedStabilityNetOnboarding:Bool {
+        get {
+            return UserDefaults.standard.bool(forKey: AppDataStoreKey.hasClosedStabilityNetOnboarding.rawValue)
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: AppDataStoreKey.hasClosedStabilityNetOnboarding.rawValue)
         }
     }
 }

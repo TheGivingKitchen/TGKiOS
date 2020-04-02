@@ -39,9 +39,9 @@ class AboutHomeViewController: UITableViewController {
     
     @IBOutlet weak var storiesLabel: UILabel!
     @IBOutlet weak var storyOldePinkHouseButton: UIButton!
-    @IBOutlet weak var story1Button: UIButton!
-    @IBOutlet weak var story2Button: UIButton!
-    @IBOutlet weak var story3Button: UIButton!
+    @IBOutlet weak var storyLetsTalkButton: UIButton!
+    @IBOutlet weak var storyQPRTraining: UIButton!
+    @IBOutlet weak var storyThePerformer: UIButton!
     
     @IBOutlet weak var storiesDividerView: UIView!
     @IBOutlet weak var story1Divider: UIView!
@@ -168,14 +168,14 @@ class AboutHomeViewController: UITableViewController {
         self.storiesLabel.font = UIFont.tgkBody
         self.storiesLabel.textColor = UIColor.tgkLightGray
         
+        self.storyQPRTraining.titleLabel?.font = UIFont.tgkNavigation
+        self.storyQPRTraining.setTitleColor(UIColor.tgkOrange, for: .normal)
         self.storyOldePinkHouseButton.titleLabel?.font = UIFont.tgkNavigation
         self.storyOldePinkHouseButton.setTitleColor(UIColor.tgkOrange, for: .normal)
-        self.story1Button.titleLabel?.font = UIFont.tgkNavigation
-        self.story1Button.setTitleColor(UIColor.tgkOrange, for: .normal)
-        self.story2Button.titleLabel?.font = UIFont.tgkNavigation
-        self.story2Button.setTitleColor(UIColor.tgkOrange, for: .normal)
-        self.story3Button.titleLabel?.font = UIFont.tgkNavigation
-        self.story3Button.setTitleColor(UIColor.tgkOrange, for: .normal)
+        self.storyLetsTalkButton.titleLabel?.font = UIFont.tgkNavigation
+        self.storyLetsTalkButton.setTitleColor(UIColor.tgkOrange, for: .normal)
+        self.storyThePerformer.titleLabel?.font = UIFont.tgkNavigation
+        self.storyThePerformer.setTitleColor(UIColor.tgkOrange, for: .normal)
         
         self.feedbackDivider.backgroundColor = UIColor.tgkBackgroundGray
         
@@ -284,7 +284,7 @@ class AboutHomeViewController: UITableViewController {
         Analytics.logEvent(customName: .learnMorePressed, parameters: [.learnMoreType:"olde_pink_house_fire"])
     }
     
-    @IBAction func aboutStory1Pressed(_ sender: Any) {
+    @IBAction func aboutStoryThePerformerPressed(_ sender: Any) {
         if let url = URL(string: "https://thegivingkitchen.org/reggie-ealy") {
             let safariVC = TGKSafariViewController(url: url)
             self.present(safariVC, animated: true)
@@ -293,7 +293,7 @@ class AboutHomeViewController: UITableViewController {
         Analytics.logEvent(customName: .learnMorePressed, parameters: [.learnMoreType:"story_the_performer"])
     }
     
-    @IBAction func aboutStory2Pressed(_ sender: Any) {
+    @IBAction func aboutStoryLetsTalkPressed(_ sender: Any) {
         if let url = URL(string: "https://thegivingkitchen.org/lets-talk-about-it") {
             let safariVC = TGKSafariViewController(url: url)
             self.present(safariVC, animated: true)
@@ -302,7 +302,7 @@ class AboutHomeViewController: UITableViewController {
         }
     }
     
-    @IBAction func aboutStory3Pressed(_ sender: Any) {
+    @IBAction func aboutStoryQprTrainingPressed(_ sender: Any) {
         guard let trainingForm = self.qprTrainingFormModel else {
             return
         }
