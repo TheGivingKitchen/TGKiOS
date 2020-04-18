@@ -45,6 +45,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         */
         application.registerForRemoteNotifications()
         
+        if #available(iOS 13.0, *) {
+            window?.overrideUserInterfaceStyle = .light
+        }
         return true
     }
 

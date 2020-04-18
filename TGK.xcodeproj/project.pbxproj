@@ -195,6 +195,7 @@
 		4E89100C209F779E0034A83B /* assistanceInquiryTest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = assistanceInquiryTest.json; sourceTree = "<group>"; };
 		4E8B7DC123943ADE00E6164F /* StabilityNetClusterAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StabilityNetClusterAnnotationView.swift; sourceTree = "<group>"; };
 		4E8B7DC32394551300E6164F /* MKMapView+TGK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKMapView+TGK.swift"; sourceTree = "<group>"; };
+		4E979A1F243E00B400BE47DC /* joinourforcesOLD.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = joinourforcesOLD.json; sourceTree = "<group>"; };
 		4E97DF9C22F73B0B003B0E13 /* ScrollableBottomSheetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollableBottomSheetViewController.swift; sourceTree = "<group>"; };
 		4E97DF9E22F73B92003B0E13 /* StabilityNetSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StabilityNetSearchViewController.swift; sourceTree = "<group>"; };
 		4E9DE5452401875400D3A716 /* StabilityNetSearchMapFilterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StabilityNetSearchMapFilterTableViewCell.swift; sourceTree = "<group>"; };
@@ -365,6 +366,7 @@
 		4E75176020B615DA00B2D7E0 /* PartsBinNoTarget */ = {
 			isa = PBXGroup;
 			children = (
+				4E979A1F243E00B400BE47DC /* joinourforcesOLD.json */,
 				4E762DFC237724D200A323FC /* AboutQPRView.xib */,
 				4E762DFE2377257100A323FC /* AboutQPRView.swift */,
 				C0B9C4982135D79F009BEE60 /* SafetyNetHomeViewController.swift */,
@@ -1141,7 +1143,7 @@
 				CODE_SIGN_ENTITLEMENTS = TGK/TGK.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 72XCFBRL5H;
 				INFOPLIST_FILE = TGK/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -1149,7 +1151,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.4;
+				MARKETING_VERSION = 1.5.1;
 				PRODUCT_BUNDLE_IDENTIFIER = org.thegivingkitchen.gkios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -1171,7 +1173,7 @@
 				CODE_SIGN_ENTITLEMENTS = TGK/TGK.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 72XCFBRL5H;
 				INFOPLIST_FILE = TGK/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -1179,7 +1181,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.4;
+				MARKETING_VERSION = 1.5.1;
 				PRODUCT_BUNDLE_IDENTIFIER = org.thegivingkitchen.gkios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
