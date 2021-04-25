@@ -148,7 +148,7 @@ class DonateHomeViewController: UITableViewController {
             }
         }
         
-        ServiceManager.sharedInstace.getFirebaseForm(id: "communityPartner") { (eventPartnerFormModel, error) in
+        ServiceManager.sharedInstace.getFirebaseForm(id: "communityPafrtner") { (eventPartnerFormModel, error) in
             if let unwrappedModel = eventPartnerFormModel {
                 self.eventPartnerFormModel = unwrappedModel
                 self.eventPartnerButton.isEnabled = true
@@ -215,7 +215,8 @@ class DonateHomeViewController: UITableViewController {
     }
     
     @IBAction func useCreditCardButtonPressed(_ sender: Any) {
-        guard let externalDonationFormUrl = URL(string: "https://connect.clickandpledge.com/w/Form/d00e52d7-f298-4d35-8be9-05fd93d3194a") else {
+        guard let externalDonationFormUrlString = RemoteConfig.remoteConfig()[RemoteConfigDefaults.donateOneTimeURL.rawValue].stringValue,
+              let externalDonationFormUrl = URL(string: externalDonationFormUrlString) else {
             return
         }
         
@@ -227,7 +228,8 @@ class DonateHomeViewController: UITableViewController {
     }
     
     @IBAction func recurringDonationPressed(_ sender: Any) {
-        guard let externalDonationFormUrl = URL(string: "https://connect.clickandpledge.com/w/Form/a4eb8d47-b792-4285-8ef9-24c353715cd7") else {
+        guard let externalDonationFormUrlString = RemoteConfig.remoteConfig()[RemoteConfigDefaults.donateRecurringURL.rawValue].stringValue,
+              let externalDonationFormUrl = URL(string: externalDonationFormUrlString) else {
             return
         }
         
