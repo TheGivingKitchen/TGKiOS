@@ -19,6 +19,7 @@ extension Analytics {
         //MARK: Donate/Give
         case donateOneTimeDonationStarted = "donation_one_time_started"
         case donateRecurringDonationStarted = "donation_recurring_started"
+        case donateOtherDonationStarted = "donation_other_started"
         
         //MARK: Forms
         case formViewDetails = "form_view_details" //segmentedFormInfoViewController

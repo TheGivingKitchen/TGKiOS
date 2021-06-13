@@ -17,7 +17,9 @@ class DonateHomeViewController: UITableViewController {
     @IBOutlet weak var learnMoreButton: UIButton!
     @IBOutlet weak var useCreditCardButton: UIButton!
     @IBOutlet weak var donateTypeDividerView: UIView!
+    @IBOutlet weak var donateTypeDividerView2: UIView!
     @IBOutlet weak var recurringDonationButton: UIButton!
+    @IBOutlet weak var otherOptionsDonationButton: UIButton!
     @IBOutlet weak var donationAnimatedInfoView: UIView!
     @IBOutlet weak var amountView: UIView!
     @IBOutlet weak var amountAssociatedIconBackgroundView:UIView!
@@ -100,9 +102,13 @@ class DonateHomeViewController: UITableViewController {
         self.useCreditCardButton.tintColor = UIColor.tgkOrange
         
         self.donateTypeDividerView.backgroundColor = UIColor.tgkBackgroundGray
+        self.donateTypeDividerView2.backgroundColor = UIColor.tgkBackgroundGray
         
         self.recurringDonationButton.titleLabel?.font = UIFont.tgkNavigation
         self.recurringDonationButton.tintColor = UIColor.tgkOrange
+        
+        self.otherOptionsDonationButton.titleLabel?.font = UIFont.tgkNavigation
+        self.otherOptionsDonationButton.tintColor = UIColor.tgkOrange
         
         self.donateBottomDividerView.backgroundColor = UIColor.tgkBackgroundGray
         
@@ -238,6 +244,20 @@ class DonateHomeViewController: UITableViewController {
         }
         
         Analytics.logEvent(customName: .donateRecurringDonationStarted)
+    }
+    
+    @IBAction func otherTypeDonationPressed(_ sender: Any) {
+        print("got it")
+        guard let externalDonationFormUrlString = RemoteConfig.remoteConfig()[RemoteConfigDefaults.donateOtherURL.rawValue].stringValue,
+              let externalDonationFormUrl = URL(string: externalDonationFormUrlString) else {
+            return
+        }
+        
+        UIApplication.shared.open(externalDonationFormUrl, options: [:]) { (success) in
+            self.presentMonetaryDonationSuccessScreen()
+        }
+        
+        Analytics.logEvent(customName: .donateOtherDonationStarted)
     }
     
     private func presentMonetaryDonationSuccessScreen() {

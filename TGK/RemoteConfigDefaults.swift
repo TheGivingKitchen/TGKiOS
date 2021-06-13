@@ -14,6 +14,7 @@ enum RemoteConfigDefaults:String {
     case isLive = "isLive" //Main killswitch for the app
     case donateOneTimeURL = "donateOneTimeURL"
     case donateRecurringURL = "donateRecurringURL"
+    case donateOtherURL = "donateOtherURL"
     
     var defaultValue:NSObject {
         get {
@@ -24,6 +25,8 @@ enum RemoteConfigDefaults:String {
                 return "https://connect.clickandpledge.com/w/Form/d00e52d7-f298-4d35-8be9-05fd93d3194a" as NSObject
             case .donateRecurringURL:
                 return "https://www.classy.org/give/321559/#!/donation/checkout" as NSObject
+            case .donateOtherURL:
+                return "https://thegivingkitchen.org/ways-to-give" as NSObject
             }
         }
     }
@@ -42,9 +45,10 @@ enum RemoteConfigDefaults:String {
     
     static var defaults:[String:NSObject] {
         get {
-            return [self.isLive.rawValue:true as NSObject,
+            return [self.isLive.rawValue:true as NSObject ,
                     self.donateOneTimeURL.rawValue:self.donateOneTimeURL.defaultValue,
-                    self.donateRecurringURL.rawValue:self.donateRecurringURL.defaultValue]
+                    self.donateRecurringURL.rawValue:self.donateRecurringURL.defaultValue,
+                    self.donateOtherURL.rawValue:self.donateOtherURL.defaultValue]
         }
     }
     

@@ -57,6 +57,13 @@ class AssistanceHomeViewController: UIViewController {
         self.requestAssistanceLabel.font = UIFont.tgkBody
         self.requestAssistanceLabel.textColor = UIColor.tgkDarkGray
         
+        if let languageCode = NSLocale.preferredLanguages.first,
+           languageCode.contains("es") {
+            self.startSelfInquiryButton.setTitle("Pide Ayuda", for: .normal)
+            self.startReferralInquiryButton.titleLabel?.textAlignment = .center
+            self.startReferralInquiryButton.setTitle("Recomienda a alguien en busca de ayuda", for: .normal)
+        }
+        
         self.startFormInfoLabel.font = UIFont.tgkMetadata
         self.startFormInfoLabel.textColor = UIColor.tgkLightGray
         
@@ -106,27 +113,46 @@ class AssistanceHomeViewController: UIViewController {
     }
     
     @IBAction func startSelfAssistancePressed(_ sender: Any) {
+        if let languageCode = NSLocale.preferredLanguages.first,
+           languageCode.contains("es") {
+            self.presentSpanishWebviewAssistanceForm()
+            return
+        }
+        
         guard let inquiryForm = self.selfAssistanceFormModel else {
             return
         }
         
-        let segmentedNav = UIStoryboard(name: "Forms", bundle: nil).instantiateViewController(withIdentifier: "SegmentedFormNavigationControllerId") as! SegmentedFormNavigationController
-        segmentedNav.segmentedFormModel = inquiryForm
-        segmentedNav.formDelegate = self
-        self.present(segmentedNav, animated: true)
+        self.presentSegmentedForm(inquiryForm)
     }
     
     @IBAction func startReferralAssistancePressed(_ sender: Any) {
+        if let languageCode = NSLocale.preferredLanguages.first,
+           languageCode.contains("es") {
+            self.presentSpanishWebviewAssistanceForm()
+            return
+        }
+        
         guard let inquiryForm = self.referralAssistanceFormModel else {
             return
         }
         
+        self.presentSegmentedForm(inquiryForm)
+    }
+    
+    private func presentSpanishWebviewAssistanceForm() {
+        if let spanishAssistanceFormUrl = URL(string: "https://thegivingkitchen.wufoo.com/forms/z1nnf9t30wn1abe/") {
+            let webView = TGKSafariViewController(url: spanishAssistanceFormUrl)
+            self.present(webView, animated: true)
+        }
+    }
+    
+    private func presentSegmentedForm(_ form:SegmentedFormModel) {
         let segmentedNav = UIStoryboard(name: "Forms", bundle: nil).instantiateViewController(withIdentifier: "SegmentedFormNavigationControllerId") as! SegmentedFormNavigationController
-        segmentedNav.segmentedFormModel = inquiryForm
+        segmentedNav.segmentedFormModel = form
         segmentedNav.formDelegate = self
         self.present(segmentedNav, animated: true)
     }
-    
 }
 
 

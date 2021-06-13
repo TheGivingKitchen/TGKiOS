@@ -23,12 +23,19 @@ class MainTabBarController: UITabBarController {
         let assistanceHomeVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AssistanceHomeViewControllerId") as! AssistanceHomeViewController
         _ = assistanceHomeVC.view
         let assistanceHomeNavVC = UINavigationController(rootViewController: assistanceHomeVC)
-        assistanceHomeNavVC.tabBarItem = UITabBarItem(title: "Assistance", image: UIImage(named: "tabBarAssistance"), selectedImage: nil)
+        //change tab bar item title to spanish
+        var assistanceHomeNavTabBarItemTitle = "Ask For Help"
+        if let languageCode = NSLocale.preferredLanguages.first,
+           languageCode.contains("es") {
+            assistanceHomeNavTabBarItemTitle = "Ayuda"
+        }
+        assistanceHomeNavVC.tabBarItem = UITabBarItem(title: assistanceHomeNavTabBarItemTitle, image: UIImage(named: "tabBarAssistance"), selectedImage: nil)
         
-        let eventsHomeVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "EventsHomeViewControllerId") as! EventsHomeViewController
-        _ = eventsHomeVC.view
-        let eventsHomeNavVC = UINavigationController(rootViewController: eventsHomeVC)
-        eventsHomeNavVC.tabBarItem = UITabBarItem(title: "Events", image: UIImage(named: "tabBarEvents"), selectedImage: nil)
+        //hiding events tab for now - may reuse in the future
+//        let eventsHomeVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "EventsHomeViewControllerId") as! EventsHomeViewController
+//        _ = eventsHomeVC.view
+//        let eventsHomeNavVC = UINavigationController(rootViewController: eventsHomeVC)
+//        eventsHomeNavVC.tabBarItem = UITabBarItem(title: "Events", image: UIImage(named: "tabBarEvents"), selectedImage: nil)
         
         let donateHomeVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DonateHomeViewControllerId") as! DonateHomeViewController
         _ = donateHomeVC.view
@@ -45,9 +52,9 @@ class MainTabBarController: UITabBarController {
         aboutHomeVC.tabBarItem = UITabBarItem(title: "About", image: UIImage(named: "tabBarHome"), selectedImage: nil)
         
         #if DEBUG
-        self.viewControllers = [aboutHomeVC, eventsHomeNavVC, assistanceHomeNavVC, safetyNetNavVC, donateHomeNavVC, testHomeNavVC]
+        self.viewControllers = [aboutHomeVC, assistanceHomeNavVC, safetyNetNavVC, donateHomeNavVC]
         #else
-        self.viewControllers = [aboutHomeVC, eventsHomeNavVC, assistanceHomeNavVC, safetyNetNavVC, donateHomeNavVC]
+        self.viewControllers = [aboutHomeVC, assistanceHomeNavVC, safetyNetNavVC, donateHomeNavVC]
         #endif
         
         //Remote config
