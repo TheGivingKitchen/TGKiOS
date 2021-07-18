@@ -20,6 +20,8 @@ class StabilityNetSearchViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
     
+    private let stabNetNetworkClient = StabilityNetNetworkClient()
+    
     weak var delegate:StabilityNetSearchViewControllerDelegate?
     
     let topStickyPoint: CGFloat = 100
@@ -108,23 +110,46 @@ class StabilityNetSearchViewController: UIViewController {
     }
     
     func fetchData() {
-        ServiceManager.sharedInstace.getSafetyNetResources { (safetyNetModels, error) in
+        self.stabNetNetworkClient.getStabilityNetResources { (safetyNetModels, error) in
             if let error = error {
                 print(error)
                 return
             }
-            
+
             guard let safetyNetModels = safetyNetModels,
                 self.safetyNetModels != safetyNetModels else {
                     return
             }
-            
+
             self.safetyNetModels = safetyNetModels
-            self.tableView.reloadData()
             
-            let resourcesToShowOnMap = self.isSearchingOrFiltering ? self.filteredSafetyNetModels : self.safetyNetModels
-            self.delegate?.stabilityNetSearchViewControllerDidFind(resources: resourcesToShowOnMap)
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+                let resourcesToShowOnMap = self.isSearchingOrFiltering ? self.filteredSafetyNetModels : self.safetyNetModels
+                self.delegate?.stabilityNetSearchViewControllerDidFind(resources: resourcesToShowOnMap)
+            }            
         }
+        
+        
+        
+//        ServiceManager.sharedInstace.getSafetyNetResources { (safetyNetModels, error) in
+//            if let error = error {
+//                print(error)
+//                return
+//            }
+//
+//            guard let safetyNetModels = safetyNetModels,
+//                self.safetyNetModels != safetyNetModels else {
+//                    return
+//            }
+//
+//            self.safetyNetModels = safetyNetModels
+//            self.tableView.reloadData()
+//
+//            let resourcesToShowOnMap = self.isSearchingOrFiltering ? self.filteredSafetyNetModels : self.safetyNetModels
+//            self.delegate?.stabilityNetSearchViewControllerDidFind(resources: resourcesToShowOnMap)
+    
+        
     }
     
     @objc func panGesture(_ recognizer: UIPanGestureRecognizer) {

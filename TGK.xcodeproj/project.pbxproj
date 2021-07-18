@@ -70,6 +70,8 @@
 		4E9DE54824018A6500D3A716 /* StabilityNetFilterCategoryTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9DE54724018A6500D3A716 /* StabilityNetFilterCategoryTypeCell.swift */; };
 		4E9DE54C24018EAD00D3A716 /* StabilityNetCategoryFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9DE54B24018EAD00D3A716 /* StabilityNetCategoryFilterViewController.swift */; };
 		4E9E1D5B21DC441D0096F705 /* StoreReviewWarmerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9E1D5A21DC441D0096F705 /* StoreReviewWarmerViewController.swift */; };
+		4EA8ABA726A2009700B2EAB4 /* StabilityNetDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA8ABA626A2009700B2EAB4 /* StabilityNetDTO.swift */; };
+		4EA8ABAA26A3044000B2EAB4 /* FirebaseStorageEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA8ABA926A3044000B2EAB4 /* FirebaseStorageEndpoint.swift */; };
 		4EAF08EB2139FBB20083E023 /* SafetyNetHomeTooltipCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EAF08EA2139FBB20083E023 /* SafetyNetHomeTooltipCell.xib */; };
 		4EAF08ED2139FBC90083E023 /* SafetyNetHomeTooltipCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAF08EC2139FBC90083E023 /* SafetyNetHomeTooltipCell.swift */; };
 		4EC8F22C2309E2C800CA0945 /* StabilityNetCategoryFilterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC8F22B2309E2C800CA0945 /* StabilityNetCategoryFilterTableViewCell.swift */; };
@@ -108,6 +110,16 @@
 		4ED3884E209D030600A8BEE2 /* FormTextViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4ED3883C209D030600A8BEE2 /* FormTextViewTableViewCell.xib */; };
 		4ED38851209D04AE00A8BEE2 /* UIColor+TGK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED3884F209D04AD00A8BEE2 /* UIColor+TGK.swift */; };
 		4ED38852209D04AE00A8BEE2 /* String+TGK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED38850209D04AD00A8BEE2 /* String+TGK.swift */; };
+		4EDAE5ED2698B4A10025010F /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDAE5EC2698B4A10025010F /* NetworkError.swift */; };
+		4EDAE5F12698B4C20025010F /* NetworkProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDAE5F02698B4C20025010F /* NetworkProcessor.swift */; };
+		4EDAE5F72698B4D40025010F /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDAE5F62698B4D40025010F /* APIRequest.swift */; };
+		4EDAE5FB2698B4E20025010F /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDAE5FA2698B4E20025010F /* NetworkClient.swift */; };
+		4EDAE5FE2698B4EF0025010F /* NetworkDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDAE5FD2698B4EF0025010F /* NetworkDataModel.swift */; };
+		4EDAE6012698B52D0025010F /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDAE6002698B52D0025010F /* Endpoint.swift */; };
+		4EDAE6052698B58B0025010F /* StabilityNetNetworkProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDAE6042698B58B0025010F /* StabilityNetNetworkProcessor.swift */; };
+		4EDAE60A2698BB5F0025010F /* StabilityNetNetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDAE6092698BB5F0025010F /* StabilityNetNetworkClient.swift */; };
+		4EDAE60D2698BC290025010F /* StabilityNetEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDAE60C2698BC290025010F /* StabilityNetEndpoint.swift */; };
+		4EDAE6102698BCC90025010F /* StabilityNetResourceAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDAE60F2698BCC90025010F /* StabilityNetResourceAPIRequest.swift */; };
 		4EDC78E321C6A912004AFCBB /* SafetyNet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EDC78E221C6A912004AFCBB /* SafetyNet.storyboard */; };
 		4EDC78E521C6A9A2004AFCBB /* SafetyNetDetailSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDC78E421C6A9A2004AFCBB /* SafetyNetDetailSheetViewController.swift */; };
 		4EDC78E821C87268004AFCBB /* AboutHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDC78E721C87268004AFCBB /* AboutHomeViewController.swift */; };
@@ -202,6 +214,8 @@
 		4E9DE54724018A6500D3A716 /* StabilityNetFilterCategoryTypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StabilityNetFilterCategoryTypeCell.swift; sourceTree = "<group>"; };
 		4E9DE54B24018EAD00D3A716 /* StabilityNetCategoryFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StabilityNetCategoryFilterViewController.swift; sourceTree = "<group>"; };
 		4E9E1D5A21DC441D0096F705 /* StoreReviewWarmerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreReviewWarmerViewController.swift; sourceTree = "<group>"; };
+		4EA8ABA626A2009700B2EAB4 /* StabilityNetDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StabilityNetDTO.swift; sourceTree = "<group>"; };
+		4EA8ABA926A3044000B2EAB4 /* FirebaseStorageEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseStorageEndpoint.swift; sourceTree = "<group>"; };
 		4EAF08EA2139FBB20083E023 /* SafetyNetHomeTooltipCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SafetyNetHomeTooltipCell.xib; sourceTree = "<group>"; };
 		4EAF08EC2139FBC90083E023 /* SafetyNetHomeTooltipCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafetyNetHomeTooltipCell.swift; sourceTree = "<group>"; };
 		4EC8F22B2309E2C800CA0945 /* StabilityNetCategoryFilterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StabilityNetCategoryFilterTableViewCell.swift; sourceTree = "<group>"; };
@@ -245,6 +259,16 @@
 		4ED3883C209D030600A8BEE2 /* FormTextViewTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FormTextViewTableViewCell.xib; sourceTree = "<group>"; };
 		4ED3884F209D04AD00A8BEE2 /* UIColor+TGK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+TGK.swift"; sourceTree = "<group>"; };
 		4ED38850209D04AD00A8BEE2 /* String+TGK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+TGK.swift"; sourceTree = "<group>"; };
+		4EDAE5EC2698B4A10025010F /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		4EDAE5F02698B4C20025010F /* NetworkProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProcessor.swift; sourceTree = "<group>"; };
+		4EDAE5F62698B4D40025010F /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		4EDAE5FA2698B4E20025010F /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
+		4EDAE5FD2698B4EF0025010F /* NetworkDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataModel.swift; sourceTree = "<group>"; };
+		4EDAE6002698B52D0025010F /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		4EDAE6042698B58B0025010F /* StabilityNetNetworkProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StabilityNetNetworkProcessor.swift; sourceTree = "<group>"; };
+		4EDAE6092698BB5F0025010F /* StabilityNetNetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StabilityNetNetworkClient.swift; sourceTree = "<group>"; };
+		4EDAE60C2698BC290025010F /* StabilityNetEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StabilityNetEndpoint.swift; sourceTree = "<group>"; };
+		4EDAE60F2698BCC90025010F /* StabilityNetResourceAPIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StabilityNetResourceAPIRequest.swift; sourceTree = "<group>"; };
 		4EDC78E221C6A912004AFCBB /* SafetyNet.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SafetyNet.storyboard; sourceTree = "<group>"; };
 		4EDC78E421C6A9A2004AFCBB /* SafetyNetDetailSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafetyNetDetailSheetViewController.swift; sourceTree = "<group>"; };
 		4EDC78E721C87268004AFCBB /* AboutHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutHomeViewController.swift; sourceTree = "<group>"; };
@@ -513,6 +537,7 @@
 				4E83549820C8B966009DF8CE /* Events */,
 				4E885BB920A1221B00D05ED9 /* Forms */,
 				C0A259822130AA870007AB20 /* SafetyNetResourceModel.swift */,
+				4EA8ABA626A2009700B2EAB4 /* StabilityNetDTO.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -564,6 +589,19 @@
 			name = "to be removed or deprecated";
 			sourceTree = "<group>";
 		};
+		4EA8ABB826A45A1800B2EAB4 /* NetworkingPolicies */ = {
+			isa = PBXGroup;
+			children = (
+				4EDAE5F02698B4C20025010F /* NetworkProcessor.swift */,
+				4EDAE5FA2698B4E20025010F /* NetworkClient.swift */,
+				4EDAE5EC2698B4A10025010F /* NetworkError.swift */,
+				4EDAE5F62698B4D40025010F /* APIRequest.swift */,
+				4EDAE5FD2698B4EF0025010F /* NetworkDataModel.swift */,
+				4EDAE6002698B52D0025010F /* Endpoint.swift */,
+			);
+			path = NetworkingPolicies;
+			sourceTree = "<group>";
+		};
 		4ECA9BF920A268590084A317 /* CommonComponents */ = {
 			isa = PBXGroup;
 			children = (
@@ -609,6 +647,7 @@
 		4ED3880D209D01EF00A8BEE2 = {
 			isa = PBXGroup;
 			children = (
+				4EA8ABA926A3044000B2EAB4 /* FirebaseStorageEndpoint.swift */,
 				4ED38818209D01EF00A8BEE2 /* TGK */,
 				4ED38817209D01EF00A8BEE2 /* Products */,
 				472C38AAFB8F7F4CAA53C6B1 /* Pods */,
@@ -638,6 +677,7 @@
 				4E83549D20CA0568009DF8CE /* Events */,
 				4ECA9BF920A268590084A317 /* CommonComponents */,
 				4E891005209E3C990034A83B /* Utilities */,
+				4EDAE5EB2698B4720025010F /* Networking */,
 				4E891004209E3C890034A83B /* ServiceManager */,
 				4E891002209E3C630034A83B /* Models */,
 				4E890FFE209E3C270034A83B /* Forms */,
@@ -651,6 +691,26 @@
 				4EF1617622B1CBB2005821F5 /* GoogleService-Info.plist */,
 			);
 			path = TGK;
+			sourceTree = "<group>";
+		};
+		4EDAE5EB2698B4720025010F /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				4EA8ABB826A45A1800B2EAB4 /* NetworkingPolicies */,
+				4EDAE6032698B5790025010F /* FirebaseNetworking */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		4EDAE6032698B5790025010F /* FirebaseNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				4EDAE6042698B58B0025010F /* StabilityNetNetworkProcessor.swift */,
+				4EDAE6092698BB5F0025010F /* StabilityNetNetworkClient.swift */,
+				4EDAE60C2698BC290025010F /* StabilityNetEndpoint.swift */,
+				4EDAE60F2698BCC90025010F /* StabilityNetResourceAPIRequest.swift */,
+			);
+			path = FirebaseNetworking;
 			sourceTree = "<group>";
 		};
 		4EDC78E121C6A8FF004AFCBB /* SafetyNet */ = {
@@ -927,6 +987,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4ECF4801211922F600B273E4 /* AssistanceSuccessViewController.swift in Sources */,
+				4EDAE6102698BCC90025010F /* StabilityNetResourceAPIRequest.swift in Sources */,
 				4E73C8C42431330400B0E1B1 /* StabilityNetOnboardingViewController.swift in Sources */,
 				4ED3881A209D01EF00A8BEE2 /* AppDelegate.swift in Sources */,
 				4E8897AE209E134700A361D8 /* ServiceManager+Forms.swift in Sources */,
@@ -944,32 +1005,41 @@
 				4ED3883E209D030600A8BEE2 /* FormTextFieldTableViewCell.swift in Sources */,
 				4E71AFCE215C3EEF0033494D /* FeedbackHomeViewController.swift in Sources */,
 				4ECA9BFD20A269A10084A317 /* FormListSelectTableViewCellRow.swift in Sources */,
+				4EA8ABA726A2009700B2EAB4 /* StabilityNetDTO.swift in Sources */,
 				4ED38844209D030600A8BEE2 /* FormTextViewTableViewCell.swift in Sources */,
 				4EC8F22E2309E3C800CA0945 /* StabilityNetCatgeoryInfoCollectionViewCell.swift in Sources */,
 				C0B9C4A3213870BC009BEE60 /* AppDataStore.swift in Sources */,
 				4E885BB820A1221700D05ED9 /* FormFieldErrorModel.swift in Sources */,
+				4EDAE5FB2698B4E20025010F /* NetworkClient.swift in Sources */,
 				4EE6770B22DBA73A0061373D /* UIViewController+TGK.swift in Sources */,
 				4E83549C20CA0564009DF8CE /* CalendarEventOverviewTableViewCell.swift in Sources */,
+				4EDAE5ED2698B4A10025010F /* NetworkError.swift in Sources */,
 				4E89100B209F6F360034A83B /* FormPageModel.swift in Sources */,
 				4E4D22A120B1B2A700BA7577 /* FormsHomeViewController.swift in Sources */,
+				4EDAE6052698B58B0025010F /* StabilityNetNetworkProcessor.swift in Sources */,
 				4EDC78ED21D15BD2004AFCBB /* WebKitViewController.swift in Sources */,
 				4E97DF9F22F73B92003B0E13 /* StabilityNetSearchViewController.swift in Sources */,
+				4EDAE5FE2698B4EF0025010F /* NetworkDataModel.swift in Sources */,
 				4E890FFD209E32120034A83B /* Router.swift in Sources */,
 				4ECA9C0720A85B4E0084A317 /* FormShortNameTableViewCell.swift in Sources */,
 				4EE12A8721487096003DFBB5 /* LocationWarmingViewController.swift in Sources */,
 				4E8B7DC223943ADE00E6164F /* StabilityNetClusterAnnotationView.swift in Sources */,
+				4EA8ABAA26A3044000B2EAB4 /* FirebaseStorageEndpoint.swift in Sources */,
 				4EF4348A213F2F0E009C2679 /* FormTimeTableViewCell.swift in Sources */,
 				4E9E1D5B21DC441D0096F705 /* StoreReviewWarmerViewController.swift in Sources */,
 				4ED38851209D04AE00A8BEE2 /* UIColor+TGK.swift in Sources */,
 				4E9DE5462401875400D3A716 /* StabilityNetSearchMapFilterTableViewCell.swift in Sources */,
 				4EDC78E521C6A9A2004AFCBB /* SafetyNetDetailSheetViewController.swift in Sources */,
 				4E83549A20C8B976009DF8CE /* RSSCalendarEventModel.swift in Sources */,
+				4EDAE5F72698B4D40025010F /* APIRequest.swift in Sources */,
 				4ECA9C0120A72D230084A317 /* FormQuestionSubfieldModel.swift in Sources */,
 				4ED3883F209D030600A8BEE2 /* FormQuestionModel.swift in Sources */,
 				4EE12A9321507FB1003DFBB5 /* Analytics+TGK.swift in Sources */,
+				4EDAE5F12698B4C20025010F /* NetworkProcessor.swift in Sources */,
 				4E4D229E20B1B1F400BA7577 /* MainTabBarController.swift in Sources */,
 				4E0E0C88216171F80082240E /* OnboardingContentModel.swift in Sources */,
 				C0B9C4972135D55E009BEE60 /* ServiceManager+SafetyNet.swift in Sources */,
+				4EDAE6012698B52D0025010F /* Endpoint.swift in Sources */,
 				4E0E0C8A2161745F0082240E /* OnboardingCollectionViewCell.swift in Sources */,
 				4E7C2E3220B1D8F800A20303 /* UIFont+TGK.swift in Sources */,
 				4E75176E20C8953B00B2D7E0 /* DonateHomeViewController.swift in Sources */,
@@ -979,6 +1049,7 @@
 				4E8354A720CC6CF1009DF8CE /* TGKSafariViewController.swift in Sources */,
 				4ECA9BFB20A2687B0084A317 /* BaseNibLoadedView.swift in Sources */,
 				4E75177620C8A95700B2D7E0 /* EventsHomeViewController.swift in Sources */,
+				4EDAE60A2698BB5F0025010F /* StabilityNetNetworkClient.swift in Sources */,
 				4ED38843209D030600A8BEE2 /* SegmentedFormNavigationController.swift in Sources */,
 				4E8B7DC42394551300E6164F /* MKMapView+TGK.swift in Sources */,
 				4EAF08ED2139FBC90083E023 /* SafetyNetHomeTooltipCell.swift in Sources */,
@@ -988,6 +1059,7 @@
 				4ED38848209D030600A8BEE2 /* FormListSelectTableViewCell.swift in Sources */,
 				4E0E0C852161705C0082240E /* OnboardingViewController.swift in Sources */,
 				4E97DF9D22F73B0B003B0E13 /* ScrollableBottomSheetViewController.swift in Sources */,
+				4EDAE60D2698BC290025010F /* StabilityNetEndpoint.swift in Sources */,
 				4ED38852209D04AE00A8BEE2 /* String+TGK.swift in Sources */,
 				4ED3883D209D030600A8BEE2 /* FormPickerTableViewCell.swift in Sources */,
 				4ED38845209D030600A8BEE2 /* FormPageViewController.swift in Sources */,

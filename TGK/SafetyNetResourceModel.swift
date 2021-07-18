@@ -31,7 +31,6 @@ class SafetyNetResourceModel:NSObject, Codable {
 //        return false
 //    }
     
-    
     var name:String
     var address:String? {
         get {
@@ -97,6 +96,7 @@ class SafetyNetResourceModel:NSObject, Codable {
     
     required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
+        
         name = try container.decodeIfPresent(String.self, forKey: .name) ?? ""
         contactName = try container.decodeIfPresent(String.self, forKey: .contactName)
         category = try container.decodeIfPresent(String.self, forKey: .category) ?? ""

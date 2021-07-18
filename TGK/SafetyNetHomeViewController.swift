@@ -18,6 +18,8 @@ class SafetyNetHomeViewController: UIViewController {
     @IBOutlet weak var searchExpandableHeaderCloseButton: UIButton!
     @IBOutlet weak var searchCountyLabel: UILabel!
     
+    
+    
     fileprivate let searchExpandableHeaderExpandedHeight:CGFloat = 50.0
     
     private enum SafetyNetTableSection:Int {

@@ -13,7 +13,7 @@ extension ServiceManager {
 
     func getSafetyNetResources(completion:@escaping ([SafetyNetResourceModel]?, Error?)->Void) {
         self.sessionManager.request(Router.getSafetyNet.url, encoding: URLEncoding.default, headers:nil).responseJSON { (response) in
-
+            
             if let error = response.result.error {
                 completion(nil, error)
                 return
