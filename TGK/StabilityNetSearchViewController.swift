@@ -20,7 +20,7 @@ class StabilityNetSearchViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
     
-    private let stabNetNetworkClient = StabilityNetNetworkClient()
+    private let firebaseNetworkClient = FirebaseStorageNetworkClient()
     
     weak var delegate:StabilityNetSearchViewControllerDelegate?
     
@@ -110,7 +110,7 @@ class StabilityNetSearchViewController: UIViewController {
     }
     
     func fetchData() {
-        self.stabNetNetworkClient.getStabilityNetResources { (safetyNetModels, error) in
+        self.firebaseNetworkClient.getStabilityNetResources { (safetyNetModels, error) in
             if let error = error {
                 print(error)
                 return

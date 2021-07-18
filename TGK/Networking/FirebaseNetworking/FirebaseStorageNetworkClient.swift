@@ -1,10 +1,10 @@
 import Foundation
 
-class StabilityNetNetworkClient:NetworkClient {
+class FirebaseStorageNetworkClient:NetworkClient {
     var processor: NetworkProcessor
     
     init() {
-        self.processor = StabilityNetNetworkProcessor()
+        self.processor = FirebaseStorageNetNetworkProcessor()
     }
     
     func processDataAndDecode<T: Decodable>(request: APIRequest, completionBlock: @escaping (Result<T, NetworkError>) -> Void) {
@@ -54,7 +54,7 @@ class StabilityNetNetworkClient:NetworkClient {
 }
 
 //MARK: Public Facade
-extension StabilityNetNetworkClient {
+extension FirebaseStorageNetworkClient {
     func getStabilityNetResources(completion: @escaping ([SafetyNetResourceModel]?, NetworkError?) -> Void) {
         let stabNetApiRequest = StabilityNetResourceAPIRequest()
         self.processDataAndDecode(request: stabNetApiRequest) { (result:Result<[StabilityNetResourceDTO], NetworkError>) in

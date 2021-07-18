@@ -1,6 +1,6 @@
 import Foundation
 
-public class StabilityNetNetworkProcessor:NetworkProcessor {
+public class FirebaseStorageNetNetworkProcessor:NetworkProcessor {
     
     internal let session:URLSession
     

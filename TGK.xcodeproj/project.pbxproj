@@ -116,8 +116,8 @@
 		4EDAE5FB2698B4E20025010F /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDAE5FA2698B4E20025010F /* NetworkClient.swift */; };
 		4EDAE5FE2698B4EF0025010F /* NetworkDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDAE5FD2698B4EF0025010F /* NetworkDataModel.swift */; };
 		4EDAE6012698B52D0025010F /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDAE6002698B52D0025010F /* Endpoint.swift */; };
-		4EDAE6052698B58B0025010F /* StabilityNetNetworkProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDAE6042698B58B0025010F /* StabilityNetNetworkProcessor.swift */; };
-		4EDAE60A2698BB5F0025010F /* StabilityNetNetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDAE6092698BB5F0025010F /* StabilityNetNetworkClient.swift */; };
+		4EDAE6052698B58B0025010F /* FirebaseStorageNetNetworkProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDAE6042698B58B0025010F /* FirebaseStorageNetNetworkProcessor.swift */; };
+		4EDAE60A2698BB5F0025010F /* FirebaseStorageNetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDAE6092698BB5F0025010F /* FirebaseStorageNetworkClient.swift */; };
 		4EDAE60D2698BC290025010F /* StabilityNetEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDAE60C2698BC290025010F /* StabilityNetEndpoint.swift */; };
 		4EDAE6102698BCC90025010F /* StabilityNetResourceAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDAE60F2698BCC90025010F /* StabilityNetResourceAPIRequest.swift */; };
 		4EDC78E321C6A912004AFCBB /* SafetyNet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EDC78E221C6A912004AFCBB /* SafetyNet.storyboard */; };
@@ -265,8 +265,8 @@
 		4EDAE5FA2698B4E20025010F /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		4EDAE5FD2698B4EF0025010F /* NetworkDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataModel.swift; sourceTree = "<group>"; };
 		4EDAE6002698B52D0025010F /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
-		4EDAE6042698B58B0025010F /* StabilityNetNetworkProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StabilityNetNetworkProcessor.swift; sourceTree = "<group>"; };
-		4EDAE6092698BB5F0025010F /* StabilityNetNetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StabilityNetNetworkClient.swift; sourceTree = "<group>"; };
+		4EDAE6042698B58B0025010F /* FirebaseStorageNetNetworkProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseStorageNetNetworkProcessor.swift; sourceTree = "<group>"; };
+		4EDAE6092698BB5F0025010F /* FirebaseStorageNetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseStorageNetworkClient.swift; sourceTree = "<group>"; };
 		4EDAE60C2698BC290025010F /* StabilityNetEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StabilityNetEndpoint.swift; sourceTree = "<group>"; };
 		4EDAE60F2698BCC90025010F /* StabilityNetResourceAPIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StabilityNetResourceAPIRequest.swift; sourceTree = "<group>"; };
 		4EDC78E221C6A912004AFCBB /* SafetyNet.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SafetyNet.storyboard; sourceTree = "<group>"; };
@@ -385,6 +385,15 @@
 				4ED38822209D01F200A8BEE2 /* LaunchScreen.storyboard */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		4E6DC0E126A4ADBE00DC8CE6 /* Endpoints */ = {
+			isa = PBXGroup;
+			children = (
+				4EA8ABA926A3044000B2EAB4 /* FirebaseStorageEndpoint.swift */,
+				4EDAE60C2698BC290025010F /* StabilityNetEndpoint.swift */,
+			);
+			path = Endpoints;
 			sourceTree = "<group>";
 		};
 		4E75176020B615DA00B2D7E0 /* PartsBinNoTarget */ = {
@@ -647,7 +656,6 @@
 		4ED3880D209D01EF00A8BEE2 = {
 			isa = PBXGroup;
 			children = (
-				4EA8ABA926A3044000B2EAB4 /* FirebaseStorageEndpoint.swift */,
 				4ED38818209D01EF00A8BEE2 /* TGK */,
 				4ED38817209D01EF00A8BEE2 /* Products */,
 				472C38AAFB8F7F4CAA53C6B1 /* Pods */,
@@ -705,9 +713,9 @@
 		4EDAE6032698B5790025010F /* FirebaseNetworking */ = {
 			isa = PBXGroup;
 			children = (
-				4EDAE6042698B58B0025010F /* StabilityNetNetworkProcessor.swift */,
-				4EDAE6092698BB5F0025010F /* StabilityNetNetworkClient.swift */,
-				4EDAE60C2698BC290025010F /* StabilityNetEndpoint.swift */,
+				4E6DC0E126A4ADBE00DC8CE6 /* Endpoints */,
+				4EDAE6042698B58B0025010F /* FirebaseStorageNetNetworkProcessor.swift */,
+				4EDAE6092698BB5F0025010F /* FirebaseStorageNetworkClient.swift */,
 				4EDAE60F2698BCC90025010F /* StabilityNetResourceAPIRequest.swift */,
 			);
 			path = FirebaseNetworking;
@@ -1016,7 +1024,7 @@
 				4EDAE5ED2698B4A10025010F /* NetworkError.swift in Sources */,
 				4E89100B209F6F360034A83B /* FormPageModel.swift in Sources */,
 				4E4D22A120B1B2A700BA7577 /* FormsHomeViewController.swift in Sources */,
-				4EDAE6052698B58B0025010F /* StabilityNetNetworkProcessor.swift in Sources */,
+				4EDAE6052698B58B0025010F /* FirebaseStorageNetNetworkProcessor.swift in Sources */,
 				4EDC78ED21D15BD2004AFCBB /* WebKitViewController.swift in Sources */,
 				4E97DF9F22F73B92003B0E13 /* StabilityNetSearchViewController.swift in Sources */,
 				4EDAE5FE2698B4EF0025010F /* NetworkDataModel.swift in Sources */,
@@ -1049,7 +1057,7 @@
 				4E8354A720CC6CF1009DF8CE /* TGKSafariViewController.swift in Sources */,
 				4ECA9BFB20A2687B0084A317 /* BaseNibLoadedView.swift in Sources */,
 				4E75177620C8A95700B2D7E0 /* EventsHomeViewController.swift in Sources */,
-				4EDAE60A2698BB5F0025010F /* StabilityNetNetworkClient.swift in Sources */,
+				4EDAE60A2698BB5F0025010F /* FirebaseStorageNetworkClient.swift in Sources */,
 				4ED38843209D030600A8BEE2 /* SegmentedFormNavigationController.swift in Sources */,
 				4E8B7DC42394551300E6164F /* MKMapView+TGK.swift in Sources */,
 				4EAF08ED2139FBC90083E023 /* SafetyNetHomeTooltipCell.swift in Sources */,
