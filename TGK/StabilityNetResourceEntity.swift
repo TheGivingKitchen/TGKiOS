@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct StabilityNetResourceDTO:Codable {
+public struct StabilityNetResourceEntity:Codable {
     var id:String
     var fields:fields
     

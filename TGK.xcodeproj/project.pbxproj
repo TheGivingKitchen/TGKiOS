@@ -70,7 +70,7 @@
 		4E9DE54824018A6500D3A716 /* StabilityNetFilterCategoryTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9DE54724018A6500D3A716 /* StabilityNetFilterCategoryTypeCell.swift */; };
 		4E9DE54C24018EAD00D3A716 /* StabilityNetCategoryFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9DE54B24018EAD00D3A716 /* StabilityNetCategoryFilterViewController.swift */; };
 		4E9E1D5B21DC441D0096F705 /* StoreReviewWarmerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9E1D5A21DC441D0096F705 /* StoreReviewWarmerViewController.swift */; };
-		4EA8ABA726A2009700B2EAB4 /* StabilityNetDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA8ABA626A2009700B2EAB4 /* StabilityNetDTO.swift */; };
+		4EA8ABA726A2009700B2EAB4 /* StabilityNetResourceEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA8ABA626A2009700B2EAB4 /* StabilityNetResourceEntity.swift */; };
 		4EA8ABAA26A3044000B2EAB4 /* FirebaseStorageEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA8ABA926A3044000B2EAB4 /* FirebaseStorageEndpoint.swift */; };
 		4EAF08EB2139FBB20083E023 /* SafetyNetHomeTooltipCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EAF08EA2139FBB20083E023 /* SafetyNetHomeTooltipCell.xib */; };
 		4EAF08ED2139FBC90083E023 /* SafetyNetHomeTooltipCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAF08EC2139FBC90083E023 /* SafetyNetHomeTooltipCell.swift */; };
@@ -214,7 +214,7 @@
 		4E9DE54724018A6500D3A716 /* StabilityNetFilterCategoryTypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StabilityNetFilterCategoryTypeCell.swift; sourceTree = "<group>"; };
 		4E9DE54B24018EAD00D3A716 /* StabilityNetCategoryFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StabilityNetCategoryFilterViewController.swift; sourceTree = "<group>"; };
 		4E9E1D5A21DC441D0096F705 /* StoreReviewWarmerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreReviewWarmerViewController.swift; sourceTree = "<group>"; };
-		4EA8ABA626A2009700B2EAB4 /* StabilityNetDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StabilityNetDTO.swift; sourceTree = "<group>"; };
+		4EA8ABA626A2009700B2EAB4 /* StabilityNetResourceEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StabilityNetResourceEntity.swift; sourceTree = "<group>"; };
 		4EA8ABA926A3044000B2EAB4 /* FirebaseStorageEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseStorageEndpoint.swift; sourceTree = "<group>"; };
 		4EAF08EA2139FBB20083E023 /* SafetyNetHomeTooltipCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SafetyNetHomeTooltipCell.xib; sourceTree = "<group>"; };
 		4EAF08EC2139FBC90083E023 /* SafetyNetHomeTooltipCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafetyNetHomeTooltipCell.swift; sourceTree = "<group>"; };
@@ -546,7 +546,7 @@
 				4E83549820C8B966009DF8CE /* Events */,
 				4E885BB920A1221B00D05ED9 /* Forms */,
 				C0A259822130AA870007AB20 /* SafetyNetResourceModel.swift */,
-				4EA8ABA626A2009700B2EAB4 /* StabilityNetDTO.swift */,
+				4EA8ABA626A2009700B2EAB4 /* StabilityNetResourceEntity.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -1013,7 +1013,7 @@
 				4ED3883E209D030600A8BEE2 /* FormTextFieldTableViewCell.swift in Sources */,
 				4E71AFCE215C3EEF0033494D /* FeedbackHomeViewController.swift in Sources */,
 				4ECA9BFD20A269A10084A317 /* FormListSelectTableViewCellRow.swift in Sources */,
-				4EA8ABA726A2009700B2EAB4 /* StabilityNetDTO.swift in Sources */,
+				4EA8ABA726A2009700B2EAB4 /* StabilityNetResourceEntity.swift in Sources */,
 				4ED38844209D030600A8BEE2 /* FormTextViewTableViewCell.swift in Sources */,
 				4EC8F22E2309E3C800CA0945 /* StabilityNetCatgeoryInfoCollectionViewCell.swift in Sources */,
 				C0B9C4A3213870BC009BEE60 /* AppDataStore.swift in Sources */,

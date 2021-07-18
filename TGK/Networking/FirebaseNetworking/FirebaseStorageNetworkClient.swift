@@ -57,7 +57,7 @@ class FirebaseStorageNetworkClient:NetworkClient {
 extension FirebaseStorageNetworkClient {
     func getStabilityNetResources(completion: @escaping ([SafetyNetResourceModel]?, NetworkError?) -> Void) {
         let stabNetApiRequest = StabilityNetResourceAPIRequest()
-        self.processDataAndDecode(request: stabNetApiRequest) { (result:Result<[StabilityNetResourceDTO], NetworkError>) in
+        self.processDataAndDecode(request: stabNetApiRequest) { (result:Result<[StabilityNetResourceEntity], NetworkError>) in
             switch result {
             case .success(let stabilityNetResourceModels):
                 //adapter to return more usable model
